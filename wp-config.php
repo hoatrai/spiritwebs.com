@@ -51,6 +51,7 @@
 if (!function_exists('getenv_docker')) {
 
 	// https://github.com/docker-library/wordpress/issues/588 (WP-CLI will load this file 2x)
+	//test
 
 	function getenv_docker($env, $default) {
 
