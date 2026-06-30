@@ -1,0 +1,1032 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="cufon-active cufon-ready"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>CÔNG TY TNHH AN BẢO PHÁT</title><meta name="author" content="CÔNG TY TNHH AN BẢO PHÁT"><meta name="keywords" content="CÔNG TY TNHH AN BẢO PHÁT"><meta name="description" content="CÔNG TY TNHH AN BẢO PHÁT"><meta name="copyright" content="CÔNG TY TNHH AN BẢO PHÁT"><meta http-equiv="expires" content="0"><meta name="resource-type" content="document"><meta name="distribution" content="global"><meta name="robots" content="index, follow"><meta name="revisit-after" content="1 days"><meta name="rating" content="general"><link href="/css/css.php" rel="stylesheet" type="text/css"><link rel="shortcut icon" type="image/png" href="/images/icon_logo.png"><meta http-equiv="X-UA-Compatible" content="IE=8"><!--[if IE 8]>	<link rel="stylesheet" type="text/css" href="/fix_ie/fixie8.css" /><![endif]--><!--[if gte IE 9]> <script type="text/javascript"> Cufon.set('engine', 'canvas'); </script> <![endif]--> <style type="text/css">cufon{text-indent:0!important;}@media screen,projection{cufon{display:inline!important;display:inline-block!important;position:relative!important;vertical-align:middle!important;font-size:1px!important;line-height:1px!important;}cufon cufontext{display:-moz-inline-box!important;display:inline-block!important;width:0!important;height:0!important;text-align:left!important;text-indent:-10000in!important;}cufon canvas{position:relative!important;}cufonshy.cufon-shy-disabled,.cufon-viewport-resizing cufonshy{display:none!important;}cufonglue{white-space:nowrap!important;display:inline-block!important;}.cufon-viewport-resizing cufonglue{white-space:normal!important;}}@media print{cufon{padding:0!important;}cufon canvas{display:none!important;}}</style><style type="text/css" media="screen">#flash-slide {visibility:hidden}</style></head><body><input type="hidden" value="home" id="get_act" style=""><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script><script type="text/javascript" src="/js/jquery-ui.min.js"></script><script src="/js/ui_demos.js" type="text/javascript"></script><script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script><script type="text/javascript" src="/js/iepngfix_tilebg.js"></script><script type="text/javascript" src="/js/jquery.vticker-min.js"></script><script type="text/javascript" src="/js/swfobject.js"></script><script type="text/javascript" src="/js/ga.js"></script><script type="text/javascript" src="/js/cufon-yui.js"></script><script type="text/javascript" src="/js/UVN_Tin_Tuc_400.font.js"></script><script type="text/javascript" src="/js/cufon-replace.js"></script><link rel="stylesheet" type="text/css" href="/fancybox/jquery.fancybox-1.3.4.css" media="screen"><script type="text/javascript" src="/js/init.js"></script>		<script type="text/javascript" src="/js/jquery.ui.widget.js"></script>		<script type="text/javascript" src="/js/jquery.ui.rcarousel.js"></script>		<script type="text/javascript" src="/js/mt_ajax.js"></script>		<!--[if IE 7]>	<style type="text/css">.txt_search{position:relative;top:-7px;}.navigation-container{margin-top:-22px;}.tgp_gallery_prev{top:-10px;}	</style><![endif]--><!--[if IE 9]>	<style>	.navigation,.tgp_wrapper_center{margin-top:-16px;}	.content{margin-left:-4px;}	.tgp_gallery_prev{top:-45px;}	</style><![endif]--><!--[if IE 8]><script type="text/javascript"> Cufon.set('engine', 'canvas'); </script>	<style type="text/css">	.navigation,.tgp_wrapper_center{margin-top:-16px;}	.content{margin-left:-4px;}	.tgp_gallery_prev{top:-45px;}	</style><![endif]--><!--[if IE 9]>	<style>	</style><![endif]--><script type="text/javascript">$(document).ready(function(){		//how much items per page to show		var show_per_page = 15; 		//getting the amount of elements inside content div	var number_of_items = $('#content').children().size();	//calculate the number of pages we are going to have	var number_of_pages = Math.ceil(number_of_items/show_per_page);		//set the value of our hidden input fields	$('#current_page').val(0);	$('#show_per_page').val(show_per_page);		//now when we got all we need for the navigation let's make it '		/* 	what are we going to have in the navigation?		- link to previous page		- links to specific pages		- link to next page	*/	var navigation_html = '<a  class="previous_link" href="javascript:previous();">&#1042;�</a>';	var current_link = 0;	while(number_of_pages > current_link){		navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link +')" longdesc="' + current_link +'">'+ (current_link + 1) +'</a>';		current_link++;	}	navigation_html += '<a  class="next_link" href="javascript:next();">&#1042;�</a>';		$('#page_navigation').html(navigation_html);		//add active_page class to the first page link	$('#page_navigation .page_link:first').addClass('active_page');		//hide all the elements inside content div	$('#content').children().css('display', 'none');		//and show the first n (show_per_page) elements	$('#content').children().slice(0, show_per_page).css('display', 'block');	});function previous(){		new_page = parseInt($('#current_page').val()) - 1;	//if there is an item before the current active link run the function	if($('.active_page').prev('.page_link').length==true){		go_to_page(new_page);	}	}function next(){	new_page = parseInt($('#current_page').val()) + 1;	//if there is an item after the current active link run the function	if($('.active_page').next('.page_link').length==true){		go_to_page(new_page);	}	}function go_to_page(page_num){	//get the number of items shown per page	var show_per_page = parseInt($('#show_per_page').val());		//get the element number where to start the slice from	start_from = page_num * show_per_page;		//get the element number where to end the slice	end_on = start_from + show_per_page;		//hide all children elements of content div, get specific items and show them	$('#content').children().css('display', 'none').slice(start_from, end_on).css('display', 'block');		/*get the page link that has longdesc attribute of the current page and add active_page class to it	and remove that class from previously active page link*/	$('.page_link[longdesc=' + page_num +']').addClass('active_page').siblings('.active_page').removeClass('active_page');		//update the current page input field	$('#current_page').val(page_num);}  </script><style>#page_navigation a,#page_navigationdnn1 a,#page_navigationdnn2 a{	margin:2px;	color:#999999;	text-decoration:none;font-weight:bold;	padding:2px 7px 4px;background:#fff;}#page_navigation a:hover,#page_navigationdnn1 a:hover,#page_navigationdnn2 a:hover{	color:#fff !important;	opacity:0.9;background:#666666;}#page_navigation a.active_page,#page_navigationdnn1 a.active_pagednn1,#page_navigationdnn2 a.active_pagednn2{	color:#fff !important;	opacity:0.9;	background:#666666;}.active_page,.active_pagednn1,.active_pagednn2{	color:#fff !important;	opacity:0.9;	background:#666666;}@media screen and (-webkit-min-device-pixel-ratio:0) { .txt_search{position:relative;top:6px;} }@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {       div.navigation-container {margin-top:-26px;} }	</style><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<div class="tgp_body_header">
+<div class="tgp_header">
+	<div class="tgp_banner">
+			  <div id="flash_banner"><img src="/images/logo.png"></div>			   <script>                                    if(swfobject.hasFlashPlayerVersion("9.0.0")) {                                        swfobject.embedSWF("/images/banner406x96.swf", "flash_banner", "406", "96", "9.0.0", "/images/expressInstall.swf", {}, {wmode:'transparent'});                                    }else {                                        $("#flash_banner").html("<img src='/images/logo.png' />");                                    }                            </script>
+
+
+		<div class="tgp_clr_left"></div>
+	</div>
+	<div class="tgp_header_right">
+		<div class="tgp_timkiem">
+			<div class="tgp_search frm_search_google">
+						<form action="/search.php" method="get" name="frmSearch">
+							<input style="color: rgb(146, 146, 146); font-size: 12px; font-family: Arial;" onclick="if(this.value=='TГ¬m kiбєїm...')this.value='';" onblur="if(this.value=='')this.value='TГ¬m kiбєїm...';" name="q" type="text" class="txt_search" value="TГ¬m kiбєїm...">
+							<input type="submit" name="btn_search" id="btn_search" class="btn_search" value="" style="">
+								<input type="hidden" name="cx" value="008429317371950160219:k484q764ivg" style="">
+								<input type="hidden" name="cof" value="FORID:11" style="">
+								<input type="hidden" name="ie" value="UTF-8" style="">						
+						</form>					
+			</div>
+			<div class="tgp_clr_left"></div>
+		</div>
+		<div class="tgp_clr_left"></div>
+		<div class="tgp_menu">
+			
+			<ul class="menu">
+						<li><a class="parent cufon active_menu" href="/home/" style="background:none;"><cufon class="cufon cufon-canvas" alt="Trang " style="width: 44px; height: 12px;"><canvas width="59" height="17" style="width: 59px; height: 17px; top: -4px; left: -2px;"></canvas><cufontext>Trang </cufontext></cufon><cufon class="cufon cufon-canvas" alt="chủ" style="width: 26px; height: 12px;"><canvas width="36" height="17" style="width: 36px; height: 17px; top: -4px; left: -2px;"></canvas><cufontext>chủ</cufontext></cufon></a>										
+						</li>
+						
+						
+										<li><a class="parent cufon " href="/linh-vuc-hoat-dong/14/cung-cap-lap-dat-he-thong-pccc/"><cufon class="cufon cufon-canvas" alt="Lĩnh " style="width: 32px; height: 12px;"><canvas width="47" height="17" style="width: 47px; height: 17px; top: -4px; left: -2px;"></canvas><cufontext>Lĩnh </cufontext></cufon><cufon class="cufon cufon-canvas" alt="vực " style="width: 28px; height: 12px;"><canvas width="43" height="17" style="width: 43px; height: 17px; top: -4px; left: -2px;"></canvas><cufontext>vực </cufontext></cufon><cufon class="cufon cufon-canvas" alt="hoạt " style="width: 36px; height: 12px;"><canvas width="51" height="17" style="width: 51px; height: 17px; top: -4px; left: -2px;"></canvas><cufontext>hoạt </cufontext></cufon><cufon class="cufon cufon-canvas" alt="động" style="width: 34px; height: 12px;"><canvas width="45" height="17" style="width: 45px; height: 17px; top: -4px; left: -2px;"></canvas><cufontext>động</cufontext></cufon></a>					
+								
+								<div class="columns two">
+									<ul class="one">	
+																			<li><a href="/linh-vuc-hoat-dong/14/cung-cap-lap-dat-he-thong-pccc/">Cung cấp lắp đặt hệ thống PCCC</a></li>
+																			<li><a href="/linh-vuc-hoat-dong/15/nap-binh-chua-chay-truc-tiep/">Nạp bình chữa cháy trực tiếp</a></li>
+																			<li><a href="/linh-vuc-hoat-dong/17/cung-cap-lap-dat-he-thong-chong-set/">Cung cấp lắp đặt hệ thống Chống sét</a></li>
+																			<li><a href="/linh-vuc-hoat-dong/18/he-thong-bao-trom/">Hệ thống báo trộm</a></li>
+																			<li><a href="/linh-vuc-hoat-dong/19/bao-khach/">Báo khách</a></li>
+																			<li><a href="/linh-vuc-hoat-dong/20/camera-quan-sat/">Camera quan sát</a></li>
+																			<li><a href="/linh-vuc-hoat-dong/21/he-thong-kiem-soat-ra-vao/">Hệ thống kiểm soát ra vào</a></li>
+																			<li><a href="/linh-vuc-hoat-dong/22/he-thong-mang-may-tinh/">Hệ thống mạng máy tính</a></li>
+																			<li><a href="/linh-vuc-hoat-dong/23/he-thong-tong-dai-noi-bo/">Hệ thống tổng đài nội bộ</a></li>
+																			<li><a href="/linh-vuc-hoat-dong/25/bao-tri-bao-duong-va-khac-phuc-su-co-cac-he-thong/">Bảo trì, Bảo dưỡng và khắc phục sự cố các hệ thống</a></li>
+																			<li><a href="/linh-vuc-hoat-dong/26/xay-dung-cac-loai-cong-trinh-dan-dung/">Xây dựng các loại công trình dân dụng</a></li>
+																			<li><a href="/linh-vuc-hoat-dong/27/cong-nghiep/">Công nghiệp</a></li>
+																			<li><a href="/linh-vuc-hoat-dong/28/van-chuyen-hoang-hoa/">Vận chuyển hoàng hóa</a></li>
+																			<li><a href="/linh-vuc-hoat-dong/29/tu-van-thiet-ke/">Tư vấn thiết kế</a></li>
+																			<li style="padding-bottom:10px;"><a href="/linh-vuc-hoat-dong/30/chuyen-nap-xu-ly-cac-loai-binh-chua-chay-gia-tot-/">Chuyên Nạp xử lý các loại bình chữa cháy giá tốt </a></li>
+																		</ul>	
+								</div>				
+					</li>						
+										<li><a class="parent cufon " href="/san-pham/53/-thiet-bi-he-thong-pccc/"><cufon class="cufon cufon-canvas" alt="sản " style="width: 28px; height: 12px;"><canvas width="43" height="17" style="width: 43px; height: 17px; top: -4px; left: -2px;"></canvas><cufontext>sản </cufontext></cufon><cufon class="cufon cufon-canvas" alt="phẩm" style="width: 35px; height: 12px;"><canvas width="43" height="17" style="width: 43px; height: 17px; top: -4px; left: -2px;"></canvas><cufontext>phẩm</cufontext></cufon></a>
+								
+								<div class="columns two">
+									<ul class="one">	
+																			<li style=""><a href="/san-pham/53/-thiet-bi-he-thong-pccc/"> Thiết bị hệ thống PCCC</a>
+															
+
+											<div class="columns two" style="left:340px;margin-top:-8px;width:230px;">
+												<ul class="one" style="width:210px;">	
+																									<li style="width:210px;"><a style="width:210px;" href="/san-pham/60/binh-chua-chay/">Bình chữa cháy</a>
+
+																			
+
+																<div class="columns two" style="display:none;">
+																	<ul class="one" style="width:210px;">	
+																																		</ul>	
+																</div>
+
+
+													
+													</li>
+																									<li style="width:210px;"><a style="width:210px;" href="/san-pham/61/thiet-bi-bao-chay/">Thiết bị báo cháy</a>
+
+																			
+
+																<div class="columns two" style="display:none;">
+																	<ul class="one" style="width:210px;">	
+																																		</ul>	
+																</div>
+
+
+													
+													</li>
+																									<li style="width:210px;"><a style="width:210px;" href="/san-pham/62/may-bom-chua-chay/">Máy bơm chữa cháy</a>
+
+																			
+
+																<div class="columns two" style="display:none;">
+																	<ul class="one" style="width:210px;">	
+																																		</ul>	
+																</div>
+
+
+													
+													</li>
+																									<li style="padding-bottom:10px;width:210px;"><a style="width:210px;" href="/san-pham/63/lang-dau-phun-voi-tru-chua-chay/">Lăng, đầu phun, vòi, trụ chữa cháy</a>
+
+																			
+
+																<div class="columns two" style="display:none;">
+																	<ul class="one" style="width:210px;">	
+																																		</ul>	
+																</div>
+
+
+													
+													</li>
+																								</ul>	
+											</div>
+
+	
+										</li>
+																			<li style=""><a href="/san-pham/54/thiet-bi-he-thong-dien-cn--dd/">Thiết bị hệ thống điện CN &amp; DD</a>
+															
+
+											<div class="columns two" style="display:none;">
+												<ul class="one" style="width:210px;">	
+																								</ul>	
+											</div>
+
+	
+										</li>
+																			<li style=""><a href="/san-pham/55/thiet-bi-he-thong-camera-/">Thiết bị hệ thống camera </a>
+															
+
+											<div class="columns two" style="display:none;">
+												<ul class="one" style="width:210px;">	
+																								</ul>	
+											</div>
+
+	
+										</li>
+																			<li style=""><a href="/san-pham/56/thiet-bi-chong-set/">Thiết bị chống sét</a>
+															
+
+											<div class="columns two" style="display:none;">
+												<ul class="one" style="width:210px;">	
+																								</ul>	
+											</div>
+
+	
+										</li>
+																			<li style=""><a href="/san-pham/57/thiet-bi-he-thong-dieu-hoa-khong-khi/">Thiết bị hệ thống điều hòa không khí</a>
+															
+
+											<div class="columns two" style="display:none;">
+												<ul class="one" style="width:210px;">	
+																								</ul>	
+											</div>
+
+	
+										</li>
+																			<li style="padding-bottom:10px;"><a href="/san-pham/58/thiet-bi-he-thong-may-tinh-mang/">Thiết bị hệ thống máy tính mạng</a>
+															
+
+											<div class="columns two" style="display:none;">
+												<ul class="one" style="width:210px;">	
+																								</ul>	
+											</div>
+
+	
+										</li>
+																		</ul>	
+								</div>
+						</li>						
+						
+												<li><a class="parent cufon " href="/tin-tuc/4/tin-tuc/" style="background:none;"><cufon class="cufon cufon-canvas" alt="Tin " style="width: 23px; height: 12px;"><canvas width="38" height="17" style="width: 38px; height: 17px; top: -4px; left: -2px;"></canvas><cufontext>Tin </cufontext></cufon><cufon class="cufon cufon-canvas" alt="tức" style="width: 24px; height: 12px;"><canvas width="35" height="17" style="width: 35px; height: 17px; top: -4px; left: -2px;"></canvas><cufontext>tức</cufontext></cufon></a>
+														<div class="columns two" style="display:none;">
+									<ul class="one">	
+																			<li style="padding-bottom:10px;"><a href="/tin-tuc/4/tin-tuc/">Tin tức</a></li>
+																		</ul>	
+								</div>
+						</li>
+						<li><a class="parent cufon " href="/lien-he/" style="background:none;"><cufon class="cufon cufon-canvas" alt="Liên " style="width: 30px; height: 12px;"><canvas width="45" height="17" style="width: 45px; height: 17px; top: -4px; left: -2px;"></canvas><cufontext>Liên </cufontext></cufon><cufon class="cufon cufon-canvas" alt="hệ" style="width: 16px; height: 12px;"><canvas width="28" height="17" style="width: 28px; height: 17px; top: -4px; left: -2px;"></canvas><cufontext>hệ</cufontext></cufon></a></li>						
+					</ul>
+			<div class="tgp_clr_left"></div>
+	</div>
+	<div class="tgp_clr_left"></div>		
+	</div>
+	<div class="tgp_clr_left"></div>
+</div>
+	<div class="tgp_clr_left"></div>
+</div>
+<div class="tgp_clr_left"></div>
+<div class="tgp_wrapper_body">
+	<div class="tgp_wrapper">
+		<div class="tgp_wrapper_top">
+				<script type="text/javascript">
+	var params = {};
+	params.wmode = "opaque";
+	var flashvars = {};
+	flashvars.file = "/slide.php";
+	flashvars.shownavigation = "false";
+	flashvars.repeat = "true";
+	flashvars.enablejs = "true";
+	flashvars.rotatetime = 3;
+	swfobject.embedSWF("/images/imagerotator.swf", "flash-slide", "1000", "370", "9.0.0", "/images/expressInstall.swf", flashvars, params);
+</script>
+<div id="flash-slide" style="visibility: visible;"></div><script type="text/javascript" charset="utf-8">
+
+(function () {
+    $.fn.doannn = function () {
+        function repeat(str, n) {
+            return new Array( n + 1 ).join(str);
+        }
+        
+        return this.each(function () {
+            // magic!
+            var $nndoan = $('> div', this).css('overflow', 'hidden'),
+                $slider = $nndoan.find('> ul').width(9450),
+                $items = $slider.find('> li'),
+                $single = $items.filter(':first')
+                
+                singleWidth = $single.outerWidth(),
+               // visible = Math.ceil($nndoan.innerWidth() / singleWidth),
+			   visible = 1,
+                currentPage = 1,
+                pages = Math.ceil($items.length / visible);
+                
+            /* TASKS */
+            
+            // 1. pad the pages with empty element if required
+            if ($items.length % visible != 0) {
+                // pad
+                $slider.append(repeat('<li class="empty"/>', visible - ($items.length % visible)));
+                $items = $slider.find('> li');
+            }
+            
+            // 2. create the carousel padding on left and right (cloned)
+            $items.filter(':first').before($items.slice(visible).clone().addClass('cloned'));
+            $items.filter(':last').after($items.slice(0, +visible).clone().addClass('cloned'));
+            $items = $slider.find('> li');
+            
+            // 3. reset scroll
+            $nndoan.scrollLeft(singleWidth * visible);
+            
+            // 4. paging function
+            function gotoPage(page) {
+                var dir = page < currentPage ? -1 : 1,
+                    n = Math.abs(currentPage - page),
+                    left = singleWidth * dir * visible * n;
+                
+                $nndoan.filter(':not(:animated)').animate({
+                    scrollLeft : '+=' + left
+                }, 500, function () {
+                    // if page == last page - then reset position
+                    if (page > pages) {
+                        $nndoan.scrollLeft(singleWidth * visible);
+                        page = 1;
+                    } else if (page == 0) {
+                        page = pages;
+                        $nndoan.scrollLeft(singleWidth * visible * pages);
+                    }
+                    
+                    currentPage = page;
+                });
+            }
+            
+            // 5. insert the back and forward link
+            $nndoan.after('<a href="#" class="arrowd back"></a><a href="#" class="arrowd forward"></a>');
+            
+            // 6. bind the back and forward links
+            $('a.back', this).click(function () {
+                gotoPage(currentPage - 1);
+                return false;
+            });
+            
+            $('a.forward', this).click(function () {
+                gotoPage(currentPage + 1);
+                return false;
+            });
+            
+            $(this).bind('goto', function (event, page) {
+                gotoPage(page);
+            });
+            
+            // THIS IS NEW CODE FOR THE AUTOMATIC INFINITE CAROUSEL
+            $(this).bind('next', function () {
+                gotoPage(currentPage + 1);
+            });
+        });
+    };
+})(jQuery);
+
+$(document).ready(function () {
+    // THIS IS NEW CODE FOR THE AUTOMATIC INFINITE CAROUSEL
+    var autoscrolling = true;
+    
+    $('.doannn').doannn().mouseover(function () {
+        autoscrolling = false;
+    }).mouseout(function () {
+        autoscrolling = true;
+    });
+    
+    setInterval(function () {
+        if (autoscrolling) {
+            $('.doannn').trigger('next');
+        }
+    }, 5000);
+});
+
+
+</script>	
+
+							<div class="doannn" style="height:100px;">
+										<div class="nndoan" style="overflow: hidden;">
+											<ul style="width: 9450px; height: 100px;">	
+																										<li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/102/binh-bot-chua-chay-mft35/"><img src="/uploads/product/thm_102.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/102/binh-bot-chua-chay-mft35/">Bình bột chữa cháy MFT35</a></div>
+																	<div class="ct_lv_line">Bình bột chữa cháy MFT35</div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/101/van-goc-chua-chay-trung-quoc-d50/"><img src="/uploads/product/thm_101.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/101/van-goc-chua-chay-trung-quoc-d50/">Van góc chữa cháy Trung Quốc D50</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/100/van-goc-chua-chay-shin-yi/"><img src="/uploads/product/thm_100.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/100/van-goc-chua-chay-shin-yi/">Van góc chữa cháy Shin Yi</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/99/tru-chua-chay-3-cua/"><img src="/uploads/product/thm_99.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/99/tru-chua-chay-3-cua/">Trụ chữa cháy 3 cửa</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/98/tru-tiep-nuoc-chua-chay-2-cua-d65/"><img src="/uploads/product/thm_98.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/98/tru-tiep-nuoc-chua-chay-2-cua-d65/">Trụ tiếp nước chữa cháy 2 cửa D65</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/97/hai-chac-chua-chay/"><img src="/uploads/product/thm_97.png" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/97/hai-chac-chua-chay/">Hai chạc chữa cháy</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/96/ba-chac-chua-chay-/"><img src="/uploads/product/thm_96.png" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/96/ba-chac-chua-chay-/">Ba chạc chữa cháy </a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/95/trung-tam-bao-chay-dia-chi-hochikianh-quoc-/"><img src="/uploads/product/thm_95.gif" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/95/trung-tam-bao-chay-dia-chi-hochikianh-quoc-/">Trung tâm báo cháy địa chỉ Hochiki/Anh Quốc </a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/94/trung-tam-bao-chay-hcp---hochikianh-quoc/"><img src="/uploads/product/thm_94.png" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/94/trung-tam-bao-chay-hcp---hochikianh-quoc/">Trung tâm báo cháy HCP - Hochiki/Anh Quốc</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/93/chuong-bao-chay-hochiki/"><img src="/uploads/product/thm_93.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/93/chuong-bao-chay-hochiki/">Chuông báo cháy Hochiki</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/92/nut-nhan-bao-chay---hochiki/"><img src="/uploads/product/thm_92.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/92/nut-nhan-bao-chay---hochiki/">Nút nhấn báo cháy - Hochiki</a></div>
+																	<div class="ct_lv_line">Loại nút nhấn báo cháy</div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/91/dau-bao-nhiet-hochiki/"><img src="/uploads/product/thm_91.png" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/91/dau-bao-nhiet-hochiki/">Đầu báo nhiệt Hochiki</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/90/dau-bao-khoi-quang-hochiki-/"><img src="/uploads/product/thm_90.png" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/90/dau-bao-khoi-quang-hochiki-/">Đầu báo khói quang Hochiki </a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/89/may-bom-chua-chay-tohatsu/"><img src="/uploads/product/thm_89.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/89/may-bom-chua-chay-tohatsu/">Máy bơm chữa cháy Tohatsu</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/88/may-bom-chua-chay-ebara/"><img src="/uploads/product/thm_88.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/88/may-bom-chua-chay-ebara/">Máy bơm chữa cháy Ebara</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/65/may-bom-chua-chay-pentax/"><img src="/uploads/product/thm_65.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/65/may-bom-chua-chay-pentax/">Máy bơm chữa cháy Pentax</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/63/lang-phun-chua-chay/"><img src="/uploads/product/thm_63.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/63/lang-phun-chua-chay/">Lăng phun chữa cháy</a></div>
+																	<div class="ct_lv_line">Đang cập nhật dữ liệu...</div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/62/-cuon-voi-chua-chay-duc/"><img src="/uploads/product/thm_62.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/62/-cuon-voi-chua-chay-duc/"> Cuộn vòi chữa cháy Đức</a></div>
+																	<div class="ct_lv_line">Đang cập nhật dữ liệu...</div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/59/hop-dung-cuon-voi-lang-phun-chua-chay-nqtl/"><img src="/uploads/product/thm_59.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/59/hop-dung-cuon-voi-lang-phun-chua-chay-nqtl/">Hộp đựng cuộn vòi, lăng phun chữa cháy, NQTL</a></div>
+																	<div class="ct_lv_line">Đang cập nhật dữ liệu...</div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/58/voi-chua-chay-trung-quoc/"><img src="/uploads/product/thm_58.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/58/voi-chua-chay-trung-quoc/">Vòi chữa cháy Trung Quốc</a></div>
+																	<div class="ct_lv_line">Đang cập nhật dữ liệu...</div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/103/binh-chua-chay-o-to/"><img src="/uploads/product/thm_103.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/103/binh-chua-chay-o-to/">Bình chữa cháy Ô tô</a></div>
+																	<div class="ct_lv_line">Loại bình sử dụng cho</div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/102/binh-bot-chua-chay-mft35/"><img src="/uploads/product/thm_102.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/102/binh-bot-chua-chay-mft35/">Bình bột chữa cháy MFT35</a></div>
+																	<div class="ct_lv_line">Bình bột chữa cháy MFT35</div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/101/van-goc-chua-chay-trung-quoc-d50/"><img src="/uploads/product/thm_101.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/101/van-goc-chua-chay-trung-quoc-d50/">Van góc chữa cháy Trung Quốc D50</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/100/van-goc-chua-chay-shin-yi/"><img src="/uploads/product/thm_100.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/100/van-goc-chua-chay-shin-yi/">Van góc chữa cháy Shin Yi</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/99/tru-chua-chay-3-cua/"><img src="/uploads/product/thm_99.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/99/tru-chua-chay-3-cua/">Trụ chữa cháy 3 cửa</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/98/tru-tiep-nuoc-chua-chay-2-cua-d65/"><img src="/uploads/product/thm_98.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/98/tru-tiep-nuoc-chua-chay-2-cua-d65/">Trụ tiếp nước chữa cháy 2 cửa D65</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/97/hai-chac-chua-chay/"><img src="/uploads/product/thm_97.png" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/97/hai-chac-chua-chay/">Hai chạc chữa cháy</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/96/ba-chac-chua-chay-/"><img src="/uploads/product/thm_96.png" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/96/ba-chac-chua-chay-/">Ba chạc chữa cháy </a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/95/trung-tam-bao-chay-dia-chi-hochikianh-quoc-/"><img src="/uploads/product/thm_95.gif" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/95/trung-tam-bao-chay-dia-chi-hochikianh-quoc-/">Trung tâm báo cháy địa chỉ Hochiki/Anh Quốc </a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/94/trung-tam-bao-chay-hcp---hochikianh-quoc/"><img src="/uploads/product/thm_94.png" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/94/trung-tam-bao-chay-hcp---hochikianh-quoc/">Trung tâm báo cháy HCP - Hochiki/Anh Quốc</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/93/chuong-bao-chay-hochiki/"><img src="/uploads/product/thm_93.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/93/chuong-bao-chay-hochiki/">Chuông báo cháy Hochiki</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/92/nut-nhan-bao-chay---hochiki/"><img src="/uploads/product/thm_92.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/92/nut-nhan-bao-chay---hochiki/">Nút nhấn báo cháy - Hochiki</a></div>
+																	<div class="ct_lv_line">Loại nút nhấn báo cháy</div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/91/dau-bao-nhiet-hochiki/"><img src="/uploads/product/thm_91.png" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/91/dau-bao-nhiet-hochiki/">Đầu báo nhiệt Hochiki</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/90/dau-bao-khoi-quang-hochiki-/"><img src="/uploads/product/thm_90.png" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/90/dau-bao-khoi-quang-hochiki-/">Đầu báo khói quang Hochiki </a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/89/may-bom-chua-chay-tohatsu/"><img src="/uploads/product/thm_89.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/89/may-bom-chua-chay-tohatsu/">Máy bơm chữa cháy Tohatsu</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/88/may-bom-chua-chay-ebara/"><img src="/uploads/product/thm_88.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/88/may-bom-chua-chay-ebara/">Máy bơm chữa cháy Ebara</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/65/may-bom-chua-chay-pentax/"><img src="/uploads/product/thm_65.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/65/may-bom-chua-chay-pentax/">Máy bơm chữa cháy Pentax</a></div>
+																	<div class="ct_lv_line"></div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/63/lang-phun-chua-chay/"><img src="/uploads/product/thm_63.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/63/lang-phun-chua-chay/">Lăng phun chữa cháy</a></div>
+																	<div class="ct_lv_line">Đang cập nhật dữ liệu...</div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/62/-cuon-voi-chua-chay-duc/"><img src="/uploads/product/thm_62.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/62/-cuon-voi-chua-chay-duc/"> Cuộn vòi chữa cháy Đức</a></div>
+																	<div class="ct_lv_line">Đang cập nhật dữ liệu...</div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/59/hop-dung-cuon-voi-lang-phun-chua-chay-nqtl/"><img src="/uploads/product/thm_59.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/59/hop-dung-cuon-voi-lang-phun-chua-chay-nqtl/">Hộp đựng cuộn vòi, lăng phun chữa cháy, NQTL</a></div>
+																	<div class="ct_lv_line">Đang cập nhật dữ liệu...</div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<li>
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/58/voi-chua-chay-trung-quoc/"><img src="/uploads/product/thm_58.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/58/voi-chua-chay-trung-quoc/">Vòi chữa cháy Trung Quốc</a></div>
+																	<div class="ct_lv_line">Đang cập nhật dữ liệu...</div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li><li class="cloned">
+															<div class="hienthi_line">
+																
+																<div class="anh_hienthi_line" style="margin-right:13px;border:1px solid #c2c2c2;width:95px;">
+																	<a href="/san-pham-xem/103/binh-chua-chay-o-to/"><img src="/uploads/product/thm_103.jpg" width="95" height="60"></a>
+																</div>
+																<div class="td_lv_nd">
+																	<div class="td_lv_line"><a href="/san-pham-xem/103/binh-chua-chay-o-to/">Bình chữa cháy Ô tô</a></div>
+																	<div class="ct_lv_line">Loại bình sử dụng cho</div>		
+																</div>
+																<div class="tgp_clr_left"></div>
+															</div>
+														</li>	
+																										<div class="tgp_clr_left"></div>														
+											</ul>
+																	
+									</div><a href="#" class="arrowd back"></a><a href="#" class="arrowd forward"></a>
+							</div>			<div class="tgp_clr_left"></div>
+		</div>
+		<div class="tgp_wrapper_center">
+			<div class="tgp_wrapper_center_left">
+				<script>
+$('html, body').animate({scrollTop: '0px'}, 800);
+</script>	
+
+	<div class="tgp_right">
+		<div class="tgp_td_center cufon"><cufon class="cufon cufon-canvas" alt="Giới " style="width: 39px; height: 17px;"><canvas width="60" height="24" style="width: 60px; height: 24px; top: -6px; left: -3px;"></canvas><cufontext>Giới </cufontext></cufon><cufon class="cufon cufon-canvas" alt="thiệu " style="width: 55px; height: 17px;"><canvas width="77" height="24" style="width: 77px; height: 24px; top: -6px; left: -3px;"></canvas><cufontext>thiệu </cufontext></cufon><cufon class="cufon cufon-canvas" alt="về " style="width: 26px; height: 17px;"><canvas width="47" height="24" style="width: 47px; height: 24px; top: -6px; left: -3px;"></canvas><cufontext>về </cufontext></cufon><cufon class="cufon cufon-canvas" alt="chúng " style="width: 65px; height: 17px;"><canvas width="87" height="24" style="width: 87px; height: 24px; top: -6px; left: -3px;"></canvas><cufontext>chúng </cufontext></cufon><cufon class="cufon cufon-canvas" alt="tôi" style="width: 27px; height: 17px;"><canvas width="48" height="24" style="width: 48px; height: 24px; top: -6px; left: -3px;"></canvas><cufontext>tôi</cufontext></cufon></div>
+		<div class="tgp_clr_left"></div>
+		
+			<div style="padding:20px 0 10px;">
+				<div style="float:left;width:230px;margin-right:30px;">
+					<img src="/images/img_gioithieu.png" alt="">				</div>
+				<div style="float:left;width:450px;">
+					<div class="cufon" style="text-transform:uppercase;color:#6e6e6e;font-size:19px;padding-bottom:15px;"><cufon class="cufon cufon-canvas" alt="“AN " style="width: 39px; height: 19px;"><canvas width="63" height="26" style="width: 63px; height: 26px; top: -6px; left: -3px;"></canvas><cufontext>“AN </cufontext></cufon><cufon class="cufon cufon-canvas" alt="TOÀN " style="width: 54px; height: 19px;"><canvas width="78" height="26" style="width: 78px; height: 26px; top: -6px; left: -3px;"></canvas><cufontext>TOÀN </cufontext></cufon><cufon class="cufon cufon-canvas" alt="- " style="width: 12px; height: 19px;"><canvas width="36" height="26" style="width: 36px; height: 26px; top: -6px; left: -3px;"></canvas><cufontext>- </cufontext></cufon><cufon class="cufon cufon-canvas" alt="ĐẢM " style="width: 46px; height: 19px;"><canvas width="70" height="26" style="width: 70px; height: 26px; top: -6px; left: -3px;"></canvas><cufontext>ĐẢM </cufontext></cufon><cufon class="cufon cufon-canvas" alt="BẢO " style="width: 42px; height: 19px;"><canvas width="66" height="26" style="width: 66px; height: 26px; top: -6px; left: -3px;"></canvas><cufontext>BẢO </cufontext></cufon><cufon class="cufon cufon-canvas" alt="- " style="width: 12px; height: 19px;"><canvas width="36" height="26" style="width: 36px; height: 26px; top: -6px; left: -3px;"></canvas><cufontext>- </cufontext></cufon><cufon class="cufon cufon-canvas" alt="CÙNG " style="width: 57px; height: 19px;"><canvas width="81" height="26" style="width: 81px; height: 26px; top: -6px; left: -3px;"></canvas><cufontext>CÙNG </cufontext></cufon><cufon class="cufon cufon-canvas" alt="NHAU " style="width: 58px; height: 19px;"><canvas width="82" height="26" style="width: 82px; height: 26px; top: -6px; left: -3px;"></canvas><cufontext>NHAU </cufontext></cufon><cufon class="cufon cufon-canvas" alt="PHÁT " style="width: 53px; height: 19px;"><canvas width="77" height="26" style="width: 77px; height: 26px; top: -6px; left: -3px;"></canvas><cufontext>PHÁT </cufontext></cufon><cufon class="cufon cufon-canvas" alt="TRIỂN " style="width: 59px; height: 19px;"><canvas width="83" height="26" style="width: 83px; height: 26px; top: -6px; left: -3px;"></canvas><cufontext>TRIỂN </cufontext></cufon><cufon class="cufon cufon-canvas" alt="”" style="width: 8px; height: 19px;"><canvas width="30" height="26" style="width: 30px; height: 26px; top: -6px; left: -3px;"></canvas><cufontext>”</cufontext></cufon></div>
+					<div style="color:#7d7d7d;">
+						<strong style="color:#dc0610;">Công ty TNHH TM&amp;DV KỸ THUẬT PCCC AN BẢO PHÁT</strong> là công ty hoạt động chuyên nghiệp trong lĩnh vực thi công lắp đặt, kinh doanh các thiết bị: Phòng cháy chữa cháy, An ninh, Chống sét, hệ thống báo trộm, báo khách, camera quan sát, hệ thống kiểm soát ra vào, hệ thống mạng máy tính...					</div>
+					<div style="text-align:right;padding-top:10px;">
+												<a href="/gioi-thieu/1/gioi-thieu-chung/"><img src="/images/details.png"></a>
+					</div>
+					
+					<div class="tgp_clr_left"></div>
+				</div>
+				<div class="tgp_clr_left"></div>
+			</div>
+		<div style="height:8px;background:url(/images/border.png);"></div>
+		<div class="tgp_clr_left"></div>
+		<div class="tgp_td_center cufon" style="padding-top:15px;padding-bottom:15px;"><a style="color:#4E4E4E;" href="/du-an/"><cufon class="cufon cufon-canvas" alt="Các " style="width: 37px; height: 17px;"><canvas width="59" height="24" style="width: 59px; height: 24px; top: -6px; left: -3px;"></canvas><cufontext>Các </cufontext></cufon><cufon class="cufon cufon-canvas" alt="dự " style="width: 30px; height: 17px;"><canvas width="52" height="24" style="width: 52px; height: 24px; top: -6px; left: -3px;"></canvas><cufontext>dự </cufontext></cufon><cufon class="cufon cufon-canvas" alt="án " style="width: 29px; height: 17px;"><canvas width="50" height="24" style="width: 50px; height: 24px; top: -6px; left: -3px;"></canvas><cufontext>án </cufontext></cufon><cufon class="cufon cufon-canvas" alt="tiêu " style="width: 43px; height: 17px;"><canvas width="64" height="24" style="width: 64px; height: 24px; top: -6px; left: -3px;"></canvas><cufontext>tiêu </cufontext></cufon><cufon class="cufon cufon-canvas" alt="biểu" style="width: 39px; height: 17px;"><canvas width="53" height="24" style="width: 53px; height: 24px; top: -6px; left: -3px;"></canvas><cufontext>biểu</cufontext></cufon></a></div>
+		<div class="tgp_clr_left"></div>
+						<div class="tgp_duan_home" style="margin-right:20px;">
+					<a href="/du-an-xem/34/nam-hotel/"><img src="/uploads/cms/duan_34.jpg"></a>
+					<div class="tgp_duan_home_nd">
+						<div class="tgp_duan_home_td"><a href="/du-an-xem/34/nam-hotel/">Nam Hotel</a></div>
+						<div style="color:#fff;">Cung cấp lắp đặt hệ thống pccc</div>
+					</div>
+				</div>
+						<div class="tgp_duan_home">
+					<a href="/du-an-xem/33/garden-tower-/"><img src="/uploads/cms/duan_33.jpg"></a>
+					<div class="tgp_duan_home_nd">
+						<div class="tgp_duan_home_td"><a href="/du-an-xem/33/garden-tower-/">Garden Tower </a></div>
+						<div style="color:#fff;">Cung cấp lắp đặt hệ thống PCCC</div>
+					</div>
+				</div>
+						<div class="tgp_duan_home" style="margin-right:20px;">
+					<a href="/du-an-xem/32/du-an-may-mac-panko-lon-nhat-mien-trung-/"><img src="/uploads/cms/duan_32.jpg"></a>
+					<div class="tgp_duan_home_nd">
+						<div class="tgp_duan_home_td"><a href="/du-an-xem/32/du-an-may-mac-panko-lon-nhat-mien-trung-/">Dự án may mặc Panko lớn nhất Miền Trung </a></div>
+						<div style="color:#fff;">
+
+</div>
+					</div>
+				</div>
+						<div class="tgp_duan_home">
+					<a href="/du-an-xem/26/khach-san-hoang-gia-hoi-an/"><img src="/uploads/cms/duan_26.jpg"></a>
+					<div class="tgp_duan_home_nd">
+						<div class="tgp_duan_home_td"><a href="/du-an-xem/26/khach-san-hoang-gia-hoi-an/">Khách sạn Hoàng gia Hội An</a></div>
+						<div style="color:#fff;">CC&amp;lắp đặt hệ thống PCCC tự động</div>
+					</div>
+				</div>
+				
+		<div class="tgp_clr_left"></div>		
+	</div>
+<div class="tgp_clr_left"></div>				<div class="tgp_clr_left"></div>
+			</div>
+			<div class="tgp_wrapper_center_right">
+				<div class="ndd_right1">
+	<div class="ndd_right3">
+		<div class="ndd_right2">
+			<div class="tgp_td_right cufon"><cufon class="cufon cufon-canvas" alt="Tin " style="width: 24px; height: 14px;"><canvas width="42" height="20" style="width: 42px; height: 20px; top: -5px; left: -2px;"></canvas><cufontext>Tin </cufontext></cufon><cufon class="cufon cufon-canvas" alt="tức " style="width: 24px; height: 14px;"><canvas width="42" height="20" style="width: 42px; height: 20px; top: -5px; left: -2px;"></canvas><cufontext>tức </cufontext></cufon><cufon class="cufon cufon-canvas" alt="- " style="width: 10px; height: 14px;"><canvas width="27" height="20" style="width: 27px; height: 20px; top: -5px; left: -2px;"></canvas><cufontext>- </cufontext></cufon><cufon class="cufon cufon-canvas" alt="Hoạt " style="width: 35px; height: 14px;"><canvas width="52" height="20" style="width: 52px; height: 20px; top: -5px; left: -2px;"></canvas><cufontext>Hoạt </cufontext></cufon><cufon class="cufon cufon-canvas" alt="động" style="width: 31px; height: 14px;"><canvas width="46" height="20" style="width: 46px; height: 20px; top: -5px; left: -2px;"></canvas><cufontext>động</cufontext></cufon></div>
+			<div style="height:1px;background:#fff;"></div>
+			<div style="padding:0 18px 30px;">
+									<div class="tgp_new_slide">
+							<div class="tgp_new_slide_td"><a href="/tin-tuc-xem/31/thong-bao-tuyen-dung-2/">THÔNG BÁO TUYỂN DỤNG 2</a></div>
+							<div class="tgp_new_slide_date">03/04/2015</div>
+							<div class="tgp_new_slide_ct">Thông báo tuyển dụng kỹ sư và kế toán</div>
+						</div>
+									<div class="tgp_new_slide">
+							<div class="tgp_new_slide_td"><a href="/tin-tuc-xem/28/bao-tri-bao-duong---nap-binh-chua-chay/">BẢO TRÌ BẢO DƯỠNG - NẠP BÌNH CHỮA CHÁY</a></div>
+							<div class="tgp_new_slide_date">16/10/2014</div>
+							<div class="tgp_new_slide_ct">ĐƠN GIÁ MỀM NHẤT</div>
+						</div>
+						</div>
+			<div style="height:5px;background:#fff;margin-bottom:10px;"></div>
+			<div class="tgp_td_right cufon"><cufon class="cufon cufon-canvas" alt="Hỗ " style="width: 23px; height: 14px;"><canvas width="40" height="20" style="width: 40px; height: 20px; top: -5px; left: -2px;"></canvas><cufontext>Hỗ </cufontext></cufon><cufon class="cufon cufon-canvas" alt="trợ " style="width: 21px; height: 14px;"><canvas width="39" height="20" style="width: 39px; height: 20px; top: -5px; left: -2px;"></canvas><cufontext>trợ </cufontext></cufon><cufon class="cufon cufon-canvas" alt="trực " style="width: 29px; height: 14px;"><canvas width="46" height="20" style="width: 46px; height: 20px; top: -5px; left: -2px;"></canvas><cufontext>trực </cufontext></cufon><cufon class="cufon cufon-canvas" alt="tuyến" style="width: 34px; height: 14px;"><canvas width="49" height="20" style="width: 49px; height: 20px; top: -5px; left: -2px;"></canvas><cufontext>tuyến</cufontext></cufon></div>
+			<div style="height:5px;background:#fff;"></div>	
+			<div style="padding:20px 18px 10px;font-size:11px;color:#4d4d4d;">
+				<strong>Mọi thông tin thắc mắc cần được giải đáp khách hàng có thể liên hệ trực tiếp với công ty chúng tôi qua số </strong><br>
+<br>
+<table width="185" cellspacing="1" cellpadding="1" border="0">
+    <tbody>
+        <tr>
+            <td>
+            <h3>HOTLINE: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</h3>
+            </td>
+            <td>
+            <h2>&nbsp;</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p><span style="color: rgb(228, 0, 0); font-size: 17px;">-0511.3695377: v.phòng công ty &nbsp;</span></p>
+            <p><span style="color: rgb(228, 0, 0); font-size: 17px;">-0903.595.757:&nbsp;</span><span style="color: rgb(228, 0, 0); font-size: 17px;">Mr.Phúc-giám đốc</span></p>
+            &nbsp;</td>
+            <td>
+            <h2>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</h2>
+            <div style="color:#e40000;font-size:17px;" class="cufon"></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h3><br>
+<img alt="" src="/images/online.png"><br>
+<br>
+<a href="faceboot.com.vn"><img src="/images/offline.png" alt=""></a></h3>			</div>			
+		</div>
+	</div>
+	
+
+
+
+
+</div>				<div class="tgp_clr_left"></div>
+			</div>
+			<div class="tgp_clr_left"></div>
+		</div>
+		<div class="tgp_clr_left"></div>
+	</div>
+	<div class="tgp_clr_left"></div>
+</div>
+<div class="tgp_clr_left"></div>
+<div class="tgp_menu_footer_body">
+	<div class="tgp_menu_footer">
+	<script type="text/javascript">
+(function($) {
+	$(function() {
+		$("#scrollerd").simplyScroll();
+	});
+})(jQuery);
+</script>	
+<div class="simply-scroll simply-scroll-container"><div class="simply-scroll-clip"><ul id="scrollerd" class="simply-scroll-list" style="width: 1080px;">
+							<li style="padding-right:15px;"><img src="/uploads/gal/51.jpg"></li>
+							<li style="padding-right:15px;"><img src="/uploads/gal/50.jpg"></li>
+							<li style="padding-right:15px;"><img src="/uploads/gal/49.jpg"></li>
+							<li style="padding-right:15px;"><img src="/uploads/gal/40.jpg"></li>
+							<li style="padding-right:15px;"><img src="/uploads/gal/39.gif"></li>
+							<li style="padding-right:15px;"><img src="/uploads/gal/38.jpg"></li>
+							<li style="padding-right:15px;"><img src="/uploads/gal/29.jpg"></li>
+							<li style="padding-right:15px;"><img src="/uploads/gal/28.jpg"></li>
+			<li style="padding-right:15px;"><img src="/uploads/gal/51.jpg"></li><li style="padding-right:15px;"><img src="/uploads/gal/50.jpg"></li><li style="padding-right:15px;"><img src="/uploads/gal/49.jpg"></li><li style="padding-right:15px;"><img src="/uploads/gal/40.jpg"></li><li style="padding-right:15px;"><img src="/uploads/gal/39.gif"></li><li style="padding-right:15px;"><img src="/uploads/gal/38.jpg"></li><li style="padding-right:15px;"><img src="/uploads/gal/29.jpg"></li><li style="padding-right:15px;"><img src="/uploads/gal/28.jpg"></li></ul></div></div>
+
+<script type="text/javascript" src="/js/jquery.simplyscroll.js"></script>
+<link rel="stylesheet" href="/js/jquery.simplyscroll.css" media="all" type="text/css">
+
+
+	
+				
+	<div class="tgp_clr_left"></div>	
+	</div>
+<div class="tgp_clr_left"></div>
+</div>
+<div class="tgp_body_footer">
+	<div class="tgp_footer">
+		<div class="tgp_footer_left">
+				<strong>Copyright © 2013 - CÔNG TY TNHH TM&amp;DV KỸ THUẬT PCCC AN BẢO PHÁT</strong><br>
+Địa chỉ : 66 Bình Kỳ - Hòa Qúy&nbsp; - Ngũ Hành Sơn&nbsp; – TP. Đà Nẵng <br>
+Điện thoại : 0511 3 695377&nbsp;&nbsp; -&nbsp; Fax: 0511 3 695535<br>
+Văn phòng đại diện: 46 Phan Anh – Khuê Trung – Cẩm lệ - Đà Nẵng<br>
+			<div class="tgp_clr_left"></div>
+		</div>
+		<div class="tgp_footer_right">
+			<p>Designed and Maintained by <a title="Thiết kế website Đà Nẵng, DANAWEB.vn" href="https://danaweb.vn" target="_blank"><img alt="Thiết kế website Đà Nẵng, DANAWEB.vn" title="Thiết kế website Đà Nẵng, DANAWEB.vn" src="/images/logo-danaweb.svg" style="width:73px; margin-top:-5px"></a></p>
+			<div class="tgp_clr_left"></div>
+		</div>
+		<div class="tgp_clr_left"></div>
+	</div>
+	<div class="tgp_clr_left"></div>
+</div>
+<div class="tgp_clr_left"></div>
+
+<link rel="stylesheet" type="text/css" href="/css/popup.css">
+<script type="text/javascript" src="/js/jquery_popup.js"></script>
+<!--Load ad popup-->
+
+<div class="tgp_clr_left"></div>
+<div class="thoangbao_mgs">
+  <div id="luu_result"></div>
+</div>
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

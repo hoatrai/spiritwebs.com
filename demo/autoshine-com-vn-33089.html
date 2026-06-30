@@ -1,0 +1,620 @@
+<!DOCTYPE html><html lang="vi"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảo Trì — Autoshine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Rajdhani:wght@400;500;600;700&amp;family=Orbitron:wght@400;700;900&amp;display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #050a14;
+      --navy:    #071022;
+      --panel:   #0b1628;
+      --border:  rgba(56,189,248,0.12);
+      --cyan:    #38bdf8;
+      --cyan2:   #7dd3fc;
+      --blue:    #2563eb;
+      --foam:    #e0f2fe;
+      --text:    #dbeafe;
+      --muted:   rgba(219,234,254,0.4);
+      --glow:    rgba(56,189,248,0.3);
+    }
+
+    html, body { height: 100%; overflow: hidden; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Rajdhani', sans-serif;
+      cursor: none;
+    }
+
+    /* ─── Custom cursor: water drop ─── */
+    .cursor {
+      width: 14px; height: 18px;
+      background: var(--cyan);
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      position: fixed; top: 0; left: 0;
+      pointer-events: none; z-index: 9999;
+      transform: translate(-50%,-50%);
+      box-shadow: 0 0 12px var(--cyan);
+      transition: transform 0.08s;
+    }
+    .cursor-ring {
+      width: 40px; height: 40px;
+      border: 1.5px solid rgba(56,189,248,0.4);
+      border-radius: 50%;
+      position: fixed; top: 0; left: 0;
+      pointer-events: none; z-index: 9998;
+      transform: translate(-50%,-50%);
+    }
+
+    /* ─── Rain drops background ─── */
+    .rain { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+    .drop {
+      position: absolute;
+      top: -60px;
+      width: 1.5px;
+      background: linear-gradient(to bottom, transparent, rgba(56,189,248,0.5), transparent);
+      border-radius: 100px;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      to { transform: translateY(110vh); }
+    }
+
+    /* ─── Water ripple bg ─── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(37,99,235,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 30% at 50% 0%,   rgba(56,189,248,0.08) 0%, transparent 60%);
+    }
+
+    /* ─── Foam bubbles ─── */
+    .bubbles { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+    .bubble {
+      position: absolute;
+      bottom: -40px;
+      border-radius: 50%;
+      border: 1px solid rgba(56,189,248,0.25);
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.08), transparent 60%);
+      animation: rise ease-in infinite;
+    }
+    @keyframes rise {
+      0%  { transform: translateY(0) scale(1); opacity: 0.6; }
+      100%{ transform: translateY(-110vh) scale(1.4); opacity: 0; }
+    }
+
+    /* ─── Top bar ─── */
+    .top-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+      height: 48px;
+      background: rgba(7,16,34,0.9);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 32px;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 0.12em;
+      color: var(--cyan);
+    }
+    .logo svg { flex-shrink: 0; }
+    .logo span.sub-brand { color: var(--muted); font-size: 12px; font-family: 'Rajdhani', sans-serif; font-weight: 500; letter-spacing: 0.1em; margin-top: 2px; }
+    .logo-wrap { display: flex; flex-direction: column; gap: 0; line-height: 1; }
+    .top-right {
+      font-size: 12px; color: var(--muted);
+      font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .top-right .live-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #facc15;
+      box-shadow: 0 0 8px #facc15;
+      animation: blink 1s ease-in-out infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+
+    /* ─── Scene ─── */
+    .scene {
+      position: relative; z-index: 1;
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 80px 24px 60px;
+      gap: 0;
+    }
+
+    /* ─── Water scanner line ─── */
+    .scanner {
+      position: fixed; top: 48px; left: 0; right: 0; z-index: 2;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--cyan), var(--cyan2), var(--cyan), transparent);
+      animation: scan 3.5s ease-in-out infinite;
+      box-shadow: 0 0 16px var(--cyan), 0 0 40px rgba(56,189,248,0.3);
+      opacity: 0.7;
+    }
+    @keyframes scan {
+      0%  { top: 48px; }
+      100%{ top: 100vh; }
+    }
+
+    /* ─── Status badge ─── */
+    .badge {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: rgba(56,189,248,0.08);
+      border: 1px solid rgba(56,189,248,0.25);
+      border-radius: 4px;
+      padding: 7px 20px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 28px;
+      animation: fadeUp 0.6s ease both;
+    }
+    .badge-icon { animation: spin 3s linear infinite; display: inline-block; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ─── Heading ─── */
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(68px, 14vw, 160px);
+      line-height: 0.87;
+      letter-spacing: 0.04em;
+      text-align: center;
+      animation: fadeUp 0.6s 0.08s ease both;
+    }
+    h1 .line1 { color: var(--text); display: block; }
+    h1 .line2 {
+      display: block;
+      background: linear-gradient(90deg, var(--cyan), var(--cyan2), var(--cyan));
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s linear infinite, fadeUp 0.6s 0.08s ease both;
+    }
+    @keyframes shimmer { 0%{background-position:0%} 100%{background-position:200%} }
+
+    /* ─── Car wash animation ─── */
+    .wash-stage {
+      margin: 24px 0 20px;
+      position: relative;
+      width: 280px; height: 90px;
+      animation: fadeUp 0.6s 0.14s ease both;
+    }
+    .wash-track {
+      position: absolute; bottom: 10px; left: 0; right: 0;
+      height: 3px;
+      background: repeating-linear-gradient(90deg, var(--border) 0px, var(--border) 12px, transparent 12px, transparent 20px);
+    }
+    .car-svg {
+      position: absolute; bottom: 10px; left: 50%;
+      transform: translateX(-50%);
+      filter: drop-shadow(0 0 12px rgba(56,189,248,0.5));
+    }
+    /* Spray particles */
+    .spray {
+      position: absolute;
+      width: 2px; height: 2px;
+      border-radius: 50%;
+      background: var(--cyan2);
+      animation: spray-fly ease-out infinite;
+      opacity: 0;
+    }
+    @keyframes spray-fly {
+      0%   { opacity:1; transform: translate(0,0) scale(1); }
+      100% { opacity:0; transform: translate(var(--dx), var(--dy)) scale(0.3); }
+    }
+
+    /* ─── Sub ─── */
+    .sub {
+      font-size: clamp(14px, 2vw, 17px);
+      font-weight: 400;
+      color: var(--muted);
+      text-align: center;
+      max-width: 440px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      animation: fadeUp 0.6s 0.18s ease both;
+    }
+    .sub strong { color: var(--cyan2); font-weight: 600; }
+
+    /* ─── Countdown ─── */
+    .countdown {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 32px;
+      animation: fadeUp 0.6s 0.22s ease both;
+    }
+    .cd-seg {
+      display: flex; flex-direction: column; align-items: center;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      min-width: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cd-seg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(56,189,248,0.05) 0%, transparent 100%);
+    }
+    .cd-n {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(36px, 6vw, 52px);
+      font-weight: 900;
+      color: var(--cyan);
+      line-height: 1;
+      text-shadow: 0 0 30px var(--glow);
+    }
+    .cd-l {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--muted); margin-top: 5px;
+    }
+    .cd-sep {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 32px; font-weight: 700;
+      color: var(--cyan); opacity: 0.4;
+      margin-top: -16px;
+    }
+
+    /* ─── Progress ─── */
+    .prog-wrap {
+      width: min(400px, 90vw);
+      margin-bottom: 32px;
+      animation: fadeUp 0.6s 0.26s ease both;
+    }
+    .prog-head {
+      display: flex; justify-content: space-between;
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 10px;
+    }
+    .prog-head strong { color: var(--cyan); }
+    .prog-track {
+      height: 6px;
+      background: rgba(56,189,248,0.08);
+      border-radius: 100px;
+      overflow: hidden;
+      position: relative;
+    }
+    .prog-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--blue), var(--cyan), var(--cyan2));
+      border-radius: 100px;
+      width: 0%;
+      transition: width 2.2s cubic-bezier(.22,1,.36,1);
+      position: relative;
+    }
+    .prog-fill::after {
+      content: '';
+      position: absolute; right: 0; top: 50%;
+      transform: translateY(-50%);
+      width: 12px; height: 12px;
+      background: var(--cyan2);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--cyan);
+    }
+    /* water wave on bar */
+    .prog-wave {
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(90deg, transparent, rgba(255,255,255,0.12) 6px, transparent 12px);
+      animation: wave-slide 1.2s linear infinite;
+    }
+    @keyframes wave-slide { from{transform:translateX(-100%)} to{transform:translateX(100%)} }
+
+    /* ─── Steps ─── */
+    .steps {
+      display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+      margin-bottom: 32px;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+    .step {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+    .step.done { border-color: rgba(56,189,248,0.3); color: var(--cyan2); }
+    .step.active { border-color: var(--cyan); color: var(--text); box-shadow: 0 0 12px rgba(56,189,248,0.15); }
+    .step-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink:0; }
+    .step.done .step-dot   { background: var(--cyan); }
+    .step.active .step-dot { background: var(--cyan); animation: blink 0.8s infinite; }
+    .step .step-dot         { background: rgba(56,189,248,0.2); }
+
+    /* ─── Notify ─── */
+    .notify {
+      display: flex; gap: 0;
+      width: min(400px, 90vw);
+      animation: fadeUp 0.6s 0.34s ease both;
+    }
+    .notify input {
+      flex:1;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-right: none;
+      border-radius: 6px 0 0 6px;
+      color: var(--text);
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 15px; font-weight: 500;
+      padding: 12px 16px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .notify input::placeholder { color: var(--muted); }
+    .notify input:focus { border-color: rgba(56,189,248,0.4); }
+    .notify button {
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+      border: none;
+      color: #fff;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 14px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 12px 22px;
+      border-radius: 0 6px 6px 0;
+      cursor: none;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+    .notify button:hover { opacity: 0.88; }
+    .notify-ok {
+      display:none; align-items:center; gap:10px;
+      color: var(--cyan); font-family:'Rajdhani',sans-serif;
+      font-size:15px; font-weight:700; letter-spacing:0.1em;
+    }
+
+    /* ─── Footer ─── */
+    .footer {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 10;
+      height: 44px;
+      background: rgba(7,16,34,0.92);
+      border-top: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 32px;
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .footer a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer a:hover { color: var(--cyan); }
+    .footer .brand { color: var(--cyan); font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.14em; }
+
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(20px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    @media(max-width:520px){
+      .cd-seg { padding:12px 14px; min-width:64px; }
+      .steps { gap:8px; }
+      .step { font-size:12px; padding:6px 10px; }
+      .top-bar { padding:0 16px; }
+      .footer { padding:0 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring" style="left: 0px; top: 0px;"></div>
+
+<!-- Rain -->
+<div class="rain" id="rain"><div class="drop" style="left: 22.0758vw; height: 100.37px; opacity: 0.487044; animation-duration: 0.960225s; animation-delay: -1.01068s;"></div><div class="drop" style="left: 77.3874vw; height: 95.7553px; opacity: 0.313415; animation-duration: 1.50713s; animation-delay: -0.488803s;"></div><div class="drop" style="left: 14.9565vw; height: 46.1113px; opacity: 0.433879; animation-duration: 0.642813s; animation-delay: -0.524007s;"></div><div class="drop" style="left: 92.8945vw; height: 78.4617px; opacity: 0.35474; animation-duration: 1.51092s; animation-delay: -0.136702s;"></div><div class="drop" style="left: 96.9905vw; height: 46.8099px; opacity: 0.25382; animation-duration: 0.68248s; animation-delay: -1.269s;"></div><div class="drop" style="left: 78.3043vw; height: 82.2324px; opacity: 0.356144; animation-duration: 1.66192s; animation-delay: -1.78943s;"></div><div class="drop" style="left: 17.3737vw; height: 48.2163px; opacity: 0.396288; animation-duration: 1.48517s; animation-delay: -1.94621s;"></div><div class="drop" style="left: 69.0926vw; height: 108.413px; opacity: 0.274548; animation-duration: 1.10062s; animation-delay: -1.82272s;"></div><div class="drop" style="left: 18.8406vw; height: 109.454px; opacity: 0.222518; animation-duration: 1.61473s; animation-delay: -0.984947s;"></div><div class="drop" style="left: 26.0074vw; height: 77.3154px; opacity: 0.374532; animation-duration: 0.749892s; animation-delay: -0.35371s;"></div><div class="drop" style="left: 5.30305vw; height: 53.8594px; opacity: 0.377889; animation-duration: 1.02514s; animation-delay: -0.433248s;"></div><div class="drop" style="left: 75.1626vw; height: 77.0023px; opacity: 0.395031; animation-duration: 1.00479s; animation-delay: -0.920427s;"></div><div class="drop" style="left: 55.975vw; height: 49.0197px; opacity: 0.438456; animation-duration: 0.695119s; animation-delay: -0.780342s;"></div><div class="drop" style="left: 13.7767vw; height: 96.9353px; opacity: 0.49272; animation-duration: 1.45648s; animation-delay: -1.75997s;"></div><div class="drop" style="left: 38.6071vw; height: 42.5009px; opacity: 0.229431; animation-duration: 0.941356s; animation-delay: -1.62366s;"></div><div class="drop" style="left: 36.0989vw; height: 74.5413px; opacity: 0.360097; animation-duration: 0.72889s; animation-delay: -1.31613s;"></div><div class="drop" style="left: 14.3381vw; height: 89.6765px; opacity: 0.432266; animation-duration: 1.203s; animation-delay: -1.5349s;"></div><div class="drop" style="left: 35.603vw; height: 77.5038px; opacity: 0.233256; animation-duration: 0.787663s; animation-delay: -0.973231s;"></div><div class="drop" style="left: 45.2871vw; height: 79.6844px; opacity: 0.210636; animation-duration: 1.18155s; animation-delay: -0.389205s;"></div><div class="drop" style="left: 22.7321vw; height: 40.1388px; opacity: 0.429283; animation-duration: 1.69161s; animation-delay: -0.753465s;"></div><div class="drop" style="left: 75.6366vw; height: 113.351px; opacity: 0.349978; animation-duration: 1.30358s; animation-delay: -1.32844s;"></div><div class="drop" style="left: 81.2547vw; height: 51.6029px; opacity: 0.277849; animation-duration: 1.23133s; animation-delay: -1.71867s;"></div><div class="drop" style="left: 21.3324vw; height: 115.535px; opacity: 0.355122; animation-duration: 1.78503s; animation-delay: -1.50037s;"></div><div class="drop" style="left: 3.15136vw; height: 105.003px; opacity: 0.229611; animation-duration: 1.56488s; animation-delay: -0.360997s;"></div><div class="drop" style="left: 35.8558vw; height: 92.8918px; opacity: 0.291728; animation-duration: 0.747956s; animation-delay: -1.24887s;"></div><div class="drop" style="left: 76.738vw; height: 50.9434px; opacity: 0.364804; animation-duration: 0.868248s; animation-delay: -1.75813s;"></div><div class="drop" style="left: 0.639622vw; height: 118.123px; opacity: 0.31963; animation-duration: 1.67937s; animation-delay: -1.00176s;"></div><div class="drop" style="left: 36.4892vw; height: 45.4351px; opacity: 0.437052; animation-duration: 0.844435s; animation-delay: -1.19672s;"></div><div class="drop" style="left: 37.2763vw; height: 56.3841px; opacity: 0.190439; animation-duration: 1.00241s; animation-delay: -1.64922s;"></div><div class="drop" style="left: 82.8334vw; height: 58.6433px; opacity: 0.247328; animation-duration: 0.83809s; animation-delay: -0.584261s;"></div><div class="drop" style="left: 41.515vw; height: 51.2069px; opacity: 0.451963; animation-duration: 1.64034s; animation-delay: -0.302498s;"></div><div class="drop" style="left: 34.5702vw; height: 52.7756px; opacity: 0.341462; animation-duration: 1.02078s; animation-delay: -0.159808s;"></div><div class="drop" style="left: 46.9213vw; height: 62.1798px; opacity: 0.42572; animation-duration: 0.652989s; animation-delay: -1.62883s;"></div><div class="drop" style="left: 27.5014vw; height: 94.7403px; opacity: 0.423272; animation-duration: 0.726291s; animation-delay: -1.84127s;"></div><div class="drop" style="left: 81.6662vw; height: 93.3998px; opacity: 0.341636; animation-duration: 0.908418s; animation-delay: -0.885427s;"></div><div class="drop" style="left: 92.1153vw; height: 40.3352px; opacity: 0.288587; animation-duration: 1.75442s; animation-delay: -1.82328s;"></div><div class="drop" style="left: 53.7952vw; height: 57.366px; opacity: 0.159849; animation-duration: 1.49243s; animation-delay: -0.99249s;"></div><div class="drop" style="left: 33.8291vw; height: 91.4103px; opacity: 0.1717; animation-duration: 0.74078s; animation-delay: -0.758885s;"></div><div class="drop" style="left: 86.3972vw; height: 74.7987px; opacity: 0.264379; animation-duration: 0.694714s; animation-delay: -1.92046s;"></div><div class="drop" style="left: 76.2861vw; height: 67.8375px; opacity: 0.483763; animation-duration: 1.36377s; animation-delay: -1.33735s;"></div><div class="drop" style="left: 16.4847vw; height: 48.1296px; opacity: 0.396175; animation-duration: 1.79219s; animation-delay: -1.61763s;"></div><div class="drop" style="left: 34.3926vw; height: 93.9251px; opacity: 0.316745; animation-duration: 0.720204s; animation-delay: -0.68994s;"></div><div class="drop" style="left: 68.2421vw; height: 53.2113px; opacity: 0.243877; animation-duration: 1.01409s; animation-delay: -0.619673s;"></div><div class="drop" style="left: 97.3319vw; height: 89.0777px; opacity: 0.248954; animation-duration: 0.667812s; animation-delay: -0.722851s;"></div><div class="drop" style="left: 24.2275vw; height: 64.4295px; opacity: 0.402266; animation-duration: 0.992922s; animation-delay: -0.763959s;"></div><div class="drop" style="left: 6.90669vw; height: 75.3052px; opacity: 0.22701; animation-duration: 1.63104s; animation-delay: -1.34213s;"></div><div class="drop" style="left: 20.9434vw; height: 103.2px; opacity: 0.42371; animation-duration: 1.05768s; animation-delay: -1.14297s;"></div><div class="drop" style="left: 21.448vw; height: 103.81px; opacity: 0.253576; animation-duration: 0.68107s; animation-delay: -0.471835s;"></div><div class="drop" style="left: 13.7764vw; height: 92.4093px; opacity: 0.35217; animation-duration: 1.68042s; animation-delay: -0.711074s;"></div><div class="drop" style="left: 8.79615vw; height: 114.698px; opacity: 0.263069; animation-duration: 1.36578s; animation-delay: -0.657946s;"></div><div class="drop" style="left: 50.7781vw; height: 69.7191px; opacity: 0.466; animation-duration: 0.878285s; animation-delay: -1.39023s;"></div><div class="drop" style="left: 91.6124vw; height: 67.3617px; opacity: 0.416844; animation-duration: 0.879685s; animation-delay: -0.78884s;"></div><div class="drop" style="left: 37.1789vw; height: 69.1245px; opacity: 0.475616; animation-duration: 0.748626s; animation-delay: -1.17714s;"></div><div class="drop" style="left: 10.8249vw; height: 41.0501px; opacity: 0.315803; animation-duration: 1.29954s; animation-delay: -1.63015s;"></div><div class="drop" style="left: 72.945vw; height: 59.6371px; opacity: 0.339227; animation-duration: 1.75555s; animation-delay: -1.45783s;"></div></div>
+<!-- Bubbles -->
+<div class="bubbles" id="bubbles"><div class="bubble" style="width: 31.2438px; height: 31.2438px; left: 53.4181vw; bottom: -40px; animation-duration: 5.5601s; animation-delay: 1.05107s;"></div><div class="bubble" style="width: 17.6535px; height: 17.6535px; left: 35.4986vw; bottom: -40px; animation-duration: 11.1819s; animation-delay: 2.70363s;"></div><div class="bubble" style="width: 25.6809px; height: 25.6809px; left: 4.59073vw; bottom: -40px; animation-duration: 9.79952s; animation-delay: 1.41763s;"></div><div class="bubble" style="width: 9.0255px; height: 9.0255px; left: 98.3685vw; bottom: -40px; animation-duration: 11.2165s; animation-delay: 1.08184s;"></div><div class="bubble" style="width: 22.6295px; height: 22.6295px; left: 7.74142vw; bottom: -40px; animation-duration: 7.99477s; animation-delay: 0.617009s;"></div><div class="bubble" style="width: 9.34564px; height: 9.34564px; left: 83.0241vw; bottom: -40px; animation-duration: 10.4077s; animation-delay: 0.773458s;"></div><div class="bubble" style="width: 27.4776px; height: 27.4776px; left: 44.1334vw; bottom: -40px; animation-duration: 10.2363s; animation-delay: 2.83634s;"></div><div class="bubble" style="width: 23.3588px; height: 23.3588px; left: 31.4456vw; bottom: -40px; animation-duration: 6.96812s; animation-delay: 0.325231s;"></div><div class="bubble" style="width: 31.3077px; height: 31.3077px; left: 63.5876vw; bottom: -40px; animation-duration: 6.03094s; animation-delay: 0.686787s;"></div><div class="bubble" style="width: 26.7398px; height: 26.7398px; left: 66.5415vw; bottom: -40px; animation-duration: 7.4845s; animation-delay: 2.34696s;"></div><div class="bubble" style="width: 34.7468px; height: 34.7468px; left: 95.3428vw; bottom: -40px; animation-duration: 10.9058s; animation-delay: 1.16003s;"></div><div class="bubble" style="width: 21.9621px; height: 21.9621px; left: 97.2367vw; bottom: -40px; animation-duration: 10.1331s; animation-delay: 1.06205s;"></div><div class="bubble" style="width: 24.6966px; height: 24.6966px; left: 74.7964vw; bottom: -40px; animation-duration: 10.5292s; animation-delay: 0.799751s;"></div><div class="bubble" style="width: 24.6056px; height: 24.6056px; left: 64.5737vw; bottom: -40px; animation-duration: 7.83155s; animation-delay: 0.0396746s;"></div><div class="bubble" style="width: 11.1947px; height: 11.1947px; left: 80.0088vw; bottom: -40px; animation-duration: 7.59903s; animation-delay: 1.22923s;"></div><div class="bubble" style="width: 20.3089px; height: 20.3089px; left: 78.5945vw; bottom: -40px; animation-duration: 5.98901s; animation-delay: 1.83718s;"></div><div class="bubble" style="width: 24.8029px; height: 24.8029px; left: 31.5086vw; bottom: -40px; animation-duration: 12.633s; animation-delay: 2.07821s;"></div><div class="bubble" style="width: 20.9772px; height: 20.9772px; left: 78.8891vw; bottom: -40px; animation-duration: 8.39138s; animation-delay: 1.37891s;"></div><div class="bubble" style="width: 27.431px; height: 27.431px; left: 70.9646vw; bottom: -40px; animation-duration: 9.16473s; animation-delay: 0.650467s;"></div><div class="bubble" style="width: 23.6164px; height: 23.6164px; left: 19.3927vw; bottom: -40px; animation-duration: 8.43551s; animation-delay: 0.635736s;"></div><div class="bubble" style="width: 21.6419px; height: 21.6419px; left: 70.5165vw; bottom: -40px; animation-duration: 9.97146s; animation-delay: 0.000292243s;"></div><div class="bubble" style="width: 25.6856px; height: 25.6856px; left: 24.8543vw; bottom: -40px; animation-duration: 7.84607s; animation-delay: 0.329037s;"></div><div class="bubble" style="width: 34.7851px; height: 34.7851px; left: 88.3156vw; bottom: -40px; animation-duration: 9.96039s; animation-delay: 1.06986s;"></div><div class="bubble" style="width: 19.1166px; height: 19.1166px; left: 69.0093vw; bottom: -40px; animation-duration: 8.93605s; animation-delay: 1.38146s;"></div><div class="bubble" style="width: 33.8314px; height: 33.8314px; left: 23.5356vw; bottom: -40px; animation-duration: 7.32543s; animation-delay: 1.09884s;"></div></div>
+
+<!-- Scanner -->
+<div class="scanner"></div>
+
+<!-- Top bar -->
+
+
+<!-- Main -->
+<div class="scene">
+
+  <div class="badge">
+    <span class="badge-icon">⚙</span>
+    Website Đang Nâng Cấp
+  </div>
+
+  
+
+  <!-- Car wash SVG animation -->
+  <div class="wash-stage">
+    <div class="wash-track"></div>
+    <!-- Spray particles -->
+    <div class="spray" id="sp" style="left:148px; top:30px;"></div>
+    <svg class="car-svg" width="120" height="56" viewBox="0 0 120 56" fill="none">
+      <!-- Car body -->
+      <rect x="8" y="28" width="104" height="22" rx="5" fill="#0b1628" stroke="rgba(56,189,248,0.3)" stroke-width="1.5"></rect>
+      <!-- Cabin -->
+      <path d="M28 28 C28 28 36 10 50 10 L72 10 C86 10 92 28 92 28Z" fill="#0d1f3c" stroke="rgba(56,189,248,0.25)" stroke-width="1.5"></path>
+      <!-- Windows -->
+      <path d="M38 27 C38 27 43 14 52 14 L68 14 C76 14 81 27 81 27Z" fill="rgba(56,189,248,0.12)" stroke="rgba(56,189,248,0.3)" stroke-width="1"></path>
+      <!-- Wheels -->
+      <circle cx="30" cy="50" r="8" fill="#071022" stroke="rgba(56,189,248,0.4)" stroke-width="2"></circle>
+      <circle cx="30" cy="50" r="3.5" fill="rgba(56,189,248,0.2)"></circle>
+      <circle cx="90" cy="50" r="8" fill="#071022" stroke="rgba(56,189,248,0.4)" stroke-width="2"></circle>
+      <circle cx="90" cy="50" r="3.5" fill="rgba(56,189,248,0.2)"></circle>
+      <!-- Glow under -->
+      <ellipse cx="60" cy="53" rx="44" ry="4" fill="rgba(56,189,248,0.08)"></ellipse>
+      <!-- Water splash left -->
+      <g id="splash-l" opacity="0.8">
+        <path d="M4 38 Q0 30 6 24" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+        <path d="M4 38 Q-2 28 2 20" stroke="#7dd3fc" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.5"></path>
+        <circle cx="6" cy="24" r="2" fill="#38bdf8" opacity="0.6"></circle>
+      </g>
+      <!-- Water splash right -->
+      <g id="splash-r" opacity="0.8">
+        <path d="M116 38 Q120 30 114 24" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+        <path d="M116 38 Q122 28 118 20" stroke="#7dd3fc" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.5"></path>
+        <circle cx="114" cy="24" r="2" fill="#38bdf8" opacity="0.6"></circle>
+      </g>
+    </svg>
+  <div class="spray" style="left: 12px; top: 24.8385px; --dx: 20.865096096576554px; --dy: -7.618754809362054px; animation-duration: 0.546496s; animation-delay: 0.040338s;"></div><div class="spray" style="left: 252px; top: 38.273px; --dx: 25.838946173486125px; --dy: 17.809608465397886px; animation-duration: 0.606269s; animation-delay: 0.0591657s;"></div><div class="spray" style="left: 252px; top: 27.7939px; --dx: 12.061357358131197px; --dy: 40.24944621430256px; animation-duration: 0.612141s; animation-delay: 0.0237127s;"></div><div class="spray" style="left: 252px; top: 23.8443px; --dx: 14.624761969683268px; --dy: 37.38811758989648px; animation-duration: 0.65947s; animation-delay: 0.265097s;"></div><div class="spray" style="left: 12px; top: 20.4786px; --dx: 8.344173438874128px; --dy: -5.28002641763382px; animation-duration: 0.484503s; animation-delay: 0.261956s;"></div><div class="spray" style="left: 252px; top: 30.1228px; --dx: 20.72238064887647px; --dy: 19.168104961760363px; animation-duration: 0.568851s; animation-delay: 0.238074s;"></div><div class="spray" style="left: 252px; top: 31.9067px; --dx: 22.925418314093154px; --dy: 23.945209347556798px; animation-duration: 0.436458s; animation-delay: 0.139149s;"></div><div class="spray" style="left: 252px; top: 43.236px; --dx: 13.92113365208337px; --dy: 25.34021750460294px; animation-duration: 0.672299s; animation-delay: 0.2801s;"></div><div class="spray" style="left: 252px; top: 45.8016px; --dx: 16.38844464719606px; --dy: 26.696859453087626px; animation-duration: 0.728831s; animation-delay: 0.004643s;"></div><div class="spray" style="left: 12px; top: 32.645px; --dx: 27.611426545596704px; --dy: -1.796534596338665px; animation-duration: 0.432543s; animation-delay: 0.148091s;"></div></div>
+
+  <p class="sub">
+    Website <strong>Autoshine</strong> đang được bảo dưỡng định kỳ.<br>
+    Địa chỉ: 5 Nguyễn Hữu Liêu, Xuân Đỉnh, Bắc Từ Liêm, Hà Nội 11206
+  </p>
+
+  <!-- Countdown -->
+  <div class="countdown">
+    <div class="cd-seg"><div class="cd-n" id="cd-h">02</div><div class="cd-l">Giờ</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-seg"><div class="cd-n" id="cd-m">29</div><div class="cd-l">Phút</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-seg"><div class="cd-n" id="cd-s">55</div><div class="cd-l">Giây</div></div>
+  </div>
+
+  <!-- Progress -->
+  <div class="prog-wrap">
+    <div class="prog-head">
+      <span>Tiến độ bảo trì</span>
+      <strong id="pct">55%</strong>
+    </div>
+    <div class="prog-track">
+      <div class="prog-fill" id="bar" style="width: 55%;">
+        <div class="prog-wave"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Steps -->
+  <div class="steps">
+    <div class="step done">   <span class="step-dot"></span>Rửa xe tự động</div>
+    <div class="step done">   <span class="step-dot"></span>PPF và dịch vụ chăm sóc xe</div>
+    <div class="step active">  <span class="step-dot"></span>Vệ sinh khoang máy</div>
+  </div>
+
+  <!-- Notify -->
+  <div class="notify" id="nf">
+    <input type="email" id="email" placeholder="Email để nhận thông báo khi mở cửa trở lại..." style="">
+    <button onclick="doNotify()">Báo tôi</button>
+  </div>
+  <div class="notify-ok" id="nok">
+    <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="#38bdf8" fill-opacity=".15"></circle><path d="M5 9l3 3 5-5" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    Đã ghi nhận! Chúng tôi sẽ thông báo bạn sớm.
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <span class="brand">Autoshine</span>
+  <span>Hotline: <a href="tel:0933 627 988">0933 627 988</a></span>
+  <span><a href="#">Về chúng tôi</a> · <a href="#">Dịch vụ</a> · <a href="#">Liên hệ</a></span>
+</div>
+
+<script>
+// ─── Cursor ───
+const cur = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove', e=>{ mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
+(function animRing(){ rx+=(mx-rx)*0.1; ry+=(my-ry)*0.1; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(animRing); })();
+
+// ─── Rain ───
+const rain = document.getElementById('rain');
+for(let i=0;i<55;i++){
+  const d = document.createElement('div');
+  d.className = 'drop';
+  d.style.left = Math.random()*100 + 'vw';
+  d.style.height = (40+Math.random()*80) + 'px';
+  d.style.opacity = 0.15 + Math.random()*0.35;
+  d.style.animationDuration = (0.6+Math.random()*1.2) + 's';
+  d.style.animationDelay = (-Math.random()*2) + 's';
+  rain.appendChild(d);
+}
+
+// ─── Bubbles ───
+const bub = document.getElementById('bubbles');
+function spawnBubble(){
+  const b = document.createElement('div');
+  b.className = 'bubble';
+  const sz = 8 + Math.random()*28;
+  b.style.width = sz+'px'; b.style.height = sz+'px';
+  b.style.left = Math.random()*100+'vw';
+  b.style.bottom = '-40px';
+  b.style.animationDuration = (5+Math.random()*8)+'s';
+  b.style.animationDelay = (Math.random()*3)+'s';
+  bub.appendChild(b);
+  setTimeout(()=>b.remove(), 14000);
+}
+for(let i=0;i<18;i++) spawnBubble();
+setInterval(spawnBubble, 700);
+
+// ─── Spray particles ───
+const spContainer = document.querySelector('.wash-stage');
+function spawnSpray(){
+  const s = document.createElement('div');
+  s.className = 'spray';
+  const side = Math.random()>0.5;
+  s.style.left = (side ? 12 : 252) + 'px';
+  s.style.top = (20+Math.random()*30)+'px';
+  const angle = (side ? 1 : -1) * (20+Math.random()*60);
+  const dist = 12+Math.random()*22;
+  const rad = angle*Math.PI/180;
+  s.style.setProperty('--dx', (Math.cos(rad)*dist)+'px');
+  s.style.setProperty('--dy', (-Math.sin(rad)*dist+dist*0.3)+'px');
+  s.style.animationDuration = (0.4+Math.random()*0.4)+'s';
+  s.style.animationDelay = (Math.random()*0.3)+'s';
+  spContainer.appendChild(s);
+  setTimeout(()=>s.remove(), 800);
+}
+setInterval(spawnSpray, 80);
+
+// ─── Countdown ───
+const END = new Date(Date.now() + 2*3600000 + 30*60000);
+function pad(n){ return String(n).padStart(2,'0'); }
+function tick(){
+  const d = Math.max(0, END - Date.now());
+  document.getElementById('cd-h').textContent = pad(Math.floor(d/3600000));
+  document.getElementById('cd-m').textContent = pad(Math.floor(d%3600000/60000));
+  document.getElementById('cd-s').textContent = pad(Math.floor(d%60000/1000));
+}
+setInterval(tick,1000); tick();
+
+// ─── Progress ───
+const PCT = 55;
+setTimeout(()=>{
+  document.getElementById('bar').style.width = PCT+'%';
+  let c=0; const iv=setInterval(()=>{
+    c=Math.min(c+PCT/90,PCT);
+    document.getElementById('pct').textContent=Math.round(c)+'%';
+    if(c>=PCT) clearInterval(iv);
+  },25);
+},500);
+
+// ─── Notify ───
+function doNotify(){
+  const v=document.getElementById('email').value.trim();
+  if(!v||!v.includes('@')){
+    document.getElementById('email').style.borderColor='rgba(239,68,68,0.5)';
+    setTimeout(()=>document.getElementById('email').style.borderColor='',1500);
+    return;
+  }
+  document.getElementById('nf').style.display='none';
+  document.getElementById('nok').style.display='flex';
+}
+</script>
+
+</body></html>

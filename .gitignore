@@ -1,0 +1,12 @@
+wp-content/uploads/
+wp-content/crawled/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/upgrade-temp-backup/
+wp-content/ai1wm-backups/
+wp-content/plugins/crawlfoody/node/
+*.log
+*.sql
+*.zip
+*.tar.gz
+node_modules/

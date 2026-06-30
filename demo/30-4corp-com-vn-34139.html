@@ -1,0 +1,896 @@
+<!DOCTYPE html><html ng-app="myApp" lang="vi" class="ng-scope"><head><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="audience" content="general">
+	<meta name="resource-type" content="document">
+	<meta name="revisit-after" content="1 days">
+	<meta name="abstract" content="mua bán thi công cơ điện lạnh 30-04corp">
+	<meta name="classification" content="mua bán thi công cơ điện lạnh 30-04corp">
+	<meta name="area" content="cơ điện lạnh">
+	<meta name="placename" content="Việt Nam">
+	<meta name="author" content="LamNT">
+	<meta name="copyright" content="©2007 LamNT">
+	<meta name="owner" content="30-04 Corp">
+	<meta name="generator" content="30-04 Corp">
+	<meta name="distribution" content="Global">
+	<link rel="shortcut icon" href="https://30-4corp.com.vn/uploads/source/logo-30-04.png" type="image/x-icon">
+	<meta name="keywords" content="Công ty 30-4  - Chuyên cung cấp sản phẩm ngành lạnh chính hãng giá rẻ">
+	<meta name="description" content="Công ty 30-4  - Chuyên cung cấp sản phẩm ngành lạnh chính hãng giá rẻ">
+	<title>Công ty 30-4 - Chuyên cung cấp sản phẩm ngành lạnh chính hãng giá rẻ</title>
+
+	<!-- link to css file -->
+	<link rel="stylesheet" href="http://30-4corp.com.vn/publish/template/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="http://30-4corp.com.vn/publish/template/css/smoothproducts.css">
+	<link rel="stylesheet" href="http://30-4corp.com.vn/publish/template/css/pgwslideshow.min.css">
+	<link rel="stylesheet" href="http://30-4corp.com.vn/publish/template/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="http://30-4corp.com.vn/publish/template/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="http://30-4corp.com.vn/publish/template/css/lsb.css">
+	
+	<!-- link to js file -->
+	<script src="https://connect.facebook.net/vi_VN/bundle/sdk.js/" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="//connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v2.8"></script><script src="http://30-4corp.com.vn/publish/template/js/jquery-2.2.4.min.js"></script>
+	<script src="http://30-4corp.com.vn/publish/template/js/bootstrap.min.js"></script>
+	<script src="http://30-4corp.com.vn/publish/template/js/angular.min.js"></script>
+	<script src="http://30-4corp.com.vn/publish/template/js/smoothproducts.min.js"></script>
+	<script src="http://30-4corp.com.vn/publish/template/js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+	<script src="http://30-4corp.com.vn/publish/template/js/owl.carousel.min.js"></script>
+	<script src="http://30-4corp.com.vn/publish/template/js/lsb.js"></script>
+
+			<link rel="stylesheet" href="http://30-4corp.com.vn/publish/template/css/style.css?ver=3.1.0">
+<style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_dialog{background:#525252b3;position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:700;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) #fff no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:#0006;inset:0;min-height:100%;position:absolute;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba),to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:#fff 0 1px 1px -1px inset;color:#fff;font:700 14px Helvetica,sans-serif;text-overflow:ellipsis;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2),to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:700 12px Helvetica,sans-serif;margin:2px -12px;padding:2px 6px 3px;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:700;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4A4A4A;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4A4A4A;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/y2/r/onuUJj0tCqE.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+</style></head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="160">
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	
+
+	<div id="wrapper">
+		<header id="header" class="hidden-xs hidden-sm">
+			<div class="container-fluid top-header">
+				<div class="container">
+					<div class="hotline col-md-5 text-center">
+						
+					</div>
+
+					
+					<div class="col-md-6 col-md-offset-1 text-center">
+						<ul class="top-menu">
+										                    			                    <li class="top-menu-item"><a href="http://30-4corp.com.vn/bai-viet/kien-thuc-phong-sach">Kiến Thức Phòng Sạch</a>
+
+			                    <ul class="sub-top-menu"></ul>			                    </li>
+			                    			                		                </ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container-fluid main-menu">
+				<div class="container">
+					<div class="logo col-md-2 text-right">
+						<a href="http://30-4corp.com.vn"><img src="https://30-4corp.com.vn/uploads/source/logo-30-04.png" alt=""></a>
+					</div>
+					<nav class="top-navbar col-md-9 col-md-offset-1 text-center">
+											<ul class="nav-level-1">
+							<li class="li-nav-level-1"><a href="http://30-4corp.com.vn"><i style="font-size: 20px" class="fa fa-home" aria-hidden="true"></i></a></li>
+							<li class="li-nav-level-1"><a href="#">Về Chúng Tôi <span class="glyphicon glyphicon-menu-down"></span></a>
+								<div style="min-width: 200px;min-height: 150px;margin: 8px 0 0 -10px" class="nav-level-2 arrow_box">
+									<div class="sub-nav-level-2a text-left">
+										<ul class="ul-nav-level-2">
+											<li><a href="http://30-4corp.com.vn/gioi-thieu/gioi-thieu">Giới Thiệu</a></li>
+											<li><a href="http://30-4corp.com.vn/du-an">Dự Án Tham Khảo</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+																											
+									<li class="li-nav-level-1"><a href="http://30-4corp.com.vn/phong-sach">Phòng sạch </a><span class="glyphicon glyphicon-menu-down"></span>
+										<div class="nav-level-2 arrow_box">
+											<div class="sub-nav-level-2a text-left">
+												<div class="title-nav-level-2">Hãng Sản Xuất</div>
+												<ul class="ul-nav-level-2">
+
+													
+														<li><a href="http://30-4corp.com.vn/phong-sach/304jsc">30-4 JSC</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/phong-sach/aedis">Aedis</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/phong-sach/dwyer">Dwyer</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/phong-sach/metal-product">Metal Product</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/phong-sach/one-air">One Air</a></li>
+
+													
+												</ul>
+											</div>
+											<div class="sub-nav-level-2b text-left">
+												<div class="title-nav-level-2">Loại Sản Phẩm</div>
+												<ul class="ul-nav-level-2">
+																											<li><a href="http://30-4corp.com.vn/dich-vu-can-chinh-phong-sach">Dịch vụ cân chỉnh phòng sạch GMP</a></li>
+																											<li><a href="http://30-4corp.com.vn/phu-kine-phong-sach">Phụ kiện phòng sạch</a></li>
+																									</ul>
+											</div>
+										</div>
+									</li>
+														
+									<li class="li-nav-level-1"><a href="http://30-4corp.com.vn/may-dhkk">Máy ĐHKK </a><span class="glyphicon glyphicon-menu-down"></span>
+										<div class="nav-level-2 arrow_box">
+											<div class="sub-nav-level-2a text-left">
+												<div class="title-nav-level-2">Hãng Sản Xuất</div>
+												<ul class="ul-nav-level-2">
+
+													
+														<li><a href="http://30-4corp.com.vn/may-dhkk/daikin">Daikin</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/may-dhkk/lg">LG</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/may-dhkk/dhkk-midea">MIDEA</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/may-dhkk/mitsubishi">Mitsubishi Electric</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/may-dhkk/samsung">Samsung</a></li>
+
+													
+												</ul>
+											</div>
+											<div class="sub-nav-level-2b text-left">
+												<div class="title-nav-level-2">Loại Sản Phẩm</div>
+												<ul class="ul-nav-level-2">
+																											<li><a href="http://30-4corp.com.vn/may-lanh-cong-nghiep">Máy lạnh công nghiệp</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-chiller">---Máy lạnh CHILLER</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-dan-dung">Máy Lạnh Dân Dụng</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-multi-split-lg">---Máy lạnh Multi Split LG</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-treo-tuong-co-bien-tan">---Máy lạnh treo tường có Inverter</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-treo-tuong-khong-bien-tan">---Máy lạnh treo tường không Inverter</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-thuong-skyair">Máy Lạnh Thương Mại (SKYAIR)</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-ap-tran-co-inverter">---Máy lạnh áp trần có Inverter</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-ap-tran-khong-inverter">---Máy lạnh áp trần không Inverter</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-am-tran-casstte-khong-inverter">---Máy lạnh Casstte  âm trần không Inverter</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-am-tran-cassette-co-inverter">---Máy lạnh Casstte âm trần có Inverter</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-giau-tran-noi-ong-gio-co-inverter">---Máy lạnh giấu trần nối ống gió, có Inverter</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-giau-tran-khong-inverter">---Máy lạnh giấu trần nối ống gió, không Inverter</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-tu-dung-co-inverter">---Máy lạnh tủ đứng có Inverter</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-tu-dung-khong-inverter">---Máy lạnh tủ đứng không Inverter</a></li>
+																											<li><a href="http://30-4corp.com.vn/may-lanh-thuong-mai-vrv">Máy Lạnh Thương Mại (VRV)</a></li>
+																											<li><a href="http://30-4corp.com.vn/dan-lanh-vrv">---Dàn lạnh VRV</a></li>
+																											<li><a href="http://30-4corp.com.vn/dan-nong-vrv-iv">---Dàn nóng VRV IV</a></li>
+																											<li><a href="http://30-4corp.com.vn/dan-nong-vrv-ivs">---Dàn nóng VRV IVS</a></li>
+																									</ul>
+											</div>
+										</div>
+									</li>
+														
+									<li class="li-nav-level-1"><a href="http://30-4corp.com.vn/phu-kien-lanh">Phụ Kiện Lạnh </a><span class="glyphicon glyphicon-menu-down"></span>
+										<div class="nav-level-2 arrow_box">
+											<div class="sub-nav-level-2a text-left">
+												<div class="title-nav-level-2">Hãng Sản Xuất</div>
+												<ul class="ul-nav-level-2">
+
+													
+														<li><a href="http://30-4corp.com.vn/phu-kien-lanh/304jsc">30-4 JSC</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/phu-kien-lanh/action">Action</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/phu-kien-lanh/banh-chua-chay-afgusa">AFG - Mỹ</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/phu-kien-lanh/hgt">HGT</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/phu-kien-lanh/klenco">Klenco</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/phu-kien-lanh/kolowa">Kolowa</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/phu-kien-lanh/metal-product">Metal Product</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/phu-kien-lanh/samruay">Samruay</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/phu-kien-lanh/toto">Toto</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/phu-kien-lanh/toyo">Toyo</a></li>
+
+													
+												</ul>
+											</div>
+											<div class="sub-nav-level-2b text-left">
+												<div class="title-nav-level-2">Loại Sản Phẩm</div>
+												<ul class="ul-nav-level-2">
+																											<li><a href="http://30-4corp.com.vn/busway">Busway</a></li>
+																											<li><a href="http://30-4corp.com.vn/hoa-chat-nganh-lanh">Hóa Chất Ngành Lạnh</a></li>
+																											<li><a href="http://30-4corp.com.vn/chai-xit-chong-oxy-hoa-ong-dong-toyo">---Chai xịt chống oxy hóa ống đồng TOYO</a></li>
+																											<li><a href="http://30-4corp.com.vn/hoa-chat-klenco">---Hóa chất vệ sinh Klenco</a></li>
+																											<li><a href="http://30-4corp.com.vn/chat-phu-chong-an-mon-action">---Sơn chống ăn mòn máy lạnh ACTION</a></li>
+																											<li><a href="http://30-4corp.com.vn/phu-kien-nganh-lanh">Phụ kiện ĐHKK</a></li>
+																											<li><a href="http://30-4corp.com.vn/bo-chia-gas">---Bộ chia gas</a></li>
+																											<li><a href="http://30-4corp.com.vn/canh-huong-dong">---Cánh hướng dòng</a></li>
+																											<li><a href="http://30-4corp.com.vn/quat-thong-gio">---Quạt thông gió</a></li>
+																											<li><a href="http://30-4corp.com.vn/trunking-nhua-toto">---Trunking nhựa TOTO</a></li>
+																											<li><a href="http://30-4corp.com.vn/thiet-bi-chua-chay">Thiết bị chữa cháy</a></li>
+																									</ul>
+											</div>
+										</div>
+									</li>
+														
+									<li class="li-nav-level-1"><a href="http://30-4corp.com.vn/he-thong-bms">Hệ Thống BMS </a><span class="glyphicon glyphicon-menu-down"></span>
+										<div class="nav-level-2 arrow_box">
+											<div class="sub-nav-level-2a text-left">
+												<div class="title-nav-level-2">Hãng Sản Xuất</div>
+												<ul class="ul-nav-level-2">
+
+													
+														<li><a href="http://30-4corp.com.vn/he-thong-bms/bosch">Bosch</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/he-thong-bms/dwyer">Dwyer</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/he-thong-bms/easy-io-usa">EASY IO - USA</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/he-thong-bms/honeywell">Honeywell</a></li>
+
+													
+														<li><a href="http://30-4corp.com.vn/he-thong-bms/mamac-systems">Mamac Systems</a></li>
+
+													
+												</ul>
+											</div>
+											<div class="sub-nav-level-2b text-left">
+												<div class="title-nav-level-2">Loại Sản Phẩm</div>
+												<ul class="ul-nav-level-2">
+																											<li><a href="http://30-4corp.com.vn/bien-tan">Biến tần</a></li>
+																											<li><a href="http://30-4corp.com.vn/bien-tan-bosch">---Biến tần Bosch</a></li>
+																											<li><a href="http://30-4corp.com.vn/bo-dieu-khien-ddc">Bộ điều khiển DDC Controller</a></li>
+																											<li><a href="http://30-4corp.com.vn/bo-dieu-khien-ddc-controller">---Bộ điều khiển DDC</a></li>
+																											<li><a href="http://30-4corp.com.vn/thermostat-honeywell">---Thermostat Honeywell</a></li>
+																											<li><a href="http://30-4corp.com.vn/cam-bien">Cảm biến</a></li>
+																											<li><a href="http://30-4corp.com.vn/cam-bien-ap-suat">---Cảm biến áp suất</a></li>
+																											<li><a href="http://30-4corp.com.vn/cam-bien-do-am">---Cảm biến độ ẩm</a></li>
+																											<li><a href="http://30-4corp.com.vn/cam-bien-nhiet-do">---Cảm biến nhiệt độ</a></li>
+																											<li><a href="http://30-4corp.com.vn/cam-bien-nong-do-khi">---Cảm biến nồng độ khí</a></li>
+																											<li><a href="http://30-4corp.com.vn/cam-bien-van-toc">---Cảm biến vận tốc</a></li>
+																											<li><a href="http://30-4corp.com.vn/cong-tac">Công tắc gió/ dòng chảy</a></li>
+																											<li><a href="http://30-4corp.com.vn/cong-tac-dong-chay">---Công tắc dòng chảy</a></li>
+																											<li><a href="http://30-4corp.com.vn/cong-tac-gio">---Công tắc gió</a></li>
+																											<li><a href="http://30-4corp.com.vn/actuator">Động cơ điều khiển van gió </a></li>
+																											<li><a href="http://30-4corp.com.vn/dong-co-khien-van-gio">---Động cơ khiển van gió</a></li>
+																											<li><a href="http://30-4corp.com.vn/van-nuoc-dieu-khien">Van nước điều khiển</a></li>
+																											<li><a href="http://30-4corp.com.vn/van-nuoc-honeywell">---Van điều khiển Honeywell</a></li>
+																									</ul>
+											</div>
+										</div>
+									</li>
+													
+							
+							<a class="btn-hotline-header" href="tel:093 883 0912 "><i class="fa fa-mobile" aria-hidden="true"></i> 093 883 0912 </a>
+							<style>
+								.btn-hotline-header{padding: 8px 15px;
+								    background: #00305f;
+								    color: #fff;
+								    border: none;
+								    font-size: 120%;
+								}
+								.btn-hotline-header:hover, .btn-hotline-header:active, .btn-hotline-header:focus{color:#ffe900}
+								.btn-hotline-header .fa{margin-right: 5px;font-size: 18px}
+							</style>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div class="hidden-md hidden-lg mobile-header">
+			<div class="col-xs-3 col-sm-3 text-left">
+				<button type="button" class="btn btn-mobilemenu" data-toggle="modal" data-target="#menuModal"><i class="fa fa-bars" aria-hidden="true"></i></button>
+			</div>
+			<div class="col-xs-6 col-sm-6 text-center mobile-logo">
+				<a href="http://30-4corp.com.vn"><img src="https://30-4corp.com.vn/uploads/source/logo-30-04.png" alt=""></a>
+			</div>
+			<div class="col-xs-3 col-sm-3 mobile-menu-social text-right">
+				<a href="https://www.facebook.com/sharer/sharer.php?u=http://30-4corp.com.vn%2F&amp;src=sdkpreparse&amp;title=Công ty 30-4 - Chuyên cung cấp sản phẩm ngành lạnh chính hãng giá rẻ&amp;description=Công ty 30-4  - Chuyên cung cấp sản phẩm ngành lạnh chính hãng giá rẻ" data-mobile-iframe="true" class="fb-xfbml-parse-ignore" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+				<a class="twitter-share-button" href="https://twitter.com/intent/tweet?original_referer=http://30-4corp.com.vn%2F&amp;text=Good%20:)&amp;url=http://30-4corp.com.vn%2F" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+			</div>
+		</div>
+		<!-- Sidebar Modal -->
+		<!-- Modal -->
+		<div class="modal left fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<nav id="mobile-menu">
+						<ul id="mobile-nav-lv1">
+							<li class=""><a href="http://30-4corp.com.vn">Trang Chủ</a></li>
+							<li class=""><a href="http://30-4corp.com.vn/gioi-thieu/gioi-thieu">Giới Thiệu</a></li>
+							<li class=""><a href="http://30-4corp.com.vn/du-an">Dự Án Tham Khảo</a></li>
+																												<li class="has-child"><a href="http://30-4corp.com.vn/phong-sach">Phòng sạch </a><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+								<div class="mobile-nav-lv2">
+									<div class="">
+										<span class="title-lv2">Hãng Sản Xuất</span>
+										<ul class="">
+																							<li><a href="http://30-4corp.com.vn/phong-sach/304jsc">30-4 JSC</a></li>
+																							<li><a href="http://30-4corp.com.vn/phong-sach/aedis">Aedis</a></li>
+																							<li><a href="http://30-4corp.com.vn/phong-sach/metal-product">Metal Product</a></li>
+																							<li><a href="http://30-4corp.com.vn/phong-sach/one-air">One Air</a></li>
+																					</ul>
+									</div>
+									<div class="">
+										<span class="title-lv2">Loại Sản Phẩm</span>
+										<ul class="">
+																							<li><a href="http://30-4corp.com.vn/dich-vu-can-chinh-phong-sach">Dịch vụ cân chỉnh phòng sạch GMP</a></li>
+																							<li><a href="http://30-4corp.com.vn/phu-kine-phong-sach">Phụ kiện phòng sạch</a></li>
+																					</ul>
+									</div>
+								</div>
+							</li>
+																		<li class="has-child"><a href="http://30-4corp.com.vn/may-dhkk">Máy ĐHKK </a><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+								<div class="mobile-nav-lv2">
+									<div class="">
+										<span class="title-lv2">Hãng Sản Xuất</span>
+										<ul class="">
+																							<li><a href="http://30-4corp.com.vn/may-dhkk/mitsubishi">Mitsubishi Electric</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-dhkk/lg">LG</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-dhkk/daikin">Daikin</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-dhkk/samsung">Samsung</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-dhkk/dhkk-midea">MIDEA</a></li>
+																					</ul>
+									</div>
+									<div class="">
+										<span class="title-lv2">Loại Sản Phẩm</span>
+										<ul class="">
+																							<li><a href="http://30-4corp.com.vn/may-lanh-cong-nghiep">Máy lạnh công nghiệp</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-chiller">Máy lạnh CHILLER</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-dan-dung">Máy Lạnh Dân Dụng</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-multi-split-lg">Máy lạnh Multi Split LG</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-treo-tuong-co-bien-tan">Máy lạnh treo tường có Inverter</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-treo-tuong-khong-bien-tan">Máy lạnh treo tường không Inverter</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-thuong-skyair">Máy Lạnh Thương Mại (SKYAIR)</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-ap-tran-co-inverter">Máy lạnh áp trần có Inverter</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-ap-tran-khong-inverter">Máy lạnh áp trần không Inverter</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-am-tran-casstte-khong-inverter">Máy lạnh Casstte  âm trần không Inverter</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-am-tran-cassette-co-inverter">Máy lạnh Casstte âm trần có Inverter</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-giau-tran-noi-ong-gio-co-inverter">Máy lạnh giấu trần nối ống gió, có Inverter</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-giau-tran-khong-inverter">Máy lạnh giấu trần nối ống gió, không Inverter</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-tu-dung-co-inverter">Máy lạnh tủ đứng có Inverter</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-tu-dung-khong-inverter">Máy lạnh tủ đứng không Inverter</a></li>
+																							<li><a href="http://30-4corp.com.vn/may-lanh-thuong-mai-vrv">Máy Lạnh Thương Mại (VRV)</a></li>
+																							<li><a href="http://30-4corp.com.vn/dan-lanh-vrv">Dàn lạnh VRV</a></li>
+																							<li><a href="http://30-4corp.com.vn/dan-nong-vrv-iv">Dàn nóng VRV IV</a></li>
+																							<li><a href="http://30-4corp.com.vn/dan-nong-vrv-ivs">Dàn nóng VRV IVS</a></li>
+																					</ul>
+									</div>
+								</div>
+							</li>
+																		<li class="has-child"><a href="http://30-4corp.com.vn/phu-kien-lanh">Phụ Kiện Lạnh </a><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+								<div class="mobile-nav-lv2">
+									<div class="">
+										<span class="title-lv2">Hãng Sản Xuất</span>
+										<ul class="">
+																							<li><a href="http://30-4corp.com.vn/phu-kien-lanh/metal-product">Metal Product</a></li>
+																							<li><a href="http://30-4corp.com.vn/phu-kien-lanh/hgt">HGT</a></li>
+																							<li><a href="http://30-4corp.com.vn/phu-kien-lanh/toyo">Toyo</a></li>
+																							<li><a href="http://30-4corp.com.vn/phu-kien-lanh/304jsc">30-4 JSC</a></li>
+																							<li><a href="http://30-4corp.com.vn/phu-kien-lanh/samruay">Samruay</a></li>
+																							<li><a href="http://30-4corp.com.vn/phu-kien-lanh/kolowa">Kolowa</a></li>
+																							<li><a href="http://30-4corp.com.vn/phu-kien-lanh/banh-chua-chay-afgusa">AFG - Mỹ</a></li>
+																					</ul>
+									</div>
+									<div class="">
+										<span class="title-lv2">Loại Sản Phẩm</span>
+										<ul class="">
+																							<li><a href="http://30-4corp.com.vn/busway">Busway</a></li>
+																							<li><a href="http://30-4corp.com.vn/hoa-chat-nganh-lanh">Hóa Chất Ngành Lạnh</a></li>
+																							<li><a href="http://30-4corp.com.vn/chai-xit-chong-oxy-hoa-ong-dong-toyo">Chai xịt chống oxy hóa ống đồng TOYO</a></li>
+																							<li><a href="http://30-4corp.com.vn/hoa-chat-klenco">Hóa chất vệ sinh Klenco</a></li>
+																							<li><a href="http://30-4corp.com.vn/chat-phu-chong-an-mon-action">Sơn chống ăn mòn máy lạnh ACTION</a></li>
+																							<li><a href="http://30-4corp.com.vn/phu-kien-nganh-lanh">Phụ kiện ĐHKK</a></li>
+																							<li><a href="http://30-4corp.com.vn/bo-chia-gas">Bộ chia gas</a></li>
+																							<li><a href="http://30-4corp.com.vn/canh-huong-dong">Cánh hướng dòng</a></li>
+																							<li><a href="http://30-4corp.com.vn/quat-thong-gio">Quạt thông gió</a></li>
+																							<li><a href="http://30-4corp.com.vn/trunking-nhua-toto">Trunking nhựa TOTO</a></li>
+																							<li><a href="http://30-4corp.com.vn/thiet-bi-chua-chay">Thiết bị chữa cháy</a></li>
+																					</ul>
+									</div>
+								</div>
+							</li>
+																		<li class="has-child"><a href="http://30-4corp.com.vn/he-thong-bms">Hệ Thống BMS </a><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+								<div class="mobile-nav-lv2">
+									<div class="">
+										<span class="title-lv2">Hãng Sản Xuất</span>
+										<ul class="">
+																							<li><a href="http://30-4corp.com.vn/he-thong-bms/mamac-systems">Mamac Systems</a></li>
+																							<li><a href="http://30-4corp.com.vn/he-thong-bms/bosch">Bosch</a></li>
+																							<li><a href="http://30-4corp.com.vn/he-thong-bms/easy-io-usa">EASY IO - USA</a></li>
+																							<li><a href="http://30-4corp.com.vn/he-thong-bms/honeywell">Honeywell</a></li>
+																							<li><a href="http://30-4corp.com.vn/he-thong-bms/dwyer">Dwyer</a></li>
+																					</ul>
+									</div>
+									<div class="">
+										<span class="title-lv2">Loại Sản Phẩm</span>
+										<ul class="">
+																							<li><a href="http://30-4corp.com.vn/bien-tan">Biến tần</a></li>
+																							<li><a href="http://30-4corp.com.vn/bien-tan-bosch">Biến tần Bosch</a></li>
+																							<li><a href="http://30-4corp.com.vn/bo-dieu-khien-ddc">Bộ điều khiển DDC Controller</a></li>
+																							<li><a href="http://30-4corp.com.vn/bo-dieu-khien-ddc-controller">Bộ điều khiển DDC</a></li>
+																							<li><a href="http://30-4corp.com.vn/thermostat-honeywell">Thermostat Honeywell</a></li>
+																							<li><a href="http://30-4corp.com.vn/cam-bien">Cảm biến</a></li>
+																							<li><a href="http://30-4corp.com.vn/cam-bien-ap-suat">Cảm biến áp suất</a></li>
+																							<li><a href="http://30-4corp.com.vn/cam-bien-do-am">Cảm biến độ ẩm</a></li>
+																							<li><a href="http://30-4corp.com.vn/cam-bien-nhiet-do">Cảm biến nhiệt độ</a></li>
+																							<li><a href="http://30-4corp.com.vn/cam-bien-nong-do-khi">Cảm biến nồng độ khí</a></li>
+																							<li><a href="http://30-4corp.com.vn/cam-bien-van-toc">Cảm biến vận tốc</a></li>
+																							<li><a href="http://30-4corp.com.vn/cong-tac">Công tắc gió/ dòng chảy</a></li>
+																							<li><a href="http://30-4corp.com.vn/cong-tac-dong-chay">Công tắc dòng chảy</a></li>
+																							<li><a href="http://30-4corp.com.vn/cong-tac-gio">Công tắc gió</a></li>
+																							<li><a href="http://30-4corp.com.vn/actuator">Động cơ điều khiển van gió </a></li>
+																							<li><a href="http://30-4corp.com.vn/dong-co-khien-van-gio">Động cơ khiển van gió</a></li>
+																							<li><a href="http://30-4corp.com.vn/van-nuoc-dieu-khien">Van nước điều khiển</a></li>
+																							<li><a href="http://30-4corp.com.vn/van-nuoc-honeywell">Van điều khiển Honeywell</a></li>
+																					</ul>
+									</div>
+								</div>
+							</li>
+																<li class=""><a href="http://30-4corp.com.vn/bai-viet/bang-gia-lap-dat-12">Bảng Giá Lắp Đặt</a></li>
+							<li class=""><a href="http://30-4corp.com.vn/bai-viet/tin-tuc">Tin Tức</a></li>
+							<li class=""><a style="color: red" href="tel:0938830912">Hotline: 093 883 0912</a></li>
+						</ul>
+					</nav>
+				</div><!-- modal-content -->
+			</div><!-- modal-dialog -->
+		</div><!-- modal -->
+	    	
+	
+    <div id="content" class="container">
+    	    	    	<div id="owl-banner" class="owl-carousel owl-theme owl-loaded owl-drag">
+	    		    			    			
+	    			    		    			    			
+	    			    		    			    			
+	    			    		    			    	    	<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-3435px, 0px, 0px); transition: 0.25s; width: 8015px;"><div class="owl-item cloned" style="width: 1140px; margin-right: 5px;"><div><img src="https://30-4corp.com.vn/uploads/source/be_header_easyio-02.jpg"></div></div><div class="owl-item cloned" style="width: 1140px; margin-right: 5px;"><div><img src="https://30-4corp.com.vn/uploads/source/Untitled-1-4.png"></div></div><div class="owl-item" style="width: 1140px; margin-right: 5px;"><div><img src="https://30-4corp.com.vn/uploads/source/ACTION/4HomePg2B1n.jpg"></div></div><div class="owl-item active" style="width: 1140px; margin-right: 5px;"><div><img src="https://30-4corp.com.vn/uploads/source/be_header_easyio-02.jpg"></div></div><div class="owl-item" style="width: 1140px; margin-right: 5px;"><div><img src="https://30-4corp.com.vn/uploads/source/Untitled-1-4.png"></div></div><div class="owl-item cloned" style="width: 1140px; margin-right: 5px;"><div><img src="https://30-4corp.com.vn/uploads/source/ACTION/4HomePg2B1n.jpg"></div></div><div class="owl-item cloned" style="width: 1140px; margin-right: 5px;"><div><img src="https://30-4corp.com.vn/uploads/source/be_header_easyio-02.jpg"></div></div></div></div><div class="owl-nav"><div class="owl-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></div><div class="owl-next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div></div><div class="owl-dots"><div class="owl-dot"><span></span></div><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div></div></div>
+    	<style>
+    		#owl-banner{position:relative;}
+    		#owl-banner.owl-theme .owl-nav {
+			    margin-top: 0px; 
+			    position: absolute;
+			    top: 38%;
+			    width: 100%;
+			    display: flex;
+			    justify-content: space-between;
+			}
+			#owl-banner.owl-theme img{
+				aspect-ratio: 2.5;
+				object-fit: cover;
+			}
+			#owl-banner.owl-theme .owl-nav [class*=owl-] {
+			    color: #FFF;
+			    font-size: 14px;
+			    margin: 0;
+			    padding: 15px 20px;
+			    background: rgb(0 48 95 / 75%);
+			    display: flex;
+			    justify-content: center;
+			    cursor: pointer;
+			    border-radius: 0;
+			}
+			#owl-banner.owl-theme .owl-nav [class*=owl-]:hover i{
+				color: yellow;
+			}
+			#owl-banner.owl-theme .owl-nav [class*=owl-] i{
+				margin: 0;
+				font-size: 130%
+			}
+			@media  only screen and (max-width: 600px){
+				#owl-banner.owl-theme .owl-nav [class*=owl-] {
+					padding: 6px 10px;
+				}
+				#owl-banner.owl-theme .owl-nav [class*=owl-] i{
+					font-size: 100%
+				}
+			}
+    	</style>
+    	<script type="text/javascript">
+			jQuery(document).ready(function() {
+				$('#owl-banner').owlCarousel({
+					loop:true,
+				    margin:5,
+				    autoplay: true,
+				    nav:true,
+				    dots:true,
+				    items:4,
+				    navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+				    responsive:{
+				        0:{
+				            items:1,
+				            nav:true,
+				        }
+				    }
+				});
+			});
+		</script>
+				
+   				<div class="block-brand col-xs-12">
+			<div class="row">
+				<div class="col-xs-12 col-sm-10 col-md-6 col-sm-offset-1 col-md-offset-3 block-brand-title text-center">
+					<h2 class="blocktitle"><i class="fa fa-star" aria-hidden="true"></i>Thương hiệu</h2>
+				</div>
+			</div>
+			<div id="owl-brand" class="owl-carousel owl-theme owl-loaded owl-drag">
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        		        	
+		        			<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1821px, 0px, 0px); transition: all; width: 7105px;"><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/honeywell"><img src="http://30-4corp.com.vn/uploads/source/LOGO/honeywell-logo2.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/toto"><img src="http://30-4corp.com.vn/uploads/source/logo%20toto%20AB.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/hgt"><img src="http://30-4corp.com.vn/uploads/source/HGT%20logoA2.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/kolowa"><img src="http://30-4corp.com.vn/uploads/source/kolowa-logo%201.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/lg"><img src="http://30-4corp.com.vn/uploads/source/maxresdefaultAB.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/easy-io-usa"><img src="http://30-4corp.com.vn/uploads/source/EasyIO.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/304jsc"><img src="http://30-4corp.com.vn/uploads/source/logo%20304-2.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/metal-product"><img src="http://30-4corp.com.vn/uploads/source/metal-logo.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/bosch"><img src="http://30-4corp.com.vn/uploads/source/LOGO/Bosch_logo2.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/samsung"><img src="https://30-4corp.com.vn/uploads/source/logo%20samsung%20trong.png"></a></div></div><div class="owl-item active" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/daikin"><img src="http://30-4corp.com.vn/uploads/source/LOGO/Daikin_logoAA.jpg"></a></div></div><div class="owl-item active" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/mitsubishi"><img src="http://30-4corp.com.vn/uploads/source/LOGO/Mitsubushi-Logo2.jpg"></a></div></div><div class="owl-item active" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/banh-chua-chay-afgusa"><img src="http://30-4corp.com.vn/uploads/source/AFG-2.jpg"></a></div></div><div class="owl-item active" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/toyo"><img src="http://30-4corp.com.vn/uploads/source/LOGO/toyo-logo2.jpg"></a></div></div><div class="owl-item active" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/action"><img src="http://30-4corp.com.vn/uploads/source/ACTION/logo%20ActionA.png"></a></div></div><div class="owl-item active" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/mamac-systems"><img src="http://30-4corp.com.vn/uploads/source/MaMac%20Logo.png"></a></div></div><div class="owl-item" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/dwyer"><img src="http://30-4corp.com.vn/uploads/source/DwyerLogoAB.jpg"></a></div></div><div class="owl-item" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/ong-gio-vai-klimagiel"><img src="http://30-4corp.com.vn/uploads/source/LOGO/Klimagiel-logo2.jpg"></a></div></div><div class="owl-item" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/klenco"><img src="http://30-4corp.com.vn/uploads/source/LOGO/Klenco-logo2.jpg"></a></div></div><div class="owl-item" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/honeywell"><img src="http://30-4corp.com.vn/uploads/source/LOGO/honeywell-logo2.jpg"></a></div></div><div class="owl-item" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/toto"><img src="http://30-4corp.com.vn/uploads/source/logo%20toto%20AB.jpg"></a></div></div><div class="owl-item" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/hgt"><img src="http://30-4corp.com.vn/uploads/source/HGT%20logoA2.jpg"></a></div></div><div class="owl-item" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/kolowa"><img src="http://30-4corp.com.vn/uploads/source/kolowa-logo%201.jpg"></a></div></div><div class="owl-item" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/lg"><img src="http://30-4corp.com.vn/uploads/source/maxresdefaultAB.jpg"></a></div></div><div class="owl-item" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/easy-io-usa"><img src="http://30-4corp.com.vn/uploads/source/EasyIO.jpg"></a></div></div><div class="owl-item" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/304jsc"><img src="http://30-4corp.com.vn/uploads/source/logo%20304-2.jpg"></a></div></div><div class="owl-item" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/metal-product"><img src="http://30-4corp.com.vn/uploads/source/metal-logo.jpg"></a></div></div><div class="owl-item" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/bosch"><img src="http://30-4corp.com.vn/uploads/source/LOGO/Bosch_logo2.jpg"></a></div></div><div class="owl-item" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/samsung"><img src="https://30-4corp.com.vn/uploads/source/logo%20samsung%20trong.png"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/daikin"><img src="http://30-4corp.com.vn/uploads/source/LOGO/Daikin_logoAA.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/mitsubishi"><img src="http://30-4corp.com.vn/uploads/source/LOGO/Mitsubushi-Logo2.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/banh-chua-chay-afgusa"><img src="http://30-4corp.com.vn/uploads/source/AFG-2.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/toyo"><img src="http://30-4corp.com.vn/uploads/source/LOGO/toyo-logo2.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/action"><img src="http://30-4corp.com.vn/uploads/source/ACTION/logo%20ActionA.png"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/mamac-systems"><img src="http://30-4corp.com.vn/uploads/source/MaMac%20Logo.png"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/dwyer"><img src="http://30-4corp.com.vn/uploads/source/DwyerLogoAB.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/ong-gio-vai-klimagiel"><img src="http://30-4corp.com.vn/uploads/source/LOGO/Klimagiel-logo2.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/klenco"><img src="http://30-4corp.com.vn/uploads/source/LOGO/Klenco-logo2.jpg"></a></div></div><div class="owl-item cloned" style="width: 177.167px; margin-right: 5px;"><div><a href="http://30-4corp.com.vn/honeywell"><img src="http://30-4corp.com.vn/uploads/source/LOGO/honeywell-logo2.jpg"></a></div></div></div></div><div class="owl-nav"><div class="owl-prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></div><div class="owl-next"><i class="fa fa-arrow-right" aria-hidden="true"></i></div></div><div class="owl-dots disabled"></div></div>	
+			<script type="text/javascript">
+				jQuery(document).ready(function() {
+					$('#owl-brand').owlCarousel({
+						loop:true,
+					    margin:5,
+					    autoplay: false,
+					    nav:true,
+					    dots:false,
+					    items:6,
+					    navText: ['<i class="fa fa-arrow-left" aria-hidden="true"></i>','<i class="fa fa-arrow-right" aria-hidden="true"></i>'],
+					    responsive:{
+					        0:{
+					            items:4,
+					            nav:true,
+					        },
+					        1200:{
+					            items:6,
+					            nav:true,
+					        },
+					    }
+					});
+				});
+			</script>			
+		</div>
+			
+			<div class="block-type col-xs-12">
+			<div class="row">
+				<div class="col-xs-12 col-sm-10 col-md-6 col-sm-offset-1 col-md-offset-3 block-type-title text-center">
+					<h2 class="blocktitle"><i class="fa fa-empire" aria-hidden="true"></i>Loại Sản Phẩm</h2>
+				</div>
+			</div>
+			<div class="category-product-block">
+							<a class="item" href="http://30-4corp.com.vn/may-dhkk">
+					<div class="category-product-card">
+						<div class="image-block">
+							<img src="https://30-4corp.com.vn/uploads/source/CASSETTE%20Inverter/nen-mua-may-lanh-dieu-hoa-cua-hang-nao-tot-nhat-hien-nay-1.0-800x500.jpg">
+						</div>
+						<h3 class="cate-title card-title text-center">Máy ĐHKK</h3>
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/phu-kien-nganh-lanh">
+					<div class="category-product-card">
+						<div class="image-block">
+							<img src="https://30-4corp.com.vn/uploads/source/accessories%20hvac.jpg">
+						</div>
+						<h3 class="cate-title card-title text-center">Phụ kiện ĐHKK</h3>
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/he-thong-bms">
+					<div class="category-product-card">
+						<div class="image-block">
+							<img src="https://30-4corp.com.vn/uploads/source/be_header_easyio-02.jpg">
+						</div>
+						<h3 class="cate-title card-title text-center">Hệ Thống BMS</h3>
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/phong-sach">
+					<div class="category-product-card">
+						<div class="image-block">
+							<img src="https://30-4corp.com.vn/uploads/source/PHONG%20SACH/4crEDwnakgwawR3k6yS73l8YAePIaqcI1619717977.jpg">
+						</div>
+						<h3 class="cate-title card-title text-center">Phòng sạch</h3>
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/tu-van-thiet-ke-thi-cong-he-thong-lanh">
+					<div class="category-product-card">
+						<div class="image-block">
+							<img src="https://30-4corp.com.vn/uploads/source/du%20an/Tu-choi-cap-phep-xay-dung-phai-neu-ro-ly-do-1.jpg">
+						</div>
+						<h3 class="cate-title card-title text-center">Tư vấn - Thiết kế - Thi công Hệ thống ĐHKK</h3>
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/dich-vu-can-chinh-hvac">
+					<div class="category-product-card">
+						<div class="image-block">
+							<img src="https://30-4corp.com.vn/uploads/source/C%C3%82N%20CH%E1%BB%88NH%20HVAC/11.jpg">
+						</div>
+						<h3 class="cate-title card-title text-center">Dịch Vụ Cân Chỉnh ĐHKK</h3>
+					</div>
+				</a>
+						</div>
+		</div>
+	
+			<div class="block-type col-xs-12">
+			<div class="row">
+				<div class="col-xs-12 col-sm-10 col-md-6 col-sm-offset-1 col-md-offset-3 block-type-title text-center">
+					<h2 class="blocktitle"><i class="fa fa-suitcase" aria-hidden="true"></i>Dự Án Tiêu Biểu</h2>
+				</div>
+			</div>
+			<div class="project-block">
+									<a class="item" href="http://30-4corp.com.vn/du-an/xi-nghiep-z751-khu-cong-nghiep-quoc-phong-long-binh-dong-nai-1">
+						<div class="project-card">
+							<div class="image-block">
+								<img src="http://30-4corp.com.vn/uploads/source/Picture1.png" alt="XÍ NGHIỆP Z751- KHU CÔNG NGHIỆP QUỐC PHÒNG- LONG BÌNH- ĐỒNG NAI">
+							</div>
+							<h3 class="project-title card-title">XÍ NGHIỆP Z751- KHU CÔNG NGHIỆP QUỐC PHÒNG- LONG BÌNH- ĐỒNG NAI</h3>
+						</div>
+					</a>
+									<a class="item" href="http://30-4corp.com.vn/du-an/standard-chartered-bank-toa-nha-mapple-tree-q7-5">
+						<div class="project-card">
+							<div class="image-block">
+								<img src="http://30-4corp.com.vn/uploads/source/project%20reference/Untitled_1.png" alt="STANDARD CHARTERED BANK- TOÀ NHÀ MAPPLE TREE- Q.7- TP.HCM">
+							</div>
+							<h3 class="project-title card-title">STANDARD CHARTERED BANK- TOÀ NHÀ MAPPLE TREE- Q.7- TP.HCM</h3>
+						</div>
+					</a>
+									<a class="item" href="http://30-4corp.com.vn/du-an/kho-bac-tinh-binh-thuan-6">
+						<div class="project-card">
+							<div class="image-block">
+								<img src="http://30-4corp.com.vn/uploads/source/Zalo_636435984184995168.jpg" alt="KHO BẠC TỈNH BÌNH THUẬN">
+							</div>
+							<h3 class="project-title card-title">KHO BẠC TỈNH BÌNH THUẬN</h3>
+						</div>
+					</a>
+									<a class="item" href="http://30-4corp.com.vn/du-an/truong-dai-hoc-cong-nghe-thong-tin-q9-tphcm-7">
+						<div class="project-card">
+							<div class="image-block">
+								<img src="http://30-4corp.com.vn/uploads/source/project%20reference/8.png" alt="TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN- Q.9-TP.HCM">
+							</div>
+							<h3 class="project-title card-title">TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN- Q.9-TP.HCM</h3>
+						</div>
+					</a>
+									<a class="item" href="http://30-4corp.com.vn/du-an/benh-vien-da-khoa-xuyen-a-quoc-lo-22-hhoc-mon-8">
+						<div class="project-card">
+							<div class="image-block">
+								<img src="http://30-4corp.com.vn/uploads/source/project%20reference/10.png" alt="BỆNH VIỆN ĐA KHOA XUYÊN Á- QUỐC LỘ 22- H.HÓC MÔN- TP. HCM">
+							</div>
+							<h3 class="project-title card-title">BỆNH VIỆN ĐA KHOA XUYÊN Á- QUỐC LỘ 22- H.HÓC MÔN- TP. HCM</h3>
+						</div>
+					</a>
+									<a class="item" href="http://30-4corp.com.vn/du-an/benh-vien-da-khoa-my-duc-duong-nui-thanh-tan-binh-tphcm-9">
+						<div class="project-card">
+							<div class="image-block">
+								<img src="http://30-4corp.com.vn/uploads/source/project%20reference/13.jpg" alt="BỆNH VIỆN ĐA KHOA MỸ ĐỨC- ĐƯỜNG NÚI THÀNH- TÂN BÌNH-TP.HCM">
+							</div>
+							<h3 class="project-title card-title">BỆNH VIỆN ĐA KHOA MỸ ĐỨC- ĐƯỜNG NÚI THÀNH- TÂN BÌNH-TP.HCM</h3>
+						</div>
+					</a>
+							</div>
+			<div class="row">
+				<div class="col-12 text-center">
+					<a class="btn-more" href="http://30-4corp.com.vn/du-an">Dự án khác <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	
+		<div class="block-brand col-xs-12">
+			<div class="row">
+				<div class="col-xs-12 col-sm-10 col-md-6 col-sm-offset-1 col-md-offset-3 block-brand-title text-center">
+					<h2 class="blocktitle"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Sản Phẩm Nổi Bật</h2>
+				</div>
+			</div>
+			<div class="product-block">
+							<a class="item" href="http://30-4corp.com.vn/chat-phu-chong-an-mon-action/action-chong-an-mon-may-lanh-142">
+					<div class="product-card">
+						<div class="image-block">
+							<img src="http://30-4corp.com.vn/uploads/source/ACTION/ActionA1n.jpg">
+						</div>
+						<h3 class="card-title text-center">Chất phủ chống ăn mòn máy lạnh ACTION </h3>
+						<div class="product-price text-center">
+														<span class="gia-sanpham">Liên hệ có giá tốt nhất</span>
+													</div>						
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/trunking-nhua-toto/trunking-nhua-toto-144">
+					<div class="product-card">
+						<div class="image-block">
+							<img src="http://30-4corp.com.vn/uploads/source/SAMRUAY/ductlinerABC%20toto.jpg">
+						</div>
+						<h3 class="card-title text-center">Trunking nhựa TOTO</h3>
+						<div class="product-price text-center">
+														<span class="gia-sanpham">Liên hệ có giá tốt nhất</span>
+													</div>						
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/chai-xit-chong-oxy-hoa-ong-dong-toyo/toyo-clean-copper-86">
+					<div class="product-card">
+						<div class="image-block">
+							<img src="http://30-4corp.com.vn/uploads/source/toyo/toyo.png">
+						</div>
+						<h3 class="card-title text-center">TOYO CLEAN COPPER  (Japan)</h3>
+						<div class="product-price text-center">
+														<span class="gia-sanpham">1,990,000 VNĐ</span>
+													</div>						
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/bo-chia-gas/bo-chia-gas-196">
+					<div class="product-card">
+						<div class="image-block">
+							<img src="http://30-4corp.com.vn/uploads/source/Bo%20chia%20gas/Bochiagas.png">
+						</div>
+						<h3 class="card-title text-center">Bộ chia gas chữ Y ( tương thích máy lạnh Daikin)</h3>
+						<div class="product-price text-center">
+														<span class="gia-sanpham">Liên hệ có giá tốt nhất</span>
+													</div>						
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/hoa-chat-klenco/klen-2102-91">
+					<div class="product-card">
+						<div class="image-block">
+							<img src="http://30-4corp.com.vn/uploads/source/KLENCO/Hoa-chat-ve-sinh-gian-lanh-Klenco-2102%20A1.jpg">
+						</div>
+						<h3 class="card-title text-center">Hóa chất KLEN 2102 tẩy rửa dàn lạnh</h3>
+						<div class="product-price text-center">
+														<span class="gia-sanpham">345,000 VNĐ</span>
+													</div>						
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/thermostat-honeywell/dieukhien-nhietdo-honeywell-tfm228knu-94">
+					<div class="product-card">
+						<div class="image-block">
+							<img src="http://30-4corp.com.vn/uploads/source/HONEYWELL/TF228WNMU.jpg">
+						</div>
+						<h3 class="card-title text-center">Bộ điều khiển nhiệt độ Honeywell TFM228KN/U</h3>
+						<div class="product-price text-center">
+														<span class="gia-sanpham">990,000 VNĐ</span>
+													</div>						
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/bo-dieu-khien-ddc-controller/bo-dieu-khien-ddc-fs32-181">
+					<div class="product-card">
+						<div class="image-block">
+							<img src="http://30-4corp.com.vn/uploads/source/easy%20io/LOW%20RES.png">
+						</div>
+						<h3 class="card-title text-center">Bộ điều khiển DDC Controller FS-32</h3>
+						<div class="product-price text-center">
+														<span class="gia-sanpham">Liên hệ có giá tốt nhất</span>
+													</div>						
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/cam-bien-nhiet-do/cam-bien-nhiet-do-te-gan-ong-gio-ong-nuoc-147">
+					<div class="product-card">
+						<div class="image-block">
+							<img src="http://30-4corp.com.vn/uploads/source/DWYER/Cam%20bien%20nhiet%20do%20ong%20gio%2C%20nuoc/TE-1AB.png">
+						</div>
+						<h3 class="card-title text-center">Cảm biến nhiệt độ TE, gắn ống gió, ống nước</h3>
+						<div class="product-price text-center">
+														<span class="gia-sanpham">Liên hệ có giá tốt nhất</span>
+													</div>						
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/thiet-bi-chua-chay/banh-chua-chay-afg-my-180">
+					<div class="product-card">
+						<div class="image-block">
+							<img src="http://30-4corp.com.vn/uploads/source/AFG/logo.png">
+						</div>
+						<h3 class="card-title text-center">Banh chữa cháy AFG-Mỹ</h3>
+						<div class="product-price text-center">
+														<span class="gia-sanpham">1,990,000 VNĐ</span>
+													</div>						
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/dan-nong-vrv-iv/dan-nong-vrv-iv-tieu-chuan-77">
+					<div class="product-card">
+						<div class="image-block">
+							<img src="http://30-4corp.com.vn/uploads/source/D%C3%A0n%20n%C3%B3ng%20VRV%20IV/pic_vrv%20AB.png">
+						</div>
+						<h3 class="card-title text-center">Dàn nóng VRV IV loại tiêu chuẩn</h3>
+						<div class="product-price text-center">
+														<span class="gia-sanpham">Liên hệ có giá tốt nhất</span>
+													</div>						
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/dan-lanh-vrv/dan-lanh-vrv-giau-tran-hoi-sau-82">
+					<div class="product-card">
+						<div class="image-block">
+							<img src="http://30-4corp.com.vn/uploads/source/D%C3%A0n%20l%E1%BA%A1nh%20VRV/ceiling-mounted-duct-type%20FXMQ%20A.png">
+						</div>
+						<h3 class="card-title text-center">Dàn lạnh VRV loại giấu trần nối ống gió hồi sau</h3>
+						<div class="product-price text-center">
+														<span class="gia-sanpham">Liên hệ có giá tốt nhất</span>
+													</div>						
+					</div>
+				</a>
+							<a class="item" href="http://30-4corp.com.vn/may-lanh-multi-split-lg/may-lanh-lg-multi-split-131">
+					<div class="product-card">
+						<div class="image-block">
+							<img src="http://30-4corp.com.vn/uploads/source/LG%20MULTI%20SPLIT/lg_multi-4AB4.png">
+						</div>
+						<h3 class="card-title text-center">Máy lạnh LG Multi Split, Inverter, Gas R410A</h3>
+						<div class="product-price text-center">
+														<span class="gia-sanpham">Liên hệ có giá tốt nhất</span>
+													</div>						
+					</div>
+				</a>
+						</div>
+		</div>
+
+	</div>
+		<footer style="z-index: 1">
+			<div class="container-fluid block-footer">
+				<div class="container">
+					<div class="footer-content">
+						<div class="item">
+							<div class="logo-footer"><img src="https://30-4corp.com.vn/uploads/source/logo-30-04.png" alt="30-4 Corp"></div>
+						</div>
+						<div class="item block-footer-info">
+							<h3>Công Ty Cổ Phần Thương Mại Kỹ Thuật Xây Dựng 30-4</h3>
+							<h4><p>MST : 0314034391</p>
+
+<p>Trụ sở: 93/10 Đường Bờ Bao Tân Thắng, Phường Tân Sơn Nhì, TP. Hồ Chí Minh.</p>
+
+<p>ĐKKD-MST số&nbsp;: 0314034391 - Do: Sở Kế Hoạch &amp; Đầu Tư TP. Hồ Chí Minh cấp</p>
+</h4>
+							<h4>Hotline: 093 883 0912 </h4>
+							<h4>Email: tuan.nguyen@30-4corp.com.vn</h4>
+						</div>
+						<div class="item col-footer">
+							<h2>Trợ giúp</h2>
+							<div>
+																																												<a href="http://30-4corp.com.vn/bai-viet/vi-sao-2"><i class="fa fa-angle-right" aria-hidden="true"></i>Vì sao mua sản phẩm ở Website 30-4CORP.COM.VN là tốt nhất?</a><br>
+																																				<a href="http://30-4corp.com.vn/bai-viet/dien-thoai-mua-hang-8"><i class="fa fa-angle-right" aria-hidden="true"></i>Tư vấn kỹ thuật và mua hàng: Mr. Tuấn 093 883 0912</a><br>
+																																				<a href="http://30-4corp.com.vn/bai-viet/-"><i class="fa fa-angle-right" aria-hidden="true"></i></a><br>
+															</div>
+							<h2>Chính sách mua hàng</h2>
+							<div>
+																																												<a href="http://30-4corp.com.vn/bai-viet/hinh-thuc-thanh-toan-3"><i class="fa fa-angle-right" aria-hidden="true"></i>Hình thức thanh toán</a><br>
+																																				<a href="http://30-4corp.com.vn/bai-viet/chinh-sach-van-chuyen-4"><i class="fa fa-angle-right" aria-hidden="true"></i>Chính sách vận chuyển</a><br>
+																																				<a href="http://30-4corp.com.vn/bai-viet/chinh-sach-bao-mat-5"><i class="fa fa-angle-right" aria-hidden="true"></i>Chính sách bảo mật</a><br>
+																																				<a href="http://30-4corp.com.vn/bai-viet/bao-hanh-doi-tra-san-pham-6"><i class="fa fa-angle-right" aria-hidden="true"></i>Bảo hành - Bảo trì - Đổi trả sản phẩm</a><br>
+																																				<a href="http://30-4corp.com.vn/bai-viet/dieu-kien-dieu-khoan-7"><i class="fa fa-angle-right" aria-hidden="true"></i>Điều kiện - Điều khoản</a><br>
+															</div>
+						</div>
+						
+					</div>
+				</div>	
+			</div>
+		</footer>
+		<a class="col-xs-6 col-sm-6 hidden-md hidden-lg btn-callnow" href="tel:093 883 0912"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> Gọi Ngay</a>
+	</div>
+	    		<script src="http://30-4corp.com.vn/publish/app/app.js"></script>
+		<script src="http://30-4corp.com.vn/publish/template/js/init.js"></script>
+	
+
+</body></html>

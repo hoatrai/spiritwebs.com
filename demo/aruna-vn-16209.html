@@ -1,0 +1,1977 @@
+<!DOCTYPE html><html lang="vi" class="loading-site no-js"><!--<![endif]--><head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(e){this.triggerEvents=e,this.eventOptions={passive:!0},this.userEventListener=this.triggerListener.bind(this),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventListener,e.eventOptions)))}_removeUserInteractionListener(e){this.triggerEvents.forEach((t=>window.removeEventListener(t,e.userEventListener,e.eventOptions)))}triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}async _loadEverythingNow(){this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async),await this._triggerDOMContentLoaded(),await this._triggerWindowLoad(),window.dispatchEvent(new Event("rocket-allScriptsLoaded"))}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._requestAnimFrame(),new Promise((t=>{const n=document.createElement("script");let r;[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type",r=e.nodeValue),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t()),e.parentNode.replaceChild(n,e)}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){var e=document.createDocumentFragment();[...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async].forEach((t=>{const n=t.getAttribute("src");if(n){const t=document.createElement("link");t.href=n,t.rel="preload",t.as="script",e.appendChild(t)}})),document.head.appendChild(e)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(r){e["rocket"+t]=n=r}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._requestAnimFrame(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-load")),await this._requestAnimFrame(),window.rocketonload&&window.rocketonload(),await this._requestAnimFrame(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),window.dispatchEvent(new Event("rocket-pageshow")),await this._requestAnimFrame(),window.rocketonpageshow&&window.rocketonpageshow()}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,r=document.createRange(),i=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const a=document.createDocumentFragment();r.setStart(a,0),a.appendChild(r.createContextualFragment(t)),i.insertBefore(a,o)}}async _requestAnimFrame(){return new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts(["keydown","mousemove","touchmove","touchstart","touchend","wheel"]);e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+	
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://aruna.vn/xmlrpc.php">
+
+	<script type="rocketlazyloadscript">(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" href="https://aruna.vn/" hreflang="vi">
+<link rel="alternate" href="https://aruna.vn/en/home-english/" hreflang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- This site is optimized with the Yoast SEO Premium plugin v20.8 (Yoast SEO v20.8) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Công ty TNHH Aruna Việt Nam - Aruna.vn</title><link rel="stylesheet" href="https://aruna.vn/wp-content/cache/min/1/c7c9283025fd5e247e5ac218e896aba4.css" media="all" data-minify="1">
+	<link rel="canonical" href="https://aruna.vn/">
+	<meta property="og:locale" content="vi_VN">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Trang chủ - Công ty TNHH Aruna Việt Nam">
+	<meta property="og:url" content="https://aruna.vn/">
+	<meta property="og:site_name" content="Công ty TNHH Aruna Việt Nam">
+	<meta property="article:modified_time" content="2024-06-12T04:23:24+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Ước tính thời gian đọc">
+	<meta name="twitter:data1" content="7 phút">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://aruna.vn/","url":"https://aruna.vn/","name":"Công ty TNHH Aruna Việt Nam - Aruna.vn","isPartOf":{"@id":"https://aruna.vn/#website"},"about":{"@id":"https://aruna.vn/#organization"},"datePublished":"2017-09-13T21:05:14+00:00","dateModified":"2024-06-12T04:23:24+00:00","breadcrumb":{"@id":"https://aruna.vn/#breadcrumb"},"inLanguage":"vi","potentialAction":[{"@type":"ReadAction","target":["https://aruna.vn/"]}]},{"@type":"BreadcrumbList","@id":"https://aruna.vn/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ"}]},{"@type":"WebSite","@id":"https://aruna.vn/#website","url":"https://aruna.vn/","name":"Công ty TNHH Aruna Việt Nam","description":"Sản phẩm chất lượng giá thành hợp lý","publisher":{"@id":"https://aruna.vn/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://aruna.vn/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"vi"},{"@type":"Organization","@id":"https://aruna.vn/#organization","name":"Công ty TNHH Aruna Việt Nam","url":"https://aruna.vn/","logo":{"@type":"ImageObject","inLanguage":"vi","@id":"https://aruna.vn/#/schema/logo/image/","url":"https://aruna.vn/wp-content/uploads/2019/05/logo-co-chu-e1557383677783.jpg","contentUrl":"https://aruna.vn/wp-content/uploads/2019/05/logo-co-chu-e1557383677783.jpg","width":500,"height":500,"caption":"Công ty TNHH Aruna Việt Nam"},"image":{"@id":"https://aruna.vn/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Dòng thông tin Công ty TNHH Aruna Việt Nam »" href="https://aruna.vn/feed/">
+<link rel="alternate" type="application/rss+xml" title="Dòng phản hồi Công ty TNHH Aruna Việt Nam »" href="https://aruna.vn/comments/feed/">
+<link rel="prefetch" href="https://aruna.vn/wp-content/themes/flatsome/assets/js/chunk.countup.js">
+<link rel="prefetch" href="https://aruna.vn/wp-content/themes/flatsome/assets/js/chunk.sticky-sidebar.js">
+<link rel="prefetch" href="https://aruna.vn/wp-content/themes/flatsome/assets/js/chunk.tooltips.js">
+<link rel="prefetch" href="https://aruna.vn/wp-content/themes/flatsome/assets/js/chunk.vendors~popups.js">
+<link rel="prefetch" href="https://aruna.vn/wp-content/themes/flatsome/assets/js/chunk.vendors~slider.js">
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/aruna.vn\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.7"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id="wp-block-library-inline-css" type="text/css">
+:root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,161;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px;--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{clip:rect(1px,1px,1px,1px);word-wrap:normal!important;border:0;-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{clip:auto!important;background-color:#ddd;-webkit-clip-path:none;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+
+
+
+
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+
+<style id="flatsome-main-inline-css" type="text/css">
+@font-face {
+				font-family: "fl-icons";
+				font-display: block;
+				src: url(https://aruna.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot?v=3.15.1);
+				src:
+					url(https://aruna.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.15.1) format("embedded-opentype"),
+					url(https://aruna.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2?v=3.15.1) format("woff2"),
+					url(https://aruna.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf?v=3.15.1) format("truetype"),
+					url(https://aruna.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff?v=3.15.1) format("woff"),
+					url(https://aruna.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.svg?v=3.15.1#fl-icons) format("svg");
+			}
+</style>
+
+
+<link rel="stylesheet" id="flatsome-googlefonts-css" href="//fonts.googleapis.com/css?family=Roboto%3Aregular%2C700%2Cregular%2C700%7CDancing+Script%3Aregular%2C400&amp;display=swap&amp;ver=3.9" type="text/css" media="all">
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" defer=""></script>
+<link rel="https://api.w.org/" href="https://aruna.vn/wp-json/"><link rel="alternate" type="application/json" href="https://aruna.vn/wp-json/wp/v2/pages/2"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://aruna.vn/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.4.7">
+<meta name="generator" content="WooCommerce 5.9.1">
+<link rel="shortlink" href="https://aruna.vn/">
+<link rel="alternate" type="application/json+oembed" href="https://aruna.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faruna.vn%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://aruna.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faruna.vn%2F&amp;format=xml">
+<style type="text/css">.al-hotline{color:#fff;background:#eb021d;height:30px;line-height:30px;font-size:19px;font-weight:700;-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px;position:fixed;bottom:10px;left:10px;padding-right:10px;text-decoration:none;z-index:1}.al-hotline span{width:30px;height:30px;display:block;float:left;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAACrUlEQVRIicWXP2gUQRTGL0EUBFHSiCjmjMIpiiBXCCIiFhr/NifkQANiLFRyTSqjjUQsg0SCKFYWIYWHSExUEImIGlEQg6BgpfgH4x+IlYXo83vst9nZuZm93Sjegx/czn7zvp3Z2TdzORHJpWQ96AMPwLREMc22PmpS5UsjagdV8BJMgPOgAkqkwrYJaqrsM2vjNWAMfAADoAiaE/TN1AywzxhzZDIugykwBNoyvI6QNvadYq5Uxt3gM+iahaFNF3N11zMuU1j3HWWgnTnLPuPCPxypb+QF27gJ3ALDGRPqar4BesHaOtphejSZxtvBJ5B3dNgGBsEBx72d4ATN34LLoMVjnKfHrtBYn+Aak9vi/eCHRNGZMCId8U3wGqzyaAbDUevFOoo3WKKl4IvE466lOQXOWNN8EbwCCx3G6vEetOqFljqtOnMcIzBHq6ELZJmhOQxGwDtw2mi/75lB9XiuM6cXjySoNrZoCfgotVF0aDdK8P56eV1k31aHVmekX39oka94nu6ZZXoHzJfoSzgkUVncJEGlWsHrh+CoI28PuJpjwpJDoFwyTL+Bldb9C+CrRN/nUyYO711x5OwA4/WMdxjGP8Feh+Ys2MLfR5hYf+8Gx5OMfVOtzLOmW0c016NNy8xU+xZXSEnice4vjWcWl+9zCtFFNGSZa6lcYGgWc2pXU+8zjX1OvgJi0sJpNuMFOAi2sr/Gd/AEHPM8QKyAJJVMk+XgsdTGL0ebxj5HjljJVJI2CZNFEmwEaeKk1Tcv1iYRjjrLtrgH3AO/Paa6UxWsPs5tMSfZDwKaYLMEm8QIk94G16V2vXgPAiENOfqENOSwZ478vx9vQxpyoDfRijQK3oBJCXYsrbcdpIdtk9SMsk9i3izTp/usnrn6Jfh/NE6qbOuUaC+uyx97DVrzsnEg8gAAAABJRU5ErkJggg==);background-size:30px 30px;background-position:top left;background-repeat:no-repeat;-webkit-animation:swing ease-in-out .2s infinite alternate;-moz-animation:swing ease-in-out .2s infinite alternate;-ms-animation:swing ease-in-out .2s infinite alternate;-o-animation:swing ease-in-out .2s infinite alternate;animation:swing ease-in-out .2s infinite alternate;margin-right:5px}.al-hotline:hover{color:#ff0!important}</style><style type="text/css">#al-cta-icon{position:fixed;width:60px;right:0;top:50%;z-index:9999;background:#fff;box-shadow:-2px 0 10px rgba(0,0,0,.1);border-radius:10px 0 0 10px;-webkit-border-radius:10px 0 0 10px;-moz-border-radius:10px 0 0 10px;display:flex;align-items:center;justify-content:center;flex-direction:column;-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-ms-transform:translate(0,-50%);-o-transform:translate(0,-50%);transform:translate(0,-50%)}#al-cta-icon a:not(:last-child){border-bottom:1px solid #dee2e6}#al-cta-icon a{padding:15px 0;display:flex;align-items:center;justify-content:center;width:100%;height:100%;position:relative;text-decoration:none}#al-cta-icon a i{font-size:27px;color:#78bc1c}#al-cta-icon a:hover{background:#78bc1c}#al-cta-icon a:hover i{color:#fff}.cta-left{left:0;border-radius:0 10px 10px 0!important;-webkit-border-radius:0 10px 10px 0!important;-moz-border-radius:0 10px 10px 0!important}#al-cta-icon.cta-left a.al-cta-phone{border-radius:0 10px 0 0;-webkit-border-radius:0 10px 0 0;-moz-border-radius:0 10px 0 0}#al-cta-icon.cta-left a.al-cta-zalo{border-radius:0 0 10px 0;-webkit-border-radius:0 0 10px 0;-moz-border-radius:0 0 10px}@-webkit-keyframes swing{0%{-webkit-transform:rotate(10deg);-moz-transform:rotate(10deg);-ms-transform:rotate(10deg);-o-transform:rotate(10deg);transform:rotate(10deg)}100%{-webkit-transform:rotate(-10deg);-moz-transform:rotate(-10deg);-ms-transform:rotate(-10deg);-o-transform:rotate(-10deg);transform:rotate(-10deg)}}@-moz-keyframes swing{0%{-webkit-transform:rotate(10deg);-moz-transform:rotate(10deg);-ms-transform:rotate(10deg);-o-transform:rotate(10deg);transform:rotate(10deg)}100%{-webkit-transform:rotate(-10deg);-moz-transform:rotate(-10deg);-ms-transform:rotate(-10deg);-o-transform:rotate(-10deg);transform:rotate(-10deg)}}@-ms-keyframes swing{0%{-webkit-transform:rotate(10deg);-moz-transform:rotate(10deg);-ms-transform:rotate(10deg);-o-transform:rotate(10deg);transform:rotate(10deg)}100%{-webkit-transform:rotate(-10deg);-moz-transform:rotate(-10deg);-ms-transform:rotate(-10deg);-o-transform:rotate(-10deg);transform:rotate(-10deg)}}#al-cta-icon a.al-cta-phone i{color:#dc3545;-webkit-animation:swing ease-in-out .2s infinite alternate;-moz-animation:swing ease-in-out .2s infinite alternate;-ms-animation:swing ease-in-out .2s infinite alternate;-o-animation:swing ease-in-out .2s infinite alternate;animation:swing ease-in-out .2s infinite alternate}#al-cta-icon .al-ico-phone{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAYAAAAj6qa3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAABgAAAAYADwa0LPAAAAB3RJTUUH5QYBCQAd0XblAgAABtRJREFUaN7N2X9sVuUVB/DP7dtKxTp/ZWARMWqYAbtAlrKoKAOxK+hGjPxyJNvAkAx0CmoIGgZT5lAkU0YqRjSgZjAsaKQaGqjQlzlNBSaJDcqPhkVBBTvQQLVKKXd/XG5F6eV9X3lx+/7z5rnP85znnO895zznnpdTxIZecPXV9eXw/PP1ITQ11b8Gra3ReM+e+r9DXd2Gs+C660713HwhyHVDZFBJif6wYIH5MGFC9gIgDIN9sGRJ4UMwdeq1P4RDh/5vCXjlJ9C1a8m/YO1aaRg48JQ1+Bs0Ng5+Bvr1C4KIoO+LgIJsF0aGL16cN8NjXARlZStWQEHW+uQLhZkW1F8IlZWR4WPH5l2DvbBt25jZ0N6+fivcdVdBHaRSR38FGzcO6QZvvplvD8lIgEEwY0beDY+xAl59tfoFOOOMoC/MmhV+AhdcELwbLUtvgqam9HxYuLBkIFRVlQ+AtrbvenxiDlh/JVx+eTASdu40BIKck2YiBkN7e/tz0Ldv6rfQo4d1UFsrBcXFJ9+/dWs0GD9+SACbN+eqRmLMFcyEQYOyNnw/NDRYDffdFyn4/vuJ6xfCkiU3jIcdOyID0ukhN8CZZ0b7e/cO+8L06SfIS8OVVx4bpNP/huHD80aATVBWlq2goy0wZcqQeTB3bnFP6NMnqIM5c6I329YWzIe3326tgHvvTZIXEdLUdH13ePTRWJ7X4aGH4us0IuKss9wGL78c1yXZ6p34ZqP7fvnybJNfagv06DHoHvj442/P150fzbc1wP79N/4IvvoqW0W/jfWzYcyYYCYsWxbpmUr5Evbsad8H/ftHHrZ/f5KcRA8IxsHZZ2er0OHz4fDhpPmKA/DRR6dqeIzrZ0F1tbth+vSOiWLo2TPKKfffn0lOcgi0QUlJtgoV33RyAk4XBj8Ojz0W/BU2boyfB0Nh8uS1P4Zu3U47AZ9WQnt70nwUUoWF0e+wYel6GD06Gp+Y7WPF43X/bKYzj4zrgigHPfhg/DycCV27Fr0DI0bkTEBY2vmBSSh+BIqKTr5q5cpgDEybFrbA7NmegiefjFes3gFduhTNghdfDNfB0qWp/nDkSJLkHzwMdXXRi/vssw6CfsPJbodkDygmFw8orOicgH+Uw8UXdxBbDZWVfgGrVvkdnHdePH9mHVRVGQXbtweN0Nh49YfQ2pp0fkdB1AwNDR3nPQ9XXJE7AV1yIyD1eOcEDNoMu3dH19rNNxsKI0cGP4cJE6KKb968KBSmTg1Hwc6dSuHgwXAox8d2RoyDDz+Mh0EFlJYmLc9cCp8i4thtq4FFi6L7+tJLg8dh8ODCm6ClpX0o1NYGr8Dy5UF/qKwM74wIrL4QUqkxYzhZrskVyR7wVaRYtoLa76azmvzIPfDss3rAtdeGh6Cm5ujHMGJE+6Zj+x6BW26xFV56KayFiy6KpFRVZW34suP3EdbRWV0SI9EDgh1w6FD02ZXsQh2G1n2TgLhxEu1vbg7ugNWrozd8ySXhE9DaGoXG3r3Rrr171/0UuncvOACLFqV3QnV1pvM3b4KiokOfwlVXfXN227acCVBELh7w5X3fJCAyLN4/adIJGxZ2LmfoRti3Lxrdfnu2LZuD90NFRTADzj23Y2Ic1NYm7UsOgRwJOG8NpFLZrs8Xos5AEASl8MAD8fPgT/DFF4U1UFNz2gloaSVzHZB/1H8C06ZFyXXAgI6Jcqiquu5zaG7OmYBwGbk0KbuuhC5dEhUNoWfPpMovZ8NDuPXWoBvMmRM/D+bCBx98+XuYOzeTnAw9uD17slXoSCX06hWP4yZq/Z/h4YfNhF27otmGhrq1cM452crvkNf1mMF/5PivwGA2HD4c3R5jxw7rBQcOZJKbfAu8AFu3ht2zU7BgBixYsP4grFoV/AEmTXINx1eCkcL9+hXugvnzo4dft9XjmF73HPTuXfgRjBwZ7oXJk/3lW/KOQEtL+B6MGhUl368rwUxIzLGvDYTLLksNhaam09USiwZlZcERKC0NN8Dq1ZlaYsFj8M47kULjx//sFdiyJVc1EkPghjdg166oKfn663kzPEaar2+NiRM/eQneeCMqlT///ASD58GOHWE3mDKlZBaUl39XwzvkZtTzP1BRETbC2rV5J6IFtm0b8kvo0yf9BNx5Z/guFBSogrfeGiz6zXdbPGuXTt8GS5eGv4Zx4/JGwLHeXnMZFBXlu9bPhKz/iemyBiZO9CT5DIlgCzQ2jh4NR49+X4bnTED8Pd72Hgwf7l145pmcT4y7uXfA00+HNTBw4Pf9n2DesKEcBgyo7weLF6dvhO3bo0KlpaW+FnbvTo+FNWvWbYRrrvlf6x3jv3yOVf0tUjjOAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTA2LTAxVDA5OjAwOjI5KzAwOjAweCjQ9gAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wNi0wMVQwOTowMDoyOSswMDowMAl1aEoAAAAASUVORK5CYII=);width:30px;height:30px}#al-cta-icon a.al-cta-zalo .al-ico-zalo{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAdCAYAAAC9pNwMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0iQUFBNzRCNEQ2RDFDOUU2MTA1NDA4QTBFQzA3RDhBMzgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzE5MkZENzk1RTI1MTFFQkE4MTJCRUNENEVEMTYwRkIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzE5MkZENzg1RTI1MTFFQkE4MTJCRUNENEVEMTYwRkIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgV2luZG93cyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk1ZWFhYjUxLWZlMjAtNDE0MC05YWFlLWRhNzI3YzEzZDA2ZiIgc3RSZWY6ZG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOmIzOWE4YjJiLThiNjAtYTk0NS1iYzg4LWMxOTYwNjQxYTU3OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjET24IAAAWQSURBVHjavFdpbFRVFP7uvDf7lOlCaakCrbRUW2kVDIMCAZuASEUQYhREokJiIEDANdFoFAiggLYSNCwSE4SAEldMDEtECxQQsAIFlKWl0xbaoZ3pMlvnvbme+95QWln8QceTebPc7btn+84Zdr4tjD2nGzLWl11ZdtGvjAqDJSgcZm5gTAmpgMePogdT8fHkgSjom4Aekjb5nFdJf2NnzYnWFiUFTjMg0bCBAUEF8Ibw9pRsLB2fhR6WBHnZnurVrZ5wCsuwA1EOECbviAJXg/jw+UF4fVR/xEHaDIcveYejt1UH1YSQG/yYPykrXqCaGKyyTO/XfjHwxiDy8pPwSfFAxFMMpCDTtCThETKxgWPrM7mItxgCSlTSgklgNwUxzpWGwnRH/IEVHtV05lHdvfOHpt3RgRc87ajzBf5zncy5QVOWU85a020ousfZOck5x8vb/8DxvzyI2EzITLKiDy0eU5iB5x66eeBlL9kFV1YKDi0afXuNjZKkR3QwgoI0G2wmuduCq/4O1HuDUMkiP1Q2YONHZfjlnOf65SJK9xMp/5tD/xqLRm/U2G6E5AsQsBJFltPYbZIxhm9mDe/8nfjCNjiKc7Hh2SGoInNOKfkNFVXNGOvqD4tZxtLHctE7zYEkso6QteVVmLf+kHb2a1MHY+XkguvAqkq2jqVTL7N0S9Pc/9ZPaCH/Va59SruQa/leeKq9mD4xH1uP1ADkjqn56Ui2m5Gb6kBFrRfz3t+NkWMHIYNctKp0PywmCUsm5OumjorgiiGrNzGJkJlfHkXlvov4seRJ3EUHn77SCs/RWqyY+wi2zBiKfQtGAhYZUbqQSm6T6bjSsotAbzvKXh2D7S+5kPxwJpbuPtclj+n+WnTR09iu3AD6xeFqbN50BHNfGYkncvroljHRNocZ7iY9es80tOnkQ8EogEV2JlrIbeRrlevKhFpCcFqNXaJaDxGAfHSS8rireANhvFhaRtMM6w658emv1UBzAHMm3Yupk/Owlvy39Xc3vG4fEFaRYDSghnx/8nI7dswcgpLNxyDP/hq2BDMCFJBblj3eDVinLZsR1XXtOE9+zE51xIZkrJztgqcliEY6ONChgtP3YQNSMHNYf8xiBpSTnxeRucOqinH3pWP1xDxIpHK/ZDt2flCM97ZVaPveXDEB04f0ux641sXljUEVqUyYyt2Kd6ZlY3FRVryJq83QhS0ApwVr9tfHaCzOlElKc83HQn2nCT53AAt+vvB/AMd8fE1rIoA1Oy+hrMYXX2BKgc6yKBRnZrqLyYTx606hllIgfsBdNdZ4lYOlWBBoCsH12TF0KGqPAiqkXXHJPshR6K1AF4YW6JTx7Wj2dfQoaIW7GTM2HkblGQ9k8G5VQfM6r2qgbjOEsjkjYJKlOwZspNxftessVu76GwgoMGYmG+RIlJso4/XAEm5uasGYHDu+XzgevSzmzs3niZ9FObxE9FgwIBmjc1KRlmi9JVgwFMHBqiZ8d6KeaLcG7bWtgCCmRDtYVI0Qs3NZyyihrQDnKhypCdhQ7obbR4xFDf/JOh9O1bVqdAnRl1kkmPs48ECGE7lpCcig/LdS5emgou2h9RfoT8CJ+hZ4rhCHByKgOgkMSNLPp5hRCI+N2PDnVweONz3N+tp14lBD4Jep0LeFYqZnGo9D1Fg6XBsTjUOYCkqAYoDoUG+NuR4fYr0oT6IgiEdi6HSnmCMFBhf23cv2VF1Nm7Tp7Bl/azQJDll084C/RQ8w0Z1c4xc1Fv+M3WhXdhsHx+6j7adOxtbL2P7twkcL2WVqeXYcr7n784Oe5Q0RlhdQIg4W9puDwaAU4Vq6QfC4VTJIIuf1vNdTXrzEpyrGxRVjczoSFw0DNzJGJZ8rVEn9OQ7pwIwRme9OK8qv/keAAQCNolN4fLZYKwAAAABJRU5ErkJggg==) 0 0/100% auto no-repeat;width:27px;height:27px;display:inline-block}#al-cta-icon a.al-cta-email .al-ico-email{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAZCAYAAADAHFVeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDQ4OCwgMjAyMC8wNy8xMC0yMjowNjo1MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIyLjAgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNCMjQxRjY0RDgxODExRUJCMzU5RDk3OUVGNDIwNkUyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNCMjQxRjY1RDgxODExRUJCMzU5RDk3OUVGNDIwNkUyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0IyNDFGNjJEODE4MTFFQkIzNTlEOTc5RUY0MjA2RTIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0IyNDFGNjNEODE4MTFFQkIzNTlEOTc5RUY0MjA2RTIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7dUv/MAAAEyUlEQVR42qRWW2gcVRj+zsyZ68422c1ms0napKlYV5sqvYngBRGEgqhtEaEPvljBgj5JsQ8Bob7pqxrUFp/EN/FJkBKwWrDYUnuhjUVtUprETXPZTbI7l52dmeM/06ZpmsZu04Fcdub85/u/y/lngTVcE4fau88dbCs8aJ38IIs/2CXh7Sexp7/FP6LB213Mipl8Sho9d0M0Vc/u/HDs2NePd3d37/D9YEUTDab4zwanXmp3Rt6ouGEro8qsIU9fN5/47oy8/ZQqfP3uvU1T9y9cOP/7oUOHry4DO3r0q769e/f+GATRJiFEuKIrxkTdrRlRw5eWSaPqoaqbHtWwe9SomqacGRz8cs/AwMAUX3yQzxf6w1B0OY6jra4DLVc4GFvqMxCRHDhOarUSVW3tzeVyj9G/S2BRFDLq7n81l271Xvcb8XpwzqEReBgJrF4aPwuTSt5sOLgso+a4KM8vwPV8AggJXELaMtCRzUCSJET3aXYJTNE9MCm6Z2Rpo4Wag7+vjxMAw/pCe7J5zfYwMvYvqraLYl8PojBcwQpMJglo71iZ+NfLXUDRu/hUw7NTdwU0+URGY3hkFClDx9bNmzA5U8ZY6QZs10Xf+i7MVOYxVa4k7JcXy6hXy5ld8p/9O3MEduT5Vny223inZ+bkQMOZVwVtH3u3+BMzKE3PJrAbCjn8dv4S+RVB1zRcvT4By9SRNk3cmKkkTd1ZK0hmd27K2mqf/uTYq3wfP3wg7LVL3r4pR7QwpkBRVZJqSXtNVVAZHUMu04q5mou4mR39RdhOHdcmJtHZkcfY5Aw0TYVBzKU72DGuQrgayr6U2/xcz+t82vDaMlskNScNY9o5j1B/AYqhJT7FETd0DYqiUPJk+EFITAy6L+PyP6NQ6b7t1uE3AhQf2UjrVLL9Jlh87IIoIGXG0LJTh2r26kSChZLChWWW0FN5D/r4R6jNjsDz6pQuKiCAQnsWs3ML6GjLIqAQnDj9B/K5DFrWWThzcRibKRwx8yCMCERKZA6ccaSmBpGzP4dqUT5kRfDF0NwclA466t8iXfoZ0/b7qGVfQcPMU/o6MTpWItlK2LGlSOeaJ550k4SxZ7FXAeU4oh0ivwy5ehJt9g/gorw0pMgavnJUMpgYR8/ch6jYP2Eh8y4qrc/g6W07cfnKZZy9dAXplJkwVMnP7QQuoCNs1MCcS7AWvofZuJgk8VbYb7Phq70MGHmWDYZgTZ1FubYf1cx+FB/dRj5FcJ1q4qNhWHC8EMz9C1rtOCznOFXaBGTc51Df64XAyFhWRcEeRM07gXn7Lcxl34SZzlMzDHZ1lkCGkCIF1GCEiMQg5pIvzYMt0pfjEQJLDEOf+xhV5xfMmvthWFlkG0PQ/HMklk9A1jLJ1gC2nKUceUg5Q+CSA421QMU03Y9fEkZz87WZRXHy/ID+qr1QWjqR5nH3802DNC1jPFsbWAd53UZwNZ14BSHW8tVlNTBBB5NAhEZsuqFZhZuTQURrBkrA6DzK7PbJIxCaAiE0hHIW3NoArlC64m8JIsJDXoxbRuOaLHEHNGZoMiGUMpSFLuhmOz2PQQI89BX3achVfuBTUT74WvDFi9v1MNL7LMXojCQaRwmbOPbsoaFkWHLl15Plb/4TYABiBPP4PO4u1QAAAABJRU5ErkJggg==) 0 0/100% auto no-repeat;width:27px;height:27px;display:inline-block}</style><meta name="google-site-verification" content="sW6nq4EDAmQZFlEDDsk7pVK145RpStso30bdycqV-o8">
+<!-- Google Tag Manager -->
+<script type="rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PD7CGN3');</script>
+<!-- End Google Tag Manager -->
+<style>.bg{opacity: 0; transition: opacity 1s; -webkit-transition: opacity 1s;} .bg-loaded{opacity: 1;}</style><!--[if IE]><link rel="stylesheet" type="text/css" href="https://aruna.vn/wp-content/themes/flatsome/assets/css/ie-fallback.css"><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><script>var head = document.getElementsByTagName('head')[0],style = document.createElement('style');style.type = 'text/css';style.styleSheet.cssText = ':before,:after{content:none !important';head.appendChild(style);setTimeout(function(){head.removeChild(style);}, 0);</script><script src="https://aruna.vn/wp-content/themes/flatsome/assets/libs/ie-flexibility.js"></script><![endif]-->	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<link rel="icon" href="https://aruna.vn/wp-content/uploads/2019/05/cropped-logo-1-32x32.jpg" sizes="32x32">
+<link rel="icon" href="https://aruna.vn/wp-content/uploads/2019/05/cropped-logo-1-192x192.jpg" sizes="192x192">
+<link rel="apple-touch-icon" href="https://aruna.vn/wp-content/uploads/2019/05/cropped-logo-1-180x180.jpg">
+<meta name="msapplication-TileImage" content="https://aruna.vn/wp-content/uploads/2019/05/cropped-logo-1-270x270.jpg">
+<style id="custom-css" type="text/css">:root {--primary-color: #446084;}.header-main{height: 90px}#logo img{max-height: 90px}#logo{width:200px;}.header-top{min-height: 30px}.transparent .header-main{height: 90px}.transparent #logo img{max-height: 90px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 90px;}.header.show-on-scroll,.stuck .header-main{height:70px!important}.stuck #logo img{max-height: 70px!important}.header-bottom {background-color: #f1f1f1}@media (max-width: 549px) {.header-main{height: 70px}#logo img{max-height: 70px}}body{font-size: 100%;}body{font-family:"Roboto", sans-serif}body{font-weight: 0}.nav > li > a {font-family:"Roboto", sans-serif;}.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-family:"Roboto", sans-serif;}.nav > li > a {font-weight: 700;}.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-weight: 700;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: "Roboto", sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2{font-weight: 700;}.alt-font{font-family: "Dancing Script", sans-serif;}.alt-font{font-weight: 400!important;}@media screen and (min-width: 550px){.products .box-vertical .box-image{min-width: 247px!important;width: 247px!important;}}.label-new.menu-item > a:after{content:"New";}.label-hot.menu-item > a:after{content:"Hot";}.label-sale.menu-item > a:after{content:"Sale";}.label-popular.menu-item > a:after{content:"Popular";}</style><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+
+<body data-rsssl="1" class="home page-template page-template-page-blank page-template-page-blank-php page page-id-2 theme-flatsome woocommerce-no-js lightbox nav-dropdown-has-arrow nav-dropdown-has-shadow nav-dropdown-has-border">
+
+
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+<div id="wrapper">
+
+	
+	<header id="header" class="header has-sticky sticky-jump">
+		<div class="header-wrapper">
+			<div id="masthead" class="header-main ">
+      <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+
+          <!-- Logo -->
+          <div id="logo" class="flex-col logo">
+            
+<!-- Header logo -->
+<a href="https://aruna.vn/" title="Công ty TNHH Aruna Việt Nam - Sản phẩm chất lượng giá thành hợp lý" rel="home">
+		<img width="649" height="122" src="https://aruna.vn/wp-content/uploads/2021/11/logo-ok.png" class="header_logo header-logo entered lazyloaded" alt="Công ty TNHH Aruna Việt Nam" data-lazy-src="https://aruna.vn/wp-content/uploads/2021/11/logo-ok.png" data-ll-status="loaded"><noscript><img width="649" height="122" src="https://aruna.vn/wp-content/uploads/2021/11/logo-ok.png" class="header_logo header-logo" alt="Công ty TNHH Aruna Việt Nam"/></noscript><img width="649" height="122" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20649%20122'%3E%3C/svg%3E" class="header-logo-dark" alt="Công ty TNHH Aruna Việt Nam" data-lazy-src="https://aruna.vn/wp-content/uploads/2021/11/logo-ok.png"><noscript><img  width="649" height="122" src="https://aruna.vn/wp-content/uploads/2021/11/logo-ok.png" class="header-logo-dark" alt="Công ty TNHH Aruna Việt Nam"/></noscript></a>
+          </div>
+
+          <!-- Mobile Left Elements -->
+          <div class="flex-col show-for-medium flex-left">
+            <ul class="mobile-nav nav nav-left ">
+              <li class="nav-icon has-icon">
+  		<a href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" class="is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
+		
+		  <i class="icon-menu"></i>
+		  		</a>
+	</li>            </ul>
+          </div>
+
+          <!-- Left Elements -->
+          <div class="flex-col hide-for-medium flex-left
+            flex-grow">
+            <ul class="header-nav header-nav-main nav nav-left  nav-uppercase">
+              <li class="header-search header-search-dropdown has-icon has-dropdown menu-item-has-children">
+		<a href="#" aria-label="Tìm kiếm" class="is-small"><i class="icon-search"></i></a>
+		<ul class="nav-dropdown nav-dropdown-default">
+	 	<li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative is-normal"><form role="search" method="get" class="searchform" action="https://aruna.vn/">
+	<div class="flex-row relative">
+						<div class="flex-col flex-grow">
+			<label class="screen-reader-text" for="woocommerce-product-search-field-0">Tìm kiếm:</label>
+			<input type="search" id="woocommerce-product-search-field-0" class="search-field mb-0" placeholder="Tìm kiếm…" value="" name="s" style="">
+			<input type="hidden" name="post_type" value="product" style="">
+							<input type="hidden" name="lang" value="vi" style="">
+					</div>
+		<div class="flex-col">
+			<button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button icon mb-0" aria-label="Submit">
+				<i class="icon-search"></i>			</button>
+		</div>
+	</div>
+	<div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li>	</ul>
+</li>
+<li id="menu-item-1335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-1335 active menu-item-design-default"><a href="https://aruna.vn/" aria-current="page" class="nav-top-link">Trang chủ</a></li>
+<li id="menu-item-1336" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1336 menu-item-design-default"><a href="https://aruna.vn/gioi-thieu/" class="nav-top-link">Giới thiệu</a></li>
+<li id="menu-item-1334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1334 menu-item-design-default has-dropdown"><a href="https://aruna.vn/san-pham/" class="nav-top-link">Sản phẩm của Aruna<i class="icon-angle-down"></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-default">
+	<li id="menu-item-1314" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1314"><a href="https://aruna.vn/danh-muc/giay-hut-am-pelure/">GIẤY HÚT ẨM</a></li>
+	<li id="menu-item-1799" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-1799"><a href="https://aruna.vn/san-pham/giay-nen/">GIẤY NẾN</a></li>
+	<li id="menu-item-1657" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-1657"><a href="https://aruna.vn/san-pham/giay-rom/">GIẤY RƠM</a></li>
+	<li id="menu-item-1785" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1785"><a href="https://aruna.vn/danh-muc/giay-duplex/">GIẤY DUPLEX</a></li>
+	<li id="menu-item-1680" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1680"><a href="https://aruna.vn/danh-muc/giay-nganh-da-giay/">GIẤY NGÀNH DA GIÀY</a></li>
+	<li id="menu-item-1656" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-1656"><a href="https://aruna.vn/san-pham/tui-giay/">TÚI GIẤY</a></li>
+	<li id="menu-item-1451" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1451"><a href="https://aruna.vn/danh-muc/in-decal-tem-nhan/">DECAL, TEM NHÃN</a></li>
+	<li id="menu-item-2326" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2326"><a href="https://aruna.vn/danh-muc/giay-hut-am-pelure/">GIẤY CHỐNG ẨM PELURE</a></li>
+</ul>
+</li>
+<li id="menu-item-1338" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1338 menu-item-design-default"><a href="https://aruna.vn/category/tin-tuc/" class="nav-top-link">Tin tức</a></li>
+<li id="menu-item-1337" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1337 menu-item-design-default"><a href="https://aruna.vn/lien-he/" class="nav-top-link">Liên hệ</a></li>
+            </ul>
+          </div>
+
+          <!-- Right Elements -->
+          <div class="flex-col hide-for-medium flex-right">
+            <ul class="header-nav header-nav-main nav nav-right  nav-uppercase">
+              <li class="account-item has-icon
+    ">
+
+<a href="https://aruna.vn/tai-khoan/" class="nav-top-link nav-top-not-logged-in " data-open="#login-form-popup">
+    <span>
+    Đăng nhập      </span>
+  
+</a>
+
+
+
+</li>
+<li class="header-divider"></li><li class="cart-item has-icon has-dropdown">
+
+<a href="https://aruna.vn/gio-hang/" title="Giỏ hàng" class="header-cart-link is-small">
+
+
+<span class="header-cart-title">
+   Giỏ hàng   /      <span class="cart-price"><span class="woocommerce-Price-amount amount"><bdi>0<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+  </span>
+
+    <span class="cart-icon image-icon">
+    <strong>0</strong>
+  </span>
+  </a>
+
+ <ul class="nav-dropdown nav-dropdown-default">
+    <li class="html widget_shopping_cart">
+      <div class="widget_shopping_cart_content">
+        
+
+	<p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ hàng.</p>
+
+
+      </div>
+    </li>
+     </ul>
+
+</li>
+            </ul>
+          </div>
+
+          <!-- Mobile Right Elements -->
+          <div class="flex-col show-for-medium flex-right">
+            <ul class="mobile-nav nav nav-right ">
+              <li class="cart-item has-icon">
+
+      <a href="https://aruna.vn/gio-hang/" class="header-cart-link off-canvas-toggle nav-top-link is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Giỏ hàng" data-pos="right">
+  
+    <span class="cart-icon image-icon">
+    <strong>0</strong>
+  </span>
+  </a>
+
+
+  <!-- Cart Sidebar Popup -->
+  <div id="cart-popup" class="mfp-hide widget_shopping_cart">
+  <div class="cart-popup-inner inner-padding">
+      <div class="cart-popup-title text-center">
+          <h4 class="uppercase">Giỏ hàng</h4>
+          <div class="is-divider"></div>
+      </div>
+      <div class="widget_shopping_cart_content">
+          
+
+	<p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ hàng.</p>
+
+
+      </div>
+             <div class="cart-sidebar-content relative"></div>  </div>
+  </div>
+
+</li>
+            </ul>
+          </div>
+
+      </div>
+     
+            <div class="container"><div class="top-divider full-width"></div></div>
+      </div>
+<div class="header-bg-container fill"><div class="header-bg-image fill"></div><div class="header-bg-color fill"></div></div>		</div>
+	</header>
+
+	
+	<main id="main" class="">
+
+
+<div id="content" role="main" class="content-area">
+
+		
+			
+  <div class="banner has-hover" id="banner-1874652457">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill">
+            <div class="bg fill bg-fill "></div>
+                        <div class="overlay"></div>            
+                    </div>
+		
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+   <div id="text-box-1526111814" class="text-box banner-layer x50 md-x5 lg-x5 y50 md-y50 lg-y50 res-text">
+                                <div class="text-box-content text dark">
+              
+              <div class="text-inner text-center">
+                  
+	<div id="text-354827916" class="text">
+		
+<p><strong style="line-height: 1.5; font-size: 39px;">Sản phẩm chất lượng cao, giá thành hợp lý</strong></p>
+<p>Với phương châm “sự hài lòng của khách hàng là yếu tố sống còn” Công ty TNHH Aruna Việt Nam luôn nổ lực hết mình,thay đổi không ngừng</p>
+		
+<style>
+#text-354827916 {
+  font-size: 1.15rem;
+  text-align: left;
+}
+</style>
+	</div>
+	
+              </div>
+           </div>
+                            
+<style>
+#text-box-1526111814 {
+  width: 81%;
+}
+#text-box-1526111814 .text-box-content {
+  font-size: 100%;
+}
+@media (min-width:550px) {
+  #text-box-1526111814 {
+    width: 43%;
+  }
+}
+</style>
+    </div>
+ 
+        </div>
+      </div>
+
+            
+<style>
+#banner-1874652457 {
+  padding-top: 500px;
+}
+#banner-1874652457 .bg.bg-loaded {
+  background-image: url(https://aruna.vn/wp-content/uploads/2021/11/mang-nha-kinh.jpg);
+}
+#banner-1874652457 .overlay {
+  background-color: rgba(0, 0, 0, 0.541);
+}
+#banner-1874652457 .bg {
+  background-position: 0% 0%;
+}
+#banner-1874652457 .ux-shape-divider--top svg {
+  height: 150px;
+  --divider-top-width: 100%;
+}
+#banner-1874652457 .ux-shape-divider--bottom svg {
+  height: 150px;
+  --divider-width: 100%;
+}
+</style>
+  </div>
+
+
+	<section class="section dark" id="section_1784581326">
+		<div class="bg section-bg fill bg-fill  bg-loaded">
+
+			
+			<div class="section-bg-overlay absolute fill"></div>
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+<div class="row" id="row-706355597">
+
+	<div id="col-1496299833" class="col small-12 large-12">
+				<div class="col-inner">
+			
+			
+	<div id="text-1817476435" class="text">
+		
+<h2>Danh mục sản phẩm tại Aruna</h2>
+		
+<style>
+#text-1817476435 {
+  font-size: 1.6rem;
+  text-align: center;
+}
+</style>
+	</div>
+	
+
+  
+    <div class="row large-columns-5 medium-columns-3 small-columns-2 row-small slider row-slider slider-nav-simple slider-nav-outside slider-nav-light slider-nav-push" data-flickity-options="{&quot;imagesLoaded&quot;: true, &quot;groupCells&quot;: &quot;100%&quot;, &quot;dragThreshold&quot; : 5, &quot;cellAlign&quot;: &quot;left&quot;,&quot;wrapAround&quot;: true,&quot;prevNextButtons&quot;: true,&quot;percentPosition&quot;: true,&quot;pageDots&quot;: true, &quot;rightToLeft&quot;: false, &quot;autoPlay&quot; : 4000}">
+
+          <div class="product-category col">
+            <div class="col-inner">
+              <a href="https://aruna.vn/danh-muc/giay-hut-am-pelure/">                <div class="box box-category has-hover box-bounce ">
+                <div class="box-image">
+                  <div class="image-cover" style="padding-top:104%;">
+                  <img fetchpriority="high" decoding="async" src="https://aruna.vn/wp-content/uploads/2021/11/1-lg-247x296.jpg" alt="GIẤY HÚT ẨM PELURE" width="300" height="300" data-lazy-src="https://aruna.vn/wp-content/uploads/2021/11/1-lg-247x296.jpg" data-ll-status="loaded" class="entered lazyloaded"><noscript><img fetchpriority="high" decoding="async" src="https://aruna.vn/wp-content/uploads/2021/11/1-lg-247x296.jpg" alt="GIẤY HÚT ẨM PELURE" width="300" height="300" /></noscript>                                                      </div>
+                </div>
+                <div class="box-text text-center" style="background-color:rgb(135, 0, 66);">
+                  <div class="box-text-inner">
+                      <h5 class="uppercase header-title">
+                              GIẤY HÚT ẨM PELURE                      </h5>
+                                            
+                  </div>
+                </div>
+                </div>
+            </a>            </div>
+            </div>
+                <div class="product-category col">
+            <div class="col-inner">
+              <a href="https://aruna.vn/danh-muc/giay-nganh-da-giay/">                <div class="box box-category has-hover box-bounce ">
+                <div class="box-image">
+                  <div class="image-cover" style="padding-top:104%;">
+                  <img decoding="async" src="https://aruna.vn/wp-content/uploads/2022/11/z3909230676161_dceefbd0e1a609c76bbc4e8ae751e72a-247x296.png" alt="GIẤY NGHÀNH DA GIÀY" width="300" height="300" data-lazy-src="https://aruna.vn/wp-content/uploads/2022/11/z3909230676161_dceefbd0e1a609c76bbc4e8ae751e72a-247x296.png" data-ll-status="loaded" class="entered lazyloaded"><noscript><img decoding="async" src="https://aruna.vn/wp-content/uploads/2022/11/z3909230676161_dceefbd0e1a609c76bbc4e8ae751e72a-247x296.png" alt="GIẤY NGHÀNH DA GIÀY" width="300" height="300" /></noscript>                                                      </div>
+                </div>
+                <div class="box-text text-center" style="background-color:rgb(135, 0, 66);">
+                  <div class="box-text-inner">
+                      <h5 class="uppercase header-title">
+                              GIẤY NGHÀNH DA GIÀY                      </h5>
+                                            
+                  </div>
+                </div>
+                </div>
+            </a>            </div>
+            </div>
+                <div class="product-category col">
+            <div class="col-inner">
+              <a href="https://aruna.vn/danh-muc/giay-rom/">                <div class="box box-category has-hover box-bounce ">
+                <div class="box-image">
+                  <div class="image-cover" style="padding-top:104%;">
+                  <img decoding="async" src="https://aruna.vn/wp-content/uploads/2022/11/giay-rom-1-247x296.png" alt="GIẤY RƠM" width="300" height="300" data-lazy-src="https://aruna.vn/wp-content/uploads/2022/11/giay-rom-1-247x296.png" data-ll-status="loaded" class="entered lazyloaded"><noscript><img decoding="async" src="https://aruna.vn/wp-content/uploads/2022/11/giay-rom-1-247x296.png" alt="GIẤY RƠM" width="300" height="300" /></noscript>                                                      </div>
+                </div>
+                <div class="box-text text-center" style="background-color:rgb(135, 0, 66);">
+                  <div class="box-text-inner">
+                      <h5 class="uppercase header-title">
+                              GIẤY RƠM                      </h5>
+                                            
+                  </div>
+                </div>
+                </div>
+            </a>            </div>
+            </div>
+                <div class="product-category col">
+            <div class="col-inner">
+              <a href="https://aruna.vn/danh-muc/giay-nganh-in/">                <div class="box box-category has-hover box-bounce ">
+                <div class="box-image">
+                  <div class="image-cover" style="padding-top:104%;">
+                  <img decoding="async" src="https://aruna.vn/wp-content/uploads/2019/05/z3909278859518_ada5aa1480688d04ef3a353524f73150-247x296.png" alt="GIẤY NGÀNH IN" width="300" height="300" data-lazy-src="https://aruna.vn/wp-content/uploads/2019/05/z3909278859518_ada5aa1480688d04ef3a353524f73150-247x296.png" data-ll-status="loaded" class="entered lazyloaded"><noscript><img decoding="async" src="https://aruna.vn/wp-content/uploads/2019/05/z3909278859518_ada5aa1480688d04ef3a353524f73150-247x296.png" alt="GIẤY NGÀNH IN" width="300" height="300" /></noscript>                                                      </div>
+                </div>
+                <div class="box-text text-center" style="background-color:rgb(135, 0, 66);">
+                  <div class="box-text-inner">
+                      <h5 class="uppercase header-title">
+                              GIẤY NGÀNH IN                      </h5>
+                                            
+                  </div>
+                </div>
+                </div>
+            </a>            </div>
+            </div>
+                <div class="product-category col">
+            <div class="col-inner">
+              <a href="https://aruna.vn/danh-muc/tui-giay/">                <div class="box box-category has-hover box-bounce ">
+                <div class="box-image">
+                  <div class="image-cover" style="padding-top:104%;">
+                  <img decoding="async" src="https://aruna.vn/wp-content/uploads/2022/11/tui-giay-247x296.jpg" alt="TÚI GIẤY MỌI KÍCH CỠ" width="300" height="300" data-lazy-src="https://aruna.vn/wp-content/uploads/2022/11/tui-giay-247x296.jpg" data-ll-status="loaded" class="entered lazyloaded"><noscript><img decoding="async" src="https://aruna.vn/wp-content/uploads/2022/11/tui-giay-247x296.jpg" alt="TÚI GIẤY MỌI KÍCH CỠ" width="300" height="300" /></noscript>                                                      </div>
+                </div>
+                <div class="box-text text-center" style="background-color:rgb(135, 0, 66);">
+                  <div class="box-text-inner">
+                      <h5 class="uppercase header-title">
+                              TÚI GIẤY MỌI KÍCH CỠ                      </h5>
+                                            
+                  </div>
+                </div>
+                </div>
+            </a>            </div>
+            </div>
+                <div class="product-category col">
+            <div class="col-inner">
+              <a href="https://aruna.vn/danh-muc/giay-decal-giay-in-my-thuat/">                <div class="box box-category has-hover box-bounce ">
+                <div class="box-image">
+                  <div class="image-cover" style="padding-top:104%;">
+                  <img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" alt="GIẤY DECAL, GIẤY IN MỸ THUẬT" width="300" height="300" data-lazy-src="https://aruna.vn/wp-content/uploads/2021/11/5c3762cfe840b674808045-1-e1569895715855-247x296.jpg"><noscript><img decoding="async" src="https://aruna.vn/wp-content/uploads/2021/11/5c3762cfe840b674808045-1-e1569895715855-247x296.jpg" alt="GIẤY DECAL, GIẤY IN MỸ THUẬT" width="300" height="300" /></noscript>                                                      </div>
+                </div>
+                <div class="box-text text-center" style="background-color:rgb(135, 0, 66);">
+                  <div class="box-text-inner">
+                      <h5 class="uppercase header-title">
+                              GIẤY DECAL, GIẤY IN MỸ THUẬT                      </h5>
+                                            
+                  </div>
+                </div>
+                </div>
+            </a>            </div>
+            </div>
+        </div>
+		</div>
+					</div>
+
+	
+</div>
+		</div>
+
+		
+<style>
+#section_1784581326 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #be386b;
+}
+#section_1784581326 .section-bg-overlay {
+  background-color: #be386b;
+}
+#section_1784581326 .ux-shape-divider--top svg {
+  height: 150px;
+  --divider-top-width: 100%;
+}
+#section_1784581326 .ux-shape-divider--bottom svg {
+  height: 150px;
+  --divider-width: 100%;
+}
+</style>
+	</section>
+	
+	<section class="section" id="section_2005135122">
+		<div class="bg section-bg fill bg-fill  bg-loaded">
+
+			
+			
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+<div class="row row-large" id="row-1025447996">
+
+	<div id="col-1807529290" class="col medium-6 small-12 large-6">
+				<div class="col-inner">
+			
+			
+
+  <div class="banner has-hover" id="banner-418013450">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill">
+            <div class="bg fill bg-fill "></div>
+                                    
+                    </div>
+		
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+   <div id="text-box-175954013" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                                <div class="text-box-content text dark">
+              
+              <div class="text-inner text-center">
+                  
+              </div>
+           </div>
+                            
+<style>
+#text-box-175954013 {
+  width: 60%;
+}
+#text-box-175954013 .text-box-content {
+  font-size: 100%;
+}
+@media (min-width:550px) {
+  #text-box-175954013 {
+    width: 60%;
+  }
+}
+</style>
+    </div>
+ 
+        </div>
+      </div>
+
+            
+<style>
+#banner-418013450 {
+  padding-top: 500px;
+}
+#banner-418013450 .bg.bg-loaded {
+  background-image: url(https://aruna.vn/wp-content/uploads/2021/11/chup-anh-profile-cong-ty-kpmg-4-1024x683.jpg);
+}
+#banner-418013450 .ux-shape-divider--top svg {
+  height: 150px;
+  --divider-top-width: 100%;
+}
+#banner-418013450 .ux-shape-divider--bottom svg {
+  height: 150px;
+  --divider-width: 100%;
+}
+</style>
+  </div>
+
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-2089128713" class="col medium-6 small-12 large-6">
+				<div class="col-inner">
+			
+			
+	<div id="text-4041743094" class="text">
+		
+<h1>Về Aruna Việt Nam</h1>
+		
+<style>
+#text-4041743094 {
+  font-size: 1.5rem;
+}
+</style>
+	</div>
+	
+<p>Công ty TNHH Aruna Việt Nam là nhà sản xuất hàng đầu các sản phẩm giấy ngành in, giấy chống ẩm, giấy gói giày, giấy gói thực phẩm… ở khu vực Việt Nam, chuyên phục vụ các công ty, xí nghiệp, nhà máy có nhu cầu sử dụng số lượng lớn trong ngành.Trong những năm gần đây Cty TNHH Aruna Việt Nam đã và đang tiếp tục mở rộng qui mô sản xuất, tăng cường đầu tư trang thiết bị hiện đại nhất,nghiên cứu các phương pháp mới.Ngoài ra Công ty TNHH Aruna Việt Nam không ngừng nâng cao tay nghề đội ngũ nhân viên nhằm nâng cao chất lượng sản phẩm. Công ty TNHH Aruna Việt Nam nỗ lực trở thành nhà cung cấp uy tín các sản phẩm giấy ngành in, giấy chống ẩm, giấy gói giày, giấy gói thực phẩm…tới các đối tác,công ty ,các doanh nghiệp lớn nhỏ và người tiêu dùng trên cả nước và xuất khẩu.</p>
+<a class="button primary lowercase" style="border-radius:99px;">
+    <span>Xem thêm</span>
+  </a>
+
+<a href="tel:0528878668" target="_self" class="button secondary is-outline" style="border-radius:99px;">
+    <span>Hotline : 0528878668</span>
+  </a>
+
+		</div>
+					</div>
+
+	
+
+<style>
+#row-1025447996 > .col > .col-inner {
+  padding: 45px 0px 0px 0px;
+}
+</style>
+</div>
+		</div>
+
+		
+<style>
+#section_2005135122 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgb(242, 242, 242);
+}
+#section_2005135122 .ux-shape-divider--top svg {
+  height: 150px;
+  --divider-top-width: 100%;
+}
+#section_2005135122 .ux-shape-divider--bottom svg {
+  height: 150px;
+  --divider-width: 100%;
+}
+</style>
+	</section>
+	
+	<section class="section" id="section_2018608649">
+		<div class="bg section-bg fill bg-fill  bg-loaded">
+
+			
+			
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+<div class="row" style="max-width:1200px" id="row-515126695">
+
+	<div id="col-1027910999" class="col small-12 large-12">
+				<div class="col-inner">
+			
+			
+	<div id="text-3698599264" class="text hidden">
+		
+<h6>CÔNG TY TNHH ĐÓNG GÓI ARUNA VIỆT NAM</h6>
+		
+<style>
+#text-3698599264 {
+  font-size: 1.1rem;
+  text-align: center;
+}
+</style>
+	</div>
+	
+	<div id="text-1666441260" class="text">
+		
+<h1>Cảm ơn bạn <span style="color: #be386b;">đã chọn Aruna Việt Nam!</span></h1>
+		
+<style>
+#text-1666441260 {
+  font-size: 1.75rem;
+  text-align: center;
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+</div>
+<div class="row row-large" style="max-width:1200px" id="row-1491638679">
+
+	<div id="col-854099152" class="col medium-10 small-12 large-6">
+				<div class="col-inner">
+			
+			
+
+		<div class="icon-box featured-box icon-box-left text-left">
+					<div class="icon-box-img" style="width: 69px">
+				<div class="icon">
+					<div class="icon-inner" style="color:rgb(190, 56, 107);">
+						<!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 297 297"><g><path d="m157.235,86.839v-46.862c0-4.824-3.911-8.735-8.735-8.735s-8.735,3.911-8.735,8.735v43.244l-13.063,13.062c-3.411,3.411-3.411,8.943 0,12.354 1.706,1.705 3.941,2.558 6.177,2.558 2.236,0 4.471-0.853 6.177-2.558l15.621-15.621c1.638-1.639 2.558-3.861 2.558-6.177z"></path><path d="m266.827,229.639v-18.464c0-4.824-3.911-8.735-8.735-8.735h-100.857v-29.201c43.797-4.395 78.104-41.465 78.104-86.4 0-47.883-38.955-86.839-86.839-86.839s-86.839,38.956-86.839,86.839c0,44.935 34.307,82.005 78.104,86.4v29.201h-100.857c-4.824,0-8.735,3.911-8.735,8.735v18.464c-14.939,3.651-26.062,17.143-26.062,33.19 0,18.841 15.329,34.17 34.17,34.17s34.17-15.329 34.17-34.17c0-15.595-10.505-28.774-24.808-32.856v-10.063h92.121v9.884c-14.623,3.87-25.435,17.212-25.435,33.034 0,18.841 15.329,34.17 34.17,34.17s34.17-15.329 34.17-34.17c0-15.823-10.812-29.164-25.435-33.034v-9.884h92.121v10.063c-14.302,4.082-24.808,17.261-24.808,32.856 0,18.841 15.329,34.17 34.17,34.17s34.17-15.329 34.17-34.17c0.002-16.047-11.121-29.539-26.06-33.19zm-187.696-142.8c0-38.25 31.118-69.369 69.369-69.369s69.369,31.118 69.369,69.369-31.118,69.369-69.369,69.369-69.369-31.119-69.369-69.369zm-24.15,175.991c0,9.208-7.492,16.7-16.7,16.7s-16.7-7.492-16.7-16.7c0-9.208 7.492-16.7 16.7-16.7s16.7,7.492 16.7,16.7zm110.219,0c0,9.208-7.492,16.7-16.7,16.7s-16.7-7.492-16.7-16.7c0-9.208 7.492-16.7 16.7-16.7s16.7,7.492 16.7,16.7zm93.519,16.699c-9.208,0-16.7-7.492-16.7-16.7 0-9.208 7.492-16.7 16.7-16.7 9.208,0 16.7,7.492 16.7,16.7 0,9.209-7.492,16.7-16.7,16.7z"></path></g></svg> 					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+<h3>Kinh Nghiệm Lâu Năm</h3>
+<p>Ra đời từ năm 2006, Aruna.vn đã khẳng định được thương hiệu và uy tín trên thị trường trong nước và quốc tế</p>
+		</div>
+	</div>
+	
+	
+	<div id="gap-1745467002" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1745467002 {
+  padding-top: 30px;
+}
+</style>
+	</div>
+	
+
+		<div class="icon-box featured-box icon-box-left text-left">
+					<div class="icon-box-img" style="width: 69px">
+				<div class="icon">
+					<div class="icon-inner" style="color:rgb(190, 56, 107);">
+						<!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 470 470"><g><path d="m429.591,418.378l-62.223-150.218c-1.585-3.826-5.972-5.645-9.799-4.059s-5.645,5.973-4.059,9.799l56.251,135.801-51.309-14.867c-3.368-0.977-6.965,0.513-8.656,3.586l-25.769,46.793-60.357-145.716c69.663-13.434 122.447-74.853 122.447-148.378 0.001-83.327-67.79-151.119-151.117-151.119s-151.119,67.792-151.119,151.119c0,33.751 11.124,64.951 29.896,90.133l-73.368,177.126c-1.103,2.664-0.582,5.724 1.341,7.872 1.922,2.148 4.907,3.004 7.676,2.202l60.533-17.541 30.4,55.207c1.324,2.403 3.847,3.882 6.568,3.882 0.138,0 0.277-0.004 0.416-0.011 2.879-0.16 5.411-1.955 6.515-4.619l58.136-140.353c1.585-3.827-0.232-8.214-4.059-9.799-3.827-1.585-8.214,0.232-9.799,4.059l-52.165,125.936-25.767-46.793c-1.692-3.073-5.291-4.563-8.657-3.586l-51.308,14.867 64.397-155.469c27.598,29.52 66.86,48.005 110.364,48.005 4.491,0 8.933-0.209 13.325-0.594l67.818,163.727c1.103,2.664 3.636,4.459 6.514,4.618 0.14,0.008 0.278,0.012 0.417,0.012 2.721,0 5.244-1.479 6.567-3.882l30.401-55.207 60.533,17.541c2.771,0.803 5.753-0.054 7.676-2.202 1.923-2.148 2.443-5.208 1.34-7.872zm-330.71-267.259c2.84217e-14-75.056 61.063-136.119 136.119-136.119 75.056,0 136.118,61.063 136.118,136.119s-61.062,136.118-136.118,136.118c-75.056,0-136.119-61.062-136.119-136.118z"></path><path d="m321.659,122.961c-0.863-2.658-3.135-4.616-5.892-5.079l-50.467-8.469-23.649-45.379c-1.292-2.479-3.855-4.034-6.651-4.034-2.795,0-5.359,1.555-6.651,4.034l-23.65,45.379-50.466,8.469c-2.757,0.462-5.028,2.42-5.892,5.079-0.864,2.659-0.178,5.577 1.781,7.572l35.85,36.515-7.54,50.614c-0.412,2.765 0.748,5.529 3.01,7.173 2.26,1.642 5.249,1.891 7.751,0.646l45.807-22.812 45.806,22.812c1.059,0.527 2.203,0.787 3.343,0.787 1.557,0 3.104-0.484 4.409-1.432 2.262-1.644 3.422-4.408 3.01-7.173l-7.539-50.614 35.85-36.516c1.958-1.995 2.644-4.913 1.78-7.572zm-50.951,36.244c-1.648,1.679-2.413,4.033-2.066,6.359l5.97,40.074-36.268-18.061c-1.054-0.524-2.198-0.787-3.344-0.787-1.145,0-2.291,0.262-3.343,0.787l-36.268,18.061 5.97-40.074c0.347-2.326-0.418-4.681-2.066-6.359l-28.385-28.912 39.957-6.706c2.32-0.389 4.323-1.844 5.41-3.93l18.725-35.929 18.725,35.93c1.088,2.086 3.09,3.541 5.41,3.93l39.958,6.706-28.385,28.911z"></path><path d="m348.612,158.684c-4.107-0.549-7.877,2.343-8.42,6.45-6.957,52.507-52.18,92.104-105.192,92.104-58.514,0-106.119-47.604-106.119-106.119s47.605-106.119 106.119-106.119c53.013,0 98.235,39.596 105.192,92.104 0.543,4.107 4.32,7.001 8.42,6.45 4.105-0.544 6.994-4.314 6.449-8.42-7.94-59.936-59.555-105.134-120.061-105.134-66.785,0-121.119,54.333-121.119,121.119s54.334,121.118 121.119,121.118c60.506,0 112.121-45.198 120.062-105.134 0.544-4.105-2.344-7.875-6.45-8.419z"></path></g></svg> 					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+<h3>Cam Kết Chất Lượng</h3>
+<p>Chúng tôi cam kết những dịch vụ của chúng tôi cung cấp đạt tiêu chuẩn chất lượng cao.</p>
+		</div>
+	</div>
+	
+	
+	<div id="gap-636182991" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-636182991 {
+  padding-top: 30px;
+}
+</style>
+	</div>
+	
+
+		<div class="icon-box featured-box icon-box-left text-left">
+					<div class="icon-box-img" style="width: 69px">
+				<div class="icon">
+					<div class="icon-inner" style="color:rgb(190, 56, 107);">
+						<!--?xml version="1.0" encoding="UTF-8"?--> <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 360 360" style="enable-background:new 0 0 360 360;" xml:space="preserve"> <g id="XMLID_532_"> <g> <g> <path d="M180,0C80.748,0,0,80.748,0,180s80.748,180,180,180s180-80.748,180-180S279.252,0,180,0z M180,340 c-88.224,0-160-71.775-160-160S91.776,20,180,20s160,71.775,160,160S268.224,340,180,340z"></path> <path d="M256.887,83.22l-94.565,94.564l-59.209-59.209l-49.497,49.498L162.322,276.78l144.062-144.062L256.887,83.22z M81.9,168.073l21.213-21.213l59.209,59.208l94.565-94.563l21.213,21.213L162.322,248.495L81.9,168.073z"></path> </g> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg> 					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+<h3>Luôn Được Tín Nhiệm</h3>
+<p>Hàng nghìn khách hàng của chúng tôi đã hài lòng với chất lượng dịch và luôn tín nhiệm thương hiệu Aruna.vn.</p>
+		</div>
+	</div>
+	
+	
+	<div id="gap-116926727" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-116926727 {
+  padding-top: 30px;
+}
+</style>
+	</div>
+	
+		</div>
+				
+<style>
+#col-854099152 > .col-inner {
+  padding: 0px 0 0px 0px;
+}
+@media (min-width:850px) {
+  #col-854099152 > .col-inner {
+    padding: 0px 40px 0px 0px;
+  }
+}
+</style>
+	</div>
+
+	
+
+	<div id="col-1550465106" class="col medium-10 small-12 large-6">
+				<div class="col-inner">
+			
+			
+
+		<div class="icon-box featured-box icon-box-left text-left">
+					<div class="icon-box-img" style="width: 69px">
+				<div class="icon">
+					<div class="icon-inner" style="color:rgb(190, 56, 107);">
+						<!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" id="_24x24_On_Light_Support" data-name="24x24/On Light/Support"><rect id="view-box" width="24" height="24" fill="none"></rect><path id="Shape" d="M8,17.751a2.749,2.749,0,0,1,5.127-1.382C15.217,15.447,16,14,16,11.25v-3c0-3.992-2.251-6.75-5.75-6.75S4.5,4.259,4.5,8.25v3.5a.751.751,0,0,1-.75.75h-1A2.753,2.753,0,0,1,0,9.751v-1A2.754,2.754,0,0,1,2.75,6h.478c.757-3.571,3.348-6,7.022-6s6.264,2.429,7.021,6h.478a2.754,2.754,0,0,1,2.75,2.75v1a2.753,2.753,0,0,1-2.75,2.75H17.44A5.85,5.85,0,0,1,13.5,17.84,2.75,2.75,0,0,1,8,17.751Zm1.5,0a1.25,1.25,0,1,0,1.25-1.25A1.251,1.251,0,0,0,9.5,17.751Zm8-6.75h.249A1.251,1.251,0,0,0,19,9.751v-1A1.251,1.251,0,0,0,17.75,7.5H17.5Zm-16-2.25v1A1.251,1.251,0,0,0,2.75,11H3V7.5H2.75A1.251,1.251,0,0,0,1.5,8.751Z" transform="translate(1.75 2.25)" fill="#141124"></path></svg> 					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+<h3>Tư Vấn Tận Tâm</h3>
+<p>Với phương châm: Tận tâm phục vụ. Chúng tôi hỗ trợ online/offline một cách nhiệt tình và tận tâm</p>
+		</div>
+	</div>
+	
+	
+	<div id="gap-1201081516" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1201081516 {
+  padding-top: 30px;
+}
+</style>
+	</div>
+	
+
+		<div class="icon-box featured-box icon-box-left text-left">
+					<div class="icon-box-img" style="width: 69px">
+				<div class="icon">
+					<div class="icon-inner" style="color:rgb(190, 56, 107);">
+						<!--?xml version="1.0" encoding="UTF-8"?--> <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 490.2 490.2" style="enable-background:new 0 0 490.2 490.2;" xml:space="preserve"> <g> <path d="M490.1,234.464c0-37.6-30.6-68.3-68.3-68.3H316.2v-76.1c0-32.2-9.4-55.4-28-69c-29.4-21.6-69.8-9.3-71.5-8.7 c-5.1,1.6-8.6,6.3-8.6,11.7v85.5c0,67.3-78.1,90.2-81.4,91.2c-1,0.3-1.9,0.6-2.7,1.1c-5.8-11.6-17.8-19.6-31.6-19.6H35.2 c-19.4,0-35.2,15.8-35.2,35.2v207.9c0,19.4,15.8,35.2,35.2,35.2h33.1c6.8,0,12.3-5.5,12.3-12.3s-5.6-12.2-12.3-12.2H35.2 c-5.9,0-10.7-4.8-10.7-10.7v-207.9c0-5.9,4.8-10.7,10.7-10.7h57.3c5.9,0,10.7,4.8,10.7,10.7v196.1c0,37.6,30.6,68.3,68.3,68.3 h209.2c46.4,0,75.9-24.3,81.1-66.3l28.2-177c0.1-0.6,0.2-1.3,0.2-1.9v-2.2H490.1z M465.6,235.564l-28.1,176.5 c-3.7,30-22.8,45.3-56.8,45.3h-7.8H171.5c-24.1,0-43.8-19.6-43.8-43.8v-189.1c1.8,0.4,3.7,0.3,5.6-0.2 c4.1-1.1,99.3-28.7,99.3-114.8v-75.6c10.4-1.6,28.2-2.5,41.1,6.9c11.9,8.8,18,25.3,18,49.3v88.4c0,6.8,5.5,12.3,12.3,12.3h117.9 c24.1,0,43.8,19.6,43.8,43.8v1H465.6z"></path> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg> 					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+<h3>Chuyên Nghiệp</h3>
+<p>Đội ngũ nhân viên yêu nghề, giàu kinh nghiệm, luôn cam kết đem lại sự hài lòng cho Quý khách hàng.</p>
+		</div>
+	</div>
+	
+	
+	<div id="gap-1649378269" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1649378269 {
+  padding-top: 30px;
+}
+</style>
+	</div>
+	
+
+		<div class="icon-box featured-box icon-box-left text-left">
+					<div class="icon-box-img" style="width: 69px">
+				<div class="icon">
+					<div class="icon-inner" style="color:rgb(190, 56, 107);">
+						<!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 512 512"><g><g><g><path d="m473.6,256.6c0-99.3-67.1-185.9-163.3-210.6-9.2-2.4-18.6,3.2-20.9,12.4-2.4,9.2 3.2,18.6 12.4,20.9 80.9,20.7 137.4,93.7 137.4,177.3 0,73.7-43.9,139-109.6,167.7l15.9-37c3.7-8.7-0.3-18.8-9-22.6-8.7-3.7-18.8,0.3-22.6,9l-31,72.2c-3.7,8.7 0.3,18.8 9,22.6l72.2,31c10.8,3.8 19.8-2.5 22.6-9 3.7-8.7-0.3-18.8-9-22.6l-31.4-13.5c76.5-34.6 127.3-111.4 127.3-197.8z"></path><path d="m210.4,433.9c-80.9-20.8-137.4-93.7-137.4-177.3 0-72.7 42.7-137.2 106.9-166.5l-14.9,34.6c-3.7,8.7 0.1,19.2 9,22.6 10.4,3.9 19.2-0.8 22.6-9l31-72.3c3-7 2.9-17.5-9-22.6l-72.2-31c-8.7-3.7-18.8,0.3-22.6,9-3.7,8.7 0.3,18.8 9,22.6l33.6,14.4c-76.8,34.7-127.8,111.6-127.8,198.2 7.10543e-15,99.3 67.2,185.8 163.3,210.6 11.6,3 18.9-4.6 20.9-12.4 2.3-9.2-3.2-18.5-12.4-20.9z"></path><path d="m296.6,321.4c8.8-9.2 13.2-20.8 13.2-34.6 0-6.3-1.1-12.1-3.2-17.5-2.1-5.4-5.1-10-9-14-3.9-3.9-9-7.2-15.2-10-3.3-1.4-9.9-3.4-20-5.9v-57.4c6.5,1.3 11.6,4.1 15.4,8.3 3.7,4.2 6.2,10.2 7.4,18l20.6-3.1c-1.8-12.6-7-22.6-15.7-29.8-6.8-5.7-16-9.1-27.6-10.2v-9.5h-11.8v9.5c-13.2,1.3-23.2,5-29.9,10.9-10.1,8.8-15.1,20.3-15.1,34.5 0,8 1.7,15.1 5.2,21.4 3.4,6.3 8.3,11.2 14.7,14.7 8.6,4.8 17,8 25.2,9.5v63.5c-7.8-0.8-14.6-4.8-20.2-11.9-3.9-5-6.7-12.9-8.2-23.6l-20.1,3.8c0.7,10.3 3.4,19.1 7.9,26.3 4.5,7.2 9.9,12.4 16.2,15.6 6.2,3.2 14.4,5.4 24.3,6.7v19.9h11.8v-20.2c14-0.7 25.4-5.7 34.1-14.9zm-45.8-84.5c-9.1-2.7-15.5-6.4-19.3-11-3.8-4.6-5.7-10.3-5.7-17.1 0-6.9 2.2-12.8 6.7-17.8 4.5-5 10.6-8.1 18.3-9.3v55.2zm30.9,72.6c-5.1,5.8-11.5,9.1-19.2,10.1v-60.7c10.7,3.5 17.9,7.4 21.5,11.8 3.6,4.4 5.4,10.2 5.4,17.5-0.1,8.4-2.6,15.6-7.7,21.3z"></path></g></g></g></svg> 					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+<h3>Giá Cả Cạnh Tranh</h3>
+<p>Chúng tôi cam kết những dịch vụ của chúng tôi có giá hợp lý và mang lại nhiều giá trị cho khách hàng.</p>
+		</div>
+	</div>
+	
+	
+	<div id="gap-1743361915" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1743361915 {
+  padding-top: 30px;
+}
+</style>
+	</div>
+	
+		</div>
+				
+<style>
+#col-1550465106 > .col-inner {
+  padding: 0px 0 0px 0px;
+}
+@media (min-width:850px) {
+  #col-1550465106 > .col-inner {
+    padding: 0px 40px 0px 0px;
+  }
+}
+</style>
+	</div>
+
+	
+</div>
+		</div>
+
+		
+<style>
+#section_2018608649 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+}
+#section_2018608649 .ux-shape-divider--top svg {
+  height: 150px;
+  --divider-top-width: 100%;
+}
+#section_2018608649 .ux-shape-divider--bottom svg {
+  height: 150px;
+  --divider-width: 100%;
+}
+@media (min-width:550px) {
+  #section_2018608649 {
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+}
+</style>
+	</section>
+	
+
+  <div class="banner has-hover" id="banner-522513908">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill">
+            <div class="bg fill bg-fill "></div>
+                                    
+                    </div>
+		
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+   <div id="text-box-2023456300" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                                <div class="text-box-content text dark">
+              
+              <div class="text-inner text-center">
+                  
+              </div>
+           </div>
+                            
+<style>
+#text-box-2023456300 {
+  width: 60%;
+}
+#text-box-2023456300 .text-box-content {
+  font-size: 100%;
+}
+@media (min-width:550px) {
+  #text-box-2023456300 {
+    width: 60%;
+  }
+}
+</style>
+    </div>
+ 
+        </div>
+      </div>
+
+            
+<style>
+#banner-522513908 {
+  padding-top: 500px;
+}
+#banner-522513908 .bg.bg-loaded {
+  background-image: url(https://aruna.vn/wp-content/uploads/2021/11/mang-pe-1024x427.jpg);
+}
+#banner-522513908 .ux-shape-divider--top svg {
+  height: 150px;
+  --divider-top-width: 100%;
+}
+#banner-522513908 .ux-shape-divider--bottom svg {
+  height: 150px;
+  --divider-width: 100%;
+}
+</style>
+  </div>
+
+
+	<section class="section" id="section_728389148">
+		<div class="bg section-bg fill bg-fill  bg-loaded">
+
+			
+			
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+	<div id="gap-345898168" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-345898168 {
+  padding-top: 30px;
+}
+</style>
+	</div>
+	
+<div class="row" id="row-2130212659">
+
+	<div id="col-1879527826" class="col small-12 large-12">
+				<div class="col-inner text-center">
+			
+			
+	<div id="text-1899667970" class="text">
+		
+<h2>Khách hàng nói về <span style="color: #be386b;"> Aruna</span></h2>
+		
+<style>
+#text-1899667970 {
+  font-size: 1.75rem;
+  text-align: center;
+}
+</style>
+	</div>
+	
+<p>Sự hài lòng của quý khách là thành công của Aruna</p>
+		</div>
+					</div>
+
+	
+</div>
+<div class="row align-equal" id="row-1557886937">
+
+	<div id="col-1711615198" class="col medium-6 small-12 large-4">
+				<div class="col-inner">
+			
+			
+  <div class="icon-box testimonial-box icon-box-center text-center">
+                <div class="icon-box-img testimonial-image circle" style="width: 80px">
+                      </div>
+                <div class="icon-box-text p-last-0">
+          <div class="star-rating"><span style="width:100%"><strong class="rating"></strong></span></div>  				<div class="testimonial-text line-height-small italic test_text first-reset last-reset is-italic">
+            
+	<div id="gap-538723046" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-538723046 {
+  padding-top: 10px;
+}
+</style>
+	</div>
+	
+<p style="font-style: normal;">Tuyệt vời là điều chúng tôi có thể nói lúc này ! Tôi đã có quyết định đúng đắn khi tìm đến Công ty Aruna, với chất lượng như thế, tôi tin công ty sẽ sớm đạt được nhiều thành công hơn nữa !</p>
+          </div>
+          <div class="testimonial-meta pt-half">
+             <strong class="testimonial-name test_name">Ngọc Minh</strong>
+             <span class="testimonial-name-divider"> / </span>             <span class="testimonial-company test_company">Giám đốc</span>
+          </div>
+        </div>
+  </div>
+
+  
+		</div>
+					</div>
+
+	
+
+	<div id="col-617379657" class="col medium-6 small-12 large-4">
+				<div class="col-inner">
+			
+			
+  <div class="icon-box testimonial-box icon-box-center text-center">
+                <div class="icon-box-img testimonial-image circle" style="width: 80px">
+                      </div>
+                <div class="icon-box-text p-last-0">
+          <div class="star-rating"><span style="width:100%"><strong class="rating"></strong></span></div>  				<div class="testimonial-text line-height-small italic test_text first-reset last-reset is-italic">
+            
+	<div id="gap-1670862098" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1670862098 {
+  padding-top: 10px;
+}
+</style>
+	</div>
+	
+<p style="font-style: normal;">Daichu thường có những dự án cần thời gian gấp và nhanh về tiến độ .Công ty chúng tôi hay sử dụng sản phẩm của Aruna. Chất lượng sản phẩm và thời gian phục vụ của Aruna khá là tốt.</p>
+          </div>
+          <div class="testimonial-meta pt-half">
+             <strong class="testimonial-name test_name">Hoàng</strong>
+             <span class="testimonial-name-divider"> / </span>             <span class="testimonial-company test_company">Cty Daichu</span>
+          </div>
+        </div>
+  </div>
+
+  
+		</div>
+					</div>
+
+	
+
+	<div id="col-171509459" class="col medium-6 small-12 large-4">
+				<div class="col-inner">
+			
+			
+  <div class="icon-box testimonial-box icon-box-center text-center">
+                <div class="icon-box-img testimonial-image circle" style="width: 80px">
+                      </div>
+                <div class="icon-box-text p-last-0">
+          <div class="star-rating"><span style="width:100%"><strong class="rating"></strong></span></div>  				<div class="testimonial-text line-height-small italic test_text first-reset last-reset is-italic">
+            
+	<div id="gap-1630439498" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1630439498 {
+  padding-top: 10px;
+}
+</style>
+	</div>
+	
+<p style="font-style: normal;">Aruna là một đối tác luôn thiện chí, luôn sẵn sàng lắng nghe khách hàng. Minh Long luôn phát triển các mã màu mới độc đáo. Chúng tôi rất mong muốn có những xu hướng mới trong thị trường</p>
+          </div>
+          <div class="testimonial-meta pt-half">
+             <strong class="testimonial-name test_name">Hoàng Liên</strong>
+             <span class="testimonial-name-divider"> / </span>             <span class="testimonial-company test_company">Giám đốc</span>
+          </div>
+        </div>
+  </div>
+
+  
+		</div>
+					</div>
+
+	
+
+<style>
+#row-1557886937 > .col > .col-inner {
+  padding: 25px 25px 25px 25px;
+  background-color: rgb(255,255,255);
+}
+</style>
+</div>
+		</div>
+
+		
+<style>
+#section_728389148 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: rgb(246, 246, 246);
+}
+#section_728389148 .ux-shape-divider--top svg {
+  height: 150px;
+  --divider-top-width: 100%;
+}
+#section_728389148 .ux-shape-divider--bottom svg {
+  height: 150px;
+  --divider-width: 100%;
+}
+</style>
+	</section>
+	
+	<section class="section" id="section_1214507737">
+		<div class="bg section-bg fill bg-fill  bg-loaded">
+
+			
+			
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+<div class="row align-center" id="row-582364536">
+
+	<div id="col-1835689981" class="col medium-8 small-11 large-6">
+				<div class="col-inner text-center">
+			
+			
+	<div id="gap-1159556204" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1159556204 {
+  padding-top: 30px;
+}
+</style>
+	</div>
+	
+	<div id="text-863699549" class="text">
+		
+<h2>Đối tác của <span style="color: #be386b;">Aruna.</span></h2>
+		
+<style>
+#text-863699549 {
+  font-size: 1.7rem;
+  line-height: 0.75;
+}
+</style>
+	</div>
+	
+<p>Cảm ơn hơn 100 đối tác uy tín đã đồng hành cùng chúng tôi</p>
+		</div>
+					</div>
+
+	
+</div>
+<div class="row align-center" id="row-770985708">
+
+	<div id="col-291733183" class="col medium-4 small-6 large-4">
+				<div class="col-inner text-center">
+			
+			
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1698951555">
+								<div class="img-inner dark">
+			<img decoding="async" width="843" height="596" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20843%20596'%3E%3C/svg%3E" class="attachment-large size-large" alt="" data-lazy-srcset="https://aruna.vn/wp-content/uploads/2021/12/logo-nike-inkythuatso-2-01-04-15-42-44.jpg 843w, https://aruna.vn/wp-content/uploads/2021/12/logo-nike-inkythuatso-2-01-04-15-42-44-300x212.jpg 300w, https://aruna.vn/wp-content/uploads/2021/12/logo-nike-inkythuatso-2-01-04-15-42-44-768x543.jpg 768w, https://aruna.vn/wp-content/uploads/2021/12/logo-nike-inkythuatso-2-01-04-15-42-44-510x361.jpg 510w" data-lazy-sizes="(max-width: 843px) 100vw, 843px" data-lazy-src="https://aruna.vn/wp-content/uploads/2021/12/logo-nike-inkythuatso-2-01-04-15-42-44.jpg"><noscript><img decoding="async" width="843" height="596" src="https://aruna.vn/wp-content/uploads/2021/12/logo-nike-inkythuatso-2-01-04-15-42-44.jpg" class="attachment-large size-large" alt="" srcset="https://aruna.vn/wp-content/uploads/2021/12/logo-nike-inkythuatso-2-01-04-15-42-44.jpg 843w, https://aruna.vn/wp-content/uploads/2021/12/logo-nike-inkythuatso-2-01-04-15-42-44-300x212.jpg 300w, https://aruna.vn/wp-content/uploads/2021/12/logo-nike-inkythuatso-2-01-04-15-42-44-768x543.jpg 768w, https://aruna.vn/wp-content/uploads/2021/12/logo-nike-inkythuatso-2-01-04-15-42-44-510x361.jpg 510w" sizes="(max-width: 843px) 100vw, 843px" /></noscript>						
+					</div>
+								
+<style>
+#image_1698951555 {
+  width: 100%;
+}
+@media (min-width:550px) {
+  #image_1698951555 {
+    width: 50%;
+  }
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-1393343743" class="col medium-4 small-6 large-4">
+				<div class="col-inner text-center">
+			
+			
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_2112863746">
+								<div class="img-inner dark">
+			<img decoding="async" width="730" height="365" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20730%20365'%3E%3C/svg%3E" class="attachment-large size-large" alt="" data-lazy-srcset="https://aruna.vn/wp-content/uploads/2021/12/logo-thuong-hieu-puma-elle-man-7.jpg 730w, https://aruna.vn/wp-content/uploads/2021/12/logo-thuong-hieu-puma-elle-man-7-300x150.jpg 300w, https://aruna.vn/wp-content/uploads/2021/12/logo-thuong-hieu-puma-elle-man-7-510x255.jpg 510w" data-lazy-sizes="(max-width: 730px) 100vw, 730px" data-lazy-src="https://aruna.vn/wp-content/uploads/2021/12/logo-thuong-hieu-puma-elle-man-7.jpg"><noscript><img decoding="async" width="730" height="365" src="https://aruna.vn/wp-content/uploads/2021/12/logo-thuong-hieu-puma-elle-man-7.jpg" class="attachment-large size-large" alt="" srcset="https://aruna.vn/wp-content/uploads/2021/12/logo-thuong-hieu-puma-elle-man-7.jpg 730w, https://aruna.vn/wp-content/uploads/2021/12/logo-thuong-hieu-puma-elle-man-7-300x150.jpg 300w, https://aruna.vn/wp-content/uploads/2021/12/logo-thuong-hieu-puma-elle-man-7-510x255.jpg 510w" sizes="(max-width: 730px) 100vw, 730px" /></noscript>						
+					</div>
+								
+<style>
+#image_2112863746 {
+  width: 100%;
+}
+@media (min-width:550px) {
+  #image_2112863746 {
+    width: 50%;
+  }
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-2080576066" class="col medium-4 small-6 large-4">
+				<div class="col-inner text-center">
+			
+			
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_343983808">
+								<div class="img-inner dark">
+			<img decoding="async" width="800" height="600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20600'%3E%3C/svg%3E" class="attachment-large size-large" alt="" data-lazy-srcset="https://aruna.vn/wp-content/uploads/2021/12/logo-adidas-vector-inkythuatso-01-29-09-08-58.jpg 800w, https://aruna.vn/wp-content/uploads/2021/12/logo-adidas-vector-inkythuatso-01-29-09-08-58-300x225.jpg 300w, https://aruna.vn/wp-content/uploads/2021/12/logo-adidas-vector-inkythuatso-01-29-09-08-58-768x576.jpg 768w, https://aruna.vn/wp-content/uploads/2021/12/logo-adidas-vector-inkythuatso-01-29-09-08-58-510x383.jpg 510w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://aruna.vn/wp-content/uploads/2021/12/logo-adidas-vector-inkythuatso-01-29-09-08-58.jpg"><noscript><img decoding="async" width="800" height="600" src="https://aruna.vn/wp-content/uploads/2021/12/logo-adidas-vector-inkythuatso-01-29-09-08-58.jpg" class="attachment-large size-large" alt="" srcset="https://aruna.vn/wp-content/uploads/2021/12/logo-adidas-vector-inkythuatso-01-29-09-08-58.jpg 800w, https://aruna.vn/wp-content/uploads/2021/12/logo-adidas-vector-inkythuatso-01-29-09-08-58-300x225.jpg 300w, https://aruna.vn/wp-content/uploads/2021/12/logo-adidas-vector-inkythuatso-01-29-09-08-58-768x576.jpg 768w, https://aruna.vn/wp-content/uploads/2021/12/logo-adidas-vector-inkythuatso-01-29-09-08-58-510x383.jpg 510w" sizes="(max-width: 800px) 100vw, 800px" /></noscript>						
+					</div>
+								
+<style>
+#image_343983808 {
+  width: 100%;
+}
+@media (min-width:550px) {
+  #image_343983808 {
+    width: 59%;
+  }
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-336377622" class="col medium-4 small-6 large-4">
+				<div class="col-inner text-center">
+			
+			
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_180269538">
+								<div class="img-inner dark">
+			<img decoding="async" width="550" height="364" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20550%20364'%3E%3C/svg%3E" class="attachment-large size-large" alt="" data-lazy-srcset="https://aruna.vn/wp-content/uploads/2021/12/logo-cac-thuong-hieu-thoi-trang-noi-tieng-the-gioi.jpg 550w, https://aruna.vn/wp-content/uploads/2021/12/logo-cac-thuong-hieu-thoi-trang-noi-tieng-the-gioi-300x199.jpg 300w, https://aruna.vn/wp-content/uploads/2021/12/logo-cac-thuong-hieu-thoi-trang-noi-tieng-the-gioi-510x338.jpg 510w" data-lazy-sizes="(max-width: 550px) 100vw, 550px" data-lazy-src="https://aruna.vn/wp-content/uploads/2021/12/logo-cac-thuong-hieu-thoi-trang-noi-tieng-the-gioi.jpg"><noscript><img decoding="async" width="550" height="364" src="https://aruna.vn/wp-content/uploads/2021/12/logo-cac-thuong-hieu-thoi-trang-noi-tieng-the-gioi.jpg" class="attachment-large size-large" alt="" srcset="https://aruna.vn/wp-content/uploads/2021/12/logo-cac-thuong-hieu-thoi-trang-noi-tieng-the-gioi.jpg 550w, https://aruna.vn/wp-content/uploads/2021/12/logo-cac-thuong-hieu-thoi-trang-noi-tieng-the-gioi-300x199.jpg 300w, https://aruna.vn/wp-content/uploads/2021/12/logo-cac-thuong-hieu-thoi-trang-noi-tieng-the-gioi-510x338.jpg 510w" sizes="(max-width: 550px) 100vw, 550px" /></noscript>						
+					</div>
+								
+<style>
+#image_180269538 {
+  width: 100%;
+}
+@media (min-width:550px) {
+  #image_180269538 {
+    width: 47%;
+  }
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-459953253" class="col medium-4 small-6 large-4">
+				<div class="col-inner text-center">
+			
+			
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1826535945">
+								<div class="img-inner dark">
+			<img decoding="async" width="800" height="534" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20534'%3E%3C/svg%3E" class="attachment-large size-large" alt="" data-lazy-srcset="https://aruna.vn/wp-content/uploads/2021/12/mau-logo-thuong-hieu-thoi-trang-2.jpg 800w, https://aruna.vn/wp-content/uploads/2021/12/mau-logo-thuong-hieu-thoi-trang-2-300x200.jpg 300w, https://aruna.vn/wp-content/uploads/2021/12/mau-logo-thuong-hieu-thoi-trang-2-768x513.jpg 768w, https://aruna.vn/wp-content/uploads/2021/12/mau-logo-thuong-hieu-thoi-trang-2-510x340.jpg 510w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://aruna.vn/wp-content/uploads/2021/12/mau-logo-thuong-hieu-thoi-trang-2.jpg"><noscript><img decoding="async" width="800" height="534" src="https://aruna.vn/wp-content/uploads/2021/12/mau-logo-thuong-hieu-thoi-trang-2.jpg" class="attachment-large size-large" alt="" srcset="https://aruna.vn/wp-content/uploads/2021/12/mau-logo-thuong-hieu-thoi-trang-2.jpg 800w, https://aruna.vn/wp-content/uploads/2021/12/mau-logo-thuong-hieu-thoi-trang-2-300x200.jpg 300w, https://aruna.vn/wp-content/uploads/2021/12/mau-logo-thuong-hieu-thoi-trang-2-768x513.jpg 768w, https://aruna.vn/wp-content/uploads/2021/12/mau-logo-thuong-hieu-thoi-trang-2-510x340.jpg 510w" sizes="(max-width: 800px) 100vw, 800px" /></noscript>						
+					</div>
+								
+<style>
+#image_1826535945 {
+  width: 100%;
+}
+@media (min-width:550px) {
+  #image_1826535945 {
+    width: 58%;
+  }
+}
+</style>
+	</div>
+	
+		</div>
+				
+<style>
+#col-459953253 > .col-inner {
+  margin: 0px 0px 0 0px;
+}
+</style>
+	</div>
+
+	
+
+	<div id="col-1979750207" class="col medium-4 small-6 large-4">
+				<div class="col-inner text-center">
+			
+			
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_346505520">
+								<div class="img-inner dark">
+			<img decoding="async" width="905" height="368" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20905%20368'%3E%3C/svg%3E" class="attachment-large size-large" alt="" data-lazy-srcset="https://aruna.vn/wp-content/uploads/2021/12/logo-thoi-trang-DG.jpg 905w, https://aruna.vn/wp-content/uploads/2021/12/logo-thoi-trang-DG-300x122.jpg 300w, https://aruna.vn/wp-content/uploads/2021/12/logo-thoi-trang-DG-768x312.jpg 768w, https://aruna.vn/wp-content/uploads/2021/12/logo-thoi-trang-DG-510x207.jpg 510w" data-lazy-sizes="(max-width: 905px) 100vw, 905px" data-lazy-src="https://aruna.vn/wp-content/uploads/2021/12/logo-thoi-trang-DG.jpg"><noscript><img decoding="async" width="905" height="368" src="https://aruna.vn/wp-content/uploads/2021/12/logo-thoi-trang-DG.jpg" class="attachment-large size-large" alt="" srcset="https://aruna.vn/wp-content/uploads/2021/12/logo-thoi-trang-DG.jpg 905w, https://aruna.vn/wp-content/uploads/2021/12/logo-thoi-trang-DG-300x122.jpg 300w, https://aruna.vn/wp-content/uploads/2021/12/logo-thoi-trang-DG-768x312.jpg 768w, https://aruna.vn/wp-content/uploads/2021/12/logo-thoi-trang-DG-510x207.jpg 510w" sizes="(max-width: 905px) 100vw, 905px" /></noscript>						
+					</div>
+								
+<style>
+#image_346505520 {
+  width: 100%;
+}
+@media (min-width:550px) {
+  #image_346505520 {
+    width: 70%;
+  }
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+</div>
+		</div>
+
+		
+<style>
+#section_1214507737 {
+  padding-top: 26px;
+  padding-bottom: 26px;
+  background-color: rgb(255, 255, 255);
+}
+#section_1214507737 .ux-shape-divider--top svg {
+  height: 150px;
+  --divider-top-width: 100%;
+}
+#section_1214507737 .ux-shape-divider--bottom svg {
+  height: 150px;
+  --divider-width: 100%;
+}
+</style>
+	</section>
+	
+		
+				
+</div>
+
+
+
+</main>
+
+<footer id="footer" class="footer-wrapper">
+
+		<div id="text-3576638413" class="text">
+		
+
+
+		
+<style>
+#text-3576638413 {
+  font-size: 1.1rem;
+  line-height: 1.85;
+}
+</style>
+	</div>
+	
+
+  <div class="banner has-hover" id="banner-541512582">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill">
+            <div class="bg fill bg-fill "></div>
+                        <div class="overlay"></div>            
+                    </div>
+		
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+
+   <div id="text-box-761530183" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                                <div class="text-box-content text dark">
+              
+              <div class="text-inner text-center">
+                  
+
+	<div id="text-812661958" class="text">
+		
+
+<h3 class="uppercase"><strong>HOTLINE : 0528878668</strong></h3>
+Aruna xin cảm ơn quý khách đã cho chúng tôi cơ hội được phục vụ.
+		
+<style>
+#text-812661958 {
+  font-size: 1rem;
+}
+@media (min-width:550px) {
+  #text-812661958 {
+    font-size: 1.35rem;
+  }
+}
+</style>
+	</div>
+	
+
+              </div>
+           </div>
+                            
+<style>
+#text-box-761530183 {
+  width: 89%;
+}
+#text-box-761530183 .text-box-content {
+  font-size: 100%;
+}
+@media (min-width:550px) {
+  #text-box-761530183 {
+    width: 60%;
+  }
+}
+</style>
+    </div>
+ 
+
+        </div>
+      </div>
+
+            
+<style>
+#banner-541512582 {
+  padding-top: 294px;
+}
+#banner-541512582 .bg.bg-loaded {
+  background-image: url(https://aruna.vn/wp-content/uploads/2021/11/chup-anh-profile-cong-ty-kpmg-4-1024x683.jpg);
+}
+#banner-541512582 .overlay {
+  background-color: rgba(0, 0, 0, 0.733);
+}
+#banner-541512582 .bg {
+  background-position: 60% 39%;
+}
+#banner-541512582 .ux-shape-divider--top svg {
+  height: 150px;
+  --divider-top-width: 100%;
+}
+#banner-541512582 .ux-shape-divider--bottom svg {
+  height: 150px;
+  --divider-width: 100%;
+}
+</style>
+  </div>
+
+
+	<section class="section dark" id="section_364812417">
+		<div class="bg section-bg fill bg-fill  ">
+
+			
+			<div class="section-bg-overlay absolute fill"></div>
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+
+
+<div class="row" id="row-378996500">
+
+
+	<div id="col-500504823" class="col medium-3 small-12 large-3">
+				<div class="col-inner">
+			
+			
+
+<h2>Giới thiệu</h2>
+<div class="is-divider divider clearfix" style="max-width:50%;height:2px;background-color:rgb(255, 218, 185);"></div>
+
+<p><strong>CÔNG TY TNHH ARUNA VIỆT NAM</strong></p>
+<p>Địa chỉ VP : Tầng 6, Tòa nhà Việt Á, Cầu Giấy, Hà Nội<br>CN1: KCN Đào Xá, Phong Khê, Bắc Ninh<br>CN2: Cụm CN Tân Tiến, Văn Giang, Hưng Yên<br>CN3: Hố Nai, Biên Hòa, Đồng Nai</p>
+<p>Email : sales@aruna.vn<br>Hotline (miền Bắc) : <strong><a href="tel:0963608283">0528878668</a></strong></p>
+<p>Hotline (miền Nam) : <a href="tel:0528878668"><strong>0528878668</strong></a></p>
+<div class="social-icons follow-icons"><a href="http://url" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow" class="icon plain facebook tooltip" title="Follow on Facebook" aria-label="Follow on Facebook"><i class="icon-facebook"></i></a><a href="http://url" target="_blank" rel="noopener noreferrer nofollow" data-label="Instagram" class="icon plain  instagram tooltip" title="Follow on Instagram" aria-label="Follow on Instagram"><i class="icon-instagram"></i></a><a href="http://url" target="_blank" data-label="Twitter" rel="noopener noreferrer nofollow" class="icon plain  twitter tooltip" title="Follow on Twitter" aria-label="Follow on Twitter"><i class="icon-twitter"></i></a><a href="mailto:your@email" data-label="E-mail" rel="nofollow" class="icon plain  email tooltip" title="Send us an email" aria-label="Send us an email"><i class="icon-envelop"></i></a></div>
+
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-1511129841" class="col medium-3 small-12 large-3">
+				<div class="col-inner">
+			
+			
+
+<h2>Sản phẩm</h2>
+<div class="is-divider divider clearfix" style="max-width:50%;height:2px;background-color:rgb(255, 218, 185);"></div>
+
+<ul>
+<li><a href="https://aruna.vn/san-pham/giay-chong-am/">Giấy hút ẩm</a></li>
+<li><a href="https://aruna.vn/san-pham/giay-duplex/">Giấy Duplex</a></li>
+<li><a href="https://aruna.vn/danh-muc/giay-nganh-da-giay/">Giấy ngành da giày</a></li>
+<li><a href="https://aruna.vn/san-pham/tui-giay/">Túi giấy&nbsp;</a></li>
+<li><a href="https://aruna.vn/san-pham/giay-rom/">Giấy rơm</a></li>
+<li><a href="https://aruna.vn/danh-muc/in-decal-tem-nhan/">Decal, tem nhãn</a></li>
+</ul>
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-394435045" class="col medium-3 small-12 large-3">
+				<div class="col-inner">
+			
+			
+
+<h2>Liên kết</h2>
+<div class="is-divider divider clearfix" style="max-width:50%;height:2px;background-color:rgb(255, 218, 185);"></div>
+
+	<div class="ux-menu stack stack-col justify-start ux-menu--divider-solid">
+		
+
+	<div class="ux-menu-link flex menu-item">
+		<a class="ux-menu-link__link flex" href="https://aruna.vn/dai-ly/">
+						<span class="ux-menu-link__text">
+				Đăng kí làm đại lý			</span>
+		</a>
+	</div>
+	
+
+	<div class="ux-menu-link flex menu-item">
+		<a class="ux-menu-link__link flex" href="https://aruna.vn/gioi-thieu/">
+						<span class="ux-menu-link__text">
+				Giới thiệu về Aruna			</span>
+		</a>
+	</div>
+	
+
+	<div class="ux-menu-link flex menu-item">
+		<a class="ux-menu-link__link flex" href="https://aruna.vn/san-pham/">
+						<span class="ux-menu-link__text">
+				Sản phẩm mới nhất			</span>
+		</a>
+	</div>
+	
+
+	<div class="ux-menu-link flex menu-item">
+		<a class="ux-menu-link__link flex" href="https://aruna.vn/lien-he/">
+						<span class="ux-menu-link__text">
+				Liên hệ			</span>
+		</a>
+	</div>
+	
+
+
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-1215151337" class="col medium-3 small-12 large-3">
+				<div class="col-inner">
+			
+			
+
+<h2>Google Map Aruna</h2>
+<div class="is-divider divider clearfix" style="max-width:50%;height:2px;background-color:rgb(255, 218, 185);"></div>
+
+<p><iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119240.78558318442!2d105.87345357692011!3d20.941486836732913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abc5db65175f%3A0x63fb83ac8e0971bf!2zR2nhuqV5IENo4buRbmcg4bqobSAtIEdp4bqleSBQZWx1cmUgQXJ1bmEgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1638005989904!5m2!1svi!2s" width="400" height="300" allowfullscreen="allowfullscreen"></iframe></p>
+
+		</div>
+					</div>
+
+	
+
+
+<style>
+#row-378996500 > .col > .col-inner {
+  padding: 30px 0px 0px 0px;
+}
+</style>
+</div>
+<div class="row align-center" id="row-1804959403">
+
+
+	<div id="col-871319039" class="col medium-5 small-12 large-5">
+				<div class="col-inner">
+			
+			
+
+	<div id="text-3501058188" class="text">
+		
+
+Copyright © 2021 | All rights reserved
+Bản quyền thuộc về Aruna Việt Nam
+		
+<style>
+#text-3501058188 {
+  text-align: center;
+}
+</style>
+	</div>
+	
+<div class="row align-center" id="row-576763492">
+
+
+	<div id="col-978250539" class="col medium-5 small-12 large-5">
+				<div class="col-inner">
+			
+			
+
+<p><img class=" wp-image-1787 aligncenter" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20297%20198'%3E%3C/svg%3E" alt="" width="297" height="198" data-lazy-src="https://aruna.vn/wp-content/uploads/2021/11/bo-cong-thuong-removebg-preview.png"><noscript><img class=" wp-image-1787 aligncenter" src="https://aruna.vn/wp-content/uploads/2021/11/bo-cong-thuong-removebg-preview.png" alt="" width="297" height="198" /></noscript></p>
+
+		</div>
+					</div>
+
+	
+
+</div>
+
+		</div>
+				
+<style>
+#col-871319039 > .col-inner {
+  margin: 1px 0px -41px 0px;
+}
+</style>
+	</div>
+
+	
+
+</div>
+
+		</div>
+
+		
+<style>
+#section_364812417 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgb(0, 4, 31);
+}
+#section_364812417 .section-bg-overlay {
+  background-color: rgba(0, 4, 31, 0.942);
+}
+#section_364812417 .section-bg.bg-loaded {
+  background-image: 59;
+}
+#section_364812417 .ux-shape-divider--top svg {
+  height: 150px;
+  --divider-top-width: 100%;
+}
+#section_364812417 .ux-shape-divider--bottom svg {
+  height: 150px;
+  --divider-width: 100%;
+}
+</style>
+	</section>
+	
+<div class="absolute-footer dark medium-text-center small-text-center">
+  <div class="container clearfix">
+
+          <div class="footer-secondary pull-right">
+                <div class="payment-icons inline-block"><div class="payment-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 32">
+<path d="M10.781 7.688c-0.251-1.283-1.219-1.688-2.344-1.688h-8.376l-0.061 0.405c5.749 1.469 10.469 4.595 12.595 10.501l-1.813-9.219zM13.125 19.688l-0.531-2.781c-1.096-2.907-3.752-5.594-6.752-6.813l4.219 15.939h5.469l8.157-20.032h-5.501l-5.062 13.688zM27.72 26.061l3.248-20.061h-5.187l-3.251 20.061h5.189zM41.875 5.656c-5.125 0-8.717 2.72-8.749 6.624-0.032 2.877 2.563 4.469 4.531 5.439 2.032 0.968 2.688 1.624 2.688 2.499 0 1.344-1.624 1.939-3.093 1.939-2.093 0-3.219-0.251-4.875-1.032l-0.688-0.344-0.719 4.499c1.219 0.563 3.437 1.064 5.781 1.064 5.437 0.032 8.97-2.688 9.032-6.843 0-2.282-1.405-4-4.376-5.439-1.811-0.904-2.904-1.563-2.904-2.499 0-0.843 0.936-1.72 2.968-1.72 1.688-0.029 2.936 0.314 3.875 0.752l0.469 0.248 0.717-4.344c-1.032-0.406-2.656-0.844-4.656-0.844zM55.813 6c-1.251 0-2.189 0.376-2.72 1.688l-7.688 18.374h5.437c0.877-2.467 1.096-3 1.096-3 0.592 0 5.875 0 6.624 0 0 0 0.157 0.688 0.624 3h4.813l-4.187-20.061h-4zM53.405 18.938c0 0 0.437-1.157 2.064-5.594-0.032 0.032 0.437-1.157 0.688-1.907l0.374 1.72c0.968 4.781 1.189 5.781 1.189 5.781-0.813 0-3.283 0-4.315 0z"></path>
+</svg>
+</div><div class="payment-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 32">
+<path d="M35.255 12.078h-2.396c-0.229 0-0.444 0.114-0.572 0.303l-3.306 4.868-1.4-4.678c-0.088-0.292-0.358-0.493-0.663-0.493h-2.355c-0.284 0-0.485 0.28-0.393 0.548l2.638 7.745-2.481 3.501c-0.195 0.275 0.002 0.655 0.339 0.655h2.394c0.227 0 0.439-0.111 0.569-0.297l7.968-11.501c0.191-0.275-0.006-0.652-0.341-0.652zM19.237 16.718c-0.23 1.362-1.311 2.276-2.691 2.276-0.691 0-1.245-0.223-1.601-0.644-0.353-0.417-0.485-1.012-0.374-1.674 0.214-1.35 1.313-2.294 2.671-2.294 0.677 0 1.227 0.225 1.589 0.65 0.365 0.428 0.509 1.027 0.404 1.686zM22.559 12.078h-2.384c-0.204 0-0.378 0.148-0.41 0.351l-0.104 0.666-0.166-0.241c-0.517-0.749-1.667-1-2.817-1-2.634 0-4.883 1.996-5.321 4.796-0.228 1.396 0.095 2.731 0.888 3.662 0.727 0.856 1.765 1.212 3.002 1.212 2.123 0 3.3-1.363 3.3-1.363l-0.106 0.662c-0.040 0.252 0.155 0.479 0.41 0.479h2.147c0.341 0 0.63-0.247 0.684-0.584l1.289-8.161c0.040-0.251-0.155-0.479-0.41-0.479zM8.254 12.135c-0.272 1.787-1.636 1.787-2.957 1.787h-0.751l0.527-3.336c0.031-0.202 0.205-0.35 0.41-0.35h0.345c0.899 0 1.747 0 2.185 0.511 0.262 0.307 0.341 0.761 0.242 1.388zM7.68 7.473h-4.979c-0.341 0-0.63 0.248-0.684 0.584l-2.013 12.765c-0.040 0.252 0.155 0.479 0.41 0.479h2.378c0.34 0 0.63-0.248 0.683-0.584l0.543-3.444c0.053-0.337 0.343-0.584 0.683-0.584h1.575c3.279 0 5.172-1.587 5.666-4.732 0.223-1.375 0.009-2.456-0.635-3.212-0.707-0.832-1.962-1.272-3.628-1.272zM60.876 7.823l-2.043 12.998c-0.040 0.252 0.155 0.479 0.41 0.479h2.055c0.34 0 0.63-0.248 0.683-0.584l2.015-12.765c0.040-0.252-0.155-0.479-0.41-0.479h-2.299c-0.205 0.001-0.379 0.148-0.41 0.351zM54.744 16.718c-0.23 1.362-1.311 2.276-2.691 2.276-0.691 0-1.245-0.223-1.601-0.644-0.353-0.417-0.485-1.012-0.374-1.674 0.214-1.35 1.313-2.294 2.671-2.294 0.677 0 1.227 0.225 1.589 0.65 0.365 0.428 0.509 1.027 0.404 1.686zM58.066 12.078h-2.384c-0.204 0-0.378 0.148-0.41 0.351l-0.104 0.666-0.167-0.241c-0.516-0.749-1.667-1-2.816-1-2.634 0-4.883 1.996-5.321 4.796-0.228 1.396 0.095 2.731 0.888 3.662 0.727 0.856 1.765 1.212 3.002 1.212 2.123 0 3.3-1.363 3.3-1.363l-0.106 0.662c-0.040 0.252 0.155 0.479 0.41 0.479h2.147c0.341 0 0.63-0.247 0.684-0.584l1.289-8.161c0.040-0.252-0.156-0.479-0.41-0.479zM43.761 12.135c-0.272 1.787-1.636 1.787-2.957 1.787h-0.751l0.527-3.336c0.031-0.202 0.205-0.35 0.41-0.35h0.345c0.899 0 1.747 0 2.185 0.511 0.261 0.307 0.34 0.761 0.241 1.388zM43.187 7.473h-4.979c-0.341 0-0.63 0.248-0.684 0.584l-2.013 12.765c-0.040 0.252 0.156 0.479 0.41 0.479h2.554c0.238 0 0.441-0.173 0.478-0.408l0.572-3.619c0.053-0.337 0.343-0.584 0.683-0.584h1.575c3.279 0 5.172-1.587 5.666-4.732 0.223-1.375 0.009-2.456-0.635-3.212-0.707-0.832-1.962-1.272-3.627-1.272z"></path>
+</svg>
+</div><div class="payment-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 32">
+<path d="M7.114 14.656c-1.375-0.5-2.125-0.906-2.125-1.531 0-0.531 0.437-0.812 1.188-0.812 1.437 0 2.875 0.531 3.875 1.031l0.563-3.5c-0.781-0.375-2.406-1-4.656-1-1.594 0-2.906 0.406-3.844 1.188-1 0.812-1.5 2-1.5 3.406 0 2.563 1.563 3.688 4.125 4.594 1.625 0.594 2.188 1 2.188 1.656 0 0.625-0.531 0.969-1.5 0.969-1.188 0-3.156-0.594-4.437-1.343l-0.563 3.531c1.094 0.625 3.125 1.281 5.25 1.281 1.688 0 3.063-0.406 4.031-1.157 1.063-0.843 1.594-2.062 1.594-3.656-0.001-2.625-1.595-3.719-4.188-4.657zM21.114 9.125h-3v-4.219l-4.031 0.656-0.563 3.563-1.437 0.25-0.531 3.219h1.937v6.844c0 1.781 0.469 3 1.375 3.75 0.781 0.625 1.907 0.938 3.469 0.938 1.219 0 1.937-0.219 2.468-0.344v-3.688c-0.282 0.063-0.938 0.22-1.375 0.22-0.906 0-1.313-0.5-1.313-1.563v-6.156h2.406l0.595-3.469zM30.396 9.031c-0.313-0.062-0.594-0.093-0.876-0.093-1.312 0-2.374 0.687-2.781 1.937l-0.313-1.75h-4.093v14.719h4.687v-9.563c0.594-0.719 1.437-0.968 2.563-0.968 0.25 0 0.5 0 0.812 0.062v-4.344zM33.895 2.719c-1.375 0-2.468 1.094-2.468 2.469s1.094 2.5 2.468 2.5 2.469-1.124 2.469-2.5-1.094-2.469-2.469-2.469zM36.239 23.844v-14.719h-4.687v14.719h4.687zM49.583 10.468c-0.843-1.094-2-1.625-3.469-1.625-1.343 0-2.531 0.563-3.656 1.75l-0.25-1.469h-4.125v20.155l4.688-0.781v-4.719c0.719 0.219 1.469 0.344 2.125 0.344 1.157 0 2.876-0.313 4.188-1.75 1.281-1.375 1.907-3.5 1.907-6.313 0-2.499-0.469-4.405-1.407-5.593zM45.677 19.532c-0.375 0.687-0.969 1.094-1.625 1.094-0.468 0-0.906-0.093-1.281-0.281v-7c0.812-0.844 1.531-0.938 1.781-0.938 1.188 0 1.781 1.313 1.781 3.812 0.001 1.437-0.219 2.531-0.656 3.313zM62.927 10.843c-1.032-1.312-2.563-2-4.501-2-4 0-6.468 2.938-6.468 7.688 0 2.625 0.656 4.625 1.968 5.875 1.157 1.157 2.844 1.719 5.032 1.719 2 0 3.844-0.469 5-1.251l-0.501-3.219c-1.157 0.625-2.5 0.969-4 0.969-0.906 0-1.532-0.188-1.969-0.594-0.5-0.406-0.781-1.094-0.875-2.062h7.75c0.031-0.219 0.062-1.281 0.062-1.625 0.001-2.344-0.5-4.188-1.499-5.5zM56.583 15.094c0.125-2.093 0.687-3.062 1.75-3.062s1.625 1 1.687 3.062h-3.437z"></path>
+</svg>
+</div><div class="payment-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 32">
+<path d="M42.667-0c-4.099 0-7.836 1.543-10.667 4.077-2.831-2.534-6.568-4.077-10.667-4.077-8.836 0-16 7.163-16 16s7.164 16 16 16c4.099 0 7.835-1.543 10.667-4.077 2.831 2.534 6.568 4.077 10.667 4.077 8.837 0 16-7.163 16-16s-7.163-16-16-16zM11.934 19.828l0.924-5.809-2.112 5.809h-1.188v-5.809l-1.056 5.809h-1.584l1.32-7.657h2.376v4.753l1.716-4.753h2.508l-1.32 7.657h-1.585zM19.327 18.244c-0.088 0.528-0.178 0.924-0.264 1.188v0.396h-1.32v-0.66c-0.353 0.528-0.924 0.792-1.716 0.792-0.442 0-0.792-0.132-1.056-0.396-0.264-0.351-0.396-0.792-0.396-1.32 0-0.792 0.218-1.364 0.66-1.716 0.614-0.44 1.364-0.66 2.244-0.66h0.66v-0.396c0-0.351-0.353-0.528-1.056-0.528-0.442 0-1.012 0.088-1.716 0.264 0.086-0.351 0.175-0.792 0.264-1.32 0.703-0.264 1.32-0.396 1.848-0.396 1.496 0 2.244 0.616 2.244 1.848 0 0.353-0.046 0.749-0.132 1.188-0.089 0.616-0.179 1.188-0.264 1.716zM24.079 15.076c-0.264-0.086-0.66-0.132-1.188-0.132s-0.792 0.177-0.792 0.528c0 0.177 0.044 0.31 0.132 0.396l0.528 0.264c0.792 0.442 1.188 1.012 1.188 1.716 0 1.409-0.838 2.112-2.508 2.112-0.792 0-1.366-0.044-1.716-0.132 0.086-0.351 0.175-0.836 0.264-1.452 0.703 0.177 1.188 0.264 1.452 0.264 0.614 0 0.924-0.175 0.924-0.528 0-0.175-0.046-0.308-0.132-0.396-0.178-0.175-0.396-0.308-0.66-0.396-0.792-0.351-1.188-0.924-1.188-1.716 0-1.407 0.792-2.112 2.376-2.112 0.792 0 1.32 0.045 1.584 0.132l-0.265 1.451zM27.512 15.208h-0.924c0 0.442-0.046 0.838-0.132 1.188 0 0.088-0.022 0.264-0.066 0.528-0.046 0.264-0.112 0.442-0.198 0.528v0.528c0 0.353 0.175 0.528 0.528 0.528 0.175 0 0.35-0.044 0.528-0.132l-0.264 1.452c-0.264 0.088-0.66 0.132-1.188 0.132-0.881 0-1.32-0.44-1.32-1.32 0-0.528 0.086-1.099 0.264-1.716l0.66-4.225h1.584l-0.132 0.924h0.792l-0.132 1.585zM32.66 17.32h-3.3c0 0.442 0.086 0.749 0.264 0.924 0.264 0.264 0.66 0.396 1.188 0.396s1.1-0.175 1.716-0.528l-0.264 1.584c-0.442 0.177-1.012 0.264-1.716 0.264-1.848 0-2.772-0.924-2.772-2.773 0-1.142 0.264-2.024 0.792-2.64 0.528-0.703 1.188-1.056 1.98-1.056 0.703 0 1.274 0.22 1.716 0.66 0.35 0.353 0.528 0.881 0.528 1.584 0.001 0.617-0.046 1.145-0.132 1.585zM35.3 16.132c-0.264 0.97-0.484 2.201-0.66 3.697h-1.716l0.132-0.396c0.35-2.463 0.614-4.4 0.792-5.809h1.584l-0.132 0.924c0.264-0.44 0.528-0.703 0.792-0.792 0.264-0.264 0.528-0.308 0.792-0.132-0.088 0.088-0.31 0.706-0.66 1.848-0.353-0.086-0.661 0.132-0.925 0.66zM41.241 19.697c-0.353 0.177-0.838 0.264-1.452 0.264-0.881 0-1.584-0.308-2.112-0.924-0.528-0.528-0.792-1.32-0.792-2.376 0-1.32 0.35-2.42 1.056-3.3 0.614-0.879 1.496-1.32 2.64-1.32 0.44 0 1.056 0.132 1.848 0.396l-0.264 1.584c-0.528-0.264-1.012-0.396-1.452-0.396-0.707 0-1.235 0.264-1.584 0.792-0.353 0.442-0.528 1.144-0.528 2.112 0 0.616 0.132 1.056 0.396 1.32 0.264 0.353 0.614 0.528 1.056 0.528 0.44 0 0.924-0.132 1.452-0.396l-0.264 1.717zM47.115 15.868c-0.046 0.264-0.066 0.484-0.066 0.66-0.088 0.442-0.178 1.035-0.264 1.782-0.088 0.749-0.178 1.254-0.264 1.518h-1.32v-0.66c-0.353 0.528-0.924 0.792-1.716 0.792-0.442 0-0.792-0.132-1.056-0.396-0.264-0.351-0.396-0.792-0.396-1.32 0-0.792 0.218-1.364 0.66-1.716 0.614-0.44 1.32-0.66 2.112-0.66h0.66c0.086-0.086 0.132-0.218 0.132-0.396 0-0.351-0.353-0.528-1.056-0.528-0.442 0-1.012 0.088-1.716 0.264 0-0.351 0.086-0.792 0.264-1.32 0.703-0.264 1.32-0.396 1.848-0.396 1.496 0 2.245 0.616 2.245 1.848 0.001 0.089-0.021 0.264-0.065 0.529zM49.69 16.132c-0.178 0.528-0.396 1.762-0.66 3.697h-1.716l0.132-0.396c0.35-1.935 0.614-3.872 0.792-5.809h1.584c0 0.353-0.046 0.66-0.132 0.924 0.264-0.44 0.528-0.703 0.792-0.792 0.35-0.175 0.614-0.218 0.792-0.132-0.353 0.442-0.574 1.056-0.66 1.848-0.353-0.086-0.66 0.132-0.925 0.66zM54.178 19.828l0.132-0.528c-0.353 0.442-0.838 0.66-1.452 0.66-0.707 0-1.188-0.218-1.452-0.66-0.442-0.614-0.66-1.232-0.66-1.848 0-1.142 0.308-2.067 0.924-2.773 0.44-0.703 1.056-1.056 1.848-1.056 0.528 0 1.056 0.264 1.584 0.792l0.264-2.244h1.716l-1.32 7.657h-1.585zM16.159 17.98c0 0.442 0.175 0.66 0.528 0.66 0.35 0 0.614-0.132 0.792-0.396 0.264-0.264 0.396-0.66 0.396-1.188h-0.397c-0.881 0-1.32 0.31-1.32 0.924zM31.076 15.076c-0.088 0-0.178-0.043-0.264-0.132h-0.264c-0.528 0-0.881 0.353-1.056 1.056h1.848v-0.396l-0.132-0.264c-0.001-0.086-0.047-0.175-0.133-0.264zM43.617 17.98c0 0.442 0.175 0.66 0.528 0.66 0.35 0 0.614-0.132 0.792-0.396 0.264-0.264 0.396-0.66 0.396-1.188h-0.396c-0.881 0-1.32 0.31-1.32 0.924zM53.782 15.076c-0.353 0-0.66 0.22-0.924 0.66-0.178 0.264-0.264 0.749-0.264 1.452 0 0.792 0.264 1.188 0.792 1.188 0.35 0 0.66-0.175 0.924-0.528 0.264-0.351 0.396-0.879 0.396-1.584-0.001-0.792-0.311-1.188-0.925-1.188z"></path>
+</svg>
+</div><div class="payment-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 32">
+<path d="M13.043 8.356c-0.46 0-0.873 0.138-1.24 0.413s-0.662 0.681-0.885 1.217c-0.223 0.536-0.334 1.112-0.334 1.727 0 0.568 0.119 0.99 0.358 1.265s0.619 0.413 1.141 0.413c0.508 0 1.096-0.131 1.765-0.393v1.327c-0.693 0.262-1.389 0.393-2.089 0.393-0.884 0-1.572-0.254-2.063-0.763s-0.736-1.229-0.736-2.161c0-0.892 0.181-1.712 0.543-2.462s0.846-1.32 1.452-1.709 1.302-0.584 2.089-0.584c0.435 0 0.822 0.038 1.159 0.115s0.7 0.217 1.086 0.421l-0.616 1.276c-0.369-0.201-0.673-0.333-0.914-0.398s-0.478-0.097-0.715-0.097zM19.524 12.842h-2.47l-0.898 1.776h-1.671l3.999-7.491h1.948l0.767 7.491h-1.551l-0.125-1.776zM19.446 11.515l-0.136-1.786c-0.035-0.445-0.052-0.876-0.052-1.291v-0.184c-0.153 0.408-0.343 0.84-0.569 1.296l-0.982 1.965h1.739zM27.049 12.413c0 0.711-0.257 1.273-0.773 1.686s-1.213 0.62-2.094 0.62c-0.769 0-1.389-0.153-1.859-0.46v-1.398c0.672 0.367 1.295 0.551 1.869 0.551 0.39 0 0.694-0.072 0.914-0.217s0.329-0.343 0.329-0.595c0-0.147-0.024-0.275-0.070-0.385s-0.114-0.214-0.201-0.309c-0.087-0.095-0.303-0.269-0.648-0.52-0.481-0.337-0.818-0.67-1.013-1s-0.293-0.685-0.293-1.066c0-0.439 0.108-0.831 0.324-1.176s0.523-0.614 0.922-0.806 0.857-0.288 1.376-0.288c0.755 0 1.446 0.168 2.073 0.505l-0.569 1.189c-0.543-0.252-1.044-0.378-1.504-0.378-0.289 0-0.525 0.077-0.71 0.23s-0.276 0.355-0.276 0.607c0 0.207 0.058 0.389 0.172 0.543s0.372 0.36 0.773 0.615c0.421 0.272 0.736 0.572 0.945 0.9s0.313 0.712 0.313 1.151zM33.969 14.618h-1.597l0.7-3.22h-2.46l-0.7 3.22h-1.592l1.613-7.46h1.597l-0.632 2.924h2.459l0.632-2.924h1.592l-1.613 7.46zM46.319 9.831c0 0.963-0.172 1.824-0.517 2.585s-0.816 1.334-1.415 1.722c-0.598 0.388-1.288 0.582-2.067 0.582-0.891 0-1.587-0.251-2.086-0.753s-0.749-1.198-0.749-2.090c0-0.902 0.172-1.731 0.517-2.488s0.82-1.338 1.425-1.743c0.605-0.405 1.306-0.607 2.099-0.607 0.888 0 1.575 0.245 2.063 0.735s0.73 1.176 0.73 2.056zM43.395 8.356c-0.421 0-0.808 0.155-1.159 0.467s-0.627 0.739-0.828 1.283-0.3 1.135-0.3 1.771c0 0.5 0.116 0.877 0.348 1.133s0.558 0.383 0.979 0.383 0.805-0.148 1.151-0.444c0.346-0.296 0.617-0.714 0.812-1.255s0.292-1.148 0.292-1.822c0-0.483-0.113-0.856-0.339-1.12-0.227-0.264-0.546-0.396-0.957-0.396zM53.427 14.618h-1.786l-1.859-5.644h-0.031l-0.021 0.163c-0.111 0.735-0.227 1.391-0.344 1.97l-0.757 3.511h-1.436l1.613-7.46h1.864l1.775 5.496h0.021c0.042-0.259 0.109-0.628 0.203-1.107s0.407-1.942 0.94-4.388h1.43l-1.613 7.461zM13.296 20.185c0 0.98-0.177 1.832-0.532 2.556s-0.868 1.274-1.539 1.652c-0.672 0.379-1.464 0.568-2.376 0.568h-2.449l1.678-7.68h2.15c0.977 0 1.733 0.25 2.267 0.751s0.801 1.219 0.801 2.154zM8.925 23.615c0.536 0 1.003-0.133 1.401-0.399s0.71-0.657 0.934-1.174c0.225-0.517 0.337-1.108 0.337-1.773 0-0.54-0.131-0.95-0.394-1.232s-0.64-0.423-1.132-0.423h-0.624l-1.097 5.001h0.575zM18.64 24.96h-4.436l1.678-7.68h4.442l-0.293 1.334h-2.78l-0.364 1.686h2.59l-0.299 1.334h-2.59l-0.435 1.98h2.78l-0.293 1.345zM20.509 24.96l1.678-7.68h1.661l-1.39 6.335h2.78l-0.294 1.345h-4.436zM26.547 24.96l1.694-7.68h1.656l-1.694 7.68h-1.656zM33.021 23.389c0.282-0.774 0.481-1.27 0.597-1.487l2.346-4.623h1.716l-4.061 7.68h-1.814l-0.689-7.68h1.602l0.277 4.623c0.015 0.157 0.022 0.39 0.022 0.699-0.007 0.361-0.018 0.623-0.033 0.788h0.038zM41.678 24.96h-4.437l1.678-7.68h4.442l-0.293 1.334h-2.78l-0.364 1.686h2.59l-0.299 1.334h-2.59l-0.435 1.98h2.78l-0.293 1.345zM45.849 22.013l-0.646 2.947h-1.656l1.678-7.68h1.949c0.858 0 1.502 0.179 1.933 0.536s0.646 0.881 0.646 1.571c0 0.554-0.15 1.029-0.451 1.426s-0.733 0.692-1.298 0.885l1.417 3.263h-1.803l-1.124-2.947h-0.646zM46.137 20.689h0.424c0.474 0 0.843-0.1 1.108-0.3s0.396-0.504 0.396-0.914c0-0.287-0.086-0.502-0.258-0.646s-0.442-0.216-0.812-0.216h-0.402l-0.456 2.076zM53.712 20.39l2.031-3.11h1.857l-3.355 4.744-0.646 2.936h-1.645l0.646-2.936-1.281-4.744h1.694l0.7 3.11z"></path>
+</svg>
+</div></div>      </div>
+    
+    <div class="footer-primary pull-left">
+              <div class="menu-menu-ngang-container"><ul id="menu-menu-ngang-1" class="links footer-nav uppercase"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-1335"><a href="https://aruna.vn/" aria-current="page">Trang chủ</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1336"><a href="https://aruna.vn/gioi-thieu/">Giới thiệu</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1334"><a href="https://aruna.vn/san-pham/">Sản phẩm của Aruna</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1338"><a href="https://aruna.vn/category/tin-tuc/">Tin tức</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1337"><a href="https://aruna.vn/lien-he/">Liên hệ</a></li>
+</ul></div>            <div class="copyright-footer">
+        Designed by 2025 © <strong>Aruna &amp; X3Sales</strong>      </div>
+          </div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top button icon invert plain fixed bottom z-1 is-outline hide-for-medium circle" id="top-link" aria-label="Go to top"><i class="icon-angle-up"></i></a>
+
+</footer>
+
+</div>
+
+<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+
+	
+	<div class="sidebar-menu no-scrollbar ">
+
+		
+					<ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
+				<li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative is-normal"><form role="search" method="get" class="searchform" action="https://aruna.vn/">
+	<div class="flex-row relative">
+						<div class="flex-col flex-grow">
+			<label class="screen-reader-text" for="woocommerce-product-search-field-1">Tìm kiếm:</label>
+			<input type="search" id="woocommerce-product-search-field-1" class="search-field mb-0" placeholder="Tìm kiếm…" value="" name="s" style="">
+			<input type="hidden" name="post_type" value="product" style="">
+							<input type="hidden" name="lang" value="vi" style="">
+					</div>
+		<div class="flex-col">
+			<button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button icon mb-0" aria-label="Submit">
+				<i class="icon-search"></i>			</button>
+		</div>
+	</div>
+	<div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-1335"><a href="https://aruna.vn/" aria-current="page">Trang chủ</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1336"><a href="https://aruna.vn/gioi-thieu/">Giới thiệu</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1334"><a href="https://aruna.vn/san-pham/">Sản phẩm của Aruna</a>
+<ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1314"><a href="https://aruna.vn/danh-muc/giay-hut-am-pelure/">GIẤY HÚT ẨM</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-1799"><a href="https://aruna.vn/san-pham/giay-nen/">GIẤY NẾN</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-1657"><a href="https://aruna.vn/san-pham/giay-rom/">GIẤY RƠM</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1785"><a href="https://aruna.vn/danh-muc/giay-duplex/">GIẤY DUPLEX</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1680"><a href="https://aruna.vn/danh-muc/giay-nganh-da-giay/">GIẤY NGÀNH DA GIÀY</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-1656"><a href="https://aruna.vn/san-pham/tui-giay/">TÚI GIẤY</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1451"><a href="https://aruna.vn/danh-muc/in-decal-tem-nhan/">DECAL, TEM NHÃN</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2326"><a href="https://aruna.vn/danh-muc/giay-hut-am-pelure/">GIẤY CHỐNG ẨM PELURE</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1338"><a href="https://aruna.vn/category/tin-tuc/">Tin tức</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1337"><a href="https://aruna.vn/lien-he/">Liên hệ</a></li>
+<li class="account-item has-icon menu-item">
+<a href="https://aruna.vn/tai-khoan/" class="nav-top-link nav-top-not-logged-in">
+    <span class="header-account-title">
+    Đăng nhập  </span>
+</a>
+
+</li>
+<li class="header-newsletter-item has-icon">
+
+  <a href="#header-newsletter-signup" class="tooltip" title="Sign up for Newsletter">
+
+    <i class="icon-envelop"></i>
+    <span class="header-newsletter-title">
+      Newsletter    </span>
+  </a>
+
+</li><li class="html header-social-icons ml-0">
+	<div class="social-icons follow-icons"><a href="http://url" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow" class="icon plain facebook tooltip" title="Follow on Facebook" aria-label="Follow on Facebook"><i class="icon-facebook"></i></a><a href="http://url" target="_blank" rel="noopener noreferrer nofollow" data-label="Instagram" class="icon plain  instagram tooltip" title="Follow on Instagram" aria-label="Follow on Instagram"><i class="icon-instagram"></i></a><a href="http://url" target="_blank" data-label="Twitter" rel="noopener noreferrer nofollow" class="icon plain  twitter tooltip" title="Follow on Twitter" aria-label="Follow on Twitter"><i class="icon-twitter"></i></a><a href="mailto:your@email" data-label="E-mail" rel="nofollow" class="icon plain  email tooltip" title="Send us an email" aria-label="Send us an email"><i class="icon-envelop"></i></a></div></li>			</ul>
+		
+		
+	</div>
+
+	
+</div>
+<a href="tel:0528878668" title="Hotline" class="al-hotline">0528878668<span></span></a><div id="al-cta-icon"><a class="al-cta-phone" title="Hotline" href="tel:0528878668"><i class="al-ico-phone"></i></a><a href="mailto:Sales@aruna.vn" title="E-mail" target="_blank" class="al-cta-email"><i class="al-ico-email"></i></a><a href="https://zalo.me/0528878668" title="Zalo" target="_blank" class="al-cta-zalo"><i class="al-ico-zalo"></i></a></div><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PD7CGN3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div id="login-form-popup" class="lightbox-content mfp-hide">
+            <div class="woocommerce-notices-wrapper"></div>
+<div class="account-container lightbox-inner">
+
+	
+			<div class="account-login-inner">
+
+				<h3 class="uppercase">Đăng nhập</h3>
+
+				<form class="woocommerce-form woocommerce-form-login login" method="post">
+
+					
+					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+						<label for="username">Tên tài khoản hoặc địa chỉ email&nbsp;<span class="required">*</span></label>
+						<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="" style="">					</p>
+					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+						<label for="password">Mật khẩu&nbsp;<span class="required">*</span></label>
+						<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" style="">
+					</p>
+
+					
+					<p class="form-row">
+						<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
+							<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" style=""> <span>Ghi nhớ mật khẩu</span>
+						</label>
+						<input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="faf09bbfa6" style=""><input type="hidden" name="_wp_http_referer" value="/" style="">						<button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="Đăng nhập">Đăng nhập</button>
+					</p>
+					<p class="woocommerce-LostPassword lost_password">
+						<a href="https://aruna.vn/tai-khoan/lost-password/">Quên mật khẩu?</a>
+					</p>
+
+					
+				</form>
+			</div>
+
+			
+</div>
+
+          </div>
+  	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" id="regenerator-runtime-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/aruna.vn\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1711770851" id="contact-form-7-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/plugins/devvn-quick-buy/js/jquery.validate.min.js?ver=1.1.2" id="jquery.validate-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/plugins/devvn-quick-buy/js/jquery.bpopup.min.js?ver=1.1.2" id="bpopup-js" defer=""></script>
+<script type="text/javascript" id="devvn-quickbuy-script-js-extra">
+/* <![CDATA[ */
+var devvn_quickbuy_array = {"ajaxurl":"https:\/\/aruna.vn\/wp-admin\/admin-ajax.php","siteurl":"https:\/\/aruna.vn","popup_error":"\u0110\u1eb7t h\u00e0ng th\u1ea5t b\u1ea1i. Vui l\u00f2ng \u0111\u1eb7t h\u00e0ng l\u1ea1i. Xin c\u1ea3m \u01a1n!","out_of_stock_mess":"H\u1ebft h\u00e0ng!","price_decimal":".","num_decimals":"0","currency_format":"\u20ab"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/cache/min/1/wp-content/plugins/devvn-quick-buy/js/devvn-quick-buy.js?ver=1711770851" id="devvn-quickbuy-script-js" defer=""></script>
+<script type="text/javascript" id="kk-star-ratings-js-extra">
+/* <![CDATA[ */
+var kk_star_ratings = {"action":"kk-star-ratings","endpoint":"https:\/\/aruna.vn\/wp-admin\/admin-ajax.php","nonce":"634d594551"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/plugins/kk-star-ratings/src/core/public/js/kk-star-ratings.min.js?ver=5.4.5" id="kk-star-ratings-js" defer=""></script>
+<script type="text/javascript" id="rtrar.appLocal-js-extra">
+/* <![CDATA[ */
+var rtafr = {"rules":""};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/plugins/real-time-auto-find-and-replace/assets/js/rtafar.local.js?ver=1.7.3" id="rtrar.appLocal-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.5.9.1" id="jquery-blockui-js" defer=""></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Xem gi\u1ecf h\u00e0ng","cart_url":"https:\/\/aruna.vn\/gio-hang\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=5.9.1" id="wc-add-to-cart-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.5.9.1" id="js-cookie-js" defer=""></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=5.9.1" id="woocommerce-js" defer=""></script>
+<script type="text/javascript" id="wc-cart-fragments-js-extra">
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_9f52a0f3211d7339d5b0b9cacf6ac5bb","fragment_name":"wc_fragments_9f52a0f3211d7339d5b0b9cacf6ac5bb","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=5.9.1" id="wc-cart-fragments-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-includes/js/hoverIntent.min.js?ver=1.10.2" id="hoverIntent-js" defer=""></script>
+<script type="text/javascript" id="flatsome-js-js-extra">
+/* <![CDATA[ */
+var flatsomeVars = {"theme":{"version":"3.15.1"},"ajaxurl":"https:\/\/aruna.vn\/wp-admin\/admin-ajax.php","rtl":"","sticky_height":"70","assets_url":"https:\/\/aruna.vn\/wp-content\/themes\/flatsome\/assets\/js\/","lightbox":{"close_markup":"<button title=\"%title%\" type=\"button\" class=\"mfp-close\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"><\/line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"><\/line><\/svg><\/button>","close_btn_inside":false},"user":{"can_edit_pages":false},"i18n":{"mainMenu":"Main Menu"},"options":{"cookie_notice_version":"1","swatches_layout":false,"swatches_box_select_event":false,"swatches_box_behavior_selected":false,"swatches_box_update_urls":"1","swatches_box_reset":false,"swatches_box_reset_extent":false,"swatches_box_reset_time":300,"search_result_latency":"0"},"is_mini_cart_reveal":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/cache/min/1/wp-content/themes/flatsome/assets/js/flatsome.js?ver=1711770851" id="flatsome-js-js" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/cache/min/1/wp-content/themes/flatsome/inc/integrations/wp-rocket/flatsome-wp-rocket.js?ver=1711770851" id="flatsome-wp-rocket-js" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/cache/min/1/wp-content/themes/flatsome/inc/extensions/flatsome-live-search/flatsome-live-search.js?ver=1711770851" id="flatsome-live-search-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/plugins/real-time-auto-find-and-replace/assets/js/rtafar.app.min.js?ver=1.7.3" id="rtrar.app-js" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/cache/min/1/wp-content/themes/flatsome/assets/js/woocommerce.js?ver=1711770851" id="flatsome-theme-woocommerce-js-js" defer=""></script>
+<!--[if IE]>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/intersection-observer-polyfill@0.1.0/dist/IntersectionObserver.js?ver=0.1.0" id="intersection-observer-polyfill-js"></script>
+<![endif]-->
+<!--[if IE]>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.0.1/ie11CustomProperties.min.js?ver=4.0.1" id="css-vars-polyfill-js"></script>
+<![endif]-->
+<script type="text/javascript" id="zxcvbn-async-js-extra">
+/* <![CDATA[ */
+var _zxcvbnSettings = {"src":"https:\/\/aruna.vn\/wp-includes\/js\/zxcvbn.min.js"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-includes/js/zxcvbn-async.min.js?ver=1.0" id="zxcvbn-async-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1" id="wp-hooks-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef" id="wp-i18n-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" id="password-strength-meter-js-extra">
+/* <![CDATA[ */
+var pwsL10n = {"unknown":"M\u1eadt kh\u1ea9u m\u1ea1nh kh\u00f4ng x\u00e1c \u0111\u1ecbnh","short":"R\u1ea5t y\u1ebfu","bad":"Y\u1ebfu","good":"Trung b\u00ecnh","strong":"M\u1ea1nh","mismatch":"M\u1eadt kh\u1ea9u kh\u00f4ng kh\u1edbp"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="password-strength-meter-js-translations">
+/* <![CDATA[ */
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2023-07-15 15:29:09+0000","generator":"GlotPress\/4.0.0-beta.2","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=1; plural=0;","lang":"vi_VN"},"%1$s is deprecated since version %2$s! Use %3$s instead. Please consider writing more inclusive code.":["%1$s \u0111\u00e3 ng\u1eebng ho\u1ea1t \u0111\u1ed9ng t\u1eeb phi\u00ean b\u1ea3n %2$s! S\u1eed d\u1ee5ng thay th\u1ebf b\u1eb1ng %3$s."]}},"comment":{"reference":"wp-admin\/js\/password-strength-meter.js"}} );
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-admin/js/password-strength-meter.min.js?ver=6.4.7" id="password-strength-meter-js" defer=""></script>
+<script type="text/javascript" id="wc-password-strength-meter-js-extra">
+/* <![CDATA[ */
+var wc_password_strength_meter_params = {"min_password_strength":"3","stop_checkout":"","i18n_password_error":"Vui l\u00f2ng nh\u1eadp m\u1eadt kh\u1ea9u kh\u00f3 h\u01a1n.","i18n_password_hint":"G\u1ee3i \u00fd: M\u1eadt kh\u1ea9u ph\u1ea3i c\u00f3 \u00edt nh\u1ea5t 12 k\u00fd t\u1ef1. \u0110\u1ec3 n\u00e2ng cao \u0111\u1ed9 b\u1ea3o m\u1eadt, s\u1eed d\u1ee5ng ch\u1eef in hoa, in th\u01b0\u1eddng, ch\u1eef s\u1ed1 v\u00e0 c\u00e1c k\u00fd t\u1ef1 \u0111\u1eb7c bi\u1ec7t nh\u01b0 ! \" ? $ % ^ & )."};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://aruna.vn/wp-content/plugins/woocommerce/assets/js/frontend/password-strength-meter.min.js?ver=5.9.1" id="wc-password-strength-meter-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+(function() {
+				var expirationDate = new Date();
+				expirationDate.setTime( expirationDate.getTime() + 31536000 * 1000 );
+				document.cookie = "pll_language=vi; expires=" + expirationDate.toUTCString() + "; path=/; secure; SameSite=Lax";
+			}());
+</script>
+<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="https://aruna.vn/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script>
+
+
+
+</body></html>

@@ -1,0 +1,1812 @@
+<!DOCTYPE html><html lang="vi|en" ontouchmove="" class="linux-magic svg-magic" data-magic-ua="chrome" data-magic-ua-ver="145" data-magic-engine="webkit" data-magic-engine-ver="537.36"><head><script async="" src="//za.zdn.vn/v3/za.js?20533"></script><script src="https://connect.facebook.net/vi_VN/bundle/sdk.js/" async="" crossorigin="anonymous"></script><script async="" src="https://s7.addthis.com/js/300/addthis_widget.js?_=1774097229435"></script><style id="magiczoom-reset-css" type="text/css"></style>
+    <!-- Basehref -->
+<base href="https://acquythanhtam.vn/">
+
+<!-- UTF-8 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- Title, Keywords, Description -->
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+<!-- Robots -->
+<meta name="robots" content="index,follow">
+
+<!-- Favicon -->
+<link href="https://acquythanhtam.vn/upload/photo/logo-8622-2751.png" rel="shortcut icon" type="image/x-icon">
+
+<!-- Webmaster Tool -->
+
+<!-- GEO -->
+<meta name="geo.region" content="VN">
+<meta name="geo.placename" content="Hồ Chí Minh">
+<meta name="geo.position" content="10.823099;106.629664">
+<meta name="ICBM" content="10.823099, 106.629664">
+
+<!-- Author - Copyright -->
+<meta name="revisit-after" content="1 days">
+<meta name="author" content=".">
+<meta name="copyright" content=". - [tonthanhtam.sg@gmail.com]">
+
+<!-- Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content=".">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://acquythanhtam.vn/">
+<meta property="og:image" content="https://acquythanhtam.vn/thumbs/220x75x2/upload/photo/logo-8622.png">
+<meta property="og:image:alt" content="">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="220">
+<meta property="og:image:height" content="75">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="tonthanhtam.sg@gmail.com">
+<meta name="twitter:creator" content=".">
+<meta property="og:url" content="https://acquythanhtam.vn/">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://acquythanhtam.vn/thumbs/220x75x2/upload/photo/logo-8622.png">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://acquythanhtam.vn/">
+
+<!-- Chống đổi màu trên IOS -->
+<meta name="format-detection" content="telephone=no">
+
+<!-- Viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">    <!-- Css Files -->
+<link href="https://acquythanhtam.vn/assets/caches/e5f63106c249c3d7dc8e3e08fb1bbdd2.css?v=1772389908" rel="stylesheet">
+<!-- Background -->
+
+<!-- Js Google Analytic -->
+<script id="facebook-jssdk" async="" src="//connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v2.6"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-245232902-2&amp;cx=c&amp;gtm=4e63i0"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-52RJBXQDQV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-52RJBXQDQV');
+</script>
+<!-- Js Head -->
+<script>
+var snowmax = 100
+
+// Set the colors for the snow. Add as many colors as you like
+
+var snowcolor = new Array("#fff", "#fff", "#fff", "#fff", "#fff")
+
+// Set the fonts, that create the snowflakes. Add as many fonts as you like
+var snowtype = new Array("Times", "Arial", "Times", "Verdana")
+
+// Set the letter that creates your snowflake (recommended: * )
+var snowletter = "*"
+
+// Set the speed of sinking (recommended values range from 0.3 to 2)
+var sinkspeed = 0.7
+
+// Set the maximum-size of your snowflakes
+var snowmaxsize = 35
+
+// Set the minimal-size of your snowflakes
+var snowminsize = 10
+
+var snowingzone = 3
+
+// Do not edit below this line
+var snow = new Array()
+var marginbottom
+var marginright
+var timer
+var i_snow = 0
+var x_mv = new Array();
+var crds = new Array();
+var lftrght = new Array();
+var browserinfos = navigator.userAgent
+var ie5 = document.all && document.getElementById && !browserinfos.match(/Opera/)
+var ns6 = document.getElementById && !document.all
+var opera = browserinfos.match(/Opera/)
+var browserok = ie5 || ns6 || opera
+
+function randommaker(range) {
+        rand = Math.floor(range * Math.random())
+        return rand
+}
+
+function initsnow() {
+        if (ie5 || opera) {
+                marginbottom = document.body.scrollHeight
+                marginright = document.body.clientWidth - 15
+        }
+        else if (ns6) {
+                marginbottom = document.body.scrollHeight
+                marginright = window.innerWidth - 15
+        }
+        var snowsizerange = snowmaxsize - snowminsize
+        for (i = 0; i <= snowmax; i++) {
+                crds[i] = 0;
+                lftrght[i] = Math.random() * 15;
+                x_mv[i] = 0.03 + Math.random() / 10;
+                snow[i] = document.getElementById("s" + i)
+                snow[i].style.fontFamily = snowtype[randommaker(snowtype.length)]
+                snow[i].size = randommaker(snowsizerange) + snowminsize
+                snow[i].style.fontSize = snow[i].size + 'px';
+                snow[i].style.color = snowcolor[randommaker(snowcolor.length)]
+                snow[i].style.zIndex = 1000
+                snow[i].sink = sinkspeed * snow[i].size / 5
+                if (snowingzone == 1) { snow[i].posx = randommaker(marginright - snow[i].size) }
+                if (snowingzone == 2) { snow[i].posx = randommaker(marginright / 2 - snow[i].size) }
+                if (snowingzone == 3) { snow[i].posx = randommaker(marginright / 2 - snow[i].size) + marginright / 4 }
+                if (snowingzone == 4) { snow[i].posx = randommaker(marginright / 2 - snow[i].size) + marginright / 2 }
+                snow[i].posy = randommaker(2 * marginbottom - marginbottom - 2 * snow[i].size)
+                snow[i].style.left = snow[i].posx + 'px';
+                snow[i].style.top = snow[i].posy + 'px';
+        }
+        movesnow()
+}
+
+function movesnow() {
+        for (i = 0; i <= snowmax; i++) {
+                crds[i] += x_mv[i];
+                snow[i].posy += snow[i].sink
+snow[i].style.left = snow[i].posx + lftrght[i] * Math.sin(crds[i]) + 'px';
+                snow[i].style.top = snow[i].posy + 'px';
+
+                if (snow[i].posy >= marginbottom - 2 * snow[i].size || parseInt(snow[i].style.left) > (marginright - 3 * lftrght[i])) {
+                        if (snowingzone == 1) { snow[i].posx = randommaker(marginright - snow[i].size) }
+                        if (snowingzone == 2) { snow[i].posx = randommaker(marginright / 2 - snow[i].size) }
+                        if (snowingzone == 3) { snow[i].posx = randommaker(marginright / 2 - snow[i].size) + marginright / 4 }
+                        if (snowingzone == 4) { snow[i].posx = randommaker(marginright / 2 - snow[i].size) + marginright / 2 }
+                        snow[i].posy = 0
+                }
+        }
+        var timer = setTimeout("movesnow()", 50)
+}
+
+for (i = 0; i <= snowmax; i++) {
+        document.write("<span id='s" + i + "' style='position:absolute;top:-" + snowmaxsize + "'>" + snowletter + "</span>")
+}
+if (browserok) {
+        window.onload = initsnow
+}
+</script><style type="text/css"></style><link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.css"><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_dialog{background:#525252b3;position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:700;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) #fff no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:#0006;inset:0;min-height:100%;position:absolute;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba),to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:#fff 0 1px 1px -1px inset;color:#fff;font:700 14px Helvetica,sans-serif;text-overflow:ellipsis;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2),to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:700 12px Helvetica,sans-serif;margin:2px -12px;padding:2px 6px 3px;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:700;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4A4A4A;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4A4A4A;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/y2/r/onuUJj0tCqE.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+</style></head><body><span id="s0" style="position: absolute; font-family: Times; font-size: 23px; color: rgb(255, 255, 255); z-index: 1000; left: 843.972px; top: 6017.98px;">*</span><span id="s1" style="position: absolute; font-family: Times; font-size: 24px; color: rgb(255, 255, 255); z-index: 1000; left: 366.548px; top: 5339.24px;">*</span><span id="s2" style="position: absolute; font-family: Arial; font-size: 33px; color: rgb(255, 255, 255); z-index: 1000; left: 456.288px; top: 5894.58px;">*</span><span id="s3" style="position: absolute; font-family: Verdana; font-size: 14px; color: rgb(255, 255, 255); z-index: 1000; left: 479.289px; top: 4677.64px;">*</span><span id="s4" style="position: absolute; font-family: Times; font-size: 27px; color: rgb(255, 255, 255); z-index: 1000; left: 917.909px; top: 6893.02px;">*</span><span id="s5" style="position: absolute; font-family: Arial; font-size: 22px; color: rgb(255, 255, 255); z-index: 1000; left: 899.587px; top: 3169.72px;">*</span><span id="s6" style="position: absolute; font-family: Times; font-size: 19px; color: rgb(255, 255, 255); z-index: 1000; left: 667.577px; top: 3840.94px;">*</span><span id="s7" style="position: absolute; font-family: Times; font-size: 11px; color: rgb(255, 255, 255); z-index: 1000; left: 546.414px; top: 6706.86px;">*</span><span id="s8" style="position: absolute; font-family: Verdana; font-size: 18px; color: rgb(255, 255, 255); z-index: 1000; left: 348.464px; top: 4526.68px;">*</span><span id="s9" style="position: absolute; font-family: Verdana; font-size: 29px; color: rgb(255, 255, 255); z-index: 1000; left: 766.855px; top: 5114.54px;">*</span><span id="s10" style="position: absolute; font-family: Arial; font-size: 13px; color: rgb(255, 255, 255); z-index: 1000; left: 731.76px; top: 1203.38px;">*</span><span id="s11" style="position: absolute; font-family: Arial; font-size: 22px; color: rgb(255, 255, 255); z-index: 1000; left: 547.734px; top: 2489.72px;">*</span><span id="s12" style="position: absolute; font-family: Verdana; font-size: 14px; color: rgb(255, 255, 255); z-index: 1000; left: 370.194px; top: 5384.64px;">*</span><span id="s13" style="position: absolute; font-family: Times; font-size: 17px; color: rgb(255, 255, 255); z-index: 1000; left: 638.482px; top: 6983.42px;">*</span><span id="s14" style="position: absolute; font-family: Arial; font-size: 32px; color: rgb(255, 255, 255); z-index: 1000; left: 820.719px; top: 5678.32px;">*</span><span id="s15" style="position: absolute; font-family: Arial; font-size: 20px; color: rgb(255, 255, 255); z-index: 1000; left: 641.799px; top: 5299.2px;">*</span><span id="s16" style="position: absolute; font-family: Arial; font-size: 11px; color: rgb(255, 255, 255); z-index: 1000; left: 369.391px; top: 2644.86px;">*</span><span id="s17" style="position: absolute; font-family: Arial; font-size: 26px; color: rgb(255, 255, 255); z-index: 1000; left: 583.147px; top: 1276.76px;">*</span><span id="s18" style="position: absolute; font-family: Times; font-size: 23px; color: rgb(255, 255, 255); z-index: 1000; left: 822.773px; top: 3587.98px;">*</span><span id="s19" style="position: absolute; font-family: Times; font-size: 22px; color: rgb(255, 255, 255); z-index: 1000; left: 654.096px; top: 5090.72px;">*</span><span id="s20" style="position: absolute; font-family: Verdana; font-size: 18px; color: rgb(255, 255, 255); z-index: 1000; left: 918.424px; top: 383.04px;">*</span><span id="s21" style="position: absolute; font-family: Arial; font-size: 18px; color: rgb(255, 255, 255); z-index: 1000; left: 397.462px; top: 7148.68px;">*</span><span id="s22" style="position: absolute; font-family: Arial; font-size: 27px; color: rgb(255, 255, 255); z-index: 1000; left: 886.513px; top: 6058.02px;">*</span><span id="s23" style="position: absolute; font-family: Times; font-size: 21px; color: rgb(255, 255, 255); z-index: 1000; left: 614.305px; top: 1666.46px;">*</span><span id="s24" style="position: absolute; font-family: Times; font-size: 25px; color: rgb(255, 255, 255); z-index: 1000; left: 845.818px; top: 4205.5px;">*</span><span id="s25" style="position: absolute; font-family: Verdana; font-size: 32px; color: rgb(255, 255, 255); z-index: 1000; left: 641.506px; top: 3430.32px;">*</span><span id="s26" style="position: absolute; font-family: Times; font-size: 14px; color: rgb(255, 255, 255); z-index: 1000; left: 900.628px; top: 1935.64px;">*</span><span id="s27" style="position: absolute; font-family: Verdana; font-size: 23px; color: rgb(255, 255, 255); z-index: 1000; left: 625.855px; top: 231.84px;">*</span><span id="s28" style="position: absolute; font-family: Times; font-size: 28px; color: rgb(255, 255, 255); z-index: 1000; left: 764.452px; top: 329.28px;">*</span><span id="s29" style="position: absolute; font-family: Times; font-size: 24px; color: rgb(255, 255, 255); z-index: 1000; left: 894.619px; top: 3773.24px;">*</span><span id="s30" style="position: absolute; font-family: Arial; font-size: 27px; color: rgb(255, 255, 255); z-index: 1000; left: 551.618px; top: 1499.02px;">*</span><span id="s31" style="position: absolute; font-family: Times; font-size: 23px; color: rgb(255, 255, 255); z-index: 1000; left: 642.648px; top: 4549.98px;">*</span><span id="s32" style="position: absolute; font-family: Verdana; font-size: 28px; color: rgb(255, 255, 255); z-index: 1000; left: 717.031px; top: 3874.28px;">*</span><span id="s33" style="position: absolute; font-family: Arial; font-size: 22px; color: rgb(255, 255, 255); z-index: 1000; left: 860.963px; top: 157.08px;">*</span><span id="s34" style="position: absolute; font-family: Times; font-size: 16px; color: rgb(255, 255, 255); z-index: 1000; left: 422.184px; top: 5052.16px;">*</span><span id="s35" style="position: absolute; font-family: Verdana; font-size: 15px; color: rgb(255, 255, 255); z-index: 1000; left: 842.376px; top: 3637.9px;">*</span><span id="s36" style="position: absolute; font-family: Times; font-size: 19px; color: rgb(255, 255, 255); z-index: 1000; left: 806.412px; top: 6146.94px;">*</span><span id="s37" style="position: absolute; font-family: Verdana; font-size: 32px; color: rgb(255, 255, 255); z-index: 1000; left: 378.566px; top: 1445.32px;">*</span><span id="s38" style="position: absolute; font-family: Arial; font-size: 22px; color: rgb(255, 255, 255); z-index: 1000; left: 620.702px; top: 344.96px;">*</span><span id="s39" style="position: absolute; font-family: Verdana; font-size: 15px; color: rgb(255, 255, 255); z-index: 1000; left: 909.148px; top: 5267.9px;">*</span><span id="s40" style="position: absolute; font-family: Times; font-size: 16px; color: rgb(255, 255, 255); z-index: 1000; left: 328.469px; top: 715.16px;">*</span><span id="s41" style="position: absolute; font-family: Arial; font-size: 33px; color: rgb(255, 255, 255); z-index: 1000; left: 337.596px; top: 4780.58px;">*</span><span id="s42" style="position: absolute; font-family: Verdana; font-size: 14px; color: rgb(255, 255, 255); z-index: 1000; left: 421.013px; top: 2232.64px;">*</span><span id="s43" style="position: absolute; font-family: Times; font-size: 13px; color: rgb(255, 255, 255); z-index: 1000; left: 533.716px; top: 611.38px;">*</span><span id="s44" style="position: absolute; font-family: Times; font-size: 16px; color: rgb(255, 255, 255); z-index: 1000; left: 887.256px; top: 627.16px;">*</span><span id="s45" style="position: absolute; font-family: Times; font-size: 32px; color: rgb(255, 255, 255); z-index: 1000; left: 369.442px; top: 5469.32px;">*</span><span id="s46" style="position: absolute; font-family: Times; font-size: 15px; color: rgb(255, 255, 255); z-index: 1000; left: 563.017px; top: 308.7px;">*</span><span id="s47" style="position: absolute; font-family: Verdana; font-size: 33px; color: rgb(255, 255, 255); z-index: 1000; left: 689.629px; top: 425.04px;">*</span><span id="s48" style="position: absolute; font-family: Times; font-size: 19px; color: rgb(255, 255, 255); z-index: 1000; left: 386.388px; top: 457.52px;">*</span><span id="s49" style="position: absolute; font-family: Arial; font-size: 25px; color: rgb(255, 255, 255); z-index: 1000; left: 606.778px; top: 364px;">*</span><span id="s50" style="position: absolute; font-family: Times; font-size: 15px; color: rgb(255, 255, 255); z-index: 1000; left: 466.27px; top: 1150.9px;">*</span><span id="s51" style="position: absolute; font-family: Times; font-size: 15px; color: rgb(255, 255, 255); z-index: 1000; left: 353.988px; top: 5559.9px;">*</span><span id="s52" style="position: absolute; font-family: Times; font-size: 14px; color: rgb(255, 255, 255); z-index: 1000; left: 790.663px; top: 5944.64px;">*</span><span id="s53" style="position: absolute; font-family: Times; font-size: 33px; color: rgb(255, 255, 255); z-index: 1000; left: 674.048px; top: 582.12px;">*</span><span id="s54" style="position: absolute; font-family: Verdana; font-size: 29px; color: rgb(255, 255, 255); z-index: 1000; left: 827.066px; top: 4492.54px;">*</span><span id="s55" style="position: absolute; font-family: Verdana; font-size: 14px; color: rgb(255, 255, 255); z-index: 1000; left: 395.894px; top: 3310.64px;">*</span><span id="s56" style="position: absolute; font-family: Verdana; font-size: 29px; color: rgb(255, 255, 255); z-index: 1000; left: 368.156px; top: 6530.54px;">*</span><span id="s57" style="position: absolute; font-family: Times; font-size: 27px; color: rgb(255, 255, 255); z-index: 1000; left: 532.869px; top: 6415.02px;">*</span><span id="s58" style="position: absolute; font-family: Times; font-size: 26px; color: rgb(255, 255, 255); z-index: 1000; left: 766.569px; top: 6070.76px;">*</span><span id="s59" style="position: absolute; font-family: Verdana; font-size: 20px; color: rgb(255, 255, 255); z-index: 1000; left: 764.148px; top: 7090.2px;">*</span><span id="s60" style="position: absolute; font-family: Times; font-size: 15px; color: rgb(255, 255, 255); z-index: 1000; left: 823.459px; top: 835.9px;">*</span><span id="s61" style="position: absolute; font-family: Times; font-size: 31px; color: rgb(255, 255, 255); z-index: 1000; left: 698.792px; top: 946.06px;">*</span><span id="s62" style="position: absolute; font-family: Verdana; font-size: 15px; color: rgb(255, 255, 255); z-index: 1000; left: 694.248px; top: 4685.9px;">*</span><span id="s63" style="position: absolute; font-family: Times; font-size: 31px; color: rgb(255, 255, 255); z-index: 1000; left: 905.922px; top: 2887.06px;">*</span><span id="s64" style="position: absolute; font-family: Verdana; font-size: 17px; color: rgb(255, 255, 255); z-index: 1000; left: 746.745px; top: 6113.42px;">*</span><span id="s65" style="position: absolute; font-family: Arial; font-size: 25px; color: rgb(255, 255, 255); z-index: 1000; left: 678.209px; top: 4737.5px;">*</span><span id="s66" style="position: absolute; font-family: Times; font-size: 14px; color: rgb(255, 255, 255); z-index: 1000; left: 633.954px; top: 5561.64px;">*</span><span id="s67" style="position: absolute; font-family: Times; font-size: 12px; color: rgb(255, 255, 255); z-index: 1000; left: 857.41px; top: 3928.12px;">*</span><span id="s68" style="position: absolute; font-family: Times; font-size: 26px; color: rgb(255, 255, 255); z-index: 1000; left: 696.461px; top: 640.64px;">*</span><span id="s69" style="position: absolute; font-family: Times; font-size: 28px; color: rgb(255, 255, 255); z-index: 1000; left: 585.487px; top: 6129.28px;">*</span><span id="s70" style="position: absolute; font-family: Times; font-size: 34px; color: rgb(255, 255, 255); z-index: 1000; left: 543.454px; top: 3312.84px;">*</span><span id="s71" style="position: absolute; font-family: Times; font-size: 16px; color: rgb(255, 255, 255); z-index: 1000; left: 340.605px; top: 3026.16px;">*</span><span id="s72" style="position: absolute; font-family: Arial; font-size: 10px; color: rgb(255, 255, 255); z-index: 1000; left: 777.986px; top: 114.8px;">*</span><span id="s73" style="position: absolute; font-family: Times; font-size: 11px; color: rgb(255, 255, 255); z-index: 1000; left: 627.102px; top: 4999.86px;">*</span><span id="s74" style="position: absolute; font-family: Verdana; font-size: 18px; color: rgb(255, 255, 255); z-index: 1000; left: 890.837px; top: 4232.68px;">*</span><span id="s75" style="position: absolute; font-family: Times; font-size: 15px; color: rgb(255, 255, 255); z-index: 1000; left: 856.551px; top: 3103.9px;">*</span><span id="s76" style="position: absolute; font-family: Verdana; font-size: 34px; color: rgb(255, 255, 255); z-index: 1000; left: 558.578px; top: 1928.84px;">*</span><span id="s77" style="position: absolute; font-family: Arial; font-size: 11px; color: rgb(255, 255, 255); z-index: 1000; left: 794.92px; top: 1562.86px;">*</span><span id="s78" style="position: absolute; font-family: Times; font-size: 11px; color: rgb(255, 255, 255); z-index: 1000; left: 774.079px; top: 3009.86px;">*</span><span id="s79" style="position: absolute; font-family: Arial; font-size: 16px; color: rgb(255, 255, 255); z-index: 1000; left: 746.079px; top: 1278.16px;">*</span><span id="s80" style="position: absolute; font-family: Verdana; font-size: 28px; color: rgb(255, 255, 255); z-index: 1000; left: 582.807px; top: 2108.28px;">*</span><span id="s81" style="position: absolute; font-family: Verdana; font-size: 14px; color: rgb(255, 255, 255); z-index: 1000; left: 488.364px; top: 1459.64px;">*</span><span id="s82" style="position: absolute; font-family: Times; font-size: 20px; color: rgb(255, 255, 255); z-index: 1000; left: 407.294px; top: 3327.2px;">*</span><span id="s83" style="position: absolute; font-family: Times; font-size: 17px; color: rgb(255, 255, 255); z-index: 1000; left: 830.718px; top: 138.04px;">*</span><span id="s84" style="position: absolute; font-family: Arial; font-size: 20px; color: rgb(255, 255, 255); z-index: 1000; left: 750.459px; top: 3582.2px;">*</span><span id="s85" style="position: absolute; font-family: Times; font-size: 11px; color: rgb(255, 255, 255); z-index: 1000; left: 350.354px; top: 232.54px;">*</span><span id="s86" style="position: absolute; font-family: Arial; font-size: 20px; color: rgb(255, 255, 255); z-index: 1000; left: 347.472px; top: 299.6px;">*</span><span id="s87" style="position: absolute; font-family: Times; font-size: 26px; color: rgb(255, 255, 255); z-index: 1000; left: 911.149px; top: 702.52px;">*</span><span id="s88" style="position: absolute; font-family: Arial; font-size: 32px; color: rgb(255, 255, 255); z-index: 1000; left: 616.901px; top: 5382.32px;">*</span><span id="s89" style="position: absolute; font-family: Times; font-size: 18px; color: rgb(255, 255, 255); z-index: 1000; left: 875.793px; top: 3969.68px;">*</span><span id="s90" style="position: absolute; font-family: Times; font-size: 16px; color: rgb(255, 255, 255); z-index: 1000; left: 665.625px; top: 3754.16px;">*</span><span id="s91" style="position: absolute; font-family: Times; font-size: 28px; color: rgb(255, 255, 255); z-index: 1000; left: 892.29px; top: 6895.28px;">*</span><span id="s92" style="position: absolute; font-family: Arial; font-size: 20px; color: rgb(255, 255, 255); z-index: 1000; left: 820.246px; top: 6344.2px;">*</span><span id="s93" style="position: absolute; font-family: Times; font-size: 31px; color: rgb(255, 255, 255); z-index: 1000; left: 520.743px; top: 2448.06px;">*</span><span id="s94" style="position: absolute; font-family: Times; font-size: 13px; color: rgb(255, 255, 255); z-index: 1000; left: 445.525px; top: 6358.38px;">*</span><span id="s95" style="position: absolute; font-family: Times; font-size: 12px; color: rgb(255, 255, 255); z-index: 1000; left: 391.73px; top: 3515.12px;">*</span><span id="s96" style="position: absolute; font-family: Times; font-size: 24px; color: rgb(255, 255, 255); z-index: 1000; left: 373.367px; top: 2579.24px;">*</span><span id="s97" style="position: absolute; font-family: Times; font-size: 33px; color: rgb(255, 255, 255); z-index: 1000; left: 851.819px; top: 1088.58px;">*</span><span id="s98" style="position: absolute; font-family: Arial; font-size: 19px; color: rgb(255, 255, 255); z-index: 1000; left: 796.837px; top: 1804.94px;">*</span><span id="s99" style="position: absolute; font-family: Times; font-size: 23px; color: rgb(255, 255, 255); z-index: 1000; left: 493.547px; top: 7162.98px;">*</span><span id="s100" style="position: absolute; font-family: Verdana; font-size: 15px; color: rgb(255, 255, 255); z-index: 1000; left: 725.265px; top: 4306.9px;">*</span>
+
+
+    <div class="wrap-container">
+    <ul class="h-card hidden">
+    <li class="h-fn fn">.</li>
+    <li class="h-org org">.</li>
+    <li class="h-tel tel">0909756125</li>
+    <li><a class="u-url ul" href="https://acquythanhtam.vn/">https://acquythanhtam.vn/</a></li>
+</ul>
+<h1 class="hidden-seoh"></h1><div class="header">
+    <div class="header-top">
+        <div class="wrap-content">
+            <p class="info-header"><i class="fa-regular fa-location-dot"></i>Địa chỉ: 55/1Q Ấp Nam Lân, Xã Bà Điểm, Huyện Hóc Môn,TPHCM</p>
+            <p class="info-header mb-none"><i class="fas fa-envelope"></i>Email: tonthanhtam.sg@gmail.com</p>
+            <ul class="social social-header list-unstyled p-0 m-0 mb-none">
+                                    <li class="d-inline-block align-top mr-1">
+                        <a href="" target="_blank" class="hvr-float-shadow">
+                            <img class="lazy loaded" onerror="this.src='https://acquythanhtam.vn/thumbs/27x26x3/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/27x26x3/upload/photo/mxh4-16891.png" style="display: inline-block;aspect-ratio: 27/26;object-fit: contain;" width="27" height="26" alt="." src="https://acquythanhtam.vn/thumbs/27x26x3/upload/photo/mxh4-16891.png" data-was-processed="true">                        </a>
+                    </li>
+                                    <li class="d-inline-block align-top mr-1">
+                        <a href="" target="_blank" class="hvr-float-shadow">
+                            <img class="lazy loaded" onerror="this.src='https://acquythanhtam.vn/thumbs/27x26x3/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/27x26x3/upload/photo/mxh3-94190.png" style="display: inline-block;aspect-ratio: 27/26;object-fit: contain;" width="27" height="26" alt="." src="https://acquythanhtam.vn/thumbs/27x26x3/upload/photo/mxh3-94190.png" data-was-processed="true">                        </a>
+                    </li>
+                                    <li class="d-inline-block align-top mr-1">
+                        <a href="" target="_blank" class="hvr-float-shadow">
+                            <img class="lazy loaded" onerror="this.src='https://acquythanhtam.vn/thumbs/27x26x3/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/27x26x3/upload/photo/mxh2-50811.png" style="display: inline-block;aspect-ratio: 27/26;object-fit: contain;" width="27" height="26" alt="." src="https://acquythanhtam.vn/thumbs/27x26x3/upload/photo/mxh2-50811.png" data-was-processed="true">                        </a>
+                    </li>
+                                    <li class="d-inline-block align-top mr-1">
+                        <a href="" target="_blank" class="hvr-float-shadow">
+                            <img class="lazy loaded" onerror="this.src='https://acquythanhtam.vn/thumbs/27x26x3/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/27x26x3/upload/photo/mxh1-81420.png" style="display: inline-block;aspect-ratio: 27/26;object-fit: contain;" width="27" height="26" alt="." src="https://acquythanhtam.vn/thumbs/27x26x3/upload/photo/mxh1-81420.png" data-was-processed="true">                        </a>
+                    </li>
+                            </ul>
+            
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="wrap-content mb-center">
+            <a class="logo-header peShiner d-block mb-w-100" href="">
+                <img class="lazy loaded" onerror="this.src='https://acquythanhtam.vn/thumbs/220x75x3/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/220x75x3/upload/photo/logo-8622.png" style="display: inline-block;aspect-ratio: 220/75;object-fit: contain;" width="220" height="75" alt="." src="https://acquythanhtam.vn/thumbs/220x75x3/upload/photo/logo-8622.png" data-was-processed="true">            </a>
+                        <div class="mb-none">
+                <div class="search w-clear mb-2 ">
+                    <input type="text" id="keyword" placeholder="Nhập từ khóa." onkeypress="doEnter(event,'keyword');" style="">
+                    <p onclick="onSearch('keyword');"><i class="fas fa-search"></i></p>
+                </div>
+                <p class="info-header">Chuyên: mua bán, trao đổi các loại ắc quy nội - ngoại nhập</p>
+            </div>
+
+            <div class="mb-none">
+                <a class="hotline-header mb-2">
+                    <img class="mr-2 animate__tada animate__animated animate__infinite" onerror="this.src='https://acquythanhtam.vn/thumbs/40x40x2/assets/images/noimage.png';" src="https://acquythanhtam.vn/assets/images/hotline.png" alt="Hotline">                    <div class="w-phone">
+                        <p>Hotline:</p>
+                        <span>0909-756-125</span>
+                    </div>
+                </a>
+                <p class="timeopen mb-0">Mở cửa: (8h-21h từ T2-T7; 17h Chủ Nhật)</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="menu-list">
+    <div class="d-flex align-items-center justify-content-between wrap-content">
+        <div class="hdanhmucdrops ver1">
+            <a class="title flex-space-left" href="san-pham">
+                <p class="click-icon-menu ">
+                    <span class="d-flex align-items-center justify-content-center"> <i class="fas fa-stream"></i>Danh mục sản phẩm</span>
+                </p>
+            </a>
+                        <div class="nicescl">
+                <ul class="content nicescroll" style="height: 378px;">
+                                        <li class="d-flex align-items-center justify-content-start">
+                        <a class="singletext" href="ac-quy-vien-thong-dien-luc"><i class="fa-solid fa-grid-2 mr-2"></i> ẮC QUY VIỄN THÔNG ĐIỆN LƯC                            <i class="right fas fa-angle-right"></i></a>
+                                                <ul class="w_ul">
+                            <div class="form-row">
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-dong-cta">Ắc quy dòng CTA                                            </a>
+                                                                            </li>
+                                </div>
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-dong-cl">Ắc quy dòng CL                                            </a>
+                                                                            </li>
+                                </div>
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-dong-fm1">Ắc quy dòng FM                                            </a>
+                                                                            </li>
+                                </div>
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-dong-chi-tinh-khiet">Ắc quy dòng chỉ tinh khiết                                            </a>
+                                                                            </li>
+                                </div>
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-dong-xa-sau">Ắc quy dòng xả sâu                                            </a>
+                                                                            </li>
+                                </div>
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-dong-ct">Ắc quy dòng CT                                            </a>
+                                                                            </li>
+                                </div>
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-dong-pure-gel">Ắc quy dòng PURE GEL                                            </a>
+                                                                            </li>
+                                </div>
+                                                            </div>
+                        </ul>
+                                            </li>
+                    <li class="line"></li>
+                                        <li class="d-flex align-items-center justify-content-start">
+                        <a class="singletext" href="ac-quy-ups"><i class="fa-solid fa-grid-2 mr-2"></i> ẮC QUY UPS                            <i class="right fas fa-angle-right"></i></a>
+                                                <ul class="w_ul">
+                            <div class="form-row">
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-dong-hphf">Ắc quy dòng HP&amp;HF                                            </a>
+                                                                            </li>
+                                </div>
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-dong-cp">Ắc quy dòng CP                                            </a>
+                                                                            </li>
+                                </div>
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-dong-fm">Ắc quy dòng FM                                            </a>
+                                                                            </li>
+                                </div>
+                                                            </div>
+                        </ul>
+                                            </li>
+                    <li class="line"></li>
+                                        <li class="d-flex align-items-center justify-content-start">
+                        <a class="singletext" href="ac-quy-xe-golf-va-xe-nang"><i class="fa-solid fa-grid-2 mr-2"></i> ẮC QUY XE GOLF VÀ XE NÂNG                            <i class="right fas fa-angle-right"></i></a>
+                                                <ul class="w_ul">
+                            <div class="form-row">
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-xe-dien">Ắc quy xe điện                                            </a>
+                                                                            </li>
+                                </div>
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-xe-nang">Ắc quy xe nâng                                            </a>
+                                                                            </li>
+                                </div>
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-xe-golf">Ắc quy xe Golf                                            </a>
+                                                                            </li>
+                                </div>
+                                                            </div>
+                        </ul>
+                                            </li>
+                    <li class="line"></li>
+                                        <li class="d-flex align-items-center justify-content-start">
+                        <a class="singletext" href="ac-quy-nang-luong-mat-troi1"><i class="fa-solid fa-grid-2 mr-2"></i> ẮC QUY NĂNG LƯỢNG MẶT TRỜI                            <i class="right fas fa-angle-right"></i></a>
+                                                <ul class="w_ul">
+                            <div class="form-row">
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-nang-luong-mat-troi">Ắc quy năng lượng mặt trời                                            </a>
+                                                                            </li>
+                                </div>
+                                                            </div>
+                        </ul>
+                                            </li>
+                    <li class="line"></li>
+                                        <li class="d-flex align-items-center justify-content-start">
+                        <a class="singletext" href="ac-quy-khoi-dong1"><i class="fa-solid fa-grid-2 mr-2"></i> ẮC QUY KHỎI ĐỘNG                            <i class="right fas fa-angle-right"></i></a>
+                                                <ul class="w_ul">
+                            <div class="form-row">
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="ac-quy-khoi-dong">Ắc quy khởi động                                            </a>
+                                                                            </li>
+                                </div>
+                                                            </div>
+                        </ul>
+                                            </li>
+                    <li class="line"></li>
+                                        <li class="d-flex align-items-center justify-content-start">
+                        <a class="singletext" href="pin-lithium1"><i class="fa-solid fa-grid-2 mr-2"></i> PIN LITHIUM                            <i class="right fas fa-angle-right"></i></a>
+                                                <ul class="w_ul">
+                            <div class="form-row">
+                                                                <div class="col-6">
+                                    <li>
+                                        <a class="singletext" href="pin-lithium">PIN LITHIUM                                            </a>
+                                                                            </li>
+                                </div>
+                                                            </div>
+                        </ul>
+                                            </li>
+                    <li class="line"></li>
+                                        <li class="d-flex align-items-center justify-content-start">
+                        <a class="singletext" href="du-an-dien-mat-troi"><i class="fa-solid fa-grid-2 mr-2"></i> DỰ ÁN ĐIỆN MẶT TRỜI                            </a>
+                                            </li>
+                    <li class="line"></li>
+                                    </ul>
+            </div>
+                    </div>
+        <div class="menu">
+            <ul class="d-flex align-items-center justify-content-between">
+                <li class="ml-5"><a class="active transition" href="" title="Trang chủ">Trang chủ</a></li>
+                <li class="menu-line"></li>
+                <li><a class="transition" href="gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
+                <li class="menu-line"></li>
+                <li>
+                    <a class="transition" href="dich-vu" title="Dịch vụ">Dịch vụ</a>
+                                    </li>
+
+                <li class="menu-line"></li>
+                <li><a class="transition" href="tin-tuc" title="Tin tức">Tin tức</a></li>
+                <li class="menu-line"></li>
+                <li><a class="transition" href="tuyen-dung" title="Tuyển dụng">Tuyển dụng</a></li>
+                <li class="menu-line"></li>
+                <li><a class="transition" href="lien-he" title="Liên hệ">Liên hệ</a></li>
+                <li class="menu-line"></li>
+                <li>
+                    <div class="lang-header d-flex justify-content-between align-items-center">
+                        <a href="ngon-ngu/vi/"><img class="lazy loaded" onerror="this.src='https://acquythanhtam.vn/thumbs/35x25x1/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/assets/images/vi.jpg" alt="Tiếng Việt" src="https://acquythanhtam.vn/assets/images/vi.jpg" data-was-processed="true"></a>
+                        <a href="ngon-ngu/en/"><img class="lazy loaded" onerror="this.src='https://acquythanhtam.vn/thumbs/35x25x1/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/assets/images/en.jpg" alt="Tiếng Anh" src="https://acquythanhtam.vn/assets/images/en.jpg" data-was-processed="true"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div><div class="menu-res">
+    <div class="menu-bar-res">
+        <div class="search search-res-w100 w-clear">
+            <input type="text" id="keyword-res" placeholder="Nhập từ khóa." onkeypress="doEnter(event,'keyword-res');" style="">
+            <p onclick="onSearch('keyword-res');"><i class="fas fa-search"></i></p>
+        </div>
+        <a id="hamburger" class="mmenu-menu-mobile" href="#menu" title="Menu"><span></span></a>
+            </div>
+    <div class="opacity-menu"></div>
+    <div class="mmenu-fixwidth">
+        <div class="section wrap-menu">
+            <div class="logos-menu text-center">
+                <a class="logo-menu mb-3 d-block" href="">
+                    <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/220x75x3/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/220x75x3/upload/photo/logo-8622.png" style="display: inline-block;aspect-ratio: 220/75;object-fit: contain;" width="220" height="75" alt=".">                </a>
+                
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a class="active transition" href="" title="Trang chủ">Trang chủ</a></li>
+
+                    <li><a class=" transition" href="gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
+
+                    <li>
+                        <a class="has-child  transition" href="san-pham" title="Sản phẩm">Sản phẩm</a>
+                                                <span class="btn-dropdown-menu "></span>
+                        <ul class="none">
+                                                        <li>
+                                <a class="has-child transition" title="ẮC QUY VIỄN THÔNG ĐIỆN LƯC" href="ac-quy-vien-thong-dien-luc">ẮC QUY VIỄN THÔNG ĐIỆN LƯC</a>
+                                                                <span class="btn-dropdown-menu "></span>
+                                <ul class="none">
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy dòng CTA" href="ac-quy-dong-cta">Ắc quy dòng CTA</a>
+                                                                            </li>
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy dòng CL" href="ac-quy-dong-cl">Ắc quy dòng CL</a>
+                                                                            </li>
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy dòng FM" href="ac-quy-dong-fm1">Ắc quy dòng FM</a>
+                                                                            </li>
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy dòng chỉ tinh khiết" href="ac-quy-dong-chi-tinh-khiet">Ắc quy dòng chỉ tinh khiết</a>
+                                                                            </li>
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy dòng xả sâu" href="ac-quy-dong-xa-sau">Ắc quy dòng xả sâu</a>
+                                                                            </li>
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy dòng CT" href="ac-quy-dong-ct">Ắc quy dòng CT</a>
+                                                                            </li>
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy dòng PURE GEL" href="ac-quy-dong-pure-gel">Ắc quy dòng PURE GEL</a>
+                                                                            </li>
+                                                                    </ul>
+                                                            </li>
+                                                        <li>
+                                <a class="has-child transition" title="ẮC QUY UPS" href="ac-quy-ups">ẮC QUY UPS</a>
+                                                                <span class="btn-dropdown-menu "></span>
+                                <ul class="none">
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy dòng HP&amp;HF" href="ac-quy-dong-hphf">Ắc quy dòng HP&amp;HF</a>
+                                                                            </li>
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy dòng CP" href="ac-quy-dong-cp">Ắc quy dòng CP</a>
+                                                                            </li>
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy dòng FM" href="ac-quy-dong-fm">Ắc quy dòng FM</a>
+                                                                            </li>
+                                                                    </ul>
+                                                            </li>
+                                                        <li>
+                                <a class="has-child transition" title="ẮC QUY XE GOLF VÀ XE NÂNG" href="ac-quy-xe-golf-va-xe-nang">ẮC QUY XE GOLF VÀ XE NÂNG</a>
+                                                                <span class="btn-dropdown-menu "></span>
+                                <ul class="none">
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy xe điện" href="ac-quy-xe-dien">Ắc quy xe điện</a>
+                                                                            </li>
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy xe nâng" href="ac-quy-xe-nang">Ắc quy xe nâng</a>
+                                                                            </li>
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy xe Golf" href="ac-quy-xe-golf">Ắc quy xe Golf</a>
+                                                                            </li>
+                                                                    </ul>
+                                                            </li>
+                                                        <li>
+                                <a class="has-child transition" title="ẮC QUY NĂNG LƯỢNG MẶT TRỜI" href="ac-quy-nang-luong-mat-troi1">ẮC QUY NĂNG LƯỢNG MẶT TRỜI</a>
+                                                                <span class="btn-dropdown-menu "></span>
+                                <ul class="none">
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy năng lượng mặt trời" href="ac-quy-nang-luong-mat-troi">Ắc quy năng lượng mặt trời</a>
+                                                                            </li>
+                                                                    </ul>
+                                                            </li>
+                                                        <li>
+                                <a class="has-child transition" title="ẮC QUY KHỎI ĐỘNG" href="ac-quy-khoi-dong1">ẮC QUY KHỎI ĐỘNG</a>
+                                                                <span class="btn-dropdown-menu "></span>
+                                <ul class="none">
+                                                                        <li>
+                                        <a class="has-child transition" title="Ắc quy khởi động" href="ac-quy-khoi-dong">Ắc quy khởi động</a>
+                                                                            </li>
+                                                                    </ul>
+                                                            </li>
+                                                        <li>
+                                <a class="has-child transition" title="PIN LITHIUM" href="pin-lithium1">PIN LITHIUM</a>
+                                                                <span class="btn-dropdown-menu "></span>
+                                <ul class="none">
+                                                                        <li>
+                                        <a class="has-child transition" title="PIN LITHIUM" href="pin-lithium">PIN LITHIUM</a>
+                                                                            </li>
+                                                                    </ul>
+                                                            </li>
+                                                        <li>
+                                <a class="has-child transition" title="DỰ ÁN ĐIỆN MẶT TRỜI" href="du-an-dien-mat-troi">DỰ ÁN ĐIỆN MẶT TRỜI</a>
+                                                            </li>
+                                                    </ul>
+                                            </li>
+
+                    <li>
+                    <a class="has-child  transition" href="dich-vu" title="Dịch vụ">Dịch vụ</a>
+                                    </li>
+
+                
+                <li><a class=" transition" href="tin-tuc" title="Tin tức">Tin tức</a></li>
+                
+                <li><a class=" transition" href="tuyen-dung" title="Tuyển dụng">Tuyển dụng</a></li>
+                
+                <li><a class=" transition" href="lien-he" title="Liên hệ">Liên hệ</a></li>
+                
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="slide-wrap">
+    <div class="wrap-content d-flex justify-content-between flex-wrap">
+        <div class="hdanhmucdropsjs">
+                        <div class="nicescl">
+                <ul class="content nicescroll" style="height: 378px;">
+                                        <li class="d-flex align-items-center justify-content-start">
+                        <a class="singletext" href="ac-quy-vien-thong-dien-luc"><i class="fa-solid fa-grid-2 mr-2"></i> ẮC QUY VIỄN THÔNG ĐIỆN LƯC                            <i class="right fas fa-angle-right"></i></a>
+                                                <ul class="w_ul">
+                        <div class="form-row">
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-dong-cta">Ắc quy dòng CTA                                        </a>
+                                                                    </li>
+                            </div>
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-dong-cl">Ắc quy dòng CL                                        </a>
+                                                                    </li>
+                            </div>
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-dong-fm1">Ắc quy dòng FM                                        </a>
+                                                                    </li>
+                            </div>
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-dong-chi-tinh-khiet">Ắc quy dòng chỉ tinh khiết                                        </a>
+                                                                    </li>
+                            </div>
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-dong-xa-sau">Ắc quy dòng xả sâu                                        </a>
+                                                                    </li>
+                            </div>
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-dong-ct">Ắc quy dòng CT                                        </a>
+                                                                    </li>
+                            </div>
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-dong-pure-gel">Ắc quy dòng PURE GEL                                        </a>
+                                                                    </li>
+                            </div>
+                                                        </div>
+                        </ul>
+                                            </li>
+                    <li class="line"></li>
+                                        <li class="d-flex align-items-center justify-content-start">
+                        <a class="singletext" href="ac-quy-ups"><i class="fa-solid fa-grid-2 mr-2"></i> ẮC QUY UPS                            <i class="right fas fa-angle-right"></i></a>
+                                                <ul class="w_ul">
+                        <div class="form-row">
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-dong-hphf">Ắc quy dòng HP&amp;HF                                        </a>
+                                                                    </li>
+                            </div>
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-dong-cp">Ắc quy dòng CP                                        </a>
+                                                                    </li>
+                            </div>
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-dong-fm">Ắc quy dòng FM                                        </a>
+                                                                    </li>
+                            </div>
+                                                        </div>
+                        </ul>
+                                            </li>
+                    <li class="line"></li>
+                                        <li class="d-flex align-items-center justify-content-start">
+                        <a class="singletext" href="ac-quy-xe-golf-va-xe-nang"><i class="fa-solid fa-grid-2 mr-2"></i> ẮC QUY XE GOLF VÀ XE NÂNG                            <i class="right fas fa-angle-right"></i></a>
+                                                <ul class="w_ul">
+                        <div class="form-row">
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-xe-dien">Ắc quy xe điện                                        </a>
+                                                                    </li>
+                            </div>
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-xe-nang">Ắc quy xe nâng                                        </a>
+                                                                    </li>
+                            </div>
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-xe-golf">Ắc quy xe Golf                                        </a>
+                                                                    </li>
+                            </div>
+                                                        </div>
+                        </ul>
+                                            </li>
+                    <li class="line"></li>
+                                        <li class="d-flex align-items-center justify-content-start">
+                        <a class="singletext" href="ac-quy-nang-luong-mat-troi1"><i class="fa-solid fa-grid-2 mr-2"></i> ẮC QUY NĂNG LƯỢNG MẶT TRỜI                            <i class="right fas fa-angle-right"></i></a>
+                                                <ul class="w_ul">
+                        <div class="form-row">
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-nang-luong-mat-troi">Ắc quy năng lượng mặt trời                                        </a>
+                                                                    </li>
+                            </div>
+                                                        </div>
+                        </ul>
+                                            </li>
+                    <li class="line"></li>
+                                        <li class="d-flex align-items-center justify-content-start">
+                        <a class="singletext" href="ac-quy-khoi-dong1"><i class="fa-solid fa-grid-2 mr-2"></i> ẮC QUY KHỎI ĐỘNG                            <i class="right fas fa-angle-right"></i></a>
+                                                <ul class="w_ul">
+                        <div class="form-row">
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="ac-quy-khoi-dong">Ắc quy khởi động                                        </a>
+                                                                    </li>
+                            </div>
+                                                        </div>
+                        </ul>
+                                            </li>
+                    <li class="line"></li>
+                                        <li class="d-flex align-items-center justify-content-start">
+                        <a class="singletext" href="pin-lithium1"><i class="fa-solid fa-grid-2 mr-2"></i> PIN LITHIUM                            <i class="right fas fa-angle-right"></i></a>
+                                                <ul class="w_ul">
+                        <div class="form-row">
+                                                        <div class="col-6">
+                                <li>
+                                    <a class="singletext" href="pin-lithium">PIN LITHIUM                                        </a>
+                                                                    </li>
+                            </div>
+                                                        </div>
+                        </ul>
+                                            </li>
+                    <li class="line"></li>
+                                        <li class="d-flex align-items-center justify-content-start">
+                        <a class="singletext" href="du-an-dien-mat-troi"><i class="fa-solid fa-grid-2 mr-2"></i> DỰ ÁN ĐIỆN MẶT TRỜI                            </a>
+                                            </li>
+                    <li class="line"></li>
+                                    </ul>
+            </div>
+                    </div>
+        <div class="box-app-slide">
+                            <div class="slideshow">
+                    <div class="owl-page owl-carousel owl-theme owl-loaded" data-items="screen:0|items:1" data-rewind="1" data-autoplay="1" data-loop="0" data-lazyload="0" data-mousedrag="0" data-touchdrag="0" data-smartspeed="800" data-autoplayspeed="800" data-autoplaytimeout="5000" data-dots="0" data-animations="animate__fadeInDown, animate__backInUp, animate__rollIn, animate__backInRight, animate__zoomInUp, animate__backInLeft, animate__rotateInDownLeft, animate__backInDown, animate__zoomInDown, animate__fadeInUp, animate__zoomIn" data-nav="1" data-navcontainer=".control-slideshow">
+                                                
+                                                
+                                                
+                                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1880px, 0px, 0px); transition: 0.8s; width: 2820px;"><div class="owl-item" style="width: 940px;"><div class="slideshow-item" owl-item-animation="">
+                            <a class="slideshow-image" href="" target="_blank" title="">
+                                <img class="lazy w-100 loaded" onerror="this.src='https://acquythanhtam.vn/thumbs/945x370x1/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/945x370x1/upload/photo/screenshot-2023-12-25-114258-31240.png.webp" style="display: inline-block;aspect-ratio: 945/370;object-fit: contain;" width="945" height="370" alt="." src="https://acquythanhtam.vn/thumbs/945x370x1/upload/photo/screenshot-2023-12-25-114258-31240.png.webp" data-was-processed="true">                            </a>
+                        </div></div><div class="owl-item" style="width: 940px;"><div class="slideshow-item" owl-item-animation="">
+                            <a class="slideshow-image" href="" target="_blank" title="">
+                                <img class="lazy w-100 loaded" onerror="this.src='https://acquythanhtam.vn/thumbs/945x370x1/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/945x370x1/upload/photo/slider2-62911.jpg.webp" style="display: inline-block;aspect-ratio: 945/370;object-fit: contain;" width="945" height="370" alt="." src="https://acquythanhtam.vn/thumbs/945x370x1/upload/photo/slider2-62911.jpg.webp" data-was-processed="true">                            </a>
+                        </div></div><div class="owl-item active" style="width: 940px;"><div class="slideshow-item animate__animated animate__backInUp" owl-item-animation="">
+                            <a class="slideshow-image" href="" target="_blank" title="">
+                                <img class="lazy w-100 loaded" onerror="this.src='https://acquythanhtam.vn/thumbs/945x370x1/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/945x370x1/upload/photo/slider1-89570.jpg.webp" style="display: inline-block;aspect-ratio: 945/370;object-fit: contain;" width="945" height="370" alt="." src="https://acquythanhtam.vn/thumbs/945x370x1/upload/photo/slider1-89570.jpg.webp" data-was-processed="true">                            </a>
+                        </div></div></div></div><div class="owl-dots disabled"></div></div>
+                    <div class="control-slideshow control-owl transition"><button type="button" role="presentation" class="owl-prev"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="50" height="37" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="5" y1="12" x2="19" y2="12"></line><line x1="5" y1="12" x2="9" y2="16"></line><line x1="5" y1="12" x2="9" y2="8"></line></svg></button><button type="button" role="presentation" class="owl-next"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="50" height="37" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="5" y1="12" x2="19" y2="12"></line><line x1="15" y1="16" x2="19" y2="12"></line><line x1="15" y1="8" x2="19" y2="12"></line></svg></button></div>
+                </div>
+                    </div>
+    </div>
+</div>
+    <div class="wrap-home w-clear">
+        
+<div class="wrap-criteria mt-30 py30 mb-50">
+    <div class="wrap-content position-relative">
+        <div class="owl-page owl-carousel owl-theme owl-loaded owl-drag" data-items="screen:0|items:2|margin:10,screen:425|items:2|margin:20,screen:575|items:3|margin:10,screen:767|items:3|margin:20,screen:991|items:4|margin:20,screen:1199|items:4|margin:30" data-rewind="1" data-autoplay="1" data-loop="0" data-lazyload="0" data-mousedrag="1" data-touchdrag="1" data-smartspeed="300" data-autoplayspeed="500" data-autoplaytimeout="3500" data-dots="0" data-nav="0" data-navcontainer=".control-criteria">
+                        
+                        
+                        
+                        
+                    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all; width: 1230px;"><div class="owl-item active" style="width: 277.5px; margin-right: 30px;"><div class="criteria">
+                <div class="box-criteria position-relative form-row align-items-center">
+                    <div class="col-3">
+                        <a class="criteria-image d-inline-block" title="Hỗ trợ online 24/7">
+                            <img class="lazy loaded" onerror="this.src='https://acquythanhtam.vn/thumbs/60x60x3/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/60x60x3/upload/news/tieuchi4-2574.png" style="display: inline-block;aspect-ratio: 60/60;object-fit: contain;" width="60" height="60" alt="Hỗ trợ online 24/7" src="https://acquythanhtam.vn/thumbs/60x60x3/upload/news/tieuchi4-2574.png" data-was-processed="true">                        </a>
+                    </div>
+                    <div class="col-9 criteria-info">
+                        <h3 class="criteria-name">
+                            <a class="text-decoration-none transition text-split" title="Hỗ trợ online 24/7">Hỗ trợ online 24/7</a>
+                        </h3>
+                        <div class="criteria-desc text-split">Gọi ngay 0909 090 090 để được tư vấn</div>
+                    </div>
+                </div>
+            </div></div><div class="owl-item active" style="width: 277.5px; margin-right: 30px;"><div class="criteria">
+                <div class="box-criteria position-relative form-row align-items-center">
+                    <div class="col-3">
+                        <a class="criteria-image d-inline-block" title="Giá cả cạnh tranh">
+                            <img class="lazy loaded" onerror="this.src='https://acquythanhtam.vn/thumbs/60x60x3/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/60x60x3/upload/news/tieuchi3-1314.png" style="display: inline-block;aspect-ratio: 60/60;object-fit: contain;" width="60" height="60" alt="Giá cả cạnh tranh" src="https://acquythanhtam.vn/thumbs/60x60x3/upload/news/tieuchi3-1314.png" data-was-processed="true">                        </a>
+                    </div>
+                    <div class="col-9 criteria-info">
+                        <h3 class="criteria-name">
+                            <a class="text-decoration-none transition text-split" title="Giá cả cạnh tranh">Giá cả cạnh tranh</a>
+                        </h3>
+                        <div class="criteria-desc text-split">Giảm giá &amp; khuyến mãi với ưu đãi cực lớn</div>
+                    </div>
+                </div>
+            </div></div><div class="owl-item active" style="width: 277.5px; margin-right: 30px;"><div class="criteria">
+                <div class="box-criteria position-relative form-row align-items-center">
+                    <div class="col-3">
+                        <a class="criteria-image d-inline-block" title="Giao hàng siêu nhanh">
+                            <img class="lazy loaded" onerror="this.src='https://acquythanhtam.vn/thumbs/60x60x3/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/60x60x3/upload/news/tieuchi2-4300.png" style="display: inline-block;aspect-ratio: 60/60;object-fit: contain;" width="60" height="60" alt="Giao hàng siêu nhanh" src="https://acquythanhtam.vn/thumbs/60x60x3/upload/news/tieuchi2-4300.png" data-was-processed="true">                        </a>
+                    </div>
+                    <div class="col-9 criteria-info">
+                        <h3 class="criteria-name">
+                            <a class="text-decoration-none transition text-split" title="Giao hàng siêu nhanh">Giao hàng siêu nhanh</a>
+                        </h3>
+                        <div class="criteria-desc text-split">Chúng tôi cam kết giao hàng trong 24h</div>
+                    </div>
+                </div>
+            </div></div><div class="owl-item active" style="width: 277.5px; margin-right: 30px;"><div class="criteria">
+                <div class="box-criteria position-relative form-row align-items-center">
+                    <div class="col-3">
+                        <a class="criteria-image d-inline-block" title="Chất lượng hàng đầu">
+                            <img class="lazy loaded" onerror="this.src='https://acquythanhtam.vn/thumbs/60x60x3/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/60x60x3/upload/news/tieuchi1-8707.png" style="display: inline-block;aspect-ratio: 60/60;object-fit: contain;" width="60" height="60" alt="Chất lượng hàng đầu" src="https://acquythanhtam.vn/thumbs/60x60x3/upload/news/tieuchi1-8707.png" data-was-processed="true">                        </a>
+                    </div>
+                    <div class="col-9 criteria-info">
+                        <h3 class="criteria-name">
+                            <a class="text-decoration-none transition text-split" title="Chất lượng hàng đầu">Chất lượng hàng đầu</a>
+                        </h3>
+                        <div class="criteria-desc text-split">Cam kết tất cả sản phẩm chính hãng 100%</div>
+                    </div>
+                </div>
+            </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"></button><button type="button" role="presentation" class="owl-next"></button></div><div class="owl-dots disabled"></div></div>
+        <div class="control-criteria control-owl transition"></div>
+    </div>
+</div>
+
+<div class="wrap-product mb-50">
+    <div class="wrap-content">
+        <div class="title-main">
+            <span>ẮC QUY VIỄN THÔNG ĐIỆN LƯC</span>
+            <p class="line"></p>
+        </div>
+                <div class="image-product-banner mb-30">
+            <img class="w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/1200x250x1/assets/images/noimage.png';" src="https://acquythanhtam.vn/thumbs/1200x250x1/upload/product/baner-9022.png" style="display: inline-block;aspect-ratio: 1200/250;object-fit: contain;" width="1200" height="250" alt="ẮC QUY VIỄN THÔNG ĐIỆN LƯC">        </div>
+                <div class="paging-product-category paging-product-category-52" data-list="52">
+	    <div class="grid-page grid-product">
+        			<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-6fm120ex" title="ẮC QUY 6FM120E-X">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/6fm120ex-3338.png" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="ẮC QUY 6FM120E-X">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-6fm120ex" title="ẮC QUY 6FM120E-X">ẮC QUY 6FM120E-X</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-cp12240ex" title="ẮC QUY CP12240E-X">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/cp12240ex-8222.png" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="ẮC QUY CP12240E-X">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-cp12240ex" title="ẮC QUY CP12240E-X">ẮC QUY CP12240E-X</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-6fm65ex" title="ẮC QUY 6FM65E-X">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/6fm65ex-5995.png" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="ẮC QUY 6FM65E-X">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-6fm65ex" title="ẮC QUY 6FM65E-X">ẮC QUY 6FM65E-X</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-cp1290" title="ẮC QUY CP1290">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/cp1290ab-6360.png" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="ẮC QUY CP1290">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-cp1290" title="ẮC QUY CP1290">ẮC QUY CP1290</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-cp12120" title=" ẮC QUY CP12120">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/cp12120-5092.png" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt=" ẮC QUY CP12120">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-cp12120" title=" ẮC QUY CP12120"> ẮC QUY CP12120</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-6fm40ex" title="ẮC QUY 6FM40E-X">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/6fm40ex-5707.png" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="ẮC QUY 6FM40E-X">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-6fm40ex" title="ẮC QUY 6FM40E-X">ẮC QUY 6FM40E-X</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-6fm33x" title="Ắc quy 6FM33-X">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/6fm33x-5254.png" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="Ắc quy 6FM33-X">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-6fm33x" title="Ắc quy 6FM33-X">Ắc quy 6FM33-X</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-vrla-vision" title="Ắc quy VRLA VISION">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/fm210x180-8363.jpg" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="Ắc quy VRLA VISION">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-vrla-vision" title="Ắc quy VRLA VISION">Ắc quy VRLA VISION</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+		    </div>
+
+</div>
+        <div class="text-center">
+            <a href="ac-quy-vien-thong-dien-luc" class="btn btn-custom">Xem thêm <i class="fa-regular fa-chevron-right ml-1"></i></a>
+        </div>
+    </div>
+</div>
+<div class="wrap-product mb-50">
+    <div class="wrap-content">
+        <div class="title-main">
+            <span>ẮC QUY UPS</span>
+            <p class="line"></p>
+        </div>
+                <div class="paging-product-category paging-product-category-64" data-list="64">
+	    <div class="grid-page grid-product">
+        			<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-vision-cp12170ex" title="Ắc quy Vision CP12170E-X">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/ac-quy-vision-17ah-12v-cp12170-7855.jpg" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="Ắc quy Vision CP12170E-X">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-vision-cp12170ex" title="Ắc quy Vision CP12170E-X">Ắc quy Vision CP12170E-X</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-vision-6fm90ex" title="Ắc quy Vision 6FM90E-X">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/p45755vision-6fm90e-x-8287.jpg" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="Ắc quy Vision 6FM90E-X">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-vision-6fm90ex" title="Ắc quy Vision 6FM90E-X">Ắc quy Vision 6FM90E-X</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-vision-6fm200sex" title="Ắc quy Vision 6FM200SE-X">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/6fm80x-2610.jpg" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="Ắc quy Vision 6FM200SE-X">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-vision-6fm200sex" title="Ắc quy Vision 6FM200SE-X">Ắc quy Vision 6FM200SE-X</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-ups-6fm75x-12v75ah" title="ẮC QUY UPS 6FM75-X 12V75AH">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/147079872039-3910.png" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="ẮC QUY UPS 6FM75-X 12V75AH">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-ups-6fm75x-12v75ah" title="ẮC QUY UPS 6FM75-X 12V75AH">ẮC QUY UPS 6FM75-X 12V75AH</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-cp" title="ẮC QUY CP">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/0cp612-2024.jpg" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="ẮC QUY CP">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-cp" title="ẮC QUY CP">ẮC QUY CP</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+		    </div>
+
+</div>
+        <div class="text-center">
+            <a href="ac-quy-ups" class="btn btn-custom">Xem thêm <i class="fa-regular fa-chevron-right ml-1"></i></a>
+        </div>
+    </div>
+</div>
+<div class="wrap-product mb-50">
+    <div class="wrap-content">
+        <div class="title-main">
+            <span>ẮC QUY XE GOLF VÀ XE NÂNG</span>
+            <p class="line"></p>
+        </div>
+                <div class="paging-product-category paging-product-category-53" data-list="53">
+	    <div class="grid-page grid-product">
+        			<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-xe-dap-dien" title="ẮC QUY XE ĐẠP ĐIỆN">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/acquyxedapdienchilwee-8831.jpg" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="ẮC QUY XE ĐẠP ĐIỆN">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-xe-dap-dien" title="ẮC QUY XE ĐẠP ĐIỆN">ẮC QUY XE ĐẠP ĐIỆN</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="bak-ev-lfp48v100ah-bgesf48v100ra-bgesf48v100rb" title="BAK- EV LFP48V100Ah/ BGESF48V100-RA/ BGESF48V100-RB">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/bak-evlfp-51-1333.png" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="BAK- EV LFP48V100Ah/ BGESF48V100-RA/ BGESF48V100-RB">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="bak-ev-lfp48v100ah-bgesf48v100ra-bgesf48v100rb" title="BAK- EV LFP48V100Ah/ BGESF48V100-RA/ BGESF48V100-RB">BAK- EV LFP48V100Ah/ BGESF48V100-RA/ BGESF48V100-RB</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="bak-ev-lfp72v100ah-bgesf72v100rea" title="BAK- EV LFP72V100Ah/ BGESF72V100-R(E)A">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/bak-evlfp-51-8058.png" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="BAK- EV LFP72V100Ah/ BGESF72V100-R(E)A">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="bak-ev-lfp72v100ah-bgesf72v100rea" title="BAK- EV LFP72V100Ah/ BGESF72V100-R(E)A">BAK- EV LFP72V100Ah/ BGESF72V100-R(E)A</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+		    </div>
+
+</div>
+        <div class="text-center">
+            <a href="ac-quy-xe-golf-va-xe-nang" class="btn btn-custom">Xem thêm <i class="fa-regular fa-chevron-right ml-1"></i></a>
+        </div>
+    </div>
+</div>
+<div class="wrap-product mb-50">
+    <div class="wrap-content">
+        <div class="title-main">
+            <span>ẮC QUY NĂNG LƯỢNG MẶT TRỜI</span>
+            <p class="line"></p>
+        </div>
+                <div class="paging-product-category paging-product-category-65" data-list="65">
+	    <div class="grid-page grid-product">
+        			<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-vision-cgt12150pexv" title="Ắc quy Vision CGT12-150PEXV">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/5-1237.jpg" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="Ắc quy Vision CGT12-150PEXV">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-vision-cgt12150pexv" title="Ắc quy Vision CGT12-150PEXV">Ắc quy Vision CGT12-150PEXV</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-6fm100dx" title="ẮC QUY 6FM100D-X">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/9865cd8a90817fdf2690-234.jpg" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="ẮC QUY 6FM100D-X">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-6fm100dx" title="ẮC QUY 6FM100D-X">ẮC QUY 6FM100D-X</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-6fm80dx" title="ẮC QUY 6FM80D-X">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/6fm80dx-4866.png" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="ẮC QUY 6FM80D-X">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-6fm80dx" title="ẮC QUY 6FM80D-X">ẮC QUY 6FM80D-X</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+		    </div>
+
+</div>
+        <div class="text-center">
+            <a href="ac-quy-nang-luong-mat-troi1" class="btn btn-custom">Xem thêm <i class="fa-regular fa-chevron-right ml-1"></i></a>
+        </div>
+    </div>
+</div>
+<div class="wrap-product mb-50">
+    <div class="wrap-content">
+        <div class="title-main">
+            <span>ẮC QUY KHỎI ĐỘNG</span>
+            <p class="line"></p>
+        </div>
+                <div class="paging-product-category paging-product-category-66" data-list="66">
+	    <div class="grid-page grid-product">
+        			<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-dong-nai-n120-12v120ah" title="Ắc quy Đồng Nai N120 (12V120Ah)">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/9-143.jpg" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="Ắc quy Đồng Nai N120 (12V120Ah)">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-dong-nai-n120-12v120ah" title="Ắc quy Đồng Nai N120 (12V120Ah)">Ắc quy Đồng Nai N120 (12V120Ah)</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-khoi-dong-gs" title="Ắc quy khởi động GS">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/ac-quy-gs-n100-7223.jpg" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="Ắc quy khởi động GS">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-khoi-dong-gs" title="Ắc quy khởi động GS">Ắc quy khởi động GS</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+		    </div>
+
+</div>
+        <div class="text-center">
+            <a href="ac-quy-khoi-dong1" class="btn btn-custom">Xem thêm <i class="fa-regular fa-chevron-right ml-1"></i></a>
+        </div>
+    </div>
+</div>
+<div class="wrap-product mb-50">
+    <div class="wrap-content">
+        <div class="title-main">
+            <span>PIN LITHIUM</span>
+            <p class="line"></p>
+        </div>
+                <div class="paging-product-category paging-product-category-67" data-list="67">
+	    <div class="grid-page grid-product">
+        			<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="pin-lithium-bak-lfp48v100ah-btesf48v100re" title="Pin Lithium BAK LFP48V100Ah/ BTESF48V100-R(E)">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/z438840065352224af9a3d9125ca6584cef94df5ff6e70-5119.png" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="Pin Lithium BAK LFP48V100Ah/ BTESF48V100-R(E)">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="pin-lithium-bak-lfp48v100ah-btesf48v100re" title="Pin Lithium BAK LFP48V100Ah/ BTESF48V100-R(E)">Pin Lithium BAK LFP48V100Ah/ BTESF48V100-R(E)</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+					<div class="product text-center">
+    <div class="box-product text-decoration-none pb-3">
+        <div class="position-relative overflow-hidden mb-3">
+            <a class="pic-product hover_xam scale-img" href="ac-quy-vision-12v7ah" title="ắc quy Vision 12V7Ah">
+                <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/200x170x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/watermark/product/200x170x2/upload/product/6-7813.jpg" style="display: inline-block;aspect-ratio: 200/170;object-fit: contain;" width="200" height="170" alt="ắc quy Vision 12V7Ah">            </a>
+                    </div>
+        <div class="info-product">
+            <h3 class="name-product"><a class="text-split" href="ac-quy-vision-12v7ah" title="ắc quy Vision 12V7Ah">ắc quy Vision 12V7Ah</a></h3>
+            <p class="price-product">
+                                <span class="price-new">Liên hệ</span>
+                            </p>
+        </div>
+    </div>
+    </div>
+		    </div>
+
+</div>
+        <div class="text-center">
+            <a href="pin-lithium1" class="btn btn-custom">Xem thêm <i class="fa-regular fa-chevron-right ml-1"></i></a>
+        </div>
+    </div>
+</div>
+<div class="wrap-product mb-50">
+    <div class="wrap-content">
+        <div class="title-main">
+            <span>DỰ ÁN ĐIỆN MẶT TRỜI</span>
+            <p class="line"></p>
+        </div>
+                <div class="paging-product-category paging-product-category-68" data-list="68">
+    <div class="alert alert-warning w-100 text-center" role="alert">
+        <strong>Sản phẩm đang cập nhật!</strong>
+    </div>
+</div>
+        <div class="text-center">
+            <a href="du-an-dien-mat-troi" class="btn btn-custom">Xem thêm <i class="fa-regular fa-chevron-right ml-1"></i></a>
+        </div>
+    </div>
+</div>
+
+
+<div class="wrap-newsletter py50">
+    <div class="wrap-content">
+        <div class="title-main">
+            <span class="text-white">Đăng ký nhận tin</span>
+            <p class="slogan-newsletter">Những tin tức mới đặc biệt &amp; những chương trình khuyến mãi đầy hấp dẫn</p>
+        </div>
+        <form class="validation-newsletter" novalidate="" method="post" action="" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="col-sm-10">
+                    <div class="form-row">
+                        <div class="col-sm-4">
+                            <div class="newsletter-input mb-15">
+                                <input type="text" class="form-control text-sm" id="fullname-newsletter" name="dataNewsletter[fullname]" placeholder="" required="" style="">
+                                <span class="label">Nhập họ tên của bạn...</span>
+                                <div class="invalid-feedback">Vui lòng nhập họ và tên</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="newsletter-input mb-15">
+                                <input type="number" class="form-control text-sm" id="phone-newsletter" name="dataNewsletter[phone]" placeholder="" required="" style="">
+                                <span class="label">Nhập số điện thoại...</span>
+                                <div class="invalid-feedback">Vui lòng nhập số điện thoại</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="newsletter-input mb-15">
+                                <input type="email" class="form-control text-sm" id="email-newsletter" name="dataNewsletter[email]" placeholder="" required="" style="">
+                                <span class="label">Nhập địa chỉ email của bạn...</span>
+                                <div class="invalid-feedback">Vui lòng nhập địa chỉ email</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="newsletter-button">
+                        <input type="submit" class="btn btn-custom w-100 bold" name="submit-newsletter" value="Đăng ký" style="">
+                        <input type="hidden" class="btn btn-custom w-100" name="dataNewsletter[type]" value="dangkynhantin" style="">
+                        <input type="hidden" class="btn btn-sm btn-danger w-100" name="recaptcha_response_newsletter" id="recaptchaResponseNewsletter" style="">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="wrap-newshome py50">
+    <div class="wrap-content">
+        <div class="title-main">
+            <span>Dịch vụ nổi bật</span>
+            <p class="line"></p>
+        </div>
+        <div class="position-relative">
+            <div class="owl-page owl-carousel owl-theme owl-loaded owl-drag" data-items="screen:0|items:2|margin:10,screen:425|items:2|margin:10,screen:575|items:3|margin:10,screen:767|items:3|margin:20,screen:991|items:3|margin:10,screen:1199|items:3|margin:35" data-rewind="1" data-autoplay="1" data-loop="0" data-lazyload="0" data-mousedrag="1" data-touchdrag="1" data-smartspeed="300" data-autoplayspeed="500" data-autoplaytimeout="3500" data-dots="0" data-nav="0" data-navcontainer=".control-newshome">
+                                    
+                                    
+                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all; width: 824px;"><div class="owl-item active" style="width: 376.667px; margin-right: 35px;"><div class="newshome position-relative">
+                        <a class="newshome-image scale-img" href="dich-vu-thay-binh-ac-quy-o-to-tan-noi-tphcm-1-1" title="Dịch vụ thay bình ắc quy ô tô tận nơi TPHCM (1) (1)">
+                            <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/372x245x1/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/372x245x1/upload/news/tintuc-4843-4460.png" style="display: inline-block;aspect-ratio: 372/245;object-fit: contain;" width="372" height="245" alt="Dịch vụ thay bình ắc quy ô tô tận nơi TPHCM (1) (1)">                        </a>
+                        <div class="newshome-info">
+                            <div class="form-row">
+                                <div class="col-sm-3 mgtam mb-none">
+                                    <div class="news-shadow-time position-relative text-capitalize text-center">
+                                        <div>
+                                            <span class="d-block">14</span>
+                                            <span class="d-block">12/2023</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3 class="newshome-name">
+                                        <a class="text-decoration-none transition text-split" href="dich-vu-thay-binh-ac-quy-o-to-tan-noi-tphcm-1-1" title="Dịch vụ thay bình ắc quy ô tô tận nơi TPHCM (1) (1)">Dịch vụ thay bình ắc quy ô tô tận nơi TPHCM (1) (1)</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="newshome-desc text-split">Với đội ngũ kỹ thuật chuyên nghiệp, tận tâm và sản phẩm cung cấp chính hãng, Ắc Quy Thanh Tâm&nbsp;đảm bảo đem đến cho bạn dịch vụ bảo trì,&nbsp;bảo dưỡng, thay thế ắc quy viễn thông giá rẻ nhất, chất lương tốt nhất. Liên hệ với chung tôi ngay: 0909756125</div>
+                        </div>
+                    </div></div><div class="owl-item active" style="width: 376.667px; margin-right: 35px;"><div class="newshome position-relative">
+                        <a class="newshome-image scale-img" href="dich-vu-thay-binh-ac-quy-o-to-tan-noi-tphcm-1" title="DỊCH VỤ BẢO TRÌ, BẢO DƯỠNG">
+                            <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/372x245x1/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/372x245x1/upload/news/tintuc-4843-6887.png" style="display: inline-block;aspect-ratio: 372/245;object-fit: contain;" width="372" height="245" alt="DỊCH VỤ BẢO TRÌ, BẢO DƯỠNG">                        </a>
+                        <div class="newshome-info">
+                            <div class="form-row">
+                                <div class="col-sm-3 mgtam mb-none">
+                                    <div class="news-shadow-time position-relative text-capitalize text-center">
+                                        <div>
+                                            <span class="d-block">14</span>
+                                            <span class="d-block">12/2023</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3 class="newshome-name">
+                                        <a class="text-decoration-none transition text-split" href="dich-vu-thay-binh-ac-quy-o-to-tan-noi-tphcm-1" title="DỊCH VỤ BẢO TRÌ, BẢO DƯỠNG">DỊCH VỤ BẢO TRÌ, BẢO DƯỠNG</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="newshome-desc text-split">Với đội ngũ kỹ thuật chuyên nghiệp, tận tâm và sản phẩm cung cấp chính hãng, Ắc Quy Thanh Tâm&nbsp;đảm bảo đem đến cho bạn dịch vụ bảo trì,&nbsp;bảo dưỡng, thay thế ắc quy viễn thông giá rẻ nhất, chất lương tốt nhất. Liên hệ với chung tôi ngay: 0909756125</div>
+                        </div>
+                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"></button><button type="button" role="presentation" class="owl-next"></button></div><div class="owl-dots disabled"></div></div>
+            <div class="control-newshome control-owl transition"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="wrap-newshome mb-30">
+    <div class="wrap-content">
+        <div class="title-main">
+            <span>KIẾN THỨC HỮU ÍCH</span>
+            <p class="line"></p>
+        </div>
+        <div class="position-relative">
+            <div class="owl-page owl-carousel owl-theme owl-loaded owl-drag" data-items="screen:0|items:2|margin:10,screen:425|items:2|margin:10,screen:575|items:3|margin:10,screen:767|items:3|margin:20,screen:991|items:3|margin:10,screen:1199|items:3|margin:35" data-rewind="1" data-autoplay="1" data-loop="0" data-lazyload="0" data-mousedrag="1" data-touchdrag="1" data-smartspeed="300" data-autoplayspeed="500" data-autoplaytimeout="3500" data-dots="0" data-nav="0" data-navcontainer=".control-newshome">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1235px, 0px, 0px); transition: 0.5s; width: 2882px;"><div class="owl-item" style="width: 376.667px; margin-right: 35px;"><div class="newshome position-relative">
+                        <a class="newshome-image scale-img" href="cach-phat-hien-ac-quy-xe-may-dang-bi-yeu" title="Cách phát hiện ắc quy xe máy đang bị yếu">
+                            <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/372x245x1/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/372x245x1/upload/news/acquyxemaythedat1-1081.jpg" style="display: inline-block;aspect-ratio: 372/245;object-fit: contain;" width="372" height="245" alt="Cách phát hiện ắc quy xe máy đang bị yếu">                        </a>
+                        <div class="newshome-info">
+                            <div class="form-row">
+                                <div class="col-sm-3 mgtam mb-none">
+                                    <div class="news-shadow-time position-relative text-capitalize text-center">
+                                        <div>
+                                            <span class="d-block">31</span>
+                                            <span class="d-block">12/2017</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3 class="newshome-name">
+                                        <a class="text-decoration-none transition text-split" href="cach-phat-hien-ac-quy-xe-may-dang-bi-yeu" title="Cách phát hiện ắc quy xe máy đang bị yếu">Cách phát hiện ắc quy xe máy đang bị yếu</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="newshome-desc text-split">Dấu hiệu đơn giản nhất để phát hiện một chiếc ắc quy đang yếu là bạn không thể đề nổ máy xe được nữa, đèn báo N bị tối hoặc tắt hẳn, còi kêu nhỏ, đèn phanh và xi-nhan sáng yếu.</div>
+                        </div>
+                    </div></div><div class="owl-item" style="width: 376.667px; margin-right: 35px;"><div class="newshome position-relative">
+                        <a class="newshome-image scale-img" href="mercedesbenz-sprinter-2018-xe-van-hien-dai-nhat-the-gioi" title="Mercedes-Benz Sprinter 2018 - xe van hiện đại nhất thế giới">
+                            <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/372x245x1/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/372x245x1/upload/news/photo15125231171341512523117565-1451.jpg" style="display: inline-block;aspect-ratio: 372/245;object-fit: contain;" width="372" height="245" alt="Mercedes-Benz Sprinter 2018 - xe van hiện đại nhất thế giới">                        </a>
+                        <div class="newshome-info">
+                            <div class="form-row">
+                                <div class="col-sm-3 mgtam mb-none">
+                                    <div class="news-shadow-time position-relative text-capitalize text-center">
+                                        <div>
+                                            <span class="d-block">31</span>
+                                            <span class="d-block">12/2017</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3 class="newshome-name">
+                                        <a class="text-decoration-none transition text-split" href="mercedesbenz-sprinter-2018-xe-van-hien-dai-nhat-the-gioi" title="Mercedes-Benz Sprinter 2018 - xe van hiện đại nhất thế giới">Mercedes-Benz Sprinter 2018 - xe van hiện đại nhất thế giới</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="newshome-desc text-split">Phiên bản Sprinter 2018 sẽ được Mercedes-Benz trang bị các công nghệ kết nối hiện đại trước nay chưa từng xuất hiện ở phân khúc van thương mại cỡ lớn.</div>
+                        </div>
+                    </div></div><div class="owl-item" style="width: 376.667px; margin-right: 35px;"><div class="newshome position-relative">
+                        <a class="newshome-image scale-img" href="giai-ma-gia-tri-vision-thuong-hieu-ac-quy-dang-su-dung-2016" title="Giải mã giá trị VISION – Thương hiệu ắc quy đáng sử dụng 2016">
+                            <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/372x245x1/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/372x245x1/upload/news/1452675424thuonghieuacquydangsudung1-5878.jpg" style="display: inline-block;aspect-ratio: 372/245;object-fit: contain;" width="372" height="245" alt="Giải mã giá trị VISION – Thương hiệu ắc quy đáng sử dụng 2016">                        </a>
+                        <div class="newshome-info">
+                            <div class="form-row">
+                                <div class="col-sm-3 mgtam mb-none">
+                                    <div class="news-shadow-time position-relative text-capitalize text-center">
+                                        <div>
+                                            <span class="d-block">31</span>
+                                            <span class="d-block">12/2017</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3 class="newshome-name">
+                                        <a class="text-decoration-none transition text-split" href="giai-ma-gia-tri-vision-thuong-hieu-ac-quy-dang-su-dung-2016" title="Giải mã giá trị VISION – Thương hiệu ắc quy đáng sử dụng 2016">Giải mã giá trị VISION – Thương hiệu ắc quy đáng sử dụng 2016</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="newshome-desc text-split">VISION đã và đang chiếm lĩnh 80% thị trường Ắc quy Viễn Thông tại Việt Nam bởi sự khác biệt khi sản phẩm thật sự nổi trội về chất lượng cùng danh sách dài những giải thưởng trong nước và quốc tế.</div>
+                        </div>
+                    </div></div><div class="owl-item active" style="width: 376.667px; margin-right: 35px;"><div class="newshome position-relative">
+                        <a class="newshome-image scale-img" href="pin-lithium-vision-1-cuoc-cach-mang-tiet-kiem" title="Pin Lithium Vision – 1 cuộc cách mạng tiết kiệm">
+                            <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/372x245x1/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/372x245x1/upload/news/1487732011pinmotcuoccachmangtietkiem1-9477.jpg" style="display: inline-block;aspect-ratio: 372/245;object-fit: contain;" width="372" height="245" alt="Pin Lithium Vision – 1 cuộc cách mạng tiết kiệm">                        </a>
+                        <div class="newshome-info">
+                            <div class="form-row">
+                                <div class="col-sm-3 mgtam mb-none">
+                                    <div class="news-shadow-time position-relative text-capitalize text-center">
+                                        <div>
+                                            <span class="d-block">31</span>
+                                            <span class="d-block">12/2017</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3 class="newshome-name">
+                                        <a class="text-decoration-none transition text-split" href="pin-lithium-vision-1-cuoc-cach-mang-tiet-kiem" title="Pin Lithium Vision – 1 cuộc cách mạng tiết kiệm">Pin Lithium Vision – 1 cuộc cách mạng tiết kiệm</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="newshome-desc text-split">Pin Lithium Vision ra đời với nhiệm vụ mang đến 1 cuộc sống TIẾT KIỆM cho người dân Việt Nam như nó đã thành công trên thế giới. Hãy cùng phân tích những lợi ích về kinh tế mà Pin Lithium mang lại</div>
+                        </div>
+                    </div></div><div class="owl-item active" style="width: 376.667px; margin-right: 35px;"><div class="newshome position-relative">
+                        <a class="newshome-image scale-img" href="ac-quy-vision-ra-mat-san-pham-moi-voi-loat-qua-tang-hap-dan" title="Ắc quy VISION ra mắt sản phẩm mới với loạt quà tặng hấp dẫn">
+                            <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/372x245x1/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/372x245x1/upload/news/1460110485acquyramatkhuyenmailon6-1833.jpg" style="display: inline-block;aspect-ratio: 372/245;object-fit: contain;" width="372" height="245" alt="Ắc quy VISION ra mắt sản phẩm mới với loạt quà tặng hấp dẫn">                        </a>
+                        <div class="newshome-info">
+                            <div class="form-row">
+                                <div class="col-sm-3 mgtam mb-none">
+                                    <div class="news-shadow-time position-relative text-capitalize text-center">
+                                        <div>
+                                            <span class="d-block">31</span>
+                                            <span class="d-block">12/2017</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3 class="newshome-name">
+                                        <a class="text-decoration-none transition text-split" href="ac-quy-vision-ra-mat-san-pham-moi-voi-loat-qua-tang-hap-dan" title="Ắc quy VISION ra mắt sản phẩm mới với loạt quà tặng hấp dẫn">Ắc quy VISION ra mắt sản phẩm mới với loạt quà tặng hấp dẫn</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="newshome-desc text-split">Với những tính năng và công nghệ không thể hiện đại hơn, Pin Lithium khởi động cho xe máy của tập đoàn VISION đang trở thành một hiện tượng gây sốt tại thành phố Hồ Chí Minh cùng loạt quà tặng công nghệ cao.</div>
+                        </div>
+                    </div></div><div class="owl-item active" style="width: 376.667px; margin-right: 35px;"><div class="newshome position-relative">
+                        <a class="newshome-image scale-img" href="su-mao-hiem-va-bung-no-cua-thuong-hieu-ac-quy-vision" title="Sự “mạo hiểm” và bùng nổ của thương hiệu Ắc quy Vision">
+                            <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/372x245x1/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/372x245x1/upload/news/1487731546subungnocuaacquy1-5533.jpg" style="display: inline-block;aspect-ratio: 372/245;object-fit: contain;" width="372" height="245" alt="Sự “mạo hiểm” và bùng nổ của thương hiệu Ắc quy Vision">                        </a>
+                        <div class="newshome-info">
+                            <div class="form-row">
+                                <div class="col-sm-3 mgtam mb-none">
+                                    <div class="news-shadow-time position-relative text-capitalize text-center">
+                                        <div>
+                                            <span class="d-block">31</span>
+                                            <span class="d-block">12/2017</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3 class="newshome-name">
+                                        <a class="text-decoration-none transition text-split" href="su-mao-hiem-va-bung-no-cua-thuong-hieu-ac-quy-vision" title="Sự “mạo hiểm” và bùng nổ của thương hiệu Ắc quy Vision">Sự “mạo hiểm” và bùng nổ của thương hiệu Ắc quy Vision</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="newshome-desc text-split">Chỉ chưa đầy nửa năm, một sản phẩm hoàn toàn mới đã chinh phục và có mặt trên mọi nẻo đường Việt Nam. Và đó chính là cái tên “Pin Lithium – Vision”khởi động xe máy.</div>
+                        </div>
+                    </div></div><div class="owl-item" style="width: 376.667px; margin-right: 35px;"><div class="newshome position-relative">
+                        <a class="newshome-image scale-img" href="bao-lau-can-thay-ac-quy-xe-may" title="Bao lâu cần thay ắc quy xe máy">
+                            <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/372x245x1/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/372x245x1/upload/news/cc62001464833393240x144-9952.jpg" style="display: inline-block;aspect-ratio: 372/245;object-fit: contain;" width="372" height="245" alt="Bao lâu cần thay ắc quy xe máy">                        </a>
+                        <div class="newshome-info">
+                            <div class="form-row">
+                                <div class="col-sm-3 mgtam mb-none">
+                                    <div class="news-shadow-time position-relative text-capitalize text-center">
+                                        <div>
+                                            <span class="d-block">31</span>
+                                            <span class="d-block">12/2017</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3 class="newshome-name">
+                                        <a class="text-decoration-none transition text-split" href="bao-lau-can-thay-ac-quy-xe-may" title="Bao lâu cần thay ắc quy xe máy">Bao lâu cần thay ắc quy xe máy</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="newshome-desc text-split">Ắc quy có vai trò quan trọng trên xe máy nhưng thực tế rất ít người dùng quan tâm đến bộ phận này.</div>
+                        </div>
+                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"></button><button type="button" role="presentation" class="owl-next"></button></div><div class="owl-dots disabled"></div></div>
+            <div class="control-newshome control-owl transition"></div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="wrap-partner py30">
+    <div class="wrap-content">
+        <div class="position-relative">
+            <div class="owl-page owl-carousel owl-theme owl-loaded owl-drag" data-items="screen:0|items:2|margin:10,screen:425|items:3|margin:10,screen:575|items:4|margin:10,screen:767|items:4|margin:10,screen:991|items:5|margin:10,screen:1199|items:6|margin:10" data-rewind="1" data-autoplay="1" data-loop="0" data-lazyload="0" data-mousedrag="1" data-touchdrag="1" data-smartspeed="300" data-autoplayspeed="500" data-autoplaytimeout="3500" data-dots="0" data-nav="1" data-navcontainer=".control-partner">
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: 1s; width: 1614px;"><div class="owl-item active" style="width: 191.667px; margin-right: 10px;"><div>
+                    <a class="partner" href="" target="_blank" title="">
+                        <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/186x100x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/186x100x2/upload/photo/screenshot-2023-12-25-121032-13920.png" style="display: inline-block;aspect-ratio: 186/100;object-fit: contain;" width="186" height="100" alt=".">                    </a>
+                </div></div><div class="owl-item active" style="width: 191.667px; margin-right: 10px;"><div>
+                    <a class="partner" href="" target="_blank" title="">
+                        <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/186x100x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/186x100x2/upload/photo/screenshot-2023-12-25-120943-97180.png" style="display: inline-block;aspect-ratio: 186/100;object-fit: contain;" width="186" height="100" alt=".">                    </a>
+                </div></div><div class="owl-item active" style="width: 191.667px; margin-right: 10px;"><div>
+                    <a class="partner" href="" target="_blank" title="">
+                        <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/186x100x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/186x100x2/upload/photo/screenshot-2023-12-25-120649-2780.png" style="display: inline-block;aspect-ratio: 186/100;object-fit: contain;" width="186" height="100" alt=".">                    </a>
+                </div></div><div class="owl-item active" style="width: 191.667px; margin-right: 10px;"><div>
+                    <a class="partner" href="" target="_blank" title="">
+                        <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/186x100x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/186x100x2/upload/photo/screenshot-2023-12-25-120717-1269.png" style="display: inline-block;aspect-ratio: 186/100;object-fit: contain;" width="186" height="100" alt=".">                    </a>
+                </div></div><div class="owl-item active" style="width: 191.667px; margin-right: 10px;"><div>
+                    <a class="partner" href="" target="_blank" title="">
+                        <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/186x100x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/186x100x2/upload/photo/screenshot-2023-12-25-120739-3614.png" style="display: inline-block;aspect-ratio: 186/100;object-fit: contain;" width="186" height="100" alt=".">                    </a>
+                </div></div><div class="owl-item active" style="width: 191.667px; margin-right: 10px;"><div>
+                    <a class="partner" href="" target="_blank" title="">
+                        <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/186x100x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/186x100x2/upload/photo/screenshot-2023-12-25-120814-5944.png" style="display: inline-block;aspect-ratio: 186/100;object-fit: contain;" width="186" height="100" alt=".">                    </a>
+                </div></div><div class="owl-item" style="width: 191.667px; margin-right: 10px;"><div>
+                    <a class="partner" href="" target="_blank" title="">
+                        <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/186x100x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/186x100x2/upload/photo/screenshot-2023-12-25-120834-8894.png" style="display: inline-block;aspect-ratio: 186/100;object-fit: contain;" width="186" height="100" alt=".">                    </a>
+                </div></div><div class="owl-item" style="width: 191.667px; margin-right: 10px;"><div>
+                    <a class="partner" href="" target="_blank" title="">
+                        <img class="lazy w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/186x100x2/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/186x100x2/upload/photo/screenshot-2023-12-25-120904-5255.png" style="display: inline-block;aspect-ratio: 186/100;object-fit: contain;" width="186" height="100" alt=".">                    </a>
+                </div></div></div></div><div class="owl-dots disabled"></div></div>
+            <div class="control-partner control-owl transition"><button type="button" role="presentation" class="owl-prev"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="50" height="37" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="5" y1="12" x2="19" y2="12"></line><line x1="5" y1="12" x2="9" y2="16"></line><line x1="5" y1="12" x2="9" y2="8"></line></svg></button><button type="button" role="presentation" class="owl-next"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="50" height="37" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="5" y1="12" x2="19" y2="12"></line><line x1="15" y1="16" x2="19" y2="12"></line><line x1="15" y1="8" x2="19" y2="12"></line></svg></button></div>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="footer">
+    <div class="footer-article">
+        <div class="wrap-content">
+            <div class="row">
+                <div class="footer-news col-sm-6 mgb-res">
+                    <h2 class="footer-name">CÔNG TY TNHH MTV TM DV KỸ THUẬT THANH TÂM </h2>
+                    <div class="footer-info"><p style="line-height:normal;"><span style="color:#ffffff;">Địa chỉ: 55/1Q ấp Nam Lân, xã Bà Điểm, huyện Hóc Môn&nbsp;</span></p>
+
+<p style="line-height:normal;"><span style="color:#ffffff;">VPGD: 80/17 Ba Vân, P.14, Q.&nbsp;Tân Bình, TP.HCM&nbsp;</span></p>
+
+<p style="line-height:normal;"><span style="color:#ffffff;">Điện thoại:&nbsp;</span><a href="tel:0909756125"><span style="color:#ffffff;">0909756125</span></a><span style="color:#ffffff;"> - </span><a href="tel:0899466788"><span style="color:#ffffff;">0899466788</span></a><span style="color:#ffffff;"> Mr. Tâm</span></p>
+
+<p style="line-height:normal;"><span style="color:#ffffff;">Email:tonthanhtam.sg@gmail.com -&nbsp;info@acquythanhtam.vn</span></p>
+
+<p style="line-height:normal;"><span style="color:#ffffff;">Website: https://acquythanhtam.vn&nbsp;-&nbsp;https://acquythanhtam.com/</span></p>
+</div>
+                    <ul class="social social-header list-unstyled p-0 m-0">
+                                                    <li class="d-inline-block align-top mr-1">
+                                <a href="" target="_blank" class="hvr-float-shadow">
+                                    <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/38x38x3/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/38x38x3/upload/photo/mxhb4-24151.png" style="display: inline-block;aspect-ratio: 38/38;object-fit: contain;" width="38" height="38" alt=".">                                </a>
+                            </li>
+                                                    <li class="d-inline-block align-top mr-1">
+                                <a href="" target="_blank" class="hvr-float-shadow">
+                                    <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/38x38x3/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/38x38x3/upload/photo/mxhb3-18340.png" style="display: inline-block;aspect-ratio: 38/38;object-fit: contain;" width="38" height="38" alt=".">                                </a>
+                            </li>
+                                                    <li class="d-inline-block align-top mr-1">
+                                <a href="" target="_blank" class="hvr-float-shadow">
+                                    <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/38x38x3/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/38x38x3/upload/photo/mxhb2-91831.png" style="display: inline-block;aspect-ratio: 38/38;object-fit: contain;" width="38" height="38" alt=".">                                </a>
+                            </li>
+                                                    <li class="d-inline-block align-top mr-1">
+                                <a href="" target="_blank" class="hvr-float-shadow">
+                                    <img class="lazy" onerror="this.src='https://acquythanhtam.vn/thumbs/38x38x3/assets/images/noimage.png';" data-src="https://acquythanhtam.vn/thumbs/38x38x3/upload/photo/mxhb1-58420.png" style="display: inline-block;aspect-ratio: 38/38;object-fit: contain;" width="38" height="38" alt=".">                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                <div class="footer-news col-sm-3 mgb-res">
+                    <h2 class="footer-title">CHÍNH SÁCH</h2>
+                    <ul class="footer-ul">
+                                                    <li><a href="chinh-sach-bao-mat" title="Chính Sách Bảo Mật">Chính Sách Bảo Mật</a></li>
+                                            </ul>
+                </div>
+
+                <div class="footer-news col-sm-3">
+                    <div id="fanpage-facebook">    <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/profile.php?id=100065659534444&amp;ref=embed_page" data-tabs="timeline" data-width="500" data-height="240" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=&amp;container_width=278&amp;height=240&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100065659534444%26ref%3Dembed_page&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=true&amp;tabs=timeline&amp;width=500"><span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;"><iframe name="f196cf5c3356bd82f" width="500px" height="240px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.6/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df00799f787a2fdefd%26domain%3Dacquythanhtam.vn%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Facquythanhtam.vn%252Ff4ad5c311179f5d43%26relation%3Dparent.parent&amp;container_width=278&amp;height=240&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100065659534444%26ref%3Dembed_page&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=true&amp;tabs=timeline&amp;width=500" style="border: none; visibility: visible; width: 0px; height: 0px;"></iframe></span></div>
+</div>                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-powered">
+        <div class="wrap-content">
+            <div class="row">
+                <div class="footer-copyright col-md-6">Copyright © 2023 Thanh Tam. All rights reserved. Design by NiNa Co.,Ltd</div>
+                <div class="footer-statistic col-md-6">
+                    <span>Đang online: 1</span><span>|</span>
+                    <span>Tháng: 893</span><span>|</span>
+                    <span>Tổng truy cập: 39344</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<div class="footer_map_tab">
+        <div class="map_frame">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.191257325914!2d106.63671637363527!3d10.796658958823077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529719e800dd9%3A0x50b702658bcd0ac1!2zQ8OUTkcgVFkgVE5ISCBNVFYgVE0gRFYgS-G7uCBUSFXhuqxUIFRIQU5IIFTDgk0!5e0!3m2!1svi!2s!4v1710312586974!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
+</div>
+  
+</div>
+
+<div class="scrollToTop cursor-pointer active-progress">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+    </svg>
+</div>
+<div id="messages-facebook">    <div class="js-facebook-messenger-box onApp rotate bottom-right cfm rubberBand animated" data-anim="rubberBand">
+        <svg id="fb-msng-icon" data-name="messenger icon" xmlns="//www.w3.org/2000/svg" viewBox="0 0 30.47 30.66">
+            <path d="M29.56,14.34c-8.41,0-15.23,6.35-15.23,14.19A13.83,13.83,0,0,0,20,39.59V45l5.19-2.86a16.27,16.27,0,0,0,4.37.59c8.41,0,15.23-6.35,15.23-14.19S38,14.34,29.56,14.34Zm1.51,19.11-3.88-4.16-7.57,4.16,8.33-8.89,4,4.16,7.48-4.16Z" transform="translate(-14.32 -14.34)" style="fill:#fff"></path>
+        </svg>
+        <svg id="close-icon" data-name="close icon" xmlns="//www.w3.org/2000/svg" viewBox="0 0 39.98 39.99">
+            <path d="M48.88,11.14a3.87,3.87,0,0,0-5.44,0L30,24.58,16.58,11.14a3.84,3.84,0,1,0-5.44,5.44L24.58,30,11.14,43.45a3.87,3.87,0,0,0,0,5.44,3.84,3.84,0,0,0,5.44,0L30,35.45,43.45,48.88a3.84,3.84,0,0,0,5.44,0,3.87,3.87,0,0,0,0-5.44L35.45,30,48.88,16.58A3.87,3.87,0,0,0,48.88,11.14Z" transform="translate(-10.02 -10.02)" style="fill:#fff"></path>
+        </svg>
+    </div>
+    <div class="js-facebook-messenger-container">
+        <div class="js-facebook-messenger-top-header">
+            <span>.</span>
+        </div>
+        <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/profile.php?id=100065659534444&amp;ref=embed_page" data-tabs="messages" data-small-header="true" data-height="300" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=&amp;container_width=220&amp;height=300&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100065659534444%26ref%3Dembed_page&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=true&amp;tabs=messages"><span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;"><iframe name="f5ef5ff355b65a3e6" width="1000px" height="300px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.6/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Dfe7f429444a69fdfa%26domain%3Dacquythanhtam.vn%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Facquythanhtam.vn%252Ff4ad5c311179f5d43%26relation%3Dparent.parent&amp;container_width=220&amp;height=300&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100065659534444%26ref%3Dembed_page&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=true&amp;tabs=messages" style="border: none; visibility: visible; width: 0px; height: 0px;"></iframe></span></div>
+    </div>
+</div>
+<a class="btn-map btn-frame text-decoration-none" target="_blank" href="" style="bottom:400px;">
+    <!-- <div class="animated infinite zoomIn kenit-alo-circle"></div>
+    <div class="animated infinite pulse kenit-alo-circle-fill"></div> -->
+    <img class="w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/35x35x2/assets/images/noimage.png';" src="https://acquythanhtam.vn/assets/images/icon-t5.png.webp" alt="Map"></a>
+
+<a class="btn-zalo btn-frame text-decoration-none btn_num" target="_blank" href="https://zalo.me/0909756125">
+    <!-- <div class="animated infinite zoomIn kenit-alo-circle"></div>
+    <div class="animated infinite pulse kenit-alo-circle-fill"></div> -->
+    <img class="w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/35x35x2/assets/images/noimage.png';" src="https://acquythanhtam.vn/assets/images/icon_zalo.svg" alt="Zalo"></a>
+<a class="btn-phone btn-frame text-decoration-none btn_num" href="tel:0909756125">
+    <!-- <div class="animated infinite zoomIn kenit-alo-circle"></div>
+    <div class="animated infinite pulse kenit-alo-circle-fill"></div> -->
+    <img class="w-100" onerror="this.src='https://acquythanhtam.vn/thumbs/35x35x2/assets/images/noimage.png';" src="https://acquythanhtam.vn/assets/images/icon_call.svg" alt="Hotline"></a>
+
+<div class="hotline-phone-ring-wrap" style="z-index:9999999999">
+	<div class="hotline-phone-ring">
+		<div class="hotline-phone-ring-circle"></div>
+		<div class="hotline-phone-ring-circle-fill"></div>
+		<div class="hotline-phone-ring-img-circle">
+			<a href="tel:0931255512" class="pps-btn-img">
+				<i class="fa fa-phone" aria-hidden="true" style="color:white"></i>
+			</a>
+		</div>
+	</div>
+	<div class="hotline-bar">
+		<a href="tel:0909756125">
+			<span class="text-hotline">0909.756.125</span>
+		</a>
+	</div>
+</div>
+
+<style>
+    .text_num{position: absolute;min-width: max-content;right: 0%;top: 50%;transform: translate(0% , -50%);font-weight: bold;color: #fff;opacity: 0;overflow: hidden;}
+    .btn_num:hover .text_num{transform: translate(-50% , -50%);opacity: 1;}
+
+    .hotline-phone-ring-wrap{position:fixed;bottom:0;left:0;z-index:999999}
+    .hotline-phone-ring{position:relative;visibility:visible;background-color:transparent;width:110px;height:110px;cursor:pointer;z-index:11;-webkit-backface-visibility:hidden;-webkit-transform:translateZ(0);transition:visibility .5s;left:0;bottom:0;display:block}
+    .hotline-phone-ring-circle{width:87px;height:87px;top:10px;left:10px;position:absolute;background-color:transparent;border-radius:100%;border: 2px solid #d00;-webkit-animation:phonering-alo-circle-anim 1.2s infinite ease-in-out;animation:phonering-alo-circle-anim 1.2s infinite ease-in-out;transition:all .5s;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;opacity:.5;}
+    @keyframes phonering-alo-circle-anim{
+        0%{-webkit-transform:rotate(0) scale(.5) skew(1deg);-webkit-opacity:.1}
+        30%{-webkit-transform:rotate(0) scale(.7) skew(1deg);-webkit-opacity:.5}
+        100%{-webkit-transform:rotate(0) scale(1) skew(1deg);-webkit-opacity:.1}
+    }
+    .hotline-phone-ring-circle-fill{width:57px;height:57px;top:25px;left:25px;position:absolute;background-color: #d00;border-radius:100%;border:2px solid transparent;-webkit-animation:phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;animation:phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;transition:all .5s;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;}
+    @keyframes phonering-alo-circle-fill-anim{
+        0%{-webkit-transform:rotate(0) scale(.7) skew(1deg);opacity:.6}
+        50%{-webkit-transform:rotate(0) scale(1) skew(1deg);opacity:.6}
+        100%{-webkit-transform:rotate(0) scale(.7) skew(1deg);opacity:.6}
+    }
+    .hotline-phone-ring-img-circle{background-color:#6d;width:33px;height:33px;top:37px;left:37px;position:absolute;background-size:20px;border-radius:100%;border:2px solid transparent;-webkit-animation:phonering-alo-circle-img-anim 1s infinite ease-in-out;animation:phonering-alo-circle-img-anim 1s infinite ease-in-out;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;align-items:center;justify-content:center}
+    @keyframes phonering-alo-circle-img-anim{
+        0%{-webkit-transform:rotate(0) scale(1) skew(1deg)}
+        10%{-webkit-transform:rotate(-25deg) scale(1) skew(1deg)}
+        20%{-webkit-transform:rotate(25deg) scale(1) skew(1deg)}
+        30%{-webkit-transform:rotate(-25deg) scale(1) skew(1deg)}
+        40%{-webkit-transform:rotate(25deg) scale(1) skew(1deg)}
+        50%{-webkit-transform:rotate(0) scale(1) skew(1deg)}
+        100%{-webkit-transform:rotate(0) scale(1) skew(1deg)}
+    }
+    .hotline-phone-ring-img-circle .pps-btn-img{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+    .hotline-phone-ring-img-circle .pps-btn-img{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+    .hotline-phone-ring-img-circle .pps-btn-img img{width:20px;height:20px}
+    .hotline-bar{position:absolute;background: #d00;height:40px;width:200px;line-height:40px;border-radius:3px;padding:0 10px;background-size:100%;cursor:pointer;transition:all .8s;-webkit-transition:all .8s;z-index:9;box-shadow:0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.1);border-radius:50px!important;left:33px;bottom:37px;}
+    .hotline-bar>a{color:#fff;text-decoration:none;font-size:15px;font-weight:700;text-indent:50px;display:block;letter-spacing:1px;line-height:40px;font-family:Arial}
+    .hotline-bar>a:hover{color:#fff}
+
+</style>
+<!-- Modal quickview -->
+<div class="modal fade quickviewModal" id="popup-quickview" tabindex="-1" role="dialog" aria-labelledby="popup-quickviewLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title" id="popup-quickviewLabel">Sản phẩm</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+            </div>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- Js Config -->
+<script type="text/javascript">
+var NN_FRAMEWORK = NN_FRAMEWORK || {};
+var CONFIG_BASE = 'https://acquythanhtam.vn/';
+var ASSET = 'https://acquythanhtam.vn/';
+var WEBSITE_NAME = '.';
+var TIMENOW = '21/03/2026';
+var SHIP_CART = false;
+var SOURCEWEB = 'index';
+var CONFIG_TOC = false;
+var CONFIG_SHOWCONTENT = false;
+var CONFIG_SHINER = false;
+var CART = false;
+var QUICKVIEW = false;
+
+
+var RECAPTCHA_ACTIVE = true;
+var RECAPTCHA_SITEKEY = '6LdMikkpAAAAADuXdmmVwwOiEB_8RUd7iZqhUYnI';
+var GOTOP = ASSET + 'assets/images/top.png';
+var LANG = {
+    'no_keywords': 'Chưa nhập từ khóa tìm kiếm',
+    'delete_product_from_cart': 'Bạn muốn xóa sản phẩm này khỏi giỏ hàng ? ',
+    'no_products_in_cart': 'Không tồn tại sản phẩm nào trong giỏ hàng !',
+    'ward': 'Phường/xã',
+    'back_to_home': 'Về trang chủ',
+};
+</script>
+
+<!-- Js Files -->
+<script type="text/javascript" src="https://acquythanhtam.vn/assets/caches/687463ced4baeb904687b1d499a0a826.js?v=1772389908"></script>
+<!-- Js Google Recaptcha V3 -->
+<script type="text/javascript">
+     $(document).ready(function($) {
+        $('#email-newsletter,#fullname-booking, #fullname-contact').click(function(event) {
+            $.getScript(
+                'https://www.google.com/recaptcha/api.js?render=6LdMikkpAAAAADuXdmmVwwOiEB_8RUd7iZqhUYnI',
+            function() {
+                grecaptcha.ready(function() {
+                    /* Newsletter */
+                    generateCaptcha('Newsletter', 'recaptchaResponseNewsletter');
+                                                        });
+            });
+        });
+    });
+</script>
+
+
+
+
+<!-- Js Structdata -->
+<!-- General -->
+<script type="application/ld+json">
+    {
+        "@context" : "https://schema.org",
+        "@type" : "Organization",
+        "name" : ".",
+        "url" : "https://acquythanhtam.vn/",
+        "sameAs" :
+        [
+                            "",                            "",                            "",                            ""                    ],
+        "address":
+        {
+            "@type": "PostalAddress",
+            "streetAddress": "55/1Q Ấp Nam Lân, Xã Bà Điểm, Huyện Hóc Môn,TPHCM",
+            "addressRegion": "Ho Chi Minh",
+            "postalCode": "70000",
+            "addressCountry": "vi"
+        }
+    }
+</script>
+ 
+<!-- Js Addons -->
+<div id="script-main">    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.async = true;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.6";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55e11040eb7c994c"></script>
+</div><script type="text/javascript">$(function(){setTimeout(function(){$("#fanpage-facebook").load("api/addons.php?type=fanpage-facebook")},2000);});</script><script type="text/javascript">$(function(){setTimeout(function(){$("#messages-facebook").load("api/addons.php?type=messages-facebook")},2000);});</script><script type="text/javascript">$(function(){setTimeout(function(){$("#script-main").load("api/addons.php?type=script-main")},2000);});</script>
+<script>
+    var scriptMainData1 = "<div id=\"script-main\"><\/div>";
+    var scriptMainData2 = "<script type=\"text\/javascript\">$(function(){setTimeout(function(){$(\"#fanpage-facebook\").load(\"api\/addons.php?type=fanpage-facebook\")},2000);});<\/script><script type=\"text\/javascript\">$(function(){setTimeout(function(){$(\"#messages-facebook\").load(\"api\/addons.php?type=messages-facebook\")},2000);});<\/script><script type=\"text\/javascript\">$(function(){setTimeout(function(){$(\"#script-main\").load(\"api\/addons.php?type=script-main\")},2000);});<\/script><script type=\"text\/javascript\">$(function(){setTimeout(function(){$(\"#script-main\").load(\"api\/addons.php?type=script-main\")},0);});<\/script>";
+
+</script>
+
+
+<!-- Js Body -->
+
+<script type="text/javascript">
+    var placeholderText = ["Nhập từ khóa..."];
+    $('#keyword,#keyword-res').placeholderTypewriter({
+        text: placeholderText
+    });
+</script>
+<!-- Google translate -->
+    </div>
+
+
+
+<div class="magic-hidden-wrapper"></div><div id="app" class="zs"></div></body></html>

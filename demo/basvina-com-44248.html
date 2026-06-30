@@ -1,0 +1,1103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+
+
+
+
+
+
+    <link rel="shortcut icon" href="/data/configs/fa.png"><meta http-equiv="content-type" content="text/html; charset=utf-8"><title>
+	Thép BA VINA
+</title><link rel="stylesheet" href="vi-vn/Styles/template.css" type="text/css">
+    <script type="text/javascript" src="../vi-vn/Scripts/jquery-1.8.3.min.js"></script>
+    <!--Slide Camera-->
+    <link rel="stylesheet" href="vi-vn/Styles/camera.css" type="text/css" media="all">
+    <script type="text/javascript" src="../vi-vn/Scripts/jquery.mobile.customized.min.js"></script>
+    <script type="text/javascript" src="../vi-vn/Scripts/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../vi-vn/Scripts/camera.min.js"></script>
+    <script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_4').camera({
+				loader: 'none',
+				pagination: false,
+				thumbnails: false,
+				hover: false,
+				opacityOnGrid: false,
+				imagePath: '../Images/',						
+            	height: '400px',
+            	fx: 'random',
+            	navigation: true,
+            	navigationHover: true,
+            	playPause: false,
+			});
+
+		});
+    </script>
+    <!---Hoz menu-->
+    <link href="vi-vn/Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css">
+    <script src="../vi-vn/Scripts/ddsmoothmenu.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        ddsmoothmenu.init({
+            mainmenuid: "smoothmenu1", //menu DIV id
+            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+            classname: 'ddsmoothmenu', //class added to menu's outer DIV
+            //customtheme: ["#1c5a80", "#18374a"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        })
+    </script>
+    <!--Slide chay ngang-->
+    <link href="vi-vn/Styles/skin_jcarousel.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../vi-vn/Scripts/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">
+        function mycarousel_initCallback(carousel) {
+            // Disable autoscrolling if the user clicks the prev or next button.
+            /* carousel.buttonNext.bind('click', function() {
+            carousel.startAuto(0);
+            });
+
+            carousel.buttonPrev.bind('click', function() {
+            carousel.startAuto(0);
+            });*/
+
+            // Pause autoscrolling if the user moves with the cursor over the clip.
+            carousel.clip.hover(function () {
+                carousel.stopAuto();
+            }, function () {
+                carousel.startAuto();
+            });
+        };
+
+        jQuery(document).ready(function () {
+            jQuery('#mycarousel_partners').jcarousel({
+                auto: 3,
+                animation: 1000,
+                vertical: true,
+                wrap: 'circular',
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            });
+            jQuery('#mycarousel_projects, #mycarousel_thesame_P').jcarousel({
+                auto: 0,
+                animation: 1000,                
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            });
+        });
+    </script>
+    <!--Zoomin - Zoomout image products-->
+    <link rel="stylesheet" type="text/css" href="vi-vn/Styles/highslide.css">
+    <script type="text/javascript" src="../vi-vn/Scripts/highslide.js"></script>
+    <script type="text/javascript" src="../vi-vn/Scripts/highslide-with-gallery.js"></script>
+    <script type="text/javascript">
+        hs.graphicsDir = '../vi-vn/Images/';
+        hs.transitions = ['expand', 'crossfade'];
+        hs.outlineType = 'glossy-dark';
+        hs.wrapperClassName = 'dark';
+        hs.fadeInOut = true;
+        //hs.dimmingOpacity = 0.75;
+
+        // Add the controlbar
+        if (hs.addSlideshow) hs.addSlideshow({
+            //slideshowGroup: 'group1',
+            interval: 5000,
+            repeat: false,
+            useControls: true,
+            fixedControls: 'fit',
+            overlayOptions: {
+                opacity: .6,
+                position: 'bottom center',
+                hideOnMouseOut: true
+            }
+        });
+
+    </script>
+    <script src="../vi-vn/Scripts/crawler.js" type="text/javascript"></script><style type="text/css">.marquee{white-space:nowrap;overflow:hidden;visibility:hidden;}#marq_kill_marg_bord{border:none!important;margin:0!important;}</style>
+    <!--Detail_img-->
+    <link rel="stylesheet" type="text/css" href="vi-vn/Styles/jquery.ad-gallery.css">
+    <script type="text/javascript" src="../vi-vn/Scripts/jquery.ad-gallery.js?rand=390"></script>
+    <script type="text/javascript" src="../vi-vn/Scripts/Galary.js"></script>
+    
+<style type="text/css">.highslide img {cursor: url(../vi-vn/Images/zoomin.cur), pointer !important;}</style></head>
+<body>
+    <form method="post" action="./trang-chu.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" style="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" style="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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aS5hc3B4ElTDtG4gOSBzw7NuZyDEkcO0aWQCAQ8WAh8BAv////8PZAIVD2QWBGYPFQIbL2NodXllbi1tdWMvdGFpLWxpZXUtYS5hc3B4ClRhaSBMaWV1IEFkAgEPFgIfAQL/////D2QCAw8PFgIfAAUBMmRkAgcPDxYCHwAFBzg5MSwzNDJkZAILD2QWAgIBD2QWBAIBDxYCHwECBhYMZg9kFgJmDxUEIi9zYW4tcGhhbS90aGVwLWhvcC10aGVwLXZ1b25nLmFzcHgWL2RhdGEvbmV3cy8xMjExLzMxLmpwZyIvc2FuLXBoYW0vdGhlcC1ob3AtdGhlcC12dW9uZy5hc3B4GlRow6lwIGjhu5lwIC0gVGjDqXAgdnXDtG5nZAIBD2QWAmYPFQQfL3Nhbi1waGFtL2JhbmctbWF1LWhvYS1zZW4uYXNweBYvZGF0YS9uZXdzLzEyMDYvMjYuanBnHy9zYW4tcGhhbS9iYW5nLW1hdS1ob2Etc2VuLmFzcHgTQuG6o25nIG3DoHUgSG9hIFNlbmQCAg9kFgJmDxUEHi9zYW4tcGhhbS9iYW5nLW1hdS1kb25nLWEuYXNweBsvZGF0YS9uZXdzLzEyMDMvZG9uZy1hYS5qcGceL3Nhbi1waGFtL2JhbmctbWF1LWRvbmctYS5hc3B4FULhuqNuZyBtw6B1IMSQw7RuZyDDgWQCAw9kFgJmDxUEHS9zYW4tcGhhbS90b24tdm9tLTktc29uZy5hc3B4Gy9kYXRhL25ld3MvMTE5OS90b24tdm9tLmpwZx0vc2FuLXBoYW0vdG9uLXZvbS05LXNvbmcuYXNweBFUw7RuIHbDsm0gOSBzw7NuZ2QCBA9kFgJmDxUEJS9zYW4tcGhhbS90b24tZG9uZy10cmFuLWxhLXBob25nLmFzcHgoL2RhdGEvbmV3cy8xMTk4L3Rvbi1kb25nLXRyYS1sYXBob25nLmpwZyUvc2FuLXBoYW0vdG9uLWRvbmctdHJhbi1sYS1waG9uZy5hc3B4G1TDtG4gxJHDs25nIHRy4bqnbiBMYSBwaG9uZ2QCBQ9kFgJmDxUEGy9zYW4tcGhhbS90b24ta2VtLWN1b24uYXNweCUvZGF0YS9uZXdzLzExOTUvVMO0bi1r4bq9bS1jdeG7mW4uanBnGy9zYW4tcGhhbS90b24ta2VtLWN1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" style="">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=Pny8-2wdV-zE_IMCtrJRF4MXXz8p2bjCUFwWJTl_fnTAB-BfavFWjXr1eMXnYzMjMtlooKAgcBKb1_GOt3mzCRm-XkAG9yKjm6rW3tL_JKo1&amp;t=638901778200000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=zcHqkpvrjFv1WnrdPjinarHi3vZg4yFs-V2iAo_Y_kT2WqfNNzQlC4VMBmKyZup88xaTQN75ZEGAIXqKqT8ZNtzamFLK7r9qFnem0epcoH-or-Ss7cwjz-zbDO6HVYRlV_NNqwLIquuKE-N5KEYVHw2&amp;t=7c776dc1" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=gQRHDzTOYd_3ekd5XdpVwZQu4gCPPH-NyuR14N7rRO_TY8G4BIiNXB_JeCRoEaIOWoddXDuTKePl7C5OHdTHMKfEiBzfKMX3NfU7gAtZfAJ2QB3OOc8Tt6RX6qtJIb4uK8-sTtYrEyWtcbxBM6wcdw2&amp;t=7c776dc1" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="198B8735" style="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAN8z7aDIiEazKTIRp9DHQIDNVAhw3DZVOeDwPtmM3uSrI+z5tcQru3Vu/CWg+29QTiXMkgTXg05+DG3soXkT8KXVpklc7m9fj/HjU7mOINxCA==" style="">
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <!--#begin Header-->
+    <div id="top_page">
+        
+<div class="wrap" id="header">
+    <a href="/trang-chu.aspx" id="logo">
+
+
+
+
+
+        <img src="/data/configs/13/logo_bavi.png" alt="" width="143" height="104">    </a>
+    <p id="slogan">
+        <a href="/trang-chu.aspx">
+            <img src="/data/configs/18/SLOGAN.png" alt="" width="450" height="40"></a></p>
+    <div id="header_right">
+        <div class="row_header cf" id="hotline">
+            
+            <img src="../vi-vn/Images/phone_icon.jpg" alt="" width="23" height="27" style="margin-right: 5px">Mr. Bá: 0934.179.668 <br>
+            
+            <img src="../vi-vn/Images/phone_icon.jpg" alt="" width="23" height="27" style="margin-right: 5px">Ms. Trang: 0903.670.284 <br>
+            
+            
+        </div>
+        <div class="row_header cf" id="search_form">
+            <input name="ctl00$Thep_Toppage1$txtsearch" type="text" id="Thep_Toppage1_txtsearch" class="inputSearch" onclick="this.value=''" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Nhập từ khóa cần tìm" style="">
+            
+            <input type="submit" name="ctl00$Thep_Toppage1$btnsearch" value="" id="Thep_Toppage1_btnsearch" class="submitSearch" style="">
+            
+        </div>
+        <!--end: #search-form-->
+    </div>
+    <div class="cf">
+    </div>
+</div>
+
+    </div>
+    <!--#end Header-->
+    <!--Main Menu-->
+    <div id="smoothmenu1" class="ddsmoothmenu">
+        
+        <ul>
+    
+        <li class="active"><a href="/trang-chu.aspx">Trang chủ</a>
+            
+        </li>
+    
+        <li class=""><a href="/chuyen-muc-n/gioi-thieu.aspx">Giới thiệu</a>
+            
+        </li>
+    
+        <li class="" style="z-index: 100;"><a href="/chuyen-muc/san-pham.aspx" style="padding-right: 15px;">Sản phẩm</a>
+            
+                    <ul style="display: none; top: 40px; visibility: visible;">
+                
+                    <li style="z-index: 99;"><a href="/chuyen-muc/ton-cuon.aspx" class="parent">
+                        Tôn cuộn</a>
+                        
+                                <ul style="display: none; top: 0px; visibility: visible;">
+                            
+                                <li><a href="/chuyen-muc/ton-kem-cuon.aspx">
+                                    Tôn kẽm cuộn</a></li>
+                            
+                                <li><a href="/chuyen-muc/ton-lanh-cuon-ton-ma-hop-kim-nhom-kem.aspx">
+                                    Tôn lạnh cuộn (tôn mạ hợp,  kim nhôm kẽm)</a></li>
+                            
+                                <li><a href="/chuyen-muc/ton-kem-mau-cuon.aspx">
+                                    Tôn kẽm màu cuộn</a></li>
+                            
+                                <li><a href="/chuyen-muc/ton-lanh-mau-cuon.aspx">
+                                    Tôn lạnh màu cuộn</a></li>
+                            
+                                </ul>
+                                                </li>
+                
+                    <li style="z-index: 98;"><a href="/chuyen-muc/ton-do-san-deck.aspx" class="parent">
+                        Tôn đỗ sàn deck</a>
+                        
+                                <ul style="display: none; top: 0px; visibility: visible;">
+                            
+                                <li><a href="/chuyen-muc/ton-do-san-deck-song-cao-50.aspx">
+                                    Tôn đỗ sàn deck sóng cao 50</a></li>
+                            
+                                <li><a href="/chuyen-muc/ton-do-san-deck-song-cao-75.aspx">
+                                    Tôn đỗ sàn deck sóng cao 75</a></li>
+                            
+                                </ul>
+                                                </li>
+                
+                    <li style="z-index: 97;"><a href="/chuyen-muc/ton-nhom-ton-inox.aspx" class="parent">
+                        Tôn nhôm - tôn inox</a>
+                        
+                                <ul style="display: none; top: 0px; visibility: visible;">
+                            
+                                <li><a href="/chuyen-muc/ton-nhom.aspx">
+                                    Tôn nhôm</a></li>
+                            
+                                <li><a href="/chuyen-muc/ton-inox.aspx">
+                                    Tôn inox</a></li>
+                            
+                                </ul>
+                                                </li>
+                
+                    <li style="z-index: 96;"><a href="/chuyen-muc/ton-cach-nhiet-cach-am.aspx" class="parent">
+                        Tôn cách nhiệt - cách âm</a>
+                        
+                                <ul style="display: none; top: 0px; visibility: visible;">
+                            
+                                <li><a href="/chuyen-muc/ton-cach-nhiet-pe.aspx">
+                                    Tôn cách nhiệt PE</a></li>
+                            
+                                <li><a href="/chuyen-muc/ton-cach-nhiet-cach-am-pu.aspx">
+                                    Tôn cách nhiệt - cách âm PU</a></li>
+                            
+                                </ul>
+                                                </li>
+                
+                    <li style="z-index: 95;"><a href="/chuyen-muc/ton-nhua-lay-sang.aspx" class="parent">
+                        Tôn nhựa lấy sáng</a>
+                        
+                                <ul style="display: none; top: 0px; visibility: visible;">
+                            
+                                <li><a href="/chuyen-muc/ton-nhua-loai-thuong.aspx">
+                                    Tôn nhựa loại thường</a></li>
+                            
+                                <li><a href="/chuyen-muc/ton-nhua-loai-tot.aspx">
+                                    Tôn nhựa loại tốt</a></li>
+                            
+                                </ul>
+                                                </li>
+                
+                    </ul>
+                
+        </li>
+    
+        <li class=""><a href="/chuyen-muc-n/dich-vu.aspx">Dịch vụ</a>
+            
+        </li>
+    
+        <li class=""><a href="/chuyen-muc/du-an.aspx">Dự án</a>
+            
+        </li>
+    
+        <li class="" style="z-index: 94;"><a href="/chuyen-muc/tai-lieu-ky-thuat.aspx" style="padding-right: 15px;">Tài liệu kỹ thuật</a>
+            
+                    <ul style="display: none; top: 40px; visibility: visible;">
+                
+                    <li><a href="/chuyen-muc/tai-lieu-a.aspx" class="parent">
+                        Tai Lieu A</a>
+                                            </li>
+                
+                    </ul>
+                
+        </li>
+    
+        <li class=""><a href="/chuyen-muc-n/tin-tuc.aspx">Tin tức</a>
+            
+        </li>
+    
+        <li class=""><a href="/lien-he.aspx">Liên hệ</a>
+            
+        </li>
+    
+        </ul>
+    
+
+
+    </div>
+    <!--End Main Menu-->
+    <div id="wrap_out">
+        <div class="wrap">
+            
+<div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_4" style="display: block; height: 400px;"><div class="camera_fakehover"><div class="camera_src camerastarted">
+      
+            <div class="camera_img" data-thumb="/data/aditems/64/1233333333333333333333333.jpg" data-src="/data/aditems/64/1233333333333333333333333.jpg"><img src="/data/aditems/64/1233333333333333333333333.jpg" alt=""></div>
+        
+            <div class="camera_img" data-thumb="/data/aditems/95/BN1.jpg" data-src="/data/aditems/95/BN1.jpg"><img src="/data/aditems/95/BN1.jpg" alt=""></div>
+        
+            <div class="camera_img" data-thumb="/data/aditems/96/BN3.jpg" data-src="/data/aditems/96/BN3.jpg"><img src="/data/aditems/96/BN3.jpg" alt=""></div>
+        
+            <div class="camera_img" data-thumb="/data/aditems/97/MN2.jpg" data-src="/data/aditems/97/MN2.jpg"><img src="/data/aditems/97/MN2.jpg" alt=""></div>
+            </div><div class="camera_target"><div class="cameraCont"><div class="cameraSlide cameraSlide_0" style="visibility: visible; display: none; z-index: 1;"><img src="/data/aditems/64/1233333333333333333333333.jpg?1774129922857" class="imgLoaded" data-alignment="" data-portrait="" width="1000" height="400" style="visibility: visible; height: 400px; margin-left: 0px; margin-top: 0px; position: absolute; width: 1000px;"><div class="camerarelative" style="width: 1000px; height: 400px;"></div></div><div class="cameraSlide cameraSlide_1 cameracurrent" style="display: block; z-index: 999;"><img src="/data/aditems/95/BN1.jpg?1774129925793" class="imgLoaded" data-alignment="" data-portrait="" width="1000" height="400" style="visibility: visible; height: 400px; margin-left: 0px; margin-top: 0px; position: absolute; width: 1000px;"><div class="camerarelative" style="width: 1000px; height: 400px;"></div></div><div class="cameraSlide cameraSlide_2 cameranext" style="display: none;"><img src="/data/aditems/96/BN3.jpg?1774129931266" class="imgLoaded" data-alignment="" data-portrait="" width="1000" height="400" style="visibility: visible; height: 400px; margin-left: 0px; margin-top: 0px; position: absolute; width: 1000px;"><div class="camerarelative" style="width: 1000px; height: 400px;"></div></div><div class="cameraSlide cameraSlide_3"><div class="camerarelative" style="width: 1000px; height: 400px;"></div></div><div class="cameraSlide cameraSlide_4" style="z-index: 1; display: none;"><div class="camerarelative" style="width: 1000px; height: 400px;"></div></div></div></div><div class="camera_overlayer"></div><div class="camera_target_content"><div class="cameraContents"><div class="cameraContent" style="display: none;"></div><div class="cameraContent cameracurrent" style="display: block;"></div><div class="cameraContent"></div><div class="cameraContent"></div></div></div><div class="camera_bar" style="display: none; top: auto; height: 7px;"><span class="camera_bar_cont" style="opacity: 0.8; position: absolute; inset: 0px; background-color: rgb(34, 34, 34);"><span id="pie_0" style="opacity: 0.56238; position: absolute; background-color: rgb(238, 238, 238); inset: 2px 0px; display: none;"></span></span></div><div class="camera_prev" style="opacity: 0;"><span></span></div><div class="camera_next" style="opacity: 0;"><span></span></div></div><div class="camera_loader" style="display: none; visibility: visible;"></div></div>
+    
+            <script type="text/javascript">
+                $('.camera_img').each(function () {
+                    $(this).attr('data-thumb', $('img', this).attr('src'));
+                    $(this).attr('data-src', $('img', this).attr('src'));
+                })
+            </script>
+            <!-- #camera_wrap_3 -->
+            <!--Main Content-->
+            <div id="main">
+                <!--Left Column-->
+                
+<div class="col">
+    <!--Left Menu-->
+    <div class="box">
+        <div class="title_box_gr">
+            Danh mục sản phẩm</div>
+        <div class="box_ct topnav">
+            <ul>
+                
+                        <li class="active"><a href="/chuyen-muc/ton-bao-che-cover-roof.aspx">Tôn bao che / cover roof</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/ton-5-song.aspx">
+                                        Tôn 5 sóng</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-7-song.aspx">
+                                        Tôn 7 sóng</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc-n/ton-9-song.aspx">
+                                        Tôn 9 sóng</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-11-song.aspx">
+                                        Tôn 11 sóng</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-dong-tran.aspx">
+                                        Tôn đóng trần</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-song-tron.aspx">
+                                        Tôn sóng tròn</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-song-ngoi.aspx">
+                                        Tôn sóng ngói</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-cliplock.aspx">
+                                        Tôn cliplock</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-lock-seam.aspx">
+                                        Tôn lock seam</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-do-dan-ton-do-san-deck.aspx">
+                                        Tôn đỗ dàn -  tôn đỗ sàn deck</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/ton-nhua-lay-sang.aspx">Tôn nhựa lấy sáng</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/ton-nhua-loai-thuong.aspx">
+                                        Tôn nhựa loại thường</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-nhua-loai-tot.aspx">
+                                        Tôn nhựa loại tốt</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/ton-cach-nhiet-cach-am.aspx">Tôn cách nhiệt - cách âm</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/ton-cach-nhiet-pe.aspx">
+                                        Tôn cách nhiệt PE</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-cach-nhiet-cach-am-pu.aspx">
+                                        Tôn cách nhiệt - cách âm PU</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/ton-nhom-ton-inox.aspx">Tôn nhôm - tôn inox</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/ton-nhom.aspx">
+                                        Tôn nhôm</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-inox.aspx">
+                                        Tôn inox</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/ton-do-san-deck.aspx">Tôn đỗ sàn deck</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/ton-do-san-deck-song-cao-50.aspx">
+                                        Tôn đỗ sàn deck sóng cao 50</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-do-san-deck-song-cao-75.aspx">
+                                        Tôn đỗ sàn deck sóng cao 75</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/ton-cuon.aspx">Tôn cuộn</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/ton-kem-cuon.aspx">
+                                        Tôn kẽm cuộn</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-lanh-cuon-ton-ma-hop-kim-nhom-kem.aspx">
+                                        Tôn lạnh cuộn (tôn mạ hợp,  kim nhôm kẽm)</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-kem-mau-cuon.aspx">
+                                        Tôn kẽm màu cuộn</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-lanh-mau-cuon.aspx">
+                                        Tôn lạnh màu cuộn</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/ton-dong-tran-la-phong.aspx">Tôn đóng trần La phong</a></li>
+                        <ul class="children">
+                            
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/ton-vom.aspx">Tôn vòm</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/ton-vom-9-song.aspx">
+                                        Tôn vòm 9 sóng</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-vom-dang-5-song.aspx">
+                                        ton vòm dạng 5 sóng</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/ton-vom-deu-vom-lan.aspx">
+                                        Tôn vòm đều (vòm lăn)</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/vit-ban-ton-bulong.aspx">Vít bắn tôn - bulong</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/vit-ban-ton.aspx">
+                                        Vít bắn tôn</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/phu-kien-bao-che-va-trang-tri.aspx">Phụ kiện bao che và trang trí</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/ton-vom-noc-gio-canopy.aspx">
+                                        Tôn vòm nóc gió &amp; canopy</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/diem-va-mang-xoi-cac-loai.aspx">
+                                        Diềm và máng xối các loại</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/lam-gio-louver.aspx">
+                                        Lam gió - Louver</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/bang-mau-colour-chart.aspx">Bảng màu/ colour chart</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/bang-mau-dong-a.aspx">
+                                        Bảng màu Đông Á</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/bang-mau-posvina.aspx">
+                                        Bảng màu posvina</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/bang-mau-phuong-nam.aspx">
+                                        Bảng màu Phương Nam</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/bang-mau-hoa-sen.aspx">
+                                        Bảng màu Hoa Sen</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/bang-mau-tvp.aspx">
+                                        Bảng màu TVP</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/bang-mau-nam-kim.aspx">
+                                        Bảng màu Nam Kim</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/thep-hinh-cac-loai.aspx">Thép hình các loại</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/thep-i-h-u-v.aspx">
+                                        Thép I, H, U, V</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/xa-go-chu-c.aspx">
+                                        Xà gồ chữ C</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/xa-go-chu-z.aspx">
+                                        Xà gồ chữ Z</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/thep-ong.aspx">
+                                        Thép Ống</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/thep-hop-thep-vuong.aspx">
+                                        Thép hộp - Thép vuông</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/thep-tam-gan-thep-tron-dac.aspx">Thép tấm, gân, thép tròn đặc</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/thep-tam.aspx">
+                                        Thép tấm</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/thep-tam-gan.aspx">
+                                        Thép tấm gân</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/thep-tron-dac-lap.aspx">
+                                        Thép tròn đặc - láp</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/thep-xay-dung.aspx">Thép xây dựng</a></li>
+                        <ul class="children">
+                            
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/ong-nhua.aspx">Ống nhựa</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/phu-kien-ong-nhua.aspx">
+                                        Phụ kiện ống nhựa</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/cach-nhiet-pe-pu-b-t-tinh.aspx">Cách nhiệt PE, PU, B.T.Tinh</a></li>
+                        <ul class="children">
+                            
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/luoi-rao-luoi-b40-kem-gai.aspx">Lưới rào, lưới B40, kẽm gai</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/kem-gai.aspx">
+                                        Kẽm gai</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                                    <li><a href="/chuyen-muc/luoi-rao-luoi-b40.aspx">
+                                        Lưới rào, lưới B40</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/vat-lieu-xay-dung.aspx">Vật liệu xây dựng</a></li>
+                        <ul class="children">
+                            
+                                    <li><a href="/chuyen-muc/cach-nhiet-bong-thuy-tinh.aspx">
+                                        Cách nhiệt Bông thủy tinh</a>
+                                        <ul>
+                                                                                    </ul>
+                                    </li>
+                                
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/xay-dung-cn-va-dan-dung.aspx">Xây dựng CN và dân dụng</a></li>
+                        <ul class="children">
+                            
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/trang-tri-noi-that.aspx">Trang trí nội thất</a></li>
+                        <ul class="children">
+                            
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/ton-9-song-doi.aspx">Tôn 9 sóng đôi</a></li>
+                        <ul class="children">
+                            
+                        </ul>
+                        
+                    
+                        <li class="active"><a href="/chuyen-muc/tai-lieu-a.aspx">Tai Lieu A</a></li>
+                        <ul class="children">
+                            
+                        </ul>
+                        
+                    
+            </ul>
+            <div class="cf">
+            </div>
+        </div>
+    </div>
+    <!--End Left Menu-->
+    <!--Status-->
+    <div class="box">
+        <div class="title_box_gr">
+            THỐNG KÊ TRUY CẬP</div>
+        <div class="box_ct" id="access_status">
+            <p>
+                <span class="icon_status online"></span>Đang truy cập: <b><span id="menuleft1_lblOnline">2</span></b></p>
+            <p>
+                <span class="icon_status s_today"></span>Hôm nay: <b><span id="menuleft1_Lbonline_date">36</span></b></p>
+            
+            <p>
+                <span class="icon_status visited"></span>Tổng lượt truy cập: <b><span id="menuleft1_lblSum">891,342</span></b></p>
+            <div class="cf">
+            </div>
+        </div>
+    </div>
+    <!--End Status-->
+</div>
+
+
+                <!--Left Column-->
+                <!--Middle Column-->
+                <div class="col" id="col_middle">
+                    
+    
+
+<!--Products-->
+<div class="box">
+    <div class="title_box">
+        <b><span>SẢN PHẨM TIÊU BIỂU</span></b></div>
+    <div class="box_ct" id="product_row">
+        <ul>
+            
+                    <li>
+                        <!--Start Product-->
+                        <a href="/san-pham/thep-hop-thep-vuong.aspx" class="img_product">
+                            <img src="/data/news/1211/31.jpg" alt="">
+                        </a><a href="/san-pham/thep-hop-thep-vuong.aspx">
+                            <h2 class="product_name">
+                                Thép hộp - Thép vuông</h2>
+                        </a>
+                        <!--End Product-->
+                    </li>
+                
+                    <li>
+                        <!--Start Product-->
+                        <a href="/san-pham/bang-mau-hoa-sen.aspx" class="img_product">
+                            <img src="/data/news/1206/26.jpg" alt="">
+                        </a><a href="/san-pham/bang-mau-hoa-sen.aspx">
+                            <h2 class="product_name">
+                                Bảng màu Hoa Sen</h2>
+                        </a>
+                        <!--End Product-->
+                    </li>
+                
+                    <li>
+                        <!--Start Product-->
+                        <a href="/san-pham/bang-mau-dong-a.aspx" class="img_product">
+                            <img src="/data/news/1203/dong-aa.jpg" alt="">
+                        </a><a href="/san-pham/bang-mau-dong-a.aspx">
+                            <h2 class="product_name">
+                                Bảng màu Đông Á</h2>
+                        </a>
+                        <!--End Product-->
+                    </li>
+                
+                    <li>
+                        <!--Start Product-->
+                        <a href="/san-pham/ton-vom-9-song.aspx" class="img_product">
+                            <img src="/data/news/1199/ton-vom.jpg" alt="">
+                        </a><a href="/san-pham/ton-vom-9-song.aspx">
+                            <h2 class="product_name">
+                                Tôn vòm 9 sóng</h2>
+                        </a>
+                        <!--End Product-->
+                    </li>
+                
+                    <li>
+                        <!--Start Product-->
+                        <a href="/san-pham/ton-dong-tran-la-phong.aspx" class="img_product">
+                            <img src="/data/news/1198/ton-dong-tra-laphong.jpg" alt="">
+                        </a><a href="/san-pham/ton-dong-tran-la-phong.aspx">
+                            <h2 class="product_name">
+                                Tôn đóng trần La phong</h2>
+                        </a>
+                        <!--End Product-->
+                    </li>
+                
+                    <li>
+                        <!--Start Product-->
+                        <a href="/san-pham/ton-kem-cuon.aspx" class="img_product">
+                            <img src="/data/news/1195/Tôn-kẽm-cuộn.jpg" alt="">
+                        </a><a href="/san-pham/ton-kem-cuon.aspx">
+                            <h2 class="product_name">
+                                Tôn kẽm cuộn</h2>
+                        </a>
+                        <!--End Product-->
+                    </li>
+                
+        </ul>
+        <a href="/chuyen-muc/san-pham.aspx" class="view_all_index">Xem tất cả</a>
+        <div class="cf">
+        </div>
+    </div>
+</div>
+<!--End Products-->
+<!--News Home-->
+<div class="box">
+    <div class="title_box">
+        <b><span>Tin tức</span></b></div>
+    <div class="box_ct" id="news_home">
+        <ul>
+            
+                    <li>
+                        <!--Start Product-->
+                        <a href="/tin-tuc/thi-truong-thep-tang-truong-dot-bien.aspx">
+                            <img class="img_general" width="105" src="/data/news/1222/images (1).jpg" alt="">
+                        </a><a href="/tin-tuc/thi-truong-thep-tang-truong-dot-bien.aspx">
+                            <h2 class="news_Title">
+                                Thị trường thép tăng trưởng đột biến</h2>
+                        </a>
+                        <p class="short_des">
+                            Theo Hiệp hội Thép Việt Nam (VSA), khác với tháng 1 và 2 thị trường thép ảm đạm thì bước sang tháng 3 lượng thép tiêu thụ đã tăng trưởng mạnh với 487.000 tấn, tăng 33% so với tháng 2 và tăng 3,7% so với cùng kỳ năm 2013.</p>
+                        <!--End Product-->
+                    </li>
+                
+                    <li>
+                        <!--Start Product-->
+                        <a href="/tin-tuc/thep-tang-them-100-000-dong-tan.aspx">
+                            <img class="img_general" width="105" src="/data/news/1221/download.jpg" alt="">
+                        </a><a href="/tin-tuc/thep-tang-them-100-000-dong-tan.aspx">
+                            <h2 class="news_Title">
+                                Thép tăng thêm 100.000 đồng/tấn</h2>
+                        </a>
+                        <p class="short_des">
+                            Giá thép bán lẻ trên thị trường tiếp tục tăng thêm 100.000 đồng/tấn so với thời điểm đầu tháng 4-2014 sau khi sức mua trên thị trường có dấu hiệu cải thiện, cộng với việc chi phí vận chuyển tăng kể từ khi chính sách siết chặt trọng tải được thực hiện.</p>
+                        <!--End Product-->
+                    </li>
+                
+                    <li>
+                        <!--Start Product-->
+                        <a href="/tin-tuc/mat-bang-ban-le-viet-nam-dang-lam-kho-khach-hang-ngoai.aspx">
+                            <img class="img_general" width="105" src="/data/news/1220/4copy-11.jpg" alt="">
+                        </a><a href="/tin-tuc/mat-bang-ban-le-viet-nam-dang-lam-kho-khach-hang-ngoai.aspx">
+                            <h2 class="news_Title">
+                                Mặt bằng bán lẻ Việt Nam đang làm khó khách hàng ngoại</h2>
+                        </a>
+                        <p class="short_des">
+                            Ông Mark Burlton, Giám đốc toàn cầu Dịch vụ cho thuê và Tư vấn bán lẻ Cushman &amp; Wakefield đã có cuộc trao đổi với phóng viên về thị trường mặt bằng bán lẻ tại Việt Nam. Theo ông: "Các nhà bán lẻ nước ngoài cũng không thể ngay lập tức tiếp cận và làm thay đổi toàn bộ cục diện thị trường trong nước”. Nguyên nhân có phần quan trọng liên quan đến mặt bằng bán lẻ.</p>
+                        <!--End Product-->
+                    </li>
+                
+        </ul>
+        <a href="/chuyen-muc-n/tin-tuc.aspx" class="view_all_index">Xem tất cả</a>
+        <div class="cf">
+        </div>
+    </div>
+</div>
+<!--End News Home-->
+
+
+                </div>
+                <!--Middle Column-->
+                <!--Right Column-->
+                <div class="col">
+                    
+<!-- Video-->
+<div class="box">
+
+
+
+
+
+    <p><iframe src="http://www.youtube.com/embed/UXi4BnlgQ9Y" frameborder="0" width="220" height="162"></iframe></p>
+
+
+</div>
+<!--End Video-->
+<!--Support-->
+<div class="box">
+    <div class="title_box_gr">
+        HỖ TRỢ TRỰC TUYẾN</div>
+    <div class="box_ct" id="box_support">
+        <ul>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </ul>
+        <div class="cf">
+        </div>
+    </div>
+</div>
+<!--End Support-->
+<!--Services-->
+<div class="box">
+    <div class="title_box_gr">
+        DỊCH VỤ</div>
+    <div class="box_ct topnav">
+        <ul>
+            
+            
+        </ul>
+        <div class="cf">
+        </div>
+    </div>
+</div>
+<!--End Services-->
+<!-- Jquery Slide Partners -->
+<div class="box">
+    <div class="title_box_gr">
+        ĐỐI TÁC</div>
+    <div class="box_ct" id="partners">
+        <div class=" jcarousel-skin-tango"><div class="jcarousel-container jcarousel-container-vertical" style="position: relative; display: block;"><div class="jcarousel-clip jcarousel-clip-vertical" style="overflow: hidden; position: relative;"><ul id="mycarousel_partners" class="jcarousel-list jcarousel-list-vertical" style="overflow: hidden; position: relative; top: -210px; left: 0px; margin: 0px; padding: 0px; height: 525px;">
+            
+            <li class="item jcarousel-item jcarousel-item-vertical jcarousel-item-1 jcarousel-item-1-vertical" jcarouselindex="1" style="float: left; list-style: none;"><a href="" target=""><img src="/data/aditems/92/partner01.jpg" width="200" alt=""></a></li>
+            
+            <li class="item jcarousel-item jcarousel-item-vertical jcarousel-item-2 jcarousel-item-2-vertical" jcarouselindex="2" style="float: left; list-style: none;"><a href="" target=""><img src="/data/aditems/93/partner02.jpg" width="200" alt=""></a></li>
+            
+            <li class="item jcarousel-item jcarousel-item-vertical jcarousel-item-3 jcarousel-item-3-vertical" jcarouselindex="3" style="float: left; list-style: none;"><a href="" target=""><img src="/data/aditems/94/partner03.jpg" width="200" alt=""></a></li><li class="jcarousel-item jcarousel-item-vertical jcarousel-item-4 jcarousel-item-4-vertical" jcarouselindex="4" style="float: left; list-style: none;"><a href="" target=""><img src="/data/aditems/92/partner01.jpg" width="200" alt=""></a></li><li class="jcarousel-item jcarousel-item-vertical jcarousel-item-5 jcarousel-item-5-vertical" jcarouselindex="5" style="float: left; list-style: none;"><a href="" target=""><img src="/data/aditems/93/partner02.jpg" width="200" alt=""></a></li>
+            
+        </ul></div><div class="jcarousel-prev jcarousel-prev-vertical" style="display: block;"></div><div class="jcarousel-next jcarousel-next-vertical" style="display: block;"></div></div></div>
+        <div class="cf">
+        </div>
+    </div>
+</div>
+<!--End Jquery Slide Partners-->
+
+                </div>
+                <!--End Right Column-->
+                <div class="cf">
+                </div>
+            </div>
+            <!--End Main Content-->
+            <!-- Jquery Projects -->
+            <div class="box" id="slide_projects">
+                
+<div class="title_grey">
+    Dự án</div>
+<div class=" jcarousel-skin-tango"><div class="jcarousel-container jcarousel-container-horizontal" style="position: relative; display: block;"><div class="jcarousel-clip jcarousel-clip-horizontal" style="overflow: hidden; position: relative;"><ul id="mycarousel_projects" class="jcarousel-list jcarousel-list-horizontal" style="overflow: hidden; position: relative; top: 0px; left: 0px; margin: 0px; padding: 0px; width: 480px;">
+    
+    <li class="item jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" jcarouselindex="1" style="float: left; list-style: none;"><a href="" target=""><img src="/data/aditems/89/project01.jpg" width="150" height="100" alt=""></a></li>
+    
+    <li class="item jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal" jcarouselindex="2" style="float: left; list-style: none;"><a href="" target=""><img src="/data/aditems/90/project02.jpg" width="150" height="100" alt=""></a></li>
+    
+    <li class="item jcarousel-item jcarousel-item-horizontal jcarousel-item-3 jcarousel-item-3-horizontal" jcarouselindex="3" style="float: left; list-style: none;"><a href="" target=""><img src="/data/aditems/91/project03.jpg" width="150" height="100" alt=""></a></li>
+    </ul></div><div class="jcarousel-prev jcarousel-prev-horizontal jcarousel-prev-disabled jcarousel-prev-disabled-horizontal" disabled="disabled" style="display: block;"></div><div class="jcarousel-next jcarousel-next-horizontal jcarousel-next-disabled jcarousel-next-disabled-horizontal" disabled="disabled" style="display: block;"></div></div></div>
+
+            </div>
+            <!--End Jquery Projects-->
+            <div class="cf">
+            </div>
+        </div>
+    </div>
+    <!-- end #Main -->
+    <!-- Footer -->
+    <div id="footer">
+        
+
+<div class="wrap">
+    <div id="footer_ct">
+        <p><strong>Trụ sở chính:</strong></p>
+<p><span style="font-size: medium;"><strong>Công ty TNHH Thép Ba Vina</strong></span></p>
+<p>Địa chỉ: 12 Đường 22, KP3, F.Linh Chiểu, Quận Thủ Đức</p>
+<p>Điện thoại: 0650.3776438 - 0650.3776439&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fax: 0650.3776479&nbsp;</p>
+<p>Email:&nbsp;<a href="mailto:bavinasteel@gmail.com">bavinasteel@gmail.com</a> Website: <a href="http://www.basvina.com">www.basvina.com</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p><strong>Nhà máy:</strong></p>
+<p>Địa chỉ: 145/1A Quốc lộ 1k, KP Tân An, F. Tân Đông Hiệp, Dĩ An, Bình Dương</p>
+
+
+
+    </div>
+    <div class="social_network">
+        
+                 <a href="https://www.facebook.com"><span class="icon_facebook"></span></a>
+            
+                 <a href="http://youtube.com"><span class="icon_youtube"></span></a>
+            
+                 <a href="http://twitter.com/"><span class="icon_twitter"></span></a>
+            
+                 <a href="http://www.google.com/"><span class="icon_gplus"></span></a>
+            
+    </div>
+    <div id="copyright">
+        <p>
+            Copyright ©2014 Công Ty TNHH Thép Ba ViNa.</p>
+        <p>
+            <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn">
+                <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a></p>
+    </div>
+</div>
+
+    </div>
+    <!-- End Footer -->
+    <!-- back to top -->
+    <script type="text/javascript" src="../vi-vn/Scripts/scrolltopcontrol.js"></script>
+    <div id="toTop">
+    </div>
+    </form>
+
+
+<div class="highslide-container" style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001; direction: ltr;"><a class="highslide-loading" title="Click to cancel" href="javascript:;" style="position: absolute; top: -9999px; opacity: 0.75; z-index: 1;">Loading...</a><div style="display: none;"></div><table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; border-collapse: collapse; width: 0px;"><tbody style="padding: 0px; border: none; margin: 0px;"><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://basvina.com/vi-vn/Images/outlines/glossy-dark.png&quot;) 0px 0px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://basvina.com/vi-vn/Images/outlines/glossy-dark.png&quot;) 0px -40px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://basvina.com/vi-vn/Images/outlines/glossy-dark.png&quot;) -20px 0px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://basvina.com/vi-vn/Images/outlines/glossy-dark.png&quot;) 0px -80px; height: 20px; width: 20px;"></td><td class="glossy-dark highslide-outline" style="padding: 0px; border: none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://basvina.com/vi-vn/Images/outlines/glossy-dark.png&quot;) -20px -80px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://basvina.com/vi-vn/Images/outlines/glossy-dark.png&quot;) 0px -20px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://basvina.com/vi-vn/Images/outlines/glossy-dark.png&quot;) 0px -60px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://basvina.com/vi-vn/Images/outlines/glossy-dark.png&quot;) -20px -20px; height: 20px; width: 20px;"></td></tr></tbody></table></div></body></html>

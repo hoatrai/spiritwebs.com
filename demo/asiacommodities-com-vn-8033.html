@@ -1,0 +1,22 @@
+<html><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Just a moment...</title>
+<script type="text/javascript" charset="utf-8" src="https://challenge.rivers.chaitin.cn/captcha/api/sdk.js" onload="run()"></script></head><body>
+  <script>
+    var name = "captcha";
+    if (!window[name]) {
+      alert("No config, please do not request directly");
+      window.close();
+    }
+    function run() {
+      $Recap.create(window[name]).run();
+    }
+    const script = document.createElement("script");
+    script.setAttribute("type", "text/javascript");
+    script.setAttribute("charset", "utf-8");
+    script.setAttribute("src", window[name].entrypoint + "/sdk.js");
+    script.setAttribute("onload", "run()");
+    document.head.appendChild(script);
+  </script>
+
+</body></html>

@@ -1,0 +1,1644 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>BIO-TECHEM -</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="https://biotechem.com.vn/default.css" rel="stylesheet" type="text/css">
+
+<link href="https://biotechem.com.vn/css/menu_left.css" rel="stylesheet" type="text/css">
+<base href="https://biotechem.com.vn/content/">
+
+
+<link rel="icon" href="https://biotechem.com.vn/images/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="https://biotechem.com.vn/images/favicon.png" type="image/x-icon">
+
+
+<script language="javascript" src="https://biotechem.com.vn/js/menu_bar.js" type="text/javascript"></script></head><body leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"><div id="dropmenudiv" style="visibility:hidden;width:165px;background-color:#0186d2" onmouseover="clearhidemenu()" onmouseout="dynamichide(event)"></div>
+<link href="https://biotechem.com.vn/menu.css" rel="stylesheet" type="text/css">
+
+<script language="javascript" src="https://biotechem.com.vn/js/date.js" type="text/javascript"></script>
+<script language="javascript" src="https://biotechem.com.vn/js/ImageScroller.js" type="text/javascript"></script>
+<script language="javascript" src="https://biotechem.com.vn/library/javascripts/menu.js" type="text/javascript"></script>
+<script language="javascript" src="https://biotechem.com.vn/library/javascripts/nut_over.js" type="text/javascript"></script>
+
+
+<!-- content slide -->
+<link rel="stylesheet" type="text/css" href="contentslider.css">
+<script type="text/javascript" src="contentslider.js"></script>
+<!-- end slide -->
+
+<link href="https://biotechem.com.vn/css/mainframe.css" type="text/css" rel="stylesheet">
+
+
+<style type="text/css">
+<!-- 
+TD.header_box {BACKGROUND: #f2ebfe; COLOR: #000000; FONT-FAMILY: "Arial"; FONT-SIZE: 10pt}
+TD.listitem_box_0 {BACKGROUND: #ffffff; COLOR: #000000; FONT-FAMILY: "Arial"; FONT-SIZE: 12px;}
+TD.listitem_box_1 {BACKGROUND: #FFFFFF; COLOR: #000000; FONT-FAMILY: "Arial"; FONT-SIZE: 12px;}
+-->
+
+</style>
+
+<script language="JavaScript">
+function OpenWindow(theURL,winName,features){
+  window.open(theURL,winName,features);
+}
+
+//menu bar sub
+var arr_menusub = Array();
+//@arr_menusub@
+
+
+
+function menubar_over(catid){
+	var menu_bar = document.getElementById("menubar_"+catid);
+	var menu_bar_left = document.getElementById("menubar_left_"+catid);
+	var menu_bar_right = document.getElementById("menubar_right_"+catid);		
+	menu_bar.className = "menu_bar_over";
+	menu_bar_left.className = "menu_bar_left";
+	menu_bar_right.className = "menu_bar_right";
+}
+
+function menubar_normal(catid){
+	var menu_bar = document.getElementById("menubar_"+catid);
+	var menu_bar_left = document.getElementById("menubar_left_"+catid);
+	var menu_bar_right = document.getElementById("menubar_right_"+catid);			
+	menu_bar.className = "menu_bar_normal_center";	
+	//menu_bar_left.className = "menu_bar_normal";
+	//menu_bar_right.className = "menu_bar_normal";	
+	menu_bar_left.className = "menu_bar_normal_left";
+	menu_bar_right.className = "menu_bar_normal_right";
+}
+
+function menuleft_over(catid){
+	var menu_left = document.getElementById("menuleft1_"+catid);
+		
+	//menu_left.className = "menu_left1_over";
+	
+}
+
+function menuleft_normal(catid){
+	var menu_left = document.getElementById("menuleft1_"+catid);
+		
+	//menu_left.className = "menu_left_header";	
+}
+
+function menuright_over(catid){
+	var menu_right = document.getElementById("menuright1_"+catid);
+		
+	//menu_left.className = "menu_left1_over";
+	
+}
+function menuright_normal(catid){
+	var menu_right = document.getElementById("menuright1_"+catid);
+		
+	//menu_left.className = "menu_left_header";	
+}
+
+function menubar_link(url){
+	//document.location = url;
+	
+	if(url != '#'){
+		document.location = url;
+	}else{
+		//alert(url);
+	}
+}
+
+
+function goto_url(){
+	var objWebLink = document.getElementById('weblink');
+	//var which_page = document.getElementById('which_page').value;
+	var url = objWebLink[objWebLink.selectedIndex].value;	
+	//alert (url);
+	//document.location = url;
+	if (url == '0'){
+		alert ('Vui long chon dia chi web')
+	}else{
+		window.open(''+url+''); 
+	}
+}
+
+function showhide_left(thecell){
+	//alert (thecell);
+	//var temp = eval('document.all.'+thecell);
+	var temp = document.getElementById(thecell);
+	if ( temp.style.display == 'none' ){
+		temp.style.display = '';
+	} else{
+		temp.style.display = 'none';
+	}
+}
+
+function showhide_right(thecell){
+	//alert (thecell);
+	//var temp = eval('document.all.'+thecell);
+	var temp = document.getElementById(thecell);
+	if ( temp.style.display == 'none' ){
+		temp.style.display = '';
+	} else{
+		temp.style.display = 'none';
+	}
+}
+
+
+function loadMenus() {
+	//Khai bao Submenu
+	////hello
+}
+
+
+
+
+	 var menu6 = new Array(); 
+	 menu6[0]='<a href="/san-pham/thiet-bi-khoa-hoc_9_6-273-0.htm">THI&#7870;T B&#7882; KHOA H&#7884;C</a>'; 
+	 menu6[1]='<a href="/san-pham/san-pham-kit-chan-doan_9_6-274-0.htm">S&#7842;N PH&#7848;M KIT CH&#7848;N &#272;OÁN</a>'; 
+	 menu6[2]='<a href="/san-pham/hoa-chat-vat-tu-tieu-hao_9_6-275-0.htm">HÓA CH&#7844;T & V&#7852;T T&#431; TIÊU HAO</a>'; 
+//hello
+//@list_menu_footer@
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://biotechem.com.vn/tab2/css.css">
+
+<!-- Top -->
+<style type="text/css">
+#goTop {
+bottom: 50px;
+cursor: pointer;
+display: none;
+height: 35px;
+position: fixed;
+right: 101px;
+width: 44px;
+z-index: 1000;
+}
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+$(window).scroll(function () {
+if ($(this).scrollTop() > 100) $('#goTop').fadeIn();
+else $('#goTop').fadeOut();
+});
+$('#goTop').click(function () {
+$('body,html').animate({scrollTop: 0}, 'slow');
+});
+});
+</script>
+<!-- Top -->
+<script type="text/javascript" src="https://biotechem.com.vn/js/jquery.min.js"></script>
+  <!--Script San pham Noi Bat -->
+<link rel="stylesheet" type="text/css" href="https://biotechem.com.vn/jquery_sp/stylesheet.css">
+<link rel="stylesheet" type="text/css" href="https://biotechem.com.vn/jquery_sp/carousel.css" media="screen">
+
+<script type="text/javascript" src="https://biotechem.com.vn/jquery_sp/jquery-1.js"></script>
+<script type="text/javascript" src="https://biotechem.com.vn/jquery_sp/jquery.js"></script>
+<script type="text/javascript" src="https://biotechem.com.vn/jquery_sp/tabs.js"></script>
+<script type="text/javascript" src="https://biotechem.com.vn/jquery_sp/jquery_003.js"></script>
+<script type="text/javascript" src="https://biotechem.com.vn/jquery_sp/custom.js"></script>
+<!--Script San pham Noi Bat End-->
+
+<link href="css/styles.css" type="text/css" media="all" rel="stylesheet">
+<!-- Skitter Styles -->
+	<link href="https://biotechem.com.vn/css/skitter.styles.css" type="text/css" media="all" rel="stylesheet">
+	
+	<!-- Skitter JS -->
+	<!--<script type="text/javascript" language="javascript" src="https://biotechem.com.vn/js/jquery-1.6.3.min.js"></script>-->
+	<script type="text/javascript" language="javascript" src="https://biotechem.com.vn/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" language="javascript" src="https://biotechem.com.vn/js/jquery.animate-colors-mssin.js"></script>
+	<script type="text/javascript" language="javascript" src="https://biotechem.com.vn/js/jquery.skitter.min.js"></script>
+	
+	<!-- Init Skitter -->
+	<script type="text/javascript" language="javascript">
+		$(document).ready(function(){
+			$('.box_skitter_large').skitter({fullscreen:false});
+		});
+	</script>
+    
+    
+   
+ 
+
+
+
+<script language="javascript" type="text/javascript" src="https://biotechem.com.vn/js/ScriptToolTip.js"></script><div id="dhtmltooltipMK"></div><div id="dhtmlpointerMK"></div><div id="dhtmltooltip"></div><div id="dhtmlpointer"></div>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td align="center"><table width="1004" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td height="10" class="fram_top"> </td>
+      </tr>
+      <tr>
+        <td height="121"><table width="1004" border="0" align="center" cellpadding="0" cellspacing="0" class="fram_banner">
+          <tbody><tr>
+            <td width="122" height="121" align="right"><img src="https://biotechem.com.vn/images_layout/logo.png" width="110" height="121"></td>
+            <td width="634" valign="bottom"><table width="634" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr>
+                <td width="120">&nbsp;</td>
+                <td height="26" class="address_banner">29/24 Hoàng Hoa Thám, Phường 6, Quận Bình Thạnh, TP. HCM</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td height="26" class="address_banner">Điện thoại: (84-8) 62905308 – 62905309 - Fax: (84-8) 62905310</td>
+              </tr>
+              <tr>
+                <td> </td>
+                <td height="10"> </td>
+              </tr>
+            </tbody></table></td>
+            <td width="248" align="left" valign="bottom" class="fram_banner_right"><table width="248" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="35" align="left"><table width="80" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tbody><tr>
+                            <td width="23" height="25" align="center"><a class="top_link" href="/"><img src="https://biotechem.com.vn/images_layout/co_anh.gif" width="21" height="15" border="0"></a></td>
+                            <td width="60" align="center"><a class="top_link" href="/">English</a></td>
+                          </tr>
+          </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+      <tr>
+        <td height="35" align="center"><table width="1004" border="0" align="center" cellpadding="0" cellspacing="0" class="fram_menu">
+          <tbody><tr>
+            <td width="13"><img src="https://biotechem.com.vn/images_layout/left_menubar.gif" width="13" height="35"></td>
+            <td height="35"><table align="left" border="0" height="100%" cellspacing="0" cellpadding="0"><tbody><tr>
+		
+			<td width="" id="menubar_left_2" class="menu_bar_left"></td>
+			<td width="" align="center" class="menu_bar_over">TRANG CHỦ</td>
+			<td width="" id="menubar_right_2" class="menu_bar_right"></td>
+					
+					<td width="2" class="abc"><img src="../images_layout/line_menubar.gif"></td>
+					
+			<td width="" id="menubar_left_3" class="menu_bar_normal_left">	
+			</td><td width="" onclick="menubar_link('/gioi-thieu_1_1-3-0.htm')" id="menubar_3" class="menu_bar_normal_center" onmouseover="menubar_over('3')" onmouseout="menubar_normal('3')">
+			GIỚI THIỆU			
+			</td>
+			<td width="" id="menubar_right_3" class="menu_bar_normal_right">			
+			
+					</td><td width="2" class="abc"><img src="../images_layout/line_menubar.gif"></td>
+					
+			<td width="" id="menubar_left_6" class="menu_bar_normal_left">		
+			</td><td width="" onclick="menubar_link('/san-pham_9_6-0-0.htm')" id="menubar_6" class="menu_bar_normal_center" onmouseover="menubar_over('6')" onmouseout="menubar_normal('6')">
+			SẢN PHẨM
+			</td>
+			<td width="" id="menubar_right_6" class="menu_bar_normal_right">						
+			
+					</td><td width="2" class="abc"><img src="../images_layout/line_menubar.gif"></td>
+					
+			<td width="" id="menubar_left_24" class="menu_bar_normal_left">	
+			</td><td width="" onclick="menubar_link('/dich-vu_1_1-24-0.htm')" id="menubar_24" class="menu_bar_normal_center" onmouseover="menubar_over('24')" onmouseout="menubar_normal('24')">
+			DỊCH VỤ			
+			</td>
+			<td width="" id="menubar_right_24" class="menu_bar_normal_right">			
+			
+					</td><td width="2" class="abc"><img src="../images_layout/line_menubar.gif"></td>
+					
+			<td width="" id="menubar_left_341" class="menu_bar_normal_left">	
+			</td><td width="" onclick="menubar_link('/tuyen-dung_1_1-341-0.htm')" id="menubar_341" class="menu_bar_normal_center" onmouseover="menubar_over('341')" onmouseout="menubar_normal('341')">
+			TUYỂN DỤNG			
+			</td>
+			<td width="" id="menubar_right_341" class="menu_bar_normal_right">			
+			
+					</td><td width="2" class="abc"><img src="../images_layout/line_menubar.gif"></td>
+					
+			<td width="" id="menubar_left_125" class="menu_bar_normal_left">	
+			</td><td width="" onclick="menubar_link('/tin-tuc_2_1-125-0.htm')" id="menubar_125" class="menu_bar_normal_center" onmouseover="menubar_over('125')" onmouseout="menubar_normal('125')">
+			TIN TỨC			
+			</td>
+			<td width="" id="menubar_right_125" class="menu_bar_normal_right">			
+			
+					</td><td width="2" class="abc"><img src="../images_layout/line_menubar.gif"></td>
+					
+			<td width="" id="menubar_left_359" class="menu_bar_normal_left">	
+			</td><td width="" onclick="menubar_link('/khuyen-mai_1_1-359-0.htm')" id="menubar_359" class="menu_bar_normal_center" onmouseover="menubar_over('359')" onmouseout="menubar_normal('359')">
+			KHUYẾN MÃI			
+			</td>
+			<td width="" id="menubar_right_359" class="menu_bar_normal_right">			
+			
+					</td><td width="2" class="abc"><img src="../images_layout/line_menubar.gif"></td>
+					
+			<td width="" id="menubar_left_7" class="menu_bar_normal_left">	
+			</td><td width="" onclick="menubar_link('/lien-he_8_1-7-0.htm')" id="menubar_7" class="menu_bar_normal_center" onmouseover="menubar_over('7')" onmouseout="menubar_normal('7')">
+			LIÊN HỆ			
+			</td>
+			<td width="" id="menubar_right_7" class="menu_bar_normal_right">			
+			</td></tr></tbody></table></td>
+            <td width="220"><div style="position:absolute; margin-top:-15px; margin-left:6px; height:30px;"> 
+                      <form id="timsp" name="timsp" action="timkiem.php?type=name&amp;langid=0" method="post" style="padding:0px;height:23px; ">
+                        <div id="searchfrom">
+                          
+                          <input name="tukhoa" type="text" class="searchinput" value="" placeholder="Nhập từ khóa" style="">
+                          
+                          
+                          <input id="iconsearch" name="imageField" type="image" src="https://biotechem.com.vn/images_layout/nut_tim.png" align="absmiddle" class="iconsearch" style="padding: 0px;">
+                          
+                          </div>
+                        </form>
+                      </div></td>
+            <td width="51"><img src="https://biotechem.com.vn/images_layout/right_menubar.gif" width="51" height="35"></td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+      <tr class="bg_slide_right">
+        <td align="center" style="padding:4px 3px 4px 4px;" valign="top">
+        	
+            <div id="content" style="margin:0;padding:0; z-index:0; position:relative;">
+            	<div class="top_slide_bg"></div>
+            
+                  <div class="border_box" style="margin:0;padding:0;">
+                    <div class="box_skitter box_skitter_large" style="margin:0;padding:0; z-index:0;">
+                      <ul style="display: none;">
+                        <li><a href="#" target="_blank"><img src="../uploads/slide/slide_2_20141021_102036.jpg" class="cubeHide"></a><div class="label_text"></div></li>
+			<li><a href="#" target="_blank"><img src="../uploads/slide/slide_2_20141021_100732.jpg" class="horizontal"></a><div class="label_text"></div></li>
+			<li><a href="#" target="_blank"><img src="../uploads/slide/slide_2_20141021_101126.jpg" class="cube"></a><div class="label_text"></div></li>
+			<li><a href="#" target="_blank"><img src="../uploads/slide/slide_2_20141021_101416.jpg" class="glassCube"></a><div class="label_text"></div></li>
+			<li><a href="#" target="_blank"><img src="../uploads/slide/slide_2_20141021_101601.jpg" class="showBars"></a><div class="label_text"></div></li>
+			
+                        </ul>
+                  <a href="#" class="prev_button" style="display: block;">prev</a><a href="#" class="next_button" style="display: block;">next</a><span class="info_slide" style="display: block; left: 15px;"><span class="image_number" rel="0" id="image_n_1_0">1</span> <span class="image_number" rel="1" id="image_n_2_0">2</span> <span class="image_number" rel="2" id="image_n_3_0">3</span> <span class="image_number image_number_select" rel="3" id="image_n_4_0">4</span> <span class="image_number" rel="4" id="image_n_5_0">5</span> </span><div class="container_skitter" style="width: 997px; height: 280px;"><div class="image"><a href="#"><img class="image_main" src="../uploads/slide/slide_2_20141021_101416.jpg" style="display: inline;"></a><div class="label_skitter" style="width: 997px; display: none;"></div></div><div class="box_clone" style="left: 0px; top: 0px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: 0px; top: 0px;"></div><div class="box_clone" style="left: 0px; top: 140px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: 0px; top: -140px;"></div><div class="box_clone" style="left: 100px; top: 0px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -100px; top: 0px;"></div><div class="box_clone" style="left: 100px; top: 140px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -100px; top: -140px;"></div><div class="box_clone" style="left: 200px; top: 0px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -200px; top: 0px;"></div><div class="box_clone" style="left: 200px; top: 140px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -200px; top: -140px;"></div><div class="box_clone" style="left: 300px; top: 0px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -300px; top: 0px;"></div><div class="box_clone" style="left: 300px; top: 140px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -300px; top: -140px;"></div><div class="box_clone" style="left: 400px; top: 0px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -400px; top: 0px;"></div><div class="box_clone" style="left: 400px; top: 140px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -400px; top: -140px;"></div><div class="box_clone" style="left: 500px; top: 0px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -500px; top: 0px;"></div><div class="box_clone" style="left: 500px; top: 140px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -500px; top: -140px;"></div><div class="box_clone" style="left: 600px; top: 0px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -600px; top: 0px;"></div><div class="box_clone" style="left: 600px; top: 140px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -600px; top: -140px;"></div><div class="box_clone" style="left: 700px; top: 0px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -700px; top: 0px;"></div><div class="box_clone" style="left: 700px; top: 140px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -700px; top: -140px;"></div><div class="box_clone" style="left: 800px; top: 0px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -800px; top: 0px;"></div><div class="box_clone" style="left: 800px; top: 140px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -800px; top: -140px;"></div><div class="box_clone" style="left: 900px; top: 0px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -900px; top: 0px;"></div><div class="box_clone" style="left: 900px; top: 140px; width: 100px; height: 140px; display: block;"><img src="../uploads/slide/slide_2_20141021_101416.jpg" style="left: -900px; top: -140px;"></div></div></div>
+              </div>
+          </div></td>
+      </tr>
+      <tr>
+        <td><img src="https://biotechem.com.vn/images_layout/bottom_slide.jpg" width="1004" height="26"></td>
+      </tr>
+      <tr>
+        <td><table width="1004" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td width="229" align="right" valign="top"><table width="226" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr>
+                <td align="center" valign="top"><table width="226" border="0" cellspacing="0" cellpadding="0">
+                  <tbody><tr>
+                    <td height="34" class="fram_left_top">SẢN PHẨM</td>
+                    </tr>
+                  <tr>
+                    <td align="center" valign="top" class="cate_center_left"><table width="224" border="0" cellspacing="0" cellpadding="0">
+                      <tbody><tr>
+                        <td align="center" valign="top" class="cate_menu_left">
+                        	<div id="cssmenu"><ul>
+			
+			<li>
+			   <a href="/san-pham/thiet-bi-khoa-hoc_9_273-0-0.htm">THIẾT BỊ KHOA HỌC + </a>
+			    <ul>
+			   		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-giai-trinh-tu_9_273-365-0.htm"><span>Hệ thống giải trình tự</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-giai-trinh-tu/thermofisher_9_365-369-0.htm"><span> ThermoFisher </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-giai-trinh-tu/qiagen_9_365-368-0.htm"><span> QIAGEN </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-pcr-va-realtime-pcr_9_273-276-0.htm"><span>Hệ Thống PCR và Realtime PCR</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-pcr-va-realtime-pcr/qiagen_4_276-361-0.htm"><span> QIAGEN </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-pcr-va-realtime-pcr/dna-technology_4_276-283-0.htm"><span> DNA TECHNOLOGY </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-pcr-va-realtime-pcr/bio-rad_4_276-282-0.htm"><span> BIO-RAD </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-ly-trich-tu-dong-dna-rna-protein_9_273-277-0.htm"><span>Hệ thống ly trích tự động DNA / RNA / Protein</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-ly-trich-tu-dong-dna-rna-protein/qiagen_9_277-371-0.htm"><span> QIAGEN </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-ly-trich-tu-dong-dna-rna-protein/tanbead_1_277-284-0.htm"><span> Tanbead </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-phan-tich-hla_9_273-278-0.htm"><span>Hệ thống phân tích HLA</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-phan-tich-hla/one-lambda_9_278-294-0.htm"><span> One lambda </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-doc-gel-dien-tu_9_273-291-0.htm"><span>Hệ thống đọc GEL điện tử</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-doc-gel-dien-tu/major-science_4_291-292-0.htm"><span> MAJOR SCIENCE </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-doc-gel-dien-tu/bio-rad_4_291-293-0.htm"><span> BIO-RAD </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-elisa_9_273-279-0.htm"><span>Hệ thống ELISA</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-elisa/mp-biomedicals_4_279-287-0.htm"><span> MP Biomedicals </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/he-thong-elisa/bio-rad_4_279-295-0.htm"><span> Bio-Rad </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/thiet-bi-phan-tich-hoa-ly_9_273-280-0.htm"><span>Thiết Bị Phân Tích Hóa - Lý</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/thiet-bi-phan-tich-hoa-ly/pg-instruments_9_280-288-0.htm"><span> PG Instruments </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/thiet-bi-dung-cu-khac_9_273-373-0.htm"><span>Thiết bị - Dụng cụ  khác</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/thiet-bi-khoa-hoc/thiet-bi-dung-cu-khac/thiet-bi-dien-di_9_373-374-0.htm"><span> Thiết bị điện di </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			  	</ul>
+			</li>
+			
+		
+			
+			<li>
+			   <a href="/san-pham/san-pham-kit-chan-doan_9_274-0-0.htm">SẢN PHẨM KIT CHẨN ĐOÁN + </a>
+			    <ul>
+			   					
+			<li class="has-sub"><a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/kit-chan-doan-di-ung-tu-mien-euroimmun_4_274-400-0.htm">Kit chẩn đoán dị ứng tự miễn EUROIMMUN</a></li>
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/chan-doan-hla_9_274-296-0.htm"><span>Chẩn Đoán HLA</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/chan-doan-hla/one-lambda_4_296-297-0.htm"><span> One lambda </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/thu-nghiem-ung-thu-mau_9_274-302-0.htm"><span>Thử Nghiệm Ung Thư Máu</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/thu-nghiem-ung-thu-mau/dna-technology-a-s_4_302-303-0.htm"><span> DNA TECHNOLOGY A/S </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/sinh-hoc-phan-tu-chan-doan-benh-nhiem-tren-nguoi_4_274-298-0.htm"><span>Sinh Học Phân Tử  Chẩn Đoán Bệnh Nhiễm Trên Người</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/sinh-hoc-phan-tu-chan-doan-benh-nhiem-tren-nguoi/cac-dong-kit-chan-doan-cua-ecoli_4_298-299-0.htm"><span> Các Dòng Kit Chẩn đoán của Ecoli </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/sinh-hoc-phan-tu-chan-doan-benh-nhiem-tren-nguoi/cac-dong-kit-cua-cty-khoa-thuong-vn_4_298-300-0.htm"><span> Các Dòng Kit của Cty Khoa Thương - VN </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/sinh-hoc-phan-tu-chan-doan-benh-nhiem-tren-nguoi/cac-dong-kit-cua-nam-khoa-viet-nam_4_298-301-0.htm"><span> Các Dòng Kit Của Nam Khoa - Việt Nam </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/sinh-hoc-phan-tu-phat-hien-benh-nhiem-tren-thuy-san-chan-nuoi__274-353-0.htm"><span>Sinh Học Phân Tử Phát Hiện Bệnh Nhiễm Trên Thủy Sản &amp; Chăn Nuôi</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/sinh-hoc-phan-tu-phat-hien-benh-nhiem-tren-thuy-san-chan-nuoi/dong-kit-cua-cty-khoa-thuong-vn_4_353-354-0.htm"><span> Dòng Kit của Cty Khoa Thương - VN </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/kiem-tra-gmo_9_274-304-0.htm"><span>Kiểm Tra GMO</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/kiem-tra-gmo/eurofins_4_304-305-0.htm"><span> Eurofins </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/an-toan-thuc-pham_9_274-306-0.htm"><span>An Toàn Thực Phẩm</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/an-toan-thuc-pham/eurofins_4_306-307-0.htm"><span> Eurofins </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/elisa_9_274-308-0.htm"><span>ELISA</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/elisa/bio-rad_4_308-309-0.htm"><span> Bio-Rad </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/san-pham-kit-chan-doan/elisa/mp-biomedicals_4_308-310-0.htm"><span> MP Biomedicals </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			  	</ul>
+			</li>
+			
+		
+			
+			<li>
+			   <a href="/san-pham/hoa-chat-vat-tu-tieu-hao_9_275-0-0.htm">HÓA CHẤT &amp; VẬT TƯ TIÊU HAO + </a>
+			    <ul>
+			   		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/hoa-chat_9_275-311-0.htm"><span>Hóa chất</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/hoa-chat/sigma-aldrich_4_311-312-0.htm"><span> Sigma-Aldrich </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/hoa-chat/y-sinh_4_311-313-0.htm"><span> Y sinh </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/sinh-hoc-phan-tu_9_275-314-0.htm"><span>Sinh học phân tử</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/sinh-hoc-phan-tu/sigma-aldrich_4_314-315-0.htm"><span> Sigma-Aldrich </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/sinh-hoc-phan-tu/solis-biodyne_4_314-316-0.htm"><span> Solis BioDyne </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/sinh-hoc-phan-tu/abmgood_4_314-317-0.htm"><span> ABMGOOD </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/sinh-hoc-phan-tu/bio-rad_4_314-318-0.htm"><span> Bio-Rad </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/moi-truong-nuoi-cay-te-bao_9_275-319-0.htm"><span>Môi trường nuôi cấy tế bào</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/moi-truong-nuoi-cay-te-bao/-stemcell-technologies_4_319-320-0.htm"><span>  Stemcell Technologies </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/moi-truong-nuoi-cay-vi-sinh_9_275-321-0.htm"><span>Môi Trường Nuôi Cấy Vi Sinh</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/moi-truong-nuoi-cay-vi-sinh/lab-m_9_321-356-0.htm"><span> Lab M </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/moi-truong-nuoi-cay-vi-sinh/bio-rad_4_321-322-0.htm"><span> BIO-RAD </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/hoa-chat-sac-ky_9_275-323-0.htm"><span>Hóa chất sắc ký</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/hoa-chat-sac-ky/sigma-aldrich_4_323-324-0.htm"><span> Sigma-Aldrich </span></a></li>
+					
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/hoa-chat-sac-ky/bio-rad_4_323-325-0.htm"><span> Bio-Rad </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			
+			<li class="has-sub"> <a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/vat-tu-tieu-hao_9_275-326-0.htm"><span>Vật tư tiêu hao</span></a>
+			 
+			 <ul>
+			 	
+				
+								
+			<li class="has-sub-1"><a href="https://biotechem.com.vn/san-pham/hoa-chat-vat-tu-tieu-hao/vat-tu-tieu-hao/corning-life-sciences_9_326-327-0.htm"><span> Corning Life Sciences </span></a></li>
+		
+				
+				
+			 </ul>
+			</li>
+			
+			
+		
+			  	</ul>
+			</li>
+			
+		   
+		</ul></div>
+                        </td>
+                        </tr>
+                      </tbody></table></td>
+                    </tr>
+                  <tr>
+                    <td><img src="https://biotechem.com.vn/images_layout/bottom_cate_left.gif" width="226" height="24"></td>
+                    </tr>
+                  </tbody></table></td>
+                </tr>
+              <tr>
+                <td><table width="226" border="0" cellspacing="0" cellpadding="0">
+                  <tbody><tr>
+                    <td><img src="https://biotechem.com.vn/images_layout/hotline.gif" width="226" height="73"></td>
+                    </tr>
+                  <tr>
+                    <td align="center" class="cate_center_left"><table width="224" border="0" cellspacing="0" cellpadding="0">
+                      <tbody><tr>
+                        <td align="center" valign="top" class="cate_menu_left">
+<!--
+<script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
+-->
+<table width="220" border="0" align="center" cellpadding="2" cellspacing="0">
+  
+</table>
+</td>
+                        </tr>
+                      </tbody></table></td>
+                    </tr>
+                  <tr>
+                    <td><img src="https://biotechem.com.vn/images_layout/bottom_cate_left.gif" width="226" height="24"></td>
+                    </tr>
+                  </tbody></table></td>
+                </tr>
+              <tr>
+                <td>&nbsp;</td>
+                </tr>
+              </tbody></table></td>
+            <td width="19" valign="top">&nbsp;</td>
+            <td width="741" valign="top"><table width="741" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr>
+                <td><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>VI</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>VI</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><font size="3">
+
+</font><p align="center"><font color="#028b6c" size="3"><b>Chào Mừng Bạn Đến Với Website của Công ty TNHH Thiết Bị Khoa Học &amp; Kỹ Thuật Hóa Sinh</b></font></p><p align="center"><b><font color="#028b6c" size="3">Vietnam, BIO-TECHEM CO., LTD</font><br></b></p><p><span><font size="2"><br></font></span></p><p align="center" style="text-align: left;"><font size="2">Mừng xuân năm 2015, công ty Hóa Sinh xin gửi tới quý khách hàng lời cảm ơn và tri ân vì đã tin cậy hợp tác với công ty chúng tôi trong thời gian qua, &nbsp;nhân dịp này Hóa Sinh thực hiện chương trình ưu đãi giảm giá một số sản phẩm hóa chất, môi trường nuôi cấy vi sinh với số lượng hạn chế,&nbsp;</font><span style="font-size: small;">Quý khách hàng có nhu cầu vui lòng liên hệ công ty chúng tôi để được tư vấn và hỗ trợ tốt nhất!</span></p><div><font size="2"><br></font><div><table border="0" cellpadding="0" cellspacing="0" width="" align="" style="width: 656px;"><colgroup><col width="26"><col width="93"><col width="307"><col width="63"><col width="88"><col width="79"></colgroup><tbody><tr height="21"><td height="21" width="26"><hr></td><td width="93"><hr></td><td width="307"><hr></td><td width="63"><hr></td><td width="88"><hr></td><td width="79"><hr></td></tr><tr height="42"><td height="42" width="26"><b><font size="2">STT</font></b></td><td width="93"><font size="2">&nbsp;<b>Code</b></font></td><td width="307"><b><font size="2">Sản phẩm</font></b></td><td width="63"><b><font size="2">Qui cách</font></b></td><td width="88" style="text-align: center;"><b><font size="2">Số lượng</font></b></td><td width="79" style="text-align: right;"><b><font size="2">Đơn giá (VND)</font></b></td></tr><tr height="21"><td colspan="6" height="21" style="text-align: center;"><hr style="text-align: right;"><b><font color="#1e90ff">Hóa chất, môi trường vi sinh Bio-rad<br></font></b><hr></td></tr><tr height="21"><td height="21" width="26"><font size="2">1</font></td><td width="93"><font size="2">2240110</font></td><td width="307"><font size="2"><b>MTT 1.5ml Oring</b></font></td><td width="63"><font size="2">hộp</font></td><td style="text-align: center;"><font size="2">2</font></td><td align="right"><font size="2">4,600,000</font></td></tr><tr height="21"><td height="21" width="26"><font size="2">2</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,a997a449-ba7d-4210-b6ce-8cff08e06467,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">2240110</font></a></td><td width="307" style="letter-spacing: 0px;"><font size="2"><b>SCWCP</b></font></td><td width="63"><font size="2">hộp</font></td><td style="text-align: center;"><font size="2">2</font></td><td align="right"><font size="2">2,300,000</font></td></tr><tr height="21"><td height="21" width="26"></td><td width="93"></td><td width="307"><br></td><td width="63"><br></td><td style="text-align: center;"><br></td><td align="right"><br></td></tr><tr height="21"><td height="21" width="26"><font size="2">3</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,2498003c-1edb-4a42-b913-9b858391f10d,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">64324</font></a></td><td width="307"><font size="2"><b>Rappaport 500g</b></font></td><td width="63"><font size="2">chai</font></td><td style="text-align: center;"><font size="2">2</font></td><td align="right"><font size="2" color="#ff0000">1,685,000</font></td></tr><tr height="21"><td height="21" width="26"><font size="2">4</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,951ce042-cdba-40ba-ac31-e0292c6a2438,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">64343</font></a></td><td width="307"><font size="2"><b>Yeast Extract 500g</b></font></td><td width="63"><font size="2">chai</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2" color="#ff0000">850,000</font></td></tr><tr height="21"><td height="21" width="26"><br></td><td width="93"><br></td><td width="307"><br></td><td width="63"><br></td><td style="text-align: center;"><br></td><td align="right"><br></td></tr><tr height="21"><td height="21" width="26"><font size="2">5</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,e09f5e6c-6cde-4513-b251-8978c5592617,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">64644</font></a></td><td width="307"><font size="2"><b>Sabouraud chloramphenicol 500g</b></font></td><td width="63"><font size="2">chai</font></td><td style="text-align: center;"><font size="2">7</font></td><td align="right"><font size="2" color="#ff0000"><b>1,848,000</b></font></td></tr><tr height="21"><td height="21" width="26"><font size="2">6</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,88735758-2542-4b25-991d-b96d5bc904fa,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">64985</font></a></td><td width="307"><font size="2"><b>Past agar A 500g</b></font></td><td width="63"><font size="2">chai</font></td><td style="text-align: center;"><font size="2">13</font></td><td align="right"><font size="2" color="#ff0000"><b>1,655,000</b></font></td></tr><tr height="21"><td colspan="6" height="21" style="text-align: center;"><b><font size="2"><br></font></b><hr><b><font color="#1e90ff">Hóa chất MP Biomedicals<br></font></b><hr></td></tr><tr height="21"><td height="21" width="26"><font size="2">1</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,66e53103-8ac2-46ff-b339-a403dcb98c20,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">114018532</font></a></td><td width="307"><font size="2"><b>Peptone (Powder), 1 Kg</b></font></td><td width="63"><font size="2">1 Kg</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2">3,490,000</font></td></tr><tr height="42"><td height="42" width="26"><font size="2">2</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,914f3278-dceb-408f-b55e-e4b908c2dc23,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">11TAE50X01</font></a></td><td width="307"><font size="2"><b>TAE 50X Buffer, 1 L</b></font></td><td width="63"><font size="2">1 L</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2">2,678,000</font></td></tr><tr height="21"><td height="21" width="26"><font size="2">3</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,5037a6de-d404-4a22-b7d6-4484717e3f77,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">219483190</font></a></td><td width="307"><font size="2"><b>SDS, Sodium dodecyl sulfate, Molecular Biology Reagent, 500 g</b></font></td><td width="63"><font size="2">500 g</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2">4,204,000</font></td></tr><tr height="42"><td height="42" width="26"><font size="2">4</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,4b776930-272f-4574-9c05-369e0991927e,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">219989710</font></a></td><td width="307"><font size="2"><b>CellMaxx™ Bovine Albumin, 10 g (Chromatographically purified, Low IgG, Stem Cell Culture Grade)</b></font></td><td width="63"><font size="2">10 g</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2">2,062,000</font></td></tr><tr height="21"><td height="21" width="26"><font size="2">5</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,dd4618a9-8d44-43ae-aff3-28b0f179b090,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">97667093</font></a></td><td width="307"><font size="2"><b>7X™ Cleaning Solution, 1 gal (3.8 L)</b></font></td><td width="63"><font size="2">1 gal</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2">1,972,950</font></td></tr><tr height="20"><td colspan="6" height="20" style="text-align: center;"><hr><b><font color="#1e90ff">Hóa chất chuẩn Sigma<br></font></b><hr></td></tr><tr height="42"><td height="42" width="26"><font size="2">1</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,6997422d-5891-4c23-a66d-0d3f82088c4f,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">318752</font></a></td><td width="307"><font size="2"><b>REAGENTS BROMOTHYMOL BLUE, 0.04 WT. % SOLUTION IN</b></font></td><td width="63"><font size="2">100ML</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2">586,000</font></td></tr><tr height="42"><td height="42" width="26"><font size="2">2</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,3d951eb3-0dd3-4731-b44f-f1e3b1281775,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">33871</font></a></td><td width="307"><font size="2"><b>2-NP-SCA, Vetranal</b></font></td><td width="63"><font size="2">10MG-</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2">682,000</font></td></tr><tr height="21"><td height="21" width="26"><font size="2">3</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,438ffe41-bf1d-4282-8796-20a6bc6087de,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">70169</font></a></td><td width="307"><font size="2"><b>Peptone from casein, pancreatic</b></font></td><td width="63"><font size="2">500g</font></td><td style="text-align: center;"><font size="2">2</font></td><td align="right"><font size="2">1,480,000</font></td></tr><tr height="21"><td height="21" width="26"><font size="2">4</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,a439f124-08ff-431a-8330-15ce7203fdca,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">71295</font></a></td><td width="307"><font size="2"><b>Sodium Benzoate 500g</b></font></td><td width="63"><font size="2">chai</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2">1,055,000</font></td></tr><tr height="21"><td height="21" width="26"><font size="2">5</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,13b68767-dcdf-48fe-9450-21671787c766,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">E0774</font></a></td><td width="307"><font size="2"><b>ERYTHROMYCIN USP</b></font></td><td width="63"><font size="2">5G</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2">2,423,000</font></td></tr><tr height="21"><td height="21" width="26"><font size="2">6</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,b1e51eb7-ffc5-4d6e-acc6-8b8b748699ed,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">E8260</font></a></td><td width="307"><font size="2"><b>ETHOXYQUIN</b></font></td><td width="63"><font size="2">100G</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2">1,656,000</font></td></tr><tr height="21"><td height="21" width="26"><font size="2">7</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,60f595a9-ab8f-46bb-a62a-8f08847e62ab,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">O8757</font></a></td><td width="307"><font size="2"><b>OFLOXACIN, FLUOROQUINOLONE ANTIBIOTIC</b></font></td><td width="63"><font size="2">1G</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2">1,553,000</font></td></tr><tr height="21"><td height="21" width="26"><font size="2">8</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,b0156d3b-f9c1-4631-9388-9005c5e1d102,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">P3032</font></a></td><td width="307"><font size="2"><b>Penicillin G sodium salt - powder, BioReagent, suitable for cell culture</b></font></td><td width="63"><font size="2">Lọ</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2">1,145,000</font></td></tr><tr height="21"><td height="21" width="26"><font size="2">9</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,e0cfc5a0-9b0c-46bc-8e6c-df118190effc,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">R4130</font></a></td><td width="307"><font size="2"><b>RPMI-1640 MEDIUM - 100mlx10</b></font></td><td width="63"><font size="2">hộp</font></td><td style="text-align: center;"><font size="2">4</font></td><td align="right"><font size="2">1,605,000</font></td></tr><tr height="21"><td height="21" width="26"><font size="2">10</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,42ead77e-4281-47bb-9261-3c6d91af05fb,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">Z409111</font></a></td><td width="307"><font size="2"><b>AGATE MORTAR AND PESTLE, DEEP-FORM, 150 (cối + chày mã não)</b></font></td><td width="63"><font size="2">bộ</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2">15,834,000</font></td></tr><tr height="21"><td height="21" width="26"><font size="2">11</font></td><td width="93"><a href="file:///C:/Users/DELL/Desktop/S10-DN;01/02/2015;28/02/2015%2011:59:59%20CH;b19b5f26-4a09-45d8-8345-8b458b0f7994;%20,dac2978f-d9f8-4f5f-99ee-473f8b0e5cbc,%20;4eb226e3-fb42-4ab4-b82e-7021d2322b40"><font size="2">7917</font></a></td><td width="307"><font size="2"><b>Ficoll Paque plus 6*100ml</b></font></td><td width="63"><font size="2">hộp</font></td><td style="text-align: center;"><font size="2">1</font></td><td align="right"><font size="2">3,848,000</font></td></tr><tr height="42"><td height="42" width="26"><font size="2">12</font></td><td><font size="2">E7889</font></td><td width="307"><font size="2"><b>Ethylenediaminetetraacetic acid disodium salt solution</b></font></td><td width="63"><font size="2">100GR</font></td><td style="text-align: center;"><font size="2">1</font></td><td style="text-align: right;"><font size="2">1,590,000</font></td></tr><tr height="42"><td height="42" width="26"><font size="2">13</font></td><td><font size="2">C1016-100gr</font></td><td width="307"><font size="2"><b>Calcium chloride</b></font></td><td width="63"><font size="2">100GR</font></td><td style="text-align: center;"><font size="2">1</font></td><td style="text-align: right;"><font size="2">1,006,000</font></td></tr><tr height="42"><td height="42" width="26"><font size="2">14</font></td><td><font size="2">C7880-100gr</font></td><td width="307"><font size="2"><b>L-Cysteine hydrochloride monohydrate</b></font></td><td width="63"><font size="2">100GR</font></td><td style="text-align: center;"><font size="2">1</font></td><td><div style="text-align: right;"><span style="font-size: small;">2,230,000</span></div><font size="2"><div style="text-align: right;"><br></div></font></td></tr></tbody></table><font size="2"><br></font></div></div><font size="3">
+
+</font><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+</style>
+<![endif]--></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>
+		<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+
+		</table></td>
+              </tr>
+            </tbody></table></td>
+            <td width="15" valign="top">&nbsp;</td>
+            </tr>
+          </tbody></table></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+  <tr>
+    <td height="197" align="center" valign="top" class="fram_chantrang"><table width="1004" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td height="30" style="border-bottom:1px solid #e0e0e0">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="137"><table width="1004" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td height="137" align="center">&nbsp;</td>
+            <td width="508" align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody><tr>
+                    <td height="40" class="title_chantrang"><img src="https://biotechem.com.vn/images_layout/name_cty_footer.gif" width="465" height="36"></td>
+  </tr>
+                  <tr>
+                    <td height="22" class="chantrang">ĐC: 29/24 Hoàng Hoa Thám, Phường 6, Quận Bình Thạnh, TP. HCM.
+</td>
+  </tr>
+                  <tr>
+                    <td height="22" class="chantrang">ĐT: (84-8) 62905308 – 62905309      -      Fax: (84-8) 62905310</td>
+  </tr>
+                  <tr>
+                    <td height="22" class="chantrang"><p>VPĐD: 104 Bạch Đằng, Phường Chương Dương, Quận Hoàn   Kiếm, Hà Nội</p></td>
+                  </tr>
+                  <tr>
+                    <td height="22" class="chantrang">ĐT: (84-4)  3267 6888 - Fax: (84-4)  393 22863</td>
+                  </tr>
+                  <tr>
+                    <td height="22" class="chantrang">Email: <a class="copy_1_link" href="emailto:info@biotechem.com.vn">info@biotechem.com.vn</a> - Website: <a class="copy_1_link" href="http://www.biotechem.com.vn/">www.biotechem.com.vn</a></td>
+  </tr>
+</tbody></table></td>
+            <td width="446" align="center"><script type="text/javascript" language="javascript">
+			var sliderwidth="440px"
+			var sliderheight="98px"
+			//Specify the slider's slide speed (larger is faster 1-10)
+			var slidespeed = 2
+			slidebgcolor=""
+			
+			var leftrightslide=new Array()
+			var finalslide=''
+			leftrightslide[0]='<a href="http://tanbead.com/" target=_blank><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_103030.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.dna-technology.ru" target=_blank><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_102924.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.onelambda.com/" target=_blank><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_103119.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.eurofins.com/en.aspx" target=_blank><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_104723.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.sigmaaldrich.com/singapore.html" target=_blank><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_104918.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.abmgood.com/" target=_blank><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_105313.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.kt-biotech.com" target=_blank><img src="https://biotechem.com.vn/uploads/logo/logo_20141103_145152.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.dna-diagnostic.com" target=_blank><img src="https://biotechem.com.vn/uploads/logo/logo_20141125_155701.jpg" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="https://www.euroimmun.com/startseite.html" target=_blank><img src="https://biotechem.com.vn/uploads/logo/logo_20170922_154145.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.labm.com/" target=_blank><img src="https://biotechem.com.vn/uploads/logo/logo_20151015_110152.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;'
+			
+			//leftrightslide[0]= "<a href=javascript:OpenWindow('popup.php?popupid=1332&langid=0','','width=600,height=450,toolbar=no,location=no,status=no,menubar=no,resizable=yes,scrollbars=yes,alwaysRaised,dependent,titlebar=no')><img src='../uploads/sanpham/small/coopmart bmt_0918081948.jpg' width='132' height='69' class='borderimg'></a>"			
+			
+			var imagegap=" "
+			
+			var slideshowgap=4
+			
+			var copyspeed=slidespeed
+			leftrightslide='<nobr>'+leftrightslide.join(imagegap)+'</nobr>'
+			var iedom=document.all||document.getElementById
+			if (iedom)
+			document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">'+leftrightslide+'</span>')
+			var actualwidth=''
+			var cross_slide, ns_slide
+			
+			function fillup(){
+			if (iedom){
+			cross_slide=document.getElementById? document.getElementById("test2") : document.all.test2
+			cross_slide2=document.getElementById? document.getElementById("test3") : document.all.test3
+			cross_slide.innerHTML=cross_slide2.innerHTML=leftrightslide
+			actualwidth=document.all? cross_slide.offsetWidth : document.getElementById("temp").offsetWidth
+			cross_slide2.style.left=actualwidth+slideshowgap+"px"
+			}
+			else if (document.layers){
+			ns_slide=document.ns_slidemenu.document.ns_slidemenu2
+			ns_slide2=document.ns_slidemenu.document.ns_slidemenu3
+			ns_slide.document.write(leftrightslide)
+			ns_slide.document.close()
+			actualwidth=ns_slide.document.width
+			ns_slide2.left=actualwidth+slideshowgap
+			ns_slide2.document.write(leftrightslide)
+			ns_slide2.document.close()
+			}
+			lefttime=setInterval("slideleft()",40)
+			}
+			window.onload=fillup
+			
+			function slideleft(){
+			if (iedom){
+			if (parseInt(cross_slide.style.left)>(actualwidth*(-1)+8))
+			cross_slide.style.left=parseInt(cross_slide.style.left)-copyspeed+"px"
+			else
+			cross_slide.style.left=parseInt(cross_slide2.style.left)+actualwidth+slideshowgap+"px"
+			
+			if (parseInt(cross_slide2.style.left)>(actualwidth*(-1)+8))
+			cross_slide2.style.left=parseInt(cross_slide2.style.left)-copyspeed+"px"
+			else
+			cross_slide2.style.left=parseInt(cross_slide.style.left)+actualwidth+slideshowgap+"px"
+			
+			}
+			else if (document.layers){
+			if (ns_slide.left>(actualwidth*(-1)+8))
+			ns_slide.left-=copyspeed
+			else
+			ns_slide.left=ns_slide2.left+actualwidth+slideshowgap
+			
+			if (ns_slide2.left>(actualwidth*(-1)+8))
+			ns_slide2.left-=copyspeed
+			else
+			ns_slide2.left=ns_slide.left+actualwidth+slideshowgap
+			}
+			}
+			
+			
+			if (iedom||document.layers){
+			with (document){
+			document.write('<table class="marquee" border="0" cellspacing="0" cellpadding="0"><tr><td>')
+			if (iedom){
+			write('<div style="position:relative;width:'+sliderwidth+';height:'+sliderheight+';overflow:hidden">')
+			write('<div style="position:absolute;width:'+sliderwidth+';height:'+sliderheight+';background-color:'+slidebgcolor+'" onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed">')
+			write('<div id="test2" style="position:absolute;left:0px;top:0px"></div>')
+			write('<div id="test3" style="position:absolute;left:-1000px;top:0px"></div>')
+			write('</div></div>')
+			}
+			else if (document.layers){
+			write('<ilayer width='+sliderwidth+' height='+sliderheight+' name="ns_slidemenu" bgColor='+slidebgcolor+'>')
+			write('<layer name="ns_slidemenu2" left=0 top=0 onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed"></layer>')
+			write('<layer name="ns_slidemenu3" left=0 top=0 onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed"></layer>')
+			write('</ilayer>')
+			}
+			document.write('</td></tr></table>')
+			}
+			}
+			</script><span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px"><nobr><a href="http://tanbead.com/" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_103030.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.dna-technology.ru" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_102924.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.onelambda.com/" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_103119.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.eurofins.com/en.aspx" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_104723.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.sigmaaldrich.com/singapore.html" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_104918.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.abmgood.com/" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_105313.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.kt-biotech.com" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141103_145152.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.dna-diagnostic.com" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141125_155701.jpg" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="https://www.euroimmun.com/startseite.html" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20170922_154145.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.labm.com/" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20151015_110152.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;</nobr></span><table class="marquee" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div style="position:relative;width:440px;height:98px;overflow:hidden"><div style="position:absolute;width:440px;height:98px;background-color:" onmouseover="copyspeed=0" onmouseout="copyspeed=slidespeed"><div id="test2" style="position: absolute; left: -614px; top: 0px;"><nobr><a href="http://tanbead.com/" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_103030.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.dna-technology.ru" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_102924.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.onelambda.com/" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_103119.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.eurofins.com/en.aspx" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_104723.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.sigmaaldrich.com/singapore.html" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_104918.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.abmgood.com/" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_105313.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.kt-biotech.com" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141103_145152.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.dna-diagnostic.com" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141125_155701.jpg" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="https://www.euroimmun.com/startseite.html" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20170922_154145.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.labm.com/" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20151015_110152.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;</nobr></div><div id="test3" style="position: absolute; left: 524px; top: 0px;"><nobr><a href="http://tanbead.com/" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_103030.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.dna-technology.ru" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_102924.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.onelambda.com/" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_103119.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.eurofins.com/en.aspx" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_104723.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.sigmaaldrich.com/singapore.html" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_104918.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.abmgood.com/" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141021_105313.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.kt-biotech.com" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141103_145152.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.dna-diagnostic.com" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20141125_155701.jpg" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="https://www.euroimmun.com/startseite.html" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20170922_154145.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;<a href="http://www.labm.com/" target="_blank"><img src="https://biotechem.com.vn/uploads/logo/logo_20151015_110152.png" height="90" border="0" style="border:1px solid #f3f3f3"></a>&nbsp;&nbsp;</nobr></div></div></div></td></tr></tbody></table></td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+      <tr>
+        <td height="30"><table width="1004" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td width="400" height="30" align="right"><table width="308" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr>
+                <td height="30" class="tructuyen">Trực tuyến: 4</td>
+                <td class="tructuyen">Tổng truy cập: 870002</td>
+              </tr>
+            </tbody></table></td>
+            <td align="right" class="copy">Copyright © 2014 by Biotechem. <a class="copy_link" href="http://trangwebvang.com/thiet-ke-web/" target="_blank" title="Thiết kế web">Thiết kế web</a> bởi <a class="copy_link" title="Trang Web Vàng" href="http://trangwebvang.com" target="_blank">Trang Web Vàng</a></td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+</tbody></table>
+<div id="goTop">
+  <img src="https://biotechem.com.vn/images_layout/top_node.png" alt="zkiwi demo">
+</div>
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="display: none; padding-bottom: 0px; padding-right: 0px;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>

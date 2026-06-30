@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+	<meta name="description" content="미래 IT기기 생산 및 관련 네트워크 구축을 위한 핵심소재인 첨단 전자부품 접합소재의 개발하고 있습니다.">
+	<meta name="keyword" content=" 첨단 전자부품 접합소재, Solder paste, Solder bar, Solder wire, 무연, 솔더 페이스트, 솔더 바, 솔더 와이어 제품 생산">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="/css/common.css" type="text/css">
+	<link rel="stylesheet" href="/css/layout.css" type="text/css">
+	<link rel="stylesheet" href="/css/default.css" type="text/css">
+	<link rel="stylesheet" href="/css/subCommon.css" type="text/css">
+	<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.bxslider.js"></script>
+	<script type="text/javascript" src="/js/tab.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+	<script type="text/javascript" src="/js/nav.js"></script>
+	<script type="text/javascript" src="/js/link.js"></script>
+
+<script language="javascript">
+   var position = 0;
+    function scroller()
+   {
+   if (position != 400)
+   {
+    position++;
+    scroll(0,position);
+    clearTimeout(timer);
+    var timer = setTimeout("scroller()",5); timer;
+   }
+  }
+
+    function getCookie(name) {
+        var cookie = document.cookie;
+        
+        if (document.cookie != "") {
+            var cookie_array = cookie.split("; ");
+            for ( var index in cookie_array) {
+                var cookie_name = cookie_array[index].split("=");
+                
+                if (cookie_name[0] == "popupYN") {
+                    return cookie_name[1];
+                }
+            }
+        }
+        return ;
+    }
+
+    function openPopup(url) { 
+        var cookieCheck = getCookie("popupYN");
+        if (cookieCheck != "N")
+            window.open(url, '', 'width=520,height=630,left=0,top=0')
+    }
+</script>
+
+	<title>비엔에프머티리얼즈(주)</title>
+</head>
+
+<body onload="scroller();openPopup('popup.html');">
+
+	<!--gnb영역-->
+		<div id="header">
+		<div class="gnbWrap">
+			<div class="gnb">
+				<ul>
+					<li><a href="/index.html">HOME</a></li>
+					<li><a href="/eng/index.html">ENGLISH</a></li>
+					<!-- <li><a href="/sitemap/sitemap.php">SITEMAP</a></li> -->
+				</ul>
+			</div>
+		</div><!--gnb영역-->
+		<div class="lnbWrap">
+			<h1><a href="/index.html"><img src="/img/main/logo.png" alt="BNF코퍼레이션"></a></h1>
+			<div class="lnb">				
+				<ul class="dropdownmenu">
+					<li>
+						<h2>
+							<a href="/company/overview.php">회사소개</a>
+						</h2>
+						<ul>
+							<li><a href="/company/ceo.php">CEO인사말</a></li>
+							<li><a href="/company/overview.php">기업개요</a></li>
+							<li><a href="/company/history.php">기업연혁</a></li>
+							<li><a href="/company/vision.php">기업문화</a></li>
+							<li><a href="/company/global.php">Global Network</a></li>
+							<li><a href="/company/organization.php">조직도</a></li>
+							<li><a href="/company/map.php">오시는 길</a></li>
+						</ul>
+					</li>
+					<li>
+						<h2>
+							<a href="/rnd/laboratory.php">R&amp;D</a>
+						</h2>
+						<ul>
+							<li><a href="/rnd/laboratory.php">연구소소개</a></li>
+							<li><a href="/rnd/develope.php">연구개발현황</a></li>
+							<li><a href="/rnd/patent.php">특허/출원</a></li>
+						</ul>
+					</li>
+					<li>
+						<h2>
+							<a href="/product/paste.php">제품소개</a>
+						</h2>
+						<ul>
+							<li><a href="/product/paste.php">Solder Paste</a></li>
+							<li><a href="/product/powder.php">Solder Powder</a></li>
+							<li><a href="/product/bar.php">Solder Bar</a></li>
+							<li><a href="/product/wire.php">Solder Wire</a></li>
+							<li><a href="/product/chip_01.php">Preform Chip Solder</a></li>
+						</ul>
+					</li>
+					<li>
+						<h2>
+							<a href="/quality/quality01.php">품질/환경</a>
+						</h2>
+						<ul>
+							<li><a href="/quality/quality01.php">품질관리</a></li>
+							<li><a href="/quality/certificate.php">환경방침/인증</a></li>
+							<li><a href="/quality/equipment.php">보유장비</a></li>
+						</ul>
+					</li>
+					<li>
+						<h2>
+							<a href="/pr/notice.php">홍보센터</a>
+						</h2>
+						<ul>
+							<li><a href="/pr/notice.php">공지사항</a></li>
+							<li><a href="/pr/news.php">소식/행사</a></li>
+							<li><a href="/pr/library01.php">기술자료</a></li>
+						</ul>
+					</li>
+					<li>
+						<h2>
+							<a href="/customer/agency.php">고객센터</a>
+						</h2>
+						<ul>
+							<li><a href="/customer/agency.php">대리점현황</a></li>
+							<li><a href="/customer/qna.php">Q&amp;A</a></li>
+						</ul>
+					</li>
+					<li class="m7">
+						<h2>
+							<a href="/recruit/system01.php">채용정보</a>
+						</h2>
+						<ul>
+							<li><a href="/recruit/system01.php">인사제도</a></li>
+							<li><a href="/recruit/online.php">채용안내 및 지원</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!--lnb-->
+		</div>
+	</div>
+
+	<!--gnb영역-->
+
+	<!-- 공지사항영역 -->
+	<div class="main1">
+	<div class="section1">
+		<div class="bbs notice">
+			<h4>공지사항</h4>
+			<ul>
+
+			
+				<li>
+					<p><a href="/customer/notice.php?page=view&amp;tb=notice&amp;id=63">최근 3개년 영업실적 및 재무상태(2023년~2025년)</a></p>
+					<!-- <span></span>
+ -->				</li>
+
+			
+				<li>
+					<p><a href="/customer/notice.php?page=view&amp;tb=notice&amp;id=62">주식병합으로 인한 주권 제출 공고문</a></p>
+					<!-- <span></span>
+ -->				</li>
+
+			
+			</ul>
+		</div>
+		<div class="bbs shop">
+			<ul>
+					<p><a href="https:/www.solderworld.co.kr" target="_blank"><img src="img/main/shop01.jpg" alt="쇼핑몰 바로가기"></a></p>
+			</ul>
+		</div>
+		<div class="bbs qna">
+			<ul>
+					<p><img src="img/main/customer01.jpg" alt="고객센터"></p>
+			</ul>
+		</div>
+	</div>
+	<!-- 공지사항영역 -->
+
+		
+	<!-- 푸터 시작 -->
+	<div class="footer">
+		<div class="inner">
+			<div class="L">
+				<ul>
+					<li>본사 : 비엔에프머티리얼즈(주)  인천광역시 서구 보듬로 176   Tel : 032-564-6612  Fax : 032-564-6614 / BNF MATERIALS CO., LTD.  176 Bodeum-ro, Seo-gu, Incheon,22664, Korea</li>
+					<li>베트남 법인 : BNF VINA JSC  Workshop No.A4, No.2 Truong Son Highway, Hiep Binh Phuoc Ward, Thu Duc District, Ho Chi Minh City, Viet Nam </li>
+					<li>Tel:+84-28-36201175  Fax:+84-28-36201176</li>
+				</ul>
+			</div>
+			<div class="R">
+				<a href="index.html" class="footerLogo"><img src="/img/main/logo.png" alt="푸터로고" style="width:200px;border-radius: 3%"></a>
+			</div>			
+		</div>
+	</div>	<!-- 푸터 끝 -->
+	
+</div>
+
+</body></html>

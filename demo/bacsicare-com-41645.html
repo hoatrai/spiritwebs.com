@@ -1,0 +1,1748 @@
+<!DOCTYPE html><html lang="vi"><head>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=p7PEIJWi">
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv">
+<!-- End Wayback Rewrite JS Include -->
+<meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="stylesheet" href="/web/20230927174956cs_/https://bacsicare.com/wp-content/themes/blog/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/web/20230927174956cs_/https://bacsicare.com/wp-content/themes/blog/css/owl.theme.default.min.css">
+<script type="rocketlazyloadscript" data-rocket-src="/wp-content/themes/blog/js/jquery.min.js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="/wp-content/themes/blog/js/owl.carousel.min.js"></script>
+<meta name="robots" content="index, max-image-preview:large">
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Bacsicare.com - Thông tin sức khỏe</title><link rel="preload" as="style" href="https://web.archive.org/web/20230927174956/https://fonts.googleapis.com/css?family=Roboto%3A400%2C500%2C600%2C700%2C700i%2C800%2C800i&amp;display=swap"><link rel="stylesheet" href="https://web.archive.org/web/20230927174956cs_/https://fonts.googleapis.com/css?family=Roboto%3A400%2C500%2C600%2C700%2C700i%2C800%2C800i&amp;display=swap" media="all" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://web.archive.org/web/20230927174956cs_/https://fonts.googleapis.com/css?family=Roboto%3A400%2C500%2C600%2C700%2C700i%2C800%2C800i&amp;display=swap"/></noscript>
+	<meta name="description" content="Thông tin sức khỏe cộng đồng hữu ích với mục đích mang đến cho mọi người những thông tin và kiến thức sức khỏe chính xác nhất.">
+	<link rel="canonical" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/">
+	<link rel="next" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/page/2">
+	<meta property="og:locale" content="vi_VN">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Bacsicare.com">
+	<meta property="og:description" content="Thông tin sức khỏe cộng đồng hữu ích với mục đích mang đến cho mọi người những thông tin và kiến thức sức khỏe chính xác nhất.">
+	<meta property="og:url" content="https://web.archive.org/web/20230927174956/https://bacsicare.com/">
+	<meta property="og:site_name" content="Bacsicare.com">
+	<meta name="twitter:card" content="summary_large_image">
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="amphtml" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/amp"><meta name="generator" content="AMP for WP 1.0.89"><link rel="dns-prefetch" href="//web.archive.org/web/20230927174956/https://fonts.googleapis.com/">
+<link href="https://web.archive.org/web/20230927174956/https://fonts.gstatic.com/" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="Dòng thông tin Bacsicare.com »" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/feed">
+<link rel="alternate" type="application/rss+xml" title="Dòng phản hồi Bacsicare.com »" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/comments/feed">
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://web.archive.org/web/20230927174956cs_/https://bacsicare.com/wp-includes/css/dist/block-library/style.min.css?ver=6.3.1" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="a-z-listing-block-css" href="https://web.archive.org/web/20230927174956cs_/https://bacsicare.com/wp-content/cache/min/1/wp-content/plugins/a-z-listing/css/a-z-listing-default.css?ver=1695056313" type="text/css" media="all">
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--theme-color-one: #6c5b7b;--wp--preset--color--theme-color-two: #f67280;--wp--preset--color--theme-color-three: #f8b195;--wp--preset--color--theme-color-four: #c06c84;--wp--preset--color--very-dark-grey: #2e2f33;--wp--preset--color--dark-grey: #45464b;--wp--preset--color--medium-grey: #94979e;--wp--preset--color--light-grey: #D3D3D3;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel="stylesheet" id="contact-form-7-css" href="https://web.archive.org/web/20230927174956cs_/https://bacsicare.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1695056313" type="text/css" media="all">
+<link rel="stylesheet" id="kk-star-ratings-css" href="https://web.archive.org/web/20230927174956cs_/https://bacsicare.com/wp-content/plugins/kk-star-ratings/src/core/public/css/kk-star-ratings.min.css?ver=5.4.5" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="fontello-css" href="https://web.archive.org/web/20230927174956cs_/https://bacsicare.com/wp-content/cache/min/1/wp-content/themes/blog/css/fontello/css/fontello.css?ver=1695056313" type="text/css" media="all">
+
+<link data-minify="1" rel="stylesheet" id="carrino-reset-css" href="https://web.archive.org/web/20230927174956cs_/https://bacsicare.com/wp-content/cache/min/1/wp-content/themes/blog/css/normalize.css?ver=1695056313" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="carrino-style-css" href="https://web.archive.org/web/20230927174956cs_/https://bacsicare.com/wp-content/cache/min/1/wp-content/themes/blog/style.css?ver=1695056314" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="carrino-gutenberg-css" href="https://web.archive.org/web/20230927174956cs_/https://bacsicare.com/wp-content/cache/min/1/wp-content/themes/blog/css/gutenberg.css?ver=1695056314" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="dashicons-css" href="https://web.archive.org/web/20230927174956cs_/https://bacsicare.com/wp-content/cache/min/1/wp-includes/css/dashicons.min.css?ver=1695056315" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="a-z-listing-css" href="https://web.archive.org/web/20230927174956cs_/https://bacsicare.com/wp-content/cache/min/1/wp-content/plugins/a-z-listing/css/a-z-listing-default.css?ver=1695056313" type="text/css" media="all">
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://bacsicare.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.0" id="jquery-core-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://bacsicare.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://bacsicare.com/wp-content/cache/min/1/wp-content/themes/blog/js/main.js?ver=1695056315" id="carrino-main-js"></script>
+<link rel="https://api.w.org/" href="https://bacsicare.com/wp-json/"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bacsicare.com/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.3.1">
+<link data-minify="1" rel="stylesheet" type="text/css" href="https://web.archive.org/web/20230927174956cs_/https://bacsicare.com/wp-content/cache/min/1/wp-content/plugins/Internallink-Pro/style.css?ver=1695056315">
+
+<style>
+:root {
+ --theme-color-1:#1e73be;   --dark-grey:#2e2f33;   --link-color:#1e73be;  --primary-nav-link-color:#000000;    --primary-nav-sidebar-link-color:#000000;         
+}
+</style>
+
+
+<!-- Schema & Structured Data For WP v1.20 - -->
+<script type="application/ld+json" class="saswp-schema-markup-output">
+[{"@context":"https://web.archive.org/web/20230927174956/https://schema.org/","@type":"Person","@id":"https://web.archive.org/web/20230927174956/https://bacsicare.com#Person","name":"Thu Cúc","jobTitle":"Editor","url":"https://web.archive.org/web/20230927174956/https://bacsicare.com","sameAs":["https://web.archive.org/web/20230927174956/https://www.facebook.com/profile.php?id=61550783117373"],"image":{"@type":"ImageObject","url":"https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/08/bacsicare-logo.png","width":"243","height":"52"},"telephone":""}]
+</script>
+
+<noscript><style>.lazyload[data-src]{display:none !important;}</style></noscript><style>.lazyload{background-image:none !important;}.lazyload:before{background-image:none !important;}</style><link rel="icon" href="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/08/bacsicare-icon-150x150.png" sizes="32x32">
+<link rel="icon" href="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/08/bacsicare-icon.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/08/bacsicare-icon.png">
+<meta name="msapplication-TileImage" content="https://bacsicare.com/wp-content/uploads/2023/08/bacsicare-icon.png">
+		<style type="text/css" id="wp-custom-css">
+			.has-post-thumbnail:not(.disabled-post-thumbnail) .entry-header, .disabled-post-thumbnail .entry-header {
+    padding: 20px 10px 0px 10px;
+}.entry-title {
+	margin: 0 0 0 0;}
+.primary-nav {
+border-top: 1px solid #eaeaea;
+border-bottom: 1px solid #eaeaea;
+}
+span.toc_number.toc_depth_2 {
+    display: none;
+}
+span.toc_number.toc_depth_3 {
+    display: none;
+}
+#toc_container ul li:before {
+    display: none;
+}.primary-nav li {font-size: 14px;}
+.widget.threeforty_posts_widget ul[class*="list-style-list"] .post-thumbnail {
+    width: 150px;
+    padding-right: 15px;
+    margin: 0;
+}.goto-top{width:40px;height:40px;}
+.widget.threeforty_posts_widget .entry-header {
+    padding: 0;
+}
+.custom-logo {
+	max-width: 100%;}
+.custom-logo-link {
+	margin: 10px auto 10px auto;}
+img.attachment-carrino-single-landscape-image.size-carrino-single-landscape-image.wp-post-image {
+    display: none;
+}.entry-meta.before-title {
+    display: none;
+}h1.page-title, h1.entry-title {
+    font-size: 35px;
+    line-height: 1.2;
+}header.container.page-header p {
+    color: #333;
+}.list-key {
+    padding-top: 15px;
+}span.key a {
+    color: #fff;
+    text-decoration: none;
+}span.key:hover {
+    background: #130622;
+}span.key {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 5px;float: left;
+    margin-bottom: 15px;
+}.key1{
+background: #a66bbe;
+	color: #fff;}
+.key2{
+background: #f99500;
+    color: #fff;}.key3{
+background: #009cff;
+    color: #fff;}.key4{
+background: #61c436;
+    color: #fff;}.key5{
+background: #d60000;
+    color: #fff;}
+.key6{
+background: #d8510e;
+    color: #fff;}
+h3.entry-title a {
+    color: #2e2f33;
+}
+h3.entry-title a:hover {
+    color: #f67280;
+}
+.has-post-thumbnail:not(.disabled-post-thumbnail) .entry-header, .disabled-post-thumbnail .entry-header {
+    padding: 20px 10px 0 10px;
+}
+.has-post-thumbnail:not(.disabled-post-thumbnail) .entry-content, .disabled-post-thumbnail .entry-content {
+    padding: 0 10px;
+}
+.entry-title {
+    margin: 0 0 0 0;
+    word-wrap: break-word;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.goto-top{  right: 60px;
+    width: 50px;
+	height: 50px;}
+.custom-logo-link {
+	margin: 5px 0px;}
+.primary-nav {
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+.threeforty-related-posts .post-1 .post-thumbnail {
+    height: 160px;
+}
+.threeforty-related-posts .post-2 .post-thumbnail {
+    height: 160px;
+}
+.threeforty-related-posts .post-3 .post-thumbnail {
+    height: 160px;
+}
+.threeforty-related-posts .post-4 .post-thumbnail {
+    height: 160px;
+}
+.threeforty-related-posts .post-5 .post-thumbnail{
+    height: 160px;
+}
+.threeforty-related-posts .post-6 .post-thumbnail{
+    height: 160px;
+}
+.widget.threeforty_posts_widget .entry-header {
+    padding: 0;
+}
+@media only screen and (max-width: 768px){
+	.ads-aff img{right: normal;left:0;}
+	.threeforty-related-posts .post-1 .post-thumbnail {
+    height: 100%;
+}
+.threeforty-related-posts .post-2 .post-thumbnail {
+    height: 100%;
+}
+.threeforty-related-posts .post-3 .post-thumbnail {
+    height: 100%;
+}
+.threeforty-related-posts .post-4 .post-thumbnail {
+    height: 100%;
+}
+.threeforty-related-posts .post-5 .post-thumbnail{
+    height: 100%;
+}
+.threeforty-related-posts .post-6 .post-thumbnail{
+    height: 100%;
+}}
+ins.adsbygoogle {
+    text-align: center !important;
+}
+span.toc_number.toc_depth_1 {
+    display: none;
+}
+span.toc_number.toc_depth_2 {
+    display: none;
+}
+span.toc_number.toc_depth_3 {
+    display: none;
+}
+#toc_container ul li:before {
+    display: none;
+}
+.goto-top {
+    right: 60px;
+    width: 40px !important;
+    height: 40px !important;
+}
+.entry-content ul:not([class*="wp-"]) > li:before {
+    content: "\2022";
+    display: inline-block;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    margin-left: -15px;
+    font-size: 24px;
+}
+h1.entry-title {
+    font-size: 2.25rem !important;
+	    margin-bottom: 10px;
+}.cols-3 .flex-box {
+    border-radius: 5px;
+    box-shadow: 0 0 1px 1px #efefef;
+}.flex-box {
+    border-radius: 5px ;
+    box-shadow: 0 0 1px 1px #efefef;
+}.post-thumbnail img {
+    border-top-left-radius: 7px;
+	border-top-right-radius: 7px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;}.entry-meta time, .comment-count {
+    text-transform: none;
+}.entry-meta a {
+	text-transform: none;}
+.flex-box.single-post, .flex-box.previous-article, .flex-box.has-post-thumbnail.odd, .flex-box.has-post-thumbnail.even {
+  border-top-left-radius: 0px ;
+	border-top-right-radius:0px ;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;
+    box-shadow: none;
+} .odd >.post-thumbnail img, .even >.post-thumbnail img {
+  border-top-left-radius: 0px ;
+	border-top-right-radius:0px ;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;
+    box-shadow: none;
+}.widget-entry .post-thumbnail img {
+    border-top-left-radius: 0px;
+	border-top-right-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;}.entry-title {
+    margin: 0 0 10px 0;
+}
+.single-post > .post-thumbnail img{border-radius:0px}
+.primary-nav li{font-size:14px}.widget.threeforty_posts_widget ul[class*="list-style-list"] .post-thumbnail {
+	width: 150px;}.ngay-thang {
+    color: #ccc;
+}
+.collapse {
+    display: none;
+}
+.collapse.in {
+    display: block;
+}
+.collapsing{
+  position:relative;
+  height:0;
+  overflow:hidden;
+
+ -webkit-transition-timing-function:ease;
+ -o-transition-timing-function:ease;
+ transition-timing-function:ease;
+
+ -webkit-transition-duration:.35s;
+ -o-transition-duration:.35s;
+ transition-duration:.35s;
+
+ -webkit-transition-property:height,visibility;
+ -o-transition-property:height,visibility;
+ transition-property:height,visibility
+}
+.nguon-tham-khao a {
+    font-weight: 600;
+	padding-left: 25px;
+}.nguon-tham-khao {
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    margin: 15px 0;
+    padding: 10px 0;
+	width:100%;
+}#via p {
+    margin-top: 15px;
+    font-size: 14px !important;
+}#via {
+    font-size: 14px;
+}.btn-aff {
+    font-size: 20px;
+    background: red;
+    padding: 10px;
+    border-radius: 15px;
+	color: #ffffff;
+}
+.btn-aff:hover{
+    background: #12c5c3;
+    color: red;
+}.show-more-button {
+   line-height: 40px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    clear: both;
+    background: #12c5c3;
+    max-width: 150px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ffffff;
+    margin: auto !important;
+    text-align: center;
+    margin-top: 10px !important;
+    height: auto;
+}.show-more-button:hover {
+    color: #ffffff;
+    background: #01a755;
+}.pages-nav .show-more-button {
+    padding: 0 20px;
+    min-height: 0px;
+    line-height: 40px;
+}
+.pages-nav {
+	padding: 0px;}
+.btn-tham-khao:before {
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    content: '';
+    display: block;
+    height: 12px;
+    position: absolute;
+    transition: all .5s ease;
+    vertical-align: top;
+    width: 12px;
+    border-color: #3389f0;
+    cursor: pointer;
+    left: auto;
+    transform: rotate(135deg);
+}
+.btn-tham-khao.collapsed:before {
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    content: '';
+    display: block;
+    height: 12px;
+    position: absolute;
+    transform: rotate(45deg) !important;
+    transition: all .5s ease;
+    vertical-align: top;
+    width: 12px;
+    border-color: #3389f0;
+    cursor: pointer;
+    left: auto;
+	margin-top: 3px;
+}.taxonomy-description p {
+    margin-bottom: 25px;
+    line-height: 26px;
+	font-size:16px
+}.owl-dots {
+    display: none;
+}.single-post > header.entry-header {
+    padding-top: 0px !important
+}.site-header {
+    margin: 0 auto 0px auto;
+}.tim-kiem input[type="search"] {
+    -webkit-appearance: none;
+    -webkit-appearance: textfield;
+    width: calc(100%);
+    padding: 15px 15px 15px 15px;
+    font-size: 16px;
+    font-family: var(--title-font);
+    font-weight: 400;
+    text-align: center;
+}.tim-kiem .search-submit {
+    display: none;
+}input, textarea {
+    border: 1px solid var(--light-border-color);
+    padding: 15px;
+    transition: all 0.2s ease;
+    max-width: 100%;
+    border-radius: 5px;
+}.ads-aff img {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    max-width: 375px;
+    height: auto;
+}.ads-aff {
+    z-index: 999;
+}
+@media only screen and (min-width: 769px){
+.bg-home-search{
+	background-image: url(https://web.archive.org/web/20230927174956im_/https://ssl.gstatic.com/support/content/images/static/homepage_header_background.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    height: 16.0625rem;
+	}form.search-form {
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    border-radius: .5rem;
+}.tim-kiem {
+    width: 40%;
+    margin: auto;
+    margin-top: 70px;
+	}}
+.cols-3 .flex-box:hover{box-shadow: 0px 1px 14px 1px rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);}
+	.az-letters,
+	.a-z-listing-widget .az-letters,
+	.a-z-listing-widget.widget .az-letters {
+		white-space: unset;
+	}
+
+	.az-letters>ul.az-links,
+	.a-z-listing-widget .az-letters>ul.az-links,
+	.a-z-listing-widget.widget .az-letters>ul.az-links {
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.az-letters>ul.az-links>li,
+	.a-z-listing-widget .az-letters>ul.az-links>li,
+	.a-z-listing-widget.widget .az-letters>ul.az-links>li {
+		list-style: none;
+		box-sizing: border-box;
+		margin: 0 3px 0.6em;
+		background: #f5f5f5;
+		color: #adadad;
+		font-size: 18px;
+	}
+
+	.az-letters>ul.az-links>li>span {
+		width: 35px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.az-letters>ul.az-links>li a,
+	.a-z-listing-widget .az-letters>ul.az-links>li a,
+	.a-z-listing-widget.widget .az-letters>ul.az-links>li a {
+		color: #000000;
+		text-decoration: none;
+		border: 0;
+		width: 35px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-bottom: 2px solid transparent;
+		-webkit-transition: all .1s ease 0s, visibility 0s ease 0s;
+		-moz-transition: all .1s ease 0s, visibility 0s ease 0s;
+		-ms-transition: all .1s ease 0s, visibility 0s ease 0s;
+		transition: all .1s ease 0s, visibility 0s ease 0s;
+		box-shadow: none;
+	}
+
+	.az-letters>ul.az-links>li a:hover {
+		border-bottom-color: #0876bf;
+		color: #0876bf;
+	}
+
+	.letter-section {
+		margin-bottom: 2em;
+		white-space: unset;
+		clear: both;
+	}
+
+	.letter-section h2.letter-title {
+		border-bottom: 1px solid black;
+		margin-bottom: 0.2em;
+		padding-bottom: 0.2em;
+		width: 100%;
+	}
+
+	.letter-section ul,
+	.letter-section ul>li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.letter-section ul.columns {
+		width: 100%;
+		box-sizing: border-box;
+		/* column-gap: 0.6em;
+		column-width: 15em;
+		line-height: 1.6em; */
+	}
+
+	.letter-section ul.columns>li {
+		display: block;
+		width: 33.33333333%;
+		float: left;
+	}
+
+	/* .letter-section ul.columns.max-0-columns,
+	.letter-section ul.columns.max-1-columns {
+		column-count: 3;
+	}
+
+	.letter-section ul.columns.max-2-columns {
+		column-count: 2;
+	}
+
+	.letter-section ul.columns.max-3-columns {
+		column-count: 3;
+	}
+
+	.letter-section ul.columns.max-4-columns {
+		column-count: 3;
+	}
+
+	.letter-section ul.columns.max-5-columns {
+		column-count: 3;
+	}
+
+	.letter-section ul.columns.max-6-columns {
+		column-count: 3;
+	}
+
+	.letter-section ul.columns.max-7-columns {
+		column-count: 3;
+	}
+
+	.letter-section ul.columns.max-8-columns {
+		column-count: 3;
+	}
+
+	.letter-section ul.columns.max-9-columns {
+		column-count: 3;
+	}
+
+	.letter-section ul.columns.max-10-columns {
+		column-count: 3;
+	}
+
+	.letter-section ul.columns.max-11-columns {
+		column-count: 3;
+	}
+
+	.letter-section ul.columns.max-12-columns {
+		column-count: 3;
+	}
+
+	.letter-section ul.columns.max-13-columns {
+		column-count: 3;
+	}
+
+	.letter-section ul.columns.max-14-columns {
+		column-count: 3;
+	}
+
+	.letter-section ul.columns.max-15-columns {
+		column-count: 3;
+	} */
+
+	.letter-section div.back-to-top {
+		width: 100%;
+		text-align: right;
+	}
+
+	.letter-section div.back-to-top a {
+		text-transform: uppercase;
+		font-size: 0.7em;
+	}
+
+	.letter-section div.back-to-top a:before,
+	.letter-section div.back-to-top a:after {
+		font-family: dashicons;
+		content: "\f343";
+		padding: 0.2em;
+	}
+	#az-slider ul li a{
+		color: #333;
+		display: block;
+		padding: 7px 15px;
+		position: relative;
+	}
+	#az-slider ul li a:before {
+	    background: #0876bf;
+	    content: "";
+	    height: 4px;
+	    left: 0;
+	    position: absolute;
+	    top: 17px;
+	    width: 4px;
+	}
+	#az-slider ul li a:hover {
+		color: #0876bf;
+	}
+
+	@media only screen and (max-width: 480px){
+		.letter-section ul.columns>li {
+			width: 50%;
+		}
+	}		</style>
+			<script type="rocketlazyloadscript" async="" data-rocket-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5531720662469584" crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script type="rocketlazyloadscript" async="" data-rocket-src="https://www.googletagmanager.com/gtag/js?id=G-LZ5L0FB5NJ"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LZ5L0FB5NJ');
+</script>
+<!-- Event snippet for Mua hang rockman conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script type="rocketlazyloadscript">
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-878042721/CNhoCNDwvacBEOG816ID',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+<!-- Facebook Pixel Code -->
+<script type="rocketlazyloadscript">
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://web.archive.org/web/20230927174956/https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '879245895767421');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://web.archive.org/web/20230927174956im_/https://www.facebook.com/tr?id=879245895767421&amp;ev=PageView&amp;noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->	
+</head>
+
+
+<body class="home blog wp-custom-logo"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display:none;direction:ltr;" toolbar-mode="auto">
+<div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;">
+<div id="donato" style="position:relative;width:100%;height:0;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20230927174956/https%3A//bacsicare.com/" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0"></a>
+    </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="https://bacsicare.com/" onfocus="this.focus();this.select();" style="flex: 1 1 0%;"><input type="hidden" name="type" value="replay" style=""><input type="hidden" name="date" value="20230927174956" style=""><input type="submit" value="Go" style="">
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;">
+                    <a class="t" href="/web/20230927174956*/https://bacsicare.com/" title="See a list of every capture for this URL">60 captures</a>
+          <div class="r" title="Timespan for captures of this URL">07 Jul 2019 - 11 Oct 2025</div>
+          </div>
+        <div class="k">
+          <a href="" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="750" height="27" border="0"></canvas>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20230820182629/http://bacsicare.com/" title="20 Aug 2023"><strong>Aug</strong></a></td>
+            <td class="c" id="displayMonthEl" title="You are here: 17:49:56 Sep 27, 2023">SEP</td>
+            <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20231031183241/http://www.bacsicare.com/" title="31 Oct 2023"><strong>Oct</strong></a></td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20230820182629/http://bacsicare.com/" title="18:26:29 Aug 20, 2023"><img src="https://web-static.archive.org/_static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0"></a></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 17:49:56 Sep 27, 2023">27</td>
+            <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20231026220028/https://bacsicare.com/" title="22:00:28 Oct 26, 2023"><img src="https://web-static.archive.org/_static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"></a></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20220816002343/https://bacsicare.com/" title="16 Aug 2022"><strong>2022</strong></a></td>
+            <td class="c" id="displayYearEl" title="You are here: 17:49:56 Sep 27, 2023">2023</td>
+            <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20241107154002/https://bacsicare.com/" title="07 Nov 2024"><strong>2024</strong></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="#" title="Share via My Web Archive">
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web"></span>
+        </span>
+                <a class="xxs" href="https://help.archive.org/help/category/the-wayback-machine/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+        <a id="wm-tb-close" href="#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="/web/20230927174956/http://web.archive.org/screenshot/https://bacsicare.com/" id="wm-screenshot" title="screenshot">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="#" data-url="https://web.archive.org/web/20230927174956/https://bacsicare.com/" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="#" data-url="https://web.archive.org/web/20230927174956/https://bacsicare.com/" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+        <div id="wm-capinfo-notice" source="api"></div>
+                <div id="wm-capinfo-collected-by">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/commoncrawl)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/commoncrawl" target="_new"><span class="wm-title">Common Crawl</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Web crawl data from Common Crawl.
+	</div>
+	      </div>
+    </div>
+    </div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading"></div>
+    </div>
+    </div>
+  </div></div></div></div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20230927174956/https://bacsicare.com/</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(750,27,25,2,"web","https://bacsicare.com/","20230927174956",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=p7PEIJWi","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+
+	<!-- fade the body when slide menu is active -->
+	<div class="body-fade"></div>
+
+	
+	
+	<header id="site-header" class="site-header default">
+
+		<div class="container header-layout-wrapper">
+
+			
+			<span class="toggle toggle-menu mobile-only">
+				<span><i class="icon-menu-1"></i></span><span class="screen-reader-text">Menu</span>
+			</span>
+
+
+	
+				<div class="logo-wrapper"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/" class="custom-logo-link" rel="home"><img src="https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/08/bacsicare-logo.png" alt="Bacsicare.com" class="custom-logo lazyloaded" data-src="https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/08/bacsicare-logo.png" decoding="async" data-eio-rwidth="243" data-eio-rheight="52"><noscript><img src="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/08/bacsicare-logo.png" alt="Bacsicare.com" class="custom-logo" data-eio="l"/></noscript></a></div>
+
+				<span class="toggle toggle-search mobile-only"><span><i class="icon-search"></i></span><span class="screen-reader-text">Search</span></span>
+
+
+					
+
+		</div>
+		<nav class="menu-primary-navigation-container"><ul id="primary-nav" class="primary-nav"><li id="menu-item-11554" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-11554"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/" aria-current="page">Trang chủ</a></li>
+<li id="menu-item-11553" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11553"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/lam-dep">Làm đẹp</a></li>
+<li id="menu-item-11547" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11547"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/sinh-ly-nam">Sinh lý nam</a></li>
+<li id="menu-item-11548" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11548"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/mang-thai">Mang thai</a></li>
+<li id="menu-item-11549" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11549"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tin-suc-khoe">Tin sức khỏe</a></li>
+<li id="menu-item-11546" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11546"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/benh">Bệnh</a></li>
+<li id="menu-item-11550" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11550"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/benh-vien">Bệnh Viện</a></li>
+<li id="menu-item-11551" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11551"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/cam-nang-phong-the">Cẩm nang phòng the</a></li>
+<li id="menu-item-11552" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11552"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuc-pham-chuc-nang">Thực phẩm chức năng</a></li>
+<li id="menu-item-11555" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-11555"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc">Thuốc</a>
+<ul class="sub-menu">
+	<li id="menu-item-11556" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11556"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-bo">Thuốc bổ</a></li>
+	<li id="menu-item-11557" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11557"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-bo-gan">Thuốc bổ gan</a></li>
+	<li id="menu-item-11558" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11558"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-cam">Thuốc cảm</a></li>
+	<li id="menu-item-11559" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11559"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-chong-di-ung">Thuốc chống dị ứng</a></li>
+	<li id="menu-item-11560" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11560"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-da-day">Thuốc dạ dày</a></li>
+	<li id="menu-item-11561" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11561"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-da-lieu">Thuốc da liễu</a></li>
+	<li id="menu-item-11562" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11562"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-dau-bung">Thuốc đau bụng</a></li>
+	<li id="menu-item-11563" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11563"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-giam-dau">Thuốc giảm đau</a></li>
+	<li id="menu-item-11564" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11564"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-ha-sot">Thuốc hạ sốt</a></li>
+	<li id="menu-item-11565" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11565"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-ho">Thuốc ho</a></li>
+	<li id="menu-item-11566" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11566"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-khang-sinh">Thuốc kháng sinh</a></li>
+	<li id="menu-item-11567" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11567"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-ngu">Thuốc ngủ</a></li>
+	<li id="menu-item-11568" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11568"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-nho-mat">Thuốc nhỏ mắt</a></li>
+	<li id="menu-item-11569" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11569"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-tieu-chay">Thuốc tiêu chảy</a></li>
+	<li id="menu-item-11570" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11570"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-tim-mach">Thuốc tim mạch</a></li>
+	<li id="menu-item-11571" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11571"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-xuong-khop">Thuốc xương khớp</a></li>
+	<li id="menu-item-11572" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11572"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/vitamin">Vitamin</a></li>
+</ul>
+</li>
+<li id="menu-item-11573" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11573"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tong-hop">Tổng hợp</a></li>
+</ul></nav>		<script type="rocketlazyloadscript">
+						$('.owl-carousel').owlCarousel({
+							loop:true,
+							margin:10,
+							autoWidth:true,
+							items:8
+						})
+					</script>
+<div class="bg-home-search">
+<div class="tim-kiem">
+	
+
+<form role="search" method="get" class="search-form" action="https://web.archive.org/web/20230927174956/https://bacsicare.com/">
+	<label for="search-form-65140cea70a20">
+		<span class="screen-reader-text">Search for:</span>
+	</label>
+	<input type="search" id="search-form-65140cea70a20" class="search-field" placeholder="Nhập từ tìm kiếm và nhấn enter" value="" name="s" style="">
+	<button type="submit" class="search-submit"><i class="icon-search"></i><span class="screen-reader-text">Search</span></button>
+</form>
+</div>
+		</div>
+	</header><!-- .site-header -->
+
+
+	
+<aside class="mobile-navigation slide-menu sidebar" aria-label="Blog Sidebar">
+		<span class="close-menu"><i class="icon-cancel"></i></span>
+		<div class="logo-wrapper"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/" class="custom-logo-link" rel="home"><img src="https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/08/bacsicare-logo.png" alt="Bacsicare.com" class="custom-logo ls-is-cached lazyloaded" data-src="https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/08/bacsicare-logo.png" decoding="async" data-eio-rwidth="243" data-eio-rheight="52"><noscript><img src="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/08/bacsicare-logo.png" alt="Bacsicare.com" class="custom-logo" data-eio="l"/></noscript></a></div>
+		<nav class="primary-nav-sidebar-wrapper mobile-only"><ul id="primary-nav-sidebar" class="primary-nav-sidebar"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-11554"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/" aria-current="page">Trang chủ</a><span class="expand"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11553"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/lam-dep">Làm đẹp</a><span class="expand"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11547"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/sinh-ly-nam">Sinh lý nam</a><span class="expand"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11548"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/mang-thai">Mang thai</a><span class="expand"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11549"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tin-suc-khoe">Tin sức khỏe</a><span class="expand"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11546"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/benh">Bệnh</a><span class="expand"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11550"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/benh-vien">Bệnh Viện</a><span class="expand"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11551"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/cam-nang-phong-the">Cẩm nang phòng the</a><span class="expand"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11552"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuc-pham-chuc-nang">Thực phẩm chức năng</a><span class="expand"></span></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-11555"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc">Thuốc</a><span class="expand"></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11556"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-bo">Thuốc bổ</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11557"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-bo-gan">Thuốc bổ gan</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11558"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-cam">Thuốc cảm</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11559"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-chong-di-ung">Thuốc chống dị ứng</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11560"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-da-day">Thuốc dạ dày</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11561"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-da-lieu">Thuốc da liễu</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11562"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-dau-bung">Thuốc đau bụng</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11563"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-giam-dau">Thuốc giảm đau</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11564"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-ha-sot">Thuốc hạ sốt</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11565"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-ho">Thuốc ho</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11566"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-khang-sinh">Thuốc kháng sinh</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11567"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-ngu">Thuốc ngủ</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11568"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-nho-mat">Thuốc nhỏ mắt</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11569"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-tieu-chay">Thuốc tiêu chảy</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11570"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-tim-mach">Thuốc tim mạch</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11571"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-xuong-khop">Thuốc xương khớp</a><span class="expand"></span></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11572"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/vitamin">Vitamin</a><span class="expand"></span></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11573"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tong-hop">Tổng hợp</a><span class="expand"></span></li>
+</ul></nav><section id="block-2" class="widget widget_block widget_search"><form role="search" method="get" action="https://web.archive.org/web/20230927174956/https://bacsicare.com/" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search"><label class="wp-block-search__label" for="wp-block-search__input-1">Tìm kiếm</label><div class="wp-block-search__inside-wrapper "><input class="wp-block-search__input" id="wp-block-search__input-1" placeholder="" value="" type="search" name="s" required="" style=""><button aria-label="Tìm kiếm" class="wp-block-search__button wp-element-button" type="submit">Tìm kiếm</button></div></form></section><section id="block-3" class="widget widget_block">
+<div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-group__inner-container">
+<h2 class="wp-block-heading">Bài viết mới</h2>
+
+
+<ul class="wp-block-latest-posts__list wp-block-latest-posts"><li><a class="wp-block-latest-posts__post-title" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/viem-amidan-hoc-mua-an-va-kieng-an-gi">Viêm amidan hốc: Mùa ăn và kiêng ăn gì?</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/phuong-phap-chiropractic">Phương pháp Chiropractic</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/ton-thuong-gan-do-ngoai-doc-paracetamol">Tổn thương gan do ngoại độc paracetamol</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/huyet-ap-thap-nhung-dieu-ban-can-biet">Huyết áp thấp – Những điều bạn cần biết</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tiem-ha-nhung-dieu-can-biet">Tiêm HA: Những điều cần biết</a></li>
+</ul></div></div>
+</section><section id="block-4" class="widget widget_block">
+<div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-group__inner-container">
+<h2 class="wp-block-heading">Phản hồi gần đây</h2>
+
+
+<ol class="wp-block-latest-comments"><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/">Bacsicare</a> trong <a class="wp-block-latest-comments__comment-link" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/bdsm-la-gi#comment-19">BDSM là gì? Biểu hiện và các hình thức của BDSM như thế nào?</a></footer></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/">Bacsicare</a> trong <a class="wp-block-latest-comments__comment-link" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/hattrick#comment-22">Viên sủi Hattrick bán ở đâu? Giá bao nhiêu? Có tác dụng gì?</a></footer></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/">Bacsicare</a> trong <a class="wp-block-latest-comments__comment-link" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/zextor#comment-2">Viên sủi Zextor là gì? Có tốt không – giá bao nhiêu – mua ở đâu?</a></footer></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/">Bacsicare</a> trong <a class="wp-block-latest-comments__comment-link" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/first-up-1h#comment-12">Viên ngậm First Up 1h giá bao nhiêu? Bán ở đâu? Có tốt không?</a></footer></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/">Bacsicare</a> trong <a class="wp-block-latest-comments__comment-link" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/suy-than#comment-16">Suy Thận: Nguyên nhân và cách nhận biệt bệnh suy thận từ sớm</a></footer></article></li></ol></div></div>
+</section><section id="block-5" class="widget widget_block">
+<div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-group__inner-container"></div></div>
+</section><section id="block-6" class="widget widget_block">
+<div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-group__inner-container">
+<h2 class="wp-block-heading">Chuyên mục</h2>
+
+
+<ul class="wp-block-categories-list wp-block-categories">	<li class="cat-item cat-item-2"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/benh">Bệnh</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/benh-vien">Bệnh Viện</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/bo-than">Bổ thận</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/cam-nang-phong-the">Cẩm nang phòng the</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/khong-phan-loai">Chưa phân loại</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/lam-dep">Làm đẹp</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/mang-thai">Mang thai</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/sau-sinh">Sau sinh</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/sinh-ly-nam">Sinh lý nam</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tang-giam-can">Tăng – Giảm cân</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thao-duoc">Thảo dược – Cây thuốc dân gian</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuc-pham-chuc-nang">Thực phẩm chức năng</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc">Thuốc</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-bo">Thuốc bổ</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-bo-gan">Thuốc bổ gan</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-cam">Thuốc cảm</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-chong-di-ung">Thuốc chống dị ứng</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-da-day">Thuốc dạ dày</a>
+</li>
+	<li class="cat-item cat-item-19"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-da-lieu">Thuốc da liễu</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-dau-bung">Thuốc đau bụng</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-giam-dau">Thuốc giảm đau</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-ha-sot">Thuốc hạ sốt</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-ho">Thuốc ho</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-khang-sinh">Thuốc kháng sinh</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-ngu">Thuốc ngủ</a>
+</li>
+	<li class="cat-item cat-item-26"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-nho-mat">Thuốc nhỏ mắt</a>
+</li>
+	<li class="cat-item cat-item-27"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-tieu-chay">Thuốc tiêu chảy</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-tim-mach">Thuốc tim mạch</a>
+</li>
+	<li class="cat-item cat-item-29"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc-xuong-khop">Thuốc xương khớp</a>
+</li>
+	<li class="cat-item cat-item-30"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tin-suc-khoe">Tin sức khỏe</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tong-hop">Tổng hợp</a>
+</li>
+	<li class="cat-item cat-item-32"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/vitamin">Vitamin</a>
+</li>
+</ul></div></div>
+</section>		
+	</aside>
+
+	
+
+		
+
+	<div class="wrap">
+
+		
+		<main id="main" class="site-main">
+		
+		
+		<div id="primary" class="content-area flex-grid grid cols-3 square-aspect-ratio">
+
+			
+			
+
+<article id="post-11733" class="flex-box default post-11733 post type-post status-publish format-standard has-post-thumbnail hentry category-benh">
+
+	
+	
+	
+		<div class="post-thumbnail">
+
+			
+											<a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/viem-amidan-hoc-mua-an-va-kieng-an-gi">
+					<img width="397" height="230" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY0AAADmAQMAAAATLUu/AAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACJJREFUaN7twTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAPgYLdIAATLEaFAAAAAASUVORK5CYII=" class="attachment-carrino-square-image size-carrino-square-image wp-post-image lazyload" alt="" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/09/1-17-397x230.jpg" data-eio-rwidth="397" data-eio-rheight="230"><noscript><img width="397" height="230" src="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/09/1-17-397x230.jpg" class="attachment-carrino-square-image size-carrino-square-image wp-post-image" alt="" decoding="async" data-eio="l"/></noscript>				</a>
+								</div><!-- .post-thumbnail -->
+	
+	
+	<header class="entry-header">
+		
+<h3 class="entry-title"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/viem-amidan-hoc-mua-an-va-kieng-an-gi" rel="bookmark">Viêm amidan hốc: Mùa ăn và kiêng ăn gì?</a></h3>
+<div class="entry-meta after-title has-avatar">
+
+	<ul>
+
+		
+			<li class="entry-author-avatar">
+
+				<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxJREFUCNdjYBiMAAAAlgABYhYN0gAAAABJRU5ErkJggg==" class="avatar avatar-30 photo lazyload" height="30" width="30" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" data-srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" data-eio-rwidth="30" data-eio-rheight="30"><noscript><img alt="" src="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" class="avatar avatar-30 photo" height="30" width="30" decoding="async" data-eio="l"/></noscript>
+			</li>
+
+		
+		
+			<li class="entry-author-meta">
+
+				<span class="screen-reader-text">Posted</span><i>by</i> <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/bien-tap-vien/cuc-thu">Thu Cúc</a>
+
+			</li>
+
+			
+		
+		<li class="entry-date">
+
+			
+			<time datetime="2023-09-27">27/09/2023</time>
+
+			
+		</li>
+
+	
+	
+	
+	</ul>
+	
+</div>
+
+	</header><!-- .entry-header -->
+
+	
+
+	<div class="entry-content"><p>Amidan hốc, những cục tử cung nằm ở hai bên cổ họng, đóng vai trò như một “trạm kiểm soát” đầu tiên trước các mầm bệnh xâm nhập cơ thể. … <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/viem-amidan-hoc-mua-an-va-kieng-an-gi" rel="noopener noreferrer">Read more</a></p>
+</div>											
+</article><!-- #post-## -->
+
+
+<article id="post-11730" class="flex-box default post-11730 post type-post status-publish format-standard has-post-thumbnail hentry category-benh">
+
+	
+	
+	
+		<div class="post-thumbnail">
+
+			
+											<a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/phuong-phap-chiropractic">
+					<img width="397" height="230" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY0AAADmAQMAAAATLUu/AAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACJJREFUaN7twTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAPgYLdIAATLEaFAAAAAASUVORK5CYII=" class="attachment-carrino-square-image size-carrino-square-image wp-post-image lazyload" alt="" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/09/1-16-397x230.jpg" data-eio-rwidth="397" data-eio-rheight="230"><noscript><img width="397" height="230" src="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/09/1-16-397x230.jpg" class="attachment-carrino-square-image size-carrino-square-image wp-post-image" alt="" decoding="async" data-eio="l"/></noscript>				</a>
+								</div><!-- .post-thumbnail -->
+	
+	
+	<header class="entry-header">
+		
+<h3 class="entry-title"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/phuong-phap-chiropractic" rel="bookmark">Phương pháp Chiropractic</a></h3>
+<div class="entry-meta after-title has-avatar">
+
+	<ul>
+
+		
+			<li class="entry-author-avatar">
+
+				<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxJREFUCNdjYBiMAAAAlgABYhYN0gAAAABJRU5ErkJggg==" class="avatar avatar-30 photo lazyload" height="30" width="30" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" data-srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" data-eio-rwidth="30" data-eio-rheight="30"><noscript><img alt="" src="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" class="avatar avatar-30 photo" height="30" width="30" decoding="async" data-eio="l"/></noscript>
+			</li>
+
+		
+		
+			<li class="entry-author-meta">
+
+				<span class="screen-reader-text">Posted</span><i>by</i> <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/bien-tap-vien/cuc-thu">Thu Cúc</a>
+
+			</li>
+
+			
+		
+		<li class="entry-date">
+
+			
+			<time datetime="2023-09-27">27/09/2023</time>
+
+			
+		</li>
+
+	
+	
+	
+	</ul>
+	
+</div>
+
+	</header><!-- .entry-header -->
+
+	
+
+	<div class="entry-content"><p>Phương pháp Chiropractic không chỉ là một phương pháp điều trị mà còn là một ngành y học holistics, tập trung vào việc điều chỉnh cột sống để cải thiện … <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/phuong-phap-chiropractic" rel="noopener noreferrer">Read more</a></p>
+</div>											
+</article><!-- #post-## -->
+
+
+<article id="post-11727" class="flex-box default post-11727 post type-post status-publish format-standard has-post-thumbnail hentry category-benh">
+
+	
+	
+	
+		<div class="post-thumbnail">
+
+			
+											<a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/ton-thuong-gan-do-ngoai-doc-paracetamol">
+					<img width="397" height="230" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY0AAADmAQMAAAATLUu/AAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACJJREFUaN7twTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAPgYLdIAATLEaFAAAAAASUVORK5CYII=" class="attachment-carrino-square-image size-carrino-square-image wp-post-image lazyload" alt="" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/09/1-15-397x230.jpg" data-eio-rwidth="397" data-eio-rheight="230"><noscript><img width="397" height="230" src="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/09/1-15-397x230.jpg" class="attachment-carrino-square-image size-carrino-square-image wp-post-image" alt="" decoding="async" data-eio="l"/></noscript>				</a>
+								</div><!-- .post-thumbnail -->
+	
+	
+	<header class="entry-header">
+		
+<h3 class="entry-title"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/ton-thuong-gan-do-ngoai-doc-paracetamol" rel="bookmark">Tổn thương gan do ngoại độc paracetamol</a></h3>
+<div class="entry-meta after-title has-avatar">
+
+	<ul>
+
+		
+			<li class="entry-author-avatar">
+
+				<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxJREFUCNdjYBiMAAAAlgABYhYN0gAAAABJRU5ErkJggg==" class="avatar avatar-30 photo lazyload" height="30" width="30" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" data-srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" data-eio-rwidth="30" data-eio-rheight="30"><noscript><img alt="" src="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" class="avatar avatar-30 photo" height="30" width="30" decoding="async" data-eio="l"/></noscript>
+			</li>
+
+		
+		
+			<li class="entry-author-meta">
+
+				<span class="screen-reader-text">Posted</span><i>by</i> <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/bien-tap-vien/cuc-thu">Thu Cúc</a>
+
+			</li>
+
+			
+		
+		<li class="entry-date">
+
+			
+			<time datetime="2023-09-27">27/09/2023</time>
+
+			
+		</li>
+
+	
+	
+	
+	</ul>
+	
+</div>
+
+	</header><!-- .entry-header -->
+
+	
+
+	<div class="entry-content"><p>Paracetamol, có tên khác là acetaminophen, là một loại thuốc giảm đau và hạ sốt phổ biến trên thị trường. Chúng ta thường dễ dàng mua được và sử dụng … <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/ton-thuong-gan-do-ngoai-doc-paracetamol" rel="noopener noreferrer">Read more</a></p>
+</div>											
+</article><!-- #post-## -->
+
+
+<article id="post-11724" class="flex-box default post-11724 post type-post status-publish format-standard has-post-thumbnail hentry category-benh">
+
+	
+	
+	
+		<div class="post-thumbnail">
+
+			
+											<a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/huyet-ap-thap-nhung-dieu-ban-can-biet">
+					<img width="397" height="230" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY0AAADmAQMAAAATLUu/AAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACJJREFUaN7twTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAPgYLdIAATLEaFAAAAAASUVORK5CYII=" class="attachment-carrino-square-image size-carrino-square-image wp-post-image lazyload" alt="" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/09/12-397x230.webp" data-eio-rwidth="397" data-eio-rheight="230"><noscript><img width="397" height="230" src="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/09/12-397x230.webp" class="attachment-carrino-square-image size-carrino-square-image wp-post-image" alt="" decoding="async" data-eio="l"/></noscript>				</a>
+								</div><!-- .post-thumbnail -->
+	
+	
+	<header class="entry-header">
+		
+<h3 class="entry-title"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/huyet-ap-thap-nhung-dieu-ban-can-biet" rel="bookmark">Huyết áp thấp – Những điều bạn cần biết</a></h3>
+<div class="entry-meta after-title has-avatar">
+
+	<ul>
+
+		
+			<li class="entry-author-avatar">
+
+				<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxJREFUCNdjYBiMAAAAlgABYhYN0gAAAABJRU5ErkJggg==" class="avatar avatar-30 photo lazyload" height="30" width="30" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" data-srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" data-eio-rwidth="30" data-eio-rheight="30"><noscript><img alt="" src="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" class="avatar avatar-30 photo" height="30" width="30" decoding="async" data-eio="l"/></noscript>
+			</li>
+
+		
+		
+			<li class="entry-author-meta">
+
+				<span class="screen-reader-text">Posted</span><i>by</i> <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/bien-tap-vien/cuc-thu">Thu Cúc</a>
+
+			</li>
+
+			
+		
+		<li class="entry-date">
+
+			
+			<time datetime="2023-09-26">26/09/2023</time>
+
+			
+		</li>
+
+	
+	
+	
+	</ul>
+	
+</div>
+
+	</header><!-- .entry-header -->
+
+	
+
+	<div class="entry-content"><p>Huyết áp thấp, hay còn gọi là hypotension, có thể được xem xét là “đối lập” với tình trạng huyết áp cao mà chúng ta thường nghe nói. Mặc dù … <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/huyet-ap-thap-nhung-dieu-ban-can-biet" rel="noopener noreferrer">Read more</a></p>
+</div>											
+</article><!-- #post-## -->
+
+
+<article id="post-11721" class="flex-box default post-11721 post type-post status-publish format-standard has-post-thumbnail hentry category-benh">
+
+	
+	
+	
+		<div class="post-thumbnail">
+
+			
+											<a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tiem-ha-nhung-dieu-can-biet">
+					<img width="397" height="230" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY0AAADmAQMAAAATLUu/AAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACJJREFUaN7twTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAPgYLdIAATLEaFAAAAAASUVORK5CYII=" class="attachment-carrino-square-image size-carrino-square-image wp-post-image lazyload" alt="" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/09/1-4-397x230.webp" data-eio-rwidth="397" data-eio-rheight="230"><noscript><img width="397" height="230" src="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/09/1-4-397x230.webp" class="attachment-carrino-square-image size-carrino-square-image wp-post-image" alt="" decoding="async" data-eio="l"/></noscript>				</a>
+								</div><!-- .post-thumbnail -->
+	
+	
+	<header class="entry-header">
+		
+<h3 class="entry-title"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tiem-ha-nhung-dieu-can-biet" rel="bookmark">Tiêm HA: Những điều cần biết</a></h3>
+<div class="entry-meta after-title has-avatar">
+
+	<ul>
+
+		
+			<li class="entry-author-avatar">
+
+				<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxJREFUCNdjYBiMAAAAlgABYhYN0gAAAABJRU5ErkJggg==" class="avatar avatar-30 photo lazyload" height="30" width="30" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" data-srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" data-eio-rwidth="30" data-eio-rheight="30"><noscript><img alt="" src="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" class="avatar avatar-30 photo" height="30" width="30" decoding="async" data-eio="l"/></noscript>
+			</li>
+
+		
+		
+			<li class="entry-author-meta">
+
+				<span class="screen-reader-text">Posted</span><i>by</i> <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/bien-tap-vien/cuc-thu">Thu Cúc</a>
+
+			</li>
+
+			
+		
+		<li class="entry-date">
+
+			
+			<time datetime="2023-09-26">26/09/2023</time>
+
+			
+		</li>
+
+	
+	
+	
+	</ul>
+	
+</div>
+
+	</header><!-- .entry-header -->
+
+	
+
+	<div class="entry-content"><p>Trong vài năm trở lại đây, tiêm hạ không chỉ là một thuật ngữ y học mà còn trở thành một xu hướng làm đẹp được nhiều người ưa chuộng. … <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tiem-ha-nhung-dieu-can-biet" rel="noopener noreferrer">Read more</a></p>
+</div>											
+</article><!-- #post-## -->
+
+
+<article id="post-11718" class="flex-box default post-11718 post type-post status-publish format-standard has-post-thumbnail hentry category-benh">
+
+	
+	
+	
+		<div class="post-thumbnail">
+
+			
+											<a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tiem-filler-moi-tat-tan-tat-nhung-dieu-ban-can-biet">
+					<img width="397" height="230" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY0AAADmAQMAAAATLUu/AAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACJJREFUaN7twTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAPgYLdIAATLEaFAAAAAASUVORK5CYII=" class="attachment-carrino-square-image size-carrino-square-image wp-post-image lazyload" alt="" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/09/2-2-397x230.webp" data-eio-rwidth="397" data-eio-rheight="230"><noscript><img width="397" height="230" src="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/09/2-2-397x230.webp" class="attachment-carrino-square-image size-carrino-square-image wp-post-image" alt="" decoding="async" data-eio="l"/></noscript>				</a>
+								</div><!-- .post-thumbnail -->
+	
+	
+	<header class="entry-header">
+		
+<h3 class="entry-title"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tiem-filler-moi-tat-tan-tat-nhung-dieu-ban-can-biet" rel="bookmark">Tiêm filler môi: Tất tần tật những điều bạn cần biết</a></h3>
+<div class="entry-meta after-title has-avatar">
+
+	<ul>
+
+		
+			<li class="entry-author-avatar">
+
+				<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxJREFUCNdjYBiMAAAAlgABYhYN0gAAAABJRU5ErkJggg==" class="avatar avatar-30 photo lazyload" height="30" width="30" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" data-srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" data-eio-rwidth="30" data-eio-rheight="30"><noscript><img alt="" src="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" class="avatar avatar-30 photo" height="30" width="30" decoding="async" data-eio="l"/></noscript>
+			</li>
+
+		
+		
+			<li class="entry-author-meta">
+
+				<span class="screen-reader-text">Posted</span><i>by</i> <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/bien-tap-vien/cuc-thu">Thu Cúc</a>
+
+			</li>
+
+			
+		
+		<li class="entry-date">
+
+			
+			<time datetime="2023-09-26">26/09/2023</time>
+
+			
+		</li>
+
+	
+	
+	
+	</ul>
+	
+</div>
+
+	</header><!-- .entry-header -->
+
+	
+
+	<div class="entry-content"><p>Trong thế giới làm đẹp ngày nay, việc tiêm filler môi không còn xa lạ với chúng ta. Đối với nhiều người, đôi môi căng mọng, quyến rũ là một … <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tiem-filler-moi-tat-tan-tat-nhung-dieu-ban-can-biet" rel="noopener noreferrer">Read more</a></p>
+</div>											
+</article><!-- #post-## -->
+
+
+<article id="post-11715" class="flex-box default post-11715 post type-post status-publish format-standard has-post-thumbnail hentry category-benh">
+
+	
+	
+	
+		<div class="post-thumbnail">
+
+			
+											<a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/viem-tien-liet-tuyen-co-nguy-hiem-khong-2">
+					<img width="397" height="230" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY0AAADmAQMAAAATLUu/AAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACJJREFUaN7twTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAPgYLdIAATLEaFAAAAAASUVORK5CYII=" class="attachment-carrino-square-image size-carrino-square-image wp-post-image lazyload" alt="" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/09/1-14-397x230.jpg" data-eio-rwidth="397" data-eio-rheight="230"><noscript><img width="397" height="230" src="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/09/1-14-397x230.jpg" class="attachment-carrino-square-image size-carrino-square-image wp-post-image" alt="" decoding="async" data-eio="l"/></noscript>				</a>
+								</div><!-- .post-thumbnail -->
+	
+	
+	<header class="entry-header">
+		
+<h3 class="entry-title"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/viem-tien-liet-tuyen-co-nguy-hiem-khong-2" rel="bookmark">Viêm tiền liệt tuyến có nguy hiểm không?</a></h3>
+<div class="entry-meta after-title has-avatar">
+
+	<ul>
+
+		
+			<li class="entry-author-avatar">
+
+				<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxJREFUCNdjYBiMAAAAlgABYhYN0gAAAABJRU5ErkJggg==" class="avatar avatar-30 photo lazyload" height="30" width="30" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" data-srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" data-eio-rwidth="30" data-eio-rheight="30"><noscript><img alt="" src="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" class="avatar avatar-30 photo" height="30" width="30" decoding="async" data-eio="l"/></noscript>
+			</li>
+
+		
+		
+			<li class="entry-author-meta">
+
+				<span class="screen-reader-text">Posted</span><i>by</i> <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/bien-tap-vien/cuc-thu">Thu Cúc</a>
+
+			</li>
+
+			
+		
+		<li class="entry-date">
+
+			
+			<time datetime="2023-09-25">25/09/2023</time>
+
+			
+		</li>
+
+	
+	
+	
+	</ul>
+	
+</div>
+
+	</header><!-- .entry-header -->
+
+	
+
+	<div class="entry-content"><p>Viêm tiền liệt tuyến – một bệnh lý nam giới thường gặp nhưng không phải ai cũng hiểu rõ. Đó chính là sự viêm nhiễm ở tiền liệt tuyến, một … <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/viem-tien-liet-tuyen-co-nguy-hiem-khong-2" rel="noopener noreferrer">Read more</a></p>
+</div>											
+</article><!-- #post-## -->
+
+
+<article id="post-11712" class="flex-box default post-11712 post type-post status-publish format-standard has-post-thumbnail hentry category-benh">
+
+	
+	
+	
+		<div class="post-thumbnail">
+
+			
+											<a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/dau-hieu-thai-vao-tu-cung">
+					<img width="397" height="230" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY0AAADmAQMAAAATLUu/AAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACJJREFUaN7twTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAPgYLdIAATLEaFAAAAAASUVORK5CYII=" class="attachment-carrino-square-image size-carrino-square-image wp-post-image lazyload" alt="" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/09/A-397x230.jpg" data-eio-rwidth="397" data-eio-rheight="230"><noscript><img width="397" height="230" src="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/09/A-397x230.jpg" class="attachment-carrino-square-image size-carrino-square-image wp-post-image" alt="" decoding="async" data-eio="l"/></noscript>				</a>
+								</div><!-- .post-thumbnail -->
+	
+	
+	<header class="entry-header">
+		
+<h3 class="entry-title"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/dau-hieu-thai-vao-tu-cung" rel="bookmark">Dấu hiệu thai vào tử cung</a></h3>
+<div class="entry-meta after-title has-avatar">
+
+	<ul>
+
+		
+			<li class="entry-author-avatar">
+
+				<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxJREFUCNdjYBiMAAAAlgABYhYN0gAAAABJRU5ErkJggg==" class="avatar avatar-30 photo lazyload" height="30" width="30" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" data-srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" data-eio-rwidth="30" data-eio-rheight="30"><noscript><img alt="" src="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" class="avatar avatar-30 photo" height="30" width="30" decoding="async" data-eio="l"/></noscript>
+			</li>
+
+		
+		
+			<li class="entry-author-meta">
+
+				<span class="screen-reader-text">Posted</span><i>by</i> <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/bien-tap-vien/cuc-thu">Thu Cúc</a>
+
+			</li>
+
+			
+		
+		<li class="entry-date">
+
+			
+			<time datetime="2023-09-25">25/09/2023</time>
+
+			
+		</li>
+
+	
+	
+	
+	</ul>
+	
+</div>
+
+	</header><!-- .entry-header -->
+
+	
+
+	<div class="entry-content"><p>Thai vào tử cung là một tình trạng y khoa đặc biệt mà trong đó thai nhi phát triển bên ngoài tử cung thay vì trong niệu quả. Nhận biết … <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/dau-hieu-thai-vao-tu-cung" rel="noopener noreferrer">Read more</a></p>
+</div>											
+</article><!-- #post-## -->
+
+
+<article id="post-11709" class="flex-box default post-11709 post type-post status-publish format-standard has-post-thumbnail hentry category-benh">
+
+	
+	
+	
+		<div class="post-thumbnail">
+
+			
+											<a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/xet-nghiem-mo-mau-hieu-ro-hon-ve-nguon-goc-cua-suc-khoe">
+					<img width="397" height="230" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY0AAADmAQMAAAATLUu/AAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACJJREFUaN7twTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAPgYLdIAATLEaFAAAAAASUVORK5CYII=" class="attachment-carrino-square-image size-carrino-square-image wp-post-image lazyload" alt="" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/09/gg-397x230.jpg" data-eio-rwidth="397" data-eio-rheight="230"><noscript><img width="397" height="230" src="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/09/gg-397x230.jpg" class="attachment-carrino-square-image size-carrino-square-image wp-post-image" alt="" decoding="async" data-eio="l"/></noscript>				</a>
+								</div><!-- .post-thumbnail -->
+	
+	
+	<header class="entry-header">
+		
+<h3 class="entry-title"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/xet-nghiem-mo-mau-hieu-ro-hon-ve-nguon-goc-cua-suc-khoe" rel="bookmark">Xét nghiệm mô máu: Hiểu rõ hơn về nguồn gốc của sức khỏe</a></h3>
+<div class="entry-meta after-title has-avatar">
+
+	<ul>
+
+		
+			<li class="entry-author-avatar">
+
+				<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxJREFUCNdjYBiMAAAAlgABYhYN0gAAAABJRU5ErkJggg==" class="avatar avatar-30 photo lazyload" height="30" width="30" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" data-srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" data-eio-rwidth="30" data-eio-rheight="30"><noscript><img alt="" src="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" class="avatar avatar-30 photo" height="30" width="30" decoding="async" data-eio="l"/></noscript>
+			</li>
+
+		
+		
+			<li class="entry-author-meta">
+
+				<span class="screen-reader-text">Posted</span><i>by</i> <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/bien-tap-vien/cuc-thu">Thu Cúc</a>
+
+			</li>
+
+			
+		
+		<li class="entry-date">
+
+			
+			<time datetime="2023-09-25">25/09/2023</time>
+
+			
+		</li>
+
+	
+	
+	
+	</ul>
+	
+</div>
+
+	</header><!-- .entry-header -->
+
+	
+
+	<div class="entry-content"><p>Khi nói đến sức khỏe, máu đóng một vai trò trung tâm không thể phủ nhận. Xét nghiệm mô máu, một kỹ thuật tiên tiến, mở ra cánh cửa giúp … <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/xet-nghiem-mo-mau-hieu-ro-hon-ve-nguon-goc-cua-suc-khoe" rel="noopener noreferrer">Read more</a></p>
+</div>											
+</article><!-- #post-## -->
+</div><div class="content-area flex-grid cols-1 square-aspect-ratio">
+
+<article id="post-11706" class="flex-box default post-11706 post type-post status-publish format-standard has-post-thumbnail hentry category-benh">
+
+	
+	
+	
+		<div class="post-thumbnail">
+
+			
+											<a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/viem-tien-liet-tuyen-co-nguy-hiem-khong">
+					<img width="397" height="230" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY0AAADmAQMAAAATLUu/AAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACJJREFUaN7twTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAPgYLdIAATLEaFAAAAAASUVORK5CYII=" class="attachment-carrino-square-image size-carrino-square-image wp-post-image lazyload" alt="" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://bacsicare.com/wp-content/uploads/2023/09/3-3-397x230.jpg" data-eio-rwidth="397" data-eio-rheight="230"><noscript><img width="397" height="230" src="https://web.archive.org/web/20230927174956im_/https://bacsicare.com/wp-content/uploads/2023/09/3-3-397x230.jpg" class="attachment-carrino-square-image size-carrino-square-image wp-post-image" alt="" decoding="async" data-eio="l"/></noscript>				</a>
+								</div><!-- .post-thumbnail -->
+	
+	
+	<header class="entry-header">
+		
+<h3 class="entry-title"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/viem-tien-liet-tuyen-co-nguy-hiem-khong" rel="bookmark">Viêm tiền liệt tuyến có nguy hiểm không?</a></h3>
+<div class="entry-meta after-title has-avatar">
+
+	<ul>
+
+		
+			<li class="entry-author-avatar">
+
+				<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxJREFUCNdjYBiMAAAAlgABYhYN0gAAAABJRU5ErkJggg==" class="avatar avatar-30 photo lazyload" height="30" width="30" decoding="async" data-src="https://web.archive.org/web/20230927174956/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" data-srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" data-eio-rwidth="30" data-eio-rheight="30"><noscript><img alt="" src="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=30&amp;d=mm&amp;r=g" srcset="https://web.archive.org/web/20230927174956im_/https://secure.gravatar.com/avatar/b6279d385a5596deb724b02644792b8d?s=60&amp;d=mm&amp;r=g 2x" class="avatar avatar-30 photo" height="30" width="30" decoding="async" data-eio="l"/></noscript>
+			</li>
+
+		
+		
+			<li class="entry-author-meta">
+
+				<span class="screen-reader-text">Posted</span><i>by</i> <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/bien-tap-vien/cuc-thu">Thu Cúc</a>
+
+			</li>
+
+			
+		
+		<li class="entry-date">
+
+			
+			<time datetime="2023-09-24">24/09/2023</time>
+
+			
+		</li>
+
+	
+	
+	
+	</ul>
+	
+</div>
+
+	</header><!-- .entry-header -->
+
+	
+
+	<div class="entry-content"><p>a. Định nghĩa viêm tiền liệt tuyến Viêm tiền liệt tuyến là một tình trạng y học trong đó tiền liệt tuyến, một phần quan trọng của hệ sinh dục … <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/viem-tien-liet-tuyen-co-nguy-hiem-khong" rel="noopener noreferrer">Read more</a></p>
+</div>											
+</article><!-- #post-## -->
+
+	<nav class="navigation pagination" aria-label="Bài viết">
+		<h2 class="screen-reader-text">Điều hướng bài viết</h2>
+		<div class="nav-links"><ul class="page-numbers">
+	<li><span aria-current="page" class="page-numbers current">1</span></li>
+	<li><a class="page-numbers" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/page/2">2</a></li>
+	<li><a class="page-numbers" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/page/3">3</a></li>
+	<li><span class="page-numbers dots">…</span></li>
+	<li><a class="page-numbers" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/page/54">54</a></li>
+	<li><a class="next page-numbers" href="https://web.archive.org/web/20230927174956/https://bacsicare.com/page/2">Tiếp</a></li>
+</ul>
+</div>
+	</nav>
+		</div><!-- #primary -->
+
+					</main><!-- #main -->
+	</div>
+
+
+
+		<footer id="colophon" class="site-footer">
+
+			<div class="container">
+
+			
+
+	<div class="footer-widget-area footer-columns flex-grid cols-3">
+					<div class="flex-box footer-column-1">
+				<section id="block-7" class="widget widget_block widget_text">
+<p><strong>ĐỊA CHỈ</strong> : <br>181 Nguyễn Sơn, Phú Thạnh, Tân Phú, Thành phố Hồ Chí Minh 700000, Việt Nam </p>
+</section><section id="block-15" class="widget widget_block widget_text">
+<p>Facebook : <a href="https://web.archive.org/web/20230927174956/https://www.facebook.com/profile.php?id=61550783117373">https://www.facebook.com/profile.php?id=61550783117373</a></p>
+</section><section id="block-16" class="widget widget_block widget_text">
+<p>Theo dõi trên Google news :  <a rel="noreferrer noopener" href="https://web.archive.org/web/20230927174956/https://news.google.com/publications/CAAqBwgKMNz-owww7vayBA" target="_blank">https://news.google.com/publications/CAAqBwgKMNz-owww7vayBA</a></p>
+</section>			</div>
+					<div class="flex-box footer-column-2">
+				<section id="block-17" class="widget widget_block widget_text">
+<p><strong>THÔNG TIN LIÊN HỆ</strong><br><strong>Bacsicare.com</strong> là một trong những website hằng đầu về chia sẻ thông tin sức khỏe tại Việt Nam. Với sự phát triển không ngừng Bacsicare.com luôn đáp ứng về các tìm kiếm thông tin về sức khỏe, thuốc, bệnh, bệnh viện cũng như các phòng khám trên cả nước... <a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/gioi-thieu" data-type="link" data-id="https://bacsicare.com/gioi-thieu">đọc thêm</a> </p>
+</section><section id="block-18" class="widget widget_block widget_text">
+<p><a href="https://web.archive.org/web/20230927174956/http://bacsicare.com/gioi-thieu" data-type="link" data-id="bacsicare.com/gioi-thieu">Giới thiệu</a> </p>
+</section><section id="block-8" class="widget widget_block widget_text">
+<p><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/chinh-sach-bao-mat" data-type="link" data-id="https://bacsicare.com/chinh-sach-bao-mat">Chính sách bảo mật</a> </p>
+</section><section id="block-9" class="widget widget_block widget_text">
+<p><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/chinh-sach" data-type="link" data-id="https://bacsicare.com/chinh-sach">Chính sách</a></p>
+</section><section id="block-10" class="widget widget_block widget_text">
+<p><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/lien-he" data-type="link" data-id="https://bacsicare.com/lien-he">Liên hệ</a> </p>
+</section>			</div>
+					<div class="flex-box footer-column-3">
+				<section id="block-19" class="widget widget_block widget_text">
+<p><strong>DẪN ĐƯỜNG</strong></p>
+</section><section id="block-20" class="widget widget_block"><iframe width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3746959560344!2d106.62421447618298!3d10.782587259077735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752c02d2307437%3A0x2e2706b1873d6d20!2zMTgxIE5ndXnhu4VuIFPGoW4sIFBow7ogVGjhuqFuaCwgVMOibiBQaMO6LCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2sus!4v1694533944538!5m2!1svi!2sus" class="lazyload"></iframe></section>			</div>
+			</div><!-- .widget-area -->
+
+
+					
+				<ul class="footer-info">
+					<li class="footer-copyright">
+					© 2019-2020 Bacsicare.com
+				</li>
+		
+				<li class="footer-links">
+
+					<ul id="footer-nav" class="footer-nav"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-11554"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/" aria-current="page">Trang chủ</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11553"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/lam-dep">Làm đẹp</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11547"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/sinh-ly-nam">Sinh lý nam</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11548"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/mang-thai">Mang thai</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11549"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tin-suc-khoe">Tin sức khỏe</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11546"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/benh">Bệnh</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11550"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/benh-vien">Bệnh Viện</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11551"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/cam-nang-phong-the">Cẩm nang phòng the</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11552"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuc-pham-chuc-nang">Thực phẩm chức năng</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11555"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/thuoc">Thuốc</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11573"><a href="https://web.archive.org/web/20230927174956/https://bacsicare.com/tong-hop">Tổng hợp</a></li>
+</ul>				</li>
+			</ul>
+				<div class="copyright" style="font-size:12px;text-align:center;">
+					<span>Các bài viết trên website bacsicare.com chỉ có tính chất tham khảo, không thay thế cho việc chẩn đoán hoặc điều trị</span><p>
+					<a class="dmca-badge" title="DMCA.com Protection Status" rel="nofollow" href="//web.archive.org/web/20230927174956/https://www.dmca.com/Protection/Status.aspx?ID=3f00468b-6fd8-4eca-b452-7e47d6467866"> <img style="width: 100px;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="DMCA.com Protection Status" data-src="https://web.archive.org/web/20230927174956/https://images.dmca.com/Badges/dmca_protected_sml_120b.png?ID=3f00468b-6fd8-4eca-b452-7e47d6467866" decoding="async" class="lazyload"><noscript><img style="width: 100px;" src="https://web.archive.org/web/20230927174956im_/https://images.dmca.com/Badges/dmca_protected_sml_120b.png?ID=3f00468b-6fd8-4eca-b452-7e47d6467866" alt="DMCA.com Protection Status" data-eio="l"/></noscript></a> 
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://bacsicare.com/wp-content/cache/min/1/Badges/DMCABadgeHelper.min.js?ver=1695056315"> </script>
+				</p></div>
+		</div><!-- .container -->
+		</footer><!-- #colophon -->
+					<a href="" class="goto-top backtotop"><i class="icon-up-open"></i></a>
+				
+		
+<script id="eio-lazy-load-js-before" type="text/javascript">
+var eio_lazy_vars = {"exactdn_domain":"","skip_autoscale":0,"threshold":0};
+</script>
+<script type="text/javascript" src="https://web.archive.org/web/20230927174956js_/https://bacsicare.com/wp-content/plugins/ewww-image-optimizer/includes/lazysizes.min.js?ver=721" id="eio-lazy-load-js"></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://bacsicare.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1695056315" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/web.archive.org\/web\/20230927174956\/https:\/\/bacsicare.com\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://bacsicare.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1695056315" id="contact-form-7-js"></script>
+<script type="text/javascript" id="kk-star-ratings-js-extra">
+/* <![CDATA[ */
+var kk_star_ratings = {"action":"kk-star-ratings","endpoint":"https:\/\/web.archive.org\/web\/20230927174956\/https:\/\/bacsicare.com\/wp-admin\/admin-ajax.php","nonce":"543c2fe21a"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://bacsicare.com/wp-content/plugins/kk-star-ratings/src/core/public/js/kk-star-ratings.min.js?ver=5.4.5" id="kk-star-ratings-js"></script>
+<script type="text/javascript" id="ta_main_js-js-extra">
+/* <![CDATA[ */
+var thirsty_global_vars = {"home_url":"\/\/web.archive.org\/web\/20230927174956\/https:\/\/bacsicare.com","ajax_url":"https:\/\/web.archive.org\/web\/20230927174956\/https:\/\/bacsicare.com\/wp-admin\/admin-ajax.php","link_fixer_enabled":"yes","link_prefix":"recommends","link_prefixes":["recommends"],"post_id":"11733","enable_record_stats":"yes","enable_js_redirect":"yes","disable_thirstylink_class":""};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://bacsicare.com/wp-content/cache/min/1/wp-content/plugins/thirstyaffiliates/js/app/ta.js?ver=1695056315" id="ta_main_js-js"></script>
+<script type="rocketlazyloadscript" id="rocket-browser-checker-js-after" data-rocket-type="text/javascript">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/recommends\/","usesTrailingSlash":"","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/web.archive.org\/web\/20230927174956\/https:\/\/bacsicare.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" id="rocket-preload-links-js-after" data-rocket-type="text/javascript">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">var subscribersSiteId='771984d1-2c5d-4029-8332-038837642ad5';</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://bacsicare.com/wp-content/cache/min/1/assets/subscribers.js?ver=1695056315"></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://bacsicare.com/wp-content/cache/min/1/bootstrap/3.4.0/js/bootstrap.min.js?ver=1695056315"></script>
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;d972c0dac87a4d04b183b491b37d3b96&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+
+
+</body></html>

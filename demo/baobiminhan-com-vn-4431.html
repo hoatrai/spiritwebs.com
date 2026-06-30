@@ -1,0 +1,768 @@
+<!DOCTYPE html><html lang="vi-VN"><head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" hreflang="en" href="https://baobiminhan.com.vn/en/">
+<link rel="alternate" hreflang="vi" href="https://baobiminhan.com.vn">
+<link rel="alternate" hreflang="x-default" href="https://baobiminhan.com.vn">
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v18.1 (Yoast SEO v18.2) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Trang chủ - Bao bì Minh An sản xuất thùng carton ở Thái Bình</title><style id="rocket-critical-css">:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%}article,header,main,nav,section{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}h1,h2,h5{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}ol,ul{margin-top:0;margin-bottom:1rem}ul ul{margin-bottom:0}strong{font-weight:bolder}a{color:#007bff;text-decoration:none;background-color:transparent}img{vertical-align:middle;border-style:none}svg{overflow:hidden;vertical-align:middle}label{display:inline-block;margin-bottom:.5rem}button{border-radius:0}button,input,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button,select{text-transform:none}select{word-wrap:normal}[type=button],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}textarea{overflow:auto;resize:vertical}[type=search]{outline-offset:-2px;-webkit-appearance:none}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}h1,h2,h5{margin-bottom:.5rem;font-weight:500;line-height:1.2}h1{font-size:2.5rem}h2{font-size:2rem}h5{font-size:1.25rem}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1170px}}.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col-3,.col-6,.col-lg-3,.col-lg-7,.col-md-4,.col-xl-3,.col-xl-9{position:relative;width:100%;padding-right:15px;padding-left:15px}.col-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}@media (min-width:768px){.col-md-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}}@media (min-width:992px){.col-lg-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-lg-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}}@media (min-width:1200px){.col-xl-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-xl-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}}.form-row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-5px;margin-left:-5px}.fade:not(.show){opacity:0}.close{float:right;font-size:1.5rem;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.5}button.close{padding:0;background-color:transparent;border:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}.modal{position:fixed;top:0;left:0;z-index:1050;display:none;width:100%;height:100%;overflow:hidden;outline:0}.modal-dialog{position:relative;width:auto;margin:.5rem}.modal.fade .modal-dialog{-webkit-transform:translate(0,-50px);transform:translate(0,-50px)}.modal-dialog-centered{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;min-height:calc(100% - 1rem)}.modal-dialog-centered::before{display:block;height:calc(100vh - 1rem);content:""}.modal-content{position:relative;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;width:100%;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.3rem;outline:0}.modal-header{display:-ms-flexbox;display:flex;-ms-flex-align:start;align-items:flex-start;-ms-flex-pack:justify;justify-content:space-between;padding:1rem 1rem;border-bottom:1px solid #dee2e6;border-top-left-radius:.3rem;border-top-right-radius:.3rem}.modal-header .close{padding:1rem 1rem;margin:-1rem -1rem -1rem auto}.modal-title{margin-bottom:0;line-height:1.5}.modal-body{position:relative;-ms-flex:1 1 auto;flex:1 1 auto;padding:1rem}.modal-footer{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:end;justify-content:flex-end;padding:1rem;border-top:1px solid #dee2e6;border-bottom-right-radius:.3rem;border-bottom-left-radius:.3rem}@media (min-width:576px){.modal-dialog{max-width:500px;margin:1.75rem auto}.modal-dialog-centered{min-height:calc(100% - 3.5rem)}.modal-dialog-centered::before{height:calc(100vh - 3.5rem)}}@media (min-width:992px){.modal-lg{max-width:800px}}.carousel{position:relative}.carousel-inner{position:relative;width:100%;overflow:hidden}.carousel-inner::after{display:block;clear:both;content:""}.carousel-item{position:relative;display:none;float:left;width:100%;margin-right:-100%;-webkit-backface-visibility:hidden;backface-visibility:hidden}.carousel-item.active{display:block}.carousel-control-next,.carousel-control-prev{position:absolute;top:0;bottom:0;z-index:1;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;width:15%;color:#fff;text-align:center;opacity:.5}.carousel-control-prev{left:0}.carousel-control-next{right:0}.carousel-indicators{position:absolute;right:0;bottom:0;left:0;z-index:15;display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;padding-left:0;margin-right:15%;margin-left:15%;list-style:none}.carousel-indicators li{box-sizing:content-box;-ms-flex:0 1 auto;flex:0 1 auto;width:30px;height:3px;margin-right:3px;margin-left:3px;text-indent:-999px;background-color:#fff;background-clip:padding-box;border-top:10px solid transparent;border-bottom:10px solid transparent;opacity:.5}.carousel-indicators .active{opacity:1}.clearfix::after{display:block;clear:both;content:""}.d-none{display:none!important}.d-block{display:block!important}.d-flex{display:-ms-flexbox!important;display:flex!important}@media (min-width:576px){.d-sm-block{display:block!important}}@media (min-width:768px){.d-md-none{display:none!important}.d-md-block{display:block!important}}@media (min-width:992px){.d-lg-none{display:none!important}.d-lg-block{display:block!important}}.justify-content-between{-ms-flex-pack:justify!important;justify-content:space-between!important}.align-items-center{-ms-flex-align:center!important;align-items:center!important}.w-100{width:100%!important}.mb-0{margin-bottom:0!important}.text-right{text-align:right!important}.text-center{text-align:center!important}@font-face{font-display:swap;font-family:IcoFont;font-weight:400;font-style:Regular;src:url(https://baobiminhan.com.vn/wp-content/themes/theme/lib/css/iconfonts/fonts/icofont.woff2) format("woff2"),url(https://baobiminhan.com.vn/wp-content/themes/theme/lib/css/iconfonts/fonts/icofont.woff) format("woff")}[class*=" icofont-"],[class^=icofont-]{font-family:IcoFont!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;white-space:nowrap;word-wrap:normal;direction:ltr;line-height:1;-webkit-font-feature-settings:"liga";-webkit-font-smoothing:antialiased}.icofont-facebook:before{content:"\ed37"}.icofont-twitter:before{content:"\ed7a"}.icofont-youtube:before{content:"\ed8b"}.icofont-speech-comments:before{content:"\eff2"}.icofont-search-1:before{content:"\ed11"}h1,h2,h5{overflow-wrap:break-word}ol,ul{overflow-wrap:break-word}p{overflow-wrap:break-word}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;overflow-wrap:normal!important;word-wrap:normal!important;padding:0;position:absolute!important;width:1px}:root{--woocommerce:#a46497;--wc-green:#7ad03a;--wc-red:#a00;--wc-orange:#ffba00;--wc-blue:#2ea2cc;--wc-primary:#a46497;--wc-primary-text:white;--wc-secondary:#ebe9eb;--wc-secondary-text:#515151;--wc-highlight:#77a464;--wc-highligh-text:white;--wc-content-bg:#fff;--wc-subtext:#767676}:root{--woocommerce:#a46497;--wc-green:#7ad03a;--wc-red:#a00;--wc-orange:#ffba00;--wc-blue:#2ea2cc;--wc-primary:#a46497;--wc-primary-text:white;--wc-secondary:#ebe9eb;--wc-secondary-text:#515151;--wc-highlight:#77a464;--wc-highligh-text:white;--wc-content-bg:#fff;--wc-subtext:#767676}.screen-reader-text{clip:rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute!important;width:1px;word-wrap:normal!important}.wpml-ls-menu-item .wpml-ls-flag{display:inline;vertical-align:baseline}.dgwt-wcas-search-wrapp{position:relative;line-height:100%;display:block;color:#444;min-width:230px;width:100%;text-align:left;margin:0 auto;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.dgwt-wcas-search-wrapp *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.dgwt-wcas-search-form{margin:0;padding:0;width:100%}input[type=search].dgwt-wcas-search-input{-webkit-box-shadow:none;box-shadow:none;margin:0;-webkit-appearance:textfield;text-align:left}[type=search].dgwt-wcas-search-input::-ms-clear{display:none}[type=search].dgwt-wcas-search-input::-webkit-search-decoration{-webkit-appearance:none}[type=search].dgwt-wcas-search-input::-webkit-search-cancel-button{display:none}button.dgwt-wcas-search-submit{position:relative}.dgwt-wcas-ico-magnifier{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0;height:65%;display:block}.dgwt-wcas-preloader{height:100%;position:absolute;right:0;top:0;width:40px;z-index:-1;background-repeat:no-repeat;background-position:right 15px center;background-size:auto 44%}.screen-reader-text{clip:rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute!important;width:1px}.dgwt-wcas-sf-wrapp:after,.dgwt-wcas-sf-wrapp:before{content:"";display:table}.dgwt-wcas-sf-wrapp:after{clear:both}.dgwt-wcas-sf-wrapp{zoom:1;width:100%;max-width:100vw;margin:0;position:relative;background:0 0}.dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input{width:100%;height:40px;font-size:14px;line-height:100%;padding:10px 15px;margin:0;background:#fff;border:1px solid #ddd;border-radius:3px;-webkit-border-radius:3px;-webkit-appearance:none;box-sizing:border-box}.dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input::-webkit-input-placeholder{color:#999;font-weight:400;font-style:italic;line-height:normal}.dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input:-moz-placeholder{color:#999;font-weight:400;font-style:italic;line-height:normal}.dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input::-moz-placeholder{color:#999;font-weight:400;font-style:italic;line-height:normal}.dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input:-ms-input-placeholder{color:#999;font-weight:400;font-style:italic;line-height:normal}.dgwt-wcas-sf-wrapp button.dgwt-wcas-search-submit{overflow:visible;position:absolute;border:0;padding:0;margin:0;height:40px;min-width:50px;width:auto;line-height:100%;min-height:100%;right:0;left:auto;top:0;bottom:auto;padding:0 15px;color:#fff;text-transform:uppercase;background-color:#333;border-radius:0 2px 2px 0;-webkit-border-radius:0 2px 2px 0;text-shadow:0 -1px 0 rgba(0,0,0,.3);-webkit-box-shadow:none;box-shadow:none;-webkit-appearance:none}.dgwt-wcas-sf-wrapp .dgwt-wcas-search-submit:before{content:'';position:absolute;border-width:8px 8px 8px 0;border-style:solid solid solid none;border-color:transparent #333 transparent;top:12px;left:-6px}.dgwt-wcas-sf-wrapp .dgwt-wcas-search-submit::-moz-focus-inner{border:0;padding:0}.dgwt-wcas-ico-magnifier{max-width:20px}.dgwt-wcas-has-submit .dgwt-wcas-search-submit svg path{fill:#fff}html{font-size:62.5%}body{font-family:'Roboto',sans-serif;font-size:15px;line-height:1.4;overflow-x:hidden}a{color:#333}a:visited{text-decoration:none}img{max-width:100%;height:auto}@font-face{font-display:swap;font-family:"IcoFont";font-weight:normal;font-style:"Regular";src:url(https://baobiminhan.com.vn/wp-content/themes/theme/lib/webfonts/iconfonts/icofont.woff2) format("woff2"),url(https://baobiminhan.com.vn/wp-content/themes/theme/lib/webfonts/iconfonts/icofont.woff) format("woff")}.site-title,.site-description{font-size:0;margin:0}.site-header .header-content{position:relative}.site-header .logo img{height:60px}.main-navigation ul{padding:0;margin:0}.main-navigation ul.menu li{position:relative;display:block}.main-navigation ul.menu>li{float:left;margin:0 6rem 0 0}.main-navigation ul.menu li a{font-size:15px;color:#333;display:block;text-transform:none;white-space:nowrap;padding:8px 15px;font-weight:400}.main-navigation ul.menu>li>a{font-size:16px;font-weight:700;line-height:55px;color:#FFF;text-transform:uppercase;display:block;padding:0;font-family:'Roboto Condensed',sans-serif}.main-navigation ul.menu>li.menu-item-has-children>a:after{content:"\ea99";font-family:IcoFont}.main-navigation ul.menu>li.current-menu-item>a{color:#fff}.main-navigation ul ul{background-color:#fff;min-width:220px;left:0;position:absolute;box-shadow:0 5px 5px rgba(0,0,0,.3);opacity:0;visibility:hidden;z-index:99999;-webkit-transform:translate3d(0,20px,0);-moz-transform:translate3d(0,20px,0);-ms-transform:translate3d(0,20px,0);-o-transform:translate3d(0,20px,0);transform:translate3d(0,20px,0)}.main-navigation ul ul li:last-child a{border-bottom:none}.site-header.header-logo-style2 .main-navigation{background:#333}.page-title{font-size:28px;font-weight:500;color:#333;margin:0 0 15px}#back-top{border:0 dotted #c12428;width:50px;height:50px;right:25px;bottom:120px;position:fixed;transform:rotate(0);transform-origin:center center 0;z-index:1000}#back-top{margin:0}#back-top:after,#back-top:before{height:4px;position:absolute;background-color:#c12428;content:""}#back-top:after{width:25px;right:5px;top:50%;transform:rotate(45deg) translateY(-50%);transform-origin:center top 0}#back-top:before{width:18px;left:6px;top:56%;transform:rotate(-45deg) translateY(-50%);transform-origin:center top 0}#back-top .backtotop-morph{background-color:#c12428;width:15px;height:4px;left:100%;top:45%;position:absolute;opacity:0;margin-bottom:-20px;transform:translate(-50%)}#back-top .backtotop-morph:before{width:0;height:0;left:-7px;top:-4px;position:absolute;border-color:transparent #c12428 transparent transparent;border-style:solid;border-width:6px 10px 6px 0;content:""}.screen-reader-text{display:none}::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 8px rgba(0,0,0,.3);background-color:#F5F5F5;border-radius:10px}::-webkit-scrollbar{width:8px;background-color:#F5F5F5}::-webkit-scrollbar-thumb{background-color:#807d7d;border-radius:8px}.preloading{overflow:hidden}.content-sidebar-wrap:before,.content-sidebar-wrap:after{clear:both;display:table;content:" "}.entry-content:before,.entry-content:after,.site-header:before,.site-header:after,.site-content:before,.site-content:after{content:"";display:table;table-layout:fixed}.entry-content:after,.site-header:after,.site-content:after{clear:both}.widget{margin:0 0 1.5em}.dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input{border-radius:0!important}.dgwt-wcas-sf-wrapp .dgwt-wcas-search-submit:before{border-color:transparent #e7041c transparent!important}.dgwt-wcas-sf-wrapp button.dgwt-wcas-search-submit{background-color:#e7041c!important}@media (min-width:992.98px){.icon-search>a{padding:0;line-height:37px}.icon-search img{color:#333;display:inline-block;padding:5px;background:#FFF;border-radius:3px}.dgwt-wcas-search-form label{width:calc(100% - 22px);float:left;margin-bottom:0}.dgwt-wcas-search-form input[type=search]{width:100%;border:none;outline-width:0;color:#333;background:#FFF;font-weight:400}.dgwt-wcas-search-form input[type=search]::-webkit-input-placeholder,.dgwt-wcas-search-form input[type=search]::-moz-placeholder,.dgwt-wcas-search-form input[type=search]:-ms-input-placeholder,.dgwt-wcas-search-form input[type=search]:-moz-placeholder{color:#333333;font-weight:normal}}@media (max-width:992.98px){div.icon-search{display:inline-block;outline:0;background:#fcb040;color:#FFF;text-align:center;width:40px;height:40px;line-height:40px}div.icon-search>a{color:#FFF}#search{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.75);-webkit-transform:translate(0,-100%);-moz-transform:translate(0,-100%);-ms-transform:translate(0,-100%);-o-transform:translate(0,-100%);transform:translate(0,-100%);opacity:0;visibility:hidden}#search .close{position:fixed;top:15px;right:15px;opacity:1;font-size:27px;color:#fff}.dgwt-wcas-search-wrapp label{width:100%;margin-bottom:0}.dgwt-wcas-search-wrapp .dgwt-wcas-search-submit,.dgwt-wcas-search-wrapp input[type=search]{height:29px;outline:0;border:none}.dgwt-wcas-search-wrapp input[type=search]{width:100%;background:0 0;color:#333!important;font-weight:400;padding:0 28px 0 0;height:100%;font-size:16px}.dgwt-wcas-search-wrapp .dgwt-wcas-search-submit{position:absolute;right:0;z-index:1;text-indent:-9999px;width:40px}.dgwt-wcas-search-wrapp input[type=search]::-webkit-input-placeholder{color:#FFF}.dgwt-wcas-search-wrapp input[type=search]::-moz-placeholder{color:#FFF}.dgwt-wcas-search-wrapp input[type=search]:-ms-input-placeholder{color:#FFF}.dgwt-wcas-search-wrapp input[type=search]:-moz-placeholder{color:#FFF}#search .dgwt-wcas-search-wrapp{position:absolute;top:50%;left:0;width:80%;margin-left:10%;color:#fff;background:0 0;border-left:0 solid transparent;border-right:0 solid transparent;text-align:center;outline:0}}.widget_information i{font-size:16px;position:absolute;left:0;top:7px;width:16px;text-align:center;color:#ed1e25}.widget_information li.label-company i{display:none}.widget_social ul{margin:0;padding:0}.widget_social ul li{display:inline-block}.widget_social ul{border-left:1px solid #e3e3e3}.widget_social ul li a{display:inline-block;height:35px;width:40px;line-height:35px;color:#333!important;font-size:22px;text-align:center;border-right:1px solid #e3e3e3;background:transparent!important}.widget_social .icon_facebook a{background:#3b5999;color:#FFF}.widget_social .icon_twitter a{background:#55acee;color:#FFF}.widget_social .icon_youtube a{background:#cd201f;color:#FFF}.wtb-slider{margin-bottom:20px}@-webkit-keyframes quick-alo-circle-anim{0%{-webkit-transform:rotate(0) scale(.5) skew(1deg);-webkit-opacity:.1}30%{-webkit-transform:rotate(0) scale(.7) skew(1deg);-webkit-opacity:.5}100%{-webkit-transform:rotate(0) scale(1) skew(1deg);-webkit-opacity:.1}}@-o-keyframes quick-alo-circle-anim{0%{-o-transform:rotate(0) scale(.5) skew(1deg);-o-opacity:.1}30%{-o-transform:rotate(0) scale(.7) skew(1deg);-o-opacity:.5}100%{-o-transform:rotate(0) scale(1) skew(1deg);-o-opacity:.1}}@-moz-keyframes quick-alo-circle-fill-anim{0%,100%{-moz-transform:rotate(0) scale(.7) skew(1deg);opacity:.2}50%{-moz-transform:rotate(0) -moz-scale(1) skew(1deg);opacity:.2}}@-webkit-keyframes quick-alo-circle-fill-anim{0%,100%{-webkit-transform:rotate(0) scale(.7) skew(1deg);opacity:.2}50%{-webkit-transform:rotate(0) scale(1) skew(1deg);opacity:.2}}@-o-keyframes quick-alo-circle-fill-anim{0%,100%{-o-transform:rotate(0) scale(.7) skew(1deg);opacity:.2}50%{-o-transform:rotate(0) scale(1) skew(1deg);opacity:.2}}@-moz-keyframes quick-alo-circle-img-anim{0%{transform:rotate(0) scale(1) skew(1deg)}10%,30%{-moz-transform:rotate(-25deg) scale(1) skew(1deg)}20%,40%{-moz-transform:rotate(25deg) scale(1) skew(1deg)}100%,50%{-moz-transform:rotate(0) scale(1) skew(1deg)}}@-webkit-keyframes quick-alo-circle-img-anim{0%{transform:rotate(0) scale(1) skew(1deg)}10%,30%{-webkit-transform:rotate(-25deg) scale(1) skew(1deg)}20%,40%{-webkit-transform:rotate(25deg) scale(1) skew(1deg)}100%,50%{-webkit-transform:rotate(0) scale(1) skew(1deg)}}@-o-keyframes quick-alo-circle-img-anim{0%{transform:rotate(0) scale(1) skew(1deg)}10%,30%{-o-transform:rotate(-25deg) scale(1) skew(1deg)}20%,40%{-o-transform:rotate(25deg) scale(1) skew(1deg)}100%,50%{-o-transform:rotate(0) scale(1) skew(1deg)}}@keyframes quick-alo-circle-img-anim{0%,100%,50%{transform:rotate(0) scale(1) skew(1deg)}10%,30%{transform:rotate(-25deg) scale(1) skew(1deg)}20%,40%{transform:rotate(25deg) scale(1) skew(1deg)}}.quick-alo-ph-circle{width:100px;height:100px;background-color:transparent}.alo-floating{text-align:center}.alo-floating{line-height:40px;white-space:nowrap}.quick-alo-ph-circle,.quick-alo-ph-circle-fill{-webkit-border-radius:100%;-moz-border-radius:100%;opacity:.1;-webkit-transform-origin:50% 50%;-moz-transform-origin:50% 50%;-ms-transform-origin:50% 50%;z-index:999999;position:absolute}.quick-alo-ph-circle{border-radius:100%;border:2px solid rgba(30,30,30,.4);-webkit-animation:quick-alo-circle-anim 1.2s infinite ease-in-out;-moz-animation:quick-alo-circle-anim 1.2s infinite ease-in-out;-ms-animation:quick-alo-circle-anim 1.2s infinite ease-in-out;-o-animation:quick-alo-circle-anim 1.2s infinite ease-in-out;animation:quick-alo-circle-anim 1.2s infinite ease-in-out;-o-transform-origin:50% 50%;transform-origin:50% 50%}.quick-alo-ph-circle-fill{width:80px;height:80px;top:10px;left:10px;background-color:#000;border-radius:100%;border:2px solid transparent;-webkit-animation:quick-alo-circle-fill-anim 2.3s infinite ease-in-out;-moz-animation:quick-alo-circle-fill-anim 2.3s infinite ease-in-out;-ms-animation:quick-alo-circle-fill-anim 2.3s infinite ease-in-out;-o-animation:quick-alo-circle-fill-anim 2.3s infinite ease-in-out;animation:quick-alo-circle-fill-anim 2.3s infinite ease-in-out;-o-transform-origin:50% 50%;transform-origin:50% 50%}.quick-alo-ph-img-circle{width:40px;z-index:999999;height:40px;top:30px;left:30px;position:absolute;background:url(https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/icon-phone.png) center center no-repeat rgba(30,30,30,.1);-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;border:2px solid transparent;opacity:.7;-webkit-animation:quick-alo-circle-img-anim 1s infinite ease-in-out;-moz-animation:quick-alo-circle-img-anim 1s infinite ease-in-out;-ms-animation:quick-alo-circle-img-anim 1s infinite ease-in-out;-o-animation:quick-alo-circle-img-anim 1s infinite ease-in-out;animation:quick-alo-circle-img-anim 1s infinite ease-in-out;-webkit-transform-origin:50% 50%;-moz-transform-origin:50% 50%;-ms-transform-origin:50% 50%;-o-transform-origin:50% 50%;transform-origin:50% 50%}.alo-floating{display:block;left:10px;bottom:10px;position:fixed;z-index:9999;height:40px;font-size:14px;text-shadow:1px 1px 0 #000;border-radius:40px;max-width:250px;overflow:hidden;text-overflow:ellipsis;background:#e42222;padding:0 10px}.alo-floating a{color:#FFF}.alo-floating-zalo{bottom:100px;left:30px;background:url(//dongunam.com/wp-content/themes/theme/lib/images/icon-zalo.png) 8px center no-repeat,#009dff;background-size:30px auto;padding:0}.alo-floating-zalo a{padding:0 15px 0 45px;display:block;height:100%}.hotline-phone-ring-wrap{position:fixed;bottom:0;left:0;z-index:999999}.hotline-phone-ring{position:relative;visibility:visible;background-color:transparent;width:110px;height:110px;z-index:11;-webkit-backface-visibility:hidden;-webkit-transform:translateZ(0);left:0;bottom:0;display:block}.hotline-bar{position:absolute;background:#337ab7;height:45px;white-space:nowrap;line-height:40px;padding:0 10px 0 30px;background-size:100%;z-index:9;border-radius:50px!important;left:42px;bottom:31px}.hotline-bar>a{color:#fff;text-decoration:none;font-size:16px;font-weight:700;text-indent:32px;letter-spacing:1px;display:block;line-height:45px}.hotline-phone-2 .quick-alo-ph-circle{top:0;left:0;width:110px;height:110px}.hotline-phone-2 .quick-alo-ph-circle-fill{top:16px;left:16px;width:80px;height:80px;background:rgba(51,122,83,.7)}.hotline-phone-2 .quick-alo-ph-img-circle{top:31px;left:31px;width:50px;height:50px;background:#337ab7;opacity:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;align-items:center;justify-content:center}.hotline-phone-2 .quick-alo-ph-img-circle .pps-btn-img{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.hotline-phone-2 .quick-alo-ph-img-circle .pps-btn-img img{width:33px;height:33px}.hotline-phone-2 .alo-floating-zalo{bottom:120px;left:30px}@media (min-width:992px){.sidebar-content .site-main{float:right;width:74.5%}}.home .site-main,.page-template-page-fullwidth .site-main{width:100%}.hentry{margin:0 0 30px}#main>.page{margin:0}.main-navigation ul.sub-menu li{display:block;z-index:999;position:relative;width:100%;border-bottom:1px solid white}.main-navigation ul.sub-menu li a{text-align:left;text-transform:uppercase;padding-right:15px;color:#fff;display:block;font-size:14px;line-height:28px;font-family:'Roboto Condensed',sans-serif;background:#fff}.main-navigation ul.sub-menu li a:before{content:'';width:15px;height:15px;display:inline-block;background:url(https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/favicon.png) no-repeat;background-size:cover;margin-right:0.5rem;margin-bottom:-0.2rem}ul#menu-information-menu{height:50px;display:flex;float:right;max-width:calc(100% - 130px);padding:0;margin:0}ul#menu-information-menu li{display:block;float:left;width:auto;height:50px;margin-left:60px;padding-left:45px;background-size:32px auto;background-repeat:no-repeat;background-position:0px 3px}ul#menu-information-menu li.li-mail{background-image:url(https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/li-mail.png)}ul#menu-information-menu li.li-tel{background-image:url(https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/li-tel.png)}ul#menu-information-menu li.li-address{background-image:url(https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/li-address.png)}ul#menu-information-menu li a{font-weight:700;color:#231f20;font-family:'Roboto Condensed',sans-serif;line-height:40px}ul#menu-information-menu li.li-mail a{line-height:40px}.header-main{padding:25px 0 20px}.top-header{height:35px;background:#f7f7f7;border-bottom:1px solid #e3e3e3}.top-header .widget{margin:0}.top-header .widget_nav_menu .menu{padding:0;border-left:1px solid #e3e3e3;display:flex;list-style:none;margin:0}.top-header .widget_nav_menu li{border-right:1px solid #e3e3e3}.top-header .widget_nav_menu li a{height:35px;display:block;line-height:35px;padding:0 10px;font-size:16px;color:#333}.top-header .widget_nav_menu li a i{margin-right:5px;font-size:20px;color:#fcb040}.wpml-ls-menu-item .wpml-ls-flag{width:30px;height:20px;vertical-align:-4px}.hometitle{text-align:center;display:inline-block;color:#333;margin:40px auto;text-transform:uppercase;position:relative;padding:1px 40px;font-family:'Roboto Condensed';font-size:22px;font-weight:700}.hometitle:before{content:'';left:0;position:absolute;bottom:0;width:27px;height:28px;background:url(https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/bg-home-title-3.png) no-repeat;background-size:cover}.hometitle:after{content:'';right:0;position:absolute;top:0;width:27px;height:28px;background:url(https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/bg-home-title-4.png) no-repeat;background-size:cover}#main .home-section{padding:20px 0}.herald-menu-popup-search{position:relative;height:55px;display:flex;align-items:center}.herald-menu-popup-search>i{color:white;font-size:16px;width:30px;height:30px;display:block;line-height:30px;text-align:center}.herald-in-popup{position:absolute;opacity:0;visibility:hidden;right:0;padding-right:35px;background:white;top:0}.herald-in-popup .herald-search-input{height:35px;width:260px;padding:0 10px;border:navajowhite}.herald-in-popup .herald-search-submit{height:35px;width:35px;border:none;background:none;position:absolute;right:0;top:0;z-index:99}#carouselMainSlide .carousel-control-next{position:absolute;height:52px;width:58px;line-height:0;font-size:0;border:none;outline:none;right:50%;z-index:999;opacity:0;background:url(https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/arr-right.png) no-repeat}#carouselMainSlide .carousel-control-prev{position:absolute;height:52px;width:58px;line-height:0;font-size:0;border:none;outline:none;left:50%;z-index:999;opacity:0;background:url(https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/arr-left.png) no-repeat}.modal-content{border:none;box-shadow:2px 2px 5px black}.modal-header{background:#f9ab42;color:white;padding:10px 20px}.modal-header .modal-title{text-transform:uppercase;font-weight:bold;font-size:16px}.modal-header .close{color:white;text-shadow:none;opacity:1;font-size:23px}.modal-body{padding:20px}.sh_form .form-row{width:100%;margin-bottom:10px}.sh_form .form-row input,.sh_form .form-row textarea,.sh_form .form-row select{padding:0 10px;width:100%;height:37px}.sh_form .form-row textarea{height:auto;padding:7px 10px}.sh_form .form-row .btn-form,.close-message-btn{margin-left:auto;display:inline-block;color:white;background:#f9ab42;padding:0 30px;text-transform:uppercase;line-height:34px;border:none}@media (min-width:1200px){#banner #carouselMainSlide .carousel-item a{height:600px;width:100%;position:relative;background-position:50% 50%;background-size:cover;display:block;overflow:hidden;background-repeat:no-repeat;background-attachment:scroll}}@media (max-width:991.98px){#site-navigation{display:none}.header-content{padding:15px 0}}@media (max-width:575.98px){.alo-floating-zalo{height:50px;background:url(https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/icon-zalo.png) center center no-repeat,#009dff;background-size:40px auto;bottom:110px;left:25px}.alo-floating-zalo a strong{display:none}.alo-floating-zalo a{padding:0;width:50px;height:50px}.site-header .logo img{height:40px}}.vc_row:after,.vc_row:before{content:" ";display:table}.vc_row:after{clear:both}.vc_column_container{width:100%}.vc_row{margin-left:-15px;margin-right:-15px}.vc_col-sm-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}@media (min-width:768px){.vc_col-sm-12{float:left}.vc_col-sm-12{width:100%}}.vc_column-inner::after,.vc_column-inner::before{content:" ";display:table}.vc_column-inner::after{clear:both}.vc_column_container{padding-left:0;padding-right:0}.vc_column_container>.vc_column-inner{box-sizing:border-box;padding-left:15px;padding-right:15px;width:100%}.vc_section{padding-left:15px;padding-right:15px;margin-left:-15px;margin-right:-15px}.vc_section[data-vc-full-width]{overflow:hidden}.vc_section[data-vc-full-width]>.vc_row{margin-left:0;margin-right:0}.vc_section.vc_section-has-fill{padding-top:35px}#QuickViewModal .modal-content{position:relative}#QuickViewModal .modal-content .modal-header{position:absolute;top:0;right:0;border-bottom:none;padding:0;z-index:999999;outline:none}#QuickViewModal .modal-content .modal-header .close{margin:0;outline:none}#QuickViewModal .modal-content .modal-header .close span{color:#333333;outline:none;font-size:22px}#QuickViewModal .modal-body{padding:0}.carousel-control-next,.carousel-control-prev{bottom:initial;width:40px;height:40px;line-height:40px;border:1px solid #ebebeb;top:50%;transform:translateY(-50%)}@media (max-width:992px){#QuickViewModal{display:none}}</style><link rel="stylesheet" href="https://baobiminhan.com.vn/wp-content/cache/min/1/15fec3f5a320558f1b07c23b9f3abb58.css" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" media="all" data-minify="1">
+	<meta name="description" content="Công ty TNHH SX TM Bao Bì Minh An chuyên sản xuất thùng carton 3 lớp, 5 lớp ... sóng A, B, C, E tại Thái Bình.">
+	<link rel="canonical" href="https://baobiminhan.com.vn/">
+	<meta property="og:locale" content="vi_VN">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Trang chủ">
+	<meta property="og:description" content="Công ty TNHH SX TM Bao Bì Minh An chuyên sản xuất thùng carton 3 lớp, 5 lớp ... sóng A, B, C, E tại Thái Bình.">
+	<meta property="og:url" content="https://baobiminhan.com.vn/">
+	<meta property="og:site_name" content="Bao bì Minh An">
+	<meta property="article:modified_time" content="2022-04-12T03:06:54+00:00">
+	<meta property="og:image" content="https://baobiminhan.com.vn/wp-content/uploads/2020/01/w1.png">
+	<meta property="og:image:width" content="166">
+	<meta property="og:image:height" content="167">
+	<meta property="og:image:type" content="image/png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="5 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://baobiminhan.com.vn/en/#website","url":"https://baobiminhan.com.vn/en/","name":"Bao bì Minh An","description":"Sản xuất - in ấn bao bì - thùng - hộp carton","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://baobiminhan.com.vn/en/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"vi-VN"},{"@type":"ImageObject","@id":"https://baobiminhan.com.vn/#primaryimage","inLanguage":"vi-VN","url":"https://baobiminhan.com.vn/wp-content/uploads/2020/01/w1.png","contentUrl":"https://baobiminhan.com.vn/wp-content/uploads/2020/01/w1.png","width":166,"height":167},{"@type":"WebPage","@id":"https://baobiminhan.com.vn/#webpage","url":"https://baobiminhan.com.vn/","name":"Trang chủ - Bao bì Minh An sản xuất thùng carton ở Thái Bình","isPartOf":{"@id":"https://baobiminhan.com.vn/en/#website"},"primaryImageOfPage":{"@id":"https://baobiminhan.com.vn/#primaryimage"},"datePublished":"2020-01-19T10:31:17+00:00","dateModified":"2022-04-12T03:06:54+00:00","description":"Công ty TNHH SX TM Bao Bì Minh An chuyên sản xuất thùng carton 3 lớp, 5 lớp ... sóng A, B, C, E tại Thái Bình.","breadcrumb":{"@id":"https://baobiminhan.com.vn/#breadcrumb"},"inLanguage":"vi-VN","potentialAction":[{"@type":"ReadAction","target":["https://baobiminhan.com.vn/"]}]},{"@type":"BreadcrumbList","@id":"https://baobiminhan.com.vn/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ"}]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Bao bì Minh An » Feed" href="https://baobiminhan.com.vn/feed/">
+<link rel="alternate" type="application/rss+xml" title="Bao bì Minh An » Comments Feed" href="https://baobiminhan.com.vn/comments/feed/">
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/baobiminhan.com.vn\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.13"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	
+
+
+
+
+
+
+
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+
+
+
+<link rel="preload" href="https://baobiminhan.com.vn/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=5.9.2" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type="text/css" media="only screen and (max-width: 768px)">
+
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+
+
+
+
+
+
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.5.9.2" id="jquery-blockui-js" defer=""></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/baobiminhan.com.vn\/gio-hang\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=5.9.2" id="wc-add-to-cart-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart.js?ver=6.8.0" id="vc_woocommerce-add-to-cart-js-js" defer=""></script>
+<link rel="https://api.w.org/" href="https://baobiminhan.com.vn/wp-json/"><link rel="alternate" type="application/json" href="https://baobiminhan.com.vn/wp-json/wp/v2/pages/257"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://baobiminhan.com.vn/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://baobiminhan.com.vn/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.13">
+<meta name="generator" content="WooCommerce 5.9.2">
+<link rel="shortlink" href="https://baobiminhan.com.vn/">
+<link rel="alternate" type="application/json+oembed" href="https://baobiminhan.com.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbaobiminhan.com.vn%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://baobiminhan.com.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbaobiminhan.com.vn%2F&amp;format=xml">
+<meta name="generator" content="WPML ver:4.5.5 stt:1,57;">
+<meta name="framework" content="Redux 4.1.29"><style>.dgwt-wcas-ico-magnifier,.dgwt-wcas-ico-magnifier-handler{max-width:20px}.dgwt-wcas-search-wrapp{max-width:600px}</style>	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+		<style type="text/css" media="screen">
+		.seovietmenu__head .seovietmenu__logo {
+			background-image: url('https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo.png');
+			background-repeat: no-repeat;
+		}
+	</style>
+	<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<link rel="icon" href="https://baobiminhan.com.vn/wp-content/uploads/2022/03/cropped-favicon-2-32x32.png" sizes="32x32">
+<link rel="icon" href="https://baobiminhan.com.vn/wp-content/uploads/2022/03/cropped-favicon-2-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://baobiminhan.com.vn/wp-content/uploads/2022/03/cropped-favicon-2-180x180.png">
+<meta name="msapplication-TileImage" content="https://baobiminhan.com.vn/wp-content/uploads/2022/03/cropped-favicon-2-270x270.png">
+<style type="text/css" data-type="vc_custom-css">.page-title {display:none;}
+#about-us .item-pic {
+    width: 120px;
+    height: auto;
+    margin: 3rem auto;
+    display: block;
+    overflow: hidden;
+}
+#about-us .content-row h3 {
+    margin: 2rem 0 1rem 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #404041;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Roboto Condensed';
+}
+#product-category .item-pic {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: block;
+    border: 2px solid #212120;
+    position: relative;
+    margin-bottom: 10px;
+}
+#product-category .item-pic img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#product-category .item-title {
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed';
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    padding: 5px 0 15px;
+    display: block;
+    line-height: 28px;
+}
+#product-category .content-row > .wpb_column {
+    margin-bottom: 20px;
+}</style><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1583225189159{background-image: url(https://baobiminhan.com.vn/wp-content/uploads/2020/03/bg-aboutus-min.png?id=551) !important;}.vc_custom_1579518046438{border-top-width: 1px !important;background-color: #ffffff !important;border-top-color: #e0e0e0 !important;border-top-style: solid !important;}.vc_custom_1646904660866{margin-top: 3rem !important;margin-bottom: 3rem !important;}.vc_custom_1646904502109{margin-top: 3rem !important;margin-bottom: 3rem !important;}.vc_custom_1646905272226{margin-top: 3rem !important;margin-bottom: 3rem !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script type="rocketlazyloadscript">
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}
+return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}
+if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}
+setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}
+var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",!0);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}
+if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}
+else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
+</script>
+<link href="https://connect.facebook.net" rel="preconnect" crossorigin="anonymous"></head>
+
+
+<body data-rsssl="1" class="home page-template page-template-page-fullwidth page-template-page-fullwidth-php page page-id-257 theme-theme woocommerce-no-js preloading sidebar-content site-full-width wpb-js-composer js-comp-ver-6.8.0 vc_responsive" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+
+<!-- Google Tag Manager (noscript) -->
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTNCFJR"
+
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- End Google Tag Manager (noscript) -->
+
+    <nav class="seoviet-menu-mobile">
+        <div class="toplg">
+            <div class="logo text-center">
+                <a href="https://baobiminhan.com.vn/"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo.png"><noscript><img src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo.png"></noscript></a>            </div>
+        </div>
+        <div class="menu-top-menu-container"><ul id="menu-main" class="site-menu"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-6"><a href="https://baobiminhan.com.vn/" aria-current="page">Trang chủ</a></li>
+<li id="menu-item-151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="https://baobiminhan.com.vn/gioi-thieu/">Giới thiệu</a></li>
+<li id="menu-item-152" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-152"><a href="https://baobiminhan.com.vn/tin-tuc/">Tin tức</a>
+<ul class="sub-menu">
+	<li id="menu-item-309" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-309"><a href="https://baobiminhan.com.vn/tin-tuc/tin-cong-ty/">Tin công ty</a></li>
+	<li id="menu-item-310" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-310"><a href="https://baobiminhan.com.vn/tin-tuc/tin-thi-truong/">Tin thị trường</a></li>
+</ul>
+</li>
+<li id="menu-item-311" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-311"><a href="https://baobiminhan.com.vn/tuyen-dung/">Tuyển dụng</a></li>
+<li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-150"><a href="https://baobiminhan.com.vn/san-pham/">Sản phẩm</a>
+<ul class="sub-menu">
+	<li id="menu-item-314" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-314"><a href="https://baobiminhan.com.vn/danh-muc-san-pham/carton-hop-357-lop/">Thùng carton 3,5,7 lớp</a></li>
+	<li id="menu-item-315" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-315"><a href="https://baobiminhan.com.vn/danh-muc-san-pham/carton-tam-23457-lop/">Tấm lót carton 2,3,4,5,7 lớp</a></li>
+	<li id="menu-item-317" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-317"><a href="https://baobiminhan.com.vn/danh-muc-san-pham/bang-dinh/">Băng dính trong, đục, in chữ, in logo</a></li>
+	<li id="menu-item-318" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-318"><a href="https://baobiminhan.com.vn/danh-muc-san-pham/san-pham-khac-tu-giay-carton/">Sản phẩm khác từ giấy carton…</a></li>
+</ul>
+</li>
+<li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="https://baobiminhan.com.vn/lien-he/">Liên hệ</a></li>
+</ul></div>    </nav>
+    
+
+
+<div id="page-wrap" class="site seoviet-page">
+
+
+
+	<header id="masthead" class="site-header header-logo-style2" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+
+
+
+		<!-- Start Top Header -->
+
+		
+			<div class="top-header">
+
+				<div class="container">
+
+					<div class="d-flex justify-content-between align-items-center">
+
+						<div id="social-2" class="widget widget_social">
+            <ul>
+
+                <li class="icon_social icon_facebook"><a title="Facebook" href="#" rel="nofollow" target="_blank"><i class="icofont-facebook"></i></a></li><li class="icon_social icon_twitter"><a title="Twitter" href="#" rel="nofollow" target="_blank"><i class="icofont-twitter"></i></a></li><li class="icon_social icon_youtube"><a title="Youtube" href="#" rel="nofollow" target="_blank"><i class="icofont-youtube"></i></a></li>
+            </ul>
+
+        </div><div id="nav_menu-10" class="widget widget_nav_menu"><div class="menu-menu-tren-dau-trang-container"><ul id="menu-menu-tren-dau-trang" class="menu"><li id="menu-item-wpml-ls-66-en" class="menu-item wpml-ls-slot-66 wpml-ls-item wpml-ls-item-en wpml-ls-menu-item wpml-ls-first-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-66-en"><a href="https://baobiminhan.com.vn/en/"><img class="wpml-ls-flag entered lazyloaded" src="https://baobiminhan.com.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" alt="English" data-lazy-src="https://baobiminhan.com.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" data-ll-status="loaded"><noscript><img
+            class="wpml-ls-flag"
+            src="https://baobiminhan.com.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png"
+            alt="English"
+            
+            
+    /></noscript></a></li>
+</ul></div></div>
+					</div>
+
+				</div>
+
+			</div>
+
+		
+		<!-- End Top Header -->
+
+
+
+		<div class="header-main">
+	<div class="container">
+		<div class="site-branding">
+							<p class="site-title"><a href="https://baobiminhan.com.vn/" rel="home">Bao bì Minh An</a></p>
+							<p class="site-description">Sản xuất – in ấn bao bì – thùng – hộp carton</p>
+					</div><!-- .site-branding -->
+
+		<div class="header-content">
+			<div class="d-lg-none">
+				<div class="row align-items-center">
+					<div class="col-3 col-md-4">
+						<button class="seovietmenu__toggle" type="button">
+						    <span class="hamburger hamburger--collapse">
+								<span class="hamburger-box">
+									<span class="hamburger-inner"></span>
+								</span>
+								<span class="menu_title"> Menu </span>
+							</span>
+						</button>
+					</div>
+					<div class="col-6 col-md-4">
+						<div class="logo text-center">
+								<a href="https://baobiminhan.com.vn/"><img data-lazy-src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo.png" class="entered exited" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"><noscript><img src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo.png"></noscript></a>							</div>
+					</div>
+					<div class="col-3 col-md-4 text-right">
+						<div class="icon-search"><a href="#search"><img data-lazy-src="https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/search_mobile.png" class="entered exited" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"><noscript><img src="https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/search_mobile.png"></noscript></a></div>
+					</div>
+				</div>
+			</div>
+			<div class="d-lg-block d-none">
+				<div class="row align-items-center">
+					<div class="col-xl-3 col-lg-3">
+						<div class="logo">
+							<a href="https://baobiminhan.com.vn/"><img src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo.png" data-lazy-src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo.png" data-ll-status="loaded" class="entered lazyloaded"><noscript><img src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo.png"></noscript></a>						</div>
+					</div>
+					<div class="col-xl-9 col-lg-7">
+						<div class="menu-menu-lien-he-dau-trang-container"><ul id="menu-information-menu" class="menu hidden-xs hidden-sm"><li id="menu-item-319" class="li-mail menu-item menu-item-type-custom menu-item-object-custom menu-item-319"><a href="mailto:bbminhan@gmail.com">bbminhan@gmail.com</a></li>
+<li id="menu-item-320" class="li-tel menu-item menu-item-type-custom menu-item-object-custom menu-item-320"><a href="tel:0987078212">0987078212</a></li>
+<li id="menu-item-321" class="li-address menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-321"><a href="https://baobiminhan.com.vn" aria-current="page">Minh Khai, Hưng Hà, Thái Bình</a></li>
+</ul></div>					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+	<nav id="site-navigation" class="main-navigation" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+		<div class="container">
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="menu-top-menu-container"><ul id="primary-menu" class="menu clearfix"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-6"><a href="https://baobiminhan.com.vn/" aria-current="page">Trang chủ</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="https://baobiminhan.com.vn/gioi-thieu/">Giới thiệu</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-152"><a href="https://baobiminhan.com.vn/tin-tuc/">Tin tức</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-309"><a href="https://baobiminhan.com.vn/tin-tuc/tin-cong-ty/">Tin công ty</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-310"><a href="https://baobiminhan.com.vn/tin-tuc/tin-thi-truong/">Tin thị trường</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-311"><a href="https://baobiminhan.com.vn/tuyen-dung/">Tuyển dụng</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-150"><a href="https://baobiminhan.com.vn/san-pham/">Sản phẩm</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-314"><a href="https://baobiminhan.com.vn/danh-muc-san-pham/carton-hop-357-lop/">Thùng carton 3,5,7 lớp</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-315"><a href="https://baobiminhan.com.vn/danh-muc-san-pham/carton-tam-23457-lop/">Tấm lót carton 2,3,4,5,7 lớp</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-317"><a href="https://baobiminhan.com.vn/danh-muc-san-pham/bang-dinh/">Băng dính trong, đục, in chữ, in logo</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-318"><a href="https://baobiminhan.com.vn/danh-muc-san-pham/san-pham-khac-tu-giay-carton/">Sản phẩm khác từ giấy carton…</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="https://baobiminhan.com.vn/lien-he/">Liên hệ</a></li>
+</ul></div>				<div class="herald-menu-popup-search hidden-xs hidden-sm">
+			        <i class="icofont-search-1 toggle"></i>
+			        <div class="herald-in-popup" style="z-index: 9999; display: block;">
+			            <form class="herald-search-form" action="https://baobiminhan.com.vn/" method="post">
+		                    <input name="keywords" class="herald-search-input" type="text" placeholder="Nhập từ khóa..." style="">
+		                    <button type="submit" class="herald-search-submit"><i class="icofont-search-1"></i></button>
+						</form>
+		            </div>
+		        </div>
+			</div>
+		</div>
+	</nav>
+
+
+
+	</header><!-- #masthead -->
+
+
+
+	
+		<div id="banner">
+
+			<div class="wtb-slider"><div class="d-none d-md-block"><div id="carouselMainSlide" class="carousel slide " data-ride="carousel" data-interval="6000" data-pause=""><ol class="carousel-indicators"><li data-target="#carouselMainSlide" data-slide-to="0" class=" active"></li></ol><div class="carousel-inner"><div class="carousel-item  active"><a href="#" style="background: url(https://baobiminhan.com.vn/wp-content/uploads/2022/03/bao-bi-minh-an-thai-binh-1920x600-1.jpg)"></a></div></div><a class="carousel-control-prev" href="#carouselMainSlide" role="button" data-slide="prev"></a><a class="carousel-control-next" href="#carouselMainSlide" role="button" data-slide="next"></a></div></div><div class="d-block d-sm-block d-md-none"><div id="carouselMainSlide-mobile" class="carousel slide " data-ride="carousel" data-interval="6000" data-pause=""><ol class="carousel-indicators"><li data-target="#carouselMainSlide" data-slide-to="0" class=" active"></li></ol><div class="carousel-inner"><div class="carousel-item  active"><img class="d-block w-100 entered exited" alt="" data-lazy-src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/bao-bi-minh-an-thai-binh-1920x600-1.jpg" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"><noscript><img class="d-block w-100" src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/bao-bi-minh-an-thai-binh-1920x600-1.jpg" alt=""></noscript></div></div></div></div></div>
+		</div>
+
+	
+	
+
+	<div id="content" class="site-content">
+
+		<div class="container">
+
+		
+			
+
+
+	<div id="primary" class="content-sidebar-wrap">
+
+		
+		<main id="main" class="site-main" role="main">
+
+			
+			
+<article id="post-257" class="post-257 page type-page status-publish has-post-thumbnail hentry">
+	<header class="entry-header">
+		<h1 class="page-title">Trang chủ</h1>	</header><!-- .entry-header -->
+    
+        
+	<div class="entry-content">
+		<section id="about-us" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section home-section vc_custom_1583225189159 vc_section-has-fill"><div class="vc_row wpb_row vc_row-fluid row-header"><div class="text-center wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h2 style="text-align: center" class="vc_custom_heading hometitle">PHƯƠNG CHÂM HOẠT ĐỘNG</h2></div></div></div></div><div class="vc_row wpb_row vc_row-fluid content-row"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center  vc_custom_1646904660866  item-pic">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://baobiminhan.com.vn/" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="800" height="600" src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1.jpg" class="vc_single_image-img attachment-full entered lazyloaded" alt="uy tin minh an" title="uy tin 800x600" data-lazy-srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1-64x48.jpg 64w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1.jpg" data-ll-status="loaded" sizes="(max-width: 800px) 100vw, 800px" srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1-64x48.jpg 64w"><noscript><img width="800" height="600" src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1.jpg" class="vc_single_image-img attachment-full" alt="uy tin minh an" title="uy tin 800x600" srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/uy-tin-800x600-1-64x48.jpg 64w" sizes="(max-width: 800px) 100vw, 800px" /></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h3 style="text-align: center;">UY TÍN</h3>
+<p style="text-align: center;"><b>Uy tín tạo lòng tin – Là phương châm hoạt động hàng đầu của chúng tôi</b></p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center  vc_custom_1646904502109  item-pic">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="/san-pham" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="450" class="vc_single_image-img attachment-full entered lazyloaded" alt="minh an chuyen nghiep" title="chuyen nghiep" data-lazy-srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/chuyen-nghiep.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chuyen-nghiep-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chuyen-nghiep-64x48.jpg 64w" data-lazy-sizes="(max-width: 600px) 100vw, 600px" data-lazy-src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/chuyen-nghiep.jpg" src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/chuyen-nghiep.jpg" data-ll-status="loaded" sizes="(max-width: 600px) 100vw, 600px" srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/chuyen-nghiep.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chuyen-nghiep-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chuyen-nghiep-64x48.jpg 64w"><noscript><img width="600" height="450" src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/chuyen-nghiep.jpg" class="vc_single_image-img attachment-full" alt="minh an chuyen nghiep" title="chuyen nghiep" srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/chuyen-nghiep.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chuyen-nghiep-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chuyen-nghiep-64x48.jpg 64w" sizes="(max-width: 600px) 100vw, 600px" /></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h3 style="text-align: center;">CHUYÊN NGHIỆP</h3>
+<p><strong>Đội ngũ nhân viên, công nhân được đào tạo chuyên nghiệp</strong></p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center  vc_custom_1646905272226  item-pic">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://baobiminhan.com.vn/" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="800" height="600" class="vc_single_image-img attachment-full entered lazyloaded" alt="chat luong minh an" title="chat luong" data-lazy-srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1-64x48.jpg 64w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1.jpg" src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1.jpg" data-ll-status="loaded" sizes="(max-width: 800px) 100vw, 800px" srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1-64x48.jpg 64w"><noscript><img width="800" height="600" src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1.jpg" class="vc_single_image-img attachment-full" alt="chat luong minh an" title="chat luong" srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/chat-luong-1-64x48.jpg 64w" sizes="(max-width: 800px) 100vw, 800px" /></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h3 style="text-align: center;">CHẤT LƯỢNG</h3>
+<p style="text-align: center;"><b>Cung cấp sản phẩm chất lượng với giá thành phải chăng</b></p>
+
+		</div>
+	</div>
+</div></div></div></div></section><div class="vc_row-full-width vc_clearfix"></div><section id="product-category" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section home-section vc_custom_1579518046438 vc_section-has-fill"><div class="vc_row wpb_row vc_row-fluid row-header"><div class="text-center wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h2 style="text-align: center" class="vc_custom_heading hometitle">SẢN PHẨM CHÍNH</h2></div></div></div></div><div class="vc_row wpb_row vc_row-fluid content-row"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center   item-pic">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://baobiminhan.com.vn/product/thung-carton-3-lop/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="800" height="600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20600'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="thung carton 3 lớp in" title="thung carton 3 lop" data-lazy-srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-3-lop-1.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-3-lop-1-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-3-lop-1-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-3-lop-1-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-3-lop-1-64x48.jpg 64w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-3-lop-1.jpg"><noscript><img width="800" height="600" src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-3-lop-1.jpg" class="vc_single_image-img attachment-full" alt="thung carton 3 lớp in" title="thung carton 3 lop" srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-3-lop-1.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-3-lop-1-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-3-lop-1-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-3-lop-1-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-3-lop-1-64x48.jpg 64w" sizes="(max-width: 800px) 100vw, 800px" /></noscript></a>
+		</figure>
+	</div>
+<h3 style="text-align: center" class="vc_custom_heading item-title"><a href="https://baobiminhan.com.vn/product/thung-carton-3-lop/" title="Thùng carton 3 lớp in">Thùng carton 3 lớp in</a></h3></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center   item-pic">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://baobiminhan.com.vn/product/thung-carton-5-lop-in/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="800" height="600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20600'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="thung carton 5 lop in" title="thung carton 5 lop in" data-lazy-srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-5-lop-in.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-5-lop-in-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-5-lop-in-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-5-lop-in-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-5-lop-in-64x48.jpg 64w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-5-lop-in.jpg"><noscript><img width="800" height="600" src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-5-lop-in.jpg" class="vc_single_image-img attachment-full" alt="thung carton 5 lop in" title="thung carton 5 lop in" srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-5-lop-in.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-5-lop-in-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-5-lop-in-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-5-lop-in-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/thung-carton-5-lop-in-64x48.jpg 64w" sizes="(max-width: 800px) 100vw, 800px" /></noscript></a>
+		</figure>
+	</div>
+<h3 style="text-align: center" class="vc_custom_heading item-title"><a href="https://baobiminhan.com.vn/product/thung-carton-5-lop-in/" title="Thùng carton 5 lớp in">THÙNG CARTON 5 LỚP IN</a></h3></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center   item-pic">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://baobiminhan.com.vn/product/thung-carton-3-lop-khong-in/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="800" height="600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20600'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="THUNG CARTON 3 LOP KHONG IN" title="THUNG CARTON 3 LOP KO IN" data-lazy-srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-3-LOP-KO-IN.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-3-LOP-KO-IN-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-3-LOP-KO-IN-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-3-LOP-KO-IN-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-3-LOP-KO-IN-64x48.jpg 64w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-3-LOP-KO-IN.jpg"><noscript><img width="800" height="600" src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-3-LOP-KO-IN.jpg" class="vc_single_image-img attachment-full" alt="THUNG CARTON 3 LOP KHONG IN" title="THUNG CARTON 3 LOP KO IN" srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-3-LOP-KO-IN.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-3-LOP-KO-IN-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-3-LOP-KO-IN-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-3-LOP-KO-IN-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-3-LOP-KO-IN-64x48.jpg 64w" sizes="(max-width: 800px) 100vw, 800px" /></noscript></a>
+		</figure>
+	</div>
+<h3 style="text-align: center" class="vc_custom_heading item-title"><a href="https://baobiminhan.com.vn/product/thung-carton-3-lop-khong-in/" title="Thùng carton 3 lớp không in">THÙNG CARTON 3 LỚP KHÔNG IN</a></h3></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center   item-pic">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://baobiminhan.com.vn/product/thung-carton-5-lop-khong-in/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="800" height="600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20600'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="THUNG CARTON 5 LOP KHONG IN" title="THUNG CARTON 5 LOP KHONG IN" data-lazy-srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-5-LOP-KHONG-IN.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-5-LOP-KHONG-IN-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-5-LOP-KHONG-IN-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-5-LOP-KHONG-IN-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-5-LOP-KHONG-IN-64x48.jpg 64w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-5-LOP-KHONG-IN.jpg"><noscript><img width="800" height="600" src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-5-LOP-KHONG-IN.jpg" class="vc_single_image-img attachment-full" alt="THUNG CARTON 5 LOP KHONG IN" title="THUNG CARTON 5 LOP KHONG IN" srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-5-LOP-KHONG-IN.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-5-LOP-KHONG-IN-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-5-LOP-KHONG-IN-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-5-LOP-KHONG-IN-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/THUNG-CARTON-5-LOP-KHONG-IN-64x48.jpg 64w" sizes="(max-width: 800px) 100vw, 800px" /></noscript></a>
+		</figure>
+	</div>
+<h3 style="text-align: center" class="vc_custom_heading item-title"><a href="https://baobiminhan.com.vn/product/thung-carton-5-lop-khong-in/" title="Thùng carton 5 lớp không in">THÙNG CARTON 5 LỚP KHÔNG IN</a></h3></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center   item-pic">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://baobiminhan.com.vn/product/tam-lot-carton-2-lop-3-lop-5-lop/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="800" height="600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20600'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="TAM LOT CARTON" title="TAM LOT CARTON" data-lazy-srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/TAM-LOT-CARTON.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/TAM-LOT-CARTON-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/TAM-LOT-CARTON-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/TAM-LOT-CARTON-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/TAM-LOT-CARTON-64x48.jpg 64w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/TAM-LOT-CARTON.jpg"><noscript><img width="800" height="600" src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/TAM-LOT-CARTON.jpg" class="vc_single_image-img attachment-full" alt="TAM LOT CARTON" title="TAM LOT CARTON" srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/TAM-LOT-CARTON.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/TAM-LOT-CARTON-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/TAM-LOT-CARTON-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/TAM-LOT-CARTON-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/TAM-LOT-CARTON-64x48.jpg 64w" sizes="(max-width: 800px) 100vw, 800px" /></noscript></a>
+		</figure>
+	</div>
+<h3 style="text-align: center" class="vc_custom_heading item-title"><a href="https://baobiminhan.com.vn/product/tam-lot-carton-2-lop-3-lop-5-lop/" title="Tấm lót carton 2 lớp, 3 lớp, 5 lớp">TẤM LÓT CARTON 2 LỚP, 3 LỚP, 5 LỚP</a></h3></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center   item-pic">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://baobiminhan.com.vn/product/vach-ngan-thung-carton/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="800" height="600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20600'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="VACH NGAN THUNG CARTON" title="VACH NGAN THUNG CARTON" data-lazy-srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/VACH-NGAN-THUNG-CARTON.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/VACH-NGAN-THUNG-CARTON-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/VACH-NGAN-THUNG-CARTON-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/VACH-NGAN-THUNG-CARTON-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/VACH-NGAN-THUNG-CARTON-64x48.jpg 64w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/VACH-NGAN-THUNG-CARTON.jpg"><noscript><img width="800" height="600" src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/VACH-NGAN-THUNG-CARTON.jpg" class="vc_single_image-img attachment-full" alt="VACH NGAN THUNG CARTON" title="VACH NGAN THUNG CARTON" srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/VACH-NGAN-THUNG-CARTON.jpg 800w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/VACH-NGAN-THUNG-CARTON-300x225.jpg 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/VACH-NGAN-THUNG-CARTON-768x576.jpg 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/VACH-NGAN-THUNG-CARTON-600x450.jpg 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/VACH-NGAN-THUNG-CARTON-64x48.jpg 64w" sizes="(max-width: 800px) 100vw, 800px" /></noscript></a>
+		</figure>
+	</div>
+<h3 style="text-align: center" class="vc_custom_heading item-title"><a href="https://baobiminhan.com.vn/product/vach-ngan-thung-carton/" title="Vách ngăn thùng carton">VÁCH NGĂN THÙNG CARTON</a></h3></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_btn3-container  readmore vc_btn3-center"><a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom vc_btn3-color-grey" href="https://baobiminhan.com.vn/san-pham/" title="Sản phẩm">XEM TẤT CẢ SẢN PHẨM</a></div></div></div></div></div></section><div class="vc_row-full-width vc_clearfix"></div><section class="vc_section"><div class="vc_row wpb_row vc_row-fluid vc_column-gap-15"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid text-center"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h2 style="text-align: center" class="vc_custom_heading hometitle"><a href="https://baobiminhan.com.vn/tin-tuc/" title="tin tức">Tin tức - Sự Kiện</a></h2></div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></div></div></div></div></section>
+	</div><!-- .entry-content -->
+
+	</article><!-- #post-## -->
+
+		</main><!-- #main -->
+		
+		
+	</div><!-- #primary -->
+
+		</div>
+	</div><!-- #content -->
+	
+	<div id="maps">
+	    	</div>
+	
+	<div id="footer-top">
+        <div id="contact-banner-footer">
+            <div class="container-footer">
+                <div class="contact-title">
+                    PHÁT TRIỂN VỮNG BỀN – HỢP TÁC THÀNH CÔNG                </div>
+                <a href="https://baobiminhan.com.vn/lien-he" class="contact-us">Liên hệ<i class="icofont-paper-plane"></i></a>
+            </div>
+        </div>
+    </div>
+	
+	<footer id="footer" class="site-footer" itemscope="" itemtype="https://schema.org/WPFooter">
+		
+		<div class="footer-widgets">
+			<div class="container">
+				<div class="wrap">
+					<div class="row">
+						<div class="footer-widgets-area col-md-3"><section id="media_image-2" class="widget widget_media_image"><img width="300" height="79" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%2079'%3E%3C/svg%3E" class="image wp-image-743  attachment-medium size-medium" alt="" style="max-width: 100%; height: auto;" data-lazy-srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo-300x79.png 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo-768x203.png 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo-600x159.png 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo-64x17.png 64w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo.png 783w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo-300x79.png"><noscript><img width="300" height="79" src="https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo-300x79.png" class="image wp-image-743  attachment-medium size-medium" alt="" style="max-width: 100%; height: auto;" srcset="https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo-300x79.png 300w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo-768x203.png 768w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo-600x159.png 600w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo-64x17.png 64w, https://baobiminhan.com.vn/wp-content/uploads/2022/03/logo.png 783w" sizes="(max-width: 300px) 100vw, 300px" /></noscript></section><section id="information-2" class="widget widget_information">        <ul>
+            <li class="label-company"><i class=" icofont-brand-windows"></i>Công ty TNHH SX TM Bao Bì Minh AN</li><li><i class=" icofont-google-map"></i><span class="d-none">Address:</span> Hiến Nạp, Minh Khai, Hưng Hà, Thái Bình</li><li><i class=" icofont-smart-phone"></i><span class="d-none">Hotline:</span> 0987078212</li><li><i class=" icofont-email"></i><span class="d-none">Email:</span> bbminhan@gmail.com</li><li><i class=" icofont-web"></i><span class="d-none">Website:</span> baobiminhan.com.vn</li>        </ul>
+ 
+        </section></div><div class="footer-widgets-area col-md-3"><section id="nav_menu-6" class="widget widget_nav_menu"><h4 class="widget-title">Về chúng tôi</h4><div class="menu-ve-chung-toi-container"><ul id="menu-ve-chung-toi" class="menu"><li id="menu-item-761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-761"><a href="https://baobiminhan.com.vn/san-pham/">Sản phẩm</a></li>
+<li id="menu-item-757" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-757"><a href="https://baobiminhan.com.vn/tin-tuc/">Tin tức</a></li>
+<li id="menu-item-758" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-758"><a href="https://baobiminhan.com.vn/tuyen-dung/">Tuyển dụng</a></li>
+<li id="menu-item-760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-760"><a href="https://baobiminhan.com.vn/lien-he/">Liên hệ</a></li>
+</ul></div></section></div><div class="footer-widgets-area col-md-3"><section id="facebook_like-5" class="widget widget_facebook_like"><h4 class="widget-title">Like Facebook</h4>			<div id="fb-root"></div>
+							<script type="rocketlazyloadscript" async="" defer="" crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v3.3"></script>
+			
+			<div class="fb-page" data-href="https://www.facebook.com/baobigiayminhan" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+		</section></div><div class="footer-widgets-area col-md-3"><section id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><iframe src="about:blank" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29881.059919141127!2d106.21806247820382!3d20.58264631945624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135e9461524e98d%3A0x3fd4c619216b5aef!2sMinh%20Khai%2C%20H%C6%B0ng%20H%C3%A0%20District%2C%20Thai%20Binh!5e0!3m2!1sen!2s!4v1646281773850!5m2!1sen!2s"></iframe><noscript><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29881.059919141127!2d106.21806247820382!3d20.58264631945624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135e9461524e98d%3A0x3fd4c619216b5aef!2sMinh%20Khai%2C%20H%C6%B0ng%20H%C3%A0%20District%2C%20Thai%20Binh!5e0!3m2!1sen!2s!4v1646281773850!5m2!1sen!2s" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe></noscript></div></section><section id="social-3" class="widget widget_social">
+            <ul>
+
+                <li class="icon_social icon_facebook"><a title="Facebook" href="#" rel="nofollow" target="_blank"><i class="icofont-facebook"></i></a></li><li class="icon_social icon_twitter"><a title="Twitter" href="#" rel="nofollow" target="_blank"><i class="icofont-twitter"></i></a></li><li class="icon_social icon_youtube"><a title="Youtube" href="#" rel="nofollow" target="_blank"><i class="icofont-youtube"></i></a></li>
+            </ul>
+
+        </section></div>					</div>
+				</div>
+			</div>
+		</div><!-- .footer-widgets -->
+		<div class="site-info">
+			<div class="container">
+				<div class="wrap">
+					<div class="row align-items-center">
+						<div class="col-sm-12">
+							© 2022 copyright MINH AN. All rights reserved.							- Thiết kế bởi Seo Việt						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- .site-info -->
+		<div id="back-top" style="display: block;"><div class="backtotop-morph"></div></div>
+
+		<!-- Search Form -->
+		<div id="search" class="d-lg-none"> 
+			<span class="close">X</span>
+			<div class="dgwt-wcas-search-wrapp dgwt-wcas-has-submit woocommerce js-dgwt-wcas-layout-classic dgwt-wcas-layout-classic js-dgwt-wcas-mobile-overlay-disabled">
+		<form class="dgwt-wcas-search-form" role="search" action="https://baobiminhan.com.vn/" method="get">
+		<div class="dgwt-wcas-sf-wrapp">
+						<label class="screen-reader-text" for="dgwt-wcas-search-input-1">Products search</label>
+
+			<input id="dgwt-wcas-search-input-1" type="search" class="dgwt-wcas-search-input" name="s" value="" placeholder="Tìm kiếm sản phẩm" autocomplete="off" style="">
+			<div class="dgwt-wcas-preloader"></div>
+
+							<button type="submit" aria-label="Search" class="dgwt-wcas-search-submit">				<svg version="1.1" class="dgwt-wcas-ico-magnifier" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51.539 51.361" enable-background="new 0 0 51.539 51.361" xml:space="preserve">
+		             <path fill="#444" d="M51.539,49.356L37.247,35.065c3.273-3.74,5.272-8.623,5.272-13.983c0-11.742-9.518-21.26-21.26-21.26 S0,9.339,0,21.082s9.518,21.26,21.26,21.26c5.361,0,10.244-1.999,13.983-5.272l14.292,14.292L51.539,49.356z M2.835,21.082 c0-10.176,8.249-18.425,18.425-18.425s18.425,8.249,18.425,18.425S31.436,39.507,21.26,39.507S2.835,31.258,2.835,21.082z"></path>
+				</svg>
+				</button>
+			
+			<input type="hidden" name="post_type" value="product" style="">
+			<input type="hidden" name="dgwt_wcas" value="1" style="">
+
+							<input type="hidden" name="lang" value="vi" style="">
+			
+					</div>
+	</form>
+</div>
+		</div>
+	</footer><!-- #colophon -->
+
+	<div class="hotline-phone-2"><div class="hotline-phone-ring-wrap"><div class="hotline-phone-ring"><div class="quick-alo-ph-circle"></div><div class="quick-alo-ph-circle-fill"></div><div class="quick-alo-ph-img-circle"><a href="tel:0987078212" class="pps-btn-img"><img src="https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/icon-phone2.png" alt="Số điện thoại" width="50" data-lazy-src="https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/icon-phone2.png" data-ll-status="loaded" class="entered lazyloaded"><noscript><img src="https://baobiminhan.com.vn/wp-content/themes/theme/lib/images/icon-phone2.png" alt="Số điện thoại" width="50"></noscript></a></div></div><div class="hotline-bar d-none d-md-block"><a href="tel:0987078212"><span class="text-hotline">0987078212</span></a></div></div><div class="alo-floating alo-floating-zalo"><a title="Chat Zalo" rel="nofollow" target="_blank" href="https://zalo.me/0987078212"><strong>Chat Zalo</strong></a></div></div><div class="panel-overlay"></div>	
+</div><!-- #page -->
+
+<!-- Modal -->
+<div class="modal fade" id="order_popup" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p></p>
+                <form class="sh_form" id="formDkbg" action="https://baobiminhan.com.vn/" method="POST" enctype="multipart/form-data">
+					<div class="form-row">
+						<input type="text" id="name" name="name" placeholder="Họ và tên" style="">
+					</div>
+					<div class="form-row">
+						<input type="text" id="email" name="email" placeholder="Email" style="">
+					</div>
+					<div class="form-row">
+						<input type="text" id="phone" name="phone" placeholder="Phone" style="">
+					</div>
+					<div class="form-row">
+						<select name="productlist" id="productlist">
+													</select>
+					</div>
+					<div class="form-row">
+						<textarea name="note" id="note" cols="30" rows="10" placeholder="Ghi chú" style="max-height: 80px;"></textarea>
+					</div>
+					<div class="form-row mb-0">
+						<a href="javascript:void(0)" class="btn-form ajax_button_formDkbg">Đăng ký</a>
+					</div>
+				</form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Message-->
+<div class="modal fade" id="sendmailSucces" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                            </div>
+            <div class="modal-footer">
+                <button type="button" class="close-message-btn" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="sendmailError" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                            </div>
+            <div class="modal-footer">
+                <button type="button" class="close-message-btn" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+	<style>
+		.hotline-phone-1 .quick-alo-phone.quick-alo-green .quick-alo-ph-img-circle,
+		.hotline-phone-2 .quick-alo-ph-img-circle, .hotline-bar {
+			background-color: #EA2700 !important;
+		}
+	</style>
+		<style>
+		.hotline-phone-1 .phone_text,
+		.hotline-phone-1 .quick-alo-phone.quick-alo-green .quick-alo-ph-circle-fill,
+		.hotline-phone-2 .quick-alo-ph-circle-fill {
+			background: rgb( 234, 39, 0, .7 ) !important;
+		}
+		.hotline-phone-1 .quick-alo-phone.quick-alo-green .quick-alo-ph-circle {
+			border-color: rgb( 234, 39, 0, .7 ) !important;
+		}
+	</style>
+		<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+		<!-- Modal -->
+	<div class="modal fade" id="QuickViewModal" tabindex="-1" role="dialog" aria-labelledby="QuickViewModalTitle" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/template" id="tmpl-variation-template">
+	<div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
+	<div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
+	<div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
+</script>
+<script type="text/template" id="tmpl-unavailable-variation-template">
+	<p>Sorry, this product is unavailable. Please choose a different combination.</p>
+</script>
+<script type="text/javascript" id="wcml-mc-scripts-js-extra">
+/* <![CDATA[ */
+var wcml_mc_settings = {"wcml_spinner":"https:\/\/baobiminhan.com.vn\/wp-content\/plugins\/sitepress-multilingual-cms\/res\/img\/ajax-loader.gif","current_currency":{"code":"VND","symbol":"&#8363;"},"cache_enabled":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/plugins/woocommerce-multilingual/res/js/wcml-multi-currency.min.js?ver=4.12.6" id="wcml-mc-scripts-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/themes/theme/lib/js/popper.min.js?ver=1.0" id="popper-js-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/themes/theme/lib/js/bootstrap.min.js?ver=4.3.1" id="bootstrap-js-js" defer=""></script>
+<script type="text/javascript" id="main-js-js-extra">
+/* <![CDATA[ */
+var ajax = {"url":"https:\/\/baobiminhan.com.vn\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/themes/theme/lib/js/main.js?ver=1.0" id="main-js-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/themes/theme/lib/mobile-menu/js/jquery.js?ver=1.0.0" id="jquery-js-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/themes/theme/lib/mobile-menu/js/mobile-menu.js?ver=1.0.0" id="mobile-menu-js-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/themes/theme/lib/mobile-menu/js/site.min.js?ver=1.0.0" id="site-js-js" defer=""></script>
+<script type="text/javascript" id="quickview-js-js-extra">
+/* <![CDATA[ */
+var ajax = {"url":"https:\/\/baobiminhan.com.vn\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/themes/theme/lib/js/product/quickview.js?ver=1.0.0" id="quickview-js-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/themes/theme/lib/js/slick.min.js?ver=1.8.1" id="slick-js-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9" id="regenerator-runtime-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/baobiminhan.com.vn\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.5.6" id="contact-form-7-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.5.9.2" id="js-cookie-js" defer=""></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=5.9.2" id="woocommerce-js" defer=""></script>
+<script type="text/javascript" id="wc-cart-fragments-js-extra">
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_6f8151acd4a9a245c9097addd01bd090-vi","fragment_name":"wc_fragments_6f8151acd4a9a245c9097addd01bd090","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=5.9.2" id="wc-cart-fragments-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/thanh-toan\/|\/gio-hang\/|\/tai-khoan\/|\/wc-api\/v(.*)|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/baobiminhan.com.vn","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/plugins/woocommerce-multilingual/res/js/front-scripts.min.js?ver=4.12.6" id="wcml-front-scripts-js" defer=""></script>
+<script type="text/javascript" id="cart-widget-js-extra">
+/* <![CDATA[ */
+var actions = {"is_lang_switched":"0","force_reset":"0"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/plugins/woocommerce-multilingual/res/js/cart_widget.min.js?ver=4.12.6" id="cart-widget-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/themes/theme/lib/js/main-woo.js?ver=1.0" id="main-woo-js-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.8.0" id="wpb_composer_front_js-js" defer=""></script>
+<script type="text/javascript" id="jquery-dgwt-wcas-js-extra">
+/* <![CDATA[ */
+var dgwt_wcas = {"labels":{"post":"Post","page":"Page","vendor":"Vendor","product_plu":"Products","post_plu":"Posts","page_plu":"Pages","vendor_plu":"Vendors","sku_label":"SKU:","sale_badge":"Sale","vendor_sold_by":"Sold by:","featured_badge":"Featured","in":"in","read_more":"continue reading","no_results":"Kh\u00f4ng t\u00ecm th\u1ea5y k\u1ebft qu\u1ea3","show_more":"Hi\u1ec3n th\u1ecb t\u1ea5t c\u1ea3 k\u1ebft qu\u1ea3","show_more_details":"Hi\u1ec3n th\u1ecb t\u1ea5t c\u1ea3 k\u1ebft qu\u1ea3","search_placeholder":"T\u00ecm ki\u1ebfm s\u1ea3n ph\u1ea9m","submit":"","tax_product_cat_plu":"Categories","tax_product_cat":"Category","tax_product_tag_plu":"Tags","tax_product_tag":"Tag"},"ajax_search_endpoint":"\/?wc-ajax=dgwt_wcas_ajax_search","ajax_details_endpoint":"\/?wc-ajax=dgwt_wcas_result_details","ajax_prices_endpoint":"\/?wc-ajax=dgwt_wcas_get_prices","action_search":"dgwt_wcas_ajax_search","action_result_details":"dgwt_wcas_result_details","action_get_prices":"dgwt_wcas_get_prices","min_chars":"3","width":"auto","show_details_box":"","show_images":"","show_price":"","show_desc":"","show_sale_badge":"","show_featured_badge":"","dynamic_prices":"","is_rtl":"","show_preloader":"1","show_headings":"","preloader_url":"","taxonomy_brands":"","img_url":"https:\/\/baobiminhan.com.vn\/wp-content\/plugins\/ajax-search-for-woocommerce\/assets\/img\/","is_premium":"","mobile_breakpoint":"992","mobile_overlay_wrapper":"body","mobile_overlay_delay":"0","debounce_wait_ms":"400","send_ga_events":"1","enable_ga_site_search_module":"","magnifier_icon":"\t\t\t\t<svg version=\"1.1\" class=\"\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"\n\t\t\t\t\t xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\"\n\t\t\t\t\t viewBox=\"0 0 51.539 51.361\" enable-background=\"new 0 0 51.539 51.361\" xml:space=\"preserve\">\n\t\t             <path fill=\"#444\"\n\t\t\t\t\t\t   d=\"M51.539,49.356L37.247,35.065c3.273-3.74,5.272-8.623,5.272-13.983c0-11.742-9.518-21.26-21.26-21.26 S0,9.339,0,21.082s9.518,21.26,21.26,21.26c5.361,0,10.244-1.999,13.983-5.272l14.292,14.292L51.539,49.356z M2.835,21.082 c0-10.176,8.249-18.425,18.425-18.425s18.425,8.249,18.425,18.425S31.436,39.507,21.26,39.507S2.835,31.258,2.835,21.082z\"\/>\n\t\t\t\t<\/svg>\n\t\t\t\t","close_icon":"\t\t\t\t<svg class=\"\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" height=\"24\" viewBox=\"0 0 24 24\"\n\t\t\t\t\t width=\"24\">\n\t\t\t\t\t<path fill=\"#ccc\"\n\t\t\t\t\t\t  d=\"M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z\"\/>\n\t\t\t\t<\/svg>\n\t\t\t\t","back_icon":"\t\t\t\t<svg class=\"\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewBox=\"0 0 16 16\">\n\t\t\t\t\t<path fill=\"#fff\"\n\t\t\t\t\t\t  d=\"M14 6.125H3.351l4.891-4.891L7 0 0 7l7 7 1.234-1.234L3.35 7.875H14z\" fill-rule=\"evenodd\"\/>\n\t\t\t\t<\/svg>\n\t\t\t\t","preloader_icon":"\t\t\t\t<svg class=\"dgwt-wcas-loader-circular \" viewBox=\"25 25 50 50\">\n\t\t\t\t\t<circle class=\"dgwt-wcas-loader-circular-path\" cx=\"50\" cy=\"50\" r=\"20\" fill=\"none\"\n\t\t\t\t\t\t\tstroke=\"#ddd\" stroke-miterlimit=\"10\"\/>\n\t\t\t\t<\/svg>\n\t\t\t\t","custom_params":{},"convert_html":"1","suggestions_wrapper":"body","show_product_vendor":"","disable_hits":"","disable_submit":"","current_lang":"vi"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/plugins/ajax-search-for-woocommerce/assets/js/search.min.js?ver=1.17.0" id="jquery-dgwt-wcas-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-includes/js/underscore.min.js?ver=1.13.1" id="underscore-js" defer=""></script>
+<script type="text/javascript" id="wp-util-js-extra">
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-includes/js/wp-util.min.js?ver=5.9.13" id="wp-util-js" defer=""></script>
+<script type="text/javascript" id="wc-add-to-cart-variation-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_variation_params = {"wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_no_matching_variations_text":"Sorry, no products matched your selection. Please choose a different combination.","i18n_make_a_selection_text":"Please select some product options before adding this product to your cart.","i18n_unavailable_text":"Sorry, this product is unavailable. Please choose a different combination."};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js?ver=5.9.2" id="wc-add-to-cart-variation-js" defer=""></script>
+<script type="text/javascript" id="thickbox-js-extra">
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"https:\/\/baobiminhan.com.vn\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://baobiminhan.com.vn/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105" id="thickbox-js" defer=""></script>
+		<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		/* <![CDATA[ */
+			if( typeof woocommerce_price_slider_params !== 'undefined' ) {
+				woocommerce_price_slider_params.currency_format_symbol = wcml_mc_settings.current_currency.symbol;
+			}
+		/* ]]> */
+		</script>
+		<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="https://baobiminhan.com.vn/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script>
+<script type="rocketlazyloadscript">"use strict";function wprRemoveCPCSS(){var preload_stylesheets=document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]');if(preload_stylesheets&&0<preload_stylesheets.length)for(var stylesheet_index=0;stylesheet_index<preload_stylesheets.length;stylesheet_index++){var media=preload_stylesheets[stylesheet_index].getAttribute("media")||"all";if(window.matchMedia(media).matches)return void setTimeout(wprRemoveCPCSS,200)}var elem=document.getElementById("rocket-critical-css");elem&&"remove"in elem&&elem.remove()}window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);</script><noscript><link rel="stylesheet" href="https://baobiminhan.com.vn/wp-content/cache/min/1/15fec3f5a320558f1b07c23b9f3abb58.css" media="all" data-minify="1" /><link rel='stylesheet' id='woocommerce-smallscreen-css'  href='https://baobiminhan.com.vn/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=5.9.2' type='text/css' media='only screen and (max-width: 768px)' /></noscript>
+
+
+</body></html>

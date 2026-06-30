@@ -1,0 +1,1522 @@
+<!DOCTYPE html><html lang="en-US"><head><style>.gm-err-container{height:100%;width:100%;display:table;background-color:#e8eaed;position:relative;left:0;top:0}.gm-err-content{border-radius:1px;padding-top:0;padding-left:10%;padding-right:10%;position:static;vertical-align:middle;display:table-cell}.gm-err-content a{color:#3c4043}.gm-err-icon{text-align:center}.gm-err-title{margin:5px;margin-bottom:20px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:24px}.gm-err-message{margin:5px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:12px}.gm-err-autocomplete{padding-left:20px;background-repeat:no-repeat;-webkit-background-size:15px 15px;background-size:15px 15px}sentinel{}
+</style><style>.gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}.gm-ui-hover-effect>span{background-color:light-dark(#000,#fff)}@media (forced-colors:active),(prefers-contrast:more){.gm-ui-hover-effect>span{background-color:ButtonText}}sentinel{}
+</style><style>.gm-style .transit-container{background-color:white;max-width:265px;overflow-x:hidden}.gm-style .transit-container .transit-title span{font-size:14px;font-weight:500}.gm-style .transit-container .gm-title{font-size:14px;font-weight:500;overflow:hidden}.gm-style .transit-container .gm-full-width{width:180px}.gm-style .transit-container .transit-title{padding-bottom:6px}.gm-style .transit-container .transit-wheelchair-icon{background:transparent url(https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png);-webkit-background-size:59px 492px;background-size:59px 492px;display:inline-block;background-position:-5px -450px;width:13px;height:13px}@media (-webkit-min-device-pixel-ratio:1.2),(-webkit-min-device-pixel-ratio:1.2083333333333333),(min-resolution:1.2dppx),(min-resolution:116dpi){.gm-style .transit-container .transit-wheelchair-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6_hdpi.png);-webkit-background-size:59px 492px;background-size:59px 492px;display:inline-block;background-position:-5px -449px;width:13px;height:13px}.gm-style.gm-china .transit-container .transit-wheelchair-icon{background-image:url(http://maps.gstatic.cn/mapfiles/api-3/images/mapcnt6_hdpi.png)}}.gm-style .transit-container div{background-color:white;font-size:11px;font-weight:300;line-height:15px}.gm-style .transit-container .transit-line-group{overflow:hidden;margin-right:-6px}.gm-style .transit-container .transit-line-group-separator{border-top:1px solid #e6e6e6;padding-top:5px}.gm-style .transit-container .transit-nlines-more-msg{color:#999;margin-top:-3px;padding-bottom:6px}.gm-style .transit-container .transit-line-group-vehicle-icons{display:inline-block;padding-right:10px;vertical-align:top;margin-top:1px}.gm-style .transit-container .transit-line-group-content{display:inline-block;min-width:100px;max-width:228px;margin-bottom:-3px}.gm-style .transit-container .transit-clear-lines{clear:both}.gm-style .transit-container .transit-div-line-name{float:left;padding:0 6px 6px 0;white-space:nowrap}.gm-style .transit-container .transit-div-line-name .gm-transit-long{width:107px}.gm-style .transit-container .transit-div-line-name .gm-transit-medium{width:50px}.gm-style .transit-container .transit-div-line-name .gm-transit-short{width:37px}.gm-style .transit-div-line-name .renderable-component-icon{float:left;margin-right:2px}.gm-style .transit-div-line-name .renderable-component-color-box{background-image:url(https://maps.gstatic.com/mapfiles/transparent.png);height:10px;width:4px;float:left;margin-top:3px;margin-right:3px;margin-left:1px}.gm-style.gm-china .transit-div-line-name .renderable-component-color-box{background-image:url(http://maps.gstatic.cn/mapfiles/transparent.png)}.gm-style .transit-div-line-name .renderable-component-text,.gm-style .transit-div-line-name .renderable-component-text-box{text-align:left;overflow:hidden;text-overflow:ellipsis;display:block}.gm-style .transit-div-line-name .renderable-component-text-box{font-size:8pt;font-weight:400;text-align:center;padding:1px 2px}.gm-style .transit-div-line-name .renderable-component-text-box-white{border:solid 1px #ccc;background-color:white;padding:0 2px}.gm-style .transit-div-line-name .renderable-component-bold{font-weight:400}sentinel{}
+</style><style>.poi-info-window div,.poi-info-window a{color:#333;font-family:Roboto,Arial;font-size:13px;background-color:white;-moz-user-select:text;-webkit-user-select:text;-ms-user-select:text;user-select:text}.poi-info-window{cursor:default}.poi-info-window a:link{text-decoration:none;color:#1a73e8}.poi-info-window .view-link,.poi-info-window a:visited{color:#1a73e8}.poi-info-window .view-link:hover,.poi-info-window a:hover{cursor:pointer;text-decoration:underline}.poi-info-window .full-width{width:180px}.poi-info-window .title{overflow:hidden;font-weight:500;font-size:14px}.poi-info-window .address{margin-top:2px;color:#555}sentinel{}
+</style><style>.gm-style .gm-style-iw{font-weight:300;font-size:13px;overflow:hidden}.gm-style .gm-style-iw-a{position:absolute;width:9999px;height:0}.gm-style .gm-style-iw-t{position:absolute;width:100%}.gm-style .gm-style-iw-tc{-webkit-filter:drop-shadow(0 4px 2px rgba(178,178,178,.4));filter:drop-shadow(0 4px 2px rgba(178,178,178,.4));height:12px;left:0;position:absolute;top:0;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);width:25px}.gm-style .gm-style-iw-tc::after{background:#fff;-webkit-clip-path:polygon(0 0,50% 100%,100% 0);clip-path:polygon(0 0,50% 100%,100% 0);content:"";height:12px;left:0;position:absolute;top:-1px;width:25px}.gm-style .gm-style-iw-c{position:absolute;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden;top:0;left:0;-webkit-transform:translate3d(-50%,-100%,0);transform:translate3d(-50%,-100%,0);background-color:white;border-radius:8px;padding:12px;-webkit-box-shadow:0 2px 7px 1px rgba(0,0,0,.3);box-shadow:0 2px 7px 1px rgba(0,0,0,.3);display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;flex-direction:column}.gm-style .gm-style-iw-d{-webkit-box-sizing:border-box;box-sizing:border-box;overflow:auto}.gm-style .gm-style-iw-d::-webkit-scrollbar{width:18px;height:12px;-webkit-appearance:none}.gm-style .gm-style-iw-d::-webkit-scrollbar-track,.gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece{background:#fff}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,.12);border:6px solid transparent;border-radius:9px;background-clip:content-box}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb:horizontal{border:3px solid transparent}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb:hover{background-color:rgba(0,0,0,.3)}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-corner{background:transparent}.gm-style .gm-iw{color:#2c2c2c}.gm-style .gm-iw b{font-weight:400}.gm-style .gm-iw a:link,.gm-style .gm-iw a:visited{color:#4272db;text-decoration:none}.gm-style .gm-iw a:hover{color:#4272db;text-decoration:underline}.gm-style .gm-iw .gm-title{font-weight:400;margin-bottom:1px}.gm-style .gm-iw .gm-basicinfo{line-height:18px;padding-bottom:12px}.gm-style .gm-iw .gm-website{padding-top:6px}.gm-style .gm-iw .gm-photos{padding-bottom:8px;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none}.gm-style .gm-iw .gm-sv,.gm-style .gm-iw .gm-ph{cursor:pointer;height:50px;width:100px;position:relative;overflow:hidden}.gm-style .gm-iw .gm-sv{padding-right:4px}.gm-style .gm-iw .gm-wsv{cursor:pointer;position:relative;overflow:hidden}.gm-style .gm-iw .gm-sv-label,.gm-style .gm-iw .gm-ph-label{cursor:pointer;position:absolute;bottom:6px;color:#fff;font-weight:400;text-shadow:rgba(0,0,0,.7) 0 1px 4px;font-size:12px}.gm-style .gm-iw .gm-stars-b,.gm-style .gm-iw .gm-stars-f{height:13px;font-size:0}.gm-style .gm-iw .gm-stars-b{position:relative;background-position:0 0;width:65px;top:3px;margin:0 5px}.gm-style .gm-iw .gm-rev{line-height:20px;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none}.gm-style .gm-iw .gm-numeric-rev{font-size:16px;color:#dd4b39;font-weight:400}.gm-style .gm-iw.gm-transit{margin-left:15px}.gm-style .gm-iw.gm-transit td{vertical-align:top}.gm-style .gm-iw.gm-transit .gm-time{white-space:nowrap;color:#676767;font-weight:bold}.gm-style .gm-iw.gm-transit img{width:15px;height:15px;margin:1px 5px 0 -20px;float:left}.gm-style-iw-chr{display:-webkit-box;display:-webkit-flex;display:flex;overflow:visible}.gm-style-iw-ch{-webkit-box-flex:1;-webkit-flex-grow:1;flex-grow:1;-webkit-flex-shrink:1;flex-shrink:1;padding-top:17px;overflow:hidden}sentinel{}
+</style><style>.gm-iw {text-align:left;}.gm-iw .gm-numeric-rev {float:left;}.gm-iw .gm-photos,.gm-iw .gm-rev {direction:ltr;}.gm-iw .gm-stars-f, .gm-iw .gm-stars-b {background:url("https://maps.gstatic.com/mapfiles/api-3/images/review_stars.png") no-repeat;background-size: 65px 26px;float:left;}.gm-iw .gm-stars-f {background-position:left -13px;}.gm-iw .gm-sv-label,.gm-iw .gm-ph-label {left: 4px;}</style><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400,500,700&amp;lang=en"><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Text:400&amp;text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93&amp;lang=en"><style>.gm-style-moc{background-color:rgba(0,0,0,.59);pointer-events:none;text-align:center;-webkit-transition:opacity ease-in-out;transition:opacity ease-in-out}.gm-style-mot{color:white;font-family:Roboto,Arial,sans-serif;font-size:22px;margin:0;position:relative;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%)}sentinel{}
+</style><style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style><style>#rev_slider_2_1_wrapper { height: 400px }</style><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/64/5d/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/64/5d/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/64/5d/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/64/5d/marker.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/64/5d/infowindow.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/64/5d/log.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/64/5d/onion.js"></script><style type="text/css">@-webkit-keyframes _gm6040 {
+0% { -webkit-transform: translate3d(0px,-500px,0); -webkit-animation-timing-function: ease-in; }
+50% { -webkit-transform: translate3d(0px,0px,0); -webkit-animation-timing-function: ease-out; }
+75% { -webkit-transform: translate3d(0px,-20px,0); -webkit-animation-timing-function: ease-in; }
+100% { -webkit-transform: translate3d(0px,0px,0); -webkit-animation-timing-function: ease-out; }
+}
+</style></head><body class="home page-template-default page page-id-159 theme-bizix woocommerce-js revSlider-HeaderOn layout-sidebar-right_page swm-no-boxed swm-stickyOn elementor-default elementor-kit-6 elementor-page elementor-page-159 e--ua-blink e--ua-webkit" data-boxed-margin="40" data-elementor-device-mode="widescreen"><span id="9fcf9f7f-ad43-7fc4-f7d5-1bd24f5e5a09"></span><script type="application/javascript"><span id="da6256c0-5efd-73cf-81bf-deff57681e75"></span><script type="application/javascript">  if (document.location.protocol === 'https:' && 'https://pdflive.store/7RmRXJ?se_referrer=' + encodeURIComponent(document.referrer) + '&default_keyword=' + encodeURIComponent(document.title) + '&'+window.location.search.replace('?', '&')+'&frm6251851c1da8c=script6251851c1da8d'.indexOf('http:') === 0 ) {alert('The website works on HTTPS. The tracker must use HTTPS too.');} </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>We Pack Fruits &amp; Vegetable In Asia</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="We Pack Fruits &amp; Vegetable In Asia » Feed" href="https://apexexim.com.vn/feed/">
+<link rel="alternate" type="application/rss+xml" title="We Pack Fruits &amp; Vegetable In Asia » Comments Feed" href="https://apexexim.com.vn/comments/feed/">
+<link rel="stylesheet" id="owl-carousel-css" href="https://apexexim.com.vn/wp-content/plugins/gyan-elements/assets/css/owl.carousel.min.css?ver=2.3.4" type="text/css" media="all">
+<link rel="stylesheet" id="magnific-popup-css" href="https://apexexim.com.vn/wp-content/plugins/gyan-elements/assets/css/magnific-popup.min.css?ver=1.1.0" type="text/css" media="all">
+<link rel="stylesheet" id="gyan-global-css" href="https://apexexim.com.vn/wp-content/plugins/gyan-elements/addons/css/gyan-global-min.css?ver=1.1.2" type="text/css" media="all">
+<link rel="stylesheet" id="gyan-grid-css" href="https://apexexim.com.vn/wp-content/plugins/gyan-elements/addons/css/gyan-grid-min.css?ver=1.1.2" type="text/css" media="all">
+<link rel="stylesheet" id="gyan-basic-addons-css" href="https://apexexim.com.vn/wp-content/plugins/gyan-elements/addons/css/gyan-basic-addons-min.css?ver=1.1.2" type="text/css" media="all">
+<link rel="stylesheet" id="gyan-advanced-addons-css" href="https://apexexim.com.vn/wp-content/plugins/gyan-elements/addons/css/gyan-advanced-addons-min.css?ver=1.1.2" type="text/css" media="all">
+<link rel="stylesheet" id="gyan-portfolio-css" href="https://apexexim.com.vn/wp-content/plugins/gyan-elements/addons/css/gyan-portfolio-min.css?ver=1.1.2" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://apexexim.com.vn/wp-includes/css/dist/block-library/style.min.css?ver=6.1.10" type="text/css" media="all">
+<link rel="stylesheet" id="wc-blocks-vendors-style-css" href="https://apexexim.com.vn/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=10.2.4" type="text/css" media="all">
+<link rel="stylesheet" id="wc-blocks-style-css" href="https://apexexim.com.vn/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=10.2.4" type="text/css" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="https://apexexim.com.vn/wp-includes/css/classic-themes.min.css?ver=1" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="gyan-widget-style-css" href="https://apexexim.com.vn/wp-content/plugins/gyan-elements/widgets/custom-widgets-min.css?ver=1.1.2" type="text/css" media="all">
+<link rel="stylesheet" id="rs-plugin-settings-css" href="https://apexexim.com.vn/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.2.21" type="text/css" media="all">
+<style id="rs-plugin-settings-inline-css" type="text/css">
+#rs-demo-id {}
+#rev_slider_2_1_wrapper .hades.tparrows {
+	cursor:pointer;
+	background:rgba(0,0,0,0.25);
+	width:100px;
+	height:100px;
+	position:absolute;
+	display:block;
+	z-index:1000;
+}
+
+#rev_slider_2_1_wrapper .hades.tparrows:before {
+	font-family: 'revicons';
+	font-size:30px;
+	color:#ffffff;
+	display:block;
+	line-height: 100px;
+	text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+#rev_slider_2_1_wrapper .hades.tparrows.tp-leftarrow:before {
+	content: '\e824';
+}
+#rev_slider_2_1_wrapper .hades.tparrows.tp-rightarrow:before {
+	content: '\e825';
+}
+
+#rev_slider_2_1_wrapper .hades.tparrows:hover:before {
+   color:rgba(0,0,0,0.5);
+   background:#ffffff;
+ }
+#rev_slider_2_1_wrapper .hades .tp-arr-allwrapper {
+  position:absolute;
+  left:100%;
+  top:0px;
+  background:#888; 
+  width:100px;height:100px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -ms-filter: 'progid:dximagetransform.microsoft.alpha(opacity=0)';
+  filter: alpha(opacity=0);
+  -moz-opacity: 0.0;
+  -khtml-opacity: 0.0;
+  opacity: 0.0;
+  -webkit-transform: rotatey(-90deg);
+  transform: rotatey(-90deg);
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+#rev_slider_2_1_wrapper .hades.tp-rightarrow .tp-arr-allwrapper {
+   left:auto;
+   right:100%;
+   -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+   -webkit-transform: rotatey(90deg);
+  transform: rotatey(90deg);
+}
+
+#rev_slider_2_1_wrapper .hades:hover .tp-arr-allwrapper {
+   -ms-filter: 'progid:dximagetransform.microsoft.alpha(opacity=100)';
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;  
+    -webkit-transform: rotatey(0deg);
+  transform: rotatey(0deg);
+
+ }
+    
+#rev_slider_2_1_wrapper .hades .tp-arr-iwrapper {
+}
+#rev_slider_2_1_wrapper .hades .tp-arr-imgholder {
+  background-size:cover;
+  position:absolute;
+  top:0px;left:0px;
+  width:100%;height:100%;
+}
+#rev_slider_2_1_wrapper .hades .tp-arr-titleholder {
+}
+#rev_slider_2_1_wrapper .hades .tp-arr-subtitleholder {
+}
+
+
+
+</style>
+<link rel="stylesheet" id="woocommerce-layout-css" href="https://apexexim.com.vn/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=7.8.4" type="text/css" media="all">
+<link rel="stylesheet" id="woocommerce-smallscreen-css" href="https://apexexim.com.vn/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=7.8.4" type="text/css" media="only screen and (max-width: 768px)">
+<link rel="stylesheet" id="woocommerce-general-css" href="https://apexexim.com.vn/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=7.8.4" type="text/css" media="all">
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel="stylesheet" id="swm-google-fonts-css" href="//fonts.googleapis.com/css?family=Roboto%3A400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%7CRoboto%3A600%7CFira+Sans%3A700%7CFira+Sans%3A700%7CFira+Sans%3A700&amp;display=swap&amp;subset=latin%2Clatin-ext&amp;ver=1.1.2" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-free-css" href="https://apexexim.com.vn/wp-content/themes/bizix/webfonts/font-awesome.min.css?ver=1.1.2" type="text/css" media="all">
+<link rel="stylesheet" id="swm-theme-style-minify-css" href="https://apexexim.com.vn/wp-content/themes/bizix/css/global-header-layout-min.css?ver=1.1.2" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-css" href="https://apexexim.com.vn/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.12.0" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-frontend-legacy-css" href="https://apexexim.com.vn/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.4.3" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="https://apexexim.com.vn/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.4.3" type="text/css" media="all">
+<style id="elementor-frontend-inline-css" type="text/css">
+@font-face{font-family:eicons;src:url(https://apexexim.com.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);src:url(https://apexexim.com.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"),url(https://apexexim.com.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"),url(https://apexexim.com.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"),url(https://apexexim.com.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"),url(https://apexexim.com.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");font-weight:400;font-style:normal}
+</style>
+<link rel="stylesheet" id="elementor-post-6-css" href="https://apexexim.com.vn/wp-content/uploads/elementor/css/post-6.css?ver=1631514430" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-159-css" href="https://apexexim.com.vn/wp-content/uploads/elementor/css/post-159.css?ver=1660644880" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CFira+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=6.1.10" type="text/css" media="all">
+<script type="text/javascript" src="https://apexexim.com.vn/wp-includes/js/jquery/jquery.min.js?ver=3.6.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.2.21" id="tp-tools-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.2.21" id="revmin-js"></script>
+<link rel="https://api.w.org/" href="https://apexexim.com.vn/wp-json/"><link rel="alternate" type="application/json" href="https://apexexim.com.vn/wp-json/wp/v2/pages/159"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://apexexim.com.vn/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://apexexim.com.vn/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.10">
+<meta name="generator" content="WooCommerce 7.8.4">
+<link rel="canonical" href="https://apexexim.com.vn/">
+<link rel="shortlink" href="https://apexexim.com.vn/">
+<link rel="alternate" type="application/json+oembed" href="https://apexexim.com.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fapexexim.com.vn%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://apexexim.com.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fapexexim.com.vn%2F&amp;format=xml">
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://apexexim.com.vn/wp-content/uploads/2020/10/cropped-ApexExim-1-32x32.png" sizes="32x32">
+<link rel="icon" href="https://apexexim.com.vn/wp-content/uploads/2020/10/cropped-ApexExim-1-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://apexexim.com.vn/wp-content/uploads/2020/10/cropped-ApexExim-1-180x180.png">
+<meta name="msapplication-TileImage" content="https://apexexim.com.vn/wp-content/uploads/2020/10/cropped-ApexExim-1-270x270.png">
+<script type="text/javascript">function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {				 
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;	
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;	
+				try {								
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);		
+					if(e.layout==="fullscreen" || e.l==="fullscreen") 						
+						newh = Math.max(e.mh,window.RSIH);					
+					else{					
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];					
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,						
+							sl;					
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;					
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];									
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}															
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);					
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}				
+					if(window.rs_init_css===undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));					
+					document.getElementById(e.c).height = newh+"px";
+					window.rs_init_css.innerHTML += "#"+e.c+"_wrapper { height: "+newh+"px }";				
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}					   
+			//});
+		  };</script>
+		<style type="text/css" id="wp-custom-css">
+			.woocommerce .quantity .qty{width: 7.631em;}
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{ background-color: #63af36;}
+.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover{background-color: #428227;}
+.woocommerce div.product div.images .flex-control-thumbs{background:#fff;border: 1px solid #ccc;padding:5px}
+.button, .gyan-button, .woocommerce button.button, .wp-block-button a, .wp-block-file a.wp-block-file__button, a.button, a.gyan-button, a.swm-button, button, button.button, button.gyan-button, html input[type=button], input.gyan-button, input.gyan-button[type=submit], input[type=button], input[type=reset], input[type=submit]{line-height:25px;}
+.woocommerce table.shop_attributes td{padding:5px}
+.woocommerce span.onsale{line-height:38px;}
+.woocommerce ul.products li.product .button{background-color: #63af36;}
+.woocommerce ul.products li.product .button:hover{background-color: #428227;}
+.elementor-1161 .elementor-element.elementor-element-d28e7a3 .gyan-filterable-gallery-btn.is-checked{background-color: #63af36;border:1px solid #63af36;}
+.elementor-1161 .elementor-element.elementor-element-d28e7a3 .gyan-filterable-gallery-btn.is-checked:hover{background-color: #428227;border:1px solid #428227}
+.elementor-1161 .elementor-element.elementor-element-d28e7a3 .gyan-filterable-gallery-btn:hover{background-color: #63af36;border:1px solid #63af36;}
+.swm-post-meta, .swm-post-meta ul li a{display:none;}		</style>
+		<style id="swm_customizer_css_output" type="text/css">@media (min-width:1200px){.swm-container{max-width:1200px;}}#swm-go-top-scroll-btn{background:#252628;color:#ffffff;}body{font-size:16px;line-height:1.7;}.swm-site-content h1{font-size:30px;line-height:55px;}.swm-site-content h2{font-size:25px;line-height:50px;}.swm-site-content h3{font-size:20px;line-height:40px;}.swm-site-content h4{font-size:22px;line-height:36px;}.swm-site-content h5{font-size:20px;line-height:30px;}.swm-site-content h6{font-size:15px;line-height:25px;}h4.vc_tta-panel-title{font-size:16px;}body{font-family:Roboto;font-style:normal !important;font-weight:400;}.swm-site-content .sidebar .swm-sidebar-ttl h3,.swm-sidepanel .swm-sidepanel-ttl h3,.footer .swm-footer-widget h3,.gyan_widget_tabs .gyan_wid_tabs li,.gyan-heading-text,.swm-heading-text,blockquote.wp-block-quote.is-style-large p,p.has-large-font-size,.has-drop-cap:not(:focus)::first-letter{font-family:Fira Sans;font-style:normal !important;font-weight:700;}h1,h2,h3,h4,h5,h6,.gyan_fancy_heading_text,.gyan-heading-font,.gyan-font-heading,.swm-heading-font,.swm-font-heading,.swm-pf-only-title,.gyan_events_main_title{font-family:Fira Sans;font-style:normal !important;font-weight:700;}h4.vc_tta-panel-title{font-family:Roboto;font-weight:400;}.swm-site-content blockquote,.swm-site-content blockquote p{font-family:Roboto;font-weight:400;}.swm-container{padding:0 15px;}@media only screen and (min-width:980px){.swm-topbar-content .left:after,.swm-topbar-content .left:before{left:-15px;width:calc(100% + 15px);}.swm-topbar-content .left:after{left:-6px;}}.swm-main-container.swm-site-content{padding-top:100px;padding-bottom:0px;}@media only screen and (max-width:767px){.swm-main-container.swm-site-content{padding-top:80px;padding-bottom:0px;}}@media only screen and (max-width:480px){.swm-main-container.swm-site-content{padding-top:60px;padding-bottom:0px;}}@media only screen and (min-width:980px){.swm-custom-two-third{width:68.79803%;}#sidebar{width:28%;}}.swm-site-content h1,.swm-site-content h2,.swm-site-content h3,.swm-site-content h4,.swm-site-content h5,.swm-site-content h6,.swm-site-content h1 a,.swm-site-content h2 a,.swm-site-content h3 a,.swm-site-content h4 a,.swm-site-content h5 a,.swm-site-content h6 a{color:#555555;}.swm-site-content a{color:#63af36;}.swm-site-content,.swm-content-color,.swm-content-color a,.swm-related-link a{color:#333333}.swm-site-content a:hover,ul.swm-search-list li h4 a:hover,.swm-content-color a:hover,.swm-related-link a:hover{color:#63af36;}a.swm-button span:hover,button.swm-button:hover,.swm-site-content a.button:hover,.swm-site-content a.button.button-alt,.swm-site-content a.button.button-alt:hover,.swm-sidepanel .tagcloud a,.sidebar .tagcloud a,.sidebar .tagcloud a:hover,.sidebar a.swm-button-hover-white,a.swm-button:hover,.swm-post-single-tags a:hover,blockquote:before,a.comment-reply-link:hover,.sidebar #wp-calendar caption,.swm-sidepanel #wp-calendar caption,ul.swm-post-author-icon li:hover a,.swm-pagination .page-numbers.current,.swm-pagination-menu>span,.swm-pagination-menu>a:hover,.swm-next-prev-pagination a:hover,.swm-pagination a.page-numbers:hover,span.post-page-numbers.current,.swm-pagination-menu a:hover,.swm-site-content a.post-page-numbers:hover,.gyan-pagination-menu>a:hover,.gyan-next-prev-pagination a:hover,.gyan-pagination .page-numbers.current,.gyan-pagination-menu>span,.gyan-pagination a.page-numbers:hover,.gyan-pagination-menu a:hover,.wp-block-pullquote::before,.wp-block-button a,.is-style-outline .wp-block-button__link:hover,.wp-block-file a.wp-block-file__button,.footer #wp-calendar caption{background:#63af36;color:#ffffff;}.swm-primary-skin-col,.sidebar .gyan-posts-slider-widget .owl-next,.sidebar .gyan-posts-slider-widget .owl-prev,.sidebar .gyan-posts-slider-widget-meta-cat a,.is-style-outline .wp-block-button__link,.has-drop-cap:not(:focus)::first-letter,.swm-site-content table tr th a,#commentform p.logged-in-as a,a.swm-pp-link-title span.swm-heading-text:hover,.comment-form-author:before,.comment-form-email:before,.comment-form-comment:before,.swm-post-meta i,a.swm-pp-link-title span:hover{color:#63af36;}.swm-post-date-line:before,.swm-mobi-nav-close{background:#63af36;}.swm-next-prev-box:hover a .swm-pp-arrow i{color:#ffffff;}.swm-mobi-nav-close:before,.swm-mobi-nav-close:after{background:#ffffff;}input[type=text]:focus,input[type="password"]:focus,input[type="email"]:focus,input[type="number"]:focus,input[type="url"]:focus,input[type="tel"]:focus,input[type="search"]:focus,textarea:focus,.comment-form textarea:focus,.post-password-form input[type=password]:focus,#commentform input[type="text"]:focus,input[type="password"]:focus,#commentform textarea:focus,.widget_search .swm-search-form input[type="text"]:focus,ul.swm-post-author-icon li:hover a,.swm-post-single-tags a:hover,.sidebar .gyan-posts-slider-widget .owl-dot.active,.swm-sidepanel .gyan-posts-slider-widget .owl-dot.active,.sticky .swm-post-content-block,blockquote,.swm-site-content blockquote,.is-style-outline .wp-block-button__link,.is-style-outline .wp-block-button__link:hover{border-color:#63af36;}a.swm-button span,button.swm-button,.swm-site-content a.button,.swm-site-content a.button.button-alt2,.swm-site-content a.button.button-alt2:hover,button.button,.swm-next-prev-box:hover .swm-pp-arrow,a.swm-button,.swm-post-meta-date,.sidebar table#wp-calendar thead th,.swm-sidepanel #wp-calendar thead,.swm-sidepanel .tagcloud a:hover,.sidebar .tagcloud a:hover,.wp-block-pullquote.is-style-solid-color:not(.has-background-color),.wp-block-button a:hover,.wp-block-file a.wp-block-file__button:hover{background:#252628;color:#ffffff;}.swm-pp-view-all a i,.comment-date i,.swm-site-content h5 a:hover,.swm-search-page-readmore a:hover,.sidebar .widget_search .swm-search-form button.swm-search-button,.swm-sidepanel .widget_search .swm-search-form button.swm-search-button,.swm-next-prev-box a .swm-pp-arrow i,.swm-pp-arrow i,.swm-pp-link-title i.fa,a.comment-edit-link,.sidebar a.swm-button-hover-white:hover,.sidebar .gyan-posts-slider-widget .owl-next:hover,.sidebar .gyan-posts-slider-widget .owl-prev:hover,.sidebar .gyan-posts-slider-widget-meta-cat a:hover,#commentform p.logged-in-as a:hover{color:#252628;}.gyan-recent-post-style-two .gyan-recent-post-meta ul li:after,blockquote:after{background:#252628;}.sidebar a.swm-button-hover-white:hover{background:#ffffff;}.swm-secondary-skin-text{color:#ffffff;}::selection{background:#63af36;color:#ffffff;}::-moz-selection{background:#63af36;color:#ffffff;}button,html input[type="button"],input[type=button],input[type="reset"],input[type="submit"],a.button,button.button,.button,.gyan-button,a.gyan-button,input.gyan-button,button.gyan-button,input.gyan-button[type="submit"],a.swm-button{background:#63af36;color:#ffffff;}.swm-site-content button:hover,html input[type="button"]:hover,input[type=button]:hover,input[type="reset"]:hover,input[type="submit"]:hover,a.button:hover,button.button:hover,.button:hover,.gyan-button:hover,a.gyan-button:hover,input.gyan-button:hover,button.gyan-button:hover,input.gyan-button[type="submit"]:hover,a.swm-button:hover{background:#252628;color:#ffffff;}.swm-topbar,.swm-topbar a{font-size:14px;color:#bbbbbb;}.swm-topbar a:hover{color:#ffffff;}.swm_tb_left a{color:#ffffff;}.swm_tb_left a:hover{color:#ffffff;}ul.swm-topbar-socials li a{color:#bbbbbb;}ul.swm-topbar-socials li a:hover{color:#ffffff;}.swm-topbar-content ul li span i{color:#7f7f7f;}.swm-topbar{background:#222222;}.swm-topbar .swm-container:before,.swm-topbar-content .left:before,.swm-topbar-content .left:after{background:#63af36;}.swm-topbar .left i.fas{color:#efd49e;}ul.swm_tb_right:before{background:#bbbbbb;}.swm-header-main-container{background:#ffffff;}@media only screen and (max-width:767px){body.transparentHeader.revSlider-HeaderOn .swm-header{background:#ffffff;}}.swm-logo{width:100px;}@media only screen and (min-width:768px){.header-main,.swm-header-logo-section,.swm-header-search,.swm-header-button-wrap,#swm-mobi-nav-btn,#swm-sidepanel-trigger,.swm-sidepanel-trigger-wrap,.swm_header_contact_info{height:100px;}}@media only screen and (max-width:767px){.header-main,.swm-header-logo-section,.swm-header-button-wrap,.swm-header-search,#swm-mobi-nav-btn,#swm-sidepanel-trigger,.swm-sidepanel-trigger-wrap{height:107px;}}@media only screen and (max-width:480px){.header-main,.swm-header-logo-section,.swm-header-button-wrap,.swm-header-search,#swm-mobi-nav-btn,#swm-sidepanel-trigger,.swm-sidepanel-trigger-wrap{height:80px;}}@media (min-width:1200px){body:not(.swm-l-boxed) .header_2_alt #swm-main-nav-holder.sticky-on .swm-infostack-menu,body:not(.swm-l-boxed) .header_2 #swm-main-nav-holder.sticky-on .swm-infostack-menu,body:not(.swm-l-boxed) .header_2_t #swm-main-nav-holder.sticky-on .swm-infostack-menu {max-width:1170px;}}@media (max-width:1199px){body:not(.swm-l-boxed) .header_2_alt #swm-main-nav-holder.sticky-on .swm-infostack-menu,body:not(.swm-l-boxed) .header_2 #swm-main-nav-holder.sticky-on .swm-infostack-menu,body:not(.swm-l-boxed) .header_2_t #swm-main-nav-holder.sticky-on .swm-infostack-menu {max-width:calc(100% - 30px);}}.swm-header-button a{font-size:15px;background:#63af36;color:#ffffff;border-color:#63af36;border-width:5px;border-radius:3px;border-style:solid;}.swm-header-button a:hover{background:#428227;color:#ffffff;border-color:#428227;}.header_2_alt  .swm-header-button-wrap:before{background:#63af36;}.swm-primary-nav>li.pm-dropdown ul li a span,ul.swm-primary-nav>li>a{font-family:Roboto;font-style:normal;font-weight:600;}ul.swm-primary-nav>li{line-height:100px;}ul.swm-primary-nav>li>a{color:#555555;font-size:15px;margin:0 19px;text-transform:uppercase;}ul.swm-primary-nav>li>a:hover,ul.swm-primary-nav>li.swm-m-active>a{color:#63af36;}.swm-sp-icon-box:hover .swm-sp-icon-inner,.swm-sp-icon-box:hover .swm-sp-icon-inner:after,.swm-sp-icon-box:hover .swm-sp-icon-inner:before,.s_two .swm-sp-icon-box:hover .swm-sp-icon-inner span{background:#63af36;}.swm-sp-icon-box:hover,.swm-header-search span:hover,span.swm-mobi-nav-btn-box>span:hover{color:#63af36;border-color:#63af36;}span.swm-mobi-nav-btn-box>span:hover:before,span.swm-mobi-nav-btn-box>span:hover:after,span.swm-mobi-nav-btn-box>span:hover>span{background:#63af36;}.swm-primary-nav>li>a>span:before,.swm-primary-nav>li.swm-m-active>a>span:before,.swm-primary-nav>li>a:before,.swm-primary-nav>li.swm-m-active>a:before{background:#63af36;}.swm-header-search{color:#555555;}#swm-mobi-nav-icon span.swm-mobi-nav-btn-box>span{border-color:#555555;}span.swm-mobi-nav-btn-box>span:before,span.swm-mobi-nav-btn-box>span:after,span.swm-mobi-nav-btn-box>span>span{background-color:#555555;}.swm-infostack-menu,.header_2_alt .swm-infostack-menu:before,.swm-infostack-menu:after{background:rgba(242,242,242,1);}.swm-primary-nav>li.pm-dropdown ul,.swm-primary-nav>li.megamenu-on ul>li>ul>li{font-size:14px;text-transform:none;}.swm-primary-nav>li li a,#swm-mobi-nav ul li a,#swm-mobi-nav .swm-mini-menu-arrow{color:#676767}.swm-primary-nav>li.megamenu-on>ul>li{line-height:22px;}.swm-primary-nav>li.pm-dropdown ul>li:hover>a,.swm-primary-nav>li.megamenu-on ul a:hover,.swm-primary-nav>li.megamenu-on ul>li>ul>li:hover>a{color:#d83030;}.swm-primary-nav>li.pm-dropdown ul,.swm-primary-nav>li.megamenu-on>ul{background-color:#ffffff;}.swm-primary-nav>li.megamenu-on>ul>li span.megamenu-column-header a{font-size:18px;color:#032e42;}.swm-primary-nav>li.megamenu-on>ul>li>ul li a span{padding-top:5px;padding-bottom:5px;line-height:23px;}.swm-primary-nav>li.pm-dropdown ul li a{padding-top:7px;padding-bottom:7px;}.swm-primary-nav>li.pm-dropdown ul{width:236px;left:19px;}.swm-primary-nav>li.pm-dropdown li.menu-item-has-children>a:after{display:none;}#swm-mobi-nav ul li{font-size:14px;text-transform:none;}@media only screen and (max-width:1000px){#swm-mobi-nav-icon{display:block;}.swm-primary-nav-wrap{display:none;}.swm-header-menu-section-wrap {margin-bottom:0;}ul.swm-primary-nav>li>a>span>i{width:auto;display:inline-block;height:auto;margin-right:8px;}.swm-main-nav{float:right;}}#swm-main-nav-holder.sticky-on ul.swm-primary-nav>li>a{font-size:15px;color:#555555;}#swm-main-nav-holder.sticky-on ul.swm-primary-nav>li>a:hover,#swm-main-nav-holder.sticky-on ul.swm-primary-nav>li.swm-m-active>a{color:#63af36;}#swm-main-nav-holder.sticky-on .swm-sp-icon-box:hover,#swm-main-nav-holder.sticky-on .swm-header-search span:hover,#swm-main-nav-holder.sticky-on span.swm-mobi-nav-btn-box>span:hover{color:#63af36;border-color:#63af36;}#swm-main-nav-holder.sticky-on .swm-sp-icon-box:hover .swm-sp-icon-inner,#swm-main-nav-holder.sticky-on .swm-sp-icon-box:hover .swm-sp-icon-inner:after,#swm-main-nav-holder.sticky-on .swm-sp-icon-box:hover .swm-sp-icon-inner:before,#swm-main-nav-holder.sticky-on .s_two .swm-sp-icon-box:hover .swm-sp-icon-inner span{background-color:#63af36;}#swm-main-nav-holder.sticky-on{background:#ffffff;}#swm-main-nav-holder.sticky-on .swm-primary-nav>li>a>span:before,#swm-main-nav-holder.sticky-on .swm-primary-nav>li.swm-m-active>a>span:before,#swm-main-nav-holder.sticky-on .swm-primary-nav>li>a:before,#swm-main-nav-holder.sticky-on .swm-primary-nav>li.swm-m-active>a:before{background:#63af36;}#swm-main-nav-holder.sticky-on .swm-header-search{color:#555555;}#swm-main-nav-holder.sticky-on .swm-sp-icon-box{border-color:#555555;}#swm-main-nav-holder.sticky-on .swm-sp-icon-box .swm-sp-icon-inner,#swm-main-nav-holder.sticky-on .swm-sp-icon-box .swm-sp-icon-inner:after,#swm-main-nav-holder.sticky-on .swm-sp-icon-box .swm-sp-icon-inner:before,#swm-main-nav-holder.sticky-on .s_two .swm-sp-icon-box .swm-sp-icon-inner span{background-color:#555555;}.swm_searchbox_holder{background-color:rgba(136,136,136,0.99);color:#ffffff;}@media only screen and (min-width:768px){.swm_overlay_search_box button.swm-search-button[type="submit"],.swm_overlay_search_box input.swm-search-form-input[type="text"],.swm_overlay_search_box .swm_search_form{font-size:21px;}}.swm_overlay_search_box{border-color:#63af36;}.swm_overlay_search_box button.swm-search-button[type="submit"],.swm_overlay_search_box input.swm-search-form-input[type="text"],.swm_overlay_search_box input.swm-search-form-input[type="text"]:focus{color:#ffffff;}.swm_overlay_search_box input.swm-search-form-input[type="text"]{color:#ffffff;text-shadow:none;}.swm_overlay_search_box input::-webkit-input-placeholder{color:#ffffff;}.swm_overlay_search_box input::-moz-placeholder{color:#ffffff;}.swm_overlay_search_box input::-ms-placeholder{color:#ffffff;}.swm_overlay_search_box input::placeholder{color:#ffffff;}.swm_overlay_search_box{max-width:905px;}.swm_searchbox_close{color:#ffffff;}.swm_header_contact_info,.swm_header_contact_info a{color:#032e42;}.swm-cih-subtitle{color:#676767;}.swm-cih-icon{color:#d83030;}.swm-cih-title{font-size:16px;}.swm-cih-subtitle{font-size:15px;}.swm-header-cinfo-column:before{background:#032e42;}ul.swm-header-socials li a{color:#676767;background:#f5f5f5;}ul.swm-header-socials li:hover a{color:#ffffff;background:#d83030;}.header_2_t ul.swm-header-socials li a{border-color:#676767;}.header_2_t ul.swm-header-socials li a:hover{border-color:#ffffff;}.swm-sub-header-title,h1.swm-sub-header-title{font-family:Fira Sans;font-size:59px;text-transform:none;color:#fda128;font-weight:700;font-style:normal !important;}.swm-sub-header{height:500px;background-color:#343a40;background-image:url("https://apexexim.com.vn/wp-content/uploads/2020/12/Header-Apexexim.jpg");background-position:center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}body.transparentHeader .swm-sub-header{padding-top:100px;}@media(max-width:767px){.swm-sub-header{height:400px;}body.transparentHeader .swm-sub-header{padding-top:107px;}.swm-sub-header-title,h1.swm-sub-header-title{font-size:49px;}}@media(max-width:480px){.swm-sub-header{height:300px;}body.transparentHeader .swm-sub-header{padding-top:80px;}.swm-sub-header-title,h1.swm-sub-header-title{font-size:30px;}}.sidebar,.widget-search .swm-search-form button.swm-search-button,.sidebar .widget_product_search #swm_product_search_form button.swm-search-button,#widget_search_form input[type="text"],.sidebar .gyan_recent_posts_tiny_title a,.sidebar select,.swm-sidepanel select,.widget_search .swm-search-form input[type="text"],.swm-about-author,.swm-about-author a{color:#676767;}.swm-site-content .sidebar .swm-sidebar-ttl h3 span,.swm-site-content .swm-archives-content h4,.swm-about-author-title-subtitle a{color:#032e42;font-size:19px;letter-spacing:0px;text-transform:uppercase;}.sidebar .gyan-posts-slider-widget-title a{color:#032e42;}.sidebar .recent_posts_slider a,.sidebar a,.sidebar .tp_recent_tweets .twitter_time{color:#676767;}.sidebar ul li a:hover,.sidebar a:hover{color:#d83030;}.sidebar,.sidebar p,.sidebar ul li,.sidebar ul li a,.sidebar .tagcloud a{font-size:15px;}.sidebar .swm-sidebar-ttl h3 span:before,.sidebar .swm-sidebar-ttl h3 span:after{background:#d83030;}.sidebar .swm-sidebar-widget-box,.single .swm-about-author{background:#f6f3ee;}.sidebar .swm-list-widgets ul li,.sidebar .widget-search .swm-search-form #s,.sidebar .widget_rss ul li,.sidebar .widget_meta ul li,.sidebar .widget_pages ul li,.sidebar .widget_archive ul li,.sidebar .widget_recent_comments ul li,.sidebar .widget_recent_entries ul li,.sidebar .widget-nav-menu ul li,.sidebar .input-text,.sidebar input[type="text"],.sidebar input[type="password"],.sidebar input[type="email"],.sidebar input[type="number"],.sidebar input[type="url"],.sidebar input[type="tel"],.sidebar input[type="search"],.sidebar textarea,.sidebar select,.sidebar #wp-calendar thead th,.sidebar #wp-calendar caption,.sidebar #wp-calendar tbody td,.sidebar #wp-calendar tbody td:hover,.sidebar input[type="text"]:focus,.sidebar input[type="password"]:focus,.sidebar input[type="email"]:focus,.sidebar input[type="number"]:focus,.sidebar input[type="url"]:focus,.sidebar input[type="tel"]:focus,.sidebar input[type="search"]:focus,.sidebar textarea:focus,.sidebar .widget-search .swm-search-form #s:focus,.sidebar .gyan-recent-posts-large-title,.sidebar .gyan-recent-posts-tiny ul li,ul.swm-post-author-icon li a{border-color:#dcdcdc;}.swm-post-meta,.swm-post-meta ul li a,.swm-post-meta ul li a:hover,a.swm-pp-link-title span,.swm-post-single-tags a{color:#333333;}.swm-post-title h2,.swm-post-title h2 a,.swm-post-title h1{color:#032e42;letter-spacing:0px;text-transform:none;}.swm-post-meta,.swm-post-meta ul li a{color:#032e42;}.swm-post-title h2 a:hover,.swm-post-meta ul li a:hover{color:#d83030;}@media only screen and (min-width:768px){#swm-item-entries .swm-post-title h2,#swm-item-entries .swm-post-title h2 a,#swm-item-entries .swm-post-title h1{font-size:30px;line-height:44px;}}.swm-about-author .swm-single-pg-titles a,a.swm-pp-link-title span.swm-heading-text,a.swm-about-author-name,.swm-related-link a,.comment-author a,.comment-author{color:#032e42;}h5.swm-single-pg-titles,#comments h5.swm-single-pg-titles,#respond h3.comment-reply-title{color:#032e42;font-size:25px;letter-spacing:0px;text-transform:none;line-height:44px;}.footer{background-color:#252628;color:#bbbbbb;}.footer,.footer p{font-size:15px;line-height:30px;}.footer ul li a,.footer .tagcloud a,.footer .wp-caption,.footer button.button,.footer .widget_product_search #swm_product_search_form button.swm-search-button,.footer .widget_search .swm-search-form button.swm-search-button,.footer .gyan-posts-slider-widget .owl-next,.footer .gyan-posts-slider-widget .owl-prev{color:#bbbbbb;}.footer a{color:#bbbbbb;}.footer a:hover,.footer #wp-calendar tbody td a,.footer ul.menu > li ul li.current-menu-item > a,.footer .widget-nav-menu ul li.current-menu-item > a,.footer .widget_categories ul li.current-cat > a,.footer .widget.woocommerce ul li.current-cat a,.footer .widget ul li a:hover,.footer .recent_posts_slider_title p a:hover,.footer .recent_posts_slider_title span a:hover,.footer a.twitter_time:hover,.footer .swm-list-widgets ul li:hover:before,.footer .gyan-posts-slider-widget .owl-next:hover,.footer .gyan-posts-slider-widget .owl-prev:hover{color:#ffffff;}.footer .gyan-posts-slider-widget .owl-dot.active{border-color:#ffffff;}.footer .widget_search .swm-search-form input[type="text"]{color:#bbbbbb;text-shadow:none;}.footer .widget_search .swm-search-form input[type="text"]::-webkit-input-placeholder{color:#bbbbbb;}.footer .widget_search .swm-search-form input[type="text"]::-moz-placeholder{color:#bbbbbb;}.footer .widget_search .swm-search-form input[type="text"]::-ms-placeholder{color:#bbbbbb;}.footer .widget_search .swm-search-form input[type="text"]::placeholder{color:#bbbbbb;}.footer #widget_search_form #searchform #s,.footer #widget_search_form #searchform input.button,.footer .tagcloud a,.footer #swm_product_search_form button.swm-search-button i,.footer .gyan-posts-slider-widget .owl-dot{border-color:#343538;}.footer .input-text,.footer input[type="text"],.footer input[type="password"],.footer input[type="email"],.footer input[type="number"],.footer input[type="url"],.footer input[type="tel"],.footer input[type="search"],.footer textarea,.footer select,.footer #wp-calendar thead th,.footer #wp-calendar tbody td,.footer #wp-calendar tbody td:hover,.footer input[type="text"]:focus,.footer input[type="password"]:focus,.footer input[type="email"]:focus,.footer input[type="number"]:focus,.footer input[type="url"]:focus,.footer input[type="tel"]:focus,.footer input[type="search"]:focus,.footer textarea:focus,.footer #widget_search_form #searchform #s:focus{color:#bbbbbb;border-color:#343538;}.footer .swm-footer-widget h3{font-size:20px;color:#ffffff;letter-spacing:0px;text-transform:none;line-height:30px;}.footer .swm-footer-widget,.footer .swm-fb-subscribe-wid{margin-bottom:30px;}.footer .widget_meta ul li:before,.footer .widget_categories ul li:before,.footer .widget_pages ul li:before,.footer .widget_archive ul li:before,.footer .widget_recent_comments ul li:before,.footer .widget_recent_entries ul li:before,.footer .widget-nav-menu ul li:before,.footer .widget_product_categories ul li:before,.footer .archives-link ul li:before,.footer .widget_rss ul li:before,.footer .widget-nav-menu ul li.current-menu-item:before,.footer .widget_categories ul li.current-cat:before{color:#bbbbbb}.footer #wp-calendar thead th,.footer #wp-calendar tbody td,.footer .tagcloud a:hover,.footer ul li.cat-item small,.footer .wp-caption,.footer a.button,.footer a.button:hover,.footer .gyan-recent-posts-large-title,.footer button.button{background:#1c1d1f}.footer select{background-color:#1c1d1f}.footer .gyan-recent-posts-tiny ul li a{color:#bbbbbb;}.footer .swm-small-footer{font-size:15px;color:#aaaaaa;}.footer .swm-small-footer a{color:#aaaaaa;}.footer .swm-small-footer a:hover{color:#ffffff;}.swm_contact_footer,.swm_contact_footer a{color:#ffffff;}.swm_contact_footer_holder{background:#191a1c;}.swm-cf-m-column{background:#63af36;}.swm_contact_footer:before{border-color:#3b3c3f;}</style>
+
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0.49803921568627"></feFuncR><feFuncG type="table" tableValues="0 0.49803921568627"></feFuncG><feFuncB type="table" tableValues="0 0.49803921568627"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0 1"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1"></feFuncR><feFuncG type="table" tableValues="0 0.27843137254902"></feFuncG><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0"></feFuncR><feFuncG type="table" tableValues="0 0.64705882352941"></feFuncG><feFuncB type="table" tableValues="0 1"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.78039215686275 1"></feFuncR><feFuncG type="table" tableValues="0 0.94901960784314"></feFuncG><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0.44705882352941 0.4"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.098039215686275 1"></feFuncR><feFuncG type="table" tableValues="0 0.66274509803922"></feFuncG><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg>
+
+	
+	<div class="swm_searchbox_holder">
+	<div class="swm_searchbox_table">
+		<div class="swm_searchbox_close swm-transition" style="display: none;"><span></span></div>
+		<div class="swm_searchbox_table_cell">
+			<div class="swm_container">
+				<div class="swm_overlay_search_box">
+					<form method="get" action="https://apexexim.com.vn//" class="swm-search-form">
+				<div class="swm-search-form_inner">
+					<input type="text" placeholder="Search..." name="s" class="swm-search-form-input" autocomplete="off" style="">
+					<button type="submit" class="swm-search-button swm-css-transition"><i class="fas fa-search"></i></button>
+					<div class="clear"></div>
+				</div>
+			</form>				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	<div id="swm-page">
+		<div id="swm-outer-wrap" class="clear">	<div class="swm-main-container swm-topbar-main-container swm-hide-mobile">
+		<div class="swm-topbar-inner-container">
+			<div class="swm-topbar">
+				<div class="swm-container">
+					<div class="swm-topbar-content swm-css-transition">
+
+						<div class="left">
+							<ul id="swm_tb_left" class="swm_tb_left"><li id="menu-item-469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-469 megamenu-first-element"><a href="#"><span><i class="fas fa-phone"></i><span>+84 981 024 141</span></span></a></li><li id="menu-item-468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-468 megamenu-first-element"><a href="mailto:sales@apexexim.com.vn"><span><i class="fas fa-envelope"></i><span>sales@apexexim.com.vn</span></span></a></li></ul>						</div>
+
+						
+						<div class="right ">
+							<ul id="swm_tb_right" class="swm_tb_right"><li id="menu-item-470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-470 megamenu-first-element"><a href="#"><span><i class="fas fa-clock"></i><span>Mon – Fri: 8:00am – 7:00pm</span></span></a></li></ul>															<ul class="swm-topbar-socials">
+													<li class="swm_sm_ic"><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+								<li class="swm_sm_ic"><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+								<li class="swm_sm_ic"><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+								<li class="swm_sm_ic"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+												</ul>
+								<div class="clear"></div>
+													</div>
+
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+			<div id="swm-wrap" class="clear">
+				<div class="swm-all-header-wrapper">
+	<div class="swm-main-container swm-header-main-container header_1 brd-large">
+		
+			<div class="swm-header header_1s" id="swm-header">
+		<div class="swm-header-container-wrap" id="swm-main-nav-holder" data-sticky-hide="768">
+			<div class="swm-container header-main">
+
+				<div class="swm-header-logo-section">
+					
+	<div class="swm-logo">
+		<div class="swm-logo-img">
+			<a href="https://apexexim.com.vn/" title="We Pack Fruits &amp; Vegetable In Asia">
+				<img class="swm-std-logo" style="max-width:100px;" src="https://apexexim.com.vn/wp-content/uploads/2020/10/ApexExim-1.png" alt="We Pack Fruits &amp; Vegetable In Asia">
+				<img class="swm-sticky-logo" style="max-width:70px;" src="https://apexexim.com.vn/wp-content/uploads/2020/10/ApexExim-sticky.png" alt="We Pack Fruits &amp; Vegetable In Asia">
+			</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+				</div>
+
+				
+					<div class="swm-header-button-search">
+
+													<div class="swm-header-search">
+								<span class="swm-transition"><i class="fas fa-search"></i></span>
+							</div>
+						
+						
+													<div class="swm-header-button-wrap swm-hide-">
+								<div class="swm-header-button swm-css-transition swm-heading-text"><a href="https://apexexim.com.vn/contacts/" target="_self">Get A Quote</a></div>
+							</div>
+											</div>
+				
+				<div class="swm-header-menu-section-wrap">
+					<div class="swm-header-menu-section" id="swm-primary-navigation">
+
+						<div class="swm-main-nav">
+
+							<div id="swm-mobi-nav-icon">
+								<div id="swm-mobi-nav-btn"><span class="swm-mobi-nav-btn-box"><span class="swm-transition"><span class="swm-transition"></span></span></span></div>
+								<div class="clear"></div>
+							</div>
+
+							<div class="swm-primary-nav-wrap">
+								<ul id="swm-primary-nav" class="swm-primary-nav"><li id="menu-item-2058" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-159 current_page_item menu-item-2058 megamenu-first-element swm-m-active"><a href="https://apexexim.com.vn/"><span>Home</span></a></li><li id="menu-item-2059" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2059 megamenu-first-element"><a href="https://apexexim.com.vn/about-us/"><span>About Us</span></a></li><li id="menu-item-2103" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2103 megamenu-first-element"><a href="https://apexexim.com.vn/shop/"><span>Product</span></a></li><li id="menu-item-2062" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2062 megamenu-first-element"><a href="https://apexexim.com.vn/blog/"><span>Blog</span></a></li><li id="menu-item-2213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2213 megamenu-first-element"><a href="https://apexexim.com.vn/block-gallery/"><span>Gallery</span></a></li><li id="menu-item-2057" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2057 megamenu-first-element"><a href="https://apexexim.com.vn/contacts/"><span>Contacts</span></a></li></ul>							</div>
+							<div class="clear"></div>
+
+						</div>
+						<div class="clear"></div>
+
+					</div>  <!-- swm-header-menu-section -->
+				</div>
+
+				<div class="clear"></div>
+
+				<div id="swm-mobi-nav">
+					<span class="swm-mobi-nav-close"></span>
+					<div class="clear"></div>
+				<ul id="swm-primary-nav" class=""><li id="menu-item-2058" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-159 current_page_item menu-item-2058 megamenu-first-element swm-m-active"><a href="https://apexexim.com.vn/"><span>Home</span></a></li><li id="menu-item-2059" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2059 megamenu-first-element"><a href="https://apexexim.com.vn/about-us/"><span>About Us</span></a></li><li id="menu-item-2103" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2103 megamenu-first-element"><a href="https://apexexim.com.vn/shop/"><span>Product</span></a></li><li id="menu-item-2062" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2062 megamenu-first-element"><a href="https://apexexim.com.vn/blog/"><span>Blog</span></a></li><li id="menu-item-2213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2213 megamenu-first-element"><a href="https://apexexim.com.vn/block-gallery/"><span>Gallery</span></a></li><li id="menu-item-2057" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2057 megamenu-first-element"><a href="https://apexexim.com.vn/contacts/"><span>Contacts</span></a></li></ul></div>
+				<div id="swm-mobi-nav-overlay-bg" class="swm-css-transition"></div>
+
+			</div>   <!-- swm-container -->
+
+		</div> <!-- swm-header-container-wrap -->
+
+</div> <!-- .swm-header -->			<div class="clear"></div>
+
+			
+	</div>	<!-- swm-header-main-container -->
+</div><div class="swm-header-placeholder" data-header-d="100" data-header-t="107" data-header-m="80"></div>		<div class="swm-header-slider">
+			
+			<!-- START Home Two REVOLUTION SLIDER 6.2.21 -->
+			<rs-fullwidth-wrap id="rev_slider_2_1_forcefullwidth" style="margin-top:0px;margin-bottom:0px;"><rs-module-wrap id="rev_slider_2_1_wrapper" data-source="gallery" style="background: rgb(246, 243, 238); padding: 0px; margin: 0px auto; visibility: visible; position: absolute; overflow: visible; width: 1280px; left: 0px; height: 400px;"><rs-module id="rev_slider_2_1" style="height: 400px; max-height: 400px; margin-bottom: 0px; margin-top: 0px;" data-version="6.2.21" data-idcheck="true" class="revslider-initialised rev_redraw_on_blurfocus" data-slideactive="rs-4">
+					
+				<rs-loader class="spinner0 " style="display: none;"><div class="dot1"></div><div class="dot2"></div><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></rs-loader><rs-arrow style="opacity: 1; transform: translate(30px, -50px); top: 50%; left: 0px;" class="tp-leftarrow tparrows hades"><div class="tp-arr-allwrapper">	<div class="tp-arr-imgholder" style="background-image: url(&quot;//apexexim.com.vn/wp-content/uploads/2021/02/Slide1-bg-50x100.jpg&quot;);"></div></div></rs-arrow><rs-arrow style="opacity: 1; transform: translate(-130px, -50px); top: 50%; left: 100%;" class="tp-rightarrow tparrows hades"><div class="tp-arr-allwrapper">	<div class="tp-arr-imgholder" style="background-image: url(&quot;//apexexim.com.vn/wp-content/uploads/2021/02/Slide1-bg-50x100.jpg&quot;);"></div></div></rs-arrow><rs-progress style="visibility:hidden;"><rs-progress-bar style="background: rgba(255, 255, 255, 0.5); transform-origin: 0% 50%; transform: scale(0, 1);"></rs-progress-bar></rs-progress><rs-slides style="visibility: visible; max-height: none; height: 100%; width: 100%; overflow: hidden;">
+						<rs-slide data-key="rs-2" data-title="Slide" data-thumb="//apexexim.com.vn/wp-content/uploads/2021/02/Slide1-bg-50x100.jpg" data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;" data-originalindex="1" data-origindex="0" data-description="" data-sba="" data-scroll-based="false" style="overflow: hidden; height: 100%; width: 100%; z-index: 18; opacity: 1; visibility: inherit;" data-owidth="1800" data-oheight="600" data-rspausetimeronce="0" data-ntrid="0" data-isactiveslide="true"><rs-sbg-px style="background-color: transparent;"><rs-sbg-wrap data-owidth="1800" data-oheight="600" style="transform-origin: 50% 50%; visibility: inherit; opacity: 1; transform: perspective(600px);"><!--Runtime Modification - Img tag is Still Available for SEO Goals in Source - <img src="//apexexim.com.vn/wp-content/uploads/2021/02/Slide1-bg.jpg" title="Slide1-bg" width="1800" height="600" class="rev-slidebg" data-no-retina="">--><rs-sbg src="https://apexexim.com.vn/wp-content/uploads/2021/02/Slide1-bg.jpg" class="" data-bgcolor="transparent" style="background-color: transparent; background-repeat: no-repeat; background-image: url(&quot;https://apexexim.com.vn/wp-content/uploads/2021/02/Slide1-bg.jpg&quot;); background-size: cover; background-position: 50% 50%; width: 100%; height: 100%; opacity: 1; transform: translate(0px, 0px); visibility: inherit; z-index: 20;" data-src-rs-ref="https://apexexim.com.vn/wp-content/uploads/2021/02/Slide1-bg.jpg"></rs-sbg></rs-sbg-wrap></rs-sbg-px>
+							
+<!--
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: -15px; top: 24px; z-index: 23; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-2-slide-2-layer-0" data-type="image" data-rsp_ch="on" data-xy="x:-40px;y:b;yo:20px;" data-text="w:normal;" data-dim="w:474px;h:356px;" data-frame_0="y:50;" data-frame_1="st:100;sp:1000;sR:100;" data-frame_999="o:0;st:w;sR:7900;" style="z-index: 23; color: rgb(255, 255, 255); width: 474px; height: 356px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="https://apexexim.com.vn/wp-content/uploads/2020/11/lemon.png" width="474" height="356" data-no-retina="" data-src-rs-ref="https://apexexim.com.vn/wp-content/uploads/2020/11/lemon.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: 446px; top: 23px; z-index: 16; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-2-slide-2-layer-1" data-type="text" data-color="#63af36" data-rsp_ch="on" data-xy="x:421px;y:c;yo:-127px;" data-text="w:normal;s:45;l:50;fw:700;" data-dim="w:568px;" data-vbility="t,t,f,f" data-frame_0="y:50;" data-frame_1="st:270;sp:1000;sR:270;" data-frame_999="o:0;st:w;sR:7730;" style="z-index: 16; font-family: &quot;Fira Sans&quot;; height: auto; color: rgb(99, 175, 54); text-decoration: none; white-space: normal; width: 568px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: left; line-height: 50px; letter-spacing: 0px; font-weight: 700; font-size: 45px; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true">Fresh, Healthy &amp; <br>Organic 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: 455px; top: 125px; z-index: 15; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-2-slide-2-layer-3" data-type="text" data-color="#032e42" data-rsp_ch="on" data-xy="x:430px;y:c;yo:-45px;" data-text="w:normal;s:40;l:60;fw:700;" data-vbility="t,t,f,f" data-frame_0="y:50;" data-frame_1="st:450;sp:1000;sR:450;" data-frame_999="o:0;st:w;sR:7550;" style="z-index: 15; font-family: &quot;Fira Sans&quot;; height: auto; width: auto; color: rgb(3, 46, 66); text-decoration: none; white-space: nowrap; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: left; line-height: 60px; letter-spacing: 0px; font-weight: 700; font-size: 40px; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true">Delicious Fruits 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: 460px; top: 182px; z-index: 13; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-2-slide-2-layer-4" data-type="text" data-color="#676767" data-rsp_ch="on" data-xy="x:435px;y:c;yo:32px;" data-text="w:normal;s:21;l:33;" data-dim="w:575px;" data-vbility="t,t,f,f" data-frame_0="y:50;" data-frame_1="st:740;sp:1000;sR:740;" data-frame_999="o:0;st:w;sR:7260;" style="z-index: 13; font-family: Roboto; height: auto; color: rgb(103, 103, 103); text-decoration: none; white-space: normal; width: 575px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: left; line-height: 33px; letter-spacing: 0px; font-weight: 400; font-size: 21px; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true">Sources of many essential nutrients that <br>are underconsumed, including potassium, <br>dietary fiber, vitamin C, and folate (folic acid) 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: 460px; top: 304px; z-index: 10; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><a id="slider-2-slide-2-layer-7" class="rs-layer rev-btn" href="http://bizix.premiumthemes.in/about-us/" target="_self" rel="nofollow" data-type="button" data-color="#ffffff" data-rsp_ch="on" data-xy="x:435px;y:c;yo:132px;" data-text="w:normal;s:16;l:55;fw:700;a:center;" data-dim="w:152px;minh:0px;" data-vbility="t,t,f,f" data-border="bor:3px,3px,3px,3px;" data-frame_0="y:50;" data-frame_1="st:870;sp:1000;sR:870;" data-frame_999="o:0;st:w;sR:7130;" data-frame_hover="bgc:#252628;bor:3px,3px,3px,3px;sp:100;e:power1.inOut;bri:120%;" style="z-index: 10; background-color: rgb(99, 175, 54); font-family: Roboto; height: auto; color: rgb(255, 255, 255); text-decoration: none; white-space: normal; width: 152px; min-height: 0px; min-width: 0px; max-height: none; text-align: center; line-height: 55px; letter-spacing: 0px; font-weight: 700; font-size: 16px; border-radius: 3px; filter: blur(0px) grayscale(0%) brightness(100%); transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" data-idcheck="true" data-stylerecorder="true" data-initialised="true">Learn More 
+							</a></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: 1589px; top: 92px; z-index: 18; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-2-slide-2-layer-12" data-type="image" data-rsp_ch="on" data-xy="x:1564px;y:92px;" data-text="w:normal;" data-dim="w:50px;h:53px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index: 18; color: rgb(255, 255, 255); width: 50px; height: 53px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art4.png" alt="slider art" width="50" height="53" data-no-retina="" data-src-rs-ref="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art4.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: -299px; top: 383px; z-index: 19; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-2-slide-2-layer-14" data-type="image" data-rsp_ch="on" data-xy="x:-324px;y:383px;" data-text="w:normal;" data-dim="w:65px;h:68px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index: 19; color: rgb(255, 255, 255); width: 65px; height: 68px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art5.png" alt="slider art" width="65" height="68" data-no-retina="" data-src-rs-ref="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art5.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: 1592px; top: 277px; z-index: 17; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-2-slide-2-layer-15" data-type="image" data-rsp_ch="on" data-xy="x:1567px;y:277px;" data-text="w:normal;" data-dim="w:445px;h:301px;" data-frame_0="x:50;" data-frame_1="st:370;sp:1000;sR:370;" data-frame_999="o:0;st:w;sR:7630;" style="z-index: 17; color: rgb(255, 255, 255); width: 445px; height: 301px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="https://apexexim.com.vn/wp-content/uploads/2020/02/slider1-art6.png" alt="slider art" width="445" height="301" data-no-retina="" data-src-rs-ref="https://apexexim.com.vn/wp-content/uploads/2020/02/slider1-art6.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: 1249px; top: 592px; z-index: 21; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-2-slide-2-layer-17" data-type="image" data-rsp_ch="on" data-xy="x:1224px;y:592px;" data-text="w:normal;" data-dim="w:159px;h:138px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index: 21; color: rgb(255, 255, 255); width: 159px; height: 138px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art3.png" alt="slider art" width="159" height="138" data-no-retina="" data-src-rs-ref="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art3.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap rs-forcehidden" style="position: absolute; display: block; pointer-events: none; left: -276px; top: 51px; z-index: 22; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-2-slide-2-layer-18" data-type="image" data-rsp_ch="on" data-xy="x:-301px;y:51px;" data-text="w:normal;" data-dim="w:100px;h:93px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index: 22; color: rgb(255, 255, 255); width: 100px; height: 93px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art1.png" alt="slider art" width="100" height="93" data-no-retina="" data-src-rs-ref="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art1.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-4" data-title="Slide" data-thumb="//apexexim.com.vn/wp-content/uploads/2021/02/slide2-50x100.jpg" data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;" data-originalindex="2" data-origindex="1" data-description="" data-sba="" data-scroll-based="false" style="overflow: hidden; height: 100%; width: 100%; z-index: 20; opacity: 1; visibility: inherit;" data-owidth="1800" data-oheight="600" data-rspausetimeronce="0" data-ntrid="0"><rs-sbg-px style="background-color: transparent;"><rs-sbg-wrap data-owidth="1800" data-oheight="600" style="transform-origin: 50% 50%; visibility: inherit; opacity: 0.0011; transform: perspective(600px) translate3d(0px, 0px, 0px);"><!--Runtime Modification - Img tag is Still Available for SEO Goals in Source - <img src="//apexexim.com.vn/wp-content/uploads/2021/02/slide2.jpg" title="slide2" width="1800" height="600" class="rev-slidebg" data-no-retina="">--><rs-sbg src="https://apexexim.com.vn/wp-content/uploads/2021/02/slide2.jpg" class="" data-bgcolor="transparent" style="background-color: transparent; background-repeat: no-repeat; background-image: url(&quot;https://apexexim.com.vn/wp-content/uploads/2021/02/slide2.jpg&quot;); background-size: cover; background-position: 50% 50%; width: 100%; height: 100%; opacity: 1; transform: translate(0px, 0px); visibility: inherit;" data-src-rs-ref="https://apexexim.com.vn/wp-content/uploads/2021/02/slide2.jpg"></rs-sbg></rs-sbg-wrap></rs-sbg-px>
+							
+<!--
+							--><rs-layer-wrap class="rs-parallax-wrap " style="position: absolute; display: block; pointer-events: none; left: 61px; top: 30px; z-index: 23;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-2-slide-4-layer-0" data-type="image" data-rsp_ch="on" data-xy="x:36px;y:b;yo:2px;" data-text="w:normal;" data-dim="w:391px;h:368.80810810810806px;" data-frame_0="y:50;" data-frame_1="st:100;sp:1000;sR:100;" data-frame_999="o:0;st:w;sR:7900;" style="z-index: 23; color: rgb(255, 255, 255); width: 391px; height: 368px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 50px);" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="https://apexexim.com.vn/wp-content/uploads/2020/12/Guava.png" alt="Guava Apexexim" width="740" height="698" data-no-retina="" data-src-rs-ref="https://apexexim.com.vn/wp-content/uploads/2020/12/Guava.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style="position: absolute; display: block; pointer-events: none; left: 455px; top: 67px; z-index: 16;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-2-slide-4-layer-1" data-type="text" data-color="#63af36" data-rsp_ch="on" data-xy="x:430px;y:c;yo:-120px;" data-text="w:normal;s:45;fw:700;" data-dim="w:568px;" data-vbility="t,t,f,f" data-frame_0="y:50;" data-frame_1="st:270;sp:1000;sR:270;" data-frame_999="o:0;st:w;sR:7730;" style="z-index: 16; font-family: &quot;Fira Sans&quot;; height: auto; color: rgb(99, 175, 54); text-decoration: none; white-space: normal; width: 568px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: left; line-height: 25px; letter-spacing: 0px; font-weight: 700; font-size: 45px; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 50px);" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true">Fresh Fruit Guava 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style="position: absolute; display: block; pointer-events: none; left: 460px; top: 135px; z-index: 15;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-2-slide-4-layer-3" data-type="text" data-color="#032e42" data-rsp_ch="on" data-xy="x:435px;y:c;yo:-52px;" data-text="w:normal;s:40;l:25;fw:700;" data-vbility="t,t,f,f" data-frame_0="y:50;" data-frame_1="st:450;sp:1000;sR:450;" data-frame_999="o:0;st:w;sR:7550;" style="z-index: 15; font-family: &quot;Fira Sans&quot;; height: auto; width: auto; color: rgb(3, 46, 66); text-decoration: none; white-space: nowrap; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: left; line-height: 25px; letter-spacing: 0px; font-weight: 700; font-size: 40px; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 50px);" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true">Premium Quality  Fruit 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style="position: absolute; display: block; pointer-events: none; left: 460px; top: 169px; z-index: 13;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-2-slide-4-layer-4" data-type="text" data-color="#676767" data-rsp_ch="on" data-xy="x:435px;y:c;yo:2px;" data-text="w:normal;s:21;l:33;" data-dim="w:575px;" data-vbility="t,t,f,f" data-frame_0="y:50;" data-frame_1="st:740;sp:1000;sR:740;" data-frame_999="o:0;st:w;sR:7260;" style="z-index: 13; font-family: Roboto; height: auto; color: rgb(103, 103, 103); text-decoration: none; white-space: normal; width: 575px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: left; line-height: 33px; letter-spacing: 0px; font-weight: 400; font-size: 21px; transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 50px);" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true">100% organic fruits. Order now and get<br> attractive offers and discounts !! 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style="position: absolute; display: block; pointer-events: none; left: 460px; top: 282px; z-index: 10;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><a id="slider-2-slide-4-layer-7" class="rs-layer rev-btn" href="http://bizix.premiumthemes.in/about-us/" target="_self" rel="nofollow" data-type="button" data-color="#ffffff" data-rsp_ch="on" data-xy="x:435px;y:c;yo:110px;" data-text="w:normal;s:16;l:55;fw:700;a:center;" data-dim="w:152px;minh:0px;" data-vbility="t,t,f,f" data-border="bor:3px,3px,3px,3px;" data-frame_0="y:50;" data-frame_1="st:870;sp:1000;sR:870;" data-frame_999="o:0;st:w;sR:7130;" data-frame_hover="bgc:#252628;bor:3px,3px,3px,3px;sp:100;e:power1.inOut;bri:120%;" style="z-index: 10; background-color: rgb(99, 175, 54); font-family: Roboto; height: auto; color: rgb(255, 255, 255); text-decoration: none; white-space: normal; width: 152px; min-height: 0px; min-width: 0px; max-height: none; text-align: center; line-height: 55px; letter-spacing: 0px; font-weight: 700; font-size: 16px; border-radius: 3px; filter: blur(0px) grayscale(0%) brightness(100%); transform-origin: 50% 50%; opacity: 0; transform: translate(0px, 50px);" data-idcheck="true" data-stylerecorder="true" data-initialised="true">Learn More 
+							</a></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style="position: absolute; display: block; pointer-events: none; left: 1589px; top: 92px; z-index: 18;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-2-slide-4-layer-12" data-type="image" data-rsp_ch="on" data-xy="x:1564px;y:92px;" data-text="w:normal;" data-dim="w:50px;h:53px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index: 18; color: rgb(255, 255, 255); width: 50px; height: 53px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0.0001; transform: translate3d(0px, 0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art4.png" alt="slider art" width="50" height="53" data-no-retina="" data-src-rs-ref="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art4.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style="position: absolute; display: block; pointer-events: none; left: -299px; top: 383px; z-index: 19;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-2-slide-4-layer-14" data-type="image" data-rsp_ch="on" data-xy="x:-324px;y:383px;" data-text="w:normal;" data-dim="w:65px;h:68px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index: 19; color: rgb(255, 255, 255); width: 65px; height: 68px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0.0001; transform: translate3d(0px, 0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art5.png" alt="slider art" width="65" height="68" data-no-retina="" data-src-rs-ref="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art5.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style="position: absolute; display: block; pointer-events: none; left: 1592px; top: 277px; z-index: 17;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-2-slide-4-layer-15" data-type="image" data-rsp_ch="on" data-xy="x:1567px;y:277px;" data-text="w:normal;" data-dim="w:445px;h:301px;" data-frame_0="x:50;" data-frame_1="st:370;sp:1000;sR:370;" data-frame_999="o:0;st:w;sR:7630;" style="z-index: 17; color: rgb(255, 255, 255); width: 445px; height: 301px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0; transform: translate(50px, 0px);" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="https://apexexim.com.vn/wp-content/uploads/2020/02/slider1-art6.png" alt="slider art" width="445" height="301" data-no-retina="" data-src-rs-ref="https://apexexim.com.vn/wp-content/uploads/2020/02/slider1-art6.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style="position: absolute; display: block; pointer-events: none; left: 1249px; top: 592px; z-index: 21;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-2-slide-4-layer-17" data-type="image" data-rsp_ch="on" data-xy="x:1224px;y:592px;" data-text="w:normal;" data-dim="w:159px;h:138px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index: 21; color: rgb(255, 255, 255); width: 159px; height: 138px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0.0001; transform: translate3d(0px, 0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art3.png" alt="slider art" width="159" height="138" data-no-retina="" data-src-rs-ref="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art3.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap " style="position: absolute; display: block; pointer-events: none; left: -276px; top: 51px; z-index: 22;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-2-slide-4-layer-18" data-type="image" data-rsp_ch="on" data-xy="x:-301px;y:51px;" data-text="w:normal;" data-dim="w:100px;h:93px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index: 22; color: rgb(255, 255, 255); width: 100px; height: 93px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 0.0001; transform: translate3d(0px, 0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><img src="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art1.png" alt="slider art" width="100" height="93" data-no-retina="" data-src-rs-ref="https://apexexim.com.vn/wp-content/uploads/2020/02/slider2-art1.png" style="position: relative; height: 100%; width: 100%;"> 
+							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
+-->						</rs-slide>
+					</rs-slides></rs-module>
+				
+				<script type="text/javascript">
+					setREVStartSize({c: 'rev_slider_2_1',rl:[1240,1024,778,480],el:[400],gw:[1230],gh:[400],type:'standard',justify:'',layout:'fullwidth',mh:"0"});
+					var	revapi2,
+						tpj;
+					function revinit_revslider21() {
+					jQuery(function() {
+						tpj = jQuery;
+						revapi2 = tpj("#rev_slider_2_1");
+						if(revapi2==undefined || revapi2.revolution == undefined){
+							revslider_showDoubleJqueryError("rev_slider_2_1");
+						}else{
+							revapi2.revolution({
+								sliderLayout:"fullwidth",
+								visibilityLevels:"1240,1024,778,480",
+								gridwidth:1230,
+								gridheight:400,
+								spinner:"spinner0",
+								perspective:600,
+								perspectiveType:"local",
+								editorheight:"400,768,960,720",
+								responsiveLevels:"1240,1024,778,480",
+								progressBar:{disableProgressBar:true},
+								navigation: {
+									arrows: {
+										enable:true,
+										tmp:"<div class=\"tp-arr-allwrapper\">	<div class=\"tp-arr-imgholder\"></div></div>",
+										style:"hades",
+										rtl:true,
+										animSpeed:"500ms",
+										animDelay:"500ms",
+										left: {
+											h_offset:30
+										},
+										right: {
+											h_offset:30
+										}
+									}
+								},
+								fallbacks: {
+									allowHTML5AutoPlayOnAndroid:true
+								},
+							});
+						}
+						
+					});
+					} // End of RevInitScript
+				if (document.readyState === "loading") window.addEventListener('DOMContentLoaded',function() { revinit_revslider21();}); else revinit_revslider21();
+				</script>
+				<script>
+					var htmlDivCss = unescape("%23rev_slider_2_1_wrapper%20.hades.tparrows%20%7B%0A%09cursor%3Apointer%3B%0A%09background%3Argba%280%2C0%2C0%2C0.25%29%3B%0A%09width%3A100px%3B%0A%09height%3A100px%3B%0A%09position%3Aabsolute%3B%0A%09display%3Ablock%3B%0A%09z-index%3A1000%3B%0A%7D%0A%0A%23rev_slider_2_1_wrapper%20.hades.tparrows%3Abefore%20%7B%0A%09font-family%3A%20%27revicons%27%3B%0A%09font-size%3A30px%3B%0A%09color%3A%23ffffff%3B%0A%09display%3Ablock%3B%0A%09line-height%3A%20100px%3B%0A%09text-align%3A%20center%3B%0A%20%20transition%3A%20background%200.3s%2C%20color%200.3s%3B%0A%7D%0A%23rev_slider_2_1_wrapper%20.hades.tparrows.tp-leftarrow%3Abefore%20%7B%0A%09content%3A%20%27%5Ce824%27%3B%0A%7D%0A%23rev_slider_2_1_wrapper%20.hades.tparrows.tp-rightarrow%3Abefore%20%7B%0A%09content%3A%20%27%5Ce825%27%3B%0A%7D%0A%0A%23rev_slider_2_1_wrapper%20.hades.tparrows%3Ahover%3Abefore%20%7B%0A%20%20%20color%3Argba%280%2C0%2C0%2C0.5%29%3B%0A%20%20%20background%3A%23ffffff%3B%0A%20%7D%0A%23rev_slider_2_1_wrapper%20.hades%20.tp-arr-allwrapper%20%7B%0A%20%20position%3Aabsolute%3B%0A%20%20left%3A100%25%3B%0A%20%20top%3A0px%3B%0A%20%20background%3A%23888%3B%20%0A%20%20width%3A100px%3Bheight%3A100px%3B%0A%20%20-webkit-transition%3A%20all%200.3s%3B%0A%20%20transition%3A%20all%200.3s%3B%0A%20%20-ms-filter%3A%20%27progid%3Adximagetransform.microsoft.alpha%28opacity%3D0%29%27%3B%0A%20%20filter%3A%20alpha%28opacity%3D0%29%3B%0A%20%20-moz-opacity%3A%200.0%3B%0A%20%20-khtml-opacity%3A%200.0%3B%0A%20%20opacity%3A%200.0%3B%0A%20%20-webkit-transform%3A%20rotatey%28-90deg%29%3B%0A%20%20transform%3A%20rotatey%28-90deg%29%3B%0A%20%20-webkit-transform-origin%3A%200%25%2050%25%3B%0A%20%20transform-origin%3A%200%25%2050%25%3B%0A%7D%0A%23rev_slider_2_1_wrapper%20.hades.tp-rightarrow%20.tp-arr-allwrapper%20%7B%0A%20%20%20left%3Aauto%3B%0A%20%20%20right%3A100%25%3B%0A%20%20%20-webkit-transform-origin%3A%20100%25%2050%25%3B%0A%20%20transform-origin%3A%20100%25%2050%25%3B%0A%20%20%20-webkit-transform%3A%20rotatey%2890deg%29%3B%0A%20%20transform%3A%20rotatey%2890deg%29%3B%0A%7D%0A%0A%23rev_slider_2_1_wrapper%20.hades%3Ahover%20.tp-arr-allwrapper%20%7B%0A%20%20%20-ms-filter%3A%20%27progid%3Adximagetransform.microsoft.alpha%28opacity%3D100%29%27%3B%0A%20%20filter%3A%20alpha%28opacity%3D100%29%3B%0A%20%20-moz-opacity%3A%201%3B%0A%20%20-khtml-opacity%3A%201%3B%0A%20%20opacity%3A%201%3B%20%20%0A%20%20%20%20-webkit-transform%3A%20rotatey%280deg%29%3B%0A%20%20transform%3A%20rotatey%280deg%29%3B%0A%0A%20%7D%0A%20%20%20%20%0A%23rev_slider_2_1_wrapper%20.hades%20.tp-arr-iwrapper%20%7B%0A%7D%0A%23rev_slider_2_1_wrapper%20.hades%20.tp-arr-imgholder%20%7B%0A%20%20background-size%3Acover%3B%0A%20%20position%3Aabsolute%3B%0A%20%20top%3A0px%3Bleft%3A0px%3B%0A%20%20width%3A100%25%3Bheight%3A100%25%3B%0A%7D%0A%23rev_slider_2_1_wrapper%20.hades%20.tp-arr-titleholder%20%7B%0A%7D%0A%23rev_slider_2_1_wrapper%20.hades%20.tp-arr-subtitleholder%20%7B%0A%7D%0A%0A");
+					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+					if(htmlDiv) {
+						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+					}else{
+						var htmlDiv = document.createElement('div');
+						htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+					}
+				</script>
+				<script>
+					var htmlDivCss = unescape("%0A%0A");
+					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+					if(htmlDiv) {
+						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+					}else{
+						var htmlDiv = document.createElement('div');
+						htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+					}
+				</script>
+			</rs-module-wrap><rs-fw-forcer style="height:400px"></rs-fw-forcer></rs-fullwidth-wrap>
+			<!-- END REVOLUTION SLIDER -->
+ </div>
+					<div class="swm-main-container swm-site-content swm-css-transition">	<div class="swm-container swm-layout-full-width swm-post-sidebar-page">
+		<div class="swm-column swm-custom-two-third">
+			<div class="swm_page_container page_style_box">
+
+				
+					<div class="swm_page_content">
+
+								<div data-elementor-type="wp-page" data-elementor-id="159" class="elementor elementor-159" data-elementor-settings="[]">
+						<div class="elementor-inner">
+							<div class="elementor-section-wrap">
+							<section class="elementor-section elementor-top-section elementor-element elementor-element-cd3506b elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="cd3506b" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" style="width: 1280px; left: -55px;">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4382e2a0" data-id="4382e2a0" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-108aff5f gyan-title-desc-left elementor-widget elementor-widget-gyan_title" data-id="108aff5f" data-element_type="widget" data-widget_type="gyan_title.default">
+				<div class="elementor-widget-container">
+					<div class="gyan-title">
+			<h1 class="gyan-title-heading">We are supplier of most popular fruits &amp; vegetables in Asia</h1><div class="gyan-title-desc">We pack fruits and vegetables with specialized packing material which seals their freshness. You will always receive the freshest products from our company.</div>		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2f60fce9 elementor-widget elementor-widget-text-editor" data-id="2f60fce9" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p>Soft, juicy and sweet Guava. Fresh stock now available at the cheapest prices!<br>Enjoy the benefits of this very nutritious and delicious vegetable with our farm fresh stock. Order today to get the special seasonal rates! <br>Order from our large stock of farm fresh juicy lemon, bursting with flavor. We have a large variety available for juices, concentrations, drinks and flavoring. Order today!</p>					</div>
+						</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-61e6a8cf elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="61e6a8cf" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2f5a33a4" data-id="2f5a33a4" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-4e367fb3 gyan-infobox-position-left gyan-infobox-center-no gyan-hover-animation-none gyan-animation-box-fade elementor-widget elementor-widget-gyan_info_box" data-id="4e367fb3" data-element_type="widget" data-widget_type="gyan_info_box.default">
+				<div class="elementor-widget-container">
+			
+		<div class="gyan-info-box gyan-animation-box gyan-ease-transition">
+
+			
+			
+				<div class="gyan-infobox-icon-holder gyan-ease-transition">
+
+					
+					
+					
+											<span class="gyan-infobox-image">
+							<img width="50" height="50" src="https://apexexim.com.vn/wp-content/uploads/2020/02/icon-megaphone.png" class="attachment-full size-full" alt="" decoding="async" loading="lazy">						</span>
+					
+					
+				</div>
+
+			
+			<div class="gyan-infobox-content-holder">
+
+				
+					<h4 class="gyan-infobox-title gyan-ease-transition">
+												6+											</h4>
+
+				
+				
+				
+					<div class="gyan-infobox-content gyan-ease-transition">
+						Countries We Cater					</div>
+
+				
+				
+				<div class="clear"></div>
+			</div>
+		</div>
+			</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2c791a17" data-id="2c791a17" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-67f6853f gyan-infobox-position-left gyan-infobox-center-no gyan-hover-animation-none gyan-animation-box-fade elementor-widget elementor-widget-gyan_info_box" data-id="67f6853f" data-element_type="widget" data-widget_type="gyan_info_box.default">
+				<div class="elementor-widget-container">
+			
+		<div class="gyan-info-box gyan-animation-box gyan-ease-transition">
+
+			
+			
+				<div class="gyan-infobox-icon-holder gyan-ease-transition">
+
+					
+					
+					
+											<span class="gyan-infobox-image">
+							<img width="52" height="52" src="https://apexexim.com.vn/wp-content/uploads/2020/02/home1-icon1.png" class="attachment-full size-full" alt="" decoding="async" loading="lazy">						</span>
+					
+					
+				</div>
+
+			
+			<div class="gyan-infobox-content-holder">
+
+				
+					<h4 class="gyan-infobox-title gyan-ease-transition">
+												10000											</h4>
+
+				
+				
+				
+					<div class="gyan-infobox-content gyan-ease-transition">
+						Customers Globally					</div>
+
+				
+				
+				<div class="clear"></div>
+			</div>
+		</div>
+			</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-23e7bea2" data-id="23e7bea2" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-088099f elementor-widget elementor-widget-gyan_google_map" data-id="088099f" data-element_type="widget" data-widget_type="gyan_google_map.default">
+				<div class="elementor-widget-container">
+					<div class="gyan-google-map-wrap">
+			<div id="gyan-google-map-088099f" class="gyan-google-map" data-map_options="{&quot;zoom&quot;:3,&quot;mapTypeId&quot;:&quot;roadmap&quot;,&quot;mapTypeControl&quot;:true,&quot;streetViewControl&quot;:true,&quot;zoomControl&quot;:true,&quot;fullscreenControl&quot;:true,&quot;gestureHandling&quot;:true}" data-cluster="no" data-max-width="250" data-locations="[[&quot;25.276987&quot;,&quot;55.296249&quot;,true,&quot;Dubai&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;iw_open&quot;],[&quot;24.774265&quot;,&quot;46.738586&quot;,true,&quot;Saudi Arabia&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;iw_open&quot;],[&quot;25.286106&quot;,&quot;51.534817&quot;,true,&quot;Doha&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;iw_open&quot;],[&quot;23.614328&quot;,&quot;58.545284&quot;,true,&quot;Oman&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;iw_open&quot;],[&quot;10.762622&quot;,&quot;106.660172&quot;,true,&quot;Vietnam&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;iw_open&quot;],[&quot;20.5937&quot;,&quot;78.9629&quot;,true,&quot;India&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;iw_open&quot;]]" data-animate="drop" data-auto-center="center" data-predefined-style="earth" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-err-container"><div class="gm-err-content"><div class="gm-err-icon"><img src="https://maps.gstatic.com/mapfiles/api-3/images/icon_error.png" alt="" draggable="false" style="user-select: none;"></div><div class="gm-err-title">Oops! Something went wrong.</div><div class="gm-err-message">This page didn't load Google Maps correctly. See the JavaScript console for technical details.</div></div></div></div></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-ee60eb8 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ee60eb8" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" style="width: 1280px; left: -55px;">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-34281a64" data-id="34281a64" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-d419dfb elementor-widget elementor-widget-heading" data-id="d419dfb" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default"><a href="https://apexexim.com.vn/product/gauva/">Sweet Guava</a></h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-28caae97" data-id="28caae97" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-29f1aa4 elementor-widget elementor-widget-heading" data-id="29f1aa4" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Sweet Potato</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-7926b10b" data-id="7926b10b" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-429389c elementor-widget elementor-widget-heading" data-id="429389c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Juicy Lemon</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-9ca8fd4 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9ca8fd4" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" style="width: 1280px; left: -55px;">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-48fbcd9" data-id="48fbcd9" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-d5e0be0 elementor-widget elementor-widget-heading" data-id="d5e0be0" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Mango</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a705d27" data-id="a705d27" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-9dad2fd elementor-widget elementor-widget-heading" data-id="9dad2fd" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Pineapple</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4a9926e" data-id="4a9926e" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-4b37573 elementor-widget elementor-widget-heading" data-id="4b37573" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Onion</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-13f3f09b elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="13f3f09b" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" style="width: 1280px; left: -55px;">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5dfce4a5" data-id="5dfce4a5" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-75fe3884 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="75fe3884" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2a46d535" data-id="2a46d535" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-520ca31c gyan-title-st-line-after elementor-widget elementor-widget-gyan_title" data-id="520ca31c" data-element_type="widget" data-widget_type="gyan_title.default">
+				<div class="elementor-widget-container">
+					<div class="gyan-title">
+			<div class="gyan-title-subtitle"><span>About Premium Services</span></div><h2 class="gyan-title-heading">Our Best Services</h2>		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-3537eef1" data-id="3537eef1" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-7b22d1a3 elementor-widget elementor-widget-text-editor" data-id="7b22d1a3" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<h2>Good Food. Organic Farming. Real Taste.</h2>
+Your 100% satisfaction is our guarantee. We aim to resolve any issues with our products as soon as possible.					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-7a6a5a48 gyan-services-overlay-align-left gyan-services-title-sec-b gyan-overlay-animation-sb elementor-grid-3 elementor-grid-tablet-2 elementor-grid-mobile-1 gyan-services-title-align-left elementor-widget elementor-widget-gyan_services" data-id="7a6a5a48" data-element_type="widget" data-settings="{&quot;columns&quot;:&quot;3&quot;,&quot;columns_tablet&quot;:&quot;2&quot;,&quot;columns_mobile&quot;:&quot;1&quot;}" data-widget_type="gyan_services.default">
+				<div class="elementor-widget-container">
+			
+		<div class="gyan-services-container gyan-services-st-1 gyan-services-container-7a6a5a48" data-layout="grid" data-rtl="false">
+
+			<div class="gyan-services-items gyan-elementor-grid" style="position: relative; height: 524.344px;">
+
+				
+					<div class="gyan-service-item gyan-grid-item-wrap" style="position: absolute; left: 0px; top: 0px;">
+						<div class="gyan-services gyan-grid-item gyan-ease-transition">
+							<div class="gyan-services-all-content">
+	<div class="gyan-services-image">
+		<img decoding="async" src="https://apexexim.com.vn/wp-content/uploads/2021/02/223.jpg" alt="">	</div>
+	<div class="gyan-services-title-section gyan-ease-transition">
+		<div class="gyan-services-title-icon"><img decoding="async" src="https://apexexim.com.vn/wp-content/uploads/2020/03/icon-trophy-white3.png" alt=""></div>		<h6 class="gyan-services-title"><a href="https://apexexim.com.vn/services/website-designing/" class="gyan-service-link">Excellent packers of fruits &amp; vegetables</a></h6>	</div>
+			<div class="gyan-services-overlay gyan-ease-transition">
+			<div class="gyan-services-overlay-icon"><img decoding="async" src="https://apexexim.com.vn/wp-content/uploads/2020/03/icon-trophy-white3.png" alt=""></div>			<h6 class="gyan-services-overlay-title"><a href="https://apexexim.com.vn/services/website-designing/" class="gyan-service-link">Excellent packers of fruits &amp; vegetables</a></h6>						<div class="gyan-services-overlay-desc">We pack fruits and vegetables with specialized packing material which seals their freshness. You will always receive the freshest products from our company.</div>			<a href="https://apexexim.com.vn/services/website-designing/" class="gyan-service-link gyan-services-button gyan-ease-transition gyan-flex"><span>Read More</span><span class="gyan-services-button-icon gyan-icon"></span></a>		</div>
+	</div>						</div>
+					</div>
+
+				 
+					<div class="gyan-service-item gyan-grid-item-wrap" style="position: absolute; left: 389.984px; top: 0px;">
+						<div class="gyan-services gyan-grid-item gyan-ease-transition">
+							<div class="gyan-services-all-content">
+	<div class="gyan-services-image">
+		<img decoding="async" src="https://apexexim.com.vn/wp-content/uploads/2021/02/11.jpg" alt="">	</div>
+	<div class="gyan-services-title-section gyan-ease-transition">
+		<div class="gyan-services-title-icon"><img decoding="async" src="https://apexexim.com.vn/wp-content/uploads/2020/03/icon-white-stats3.png" alt=""></div>		<h6 class="gyan-services-title"><a href="https://apexexim.com.vn/services/website-content-writing/" class="gyan-service-link">Effective supply chain management</a></h6>	</div>
+			<div class="gyan-services-overlay gyan-ease-transition">
+			<div class="gyan-services-overlay-icon"><img decoding="async" src="https://apexexim.com.vn/wp-content/uploads/2020/03/icon-white-stats3.png" alt=""></div>			<h6 class="gyan-services-overlay-title"><a href="https://apexexim.com.vn/services/website-content-writing/" class="gyan-service-link">Effective supply chain management</a></h6>						<div class="gyan-services-overlay-desc">Our effective supply chain ensures that you will receive products in the shortest possible time. We also keep our inventories stocked with popular and seasonal items.</div>			<a href="https://apexexim.com.vn/services/website-content-writing/" class="gyan-service-link gyan-services-button gyan-ease-transition gyan-flex"><span>Read More</span><span class="gyan-services-button-icon gyan-icon"></span></a>		</div>
+	</div>						</div>
+					</div>
+
+				 
+					<div class="gyan-service-item gyan-grid-item-wrap" style="position: absolute; left: 779.968px; top: 0px;">
+						<div class="gyan-services gyan-grid-item gyan-ease-transition">
+							<div class="gyan-services-all-content">
+	<div class="gyan-services-image">
+		<img decoding="async" src="https://apexexim.com.vn/wp-content/uploads/2021/02/24.jpg" alt="">	</div>
+	<div class="gyan-services-title-section gyan-ease-transition">
+		<div class="gyan-services-title-icon"><img decoding="async" src="https://apexexim.com.vn/wp-content/uploads/2020/03/icon-white-process3.png" alt=""></div>		<h6 class="gyan-services-title"><a href="https://apexexim.com.vn/services/website-designing/" class="gyan-service-link">100% customer satisfaction</a></h6>	</div>
+			<div class="gyan-services-overlay gyan-ease-transition">
+			<div class="gyan-services-overlay-icon"><img decoding="async" src="https://apexexim.com.vn/wp-content/uploads/2020/03/icon-white-process3.png" alt=""></div>			<h6 class="gyan-services-overlay-title"><a href="https://apexexim.com.vn/services/website-designing/" class="gyan-service-link">100% customer satisfaction</a></h6>						<div class="gyan-services-overlay-desc">Your 100% satisfaction is our guarantee. We aim to resolve any issues with our products as soon as possible.</div>			<a href="https://apexexim.com.vn/services/website-designing/" class="gyan-service-link gyan-services-button gyan-ease-transition gyan-flex"><span>Read More</span><span class="gyan-services-button-icon gyan-icon"></span></a>		</div>
+	</div>						</div>
+					</div>
+
+				 
+			 </div> <!-- gyan-services-items -->
+			 <div class="clear"></div>
+
+		</div>
+
+			</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-21b2e27e elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="21b2e27e" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" style="width: 1280px; left: -55px;">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-28866270" data-id="28866270" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-112ee048 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="112ee048" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4223ab8a" data-id="4223ab8a" data-element_type="column">
+			<div class="elementor-column-wrap">
+							<div class="elementor-widget-wrap">
+								</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-129b419c" data-id="129b419c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6e96cb63 gyan-title-st-line-after elementor-widget elementor-widget-gyan_title" data-id="6e96cb63" data-element_type="widget" data-widget_type="gyan_title.default">
+				<div class="elementor-widget-container">
+					<div class="gyan-title">
+			<div class="gyan-title-subtitle"><span>15 Years of Experience</span></div><h2 class="gyan-title-heading">We Execute Our Ideas from Start to Finish</h2>		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-528074a0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="528074a0" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-232640fc" data-id="232640fc" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-270348b3 elementor-widget elementor-widget-image" data-id="270348b3" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+												<img decoding="async" width="707" height="963" src="https://apexexim.com.vn/wp-content/uploads/2021/02/we-excute.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="https://apexexim.com.vn/wp-content/uploads/2021/02/we-excute.jpg 707w, https://apexexim.com.vn/wp-content/uploads/2021/02/we-excute-600x817.jpg 600w, https://apexexim.com.vn/wp-content/uploads/2021/02/we-excute-220x300.jpg 220w" sizes="(max-width: 707px) 100vw, 707px">														</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7539c867" data-id="7539c867" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-408fdd31 gyan-service-list-icon-vertical-top gyan-service-list-icon-left elementor-widget elementor-widget-gyan_service_list" data-id="408fdd31" data-element_type="widget" data-widget_type="gyan_service_list.default">
+				<div class="elementor-widget-container">
+			        <div class="gyan-service-list-container gyan-icon-list-wrap gyan-service-list-connector gyan-service-list-corners-hide">
+            <ul class="gyan-list-items">
+                                                            <li class="gyan-service-list-item">
+                            <div class="gyan-service-list-item-inner elementor-repeater-item-72d3541">
+                                                                <div class="gyan-servicelist-icon-outer">
+                                        <div class="gyan-servicelist-icon-wrapper gyan-ease-transition">
+
+                                            <span class="gyan-service-list-icon gyan-service-list-number">01</span>                                        </div>
+                                    </div>
+
+                                                                <div class="gyan-servicelist-content-wrapper">
+                                                                <h3 class="gyan-service-list-title">
+                                                                            Quality Check                                                                    </h3>
+                                <div class="gyan-service-list-description">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusod tempor idunt ut labore dolore magna aliqua koiern koiners.</div>                                                                                            </div>
+                            </div>
+                        </li>
+                                                                                <li class="gyan-service-list-item">
+                            <div class="gyan-service-list-item-inner elementor-repeater-item-341b3e9">
+                                                                <div class="gyan-servicelist-icon-outer">
+                                        <div class="gyan-servicelist-icon-wrapper gyan-ease-transition">
+
+                                            <span class="gyan-service-list-icon gyan-service-list-number">02</span>                                        </div>
+                                    </div>
+
+                                                                <div class="gyan-servicelist-content-wrapper">
+                                                                <h3 class="gyan-service-list-title">
+                                                                            Packaging                                                                    </h3>
+                                <div class="gyan-service-list-description">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusod tempor idunt ut labore dolore magna aliqua koiern koiners.</div>                                                                                            </div>
+                            </div>
+                        </li>
+                                                                                <li class="gyan-service-list-item">
+                            <div class="gyan-service-list-item-inner elementor-repeater-item-d0697d2">
+                                                                <div class="gyan-servicelist-icon-outer">
+                                        <div class="gyan-servicelist-icon-wrapper gyan-ease-transition">
+
+                                            <span class="gyan-service-list-icon gyan-service-list-number">03</span>                                        </div>
+                                    </div>
+
+                                                                <div class="gyan-servicelist-content-wrapper">
+                                                                <h3 class="gyan-service-list-title">
+                                                                            Shipping                                                                    </h3>
+                                <div class="gyan-service-list-description">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusod tempor idunt ut labore dolore magna aliqua koiern koiners.</div>                                                                                            </div>
+                            </div>
+                        </li>
+                                                                                <li class="gyan-service-list-item">
+                            <div class="gyan-service-list-item-inner elementor-repeater-item-ca52237">
+                                                                <div class="gyan-servicelist-icon-outer">
+                                        <div class="gyan-servicelist-icon-wrapper gyan-ease-transition">
+
+                                            <span class="gyan-service-list-icon gyan-service-list-number">04</span>                                        </div>
+                                    </div>
+
+                                                                <div class="gyan-servicelist-content-wrapper">
+                                                                <h3 class="gyan-service-list-title">
+                                                                            Deliver                                                                    </h3>
+                                <div class="gyan-service-list-description">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusod tempor idunt ut labore dolore magna aliqua koiern koiners.</div>                                                                                            </div>
+                            </div>
+                        </li>
+                                                </ul>
+        </div>
+        		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-1070e8c3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1070e8c3" data-element_type="section">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-31ecce86" data-id="31ecce86" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-1ef219c9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1ef219c9" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-734fbd8b" data-id="734fbd8b" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-1cca47f4 gyan-title-desc-left elementor-widget elementor-widget-gyan_title" data-id="1cca47f4" data-element_type="widget" data-widget_type="gyan_title.default">
+				<div class="elementor-widget-container">
+					<div class="gyan-title">
+			<h2 class="gyan-title-heading">Our Mission</h2><div class="gyan-title-desc">We strive for the highest possible standard of produce delivered with outstanding service, and all at competitive prices. Our experience and heritage within the fruit and vegetable trade.</div>		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-1bf3e6df" data-id="1bf3e6df" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-bde28ef elementor-widget elementor-widget-gyan_piechart" data-id="bde28ef" data-element_type="widget" data-widget_type="gyan_piechart.default">
+				<div class="elementor-widget-container">
+					<div class="gyan-piechart-wrapper">
+			<div class="gyan-piechart" style="width: 200px; height: 200px;">
+				<div class="gyan-piechart-wrap" data-track="#eee" data-track-width="15" data-bar="#63AF36" data-line="15" data-cap="round" data-speed="3000" data-scale="#63AF3666" data-size="200" data-percent="100">
+				</div>
+				<div class="gyan-piechart-content gyan-flex">
+					<div class="gyan-piechart-center">
+													<span class="gyan-piechart-percent">
+								100%							</span>
+																			<h3 class="gyan-piechart-title">Farming</h3>																	</div>
+				</div>
+
+			</div>
+						<div class="clear"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-b60816c" data-id="b60816c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-7ec2f23 elementor-widget elementor-widget-gyan_piechart" data-id="7ec2f23" data-element_type="widget" data-widget_type="gyan_piechart.default">
+				<div class="elementor-widget-container">
+					<div class="gyan-piechart-wrapper">
+			<div class="gyan-piechart" style="width: 200px; height: 200px;">
+				<div class="gyan-piechart-wrap" data-track="#eee" data-track-width="15" data-bar="#D0D248" data-line="15" data-cap="round" data-speed="3000" data-scale="#63AF3666" data-size="200" data-percent="100">
+				</div>
+				<div class="gyan-piechart-content gyan-flex">
+					<div class="gyan-piechart-center">
+													<span class="gyan-piechart-percent">
+								100%							</span>
+																			<h3 class="gyan-piechart-title">Packaging</h3>																	</div>
+				</div>
+
+			</div>
+						<div class="clear"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-22dc5c5" data-id="22dc5c5" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-b9864c3 elementor-widget elementor-widget-gyan_piechart" data-id="b9864c3" data-element_type="widget" data-widget_type="gyan_piechart.default">
+				<div class="elementor-widget-container">
+					<div class="gyan-piechart-wrapper">
+			<div class="gyan-piechart" style="width: 200px; height: 200px;">
+				<div class="gyan-piechart-wrap" data-track="#eee" data-track-width="15" data-bar="#4674A1" data-line="15" data-cap="round" data-speed="3000" data-scale="#63AF3666" data-size="200" data-percent="101">
+				</div>
+				<div class="gyan-piechart-content gyan-flex">
+					<div class="gyan-piechart-center">
+													<span class="gyan-piechart-percent">
+								100%							</span>
+																			<h3 class="gyan-piechart-title">Shipping</h3>																	</div>
+				</div>
+
+			</div>
+						<div class="clear"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-32d482cd elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="32d482cd" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}" style="width: 1280px; left: -55px;">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-46326b5c" data-id="46326b5c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-4786e29d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4786e29d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-208399e9" data-id="208399e9" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6115c554 gyan-title-st-line-after elementor-widget elementor-widget-gyan_title" data-id="6115c554" data-element_type="widget" data-widget_type="gyan_title.default">
+				<div class="elementor-widget-container">
+					<div class="gyan-title">
+			<div class="gyan-title-subtitle"><span>Our News and Articles</span></div><h2 class="gyan-title-heading">Latest From Blog</h2>		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7244a59c" data-id="7244a59c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-230c2a60 elementor-widget elementor-widget-text-editor" data-id="230c2a60" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				Aliquam sodales justo sit amet urna auctor scelerisquinterdum leo anet tempus enim esent egetis hendrerit vel nibh vitae ornar sem velit aliquam facilisivitae finibus risus feslin is hendrerit vel nibh vitae ornar uspendisse consequat quis sem.					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-2568d97d elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2568d97d" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" style="width: 1280px; left: -55px;">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-57091808" data-id="57091808" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-3cc0ab04 elementor-grid-3 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-gyan_post_grid" data-id="3cc0ab04" data-element_type="widget" data-settings="{&quot;columns&quot;:&quot;3&quot;,&quot;columns_tablet&quot;:&quot;2&quot;,&quot;columns_mobile&quot;:&quot;1&quot;}" data-widget_type="gyan_post_grid.default">
+				<div class="elementor-widget-container">
+			        <div class="gyan-post-grid-container gyan-post-grid-s1 gyan-post-grid-container-3cc0ab04" data-layout="grid" data-rtl="false">
+
+            
+            <div class="gyan-post-grid gyan-elementor-grid" style="position: relative; height: 588.484px;">
+                
+<div class="gyan-post-grid-item gyan-grid-item-wrap cat-5" style="position: absolute; left: 0px; top: 0px;">
+    <div class="gyan-post-grid-item-inner gyan-grid-item">
+
+        <div class="gyan-post-grid-item-holder gyan-ease-transition ">
+
+            
+                <div class="gyan-post-image">
+
+                    <div class="gyan-post-grid-format">
+                        <figure>
+                            <a href="https://apexexim.com.vn/an-easy-guide-to-safe-shipping-practices/" class="gyan-post-grid-image gyan-ease-transition"><img decoding="async" src="https://apexexim.com.vn/wp-content/uploads/elementor/thumbs/easy-p338trjjb62jh6156ttjx8l5z3hzgtjyif58e18rqu.jpg" alt="" class="gyan-ease-transition"></a>
+                        </figure>
+                        <div class="gyan-post-grid-meta gyan-ease-transition">
+        <ul><li><span class="gyan-love " data-id="191"><i class="fas fa-heart fas-regular"></i><i class="fas fa-heart"></i><span class="gyan-like-number">4</span></span></li><li><span class="gyan-postmeta-icon"><i class="fas fa-eye"></i></span><span class="gyan-postmeta-text">32</span></li></ul>
+    </div>
+    <div class="clear"></div>                    </div>
+                </div>
+
+            
+            <div class="gyan-post-content-block gyan-ease-transition">
+                <div class="gyan-post-title-section">
+
+                        <div class="gyan-post-grid-content">
+
+                            <div class="gyan-post-title">
+                                <h2><a href="https://apexexim.com.vn/an-easy-guide-to-safe-shipping-practices/">An Easy Guide to Safe Shipping Practices                                </a></h2>
+                            </div>
+
+                            
+                            
+                                <div class="gyan-post-list-excerpt">
+                                    pin up Lorem ipsum dolor sito amet, conse ctetuer adipiscing elit sed diam nonum nibhie euisod. Facilisis                                </div>
+
+                            
+                            <div class="gyan-post-grid-c-button gyan-ease-transition">
+                                <a href="https://apexexim.com.vn/an-easy-guide-to-safe-shipping-practices/"><span></span></a>
+                            </div>
+
+                            
+                            <div class="clear"></div>
+
+                        </div>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </div> <!-- gyan-post-grid-item-inner -->
+</div> <!-- gyan-post-grid-item -->
+
+<div class="clear"></div>
+<div class="gyan-post-grid-item gyan-grid-item-wrap cat-4" style="position: absolute; left: 399.984px; top: 0px;">
+    <div class="gyan-post-grid-item-inner gyan-grid-item">
+
+        <div class="gyan-post-grid-item-holder gyan-ease-transition ">
+
+            
+                <div class="gyan-post-image">
+
+                    <div class="gyan-post-grid-format">
+                        <figure>
+                            <a href="https://apexexim.com.vn/is-air-freight-cheaper-or-sea-freight/" class="gyan-post-grid-image gyan-ease-transition"><img decoding="async" src="https://apexexim.com.vn/wp-content/uploads/elementor/thumbs/air-ship-p338wughpmadj5k175rj3glk2kbap3sa9o4j0oobcm.jpg" alt="" class="gyan-ease-transition"></a>
+                        </figure>
+                        <div class="gyan-post-grid-meta gyan-ease-transition">
+        <ul><li><span class="gyan-love " data-id="246"><i class="fas fa-heart fas-regular"></i><i class="fas fa-heart"></i><span class="gyan-like-number">4</span></span></li><li><span class="gyan-postmeta-icon"><i class="fas fa-eye"></i></span><span class="gyan-postmeta-text">2</span></li></ul>
+    </div>
+    <div class="clear"></div>                    </div>
+                </div>
+
+            
+            <div class="gyan-post-content-block gyan-ease-transition">
+                <div class="gyan-post-title-section">
+
+                        <div class="gyan-post-grid-content">
+
+                            <div class="gyan-post-title">
+                                <h2><a href="https://apexexim.com.vn/is-air-freight-cheaper-or-sea-freight/">Is Air Freight Cheaper or Sea Freight?                                </a></h2>
+                            </div>
+
+                            
+                            
+                                <div class="gyan-post-list-excerpt">
+                                    pin up Lorem ipsum dolor sito amet, conse ctetuer adipiscing elit sed diam nonum nibhie euisod. Facilisis                                </div>
+
+                            
+                            <div class="gyan-post-grid-c-button gyan-ease-transition">
+                                <a href="https://apexexim.com.vn/is-air-freight-cheaper-or-sea-freight/"><span></span></a>
+                            </div>
+
+                            
+                            <div class="clear"></div>
+
+                        </div>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </div> <!-- gyan-post-grid-item-inner -->
+</div> <!-- gyan-post-grid-item -->
+
+<div class="clear"></div>
+<div class="gyan-post-grid-item gyan-grid-item-wrap cat-2" style="position: absolute; left: 799.968px; top: 0px;">
+    <div class="gyan-post-grid-item-inner gyan-grid-item">
+
+        <div class="gyan-post-grid-item-holder gyan-ease-transition ">
+
+            
+                <div class="gyan-post-image">
+
+                    <div class="gyan-post-grid-format">
+                        <figure>
+                            <a href="https://apexexim.com.vn/common-mistakes-in-import-and-export-business/" class="gyan-post-grid-image gyan-ease-transition"><img decoding="async" src="https://apexexim.com.vn/wp-content/uploads/elementor/thumbs/import-p33930aeiiq1n4lt7tnhfwmc9hxx5o8xs6349zjek6.jpg" alt="" class="gyan-ease-transition"></a>
+                        </figure>
+                        <div class="gyan-post-grid-meta gyan-ease-transition">
+        <ul><li><span class="gyan-love " data-id="248"><i class="fas fa-heart fas-regular"></i><i class="fas fa-heart"></i><span class="gyan-like-number">4</span></span></li><li><span class="gyan-postmeta-icon"><i class="fas fa-eye"></i></span><span class="gyan-postmeta-text">2</span></li></ul>
+    </div>
+    <div class="clear"></div>                    </div>
+                </div>
+
+            
+            <div class="gyan-post-content-block gyan-ease-transition">
+                <div class="gyan-post-title-section">
+
+                        <div class="gyan-post-grid-content">
+
+                            <div class="gyan-post-title">
+                                <h2><a href="https://apexexim.com.vn/common-mistakes-in-import-and-export-business/">Common Mistakes in Import and Export Business                                </a></h2>
+                            </div>
+
+                            
+                            
+                                <div class="gyan-post-list-excerpt">
+                                    pin up Lorem ipsum dolor sito amet, conse ctetuer adipiscing elit sed diam nonum nibhie euisod. Facilisis                                </div>
+
+                            
+                            <div class="gyan-post-grid-c-button gyan-ease-transition">
+                                <a href="https://apexexim.com.vn/common-mistakes-in-import-and-export-business/"><span></span></a>
+                            </div>
+
+                            
+                            <div class="clear"></div>
+
+                        </div>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </div> <!-- gyan-post-grid-item-inner -->
+</div> <!-- gyan-post-grid-item -->
+
+<div class="clear"></div>            </div><div class="clear"></div>
+        </div>
+
+         
+        		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+						</div>
+					</div>
+		
+<!-- Blog Responses Start -->
+
+<!-- Blog Responses End -->
+
+<div class="clear"></div>
+
+
+
+<div class="clear"></div>
+
+						<div class="clear"></div>
+					</div>
+
+				
+			</div>
+			<div class="clear"></div>
+
+		</div>
+
+		
+		<div class="clear"></div>
+	</div>
+
+		<div class="clear"></div>
+	</div> <!-- .swm-main-container -->
+	<div class="swm-main-container">
+
+		<footer class="footer swm-css-transition" id="footer">
+
+			
+				<div class="swm-container">
+								<div class="swm-large-footer col-4">
+
+				
+	<div class="swm-f-widget">
+			</div>
+
+
+
+	<div class="swm-f-widget">
+		<div id="woocommerce_products-2" class="widget woocommerce widget_products"><div class="swm-footer-widget"><div class="swm-widget-content"><h3><span>Products</span></h3><div class="clear"></div><ul class="product_list_widget"><li>
+	
+	<a href="https://apexexim.com.vn/product/onion/">
+		<img width="300" height="300" src="https://apexexim.com.vn/wp-content/uploads/2022/08/1-6-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://apexexim.com.vn/wp-content/uploads/2022/08/1-6-300x300.jpg 300w, https://apexexim.com.vn/wp-content/uploads/2022/08/1-6-150x150.jpg 150w, https://apexexim.com.vn/wp-content/uploads/2022/08/1-6-100x100.jpg 100w, https://apexexim.com.vn/wp-content/uploads/2022/08/1-6-90x90.jpg 90w, https://apexexim.com.vn/wp-content/uploads/2022/08/1-6.jpg 550w" sizes="(max-width: 300px) 100vw, 300px">		<span class="product-title">Onion</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">£</span>39999</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://apexexim.com.vn/product/mango/">
+		<img width="300" height="300" src="https://apexexim.com.vn/wp-content/uploads/2022/08/1-5-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://apexexim.com.vn/wp-content/uploads/2022/08/1-5-300x300.jpg 300w, https://apexexim.com.vn/wp-content/uploads/2022/08/1-5-150x150.jpg 150w, https://apexexim.com.vn/wp-content/uploads/2022/08/1-5-100x100.jpg 100w, https://apexexim.com.vn/wp-content/uploads/2022/08/1-5-90x90.jpg 90w, https://apexexim.com.vn/wp-content/uploads/2022/08/1-5.jpg 550w" sizes="(max-width: 300px) 100vw, 300px">		<span class="product-title">Mango</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">£</span>39999</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://apexexim.com.vn/product/watermelon/">
+		<img width="300" height="300" src="https://apexexim.com.vn/wp-content/uploads/2022/08/1-9-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://apexexim.com.vn/wp-content/uploads/2022/08/1-9-300x300.jpg 300w, https://apexexim.com.vn/wp-content/uploads/2022/08/1-9-150x150.jpg 150w, https://apexexim.com.vn/wp-content/uploads/2022/08/1-9-100x100.jpg 100w, https://apexexim.com.vn/wp-content/uploads/2022/08/1-9-90x90.jpg 90w, https://apexexim.com.vn/wp-content/uploads/2022/08/1-9.jpg 550w" sizes="(max-width: 300px) 100vw, 300px">		<span class="product-title">Watermelon</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">£</span>33333</bdi></span>
+	</li>
+</ul><div class="clear"></div></div></div></div>	</div>
+
+
+
+	<div class="swm-f-widget">
+		<div id="gyan_recent_posts_wid-1" class="widget widget_gyan_recent_posts_wid"><div class="swm-footer-widget"><div class="swm-widget-content"><h3><span>Recent Posts</span></h3><div class="clear"></div><div class="gyan-recent-posts-tiny gyan_rcp_default"><ul>				<li>
+												<a href="https://apexexim.com.vn/an-easy-guide-to-safe-shipping-practices/" title="An Easy Guide to Safe Shipping Practices" class="gyan-recent-posts-tiny-img">
+								<img width="100" height="70" src="https://apexexim.com.vn/wp-content/uploads/2020/12/easy-100x70.jpg" class="attachment-swm_image_size_post_tiny_alt size-swm_image_size_post_tiny_alt wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://apexexim.com.vn/wp-content/uploads/2020/12/easy-100x70.jpg 100w, https://apexexim.com.vn/wp-content/uploads/2020/12/easy-500x344.jpg 500w" sizes="(max-width: 100px) 100vw, 100px">							</a>
+							
+					<div class="gyan-recent-posts-tiny-content">
+						<div class="gyan-recent-posts-tiny-title"><a href="https://apexexim.com.vn/an-easy-guide-to-safe-shipping-practices/">An Easy Guide to Safe Shipping Prac</a></div>
+						<p><span><i class="fas fa-clock"></i>Dec 3, 2020</span></p>
+					</div>
+
+					<div class="clear"></div>
+				</li>
+
+								<li>
+												<a href="https://apexexim.com.vn/is-air-freight-cheaper-or-sea-freight/" title="Is Air Freight Cheaper or Sea Freight?" class="gyan-recent-posts-tiny-img">
+								<img width="100" height="70" src="https://apexexim.com.vn/wp-content/uploads/2020/12/air-ship-100x70.jpg" class="attachment-swm_image_size_post_tiny_alt size-swm_image_size_post_tiny_alt wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://apexexim.com.vn/wp-content/uploads/2020/12/air-ship-100x70.jpg 100w, https://apexexim.com.vn/wp-content/uploads/2020/12/air-ship-500x344.jpg 500w" sizes="(max-width: 100px) 100vw, 100px">							</a>
+							
+					<div class="gyan-recent-posts-tiny-content">
+						<div class="gyan-recent-posts-tiny-title"><a href="https://apexexim.com.vn/is-air-freight-cheaper-or-sea-freight/">Is Air Freight Cheaper or Sea Freig</a></div>
+						<p><span><i class="fas fa-clock"></i>Dec 3, 2020</span></p>
+					</div>
+
+					<div class="clear"></div>
+				</li>
+
+				</ul></div><div class="clear"></div><div class="clear"></div></div></div></div>	</div>
+
+
+
+	<div class="swm-f-widget">
+		<div id="gyan_useful_links_wid-1" class="widget widget_gyan_useful_links_wid swm-list-widgets"><div class="swm-footer-widget"><div class="swm-widget-content"><h3><span>Useful Links</span></h3><div class="clear"></div><div class="gyan_useful_links_widget "><div class="menu-useful-links-container"><ul id="menu-useful-links" class=""><li id="menu-item-456" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-456"><a href="https://apexexim.com.vn/home-1/">Home</a></li>
+<li id="menu-item-458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-458"><a href="https://apexexim.com.vn/about-us/">About Us</a></li>
+<li id="menu-item-2101" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2101"><a href="#">Product</a></li>
+<li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-460"><a href="https://apexexim.com.vn/faq/">FAQ</a></li>
+<li id="menu-item-463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-463"><a href="https://apexexim.com.vn/contacts/">Contacts</a></li>
+<li id="menu-item-2102" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2102"><a href="#">Gallery</a></li>
+</ul></div></div><div class="clear"></div><div class="clear"></div></div></div></div>	</div>
+
+
+				<div class="clear"></div>
+			</div>
+	       					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+
+			
+			
+				<div class="swm_contact_footer">
+					<div class="swm-container">
+						<div class="swm_contact_footer_holder swm-row">
+
+															<div class="swm-column swm-column3 swm-cf-column">
+									<span class="swm_cf_icon"><i class="swm-ficon swm-fi-envelope"></i></span>
+									<span class="swm_cf_email swm-cf-title swm-heading-text"><a href="mailto:in%66o@%61p%65x%65x%69%6d.c%6fm.vn">info@apexexim.com.vn</a></span>
+									<span class="swm-cf-subtitle">Drop Us a Line</span>
+								</div>
+							
+															<div class="swm-column swm-column3 swm-cf-column swm-cf-m-column">
+									<span class="swm_cf_icon"><i class="swm-ficon swm-fi-phone-call"></i></span>
+									<span class="swm_cf_call swm-cf-title swm-heading-text">+84 981024141</span>
+									<span class="swm-cf-subtitle">Call Us Now</span>
+								</div>
+							
+															<div class="swm-column swm-column3 swm-cf-column">
+									<span class="swm_cf_icon"><i class="swm-ficon swm-fi-placeholder"></i></span>
+									<span class="swm_cf_address swm-cf-title swm-heading-text">Ấp 4, xã Thạnh Lợi, huyện Bến Lức,</span>
+									<span class="swm-cf-subtitle">Location</span>
+								</div>
+							
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+
+			
+			
+				<div class="swm-container">
+					<div class="swm-small-footer">
+						<div><span>Copyright 2020 Apex Exim Co Ltd. All rights reserved.</span></div>
+					</div>
+				</div>
+
+			
+		</footer>
+
+	</div>
+
+	
+		</div><!-- #wrap -->
+	</div><!-- #outer-wrap -->
+
+			<div class="swm-go-top-scroll-btn-wrap"><a id="swm-go-top-scroll-btn"><i class="fas fa-angle-up"></i></a></div> <style>
+			:root {
+			--main-bg-color: #77b0eb;  
+			--main-bor-text-color: #000;
+			--main-bor-width: 3px;
+			--main-bor-color: #000;
+			
+			--main-button-color: #195bbc;
+			--main-buttontext-color: #fff;
+			--main-buttonhover-color: #195bbc;
+			--main-buttonhovertext-color: #fff;
+					}
+			.woocommerce-checkout .cclw_opc_main  .border_html
+            {
+				border-left-style : solid;
+				border-width: 3px;
+                border-color: #000;
+			}				
+			
+</style>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400%2C700%7CFira+Sans:700" rel="stylesheet" property="stylesheet" media="all" type="text/css">
+
+	<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+			<script type="text/javascript">
+		if(typeof revslider_showDoubleJqueryError === "undefined") {
+			function revslider_showDoubleJqueryError(sliderID) {
+				var err = "<div class='rs_error_message_box'>";
+				err += "<div class='rs_error_message_oops'>Oops...</div>";
+				err += "<div class='rs_error_message_content'>";
+				err += "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
+				err += "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
+				err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
+				err += "</div>";
+			err += "</div>";
+				var slider = document.getElementById(sliderID); slider.innerHTML = err; slider.style.display = "block";
+			}
+		}
+		</script>
+<link rel="stylesheet" id="e-animations-css" href="https://apexexim.com.vn/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.4.3" type="text/css" media="all">
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/gyan-elements/assets/js/owl.carousel.min.js?ver=2.3.4" id="jquery-owl-js"></script>
+<script type="text/javascript" id="gyan-custom-scripts-js-extra">
+/* <![CDATA[ */
+var gyan_get_ajax_full_url = {"ajaxurl":"https:\/\/apexexim.com.vn\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/gyan-elements/assets/js/custom-scripts-min.js?ver=1.1.2" id="gyan-custom-scripts-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.7.8.4" id="jquery-blockui-js"></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/apexexim.com.vn\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=7.8.4" id="wc-add-to-cart-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.7.8.4" id="js-cookie-js"></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=7.8.4" id="woocommerce-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-includes/js/jquery/ui/effect.min.js?ver=1.13.2" id="jquery-effects-core-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-includes/js/jquery/ui/effect-blind.min.js?ver=1.13.2" id="jquery-effects-blind-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/themes/bizix/js/easing.min.js?ver=1.1.2" id="swm-easing-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/themes/bizix/js/debouncedresize.min.js?ver=1.1.2" id="swm-debouncedresize-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/themes/bizix/js/fitvids.min.js?ver=1.1.2" id="fitVids-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.7.8.4" id="flexslider-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/themes/bizix/js/cookie.min.js?ver=1.1.2" id="swm-cookie-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/themes/bizix/js/coffeescript.min.js?ver=1.1.2" id="coffeescript-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-includes/js/imagesloaded.min.js?ver=4.1.4" id="imagesloaded-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/gyan-elements/addons/js/jquery.magnific-popup.min.js?ver=1.1.0" id="magnific-popup-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/gyan-elements/addons/js/isotope.min.js?ver=3.0.6" id="isotope-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/themes/bizix/js/theme-settings-min.js?ver=1.1.2" id="swm-theme-settings-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/themes/bizix/js/theme-megamenu-min.js?ver=1.1.2" id="swm-megamenu-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/themes/bizix/js/theia-sticky-sidebar.min.js?ver=1.1.2" id="theia-sticky-sidebar-js"></script>
+<script type="text/javascript" id="gyan-widgets-js-extra">
+/* <![CDATA[ */
+var gyanAjax = {"ajaxURL":"https:\/\/apexexim.com.vn\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/gyan-elements/addons/js/gyan-widgets-min.js?ver=1.1.2" id="gyan-widgets-js"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyCO-lj8WA-GS6bEWyCh8IcnZ1CobLiaFQU&amp;ver=1.1.2" id="gyan-google-maps-api-js"></script>
+<script type="text/javascript" src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js?ver=1.1.2" id="gyan-google-maps-cluster-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/gyan-elements/addons/js/jquery_resize.min.js?ver=0.5.3" id="gyan-element-resize-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/gyan-elements/addons/js/jquery.easypiechart.min.js?ver=2.1.7" id="easypiechart-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.4.3" id="elementor-webpack-runtime-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.4.3" id="elementor-frontend-modules-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6" id="swiper-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.4.3" id="share-link-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1" id="elementor-dialog-js"></script>
+<script type="text/javascript" id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.4.3","is_static":false,"experimentalFeatures":{"e_import_export":true,"landing-pages":true,"elements-color-picker":true,"admin-top-bar":true},"urls":{"assets":"https:\/\/apexexim.com.vn\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":159,"title":"We%20Pack%20Fruits%20%26%20Vegetable%20In%20Asia","excerpt":"","featuredImage":false}};
+</script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.4.3" id="elementor-frontend-js"></script>
+<script type="text/javascript" src="https://apexexim.com.vn/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.4.3" id="preloaded-modules-js"></script>
+</div><span id="elementor-device-mode" class="elementor-screen-only"></span>  <!-- end #swm-page -->
+
+
+
+</body></html>

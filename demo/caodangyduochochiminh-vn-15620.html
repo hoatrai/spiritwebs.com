@@ -1,0 +1,1083 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.5.1",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this._interceptClickListeners(this),window.addEventListener("pageshow",e=>{this.persisted=e.persisted,this.everythingLoaded&&this._triggerLastFunctions()}),document.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(e){if(document.hidden){e._triggerListener();return}this.triggerEvents.forEach(t=>window.addEventListener(t,e.userEventHandler,{passive:!0})),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(e=>window.removeEventListener(e,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!0),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!1),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!1),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))})}_interceptClickListeners(e){EventTarget.prototype.addEventListenerBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(t,i,r){"click"!==t||e.windowLoaded||i===e.clickHandler||e.interceptedClickListeners.push({target:this,func:i,options:r}),(this||window).addEventListenerBase(t,i,r)}}_disableOtherEventListeners(e,t){this.interceptedClickListeners.forEach(i=>{i.target===e&&(t?e.removeEventListener("click",i.func,i.options):e.addEventListener("click",i.func,i.options))}),e.parentNode!==document.documentElement&&this._disableOtherEventListeners(e.parentNode,t)}_waitForPendingClicks(){return new Promise(e=>{this._isClickPending?this._pendingClickFinished=e:e()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(e,t,i){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(i,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach(t=>{let i=t.getAttribute("data-rocket-src");if(i&&0!==i.indexOf("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{let r=new URL(i).origin;r!==location.origin&&e.push({src:r,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}catch(n){}}}),e=[...new Map(e.map(e=>[JSON.stringify(e),e])).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._pendingWebpackRequests(this),await this._triggerWindowLoad()}catch(e){console.error(e)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{e.hasAttribute("data-rocket-src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)})}async _transformScript(e){if(await this._littleBreath(),!0===e.noModule&&"noModule"in HTMLScriptElement.prototype){e.setAttribute("data-rocket-status","skipped");return}return new Promise(t=>{let i;function r(){(i||e).setAttribute("data-rocket-status","executed"),t()}try{if(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)i=document.createElement("script"),[...e.attributes].forEach(e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),"data-rocket-src"===t&&(t="src"),i.setAttribute(t,e.nodeValue))}),e.text&&(i.text=e.text),i.hasAttribute("src")?(i.addEventListener("load",r),i.addEventListener("error",function(){i.setAttribute("data-rocket-status","failed"),t()}),setTimeout(()=>{i.isConnected||t()},1)):(i.text=e.text,r()),e.parentNode.replaceChild(i,e);else{let n=e.getAttribute("data-rocket-type"),s=e.getAttribute("data-rocket-src");n?(e.type=n,e.removeAttribute("data-rocket-type")):e.removeAttribute("type"),e.addEventListener("load",r),e.addEventListener("error",function(){e.setAttribute("data-rocket-status","failed"),t()}),s?(e.removeAttribute("data-rocket-src"),e.src=s):e.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(e.text)))}}catch(a){e.setAttribute("data-rocket-status","failed"),t()}})}async _loadScriptsFromList(e){let t=e.shift();return t&&t.isConnected?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var i=document.createDocumentFragment();e.forEach(e=>{let r=e.getAttribute&&e.getAttribute("data-rocket-src")||e.src;if(r){let n=document.createElement("link");n.href=r,n.rel=t,"preconnect"!==t&&(n.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),e.crossOrigin&&(n.crossOrigin=e.crossOrigin),e.integrity&&(n.integrity=e.integrity),i.appendChild(n),this.trash.push(n)}}),document.head.appendChild(i)}_delayEventListeners(e){let t={};function i(i,r){return t[r].eventsToRewrite.indexOf(i)>=0&&!e.everythingLoaded?"rocket-"+i:i}function r(e,r){var n;!t[n=e]&&(t[n]={originalFunctions:{add:n.addEventListener,remove:n.removeEventListener},eventsToRewrite:[]},n.addEventListener=function(){arguments[0]=i(arguments[0],n),t[n].originalFunctions.add.apply(n,arguments)},n.removeEventListener=function(){arguments[0]=i(arguments[0],n),t[n].originalFunctions.remove.apply(n,arguments)}),t[e].eventsToRewrite.push(r)}function n(t,i){let r=t[i];t[i]=null,Object.defineProperty(t,i,{get:()=>r||function(){},set(n){e.everythingLoaded?r=n:t["rocket"+i]=r=n}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t;function i(t){return e.everythingLoaded?t:t.split(" ").map(e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e).join(" ")}function r(r){if(r&&r.fn&&!e.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(t){return e.domReadyFired?t.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>t.bind(document)(r)),r([])};let n=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let t=arguments[0][e];delete arguments[0][e],arguments[0][i(e)]=t})),n.apply(this,arguments),this},e.allJQueries.push(r)}t=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>t,set(e){r(e)}})}async _pendingWebpackRequests(e){let t=document.querySelector("script[data-webpack]");async function i(){return new Promise(e=>{t.addEventListener("load",e),t.addEventListener("error",e)})}t&&(await i(),await e._requestAnimFrame(),await e._pendingWebpackRequests(e))}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async _triggerWindowLoad(){await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(e=>e(window).trigger("rocket-jquery-load")),await this._littleBreath();let e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}_triggerLastFunctions(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}_handleDocumentWrite(){let e=new Map;document.write=document.writeln=function(t){let i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+t);let r=document.createRange(),n=i.parentElement,s=e.get(i);void 0===s&&(s=i.nextSibling,e.set(i,s));let a=document.createDocumentFragment();r.setStart(a,0),a.appendChild(r.createContextualFragment(t)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(e=>setTimeout(e)):new Promise(e=>requestAnimationFrame(e))}_emptyTrash(){this.trash.forEach(e=>e.remove())}static run(){let e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<link data-minify="1" rel="stylesheet" href="https://caodangyduochochiminh.vn/wp-content/cache/min/1/ajax/libs/font-awesome/5.2.0/css/all.min.css?ver=1773828917" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;display=swap&amp;subset=vietnamese" rel="stylesheet">
+	<link data-minify="1" type="text/css" rel="stylesheet" href="https://caodangyduochochiminh.vn/wp-content/cache/min/1/wp-content/themes/caodangyduochochiminh/assets/css/jquery.bxslider.css?ver=1773828917">
+			<link data-minify="1" type="text/css" rel="stylesheet" href="https://caodangyduochochiminh.vn/wp-content/cache/min/1/wp-content/themes/caodangyduochochiminh/assets/css/style.css?ver=1773828917">
+    	
+	<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/js/jquery-2.1.1.min.js" defer=""></script>
+	<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/js/jquery.bxslider.min.js" defer=""></script>
+	<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://caodangyduochochiminh.vn/wp-content/cache/min/1/wp-content/themes/caodangyduochochiminh/assets/js/script.js?ver=1773828918" defer=""></script>
+	
+	
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "EducationalOrganization",
+				"@id": "https://caodangyduochochiminh.vn",
+				"name": "Trường Cao đẳng Y Khoa Phạm Ngọc Thạch",
+				"slogan": "Sáng Y Đức - Sâu Y Lý - Giỏi Y Thuật",
+				"url": "https://caodangyduochochiminh.vn",
+				"actionableFeedbackPolicy": "https://caodangyduochochiminh.vn/",
+				"address": "Số 127/3 - 5 Hoàng Hoa Thám, Quận Tân Bình, TP.Hồ Chí Minh",
+				"alternateName": [
+					"Cao Đẳng Y Khoa Phạm Ngọc Thạch",
+					"Cao Đẳng Y Dược TPHCM",
+					"Cao Đẳng Dược HCM",
+					"Cao Đẳng Dược TPHCM",
+					"Cao Đẳng Y Dược HCM"
+				],
+				"areaServed": "Thành phố Hồ Chí Minh",
+				"branchCode": "CBK",
+				"additionalType": "https://caodangyduochochiminh.vn/",
+				"description": "Trường Cao đẳng Y Khoa Phạm Ngọc Thạch tuyển sinh Cao đẳng Dược TPHCM, Điều Dưỡng, KT Phục Hồi Chức Năng.✔️Xét tuyển chỉ cần tốt nghiệp THPT.",
+				"disambiguatingDescription": "Trường Cao đẳng Y Khoa Phạm Ngọc Thạch tuyển sinh Cao đẳng Dược TPHCM, Điều Dưỡng, KT Phục Hồi Chức Năng.✔️Xét tuyển chỉ cần tốt nghiệp THPT.",
+				"email": "caodangykhoaphamngocthach@gmail.com",
+				"founder":"PGS. TS Phạm Thị Lý",
+				"faxNumber": "0969 955 990",
+				"identifier": "CBK",
+				"hasMap": [
+					"https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+Cao+%C4%91%E1%BA%B3ng+Y+khoa+Ph%E1%BA%A1m+Ng%E1%BB%8Dc+Th%E1%BA%A1ch+TP.HCM/@10.8030139,106.647026,17z/data=!3m1!4b1!4m5!3m4!1s0x317529ead2e7e219:0x39ad1ed1dc81c492!8m2!3d10.8030139!4d106.647026?hl=vi",
+					"https://www.google.com/maps?cid=4667216274095403686",
+					"https://www.google.com/maps/d/viewer?mid=1bB91LFZ4ZRHYnqk-DLs5gIPg4lXWDe1J&ll=10.803243098426705%2C106.64729079999998&z=17"
+				],
+				"image": "https://caodangyduochochiminh.vn/images/files/caodangyduochochiminh.vn/truong-cao-dang-y-khoa-pham-ngoc-thach.jpg",
+				"knowsLanguage": ["Vietnamese","English"],
+				"knowsAbout": [
+					"Trường Cao Đẳng Y Dược Sài Gòn",
+					"Trường Cao đẳng Dược Hà Nội"
+				],
+				"latitude": "10.8030139",
+				"longitude": "106.647026",
+				"legalName": "Trường Cao Đẳng Y Khoa Phạm Ngọc Thạch",
+				"location": "Số 127/3-5 Hoàng Hoa Thám, Quận Tân Bình, TP Hồ Chí Minh",
+				"logo": "https://caodangyduochochiminh.vn/images/logos/logo-site-27-1582618619.png",
+				"mainEntityOfPage": "https://caodangyduochochiminh.vn",
+				"map": "https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+Cao+%C4%91%E1%BA%B3ng+Y+khoa+Ph%E1%BA%A1m+Ng%E1%BB%8Dc+Th%E1%BA%A1ch+TP.HCM/@10.8030139,106.647026,17z/data=!3m1!4b1!4m5!3m4!1s0x317529ead2e7e219:0x39ad1ed1dc81c492!8m2!3d10.8030139!4d106.647026?hl=vi",
+				"maps": [
+					"https://www.google.com/maps?cid=4667216274095403686",
+					"https://www.google.com/maps/d/viewer?mid=1bB91LFZ4ZRHYnqk-DLs5gIPg4lXWDe1J&ll=10.803243098426705%2C106.64729079999998&z=17",
+					"https://maps.google.com/maps/contrib/108381268247685670818"
+				],
+				"sameAs": [
+					"https://www.facebook.com/TruongCaoDangYKhoaPhamNgocThachTPHCM/",
+					"https://twitter.com/cdphamngocthach",
+					"https://www.youtube.com/channel/UC3Sauf7ENjWwiz-iA5hoavw/about",
+					"https://www.instagram.com/cdphamngocthach",
+					"https://www.linkedin.com/in/cdphamngocthach",
+					"https://www.pinterest.com/cdphamngocthach/",
+					"https://cdphamngocthach.tumblr.com",
+					"https://www.instapaper.com/p/cdphamngocthach",
+					"https://vi.everybodywiki.com/Tr%C6%B0%E1%BB%9Dng_Cao_%C4%91%E1%BA%B3ng_Y_Khoa_Ph%E1%BA%A1m_Ng%E1%BB%8Dc_Th%E1%BA%A1ch",
+					"https://anchor.fm/cdphamngocthach",
+					"https://hearthis.at/cdphamngocthach/",
+					"https://www.podchaser.com/podcasts/truong-cao-dang-y-khoa-pham-ng-4201411",
+					"https://vietnamnet.vn/truong-cd-y-khoa-pham-ngoc-thach-mien-100-hoc-phi-2021-khi-nhap-hoc-truoc-258-762431.html"
+				],
+				"telephone": [
+					"0969955990",
+					"0899955990"
+				]
+			}
+		</script>
+	
+		<script type="application/ld+json">
+			{"@context":"https://schema.org",
+				"@type":"LocalBusiness",
+				"name":"Trường Cao đẳng Y Khoa Phạm Ngọc Thạch",
+				"image":{"@type":"ImageObject",
+					"url":"https://caodangyduochochiminh.vn/images/logos/logo-site-27-1582618619.png",
+					"width":215,"height":185},
+				"telephone":"[0969955990,0899955990]",
+				"url":"https://caodangyduochochiminh.vn/",
+				"address":{"@type":"PostalAddress",
+					"streetAddress":"Số 127/3-5 Hoàng Hoa Thám, Phường 13, Quận Tân Bình, Hồ Chí Minh, Việt Nam",
+					"addressLocality":"Quận Tân Bình",
+					"postalCode":"700000",
+					"addressRegion":"TP. Hồ Chí Minh",
+					"addressCountry":"VN"
+				},
+				"priceRange":"100000-90000000",
+				"openingHoursSpecification":[{"@type":"OpeningHoursSpecification",
+					"dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:00","closes":"18:00"}],
+				"ContactPoint":{"@type":"ContactPoint","contactType":"customer support","telephone":"[0969955990,0899955990]","areaServed":["Vietnam"],"contactOption":["HearingImpairedSupported","TollFree"],"availableLanguage":"Vietnamese"}},
+			"potentialAction":
+			{
+			"@type":"ReserveAction",
+			"result":
+			{
+			"@type":"Reservation",
+			"name":"Đăng Ký",
+			"alternateName":["Liên Hệ"]
+			},
+			"target":
+			{
+			"@type":"EntryPoint",
+			"urlTemplate":"https://caodangyduochochiminh.vn/lien-he.html",
+			"actionPlatform":
+			[
+			"http://schema.org/DesktopWebPlatform", " http://schema.org/IOSPlatform", " http://schema.org/AndroidPlatform"
+			],
+			"inLanguage":
+			[
+			{
+			"@type":"Language",
+			"name":"Việt Nam",
+			"alternateName":"vn"
+			}
+			]
+			}
+			},
+		</script>
+	
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebSite",
+				"name": "Tuyển Sinh Cao Đẳng Y Dược TPHCM 2023 | CĐ Y Khoa Phạm Ngọc Thạch",
+				"description": "Trường Cao đẳng Y Khoa Phạm Ngọc Thạch tuyển sinh Cao đẳng Dược TPHCM, Điều Dưỡng, KT Phục Hồi Chức Năng.✔️Xét tuyển chỉ cần tốt nghiệp THPT.",
+				"publisher": {
+					"@type": "EducationalOrganization",
+					"name": "Trường Cao Đẳng Y Khoa Phạm Ngọc Thạch"
+				},
+				"license": "https://caodangyduochochiminh.vn"
+			}
+		</script>
+		<script type="application/ld+json">
+			{"@context":"https://schema.org",
+				"@graph":[
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Trang chủ",
+						"url":"https://caodangyduochochiminh.vn/"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Giới thiệu tổng quan",
+						"url":"https://caodangyduochochiminh.vn/tong-quan-s508.html"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Sứ mệnh tầm nhìn",
+						"url":"https://caodangyduochochiminh.vn/su-menh-tam-nhin-s509.html"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Thông điệp Hiệu trưởng",
+						"url":"https://caodangyduochochiminh.vn/thong-diep-hieu-truong-s101.html"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Đơn vị liên kết",
+						"url":"https://caodangyduochochiminh.vn/don-vi-lien-ket-s510.html"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Chuyên ngành đào tạo",
+						"url":"https://caodangyduochochiminh.vn/chuyen-nganh-dao-tao-s511.html"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Hoạt động văn hóa sinh viên",
+						"url":"https://caodangyduochochiminh.vn/hoat-dong-van-hoa-sinh-vien-s512.html"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Thông báo tuyển sinh",
+						"url":"https://caodangyduochochiminh.vn/tuyen-sinh-2019-s100.html"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Cao đẳng Dược",
+						"url":"https://caodangyduochochiminh.vn/cao-dang-duoc.html"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Cao đẳng Điều dưỡng",
+						"url":"https://caodangyduochochiminh.vn/cao-dang-dieu-duong.html"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Cao đẳng Kỹ thuật phục hồi chức năng",
+						"url":"https://caodangyduochochiminh.vn/cao-dang-ky-thuat-phuc-hoi-chuc-nang.html"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Trung cấp Y học cổ truyền",
+						"url":"https://caodangyduochochiminh.vn/trung-cap-y-hoc-co-truyen.html"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Cẩm nang tuyển sinh",
+						"url":"https://caodangyduochochiminh.vn/c707/cam-nang-tuyen-sinh.html"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Cẩm nang Y dược",
+						"url":"https://caodangyduochochiminh.vn/c708/tin-tuc-y-duoc.html"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Bản tin trường",
+						"url":"https://caodangyduochochiminh.vn/c3123/ban-tin-truong.html"},
+					{"@context":"https://schema.org",
+						"@type":"SiteNavigationElement",
+						"id":"site-navigation",
+						"name":"Đăng ký xét tuyển",
+						"url":"https://caodangyduochochiminh.vn/lien-he.html"}]}
+		</script>
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Article",
+				"mainEntityOfPage": {
+					"@type": "WebPage",
+					"@id": "{/literal}{$itemContent->data.actual_link}{literal}"
+				},
+				"headline": "{/literal}{$itemContent->data.content_title}{literal}",
+				"image": "{/literal}{$itemContent->data.image_original}{literal}",
+				"author": {
+					"@type": "Organization",
+					"name": "Cao đẳng Y Khoa Phạm Ngọc Thạch",
+					"url": "https://caodangyduochochiminh.vn/"
+				},
+				"publisher": {
+					"@type": "Organization",
+					"name": "Cao đẳng Y Khoa Phạm Ngọc Thạch",
+					"logo": {
+						"@type": "ImageObject",
+						"url": "https://caodangyduochochiminh.vn/images/logos/logo-site-27-1689906650.png"
+					}
+				},
+				"datePublished": "",
+				"dateModified": ""
+			}
+		</script>
+	
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Trang Chủ",
+					"item": "https://caodangyduochochiminh.vn"
+				},{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "{/literal}{$itemContent->data.category_name}{literal}",
+					"item": "{/literal}{$itemContent->data.linkcat}{literal}"
+				},{
+					"@type": "ListItem",
+					"position": 3,
+					"name": "{/literal}{$itemContent->data.content_title}{literal}",
+					"item": "{/literal}{$itemContent->data.actual_link}{literal}"
+				}]
+			}
+		</script>
+	 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v22.8 (Yoast SEO v27.2) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<title>Trường Cao đẳng Y Khoa Phạm Ngọc Thạch Xét Tuyển Sinh 2026</title>
+	<meta name="description" content="Tuyển sinh Cao đẳng Y Dược TPHCM 2026. Trường Cao đẳng Y Khoa Phạm Ngọc Thạch xét tuyển học bạ ✔️ngành Y Dược, Y sĩ đa Khoa ✔️Miễn 100% học phí.">
+	<link rel="canonical" href="https://caodangyduochochiminh.vn/">
+	<meta property="og:locale" content="vi_VN">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Trường Cao đẳng Y Khoa Phạm Ngọc Thạch Xét Tuyển Sinh 2026">
+	<meta property="og:description" content="Tuyển sinh Cao đẳng Y Dược TPHCM 2026. Trường Cao đẳng Y Khoa Phạm Ngọc Thạch xét tuyển học bạ ✔️ngành Y Dược, Y sĩ đa Khoa ✔️Miễn 100% học phí.">
+	<meta property="og:url" content="https://caodangyduochochiminh.vn/">
+	<meta property="og:site_name" content="Trường Cao đẳng Y Khoa Phạm Ngọc Thạch Xét Tuyển Sinh 2026">
+	<meta name="twitter:card" content="summary_large_image">
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link data-minify="1" rel="stylesheet" id="post-views-counter-frontend-css" href="https://caodangyduochochiminh.vn/wp-content/cache/min/1/wp-content/plugins/post-views-counter/css/frontend.css?ver=1773828917" type="text/css" media="all">
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel="stylesheet" id="kk-star-ratings-css" href="https://caodangyduochochiminh.vn/wp-content/plugins/kk-star-ratings/src/core/public/css/kk-star-ratings.min.css?ver=5.4.10.4" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="wp-pagenavi-css" href="https://caodangyduochochiminh.vn/wp-content/cache/min/1/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=1773828917" type="text/css" media="all">
+<link rel="https://api.w.org/" href="https://caodangyduochochiminh.vn/wp-json/"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://caodangyduochochiminh.vn/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.9.4">
+<link rel="icon" href="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/favicon-site-27-1707204930-1-100x100.jpg" sizes="32x32">
+<link rel="icon" href="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/favicon-site-27-1707204930-1-236x236.jpg" sizes="192x192">
+<link rel="apple-touch-icon" href="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/favicon-site-27-1707204930-1-236x236.jpg">
+<meta name="msapplication-TileImage" content="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/favicon-site-27-1707204930-1-300x300.jpg">
+		<style type="text/css" id="wp-custom-css">
+			.kk-star-ratings.kksr-align-right
+{
+	float:right;
+}
+.link_special a
+{
+	color:#fff;
+}
+.wp-caption
+{
+	float:left;
+	width:100%;
+	max-width:100%;
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Feb 25, 2018, 9:41:49 AM
+    Author     : GIANGNT
+*/
+
+@font-face {
+    font-family: UTMAVO;
+    src: url(../fonts/UTMAvo.ttf);
+}
+@font-face {
+    font-family: UTMAVOBOL;
+    src: url(../fonts/UTMAvoBold.ttf);
+}
+
+input
+{
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.hide{
+    display: none;
+}
+.fromReg
+{
+    width: 740px;
+    padding: 30px;
+    float: left;
+    margin: 10px calc((100% - 740px)/2);
+    background: rgba(114, 32, 44, 0.8);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #333;
+    color: #fff;
+    position: relative;
+}
+.ajax-loading{
+    width: 100px; height: 100px; background: url("images/loader.GIF?v=1.3");
+    background-size: 100px 100px;
+    position: absolute;
+    bottom: 35%;
+    left: 46%;
+    z-index: 99999;
+    display: none;
+}
+
+.fromReg form{
+    background: none !important;
+}
+.fromReg form .highlight{
+    font-size: 28px; font-weight: bold;
+    text-transform: uppercase;
+    margin: 7px 0 15px; color: #fff;
+}
+.title_heading
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    float: left;
+    width: 100%;
+    position: relative;
+    margin: 10px 0;
+    text-align: left;
+    color: #fff;
+}
+
+.btn-submit
+{
+    width: 90%;
+    float: left;
+    margin: 10px 5%;
+    padding: 10px 0 ;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #72202c;
+    cursor: pointer;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+}
+.btn-submit:hover
+{
+    box-shadow: 2px 2px 5px #333;
+    text-shadow: 2px 2px 5px #333;
+}
+
+.block-field
+{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.block50
+{
+    width: 47.5%;
+    margin-right: 5%;
+}
+.block50:nth-child(2n)
+{
+    float: right;
+    margin-right: 0;
+}
+.block-field label,.block-field select
+{
+    float: left;
+    width: 100%;
+    text-align: left;
+}
+.block-field input[type=text],.block-field select,.block-field input[type=email]
+{
+    padding: 7px 10px;
+    float: left;
+    width: calc(100% - 20px);
+    border-radius: 5px;
+    border: none;
+    color: #333;
+}
+.block-field select
+{
+    width: 100%;
+}
+
+.option-list
+{
+    width: 25px;
+    height: 25px;
+    float: left;
+    cursor: pointer;
+}
+
+.title-list,.block-list label
+{
+    float: left;
+    margin-left: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 131px !important;
+    font-weight: normal;
+}
+.title-list{
+    margin-top: 5px; font-weight: bold;
+}
+.block-list label
+{
+    font-size: 13px;
+}
+.block-list3 div
+{
+    width: 30%;
+    margin-right: 5%;
+}
+.block-list2 div
+{
+    width: 47.5%;
+    margin-right: 5%;
+}
+.block-list3 div:last-child
+{
+    float: right;
+    margin-right: 0;
+}
+.block-list2 div:last-child
+{
+    float: right;
+    margin-right: 0;
+}
+.block-list h3
+{
+    text-decoration: underline;
+    float: left;
+    font-weight: normal;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.block-list input[type=checkbox], .block-list input[type=radio]
+{
+    border-radius: 10px;
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -o-appearance:none;
+    border: 2px solid #fff;
+    margin-top: 5px;
+}
+.block-list input[type=checkbox]:checked, .block-list input[type=radio]:checked
+{
+    background: green;
+}
+.block-list label
+{
+    text-transform: none;
+}
+
+.block-tab
+{
+    display: none;
+}
+
+.error{
+    color: red;
+}
+.ajax-loading{
+    width: 100px; height: 100px; background: url("images/loader.GIF?v=1.3");
+    background-size: 100px 100px;
+    position: absolute;
+    bottom: 35%;
+    left: 46%;
+    z-index: 99999;
+    display: none;
+}
+
+/*-----------------Mobile---------------*/
+@media (max-width:767px){
+    /*------------Form--------*/
+    .fromReg
+    {
+        width: 96% !important;
+        padding: 0 2% !important;
+        float: left !important;
+        height: auto !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+    }
+    .block50,.block-list>div
+    {
+        width: 100%;
+        float: left !important;
+    }
+
+}
+.fade{
+    display: none;
+}
+.fromReg.small
+{
+    width: 96% !important;
+    padding: 0 2% !important;
+    float: left !important;
+    height: auto !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+}
+.small .block50, .small .block-list>div
+{
+    width: 100%;
+    float: left !important;
+}
+.header_form
+{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 7px 0 15px;
+    color: #fff;
+    float: left;
+    width: 100%;
+}
+.heading_form{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 7px 0 15px;
+    color: #fff;
+    float: left;
+    width: 100%;
+    border-bottom: 1px dashed #fff;
+    padding-bottom: 10px;
+}
+.info_form
+{
+    font-size: 18px;
+    font-weight: bold;
+}		</style>
+		</head>
+<body>
+<div class="container">
+	<div class="container-header">
+		<a href="/"><img class="logo" src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/logo-site-27-1689906770.png" alt="logo"></a>						<h1 style="display:none;">Trường Cao đẳng Y khoa Phạm Ngọc Thạch tuyển sinh chính quy 2025</h1>
+					<img src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/images/slogan.png" alt="{$setting.setting_company}">
+	</div>
+		
+	<div class="btutton_download" style="position: fixed;top: 135px;left: 1034px;height: 179px;width: 50px;z-index: 99999999;">
+		<a rel="nofollow" target="_blank" href="https://drive.google.com/file/d/1M3eWWTb-93A3ueWJRVKgMfNGVJzhXgC-/view" title="Tải mẫu đăng ký xét tuyển Trường Cao Đẳng Y Khoa Phạm Ngọc Thạch">
+			<img src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/images/tai-mau-dang-ky.gif" alt="Tải mẫu đăng ký xét tuyển Trường Cao Đẳng Y Khoa Phạm Ngọc Thạch">
+		</a>
+	</div>
+	
+	<div class="menu">
+            <div class="button_menu">
+                <div id="menu1"></div>
+                <div id="menu2"></div>
+                <div id="menu3"></div>
+            </div>
+           
+                <ul id="menu-menu-chinh" class="list_menu"><li id="menu-item-198" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-198 active "><a href="/" aria-current="page"><i class="fas fa-home" aria-hidden="true"></i></a></li>
+<li id="menu-item-9416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9416"><a href="https://caodangyduochochiminh.vn/tong-quan-s508.html">Giới thiệu</a></li>
+<li id="menu-item-199" class="sub_menu menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-199"><a href="#">Chương trình đào tạo</a>
+<ul class="child_menu">
+	<li id="menu-item-205" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-205"><a href="https://caodangyduochochiminh.vn/cao-dang-y-sy-da-khoa.html">Cao Đẳng Y Sỹ Đa Khoa</a></li>
+	<li id="menu-item-203" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-203"><a href="https://caodangyduochochiminh.vn/cao-dang-duoc.html">Cao Đẳng Dược</a></li>
+	<li id="menu-item-202" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-202"><a href="https://caodangyduochochiminh.vn/cao-dang-dieu-duong.html">Cao Đẳng Điều Dưỡng</a></li>
+	<li id="menu-item-204" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-204"><a href="https://caodangyduochochiminh.vn/cao-dang-ky-thuat-phuc-hoi-chuc-nang.html">Cao đẳng Kỹ thuật Phục hồi Chức năng</a></li>
+	<li id="menu-item-206" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-206"><a href="https://caodangyduochochiminh.vn/lien-thong-cao-dang-y-duoc.html">Liên thông Cao đẳng Dược</a></li>
+	<li id="menu-item-207" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-207"><a href="https://caodangyduochochiminh.vn/trung-cap-y-hoc-co-truyen.html">Trung cấp Y học cổ truyền</a></li>
+	<li id="menu-item-208" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-208"><a href="https://caodangyduochochiminh.vn/van-bang-hai-cao-dang-y-duoc.html">Văn bằng 2 Cao đẳng Dược</a></li>
+</ul>
+</li>
+<li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a href="https://caodangyduochochiminh.vn/tuyen-sinh-2019-s100.html">Thông báo tuyển sinh</a></li>
+<li id="menu-item-210" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-210"><a href="https://caodangyduochochiminh.vn/c707/cam-nang-tuyen-sinh.html">Cẩm nang tuyển sinh</a></li>
+<li id="menu-item-211" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-211"><a href="https://caodangyduochochiminh.vn/c708/tin-tuc-y-duoc.html">Tin Tức y dược</a></li>
+<li id="menu-item-212" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-212"><a href="https://caodangyduochochiminh.vn/c3123/ban-tin-truong.html">Bản tin trường</a></li>
+<li id="menu-item-218" class="sub_menu sub_menu_reg menu-item menu-item-type-post_type menu-item-object-page menu-item-218"><a href="https://caodangyduochochiminh.vn/lien-he.html"><i class="fas fa-angle-double-down" aria-hidden="true"></i> <br>Đăng ký xét tuyển</a></li>
+</ul>
+           
+                   </div>
+
+
+
+
+
+
+  
+<div class="box_slide">
+    <div class="slide-home">
+        <div class="bxslider" id="slideHome" res="">
+                            <a target="_blank" title="" href="">
+                    <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/tuyen-sinh-cao-dang-y-khoa-pham-ngoc-thach-2026-1772180202.jpg" alt="" border="0">
+                </a>
+                            <a target="_blank" title="" href="">
+                    <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/le-trao-bang-tot-nghiep-truong-cao-dang-y-khoa-pham-ngoc-thach-nam-2023-1697079130.jpg" alt="" border="0">
+                </a>
+                            <a target="_blank" title="" href="">
+                    <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/cuoc-thi-luu-but-quan-su-k14-cho-sinh-vien-khoa-14-truong-cao-dang-y-khoa-pham-ngoc-thach-1694597382-1.jpg" alt="" border="0">
+                </a>
+                            <a target="_blank" title="" href="">
+                    <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/team-building-ban-linh-sinh-vien-cao-dang-y-khoa-pham-ngoc-thach-1688613320.jpg" alt="" border="0">
+                </a>
+                    </div>
+    </div>
+    <div class="highlights">
+        <p><img src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/images/chon1.png" alt="16 năm thành lập"> <span>Năm thành lập</span></p>
+        <p><img src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/images/chon2.png" alt="96% Sinh viên ra trường có việc làm"> <span>Sinh viên ra trường<br>có việc làm</span></p>
+        <p><img src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/images/chon3.png" alt="550 Đối tác bệnh viện, nhà thuốc"> <span>Đối tác bệnh viện,<br>nhà thuốc</span></p>
+        <p><img src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/images/chon4.png" alt="40% Sinh viên du học &amp; làm việc nước ngoài"> <span>Sinh viên du học &amp;<br>làm việc nước ngoài</span>
+        </p>
+    </div>
+</div>
+<div class="notify">
+                                        <div class="notify-info">
+<h2 style="text-align: center; font-size: 18px;">TRƯỜNG CAO ĐẲNG Y KHOA PHẠM NGỌC THẠCH<br>
+TUYỂN SINH Y DƯỢC TPHCM 2026</h2>
+<p>&nbsp;</p>
+<p><strong>Trường Cao đẳng Y Khoa Phạm Ngọc Thạch</strong> thông báo <strong>tuyển sinh Cao đẳng Y Dược TPHCM xét tuyển học bạ năm 2026</strong> theo quyết định của Bộ Giáo dục và Đào tạo.</p>
+<p style="font-size: 13px;"><a class="notify-link" title="Đăng ký xét tuyển Online" href="https://caodangyduochochiminh.vn/lien-he.html" target="_blank" rel="dofollow noopener">ĐĂNG KÝ XÉT TUYỂN ONLINE &gt;&gt;</a></p>
+</div>
+<div class="notify-content">
+<p>Tên trường: <strong>Trường Cao Đẳng Y Khoa Phạm Ngọc Thạch</strong></p>
+<p>Ký hiệu trường: <strong>CBK</strong></p>
+<p>Phạm vi tuyển sinh: <strong>Tuyển sinh trên toàn quốc</strong></p>
+<p>Điều kiện xét tuyển: <strong>Tốt nghiệp THPT</strong></p>
+<p>Hình thức đào tạo: <strong>Chính quy</strong></p>
+<p>Địa chỉ đào tạo &amp; nộp hồ sơ:&nbsp;<strong>Số 127/3 – 5 Hoàng Hoa Thám, Phường Tân Bình, TP.Hồ Chí Minh</strong></p>
+<p>Hotline:&nbsp; <strong>0899 955 990 – 0969 955 990</strong></p>
+</div>
+                </div>
+<div class="mgt20">
+                <div class="box_title">
+                    <h2>Chương trình đào tạo cao đẳng dược tphcm</h2>
+                  
+                </div>
+
+            <div class="home-list-cat">               
+                    <div class="cat-detail">
+                      <div class="cat-detail-preview"><img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/cao-dang-y-si-da-khoa-cao-dang-y-khoa-pham-ngoc-thach1-1.jpg" alt="Cao đẳng Y sĩ Đa khoa">
+<h3><span><a target="_blank" href="https://caodangyduochochiminh.vn/cao-dang-y-si-da-khoa.html" rel="dofollow noopener">Cao đẳng<br>
+Y sĩ Đa khoa</a></span>
+<div class="border-cat-title"><span></span></div>
+
+</h3>
+<p><b style="color: #1c5087;">&gt;&gt; </b> Mã ngành: <b style="color: #1c5087;">6720101</b><br>
+<b style="color: #1c5087;">&gt;&gt; </b> Thời gian đào tạo: <b style="color: #1c5087;">3 năm</b><br>
+<b style="color: #1c5087;">&gt;&gt; </b> Khối lượng kiến thức: <b style="color: #1c5087;">100 tín chỉ</b><br>
+<b style="color: #1c5087;">&gt;&gt; </b> Cơ hội: Cao đẳng Y sĩ đa khoa được xem như ngành học gần nhất với ngành y khoa bậc đại học</p>
+<a href="https://caodangyduochochiminh.vn/cao-dang-y-si-da-khoa.html" rel="dofollow">xem thêm</a></div>                        <ul class="home-cat-list-news">
+                                                                                                                                                <li>
+                                    <a href="https://caodangyduochochiminh.vn/cao-dang-y-sy-da-khoa/pham-vi-hanh-nghe-cua-y-si-da-khoa-c341290.html" title="Phạm vi hành nghề của Y sĩ đa khoa và Bác sĩ đa khoa">Phạm vi hành nghề của Y sĩ đa khoa và Bác sĩ đa khoa</a>
+                                </li>
+                              
+                                                                                          <li>
+                                    <a href="https://caodangyduochochiminh.vn/cao-dang-y-sy-da-khoa/y-si-co-duoc-ke-don-thuoc-khong-c342857.html" title="Hỏi đáp: Y sĩ có được kê đơn thuốc không?">Hỏi đáp: Y sĩ có được kê đơn thuốc không?</a>
+                                </li>
+                              
+                                                                                          <li>
+                                    <a href="https://caodangyduochochiminh.vn/cao-dang-y-sy-da-khoa/hoc-y-si-da-khoa-online-c342676.html" title="Học Y sĩ đa khoa online được không? Giải đáp chi tiết">Học Y sĩ đa khoa online được không? Giải đáp chi tiết</a>
+                                </li>
+                              
+                                                                                                              </ul>
+                    </div>
+
+                    <div class="cat-detail">
+                      <div class="cat-detail-preview">
+                            <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/nganh-duoc.jpg" alt="Cao đẳng Dược">
+                            <h3><span><a target="_blank" href="https://caodangyduochochiminh.vn/cao-dang-duoc.html" rel="dofollow">Cao đẳng<br> Dược</a></span><div class="border-cat-title"><span></span></div></h3>
+                            <p>
+                                <b style="color:#1C5087">&gt;&gt; </b> Mã ngành: <b style="color:#1C5087">6720201</b><br>
+                                <b style="color:#1C5087">&gt;&gt; </b> Thời gian đào tạo: <b style="color:#1C5087">3 năm</b><br>
+                                <b style="color:#1C5087">&gt;&gt; </b> Khối lượng kiến thức: <b style="color:#1C5087">99 tín chỉ</b><br>
+                                <b style="color:#1C5087">&gt;&gt; </b> Cơ hội việc làm: Cơ sở sản xuất chế biến thuốc, Trình dược viên tại nhà thuốc bệnh viên, Chủ quầy thuốc...
+                            </p>
+                            <a href="https://caodangyduochochiminh.vn/cao-dang-duoc.html" rel="dofollow">xem thêm</a>
+                        </div>                        <ul class="home-cat-list-news">
+                                                                                                                                                <li>
+                                    <a href="https://caodangyduochochiminh.vn/cao-dang-duoc/hoc-phi-cao-dang-duoc-c20796.html" title="Mức Học phí Cao đẳng Dược TPHCM 2025 là bao nhiêu?">Mức Học phí Cao đẳng Dược TPHCM 2025 là bao nhiêu?</a>
+                                </li>                                
+                                                                                          <li>
+                                    <a href="https://caodangyduochochiminh.vn/cao-dang-duoc/nganh-duoc-he-cao-dang-hoc-nhung-mon-gi-tai-tphcm-c7297.html" title="Sinh viên Cao đẳng Dược học những môn gì?">Sinh viên Cao đẳng Dược học những môn gì?</a>
+                                </li>                                
+                                                                                          <li>
+                                    <a href="https://caodangyduochochiminh.vn/cao-dang-duoc/diem-chuan-cao-dang-duoc-tphcm-c2548.html" title="Điểm chuẩn cao đẳng Dược 2026 lấy bao nhiêu?">Điểm chuẩn cao đẳng Dược 2026 lấy bao nhiêu?</a>
+                                </li>                                
+                                                                                                              </ul>
+                    </div>
+                    <div class="cat-detail">
+                      <div class="cat-detail-preview">
+                            <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/nganh-dieu-duong.jpg" alt="Cao đẳng điều dưỡng">
+                            <h3><span><a target="_blank" href="https://caodangyduochochiminh.vn/cao-dang-dieu-duong.html" rel="dofollow">Cao đẳng<br>điều dưỡng</a></span><div class="border-cat-title"><span></span></div></h3>
+                            <p>
+                                <b style="color:#1C5087">&gt;&gt; </b> Mã ngành: <b style="color:#1C5087">6720301</b><br>
+                                <b style="color:#1C5087">&gt;&gt; </b> Thời gian đào tạo: <b style="color:#1C5087">3 năm</b><br>
+                                <b style="color:#1C5087">&gt;&gt; </b> Khối lượng kiến thức: <b style="color:#1C5087">99 tín chỉ</b><br>
+                                <b style="color:#1C5087">&gt;&gt; </b> Điều dưỡng viên tại cơ sở chăm sóc khám chữa bệnh nhà nước hoặc tư nhân, tại CHLB Đức, Nhật Bản...
+                            </p>
+                            <a href="https://caodangyduochochiminh.vn/cao-dang-dieu-duong.html" rel="dofollow">xem thêm</a>
+                        </div>                        <ul class="home-cat-list-news">
+                                                                                                                                                <li>
+                                    <a href="https://caodangyduochochiminh.vn/cao-dang-dieu-duong/hoc-phi-cao-dang-dieu-duong-c20650.html" title="Học phí Cao đẳng Điều dưỡng TPHCM năm 2024 mới nhất">Học phí Cao đẳng Điều dưỡng TPHCM năm 2024 mới nhất</a>
+                                </li>                                
+                                                                                          <li>
+                                    <a href="https://caodangyduochochiminh.vn/cao-dang-dieu-duong/hoc-dieu-duong-co-can-bang-cap-3-khong-c339942.html" title="Học Điều dưỡng có cần bằng cấp 3 không? [Góc giải đáp]">Học Điều dưỡng có cần bằng cấp 3 không? [Góc giải đáp]</a>
+                                </li>                                
+                                                                                          <li>
+                                    <a href="https://caodangyduochochiminh.vn/cao-dang-dieu-duong/sinh-vien-hoc-dieu-duong-co-can-laptop-khong-c340602.html" title="Sinh viên học Điều dưỡng có cần laptop không?">Sinh viên học Điều dưỡng có cần laptop không?</a>
+                                </li>                                
+                                                                                                              </ul>
+                    </div>
+                    <div class="cat-detail">
+                      <div class="cat-detail-preview">
+<img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/nganh-cao-dang-phuc-hoi-chuc-nang.jpg" alt="Cao đẳng Kỹ thuật Phục hồi Chức năng" width="315" height="228">
+<h3><span><a target="_blank" href="https://caodangyduochochiminh.vn/cao-dang-ky-thuat-phuc-hoi-chuc-nang.html" rel="dofollow noopener">Cao đẳng<br>
+KTPH chức năng</a></span></h3>
+<div class="border-cat-title"></div>
+<p><b style="color: #1c5087;">&gt;&gt; </b> Mã ngành: <b style="color: #1c5087;">6720603</b><br>
+<b style="color: #1c5087;">&gt;&gt; </b> Thời gian đào tạo: <b style="color: #1c5087;">3 năm</b><br>
+<b style="color: #1c5087;">&gt;&gt; </b> Khối lượng kiến thức: <b style="color: #1c5087;">99 tín chỉ</b><br>
+<b style="color: #1c5087;">&gt;&gt; </b> Cơ hội việc làm: Hiện cả nước ước tính thiếu hụt 10.000 kỹ thuật viên Phục hồi chức năng được đào tạo bài bản</p>
+<a href="https://caodangyduochochiminh.vn/cao-dang-ky-thuat-phuc-hoi-chuc-nang.html" rel="dofollow">xem thêm</a></div>                        <ul class="home-cat-list-news">
+                                                                                                                                                <li>
+                                    <a href="https://caodangyduochochiminh.vn/cao-dang-ky-thuat-phuc-hoi-chuc-nang/hoc-phi-nganh-phuc-hoi-chuc-nang-tphcm-nam-2020-bao-nhieu-c52501.html" title="Học phí ngành Kỹ thuật phục hồi chức năng TPHCM 2025">Học phí ngành Kỹ thuật phục hồi chức năng TPHCM 2025</a>
+                                </li>                                
+                                                                                          <li>
+                                    <a href="https://caodangyduochochiminh.vn/cao-dang-ky-thuat-phuc-hoi-chuc-nang/thoi-gian-xet-tuyen-cao-dang-nganh-ky-thuat-phuc-hoi-chuc-nang-tphcm-nam-2020-c52526.html" title="Thời gian xét tuyển cao đẳng Kỹ thuật phục hồi chức năng 2025">Thời gian xét tuyển cao đẳng Kỹ thuật phục hồi chức năng 2025</a>
+                                </li>                                
+                                                                                          <li>
+                                    <a href="https://caodangyduochochiminh.vn/cao-dang-ky-thuat-phuc-hoi-chuc-nang/dieu-kien-xet-tuyen-cao-dang-phuc-hoi-chuc-nang-tphcm-nam-2020-la-gi-c52500.html" title="Điều kiện xét tuyển Cao đẳng Phục hồi chức năng TPHCM 2025">Điều kiện xét tuyển Cao đẳng Phục hồi chức năng TPHCM 2025</a>
+                                </li>                                
+                                                                                                              </ul>
+                    </div>
+                    <div class="cat-detail">
+                      <div class="cat-detail-preview"><img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/nganh-y-hoc-co-truyen.jpg" alt="Trung cấp Y học cổ truyền">
+<h3><span><a target="_blank" href="https://caodangyduochochiminh.vn/trung-cap-y-hoc-co-truyen.html" rel="dofollow noopener">Trung cấp<br>
+y học cổ truyền</a></span></h3>
+<div class="border-cat-title"></div>
+<p><b style="color: #1c5087;">&gt;&gt; </b> Mã ngành: <b style="color: #1c5087;">5720102</b><br>
+<b style="color: #1c5087;">&gt;&gt; </b> Thời gian đào tạo: <b style="color: #1c5087;">2 năm</b><br>
+<b style="color: #1c5087;">&gt;&gt; </b> Khối lượng kiến thức: <b style="color: #1c5087;">63 tín chỉ</b><br>
+<b style="color: #1c5087;">&gt;&gt; </b> Y sĩ YHCT ra trường có thể làm việc tại các bệnh viện YHCT, khoa YHCT của bệnh viện tuyến tỉnh, huyện, các phòng y tế…</p>
+<a href="https://caodangyduochochiminh.vn/trung-cap-y-hoc-co-truyen.html" rel="dofollow">xem thêm</a></div>                        <ul class="home-cat-list-news">
+                                                                                                                                                <li>
+                                    <a href="https://caodangyduochochiminh.vn/trung-cap-y-hoc-co-truyen/hoc-phi-trung-cap-y-si-y-hoc-co-truyen-c49751.html" title="Học Phí Trung Cấp Y Học Cổ Truyền 2025 Là Bao Nhiêu?">Học Phí Trung Cấp Y Học Cổ Truyền 2025 Là Bao Nhiêu?</a>
+                                </li>                                
+                                                                                          <li>
+                                    <a href="https://caodangyduochochiminh.vn/trung-cap-y-hoc-co-truyen/thoi-gian-xet-tuyen-trung-cap-y-si-y-hoc-co-truyen-c58054.html" title="Thời Gian Xét Tuyển Trung Cấp Y Học Cổ Truyền TPHCM 2025">Thời Gian Xét Tuyển Trung Cấp Y Học Cổ Truyền TPHCM 2025</a>
+                                </li>                                
+                                                                                          <li>
+                                    <a href="https://caodangyduochochiminh.vn/trung-cap-y-hoc-co-truyen/dieu-kien-xet-tuyen-trung-cap-y-hoc-co-truyen-c58013.html" title="Điều Kiện Xét Tuyển Trung Cấp Y Học Cổ Truyền TPHCM 2025">Điều Kiện Xét Tuyển Trung Cấp Y Học Cổ Truyền TPHCM 2025</a>
+                                </li>                                
+                                                                                                              </ul>
+                    </div>
+                    <div class="cat-detail">
+                      <div class="cat-detail-preview">
+                            <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/cao-dang-y-si-da-khoa.jpg" alt="Ngành Y sĩ Đa khoa">
+                            <h3><span><a target="_blank" href="https://caodangyduochochiminh.vn/lien-thong-cao-dang-y-duoc.html" rel="dofollow">Liên thông <br> Cao đẳng y dược</a></span><div class="border-cat-title"><span></span></div></h3>
+                            <p>
+                                <b style="color:#1C5087">&gt;&gt; </b> Thời gian học: <font color="#1c5087"><b>18 tháng</b></font><br>
+                                <b style="color:#1C5087">&gt;&gt; </b> Hình thức <b style="color:#1C5087">Tập trung</b><br>
+                                <b style="color:#1C5087">&gt;&gt; </b> Bằng cấp: <b style="color:#1C5087">chính quy</b><br>
+                                <b style="color:#1C5087">&gt;&gt; </b> Mục tiêu: Chương trình học Liên thông Cao đẳng Y Dược cung cấp cho bạn các kiến thức y tế hiện đại</p>
+                            <a href="https://caodangyduochochiminh.vn/lien-thong-cao-dang-y-duoc.html" rel="dofollow">xem thêm</a>
+                        </div>                        <ul class="home-cat-list-news">
+                                                                                                                                                <li>
+                                    <a href="https://caodangyduochochiminh.vn/lien-thong-cao-dang-duoc/lien-thong-cao-dang-dieu-duong-c61281.html" title="Tuyển sinh Liên thông Cao đẳng Điều dưỡng TPHCM 2023">Tuyển sinh Liên thông Cao đẳng Điều dưỡng TPHCM 2023</a>
+                                </li>                                
+                                                                                          <li>
+                                    <a href="https://caodangyduochochiminh.vn/lien-thong-cao-dang-duoc/ho-so-lien-thong-cao-dang-duoc-c61262.html" title="Hồ Sơ Liên Thông Cao Đẳng Dược TPHCM Cần Những Gì?">Hồ Sơ Liên Thông Cao Đẳng Dược TPHCM Cần Những Gì?</a>
+                                </li>                                
+                                                                                          <li>
+                                    <a href="https://caodangyduochochiminh.vn/lien-thong-cao-dang-duoc/dieu-kien-lien-thong-cao-dang-duoc-c61263.html" title="Điều Kiện Học Liên Thông Cao Đẳng Dược Từ Trung Cấp">Điều Kiện Học Liên Thông Cao Đẳng Dược Từ Trung Cấp</a>
+                                </li>                                
+                                                                                                              </ul>
+                    </div>
+               
+            </div>
+        </div>
+<div class="mgt20">
+    <div class="home-left-box">
+
+        <div class="box_title">
+            <span><h2>bản Tin hoạt động đoàn - Trường</h2></span>
+           
+        </div>
+        
+                <div class="list-news-4-square">
+                                                                                                                                       <a href="https://caodangyduochochiminh.vn/ban-tin-truong/thong-bao-lich-nghi-tet-duong-lich-va-tet-nguyen-dan-at-ty-nam-2025-c356046.html">
+                                 <img width="759" height="400" src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/share-thong-bao-lich-nghi-tet-duong-lich-va-tet-nguyen-dan-at-ty-nam-2025-1732183061-10-759x400.png" class="attachment-thum_lager_home size-thum_lager_home wp-post-image" alt="" img_large_item_cat="" decoding="async" loading="lazy" srcset="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/share-thong-bao-lich-nghi-tet-duong-lich-va-tet-nguyen-dan-at-ty-nam-2025-1732183061-10-759x400.png 759w, https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/share-thong-bao-lich-nghi-tet-duong-lich-va-tet-nguyen-dan-at-ty-nam-2025-1732183061-10-300x158.png 300w, https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/share-thong-bao-lich-nghi-tet-duong-lich-va-tet-nguyen-dan-at-ty-nam-2025-1732183061-10-1024x540.png 1024w, https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/share-thong-bao-lich-nghi-tet-duong-lich-va-tet-nguyen-dan-at-ty-nam-2025-1732183061-10-768x405.png 768w, https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/share-thong-bao-lich-nghi-tet-duong-lich-va-tet-nguyen-dan-at-ty-nam-2025-1732183061-10-100x53.png 100w, https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/share-thong-bao-lich-nghi-tet-duong-lich-va-tet-nguyen-dan-at-ty-nam-2025-1732183061-10-854x450.png 854w, https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/share-thong-bao-lich-nghi-tet-duong-lich-va-tet-nguyen-dan-at-ty-nam-2025-1732183061-10-448x236.png 448w, https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/share-thong-bao-lich-nghi-tet-duong-lich-va-tet-nguyen-dan-at-ty-nam-2025-1732183061-10-664x350.png 664w, https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/share-thong-bao-lich-nghi-tet-duong-lich-va-tet-nguyen-dan-at-ty-nam-2025-1732183061-10-500x263.png 500w, https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/share-thong-bao-lich-nghi-tet-duong-lich-va-tet-nguyen-dan-at-ty-nam-2025-1732183061-10.png 1097w" sizes="auto, (max-width: 759px) 100vw, 759px">                                <span>Trường Cao đẳng Y khoa Phạm Ngọc Thạch thông báo Lịch nghỉ Tết Dương lịch và Tết Nguyên đán Ất Tỵ năm 2025</span>
+                            </a>
+                                                                                         <a href="https://caodangyduochochiminh.vn/ban-tin-truong/hoc-phi-cao-dang-y-khoa-pham-ngoc-thach-c58972.html">
+                                 <img width="600" height="400" src="https://caodangyduochochiminh.vn/wp-content/uploads/2025/04/share-hoc-phi-cao-dang-y-khoa-pham-ngoc-thach-1712910679.jpg" class="attachment-thum_lager_home size-thum_lager_home wp-post-image" alt="" img_large_item_cat="" decoding="async" loading="lazy" srcset="https://caodangyduochochiminh.vn/wp-content/uploads/2025/04/share-hoc-phi-cao-dang-y-khoa-pham-ngoc-thach-1712910679.jpg 600w, https://caodangyduochochiminh.vn/wp-content/uploads/2025/04/share-hoc-phi-cao-dang-y-khoa-pham-ngoc-thach-1712910679-300x200.jpg 300w, https://caodangyduochochiminh.vn/wp-content/uploads/2025/04/share-hoc-phi-cao-dang-y-khoa-pham-ngoc-thach-1712910679-100x67.jpg 100w, https://caodangyduochochiminh.vn/wp-content/uploads/2025/04/share-hoc-phi-cao-dang-y-khoa-pham-ngoc-thach-1712910679-354x236.jpg 354w, https://caodangyduochochiminh.vn/wp-content/uploads/2025/04/share-hoc-phi-cao-dang-y-khoa-pham-ngoc-thach-1712910679-525x350.jpg 525w, https://caodangyduochochiminh.vn/wp-content/uploads/2025/04/share-hoc-phi-cao-dang-y-khoa-pham-ngoc-thach-1712910679-450x300.jpg 450w" sizes="auto, (max-width: 600px) 100vw, 600px">                                <span>Học phí Trường Cao Đẳng Y khoa Phạm Ngọc Thạch năm 2025</span>
+                            </a>
+                                                                                         <a href="https://caodangyduochochiminh.vn/ban-tin-truong/thong-bao-viec-du-le-khai-giang-2024-2025-c346650.html">
+                                 <img width="640" height="400" src="https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-thong-bao-viec-du-le-khai-giang-2024-2025-1730277536-5-640x400.jpg" class="attachment-thum_lager_home size-thum_lager_home wp-post-image" alt="" img_large_item_cat="" decoding="async" loading="lazy" srcset="https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-thong-bao-viec-du-le-khai-giang-2024-2025-1730277536-5-640x400.jpg 640w, https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-thong-bao-viec-du-le-khai-giang-2024-2025-1730277536-5-300x188.jpg 300w, https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-thong-bao-viec-du-le-khai-giang-2024-2025-1730277536-5-100x63.jpg 100w, https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-thong-bao-viec-du-le-khai-giang-2024-2025-1730277536-5-377x236.jpg 377w, https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-thong-bao-viec-du-le-khai-giang-2024-2025-1730277536-5-560x350.jpg 560w, https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-thong-bao-viec-du-le-khai-giang-2024-2025-1730277536-5-480x300.jpg 480w, https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-thong-bao-viec-du-le-khai-giang-2024-2025-1730277536-5.jpg 686w" sizes="auto, (max-width: 640px) 100vw, 640px">                                <span>Thông báo việc Dự lễ khai giảng năm học 2024 – 2025 và Tổ chức Hội thi giao lưu văn nghệ Chào mừng kỷ niệm 42 năm ngày Nhà giáo Việt Nam (20/11/1982 – 20/11/2024)</span>
+                            </a>
+                                                                                         <a href="https://caodangyduochochiminh.vn/ban-tin-truong/le-khai-giang-2024-2025-cdykpnt-c348467.html">
+                                 <img width="600" height="400" src="https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-le-khai-giang-2024-2025-cdykpnt-1731549277-4-600x400.jpg" class="attachment-thum_lager_home size-thum_lager_home wp-post-image" alt="" img_large_item_cat="" decoding="async" loading="lazy" srcset="https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-le-khai-giang-2024-2025-cdykpnt-1731549277-4-600x400.jpg 600w, https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-le-khai-giang-2024-2025-cdykpnt-1731549277-4-300x200.jpg 300w, https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-le-khai-giang-2024-2025-cdykpnt-1731549277-4-768x512.jpg 768w, https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-le-khai-giang-2024-2025-cdykpnt-1731549277-4-100x67.jpg 100w, https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-le-khai-giang-2024-2025-cdykpnt-1731549277-4-675x450.jpg 675w, https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-le-khai-giang-2024-2025-cdykpnt-1731549277-4-354x236.jpg 354w, https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-le-khai-giang-2024-2025-cdykpnt-1731549277-4-525x350.jpg 525w, https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-le-khai-giang-2024-2025-cdykpnt-1731549277-4-450x300.jpg 450w, https://caodangyduochochiminh.vn/wp-content/uploads/2024/11/share-le-khai-giang-2024-2025-cdykpnt-1731549277-4.jpg 800w" sizes="auto, (max-width: 600px) 100vw, 600px">                                <span>Lễ khai giảng năm học 2024 – 2025 Trường Cao đẳng Y khoa Phạm Ngọc Thạch</span>
+                            </a>
+                                                                             
+                </div>
+                <a href="https://caodangyduochochiminh.vn/c3123/ban-tin-truong.html" class="list-news-more">Xem thêm &gt;&gt; </a>
+          
+    </div>
+
+    <div class="home-right-box">
+       <div class="box_title" style="color: #0241B9">
+                <span>Thông báo</span>
+        </div>
+            <img src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/images/pic-thongbao.jpg" alt="Thông báo Trường Cao đẳng Y Khoa Phạm Ngọc Thạch" height="209.5px">
+
+            <div class="list-news-vertical">
+                                                                                                                            <a href="https://caodangyduochochiminh.vn/ban-tin-truong/thong-bao-lich-nghi-tet-duong-lich-va-tet-nguyen-dan-at-ty-nam-2025-c356046.html" rel="nofollow" target="_blank">
+                            <i class="fas fa-caret-right"></i> <span>Trường Cao đẳng Y khoa Phạm Ngọc Thạch thông báo Lịch nghỉ Tết Dương lịch và Tết Nguyên đán Ất Tỵ năm 2025</span>
+                        </a>
+                                                                             <a href="https://caodangyduochochiminh.vn/ban-tin-truong/hoc-phi-cao-dang-y-khoa-pham-ngoc-thach-c58972.html" rel="nofollow" target="_blank">
+                            <i class="fas fa-caret-right"></i> <span>Học phí Trường Cao Đẳng Y khoa Phạm Ngọc Thạch năm 2025</span>
+                        </a>
+                                                                             <a href="https://caodangyduochochiminh.vn/ban-tin-truong/thong-bao-viec-du-le-khai-giang-2024-2025-c346650.html" rel="nofollow" target="_blank">
+                            <i class="fas fa-caret-right"></i> <span>Thông báo việc Dự lễ khai giảng năm học 2024 – 2025 và Tổ chức Hội thi giao lưu văn nghệ Chào mừng kỷ niệm 42 năm ngày Nhà giáo Việt Nam (20/11/1982 – 20/11/2024)</span>
+                        </a>
+                                                                             <a href="https://caodangyduochochiminh.vn/ban-tin-truong/le-khai-giang-2024-2025-cdykpnt-c348467.html" rel="nofollow" target="_blank">
+                            <i class="fas fa-caret-right"></i> <span>Lễ khai giảng năm học 2024 – 2025 Trường Cao đẳng Y khoa Phạm Ngọc Thạch</span>
+                        </a>
+                                                                             <a href="https://caodangyduochochiminh.vn/ban-tin-truong/thong-bao-tuyen-dung-giang-vien-2024-c344283.html" rel="nofollow" target="_blank">
+                            <i class="fas fa-caret-right"></i> <span>Trường Cao đẳng Y khoa Phạm Ngọc Thạch tuyển dụng giảng viên năm học 2024-2025</span>
+                        </a>
+                                                                                 </div>
+            <a href="https://caodangyduochochiminh.vn/c3123/ban-tin-truong.html" class="list-news-more">Xem thêm &gt;&gt; </a>
+    </div>
+
+</div>
+
+  <div class="mgt20">
+<div class="home-story">
+<h3>Trường Cao đẳng Y Khoa Phạm Ngọc Thạch</h3>
+<div class="home-story-text">
+<p style="text-align: justify;"><strong>Trường Cao Đẳng Y Khoa Phạm Ngọc Thạch</strong> là trường Cao đẳng Y Dược tại TPHCM đào tạo trọng tâm nhóm ngành sức khỏe, chịu trách nhiệm đào tạo nguồn nhân lực Y tế có trình độ Cao đẳng chất lượng cao nhằm phục vụ chăm sóc, bảo vệ và nâng cao sức khỏe cộng đồng.</p>
+<div class="home-story-text">
+<p class="nabila">Câu chuyện ươm mầm thế hệ thầy thuốc Việt</p>
+<p><span class="disc">&nbsp;</span>Trường Cao đẳng Y Khoa Phạm Ngọc Thạch thành lập năm 2006 theo quyết định số 3015/QĐ-BGD&amp;ĐT ngày 19/06/2006 với nhiệm vụ đào tạo các khối ngành Y Dược.</p>
+<p><span class="disc">&nbsp;</span>Mỗi năm, Nhà trường cung ứng hàng trăm nguồn nhân lực có chất lượng cao trong nhóm ngành sức khỏe về các lĩnh vực Dược, Điều dưỡng, Kỹ thuật Phục hồi chức năng, Y sĩ y học cổ truyền… góp sức mình cho sự nghiệp phát triển nguồn nhân lực Y tế.</p>
+<p><span class="disc">&nbsp;</span>Hơn 16 năm xây dựng và phát triển, Trường Cao đẳng Y Khoa Phạm Ngọc Thạch đã từng bước khẳng định vị thế nhất định và được các Bộ, Ban ngành xã hội công nhận. Đây là một trong những ngôi trường Cao đẳng Y dược có chất lượng trong hệ thống giáo dục cao đẳng, đại học của Việt Nam trong đào tạo nguồn nhân lực cho ngành Y tế tại TP.HCM nói riêng và cả nước nói chung.</p>
+<p><span class="disc">&nbsp;</span>Với triết lý giáo dục <strong>“Sáng Y Đức – Sâu Y Lý – Giỏi Y Thuật”</strong>. Đội ngũ giảng viên nhà trường sẽ nỗ lực hơn nữa trong công cuộc trồng người, đào tạo ra những thế hệ thầy thuốc trẻ ưu tú cho đất nước.</p>
+<p><span class="disc">&nbsp;</span>Không chỉ đạt chuẩn cơ sở vật chất, trường đã liên kết với nhiều bệnh viên công lớn tại TP.HCM. Đảm bảo sinh viên thực hành – thực tập rèn luyện tay nghề – phẩm chất ngay từ khi ngồi trên ghế nhà trường đáp ứng đúng theo tiêu chí <strong>“THỰC HỌC – THỰC NGHIỆP”</strong>.</p>
+<p><span class="disc">&nbsp;</span>Trường đào tạo Y Khoa Phạm Ngọc Thạch cam kết giới thiệu cho sinh viên sau khi tốt nghiệp có việc làm đúng ngành. Theo thống kê, khảo sát của phòng Công Tác – Kế Hoạch, có đến 90% sinh viên có việc làm ổn định ngay khi tốt nghiệp xong.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="mgt20">
+
+    <h2 class="title-phamchat"><span>03</span> PHẨM CHẤT TẠO NÊN<br>SINH VIÊN Y KHOA PHẠM NGỌC THẠCH</h2>
+
+    <div class="phamchat">
+        <img src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/images/quote1.png" alt="sáng Y đức">
+        <span>Sinh viên Y Khoa Phạm Ngọc Thạch luôn được khắc cốt ghi tâm về hai chữ “lương y”, phải biết tự giác rèn luyện và trau dồi y đức, bồi đắp lòng nhân ái, giữ gìn phẩm chất cao đẹp của người thầy thuốc nhân dân.</span>
+    </div>
+    <div class="phamchat">
+        <img src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/images/quote2.png" alt="sâu Y lý">
+        <span>Sinh viên Y Khoa Phạm Ngọc Thạch được giáo dục phải thâm nhuần các tinh hoa kiến thức Y học nền tảng để phát triển tay nghề.</span>
+    </div>
+    <div class="phamchat">
+        <img src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/images/quote3.png" alt="giỏi Y thuật">
+        <span>Thực hành - Thực tiễn luôn là yếu tố kiên quyết mà mỗi Sinh viên Y Khoa Phạm Ngọc Thạch  được rèn luyện ngay khi còn ngồi trên ghế nhà trường.</span>
+    </div>
+
+</div>
+
+<div class="mgt20">
+    <div class="box_title">
+        <h2 class="text-center">Khám phá trường cao đẳng y khoa phạm ngọc thạch</h2>
+    </div>
+    <div class="home-list-img">
+        <div class="wl100 mgb20 home-list-img-top">
+        <div>
+          <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/cao-dang-y-khoa-pham-ngoc-thach-cho-don-tan-sinh-vien-1696056950.jpg" alt="Banner home">        </div>
+        <div>
+            <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/sinh-vien-cao-dang-y-khoa-pham-ngoc-thach-thien-nguyen-1696057607.jpg" alt="Banner home">        </div>
+        <div>
+            <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/le-khai-giang-truong-cao-dang-y-khoa-pham-ngoc-thach-nam-2023-2024-1697011938.jpg" alt="Banner home">            </div>
+           
+        </div>
+        <div class="home-list-img-left">
+           <div>
+                <iframe class="clickShowImage" width="100%" height="310" src="https://www.youtube.com/embed/JoP4m7DHlNs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+            </div>
+            <div>
+            <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/chuong-trinh-team-building-2023-cua-sinh-vien-truong-cao-dang-y-khoa-pham-ngoc-thach-1682135658.jpg" alt="Banner home">            </div>
+        </div>
+
+        <div class="home-list-img-right">
+            <div>
+            <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/hieu-truong-truong-cao-dang-y-khoa-pham-ngoc-thach-pham-thi-ly-phat-bieu-1697016798.jpg" alt="Banner home">            </div>
+             <div>
+            <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/nghi-thuc-tung-non-trong-le-trao-bang-tot-nghiep-2023-1697016572.jpg" alt="Banner home">            </div>
+             <div>
+            <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/le-trao-bang-tot-nghiep-truong-cao-dang-y-khoa-pham-ngoc-thach-nam-2023-1697014113.jpg" alt="Banner home">            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+	<div class="contact">
+		<div class="info-contact">
+			<p>
+				 <img src="https://caodangyduochochiminh.vn/wp-content/uploads/2026/03/logoF.png" alt="logo_footer">			</p>
+			<hr class="hr_left">
+			  <div class="left_info_footer">
+<p style="text-align: justify; font-size: 20px;">Trường Cao đẳng Y Khoa Phạm Ngọc Thạch</p>
+<div style="display: block; text-align: center;">&nbsp;</div>
+<p style="text-align: justify;">Trường Cao đẳng Y Khoa Phạm Ngọc Thạch thành lập ngày 19/06/2006 theo quyết định số 3015/QĐ-BGD&amp;ĐT với nhiệm vụ đào tạo khối ngành Y tế. GPKD: 906/QĐ-LĐTBXH do Bộ Lao động Thương Binh Xã hội cấp ngày 12/07/2018. MST: 0900267662</p>
+<div style="display: block; text-align: center;">&nbsp;</div>
+<p class="text_head_coso"><img src="https://caodangyduochochiminh.vn/include/elfinder/../../images/files/caodangyduochochiminh.vn/icon_footer1.png" alt="Thông tin trường Cao đẳng Y Khoa Phạm Ngọc Thạch" width="17px" height="11px">&nbsp;TP. Hồ Chí Minh&nbsp;<img src="https://caodangyduochochiminh.vn/include/elfinder/../../images/files/caodangyduochochiminh.vn/iconfooter2.png" alt="Thông tin trường Cao đẳng Y Khoa Phạm Ngọc Thạch" width="17px" height="11px"></p>
+<p class="text_bottom_footer"><img src="https://caodangyduochochiminh.vn/include/elfinder/../../images/files/caodangyduochochiminh.vn/monument.png" alt="Địa chỉ Trường Cao Đẳng Y Khoa Phạm Ngọc Thạch" width="15px" height="15px"> Q. Tân Bình: Số <a href="https://www.google.com/maps?ll=10.8030139,106.647026&amp;z=17&amp;t=m&amp;hl=vi&amp;gl=US&amp;mapclient=embed&amp;cid=4667216274095403686" rel="nofollow noopener">127/3 - 5 Hoàng Hoa Thám, Phường Tân Bình, TP.Hồ Chí Minh</a></p>
+<p class="text_bottom_footer"><img src="https://caodangyduochochiminh.vn/include/elfinder/../../images/files/caodangyduochochiminh.vn/telephone.png" alt="Điện thoại trường Cao đẳng Phạm Ngọc Thạch" width="15px" height="15px">&nbsp;Điện thoại: 0899 955 990 (Cô Nhung) | 0969 955 990 (Cô Huệ) | 0933519898 (Cô Yến) | 0961539898</p>
+<p class="text_bottom_footer"><img src="https://caodangyduochochiminh.vn/include/elfinder/../../images/files/caodangyduochochiminh.vn/email.png" alt="Email Truong Cao đẳng Phạm Ngọc Thạch" width="13px" height="10px">&nbsp;Email: caodangykhoaphamngocthach@gmail.com</p>
+<p class="text_bottom_footer"></p>
+</div>
+<div class="right_info_footer">
+<p style="text-align: justify; font-size: 20px;">Các ngành đào tạo</p>
+<div style="display: block; text-align: center;">&nbsp;</div>
+<ul class="menu_footer">
+	<li>➤ <a href="https://caodangyduochochiminh.vn/cao-dang-duoc.html">Cao đẳng Dược</a></li>
+	<li>➤ <a href="https://caodangyduochochiminh.vn/cao-dang-dieu-duong.html">Cao đẳng Điều dưỡng</a></li>
+	<li>➤ <a href="https://caodangyduochochiminh.vn/cao-dang-y-si-da-khoa.html">Cao đẳng Y sĩ Đa khoa</a></li>
+	<li>➤ <a href="https://caodangyduochochiminh.vn/cao-dang-ky-thuat-phuc-hoi-chuc-nang.html">Cao đẳng Kỹ thuật Phục hồi chức năng</a></li>
+	<li>➤ <a href="https://caodangyduochochiminh.vn/trung-cap-y-hoc-co-truyen.html">Trung cấp Y học cổ truyền</a></li>
+</ul>
+<p class="text_bottom_footer"></p>
+<p><a class="dmca-badge" title="DMCA.com Protection Status" href="//www.dmca.com/Protection/Status.aspx?ID=e0359121-55d0-4fcf-bd6f-d0857c41f8bd" target="_blank" rel="nofollow noopener"> <img src="https://images.dmca.com/Badges/dmca_protected_sml_120al.png?ID=e0359121-55d0-4fcf-bd6f-d0857c41f8bd" alt="DMCA.com Protection Status"></a></p>
+<div style="display: block; text-align: center;">&nbsp;</div>
+</div>		</div>
+
+		<p class="social">
+			
+				<a href="https://www.facebook.com/TruongCaoDangYKhoaPhamNgocThachTPHCM/" target="_blank">
+					<img style="position: relative;top: 5px;" src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/images/fb.png" alt="Facebook Cao đẳng Y Khoa Phạm Ngọc Thạch">
+				</a>
+			
+				<a target="_blank" href="https://www.youtube.com/@caodangykhoaphamngocthach">
+					<img style="position: relative;top: 5px;" src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/images/yt.png" alt="Youtube Cao đẳng Y Khoa Phạm Ngọc Thạch">
+				</a>
+		
+			<a href="https://zalo.me/0969955990" target="_blank">
+				<img style="position: relative;top: 5px;" src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/images/z.png" alt="Zalo Cao đẳng Y Khoa Phạm Ngọc Thạch">
+			</a>
+
+			
+				<a href="https://x.com/cdphamngocthach" target="_blank">
+					<img style="position: relative;top: 5px;" src="https://caodangyduochochiminh.vn/wp-content/themes/caodangyduochochiminh/assets/images/tw.png" alt="Twitter Cao đẳng Y Khoa Phạm Ngọc Thạch">
+				</a>
+			
+		</p>
+
+	</div>
+</div>
+
+	<div class="icon-messenger" style=" width: unset !important;z-index: 11000000 !important; right: 15px !important; position: fixed !important; bottom: 10px !important; text-align: right !important;">
+		<a href="https://m.me/100063795500608" target="_blank">
+			<svg x="0" y="0" width="60px" height="60px">
+				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<g>
+						<circle fill="#0084ff" cx="30" cy="30" r="30"></circle>
+						<svg x="10" y="10">
+							<g transform="translate(0.000000, -10.000000)" fill="#FFFFFF">
+								<g id="logo" transform="translate(0.000000, 10.000000)">
+									<path d="M20,0 C31.2666,0 40,8.2528 40,19.4 C40,30.5472 31.2666,38.8 20,38.8 C17.9763,38.8 16.0348,38.5327 14.2106,38.0311 C13.856,37.9335 13.4789,37.9612 13.1424,38.1098 L9.1727,39.8621 C8.1343,40.3205 6.9621,39.5819 6.9273,38.4474 L6.8184,34.8894 C6.805,34.4513 6.6078,34.0414 6.2811,33.7492 C2.3896,30.2691 0,25.2307 0,19.4 C0,8.2528 8.7334,0 20,0 Z M7.99009,25.07344 C7.42629,25.96794 8.52579,26.97594 9.36809,26.33674 L15.67879,21.54734 C16.10569,21.22334 16.69559,21.22164 17.12429,21.54314 L21.79709,25.04774 C23.19919,26.09944 25.20039,25.73014 26.13499,24.24744 L32.00999,14.92654 C32.57369,14.03204 31.47419,13.02404 30.63189,13.66324 L24.32119,18.45264 C23.89429,18.77664 23.30439,18.77834 22.87569,18.45674 L18.20299,14.95224 C16.80079,13.90064 14.79959,14.26984 13.86509,15.75264 L7.99009,25.07344 Z"></path>
+								</g>
+							</g>
+						</svg>
+					</g>
+				</g>
+			</svg>
+		</a>
+	</div>
+	
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;6e3f8d1c02614b25825fb43c9a03afff&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+
+</body></html>

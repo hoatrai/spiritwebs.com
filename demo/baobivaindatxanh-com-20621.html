@@ -1,0 +1,227 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hết hạn sử dụng</title>
+    <link rel="stylesheet" href="https://bizweb.dktcdn.net/static/fonts/inter/inter.css">
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      *,
+      :after,
+      :before {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-weight: 450;
+        letter-spacing: -0.2px;
+        text-rendering: optimizelegibility;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      }
+      .btn {
+        padding: 0.439vw 1.171vw;
+        display: flex;
+        align-items: center;
+        gap: 0.586vw;
+        font-size: 1.025vw;
+        font-style: normal;
+        font-weight: 450;
+        line-height: 1.464vw;
+        letter-spacing: 0.07px;
+        border-radius: 0.439vw;
+        background: #08f;
+        border: 1px solid #08f;
+        text-decoration: none;
+        color: #fff;
+      }
+      .btn strong {
+        font-weight: 600;
+      }
+      .btn svg {
+        width: 1.757vw;
+        height: 1.757vw;
+        flex-shrink: 0;
+      }
+      .btn:hover {
+        background: #33a0ff;
+        border-color: #33a0ff;
+      }
+      .btn:active {
+        background: #007ce8;
+        border-color: #007ce8;
+      }
+
+      .btn.btn-outline {
+        background: #fff;
+        color: #08f;
+      }
+      .btn.btn-outline:hover {
+        background: #f2f9ff;
+      }
+      .btn.btn-outline:active {
+        background: #e6f4ff;
+      }
+      .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 1.464vw 0;
+        overflow: hidden;
+      }
+      .container .bg-left {
+        position: absolute;
+        top: 17.12vh;
+        left: 2.928vw;
+      }
+      .container .bg-left svg {
+        width: 8.126vw;
+        height: 2.928vw;
+      }
+      .content-wrapper {
+        display: flex;
+        gap: 1.464vw;
+        align-items: center;
+        max-width: 77.306vw;
+      }
+      .content-wrapper .block-content {
+        width: 36.603vw;
+        flex-shrink: 0;
+      }
+      .content-wrapper .block-img img {
+        width: 50.512vw;
+        height: 27.086vw;
+      }
+      .content-wrapper h1 {
+        font-size: 2.05vw;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 2.635vw;
+        color: #0f1824;
+        margin: 0 0 0.878vw;
+      }
+      .content-wrapper p {
+        font-size: 1.171vw;
+        font-style: normal;
+        font-weight: 450;
+        line-height: 1.464vw;
+        color: #46515f;
+        margin-bottom: 1.903vw;
+      }
+      .content-wrapper p span {
+		font-weight: 600;
+      }
+      .container .actions {
+        display: flex;
+        gap: 1.171vw;
+        flex-wrap: wrap;
+      }
+      @media screen and (max-width: 1366px) {
+        .btn {
+          padding: 6px 16px;
+          gap: 8px;
+          font-size: 14px;
+          line-height: 20px;
+          border-radius: 6px;
+        }
+        .btn svg {
+          width: 24px;
+          height: 24px;
+        }
+        .container .bg-left svg {
+          width: 111px;
+          height: 40px;
+        }
+        .content-wrapper {
+          max-width: 1056px;
+        }
+        .content-wrapper .block-content {
+          width: 500px;
+        }
+        .content-wrapper h1 {
+          font-size: 28px;
+          line-height: 36px;
+          margin-bottom: 12px;
+        }
+        .content-wrapper p {
+          font-size: 16px;
+          line-height: 20px;
+          margin-bottom: 26px;
+        }
+        .content-wrapper .block-img img {
+          width: 690px;
+          height: 370px;
+        }
+        .container .actions {
+          gap: 16px;
+        }
+      }
+      @media screen and (max-width: 1199px) {
+        .container .bg-left {
+          display: none;
+        }
+        .content-wrapper {
+          max-width: 100%;
+          padding: 0 20px;
+        }
+      }
+      @media screen and (max-width: 991px) {
+        .content-wrapper .block-img {
+          display: none;
+        }
+        .content-wrapper .block-content {
+          text-align: center;
+          max-width: 100%;
+        }
+        .container .actions {
+          justify-content: center;
+        }
+      }
+      @media screen and (max-width: 475px) {
+        .content-wrapper p br {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="bg-left">
+        <svg viewBox="0 0 111 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M110.11 30.93C110.08 33.16 109.16 35.17 107.69 36.64C106.2 38.12 104.15 39.05 101.87 39.05H8.23999C3.68999 39.05 0 35.37 0 30.81C0 28.53 0.919983 26.48 2.41998 24.99C3.90998 23.5 5.95999 22.57 8.23999 22.57H14.79C17.4 22.57 19.52 20.45 19.52 17.84C19.52 15.23 17.4 13.11 14.79 13.11H12.32C8.86001 13.11 5.80002 10.54 5.52002 7.09001C5.36002 5.08001 6.10998 3.21 7.41998 1.92C8.60998 0.729998 10.25 0 12.06 0H70.65C74.27 0 77.21 2.94 77.21 6.55C77.21 8.36 76.48 10 75.29 11.19C74.1 12.38 72.46 13.11 70.65 13.11H68.54C65.93 13.11 63.81 15.23 63.81 17.84C63.81 20.45 65.93 22.57 68.54 22.57H101.59C106.18 22.57 110.18 26.33 110.11 30.93Z" fill="#F2F9FF"></path>
+        </svg>
+      </span>
+      <div class="content-wrapper">
+        <div class="block-content">
+          <h1>Hết hạn sử dụng!</h1>
+          <p>
+            <span>invatruyenthonghanoi.mysapo.net</span> đã hết hạn sử dụng. <br>
+            Để tiếp tục sử dụng phần mềm, vui lòng liên hệ ngay <br>với Sapo để được hỗ trợ bạn nhé.
+          </p>
+          <div class="actions">
+            <a href="tel:1900 6750" class="btn"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.207 12.293C17.816 11.902 17.184 11.902 16.793 12.293L15.199 13.887C14.46 13.667 13.081 13.167 12.207 12.293C11.333 11.419 10.833 10.04 10.613 9.30101L12.207 7.70701C12.598 7.31601 12.598 6.68401 12.207 6.29301L8.20703 2.29301C7.81603 1.90201 7.18403 1.90201 6.79303 2.29301L4.08103 5.00501C3.70103 5.38501 3.48703 5.90701 3.49503 6.44001C3.51803 7.86401 3.89503 12.81 7.79303 16.708C11.691 20.606 16.637 20.982 18.062 21.006C18.067 21.006 18.085 21.006 18.09 21.006C18.618 21.006 19.117 20.798 19.495 20.42L22.207 17.708C22.598 17.317 22.598 16.685 22.207 16.294L18.207 12.293ZM18.08 19.005C16.832 18.984 12.562 18.649 9.20703 15.293C5.84103 11.927 5.51503 7.64201 5.49503 6.41901L7.50003 4.41401L10.086 7.00001L8.79303 8.29301C8.55403 8.53101 8.45203 8.87501 8.52103 9.20501C8.54503 9.32001 9.13203 12.047 10.792 13.707C12.452 15.367 15.179 15.954 15.294 15.978C15.627 16.049 15.968 15.946 16.206 15.707L17.5 14.414L20.086 17L18.08 19.005Z" fill="white"></path>
+              </svg>
+               Hotline: <strong>1900 6750</strong> 
+            </a>
+            <a href="mailto:support@sapo.vn" class="btn btn-outline"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 9.1324C2.5 8.42987 2.8686 7.77886 3.47101 7.41741L11.471 2.61741C12.1044 2.23739 12.8956 2.23739 13.529 2.61741L21.529 7.41741C22.1314 7.77886 22.5 8.42987 22.5 9.1324V20C22.5 21.1046 21.6046 22 20.5 22H4.5C3.39543 22 2.5 21.1046 2.5 20V9.1324ZM20.5 9.86854V20H4.5V9.86854L12.5 15.2019L20.5 9.86854ZM19.1835 8.3425L12.5 4.3324L5.81649 8.3425L12.5 12.7982L19.1835 8.3425Z" fill="#0088FF"></path>
+              </svg>
+              Email: support@sapo.vn
+            </a>
+          </div>
+        </div>
+        <div class="block-img">
+          <img src="https://bizweb.dktcdn.net/assets/images/bg-expired.svg" alt="Hết hạn sử dụng">
+        </div>
+      </div>
+    </div>
+  
+
+</body></html>

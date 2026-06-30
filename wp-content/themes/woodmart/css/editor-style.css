@@ -1,0 +1,42 @@
+/* Chỉ áp dụng trong khu vực real-estate-page */
+.real-estate-page h1,
+.real-estate-page h2,
+.real-estate-page h3,
+.real-estate-page h4,
+.real-estate-page h5,
+.real-estate-page h6,
+.real-estate-page .title {
+  color: #1B1919;
+  margin-bottom: 16px;
+  line-height: 1.4;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 600;
+}
+
+/* Heading sizes */
+.real-estate-page h1 {
+  font-size: 2.2rem; /* ~35px */
+}
+
+.real-estate-page h2 {
+  font-size: 1.8rem; /* ~28px */
+}
+
+.real-estate-page h3 {
+  font-size: 1.5rem; /* ~24px */
+}
+
+.real-estate-page h4 {
+  font-size: 1.25rem; /* ~20px */
+}
+
+.real-estate-page h5 {
+  font-size: 1.1rem; /* ~18px */
+}
+
+.real-estate-page h6 {
+  font-size: 0.95rem; /* ~15px */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #475569;
+}

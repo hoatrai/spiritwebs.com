@@ -1,0 +1,2462 @@
+<!DOCTYPE html><html lang="vi" prefix="og: http://ogp.me/ns#" class="loading-site no-js"><!--<![endif]--><head><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(e){this.triggerEvents=e,this.eventOptions={passive:!0},this.userEventListener=this.triggerListener.bind(this),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventListener,e.eventOptions)))}_removeUserInteractionListener(e){this.triggerEvents.forEach((t=>window.removeEventListener(t,e.userEventListener,e.eventOptions)))}triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}async _loadEverythingNow(){this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async),await this._triggerDOMContentLoaded(),await this._triggerWindowLoad(),window.dispatchEvent(new Event("rocket-allScriptsLoaded"))}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._requestAnimFrame(),new Promise((t=>{const n=document.createElement("script");let r;[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type",r=e.nodeValue),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t()),e.parentNode.replaceChild(n,e)}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){var e=document.createDocumentFragment();[...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async].forEach((t=>{const n=t.getAttribute("src");if(n){const t=document.createElement("link");t.href=n,t.rel="preload",t.as="script",e.appendChild(t)}})),document.head.appendChild(e)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(r){e["rocket"+t]=n=r}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._requestAnimFrame(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-load")),await this._requestAnimFrame(),window.rocketonload&&window.rocketonload(),await this._requestAnimFrame(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),window.dispatchEvent(new Event("rocket-pageshow")),await this._requestAnimFrame(),window.rocketonpageshow&&window.rocketonpageshow()}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,r=document.createRange(),i=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const a=document.createDocumentFragment();r.setStart(a,0),a.appendChild(r.createContextualFragment(t)),i.insertBefore(a,o)}}async _requestAnimFrame(){return new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts(["keydown","mousemove","touchmove","touchstart","touchend","wheel"]);e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://bancutram.com/xmlrpc.php">
+<link rel="stylesheet" href="/wp-content/themes/flatsome/assets/css/fl-icons.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" as="font" type="font/woff2" crossorigin="" href="/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2">
+<script type="rocketlazyloadscript">(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>#1 Vựa Cừ Tràm Uy Tín Tại TPHCM - CỪ TRÀM ĐẠI NAM</title>
+<meta name="robots" content="max-image-preview:large">
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v5.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Cừ Tràm Đại Nam chuyên cung cấp cừ tràm, cừ bạch đàn, cừ dừa, phên tre, cót tre giá rẻ. ✅Cam kết bán giá gốc tại vựa, không qua trung gian. ĐT: 0888.666.511">
+<link rel="canonical" href="https://bancutram.com/">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="#1 Vựa Cừ Tràm Uy Tín Tại TPHCM - CỪ TRÀM ĐẠI NAM">
+<meta property="og:description" content="Cừ Tràm Đại Nam chuyên cung cấp cừ tràm, cừ bạch đàn, cừ dừa, phên tre, cót tre giá rẻ. ✅Cam kết bán giá gốc tại vựa, không qua trung gian. ĐT: 0888.666.511">
+<meta property="og:url" content="https://bancutram.com/">
+<meta property="og:site_name" content="Cừ Tràm Đại Nam">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Cừ Tràm Đại Nam chuyên cung cấp cừ tràm, cừ bạch đàn, cừ dừa, phên tre, cót tre giá rẻ. ✅Cam kết bán giá gốc tại vựa, không qua trung gian. ĐT: 0888.666.511">
+<meta name="twitter:title" content="#1 Vựa Cừ Tràm Uy Tín Tại TPHCM - CỪ TRÀM ĐẠI NAM">
+<meta name="twitter:site" content="@cutramdainam">
+<meta name="twitter:creator" content="@cutramdainam">
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/bancutram.com\/","name":"C\u1eeb Tr\u00e0m \u0110\u1ea1i Nam","alternateName":"https:\/\/bancutram.com","potentialAction":{"@type":"SearchAction","target":"https:\/\/bancutram.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/bancutram.com\/","sameAs":["https:\/\/www.facebook.com\/cutramdainam","https:\/\/www.instagram.com\/cutramdainam","https:\/\/www.linkedin.com\/in\/cu-tram-dainam","https:\/\/myspace.com\/cutramdainam","https:\/\/www.youtube.com\/channel\/UCG0lcAjeaV-uT1arWe9wdZA","https:\/\/www.pinterest.com\/cutramdainam","https:\/\/twitter.com\/cutramdainam"],"@id":"#organization","name":"C\u1eeb Tr\u00e0m \u0110\u1ea1i Nam","logo":"https:\/\/bancutram.com\/wp-content\/uploads\/2018\/10\/logo_cu-tram-dai-nam.png"}</script>
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel="dns-prefetch" href="//connect.facebook.net">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//bid.g.doubleclick.net">
+<link rel="dns-prefetch" href="//googleads.g.doubleclick.net">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="dns-prefetch" href="//www.googleadservices.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+
+<link rel="alternate" type="application/rss+xml" title="Dòng thông tin Cừ Tràm Đại Nam »" href="https://bancutram.com/feed">
+<link rel="alternate" type="application/rss+xml" title="Dòng phản hồi Cừ Tràm Đại Nam »" href="https://bancutram.com/comments/feed">
+<link rel="alternate" type="application/rss+xml" title="Cừ Tràm Đại Nam » Trang chủ Dòng phản hồi" href="https://bancutram.com/trang-chu/feed">
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://bancutram.com/wp-includes/css/dist/block-library/style.min.css?ver=6.1.10" type="text/css" media="all">
+<link rel="stylesheet" id="wc-blocks-vendors-style-css" href="https://bancutram.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=9.6.5" type="text/css" media="all">
+<link rel="stylesheet" id="wc-blocks-style-css" href="https://bancutram.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=9.6.5" type="text/css" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="https://bancutram.com/wp-includes/css/classic-themes.min.css?ver=1" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: hidden; }
+</style>
+<link rel="stylesheet" id="flatsome-main-css" href="https://bancutram.com/wp-content/themes/flatsome/assets/css/flatsome.css?ver=3.3.5" type="text/css" media="all">
+<link rel="stylesheet" id="flatsome-shop-css" href="https://bancutram.com/wp-content/themes/flatsome/assets/css/flatsome-shop.css?ver=3.3.5" type="text/css" media="all">
+<link rel="stylesheet" id="flatsome-style-css" href="https://bancutram.com/wp-content/themes/tuong-thach-cao/style.css?ver=3.3.5" type="text/css" media="all">
+<style id="rocket-lazyload-inline-css" type="text/css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;cursor:pointer;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:72px;width:72px;left:50%;top:50%;margin-left:-36px;margin-top:-36px;position:absolute;background:url(https://bancutram.com/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat;cursor:pointer}
+</style>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://bancutram.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.1" id="jquery-core-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://bancutram.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js" defer=""></script>
+<link rel="https://api.w.org/" href="https://bancutram.com/wp-json/"><link rel="alternate" type="application/json" href="https://bancutram.com/wp-json/wp/v2/pages/2"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bancutram.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://bancutram.com/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.10">
+<meta name="generator" content="WooCommerce 7.5.0">
+<link rel="shortlink" href="https://bancutram.com/">
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+	window._wp_rp_static_base_url = 'https://wprp.sovrn.com/static/';
+	window._wp_rp_wp_ajax_url = "https://bancutram.com/wp-admin/admin-ajax.php";
+	window._wp_rp_plugin_version = '3.6.4';
+	window._wp_rp_post_id = '2';
+	window._wp_rp_num_rel_posts = '4';
+	window._wp_rp_thumbnails = true;
+	window._wp_rp_post_title = 'Trang+ch%E1%BB%A7';
+	window._wp_rp_post_tags = [];
+	window._wp_rp_promoted_content = true;
+</script>
+<link rel="stylesheet" href="https://bancutram.com/wp-content/plugins/wordpress-23-related-posts-plugin/static/themes/twocolumns.css?version=3.6.4">
+<style type="text/css">
+.related_post_title {
+}
+ul.related_post {
+}
+ul.related_post li {
+padding: 10px 0 10px 0 !important;
+}
+ul.related_post li a {
+    color: #02517d;
+    font-weight: bold;
+}
+ul.related_post li img {
+}
+ul.related_post li a.wp_rp_thumbnail {
+    width: 150px !important;
+    height: 100px !important;
+    top: 0;
+    position: relative;
+}</style>
+<style>.bg{opacity: 0; transition: opacity 1s; -webkit-transition: opacity 1s;} .bg-loaded{opacity: 1;}</style><!--[if IE]><link rel="stylesheet" type="text/css" href="https://bancutram.com/wp-content/themes/flatsome/assets/css/ie-fallback.css"><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><script>var head = document.getElementsByTagName('head')[0],style = document.createElement('style');style.type = 'text/css';style.styleSheet.cssText = ':before,:after{content:none !important';head.appendChild(style);setTimeout(function(){head.removeChild(style);}, 0);</script><script src="https://bancutram.com/wp-content/themes/flatsome/assets/libs/ie-flexibility.js"></script><![endif]-->    <script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ "Roboto:regular,700","Roboto:regular,regular","Roboto:regular,700","Dancing+Script", ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })(); </script>
+  	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<link rel="icon" href="https://bancutram.com/wp-content/uploads/2018/10/cropped-icon-cutramdainam-1-100x100.png" sizes="32x32">
+<link rel="icon" href="https://bancutram.com/wp-content/uploads/2018/10/cropped-icon-cutramdainam-1-300x300.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://bancutram.com/wp-content/uploads/2018/10/cropped-icon-cutramdainam-1-300x300.png">
+<meta name="msapplication-TileImage" content="https://bancutram.com/wp-content/uploads/2018/10/cropped-icon-cutramdainam-1-300x300.png">
+<style id="custom-css" type="text/css">:root {--primary-color: #FFB400;}/* Site Width */.full-width .ubermenu-nav, .container, .row{max-width: 1140px}.row.row-collapse{max-width: 1110px}.row.row-small{max-width: 1132.5px}.row.row-large{max-width: 1170px}.header-main{height: 78px}#logo img{max-height: 78px}#logo{width:226px;}#logo img{padding:5px 0;}.header-bottom{min-height: 44px}.header-top{min-height: 53px}.transparent .header-main{height: 265px}.transparent #logo img{max-height: 265px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 345px;}.header.show-on-scroll,.stuck .header-main{height:46px!important}.stuck #logo img{max-height: 46px!important}.header-bottom {background-color: #0070A0}.header-main .nav > li > a{line-height: 16px }@media (max-width: 549px) {.header-main{height: 59px}#logo img{max-height: 59px}}.nav-dropdown{font-size:100%}.header-top{background-color:#F4F4F4!important;}/* Color */.accordion-title.active, .has-icon-bg .icon .icon-inner,.logo a, .primary.is-underline, .primary.is-link, .badge-outline .badge-inner, .nav-outline > li.active> a,.nav-outline >li.active > a, .cart-icon strong,[data-color='primary'], .is-outline.primary{color: #FFB400;}/* Color !important */[data-text-color="primary"]{color: #FFB400!important;}/* Background */.scroll-to-bullets a,.featured-title, .label-new.menu-item > a:after, .nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,button[type="submit"], .button.wc-forward:not(.checkout):not(.checkout-button), .button.submit-button, .button.primary:not(.is-outline),.featured-table .title,.is-outline:hover, .has-icon:hover .icon-label,.nav-dropdown-bold .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold > li > a:hover, .nav-dropdown-bold.dark .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold.dark > li > a:hover, .is-outline:hover, .tagcloud a:hover,.grid-tools a, input[type='submit']:not(.is-form), .box-badge:hover .box-text, input.button.alt,.nav-box > li > a:hover,.nav-box > li.active > a,.nav-pills > li.active > a ,.current-dropdown .cart-icon strong, .cart-icon:hover strong, .nav-line-bottom > li > a:before, .nav-line-grow > li > a:before, .nav-line > li > a:before,.banner, .header-top, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover, .button.primary:not(.is-outline), input[type='submit'].primary, input[type='submit'].primary, input[type='reset'].button, input[type='button'].primary, .badge-inner{background-color: #FFB400;}/* Border */.nav-vertical.nav-tabs > li.active > a,.scroll-to-bullets a.active,.nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,.accordion-title.active,.featured-table,.is-outline:hover, .tagcloud a:hover,blockquote, .has-border, .cart-icon strong:after,.cart-icon strong,.blockUI:before, .processing:before,.loading-spin, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover{border-color: #FFB400}.nav-tabs > li.active > a{border-top-color: #FFB400}/* Fill */.slider .flickity-prev-next-button:hover svg,.slider .flickity-prev-next-button:hover .arrow{fill: #FFB400;}/* Background Color */[data-icon-label]:after, .secondary.is-underline:hover,.secondary.is-outline:hover,.icon-label,.button.secondary:not(.is-outline),.button.alt:not(.is-outline), .badge-inner.on-sale, .button.checkout, .single_add_to_cart_button{ background-color:#FF0000; }/* Color */.secondary.is-underline,.secondary.is-link, .secondary.is-outline,.stars a.active, .star-rating:before, .woocommerce-page .star-rating:before,.star-rating span:before, .color-secondary{color: #FF0000}/* Color !important */[data-text-color="secondary"]{color: #FF0000!important;}/* Border */.secondary.is-outline:hover{border-color:#FF0000}.success.is-underline:hover,.success.is-outline:hover,.success{background-color: #1E73BE}.success-color, .success.is-link, .success.is-outline{color: #1E73BE;}.success-border{border-color: #1E73BE!important;}body{font-size: 100%;}@media screen and (max-width: 549px){body{font-size: 100%;}}body{font-family:"Roboto", sans-serif}body{font-weight: 0}body{color: #3A3A3A}.nav > li > a {font-family:"Roboto", sans-serif;}.nav > li > a {font-weight: 700;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: "Roboto", sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2{font-weight: 700;}h1,h2,h3,h4,h5,h6,.heading-font{color: #262626;}.alt-font{font-family: "Dancing Script", sans-serif;}.header:not(.transparent) .header-bottom-nav.nav > li > a{color: #FFFFFF;}.header:not(.transparent) .header-bottom-nav.nav > li > a:hover,.header:not(.transparent) .header-bottom-nav.nav > li.active > a,.header:not(.transparent) .header-bottom-nav.nav > li.current > a,.header:not(.transparent) .header-bottom-nav.nav > li > a.active,.header:not(.transparent) .header-bottom-nav.nav > li > a.current{color: #EEEE22;}.header-bottom-nav.nav-line-bottom > li > a:before,.header-bottom-nav.nav-line-grow > li > a:before,.header-bottom-nav.nav-line > li > a:before,.header-bottom-nav.nav-box > li > a:hover,.header-bottom-nav.nav-box > li.active > a,.header-bottom-nav.nav-pills > li > a:hover,.header-bottom-nav.nav-pills > li.active > a{color:#FFF!important;background-color: #EEEE22;}a{color: #0A0505;}a:hover{color: #AD6800;}.tagcloud a:hover{border-color: #AD6800;background-color: #AD6800;}.shop-page-title.featured-title .title-overlay{background-color: rgba(0,0,0,.3);}@media screen and (min-width: 550px){.products .box-vertical .box-image{min-width: 300px!important;width: 300px!important;}}.footer-1{background-color: #FFB400}.absolute-footer, html{background-color: #272723}.page-title-small + main .product-container > .row{padding-top:0;}.label-new.menu-item > a:after{content:"New";}.label-hot.menu-item > a:after{content:"Hot";}.label-sale.menu-item > a:after{content:"Sale";}.label-popular.menu-item > a:after{content:"Popular";}</style><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type" : "Organization",
+    "name": "Cừ Tràm Đại Nam - Bán Cừ Tràm, Cừ Bạch Đàn, Cừ Dừa, Phên Cót Tre tại TPHCM", 
+    "url": "https://bancutram.com/",  
+    "description": "Cừ Tràm Đại Nam chuyên cung cấp cừ tràm, cừ bạch đàn, cừ dừa, phên tre, cót tre giá rẻ. ✅Cam kết bán giá gốc tại vựa, không qua trung gian. ĐT: 0888.666.511",
+    "address": "Tổ 51 Kp 3, An Phú Đông, Quận 12, Thành phố Hồ Chí Minh",
+    "email": "mailto:bancutramgiare@gmail.com",
+    "sameAs": 
+    [
+    "https://www.facebook.com/cutramdainam",
+    "https://twitter.com/cutramdainam",
+    "https://www.instagram.com/cutramdainam",
+    "https://www.linkedin.com/in/cu-tram-dainam",
+    "https://www.pinterest.com/cutramdainam",
+    "https://about.me/cutramdainam",
+    "https://www.youtube.com/channel/UCG0lcAjeaV-uT1arWe9wdZA",
+    "https://soundcloud.com/cutramdainam",
+    "https://bancutram.tumblr.com",
+    "https://myspace.com/cutramdainam",
+    "https://www.yellowpages.vnn.vn/lgs/1187881194/cu-tram-dai-nam.html",
+    "https://careerbuilder.vn/vi/nha-tuyen-dung/cu-tram-dai-nam.35A87A79.html",
+    "https://trello.com/cutramdainam",
+    "https://vimeo.com/cutramdainam",
+    "https://www.behance.net/cutramdainam"
+    ], 
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+84-888-666-511", 
+        "contactType": "Customer service",
+        "areaServed": "Việt Nam"
+    }
+}
+</script>
+<!-- Google Tag Manager -->
+<script type="rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5B578K8');</script>
+<!-- End Google Tag Manager -->
+<!-- Facebook Pixel Code -->
+<script type="rocketlazyloadscript">
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '440302793840002');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=440302793840002&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+</head>
+
+<body class="home page-template-default page page-id-2 theme-flatsome woocommerce-no-js full-width box-shadow lightbox lazy-icons">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5B578K8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+<div id="wrapper">
+
+
+<header id="header" class="header has-sticky sticky-jump">
+   <div class="header-wrapper">
+	<div id="top-bar" class="header-top hide-for-sticky">
+    <div class="flex-row container">
+      <div class="flex-col hide-for-medium flex-left">
+          <ul class="nav nav-left medium-nav-center nav-small  nav-divided">
+              <li class="html custom html_topbar_left"><span class="hide_mobile" style="font-size: 14px; color: #02517d">Cừ Tràm Đại Nam - Vựa cừ tràm uy tín, đáng tin cậy tại Tp.HCM</span></li>          </ul>
+      </div><!-- flex-col left -->
+
+      <div class="flex-col hide-for-medium flex-center">
+          <ul class="nav nav-center nav-small  nav-divided">
+                        </ul>
+      </div><!-- center -->
+
+      <div class="flex-col hide-for-medium flex-right">
+         <ul class="nav top-bar-nav nav-right nav-small  nav-divided">
+                        </ul>
+      </div><!-- .flex-col right -->
+
+            <div class="flex-col show-for-medium flex-grow">
+          <ul class="nav nav-center nav-small mobile-nav  nav-divided">
+              <li class="html custom html_topbar_left"><span class="hide_mobile" style="font-size: 14px; color: #02517d">Cừ Tràm Đại Nam - Vựa cừ tràm uy tín, đáng tin cậy tại Tp.HCM</span></li>          </ul>
+      </div>
+      
+    </div><!-- .flex-row -->
+</div><!-- #header-top -->
+<div id="masthead" class="header-main hide-for-sticky">
+      <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+
+          <!-- Logo -->
+          <div id="logo" class="flex-col logo">
+            <!-- Header logo -->
+<a href="https://bancutram.com/" title="Cừ Tràm Đại Nam - Chuyên Cung Cấp Cừ Tràm, Cừ Bạch Đàn, Cừ Dừa, Phên Tre, Cót Tre Xây Dựng" rel="home">
+    <img width="226" height="78" src="https://bancutram.com/wp-content/uploads/2018/10/logo_cu-tram-dai-nam.png" class="header_logo header-logo lazyloaded" alt="Cừ Tràm Đại Nam" data-ll-status="loaded"><noscript><img width="226" height="78" src="https://bancutram.com/wp-content/uploads/2018/10/logo_cu-tram-dai-nam.png" class="header_logo header-logo" alt="Cừ Tràm Đại Nam"/></noscript><img width="226" height="78" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20226%2078'%3E%3C/svg%3E" class="header-logo-dark" alt="Cừ Tràm Đại Nam" data-lazy-src="https://bancutram.com/wp-content/uploads/2018/10/logo_cu-tram-dai-nam.png"><noscript><img  width="226" height="78" src="https://bancutram.com/wp-content/uploads/2018/10/logo_cu-tram-dai-nam.png" class="header-logo-dark" alt="Cừ Tràm Đại Nam"/></noscript></a>
+          </div>
+
+          <!-- Mobile Left Elements -->
+          <div class="flex-col show-for-medium flex-left">
+            <ul class="mobile-nav nav nav-left ">
+              <li class="nav-icon has-icon">
+  		<a href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" class="is-small" aria-controls="main-menu" aria-expanded="false">
+		
+		  <i class="icon-menu"></i>
+		  		</a>
+	</li>            </ul>
+          </div>
+
+          <!-- Left Elements -->
+          <div class="flex-col hide-for-medium flex-left
+            flex-grow">
+            <ul class="header-nav header-nav-main nav nav-left  nav-uppercase">
+              <li class="header-block"><div class="header-block-block-1"><div class="row row-small align-middle align-right lienhe_header" id="row-1328549923">
+
+<div class="col medium-3 small-12 large-3"><div class="col-inner">
+
+
+    <div class="icon-box featured-box icon-box-left text-left">
+
+                <div class="icon-box-img" style="width: 46px">
+          <div class="icon">
+            <div class="icon-inner">
+              <img width="90" height="90" src="https://bancutram.com/wp-content/uploads/2019/07/hotline-cu-tram-dai-nam.png" class="attachment-medium size-medium lazyloaded" alt="hotline cừ tràm đại nam" decoding="async" data-ll-status="loaded"><noscript><img width="90" height="90" src="https://bancutram.com/wp-content/uploads/2019/07/hotline-cu-tram-dai-nam.png" class="attachment-medium size-medium" alt="hotline cừ tràm đại nam" decoding="async" /></noscript>             </div>
+          </div>
+        </div>
+                <div class="icon-box-text last-reset">
+
+                        
+            
+
+<p class="top_lienhe">0888-666-511<br>
+Tư vấn 24/7</p>
+
+        </div>
+  </div><!-- .icon-box -->
+  
+  
+
+</div></div>
+<div class="col medium-5 small-12 large-5"><div class="col-inner">
+
+
+    <div class="icon-box featured-box icon-box-left text-left">
+
+                <div class="icon-box-img" style="width: 46px">
+          <div class="icon">
+            <div class="icon-inner">
+              <img width="90" height="90" src="https://bancutram.com/wp-content/uploads/2019/07/pin-cu-tram-dai-nam.png" class="attachment-medium size-medium lazyloaded" alt="vi tri vua cu tram dai nam" decoding="async" data-ll-status="loaded"><noscript><img width="90" height="90" src="https://bancutram.com/wp-content/uploads/2019/07/pin-cu-tram-dai-nam.png" class="attachment-medium size-medium" alt="vi tri vua cu tram dai nam" decoding="async" /></noscript>             </div>
+          </div>
+        </div>
+                <div class="icon-box-text last-reset">
+
+                        
+            
+
+<p class="top_lienhe">Địa chỉ vựa cừ tràm:<br>
+Tổ 51, Kp 3,&nbsp;An Phú Đông, Q.12,&nbsp;TP.HCM</p>
+
+        </div>
+  </div><!-- .icon-box -->
+  
+  
+
+</div></div>
+
+
+<style scope="scope">
+
+</style>
+</div></div></li>            </ul>
+          </div>
+
+          <!-- Right Elements -->
+          <div class="flex-col hide-for-medium flex-right">
+            <ul class="header-nav header-nav-main nav nav-right  nav-uppercase">
+                          </ul>
+          </div>
+
+          <!-- Mobile Right Elements -->
+          <div class="flex-col show-for-medium flex-right">
+            <ul class="mobile-nav nav nav-right ">
+              <li class="cart-item has-icon">
+
+
+<a href="https://bancutram.com" class="header-cart-link off-canvas-toggle nav-top-link is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Giỏ hàng" data-pos="right">
+
+    <span class="cart-icon image-icon">
+    <strong>0</strong>
+  </span> 
+  </a>
+
+</li>
+            </ul>
+          </div>
+
+      </div><!-- .header-inner -->
+     
+            <!-- Header divider -->
+      <div class="container"><div class="top-divider full-width"></div></div>
+      </div><!-- .header-main --><div id="wide-nav" class="header-bottom wide-nav nav-dark hide-for-medium">
+    <div class="flex-row container">
+
+                        <div class="flex-col hide-for-medium flex-left">
+                <ul class="nav header-nav header-bottom-nav nav-left  nav-divided nav-size-medium nav-uppercase">
+                    <li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item active  menu-item-66"><a href="https://bancutram.com/" class="nav-top-link">Trang chủ</a></li>
+<li id="menu-item-2391" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-2391"><a href="https://bancutram.com/cu-tram" class="nav-top-link">Cừ Tràm</a></li>
+<li id="menu-item-2390" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-2390"><a href="https://bancutram.com/cu-bach-dan" class="nav-top-link">Cừ Bạch Đàn, Cây Chống</a></li>
+<li id="menu-item-3895" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-3895"><a href="https://bancutram.com/cu-dua" class="nav-top-link">Cừ Dừa</a></li>
+<li id="menu-item-2392" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-2392"><a href="https://bancutram.com/phen-tre" class="nav-top-link">Phên Tre, Liếp Tre</a></li>
+<li id="menu-item-3896" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-3896"><a href="https://bancutram.com/cot-tre-me-bo" class="nav-top-link">Cót Ép Tre Trang Trí</a></li>
+<li id="menu-item-2395" class="menu-item menu-item-type-post_type menu-item-object-post  menu-item-2395"><a href="https://bancutram.com/dong-cu-tram" class="nav-top-link">Đóng Cừ Tràm</a></li>
+<li id="menu-item-2534" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-2534"><a href="https://bancutram.com/tin-tuc" class="nav-top-link">Tin Tức</a></li>
+<li id="menu-item-3580" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-3580"><a rel="nofollow" href="https://bancutram.com/lien-he" class="nav-top-link">Liên Hệ</a></li>
+                </ul>
+            </div><!-- flex-col -->
+            
+            
+                        <div class="flex-col hide-for-medium flex-right flex-grow">
+              <ul class="nav header-nav header-bottom-nav nav-right  nav-divided nav-size-medium nav-uppercase">
+                                 </ul>
+            </div><!-- flex-col -->
+            
+            
+    </div><!-- .flex-row -->
+</div><!-- .header-bottom -->
+
+<div class="header-bg-container fill"><div class="header-bg-image fill"></div><div class="header-bg-color fill"></div></div><!-- .header-bg-container -->   </div><!-- header-wrapper-->
+</header>
+
+
+<main id="main" class="">
+<div id="content" class="content-area" role="main">
+		<div class="large-12">
+			<div class="col-inner">
+				
+														
+						<div class="slider-wrapper relative " id="slider-942011368">
+    <div class="slider slider-nav-circle slider-nav-normal slider-nav-light slider-style-normal" data-flickity-options="{
+            &quot;cellAlign&quot;: &quot;center&quot;,
+            &quot;imagesLoaded&quot;: true,
+            &quot;lazyLoad&quot;: 1,
+            &quot;freeScroll&quot;: false,
+            &quot;wrapAround&quot;: true,
+            &quot;autoPlay&quot;: 4000,
+            &quot;pauseAutoPlayOnHover&quot; : true,
+            &quot;prevNextButtons&quot;: true,
+            &quot;contain&quot; : true,
+            &quot;adaptiveHeight&quot; : true,
+            &quot;dragThreshold&quot; : 5,
+            &quot;percentPosition&quot;: true,
+            &quot;pageDots&quot;: false,
+            &quot;rightToLeft&quot;: false,
+            &quot;draggable&quot;: true,
+            &quot;selectedAttraction&quot;: 0.1,
+            &quot;parallax&quot; : 0,
+            &quot;friction&quot;: 0.6        }">
+        
+    <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1016147352">
+                <div class="img-inner dark">
+        <img width="1920" height="500" src="https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-1.jpg" class="attachment-original size-original lazyloaded" alt="Slide cừ tràm đại nam 1" decoding="async" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-1.jpg 1920w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-1-300x78.jpg 300w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-1-768x200.jpg 768w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-1-1024x267.jpg 1024w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-1-600x156.jpg 600w" data-ll-status="loaded"><noscript><img width="1920" height="500" src="https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-1.jpg" class="attachment-original size-original" alt="Slide cừ tràm đại nam 1" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-1.jpg 1920w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-1-300x78.jpg 300w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-1-768x200.jpg 768w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-1-1024x267.jpg 1024w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-1-600x156.jpg 600w" sizes="(max-width: 1920px) 100vw, 1920px" /></noscript>                
+            </div>
+                   
+<style scope="scope">
+
+</style>
+    </div>
+    
+    <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1963474339">
+                <div class="img-inner dark">
+        <img width="1920" height="500" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%20500'%3E%3C/svg%3E" class="attachment-original size-original" alt="Slide cừ tràm đại nam 2" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-2.jpg 1920w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-2-300x78.jpg 300w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-2-768x200.jpg 768w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-2-1024x267.jpg 1024w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-2-600x156.jpg 600w" data-lazy-sizes="(max-width: 1920px) 100vw, 1920px" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-2.jpg"><noscript><img width="1920" height="500" src="https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-2.jpg" class="attachment-original size-original" alt="Slide cừ tràm đại nam 2" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-2.jpg 1920w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-2-300x78.jpg 300w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-2-768x200.jpg 768w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-2-1024x267.jpg 1024w, https://bancutram.com/wp-content/uploads/2019/07/slide-cu-tram-dai-nam-2-600x156.jpg 600w" sizes="(max-width: 1920px) 100vw, 1920px" /></noscript>                
+            </div>
+                   
+<style scope="scope">
+
+</style>
+    </div>
+    
+     </div>
+
+     <div class="loading-spin dark large centered"></div>
+
+     <style scope="scope">
+             </style>
+</div><!-- .ux-slider-wrapper -->
+
+
+  <section class="section top-section" id="section_932993607">
+      <div class="bg section-bg fill bg-fill  bg-loaded">
+
+        
+        
+        
+        
+        
+        
+	<div class="is-border" style="border-width:0px 0px 0px 0px;">
+	</div>
+
+      </div><!-- .section-bg -->
+
+      <div class="section-content relative">
+        
+<div class="row row-small" id="row-23679718">
+<div class="col small-12 large-12"><div class="col-inner">
+<h1 class="title_web" style="text-align: center; padding-top: 12px;"><span style="color: #fff;">CỪ TRÀM ĐẠI NAM</span></h1>
+<p class="hide_mobile" style="font-size: 16px; color: #fff;">CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI CỪ TRÀM ĐẠI NAM !</p>
+<p class="hide_mobile"><span style="color: #fff;">Cừ Tràm Đại Nam tự hào là nhà cung cấp bán cừ tràm xây dựng hàng đầu tại khu vực phía Nam. Cừ tràm tại công ty chúng tôi đa dạng về quy cách, giá bán sỉ tại vựa, đặt hàng theo mọi số lượng, hỗ trợ giao hàng nhanh đi các tỉnh. Đặc biệt có nhiều ưu đãi hấp dẫn cho những đơn hàng số lượng lớn. </span></p>
+<p class="hide_mobile"><span style="color: #fff;">Các điều khoản về thanh toán đơn giản linh hoạt dễ dàng. Ngoài ra Vựa Cừ Tràm Đại Nam còn cung cấp cừ bạch đàn, cừ dừa, cót tre, phên tre xây dựng với giá thành và chất lượng tốt nhất. Cừ Tràm Đại Nam – Niềm Tin Cho Mọi Công Trình.</span></p>
+</div></div>
+
+<style scope="scope">
+
+</style>
+</div>
+      </div><!-- .section-content -->
+
+      
+<style scope="scope">
+
+#section_932993607 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: rgb(0, 112, 160);
+}
+</style>
+  </section>
+  
+  <section class="section qc" id="section_1987738658">
+      <div class="bg section-bg fill bg-fill  bg-loaded">
+
+        
+        
+        
+        
+        
+        
+
+      </div><!-- .section-bg -->
+
+      <div class="section-content relative">
+        
+<div class="row" id="row-194390169">
+<div class="col medium-4 small-12 large-4"><div class="col-inner">
+
+    <div class="icon-box featured-box icon-box-left text-left">
+
+                <div class="icon-box-img" style="width: 50px">
+          <div class="icon">
+            <div class="icon-inner">
+              <img width="90" height="90" src="https://bancutram.com/wp-content/uploads/2019/07/giao-hang-nhanh.png" class="attachment-medium size-medium lazyloaded" alt="Giao hàng nhanh" decoding="async" data-ll-status="loaded"><noscript><img width="90" height="90" src="https://bancutram.com/wp-content/uploads/2019/07/giao-hang-nhanh.png" class="attachment-medium size-medium" alt="Giao hàng nhanh" decoding="async" /></noscript>             </div>
+          </div>
+        </div>
+                <div class="icon-box-text last-reset">
+
+                        
+            
+<p class="porto-sicon-title" style="text-align: center;"><strong><span style="color: #ff0000;">HỖ TRỢ VẬN CHUYỂN</span></strong></p>
+        </div>
+  </div><!-- .icon-box -->
+  
+  
+</div></div>
+<div class="col medium-4 small-12 large-4"><div class="col-inner">
+
+    <div class="icon-box featured-box icon-box-left text-left">
+
+                <div class="icon-box-img" style="width: 50px">
+          <div class="icon">
+            <div class="icon-inner">
+              <img width="90" height="90" src="https://bancutram.com/wp-content/uploads/2019/07/gia-si-tai-vua.png" class="attachment-medium size-medium lazyloaded" alt="Giá sỉ tại vựa" decoding="async" data-ll-status="loaded"><noscript><img width="90" height="90" src="https://bancutram.com/wp-content/uploads/2019/07/gia-si-tai-vua.png" class="attachment-medium size-medium" alt="Giá sỉ tại vựa" decoding="async" /></noscript>             </div>
+          </div>
+        </div>
+                <div class="icon-box-text last-reset">
+
+                        
+            
+<p class="porto-sicon-title" style="text-align: center;"><strong><span style="color: #ff0000;">GIÁ SỈ TẠI VỰA</span></strong></p>
+        </div>
+  </div><!-- .icon-box -->
+  
+  
+</div></div>
+<div class="col medium-4 small-12 large-4"><div class="col-inner">
+
+    <div class="icon-box featured-box icon-box-left text-left">
+
+                <div class="icon-box-img" style="width: 50px">
+          <div class="icon">
+            <div class="icon-inner">
+              <img width="90" height="90" src="https://bancutram.com/wp-content/uploads/2019/07/tu-van-24-7.png" class="attachment-medium size-medium lazyloaded" alt="tư vấn hỗ trợ 24/7" decoding="async" data-ll-status="loaded"><noscript><img width="90" height="90" src="https://bancutram.com/wp-content/uploads/2019/07/tu-van-24-7.png" class="attachment-medium size-medium" alt="tư vấn hỗ trợ 24/7" decoding="async" /></noscript>             </div>
+          </div>
+        </div>
+                <div class="icon-box-text last-reset">
+
+                        
+            
+<p class="porto-sicon-title" style="text-align: center;"><strong><span style="color: #ff0000;">TƯ VẤN MIỄN PHÍ 24/7</span></strong></p>
+        </div>
+  </div><!-- .icon-box -->
+  
+  
+</div></div>
+</div>
+      </div><!-- .section-content -->
+
+      
+<style scope="scope">
+
+#section_1987738658 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+</style>
+  </section>
+  
+  <section class="section lien-he-section" id="section_1441823195">
+      <div class="bg section-bg fill bg-fill  bg-loaded">
+
+        
+        
+        
+        
+        
+        
+
+      </div><!-- .section-bg -->
+
+      <div class="section-content relative">
+        
+<div class="row" id="row-683903103">
+<div class="col small-12 large-12"><div class="col-inner">
+<div class="container section-title-container"><h2 class="section-title section-title-center"><b></b><span class="section-title-main" style="font-size:90%;color:rgb(2, 81, 125);">Cừ Tràm</span><b></b></h2></div><!-- .section-title -->
+
+  
+    <div class="row large-columns-4 medium-columns- small-columns-2 row-small has-shadow row-box-shadow-2">
+  	
+	     
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cu-tram-3m">
+										<img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2019/08/cu-tram-3m.jpg" class="attachment-original size-original lazyloaded" alt="cu tram dai 3m" decoding="async" sizes="(max-width: 428px) 100vw, 428px" srcset="https://bancutram.com/wp-content/uploads/2019/08/cu-tram-3m.jpg 428w, https://bancutram.com/wp-content/uploads/2019/08/cu-tram-3m-300x200.jpg 300w" data-ll-status="loaded"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2019/08/cu-tram-3m.jpg" class="attachment-original size-original" alt="cu tram dai 3m" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/08/cu-tram-3m.jpg 428w, https://bancutram.com/wp-content/uploads/2019/08/cu-tram-3m-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cu-tram-3m">Cọc tràm 3m đường kính gốc 6cm</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>12.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cu-tram-4m">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="cu tram dai 4m" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2019/08/cu-tram-4m.jpg 428w, https://bancutram.com/wp-content/uploads/2019/08/cu-tram-4m-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/08/cu-tram-4m.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2019/08/cu-tram-4m.jpg" class="attachment-original size-original" alt="cu tram dai 4m" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/08/cu-tram-4m.jpg 428w, https://bancutram.com/wp-content/uploads/2019/08/cu-tram-4m-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cu-tram-4m">Cọc tràm 4m đường kính gốc 7cm</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>21.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cu-tram-8cm-10cm-dai-3-7m">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="cu tram 8-10 cm dai 3m" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2018/10/cu-tram-8-10cm.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/cu-tram-8-10cm-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2018/10/cu-tram-8-10cm.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2018/10/cu-tram-8-10cm.jpg" class="attachment-original size-original" alt="cu tram 8-10 cm dai 3m" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2018/10/cu-tram-8-10cm.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/cu-tram-8-10cm-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cu-tram-8cm-10cm-dai-3-7m">Cọc tràm 8cm – 10cm dài 3.7m</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>26.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cu-tram-10cm-12cm-dai-4m">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="cu tram 10-12cm" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2018/10/cu-tram-10-12cm.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/cu-tram-10-12cm-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2018/10/cu-tram-10-12cm.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2018/10/cu-tram-10-12cm.jpg" class="attachment-original size-original" alt="cu tram 10-12cm" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2018/10/cu-tram-10-12cm.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/cu-tram-10-12cm-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cu-tram-10cm-12cm-dai-4m">Cọc tràm 10cm – 12cm dài 4m</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>44.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+	        </div>
+</div></div>
+</div>
+      </div><!-- .section-content -->
+
+      
+<style scope="scope">
+
+#section_1441823195 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(247, 247, 247);
+}
+</style>
+  </section>
+  
+  <section class="section lien-he-section" id="section_562009517">
+      <div class="bg section-bg fill bg-fill  bg-loaded">
+
+        
+        
+        
+        
+        
+        
+
+      </div><!-- .section-bg -->
+
+      <div class="section-content relative">
+        
+<div class="row" id="row-1360061128">
+<div class="col small-12 large-12"><div class="col-inner">
+<div class="container section-title-container"><h2 class="section-title section-title-center"><b></b><span class="section-title-main" style="font-size:90%;color:rgb(2, 81, 125);">Cừ Bạch Đàn</span><b></b></h2></div><!-- .section-title -->
+
+  
+    <div class="row large-columns-4 medium-columns- small-columns-2 row-small has-shadow row-box-shadow-2">
+  	
+	     
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+		<div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá!</span></div></div>
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cay-chong-bach-dan-4m-goc-7cm">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="cay chong bach dan 4m goc 7cm" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2019/08/cay-chong-bach-dan-4m-goc-7cm.jpg 428w, https://bancutram.com/wp-content/uploads/2019/08/cay-chong-bach-dan-4m-goc-7cm-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/08/cay-chong-bach-dan-4m-goc-7cm.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2019/08/cay-chong-bach-dan-4m-goc-7cm.jpg" class="attachment-original size-original" alt="cay chong bach dan 4m goc 7cm" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/08/cay-chong-bach-dan-4m-goc-7cm.jpg 428w, https://bancutram.com/wp-content/uploads/2019/08/cay-chong-bach-dan-4m-goc-7cm-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cay-chong-bach-dan-4m-goc-7cm">Cây Chống Bạch Đàn 4m đường kính gốc 6cm</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>27.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>25.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></ins></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+		<div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá!</span></div></div>
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cay-chong-bach-dan-4m-goc-8cm">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="cay chong bach dan 4m goc 8cm" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2019/08/cay-chong-bach-dan-4m-goc-8cm.jpg 428w, https://bancutram.com/wp-content/uploads/2019/08/cay-chong-bach-dan-4m-goc-8cm-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/08/cay-chong-bach-dan-4m-goc-8cm.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2019/08/cay-chong-bach-dan-4m-goc-8cm.jpg" class="attachment-original size-original" alt="cay chong bach dan 4m goc 8cm" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/08/cay-chong-bach-dan-4m-goc-8cm.jpg 428w, https://bancutram.com/wp-content/uploads/2019/08/cay-chong-bach-dan-4m-goc-8cm-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cay-chong-bach-dan-4m-goc-8cm">Cây Chống Bạch Đàn 4m đường kính gốc 8cm</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>38.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>35.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></ins></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cu-bach-dan-5m-goc-8cm">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="cu bach dan 5m" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2018/10/cu-bach-dan-5m.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/cu-bach-dan-5m-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2018/10/cu-bach-dan-5m.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2018/10/cu-bach-dan-5m.jpg" class="attachment-original size-original" alt="cu bach dan 5m" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2018/10/cu-bach-dan-5m.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/cu-bach-dan-5m-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cu-bach-dan-5m-goc-8cm">Cừ Bạch Đàn 5m đường kính gốc 10cm</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>60.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cu-bach-dan-6m-goc-10cm">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="cừ bạch đàn 12-14cm" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2018/10/cu-bach-dan-12-14cm.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/cu-bach-dan-12-14cm-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2018/10/cu-bach-dan-12-14cm.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2018/10/cu-bach-dan-12-14cm.jpg" class="attachment-original size-original" alt="cừ bạch đàn 12-14cm" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2018/10/cu-bach-dan-12-14cm.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/cu-bach-dan-12-14cm-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cu-bach-dan-6m-goc-10cm">Cừ Bạch Đàn 6m đường kính 10cm-12cm</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>110.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+	        </div>
+</div></div>
+</div>
+      </div><!-- .section-content -->
+
+      
+<style scope="scope">
+
+#section_562009517 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+</style>
+  </section>
+  
+  <section class="section lien-he-section" id="section_406638065">
+      <div class="bg section-bg fill bg-fill  bg-loaded">
+
+        
+        
+        
+        
+        
+        
+
+      </div><!-- .section-bg -->
+
+      <div class="section-content relative">
+        
+<div class="row" id="row-581063783">
+<div class="col small-12 large-12"><div class="col-inner">
+<div class="container section-title-container"><h2 class="section-title section-title-center"><b></b><span class="section-title-main" style="font-size:90%;color:rgb(2, 81, 125);">Cừ Dừa</span><b></b></h2></div><!-- .section-title -->
+
+  
+    <div class="row large-columns-4 medium-columns- small-columns-2 row-small has-shadow row-box-shadow-2">
+  	
+	     
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cu-dua-5m">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="cu dua 5m" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-5m.jpg 428w, https://bancutram.com/wp-content/uploads/2019/09/cu-dua-5m-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-5m.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-5m.jpg" class="attachment-original size-original" alt="cu dua 5m" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-5m.jpg 428w, https://bancutram.com/wp-content/uploads/2019/09/cu-dua-5m-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cu-dua-5m">Cừ dừa 5m</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>400.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cu-dua-6m">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="cu dua 6m" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-6m.jpg 428w, https://bancutram.com/wp-content/uploads/2019/09/cu-dua-6m-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-6m.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-6m.jpg" class="attachment-original size-original" alt="cu dua 6m" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-6m.jpg 428w, https://bancutram.com/wp-content/uploads/2019/09/cu-dua-6m-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cu-dua-6m">Cừ dừa 6m</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>430.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cu-dua-7m">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="cu dua 7m" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-7m.jpg 428w, https://bancutram.com/wp-content/uploads/2019/09/cu-dua-7m-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-7m.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-7m.jpg" class="attachment-original size-original" alt="cu dua 7m" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-7m.jpg 428w, https://bancutram.com/wp-content/uploads/2019/09/cu-dua-7m-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cu-dua-7m">Cừ dừa 7m</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>480.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cu-dua-8m">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="cu dua 8m" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-8m.jpg 428w, https://bancutram.com/wp-content/uploads/2019/09/cu-dua-8m-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-8m.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-8m.jpg" class="attachment-original size-original" alt="cu dua 8m" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/09/cu-dua-8m.jpg 428w, https://bancutram.com/wp-content/uploads/2019/09/cu-dua-8m-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cu-dua-8m">Cừ dừa 8m</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>600.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+	        </div>
+</div></div>
+</div>
+      </div><!-- .section-content -->
+
+      
+<style scope="scope">
+
+#section_406638065 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+</style>
+  </section>
+  
+  <section class="section lien-he-section" id="section_1605312559">
+      <div class="bg section-bg fill bg-fill  bg-loaded">
+
+        
+        
+        
+        
+        
+        
+
+      </div><!-- .section-bg -->
+
+      <div class="section-content relative">
+        
+<div class="row" id="row-117484482">
+<div class="col small-12 large-12"><div class="col-inner">
+<div class="container section-title-container"><h2 class="section-title section-title-center"><b></b><span class="section-title-main" style="font-size:90%;color:rgb(2, 81, 125);">Cót tre - Mê bồ</span><b></b></h2></div><!-- .section-title -->
+
+  
+    <div class="row large-columns-4 medium-columns- small-columns-2 row-small has-shadow row-box-shadow-2">
+  	
+	     
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cot-tre-cat-ruot">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="cot tre" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2019/09/cot-tre.jpg 428w, https://bancutram.com/wp-content/uploads/2019/09/cot-tre-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/09/cot-tre.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2019/09/cot-tre.jpg" class="attachment-original size-original" alt="cot tre" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/09/cot-tre.jpg 428w, https://bancutram.com/wp-content/uploads/2019/09/cot-tre-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cot-tre-cat-ruot">Cót tre 1 lớp (cật – ruột)</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>60.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+		<div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá!</span></div></div>
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cot-ep-tre-2-lop-xuat-khau">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="cot ep tre" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2019/09/cot-ep-tre.jpg 428w, https://bancutram.com/wp-content/uploads/2019/09/cot-ep-tre-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/09/cot-ep-tre.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2019/09/cot-ep-tre.jpg" class="attachment-original size-original" alt="cot ep tre" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/09/cot-ep-tre.jpg 428w, https://bancutram.com/wp-content/uploads/2019/09/cot-ep-tre-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cot-ep-tre-2-lop-xuat-khau">Cót ép tre 2 lớp (xuất khẩu)</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>420.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>410.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></ins></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+		<div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá!</span></div></div>
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/me-bo">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="me bo" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2019/09/me-bo.jpg 428w, https://bancutram.com/wp-content/uploads/2019/09/me-bo-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/09/me-bo.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2019/09/me-bo.jpg" class="attachment-original size-original" alt="me bo" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/09/me-bo.jpg 428w, https://bancutram.com/wp-content/uploads/2019/09/me-bo-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/me-bo">Mê bồ tre, trúc</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>65.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>60.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></ins></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/cot-ep-tre-2-lop-loai-thuong">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="cot tre xay dung" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2019/10/cot-tre-xay-dung.jpg 428w, https://bancutram.com/wp-content/uploads/2019/10/cot-tre-xay-dung-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/10/cot-tre-xay-dung.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2019/10/cot-tre-xay-dung.jpg" class="attachment-original size-original" alt="cot tre xay dung" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/10/cot-tre-xay-dung.jpg 428w, https://bancutram.com/wp-content/uploads/2019/10/cot-tre-xay-dung-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/cot-ep-tre-2-lop-loai-thuong">Cót ép tre 2 lớp (loại thường)</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>80.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+	        </div>
+</div></div>
+</div>
+      </div><!-- .section-content -->
+
+      
+<style scope="scope">
+
+#section_1605312559 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+</style>
+  </section>
+  
+  <section class="section lien-he-section" id="section_331580582">
+      <div class="bg section-bg fill bg-fill  bg-loaded">
+
+        
+        
+        
+        
+        
+        
+
+      </div><!-- .section-bg -->
+
+      <div class="section-content relative">
+        
+<div class="row" id="row-1085743565">
+<div class="col small-12 large-12"><div class="col-inner">
+<div class="container section-title-container"><h2 class="section-title section-title-center"><b></b><span class="section-title-main" style="font-size:90%;color:rgb(2, 81, 125);">Phên Tre</span><b></b></h2></div><!-- .section-title -->
+
+  
+    <div class="row large-columns-4 medium-columns- small-columns-2 row-small has-shadow row-box-shadow-2">
+  	
+	     
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/phen-tre-35cm-x-1-5m">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="phen tre 30cm x 1.5m" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-01.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/phen-tre-01-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-01.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-01.jpg" class="attachment-original size-original" alt="phen tre 30cm x 1.5m" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-01.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/phen-tre-01-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/phen-tre-35cm-x-1-5m">Phên tre 35cm x 1.5m</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>27.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/phen-tre-45cm-x-1-7m">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="phen tre 40cm x 1.7m" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-04.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/phen-tre-04-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-04.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-04.jpg" class="attachment-original size-original" alt="phen tre 40cm x 1.7m" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-04.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/phen-tre-04-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/phen-tre-45cm-x-1-7m">Phên tre 45cm x 1.7m</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>32.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/phen-tre-30cm-x-1-3m">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="phen tre 45cm x 1.8m" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-03.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/phen-tre-03-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-03.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-03.jpg" class="attachment-original size-original" alt="phen tre 45cm x 1.8m" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-03.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/phen-tre-03-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/phen-tre-30cm-x-1-3m">Phên tre 30cm x 1.3m</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>25.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+						            	
+	            	<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-zoom">
+									<a href="https://bancutram.com/phen-tre-phoi-banh-trang-0-52-2-25m">
+										<img width="428" height="285" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20428%20285'%3E%3C/svg%3E" class="attachment-original size-original" alt="phen tre phoi banh trang" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-phoi-banh-trang.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/phen-tre-phoi-banh-trang-300x200.jpg 300w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-phoi-banh-trang.jpg"><noscript><img width="428" height="285" src="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-phoi-banh-trang.jpg" class="attachment-original size-original" alt="phen tre phoi banh trang" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2018/10/phen-tre-phoi-banh-trang.jpg 428w, https://bancutram.com/wp-content/uploads/2018/10/phen-tre-phoi-banh-trang-300x200.jpg 300w" sizes="(max-width: 428px) 100vw, 428px" /></noscript>									</a>
+																		 								</div>
+								<div class="image-tools z-top top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-center">
+								<div class="title-wrapper"><p class="name product-title"></p><h2><a href="https://bancutram.com/phen-tre-phoi-banh-trang-0-52-2-25m">Phên tre phơi bánh tráng 0.52×2.25m</a></h2><p></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>100.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+						            
+	        </div>
+</div></div>
+</div>
+      </div><!-- .section-content -->
+
+      
+<style scope="scope">
+
+#section_331580582 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(247, 247, 247);
+}
+</style>
+  </section>
+  
+  <section class="section lien-he-section" id="section_1816955471">
+      <div class="bg section-bg fill bg-fill  bg-loaded">
+
+        
+        
+        
+        
+        
+        
+
+      </div><!-- .section-bg -->
+
+      <div class="section-content relative">
+        
+<div class="row" id="row-180189546">
+<div class="col small-12 large-12"><div class="col-inner">
+<div class="container section-title-container"><h2 class="section-title section-title-center"><b></b><span class="section-title-main" style="font-size:90%;color:rgb(2, 81, 125);">Tin Tức</span><b></b></h2></div><!-- .section-title -->
+
+  
+    <div class="row large-columns-8 medium-columns-1 small-columns-1 has-shadow row-box-shadow-2">
+  		<div class="col post-item">
+			<div class="col-inner">
+			<a href="https://bancutram.com/cu-tram-dai-4-5m-4-7m-chuan-goc-8cm-10cm-gia-bao-nhieu-1-cay" class="plain">
+				<div class="box box-normal box-text-bottom box-blog-post has-hover">
+            					<div class="box-image">
+  						<div class="image-zoom image-cover" style="padding-top:70%;">
+  							<img width="300" height="211" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20211'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="cu tram dai 4.5m - 4.7m" decoding="async" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2019/01/cu-tram-4-5m-4-7m-300x211.jpg 300w, https://bancutram.com/wp-content/uploads/2019/01/cu-tram-4-5m-4-7m.jpg 360w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/01/cu-tram-4-5m-4-7m-300x211.jpg"><noscript><img width="300" height="211" src="https://bancutram.com/wp-content/uploads/2019/01/cu-tram-4-5m-4-7m-300x211.jpg" class="attachment-medium size-medium wp-post-image" alt="cu tram dai 4.5m - 4.7m" decoding="async" srcset="https://bancutram.com/wp-content/uploads/2019/01/cu-tram-4-5m-4-7m-300x211.jpg 300w, https://bancutram.com/wp-content/uploads/2019/01/cu-tram-4-5m-4-7m.jpg 360w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>  							  							  						</div>
+  						  					</div><!-- .box-image -->
+          					<div class="box-text text-center">
+					<div class="box-text-inner blog-post-inner">
+
+					
+										<h3 class="post-title is-large ">Cừ Tràm dài 4.5-4.7m chuẩn gốc 8cm – 10cm giá bao nhiêu 1 cây?</h3>
+										<div class="is-divider"></div>
+										
+					
+					
+					</div><!-- .box-text-inner -->
+					</div><!-- .box-text -->
+									</div><!-- .box -->
+				</a><!-- .link -->
+			</div><!-- .col-inner -->
+		</div><!-- .col -->
+		<div class="col post-item">
+			<div class="col-inner">
+			<a href="https://bancutram.com/bien-phap-thi-cong-dong-cu-tram-gia-co-mong" class="plain">
+				<div class="box box-normal box-text-bottom box-blog-post has-hover">
+            					<div class="box-image">
+  						<div class="image-zoom image-cover" style="padding-top:70%;">
+  							<img width="300" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20200'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="bien phap thi cong dong cu tram" decoding="async" loading="lazy" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2018/10/bien-phap-thi-cong-dong-cu-tram-1-300x200.jpg 300w, https://bancutram.com/wp-content/uploads/2018/10/bien-phap-thi-cong-dong-cu-tram-1.jpg 428w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://bancutram.com/wp-content/uploads/2018/10/bien-phap-thi-cong-dong-cu-tram-1-300x200.jpg"><noscript><img width="300" height="200" src="https://bancutram.com/wp-content/uploads/2018/10/bien-phap-thi-cong-dong-cu-tram-1-300x200.jpg" class="attachment-medium size-medium wp-post-image" alt="bien phap thi cong dong cu tram" decoding="async" loading="lazy" srcset="https://bancutram.com/wp-content/uploads/2018/10/bien-phap-thi-cong-dong-cu-tram-1-300x200.jpg 300w, https://bancutram.com/wp-content/uploads/2018/10/bien-phap-thi-cong-dong-cu-tram-1.jpg 428w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>  							  							  						</div>
+  						  					</div><!-- .box-image -->
+          					<div class="box-text text-center">
+					<div class="box-text-inner blog-post-inner">
+
+					
+										<h3 class="post-title is-large ">Biện pháp thi công đóng cừ tràm gia cố móng hiệu quả nhất</h3>
+										<div class="is-divider"></div>
+										
+					
+					
+					</div><!-- .box-text-inner -->
+					</div><!-- .box-text -->
+									</div><!-- .box -->
+				</a><!-- .link -->
+			</div><!-- .col-inner -->
+		</div><!-- .col -->
+		<div class="col post-item">
+			<div class="col-inner">
+			<a href="https://bancutram.com/cay-cu-tram-o-vung-nao-co-chat-luong-tot-nhat" class="plain">
+				<div class="box box-normal box-text-bottom box-blog-post has-hover">
+            					<div class="box-image">
+  						<div class="image-zoom image-cover" style="padding-top:70%;">
+  							<img width="300" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20200'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Cây cừ tràm vùng nào có chất lượng tốt nhất" decoding="async" loading="lazy" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2018/12/cay-cu-tram-vung-nao-tot-nhat-300x200.jpg 300w, https://bancutram.com/wp-content/uploads/2018/12/cay-cu-tram-vung-nao-tot-nhat.jpg 428w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://bancutram.com/wp-content/uploads/2018/12/cay-cu-tram-vung-nao-tot-nhat-300x200.jpg"><noscript><img width="300" height="200" src="https://bancutram.com/wp-content/uploads/2018/12/cay-cu-tram-vung-nao-tot-nhat-300x200.jpg" class="attachment-medium size-medium wp-post-image" alt="Cây cừ tràm vùng nào có chất lượng tốt nhất" decoding="async" loading="lazy" srcset="https://bancutram.com/wp-content/uploads/2018/12/cay-cu-tram-vung-nao-tot-nhat-300x200.jpg 300w, https://bancutram.com/wp-content/uploads/2018/12/cay-cu-tram-vung-nao-tot-nhat.jpg 428w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>  							  							  						</div>
+  						  					</div><!-- .box-image -->
+          					<div class="box-text text-center">
+					<div class="box-text-inner blog-post-inner">
+
+					
+										<h3 class="post-title is-large ">Cây tràm cừ ở vùng nào có chất lượng tốt nhất ???</h3>
+										<div class="is-divider"></div>
+										
+					
+					
+					</div><!-- .box-text-inner -->
+					</div><!-- .box-text -->
+									</div><!-- .box -->
+				</a><!-- .link -->
+			</div><!-- .col-inner -->
+		</div><!-- .col -->
+		<div class="col post-item">
+			<div class="col-inner">
+			<a href="https://bancutram.com/su-khac-biet-giua-tram-ta-va-tram-uc" class="plain">
+				<div class="box box-normal box-text-bottom box-blog-post has-hover">
+            					<div class="box-image">
+  						<div class="image-zoom image-cover" style="padding-top:70%;">
+  							<img width="300" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20200'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Sự khác biệt giữa Tràm ta và Tràm Úc" decoding="async" loading="lazy" data-lazy-srcset="https://bancutram.com/wp-content/uploads/2018/11/tram-ta-tram-uc-300x200.jpg 300w, https://bancutram.com/wp-content/uploads/2018/11/tram-ta-tram-uc.jpg 428w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://bancutram.com/wp-content/uploads/2018/11/tram-ta-tram-uc-300x200.jpg"><noscript><img width="300" height="200" src="https://bancutram.com/wp-content/uploads/2018/11/tram-ta-tram-uc-300x200.jpg" class="attachment-medium size-medium wp-post-image" alt="Sự khác biệt giữa Tràm ta và Tràm Úc" decoding="async" loading="lazy" srcset="https://bancutram.com/wp-content/uploads/2018/11/tram-ta-tram-uc-300x200.jpg 300w, https://bancutram.com/wp-content/uploads/2018/11/tram-ta-tram-uc.jpg 428w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>  							  							  						</div>
+  						  					</div><!-- .box-image -->
+          					<div class="box-text text-center">
+					<div class="box-text-inner blog-post-inner">
+
+					
+										<h3 class="post-title is-large ">Sự khác biệt giữa Tràm ta và Tràm Úc ?!?</h3>
+										<div class="is-divider"></div>
+										
+					
+					
+					</div><!-- .box-text-inner -->
+					</div><!-- .box-text -->
+									</div><!-- .box -->
+				</a><!-- .link -->
+			</div><!-- .col-inner -->
+		</div><!-- .col -->
+</div>
+</div></div>
+</div>
+      </div><!-- .section-content -->
+
+      
+<style scope="scope">
+
+#section_1816955471 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+</style>
+  </section>
+  
+
+						
+												</div><!-- .col-inner -->
+		</div><!-- .large-12 -->
+</div>
+
+
+
+
+</main><!-- #main -->
+
+
+
+<footer id="footer" class="footer-wrapper">
+
+
+
+	  <section class="section dark" id="section_1195746436">
+      <div class="bg section-bg fill bg-fill  bg-loaded">
+
+        
+        <div class="section-bg-overlay absolute fill"></div>
+        
+        
+        
+        
+	<div class="is-border" style="border-width:0px 0px 0px 0px;">
+	</div>
+
+      </div><!-- .section-bg -->
+
+      <div class="section-content relative">
+        
+
+<div class="row" id="row-71508128">
+
+<div class="col medium-3 small-6 large-3"><div class="col-inner">
+
+<div class="textwidget">
+<h4 style="text-align: left;"><a href="https://bancutram.com/gioi-thieu" target="_blank" rel="nofollow noopener noreferrer">Về Chúng Tôi</a></h4>
+<p style="color: #a8a8a8; padding: 0 15px 0 0;">Cừ Tràm Đại Nam chuyên cung cấp các loại vật liệu xây dựng giá rẻ như: cừ tràm, cừ bạch đàn, cừ dừa, phên tre - liếp tre, cót tre, cót ép trang trí, mê bồ tre tại Tp.HCM. Phân phối trên toàn quốc.</p>
+</div>
+<div class="textwidget"><img class="aligncenter" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="logo cừ tràm đại nam" height="auto" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/08/logo-cu-tram-dai-nam-f.png"><noscript><img class="aligncenter" src="https://bancutram.com/wp-content/uploads/2019/08/logo-cu-tram-dai-nam-f.png" alt="logo cừ tràm đại nam" height="auto" /></noscript><br><strong>Niềm Tin Cho Mọi Công Trình</strong></div>
+
+</div></div>
+<div class="col medium-3 small-6 large-3"><div class="col-inner">
+
+<h4 style="text-align: left;"><strong>Sản Phẩm</strong></h4>
+<ul style="margin-left: 17px;">
+<li><a href="https://bancutram.com/cu-tram"><span style="color: #a8a8a8;">Cừ Tràm</span></a></li>
+<li><a href="https://bancutram.com/cu-bach-dan"><span style="color: #a8a8a8;">Cừ Bạch Đàn</span></a></li>
+<li><a href="https://bancutram.com/cu-dua"><span style="color: #a8a8a8;">Cừ Dừa</span></a></li>
+<li><a href="https://bancutram.com/phen-tre"><span style="color: #a8a8a8;">Phên Tre</span></a></li>
+<li><a href="https://bancutram.com/cot-tre-me-bo"><span style="color: #a8a8a8;">Cót Tre - Mê Bồ</span></a></li>
+</ul>
+<h4 style="text-align: left;"><strong>Dịch Vụ</strong></h4>
+<ul style="margin-left: 17px;">
+<li><a href="https://bancutram.com/dong-cu-tram"><span style="color: #a8a8a8;">Thi Công Đóng Cừ Tràm</span></a></li>
+<li><a href="https://bancutram.com/cho-thue-may-xuc" rel="nofollow"><span style="color: #a8a8a8;">Cho Thuê Máy Xúc</span></a></li>
+</ul>
+
+</div></div>
+<div class="col medium-3 small-6 large-3"><div class="col-inner">
+
+<h4 style="text-align: left;"><strong>Thông Tin Liên Hệ</strong></h4>
+<ulstyle="margin-left: 17px;"="">
+<li><span style="color: #a8a8a8;">Địa chỉ: Tổ 51 Kp 3, An Phú Đông, Quận 12, Thành phố Hồ Chí Minh</span></li>
+<li><span style="color: #a8a8a8;">Hotline: 0888-666-511</span></li>
+<li><span style="color: #a8a8a8;">Email: bancutramgiare@gmail.com<br>
+</span></li>
+
+<div class="wpb_wrapper"><a class="dmca-badge" title="DMCA.com Protection Status" href="//www.dmca.com/Protection/Status.aspx?ID=95c61722-602e-4668-b645-a42f55627c55" rel="nofollow"> <img width="121" height="39" class="aligncenter" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20121%2039'%3E%3C/svg%3E" alt="DMCA.com Protection Status" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/08/dmca_protected.png"><noscript><img width="121" height="39" class="aligncenter" src="https://bancutram.com/wp-content/uploads/2019/08/dmca_protected.png" alt="DMCA.com Protection Status" /></noscript></a></div>
+
+</ulstyle="margin-left:></div></div>
+<div class="col medium-3 small-6 large-3"><div class="col-inner">
+
+<h4 style="text-align: left;"><strong>Xem Bản Đồ</strong></h4>
+<p><a href="https://g.page/cutramdainam?share" target="_blank" rel="nofollow noopener noreferrer"><img width="265" height="190" class="aligncenter lazyloading" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20265%20190'%3E%3C/svg%3E" alt="bản đồ chỉ đường - cừ tràm đại nam" data-lazy-src="https://bancutram.com/wp-content/uploads/2019/06/ban-do-chi-duong.gif"><noscript><img width="265" height="190" class="aligncenter lazyloading" src="https://bancutram.com/wp-content/uploads/2019/06/ban-do-chi-duong.gif" alt="bản đồ chỉ đường - cừ tràm đại nam"></noscript></a></p>
+
+</div></div>
+
+</div>
+
+      </div><!-- .section-content -->
+
+      
+<style scope="scope">
+
+#section_1195746436 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: rgb(39, 39, 35);
+}
+#section_1195746436 .section-bg-overlay {
+  background-color: rgb(39, 39, 35);
+}
+</style>
+  </section>
+  
+<div class="absolute-footer light medium-text-center small-text-center">
+  <div class="container clearfix">
+
+    
+    <div class="footer-primary pull-left">
+            <div class="copyright-footer">
+        <span style="color: #a8a8a8; font-size:13px">Thiết kế và duy trì bởi <a href="https://bancutram.com" style="color: #0087ff;">Cừ Tràm Đại Nam</a></span>      </div>
+          </div><!-- .left -->
+  </div><!-- .container -->
+</div><!-- .absolute-footer -->
+<a href="#top" class="back-to-top button invert plain is-outline hide-for-medium icon circle fixed bottom z-1" id="top-link"><i class="icon-angle-up"></i></a>
+
+
+
+</footer><!-- .footer-wrapper -->
+
+
+
+</div><!-- #wrapper -->
+
+
+
+<!-- Mobile Sidebar -->
+<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+    <div class="sidebar-menu no-scrollbar ">
+        <ul class="nav nav-sidebar  nav-vertical nav-uppercase">
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-66"><a href="https://bancutram.com/" class="nav-top-link">Trang chủ</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2391"><a href="https://bancutram.com/cu-tram" class="nav-top-link">Cừ Tràm</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2390"><a href="https://bancutram.com/cu-bach-dan" class="nav-top-link">Cừ Bạch Đàn, Cây Chống</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3895"><a href="https://bancutram.com/cu-dua" class="nav-top-link">Cừ Dừa</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2392"><a href="https://bancutram.com/phen-tre" class="nav-top-link">Phên Tre, Liếp Tre</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3896"><a href="https://bancutram.com/cot-tre-me-bo" class="nav-top-link">Cót Ép Tre Trang Trí</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2395"><a href="https://bancutram.com/dong-cu-tram" class="nav-top-link">Đóng Cừ Tràm</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2534"><a href="https://bancutram.com/tin-tuc" class="nav-top-link">Tin Tức</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3580"><a rel="nofollow" href="https://bancutram.com/lien-he" class="nav-top-link">Liên Hệ</a></li>
+        </ul>
+    </div><!-- inner -->
+</div><!-- #mobile-menu -->
+  <script type="rocketlazyloadscript" id="lazy-load-icons">
+    /* Lazy load icons css file */
+    var fl_icons = document.createElement('link');
+    fl_icons.rel = 'stylesheet';
+    fl_icons.href = 'https://bancutram.com/wp-content/themes/flatsome/assets/css/fl-icons.css';
+    fl_icons.type = 'text/css';
+    var fl_icons_insert = document.getElementsByTagName('link')[0];
+    fl_icons_insert.parentNode.insertBefore(fl_icons, fl_icons_insert);
+  </script>
+      <div id="login-form-popup" class="lightbox-content mfp-hide">
+      
+
+<div class="woocommerce-notices-wrapper"></div>
+<div class="account-container lightbox-inner">
+
+<div class="account-login-inner">
+
+		<span class="uppercase">Đăng nhập</span>
+
+		<form method="post" class="login">
+
+						
+			<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+				<label for="username">Tên tài khoản hoặc địa chỉ email <span class="required">*</span></label>
+				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="" style="">
+			</p>
+			
+			<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+				<label for="password">Mật khẩu <span class="required">*</span></label>
+				<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" style="">
+			</p>
+
+			
+			
+			<p class="form-row">
+				<input type="hidden" id="_wpnonce" name="_wpnonce" value="1a87863dfc" style=""><input type="hidden" name="_wp_http_referer" value="/" style="">				<input type="submit" class="woocommerce-Button button" name="login" value="Đăng nhập" style="">
+				<label for="rememberme" class="inline">
+					<input class="woocommerce-Input woocommerce-Input--checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" style=""> Ghi nhớ mật khẩu				</label>
+			</p>
+			<p class="woocommerce-LostPassword lost_password">
+				<a href="https://bancutram.com/wp-login.php?action=lostpassword">Quên mật khẩu?</a>
+			</p>
+
+			
+		</form>
+</div><!-- .login-inner -->
+
+
+</div><!-- .account-login-container -->
+
+          </div>
+  	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://bancutram.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.7.5.0" id="jquery-blockui-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://bancutram.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.7.5.0" id="js-cookie-js" defer=""></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://bancutram.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=7.5.0" id="woocommerce-js" defer=""></script>
+<script type="text/javascript" id="wc-cart-fragments-js-extra">
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_f71819213ba8e60c2ddb9847da2306d0","fragment_name":"wc_fragments_f71819213ba8e60c2ddb9847da2306d0","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://bancutram.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=7.5.0" id="wc-cart-fragments-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(.+\/)?feed\/?.+\/?|\/(?:.+\/)?embed\/|\/wc-api\/v(.*)|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/bancutram.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://bancutram.com/wp-includes/js/hoverIntent.min.js?ver=1.10.2" id="hoverIntent-js" defer=""></script>
+<script type="text/javascript" id="flatsome-js-js-extra">
+/* <![CDATA[ */
+var flatsomeVars = {"ajaxurl":"https:\/\/bancutram.com\/wp-admin\/admin-ajax.php","rtl":"","sticky_height":"46"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://bancutram.com/wp-content/themes/flatsome/assets/js/flatsome.js?ver=3.3.5" id="flatsome-js-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://bancutram.com/wp-content/themes/flatsome/inc/integrations/wp-rocket/flatsome-wp-rocket.js?ver=3" id="flatsome-wp-rocket-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://bancutram.com/wp-content/themes/flatsome/inc/extensions/flatsome-live-search/flatsome-live-search.js?ver=3.3.5" id="flatsome-live-search-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://bancutram.com/wp-content/themes/flatsome/assets/js/woocommerce.js?ver=3.3.5" id="flatsome-theme-woocommerce-js-js" defer=""></script>
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">window.addEventListener('DOMContentLoaded', function() {
+
+        jQuery(document).ready(function () {  
+
+          var top = jQuery('.banner_sidebar').offset().top;
+
+          var headerh = jQuery('header').outerHeight();
+
+          jQuery(window).scroll(function (event) {
+
+            var y = jQuery(this).scrollTop() + headerh;
+
+                if (y >= top) {
+
+                  jQuery('.banner_sidebar').addClass('fixed');
+
+                  jQuery('.banner_sidebar').css('top', headerh );
+
+                } else {
+
+                  jQuery('.banner_sidebar').removeClass('fixed');
+
+                  jQuery('.banner_sidebar').css('top', " " );
+
+                }
+
+                jQuery('.banner_sidebar').width( jQuery('.banner_sidebar').parent().width() - 50 );
+
+            });
+
+        });
+
+});</script>
+
+<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="https://bancutram.com/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img loading="lazy" data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<div class="play"></div>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.dataset.query.length?'':'&'+this.dataset.query;e.setAttribute("src",t.replace("ID",this.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.replaceChild(e,this)}document.addEventListener("DOMContentLoaded",function(){var e,t,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),e.onclick=lazyLoadYoutubeIframe,a[t].appendChild(e)});</script>
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Ads: 790968382 -->
+
+<script type="rocketlazyloadscript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-790968382"></script>
+
+<script type="rocketlazyloadscript">
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+
+
+  gtag('config', 'AW-790968382');
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+/*********************** CSS ************************/
+
+.phonering-alo-phone.phonering-alo-static {
+
+    opacity: .6
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-hover,
+
+.phonering-alo-phone:hover {
+
+    opacity: 1
+
+}
+
+
+
+.phonering-alo-ph-circle {
+
+    width: 160px;
+
+    height: 160px;
+
+	top: 124px;
+
+    left: -24px;
+
+    position: absolute;
+
+    background-color: transparent;
+
+    border-radius: 100% !important;
+
+    border: 2px solid rgba(30, 30, 30, 0.4);
+
+    border: 2px solid #bfebfc 9;
+
+    opacity: .1;
+
+    -webkit-animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+
+    animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+
+    transition: all .5s;
+
+    -webkit-transform-origin: 50% 50%;
+
+    -ms-transform-origin: 50% 50%;
+
+    transform-origin: 50% 50%
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-active .phonering-alo-ph-circle {
+
+    -webkit-animation: phonering-alo-circle-anim 1.1s infinite ease-in-out!important;
+
+    animation: phonering-alo-circle-anim 1.1s infinite ease-in-out!important
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-static .phonering-alo-ph-circle {
+
+    -webkit-animation: phonering-alo-circle-anim 2.2s infinite ease-in-out!important;
+
+    animation: phonering-alo-circle-anim 2.2s infinite ease-in-out!important
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-hover .phonering-alo-ph-circle,
+
+.phonering-alo-phone:hover .phonering-alo-ph-circle {
+
+    border-color: #00aff2;
+
+    opacity: .5
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-green.phonering-alo-hover .phonering-alo-ph-circle,
+
+.phonering-alo-phone.phonering-alo-green:hover .phonering-alo-ph-circle {
+
+    border-color: #75eb50;
+
+    border-color: #baf5a7;
+
+    opacity: .5
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-green .phonering-alo-ph-circle {
+
+    border-color: #00aff2;
+
+    border-color: #bfebfc;
+
+    opacity: .5
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-gray.phonering-alo-hover .phonering-alo-ph-circle,
+
+.phonering-alo-phone.phonering-alo-gray:hover .phonering-alo-ph-circle {
+
+    border-color: #ccc;
+
+    opacity: .5
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-gray .phonering-alo-ph-circle {
+
+    border-color: #75eb50;
+
+    opacity: .5
+
+}
+
+
+
+.phonering-alo-ph-circle-fill {
+
+    width: 100px;
+
+    height: 100px;
+
+	top: 156px;
+
+    left: 4px;
+
+    position: absolute;
+
+    background-color: #000;
+
+    border-radius: 100% !important;
+
+    border: 2px solid transparent;
+
+    -webkit-animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+
+    animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+
+    transition: all .5s;
+
+    -webkit-transform-origin: 50% 50%;
+
+    -ms-transform-origin: 50% 50%;
+
+    transform-origin: 50% 50%
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-active .phonering-alo-ph-circle-fill {
+
+    -webkit-animation: phonering-alo-circle-fill-anim 1.7s infinite ease-in-out!important;
+
+    animation: phonering-alo-circle-fill-anim 1.7s infinite ease-in-out!important
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-static .phonering-alo-ph-circle-fill {
+
+    -webkit-animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out!important;
+
+    animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out!important;
+
+    opacity: 0!important
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-hover .phonering-alo-ph-circle-fill,
+
+.phonering-alo-phone:hover .phonering-alo-ph-circle-fill {
+
+    background-color: rgba(0, 175, 242, 0.5);
+
+    background-color: #00aff2 9;
+
+    opacity: .75!important
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-green.phonering-alo-hover .phonering-alo-ph-circle-fill,
+
+.phonering-alo-phone.phonering-alo-green:hover .phonering-alo-ph-circle-fill {
+
+    background-color: rgba(117, 235, 80, 0.5);
+
+    background-color: #baf5a7 9;
+
+    opacity: .75!important
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-green .phonering-alo-ph-circle-fill {
+
+    background-color: rgba(0, 175, 242, 0.5);
+
+    background-color: #a6e3fa 9
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-gray.phonering-alo-hover .phonering-alo-ph-circle-fill,
+
+.phonering-alo-phone.phonering-alo-gray:hover .phonering-alo-ph-circle-fill {
+
+    background-color: rgba(204, 204, 204, 0.5);
+
+    background-color: #ccc 9;
+
+    opacity: .75!important
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-gray .phonering-alo-ph-circle-fill {
+
+    background-color: rgba(117, 235, 80, 0.5);
+
+    opacity: .75!important
+
+}
+
+
+
+.phonering-alo-ph-img-circle {
+
+	width: 50px;
+
+    height: 50px;
+
+    top: 180px;
+
+    left: 30px;
+
+    position: absolute;
+
+    background: rgba(30, 30, 30, 0.1) url(https://bancutram.com/wp-content/uploads/2018/10/phone-call.png) no-repeat center center;
+
+    border-radius: 100% !important;
+
+    border: 2px solid transparent;
+
+    /* -webkit-animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+
+    animation: phonering-alo-circle-img-anim 1s infinite ease-in-out; */
+
+    -webkit-transform-origin: 50% 50%;
+
+    -ms-transform-origin: 50% 50%;
+
+    transform-origin: 50% 50%;
+
+    background-size: 70%;
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-active .phonering-alo-ph-img-circle {
+
+    -webkit-animation: phonering-alo-circle-img-anim 1s infinite ease-in-out!important;
+
+    animation: phonering-alo-circle-img-anim 1s infinite ease-in-out!important
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-static .phonering-alo-ph-img-circle {
+
+    -webkit-animation: phonering-alo-circle-img-anim 0 infinite ease-in-out!important;
+
+    animation: phonering-alo-circle-img-anim 0 infinite ease-in-out!important
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-hover .phonering-alo-ph-img-circle,
+
+.phonering-alo-phone:hover .phonering-alo-ph-img-circle {
+
+    background-color: #003356
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-green.phonering-alo-hover .phonering-alo-ph-img-circle,
+
+.phonering-alo-phone.phonering-alo-green:hover .phonering-alo-ph-img-circle {
+
+    background-color: #003356;
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-green .phonering-alo-ph-img-circle {
+
+    background-color: #22a41c;
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-gray.phonering-alo-hover .phonering-alo-ph-img-circle,
+
+.phonering-alo-phone.phonering-alo-gray:hover .phonering-alo-ph-img-circle {
+
+    background-color: #ccc
+
+}
+
+
+
+.phonering-alo-phone.phonering-alo-gray .phonering-alo-ph-img-circle {
+
+    background-color: #003356
+
+}
+
+
+
+@-webkit-keyframes phonering-alo-circle-anim {
+
+    0% {
+
+        -webkit-transform: rotate(0) scale(.5) skew(1deg);
+
+        -webkit-opacity: .1
+
+    }
+
+    30% {
+
+        -webkit-transform: rotate(0) scale(.7) skew(1deg);
+
+        -webkit-opacity: .5
+
+    }
+
+    100% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+
+        -webkit-opacity: .1
+
+    }
+
+}
+
+
+
+@-webkit-keyframes phonering-alo-circle-fill-anim {
+
+    0% {
+
+        -webkit-transform: rotate(0) scale(.7) skew(1deg);
+
+        opacity: .2
+
+    }
+
+    50% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+
+        opacity: .2
+
+    }
+
+    100% {
+
+        -webkit-transform: rotate(0) scale(.7) skew(1deg);
+
+        opacity: .2
+
+    }
+
+}
+
+
+
+@-webkit-keyframes phonering-alo-circle-img-anim {
+
+    0% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg)
+
+    }
+
+    10% {
+
+        -webkit-transform: rotate(-25deg) scale(1) skew(1deg)
+
+    }
+
+    20% {
+
+        -webkit-transform: rotate(25deg) scale(1) skew(1deg)
+
+    }
+
+    30% {
+
+        -webkit-transform: rotate(-25deg) scale(1) skew(1deg)
+
+    }
+
+    40% {
+
+        -webkit-transform: rotate(25deg) scale(1) skew(1deg)
+
+    }
+
+    50% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg)
+
+    }
+
+    100% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg)
+
+    }
+
+}
+
+
+
+@-webkit-keyframes phonering-alo-circle-anim {
+
+    0% {
+
+        -webkit-transform: rotate(0) scale(.5) skew(1deg);
+
+        transform: rotate(0) scale(.5) skew(1deg);
+
+        opacity: .1
+
+    }
+
+    30% {
+
+        -webkit-transform: rotate(0) scale(.7) skew(1deg);
+
+        transform: rotate(0) scale(.7) skew(1deg);
+
+        opacity: .5
+
+    }
+
+    100% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+
+        transform: rotate(0) scale(1) skew(1deg);
+
+        opacity: .1
+
+    }
+
+}
+
+
+
+@keyframes phonering-alo-circle-anim {
+
+    0% {
+
+        -webkit-transform: rotate(0) scale(.5) skew(1deg);
+
+        transform: rotate(0) scale(.5) skew(1deg);
+
+        opacity: .1
+
+    }
+
+    30% {
+
+        -webkit-transform: rotate(0) scale(.7) skew(1deg);
+
+        transform: rotate(0) scale(.7) skew(1deg);
+
+        opacity: .5
+
+    }
+
+    100% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+
+        transform: rotate(0) scale(1) skew(1deg);
+
+        opacity: .1
+
+    }
+
+}
+
+
+
+@-webkit-keyframes phonering-alo-circle-fill-anim {
+
+    0% {
+
+        -webkit-transform: rotate(0) scale(.7) skew(1deg);
+
+        transform: rotate(0) scale(.7) skew(1deg);
+
+        opacity: .2
+
+    }
+
+    50% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+
+        transform: rotate(0) scale(1) skew(1deg);
+
+        opacity: .2
+
+    }
+
+    100% {
+
+        -webkit-transform: rotate(0) scale(.7) skew(1deg);
+
+        transform: rotate(0) scale(.7) skew(1deg);
+
+        opacity: .2
+
+    }
+
+}
+
+
+
+@keyframes phonering-alo-circle-fill-anim {
+
+    0% {
+
+        -webkit-transform: rotate(0) scale(.7) skew(1deg);
+
+        transform: rotate(0) scale(.7) skew(1deg);
+
+        opacity: .2
+
+    }
+
+    50% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+
+        transform: rotate(0) scale(1) skew(1deg);
+
+        opacity: .2
+
+    }
+
+    100% {
+
+        -webkit-transform: rotate(0) scale(.7) skew(1deg);
+
+        transform: rotate(0) scale(.7) skew(1deg);
+
+        opacity: .2
+
+    }
+
+}
+
+
+
+@-webkit-keyframes phonering-alo-circle-img-anim {
+
+    0% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+
+        transform: rotate(0) scale(1) skew(1deg)
+
+    }
+
+    10% {
+
+        -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+
+        transform: rotate(-25deg) scale(1) skew(1deg)
+
+    }
+
+    20% {
+
+        -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+
+        transform: rotate(25deg) scale(1) skew(1deg)
+
+    }
+
+    30% {
+
+        -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+
+        transform: rotate(-25deg) scale(1) skew(1deg)
+
+    }
+
+    40% {
+
+        -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+
+        transform: rotate(25deg) scale(1) skew(1deg)
+
+    }
+
+    50% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+
+        transform: rotate(0) scale(1) skew(1deg)
+
+    }
+
+    100% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+
+        transform: rotate(0) scale(1) skew(1deg)
+
+    }
+
+}
+
+
+
+@keyframes phonering-alo-circle-img-anim {
+
+    0% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+
+        transform: rotate(0) scale(1) skew(1deg)
+
+    }
+
+    10% {
+
+        -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+
+        transform: rotate(-25deg) scale(1) skew(1deg)
+
+    }
+
+    20% {
+
+        -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+
+        transform: rotate(25deg) scale(1) skew(1deg)
+
+    }
+
+    30% {
+
+        -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+
+        transform: rotate(-25deg) scale(1) skew(1deg)
+
+    }
+
+    40% {
+
+        -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+
+        transform: rotate(25deg) scale(1) skew(1deg)
+
+    }
+
+    50% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+
+        transform: rotate(0) scale(1) skew(1deg)
+
+    }
+
+    100% {
+
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+
+        transform: rotate(0) scale(1) skew(1deg)
+
+    }
+
+}
+
+
+
+.phonering-alo-phone {
+
+    bottom: 17rem;
+
+    position: fixed;
+
+		z-index: 999;
+
+}
+
+</style>
+
+<div class="phonering-alo-phone phonering-alo-green phonering-alo-show" id="phonering-alo-phoneIcon">
+
+	<div class="phonering-alo-ph-circle"></div>
+
+	<div class="phonering-alo-ph-circle-fill"></div>
+
+	<a href="tel:0888666511" class="pps-btn-img" title="Liên hệ">
+
+		<div class="phonering-alo-ph-img-circle"></div>
+
+	</a>
+
+</div>
+
+
+
+
+</body></html>

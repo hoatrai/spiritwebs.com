@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head profile="http://gmpg.org/xfn/11"><title>
+	Trang Chủ | Arterial
+</title><meta name="Description" content="Chuyên cung cấp thảm trải sàn, giấy dán tường. Tel: 84.8.3899 4096 - 97 - Email: arterial@arterialvn.com"><meta name="keywords" content="Arterial, trang trí nghệ thuật, thảm trải sàn, giấy dán tường, thảm bỉ Modulyss, thảm cuộn huade, thảm hành lang, thảm tấm wasin, thảm tấm gaoyuan, thảm tấm vision, thảm khung nhom thảm rug, miếng lót thảm, adsa,asdasd,General"><link rel="stylesheet" href="/themes/arterial/css.axd?name=style1.6.0.0.css" type="text/css"><link rel="shortcut icon" href="pics/icon.ico" type="image/x-icon">
+    <script src="//e.dtscout.com/e/?v=1a&amp;pid=5200&amp;site=1&amp;l=http%3A%2F%2Farterialvn.com%2F&amp;j=" async="" type="text/javascript"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="/js/swfobject.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script src="/js/AC_RunActiveContent.js" type="text/javascript"></script>
+    <script language="javascript" src="/js/jquery-1.3.2.js" type="text/javascript"></script>
+    <script language="javascript" src="/js/jquery-1.3.1.min.js" type="text/javascript"></script>
+   <script type="text/javascript">
+
+$(document).ready(function() {		
+	
+	//Execute the slideShow
+	slideShow();
+
+});
+
+function slideShow() {
+
+	//Set the opacity of all images to 0
+	$('#gallery a').css({opacity: 0.0});
+	
+	//Get the first image and display it (set it to full opacity)
+	$('#gallery a:first').css({opacity: 1.0});
+	
+	//Set the caption background to semi-transparent
+	$('#gallery .caption').css({opacity: 0.7});
+
+	//Resize the width of the caption according to the image width
+	$('#gallery .caption').css({width: $('#gallery a').find('img').css('width')});
+	
+	//Get the caption of the first image from REL attribute and display it
+	$('#gallery .content').html($('#gallery a:first').find('img').attr('rel'))
+	.animate({opacity: 0.7}, 400);
+	
+	//Call the gallery function to run the slideshow, 6000 = change to next image after 6 seconds
+	setInterval('gallery()',6000);
+	
+}
+
+function gallery() {
+	
+	//if no IMGs have the show class, grab the first image
+	var current = ($('#gallery a.show')?  $('#gallery a.show') : $('#gallery a:first'));
+
+	//Get next image, if it reached the end of the slideshow, rotate it back to the first image
+	var next = ((current.next().length) ? ((current.next().hasClass('caption'))? $('#gallery a:first') :current.next()) : $('#gallery a:first'));	
+	
+	//Get next image caption
+	var caption = next.find('img').attr('rel');	
+	
+	//Set the fade in effect for the next image, show class has higher z-index
+	next.css({opacity: 0.0})
+	.addClass('show')
+	.animate({opacity: 1.0}, 1000);
+
+	//Hide the current image
+	current.animate({opacity: 0.0}, 1000)
+	.removeClass('show');
+	
+	//Set the opacity to 0 and height to 1px
+	$('#gallery .caption').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+	
+	//Animate the caption, opacity to 0.7 and heigth to 100px, a slide up effect
+	$('#gallery .caption').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+	
+	//Display the content
+	$('#gallery .content').html(caption);
+	
+	
+}
+
+</script>
+<meta name="author" content="My name"><link rel="contents" title="Archive" href="/archive.aspx"><link rel="start" title="Arterial" href="/"><link type="application/rdf+xml" rel="meta" title="SIOC" href="http://arterialvn.com/sioc.axd"><link type="application/apml+xml" rel="meta" title="APML" href="http://arterialvn.com/apml.axd"><link type="application/rdf+xml" rel="meta" title="FOAF" href="http://arterialvn.com/foaf.axd"><link type="application/rss+xml" rel="alternate" title="Arterial (RSS)" href="http://arterialvn.com/syndication.axd?format=rss"><link type="application/atom+xml" rel="alternate" title="Arterial (ATOM)" href="http://arterialvn.com/syndication.axd?format=atom"><link type="application/rsd+xml" rel="edituri" title="RSD" href="http://arterialvn.com/rsd.axd"><meta http-equiv="content-type" content="text/html; charset=utf-8"><link type="application/opensearchdescription+xml" rel="search" title="Arterial" href="http://arterialvn.com/opensearch.axd"><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript" charset="utf-8">
+        google.load("jquery", "1.3");
+		</script><script type="text/javascript" charset="UTF-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script><link rel="stylesheet" href="prettyphoto/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8"><link rel="stylesheet" href="../prettyphoto/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8"><script src="prettyphoto/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script><script src="../prettyphoto/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script></head>
+
+
+
+
+
+
+    
+
+    
+    
+
+    
+
+        
+    
+
+
+
+
+
+
+<body>
+
+ <form method="post" action="/" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" style="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" style="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTA0OTgyNDIxNg9kFgJmD2QWBAIBD2QWAgICDxYCHgdjb250ZW50BZICQXJ0ZXJpYWwsIHRyYW5nIHRyw60gbmdo4buHIHRodeG6rXQsIHRo4bqjbSB0cuG6o2kgc8OgbiwgZ2nhuqV5IGTDoW4gdMaw4budbmcsIHRo4bqjbSBi4buJIE1vZHVseXNzLCB0aOG6o20gY3Xhu5luIGh1YWRlLCB0aOG6o20gaMOgbmggbGFuZywgdGjhuqNtIHThuqVtIHdhc2luLCB0aOG6o20gdOG6pW0gZ2FveXVhbiwgdGjhuqNtIHThuqVtIHZpc2lvbiwgdGjhuqNtIGtodW5nIG5ob20gdGjhuqNtIHJ1ZywgbWnhur9uZyBsw7N0IHRo4bqjbSwgYWRzYSxhc2Rhc2QsR2VuZXJhbGQCAw9kFgICBQ9kFgICAQ8WAh4JaW5uZXJodG1sBdkKDQogICAgPGRpdiBjbGFzcz0ic3VwcG9ydCI+DQo8ZGl2IHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTBweDsgcGFkZGluZy10b3A6NXB4OyBiYWNrZ3JvdW5kLWNvbG9yOldoaXRlOyBmb250LXNpemU6MTVweDsgY29sb3I6Qmx1ZTsgZm9udC13ZWlnaHQ6Ym9sZDsiPiAnPC9kaXY+DQo8IS0tDQpTa3lwZSAnTXkgc3RhdHVzJyBidXR0b24NCmh0dHA6Ly93d3cuc2t5cGUuY29tL2dvL3NreXBlYnV0dG9ucw0KLS0+DQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwOi8vZG93bmxvYWQuc2t5cGUuY29tL3NoYXJlL3NreXBlYnV0dG9ucy9qcy9za3lwZUNoZWNrLmpzIj48L3NjcmlwdD4NCg0KPGRpdiBjbGFzcz0ibmljayI+PHAgc3R5bGU9InBhZGRpbmctYm90dG9tOiA0cHg7cGFkZGluZy1sZWZ0OjBweCI+PGEgaHJlZj0ic2t5cGU6dHJ1bmd0cmFubWFuP2NhbGwiPjxpbWcgc3JjPSJodHRwOi8vbXlzdGF0dXMuc2t5cGUuY29tL2JpZ2NsYXNzaWMvdHJ1bmd0cmFubWFuIiBzdHlsZT0iYm9yZGVyOiBub25lOyIgd2lkdGg9IjEzMiIgaGVpZ2h0PSIzNSIgYWx0PSJNeSBzdGF0dXMiIC8+PC9hPjwvcD4NCg0KDQoNCiA8YSBocmVmPSJ5bXNncjpzZW5kSU0/YWNoaWxsZXRyYW4iPiA8aW1nIGJvcmRlcj0iMCIgc3JjPSJodHRwOi8vb3BpLnlhaG9vLmNvbS9vbmxpbmU/dT1hY2hpbGxldHJhbiZhbXA7bT1nJmFtcDt0PTIiIGFsdD0iYWNoaWxsZXRyYW4iIHRpdGxlPSJhY2hpbGxldHJhbiI+PC9hPjwvZGl2PjwhLS0NClNreXBlICdNeSBzdGF0dXMnIGJ1dHRvbg0KaHR0cDovL3d3dy5za3lwZS5jb20vZ28vc2t5cGVidXR0b25zDQotLT4NCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHA6Ly9kb3dubG9hZC5za3lwZS5jb20vc2hhcmUvc2t5cGVidXR0b25zL2pzL3NreXBlQ2hlY2suanMiPjwvc2NyaXB0Pg0KDQo8ZGl2IGNsYXNzPSJuaWNrIj48cCBzdHlsZT0icGFkZGluZy1ib3R0b206IDRweDtwYWRkaW5nLWxlZnQ6MHB4Ij48YSBocmVmPSJza3lwZTphaWNoaV8yMDA5P2NhbGwiPjxpbWcgc3JjPSJodHRwOi8vbXlzdGF0dXMuc2t5cGUuY29tL2JpZ2NsYXNzaWMvYWljaGlfMjAwOSIgc3R5bGU9ImJvcmRlcjogbm9uZTsiIHdpZHRoPSIxMzIiIGhlaWdodD0iMzUiIGFsdD0iTXkgc3RhdHVzIiAvPjwvYT48L3A+DQoNCg0KDQogPGEgaHJlZj0ieW1zZ3I6c2VuZElNP2FpY2hpXzIwMDkiPiA8aW1nIGJvcmRlcj0iMCIgc3JjPSJodHRwOi8vb3BpLnlhaG9vLmNvbS9vbmxpbmU/dT1haWNoaV8yMDA5JmFtcDttPWcmYW1wO3Q9MiIgYWx0PSJhaWNoaV8yMDA5IiB0aXRsZT0iYWljaGlfMjAwOSI+PC9hPjwvZGl2Pg0KPC9kaXY+PGRpdiBjbGFzcz0nY2xlYXInPjwvZGl2PmRkyUoBB9kMUwoi3YN4bSYooVh/NWo=" style="">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=VjwlIqi7esLpp02YYsQj5vb-ws10arl6pmfvuDlShTmJbrmWkcW18HyiP3-g-C-LuV80Q3XQAy-AV4njmeyBLCbw27o1&amp;t=638563523773552689" type="text/javascript"></script>
+
+ 
+   <div class="wrapper">
+    <div class="container">
+        <div class="header">
+            <div class="banner">
+              <object type="application/x-shockwave-flash" data="/pics/banner_990x89.swf" width="990" height="89">
+                <param name="movie" value="/pics/banner_990x89.swf">
+                <param name="quality" value="high">
+                
+            </object>
+            
+                
+            
+            </div>
+        </div>
+            <div>
+<div class="topmenu">
+    <ul>
+       <!-- <li><a href="http://arterialvn.com/">trang chủ</a><span class="topmenuseperator">&#160;</span></li>-->
+       <li><a href="default.aspx">trang chủ</a><span class="topmenuseperator">&nbsp;</span></li>
+        <li><a href="about.aspx">giới thiệu</a><span class="topmenuseperator">&nbsp;</span></li>
+        <li><a href="productscategory.aspx">sản phẩm</a><span class="topmenuseperator">&nbsp;</span></li>
+        <li><a href="newscategory.aspx">tin tức</a><span class="topmenuseperator">&nbsp;</span></li>
+        <li><a href="effect.aspx">công trình</a><span class="topmenuseperator">&nbsp;</span></li>
+        <li><a href="contact.aspx?id=">liên hệ</a></li>
+    </ul>
+</div>
+</div>
+            <div class="nav_search"><div class="content"><div id="searchbox">
+<input type="text" value="Tìm kiếm ..." id="searchfield" onkeypress="if(event.keyCode==13) return BlogEngine.search('/')" onfocus="BlogEngine.searchClear('Tìm kiếm ...')" onblur="BlogEngine.searchClear('Tìm kiếm ...')" style=""><input type="button" value="" class="search" id="searchbutton" onclick="BlogEngine.search('/');" onkeypress="BlogEngine.search('/');" style=""></div>
+</div></div></div>
+            
+            
+        <div class="main">
+        <div class="content_right">
+        
+                
+                
+<script language="javascript" type="text/javascript">
+			            $(".animatedtabs li").hover(
+					
+					function() {
+					    return false; //showTab('#subCate0');
+					}
+				);
+			function backTab(){
+				showTab('#subCate0');}
+            function showTab(obj) {
+                $('.animatedtabs').find("li").removeClass("selected");
+                $(obj).addClass("selected");
+            
+            }
+            showTab('#subCate0');        </script>
+  <div id="cphBody_divError"></div>
+  <div id="cphBody_divBody"></div>
+  
+<div>
+    
+    <object data="/pics/content_783x594.swf" height="594" type="application/x-shockwave-flash" width="783">
+        <param name="movie" value="/pics/content_783x594.swf">
+        <param name="quality" value="high">
+        <param name="wmode" value="transparent">
+    </object>
+</div>
+<div id="cphBody_ProductsList1_productslist" class="newslist"></div>
+
+<div id="postPaging">
+  
+  
+</div>
+      
+
+                
+                        
+                        
+        </div>
+           
+            <div class="sidenav">
+                <div>
+                    <img src="http://arterialvn.com/themes/arterial/img/productcate_title.jpg">
+                </div>
+                <div>
+                    <div class="menuitem_level1">GIẤY DÁN TƯỜNG</div><ul id="nav" class="dropdown dropdown1 dropdown-vertical"><li><a href="/productscategory/duro-thuy-dien.aspx?cid=14">Duro Thuỵ Điển</a><ul style="left: 207px;"><li><a href="/productscategory/atmosfar-iii.aspx?cid=14">ATMOSFAR III</a></li><li><a href="/productscategory/cornelia.aspx?cid=14">CORNELIA</a></li><li><a href="/productscategory/dahlia.aspx?cid=14">DAHLIA</a></li><li><a href="/productscategory/aplanad.aspx?cid=14">ESPLANAD</a></li><li><a href="/productscategory/essens.aspx?cid=14">ESSENS</a></li><li><a href="/productscategory/gammalsvenka.aspx?cid=14">GAMMALSVENKA</a></li><li><a href="/productscategory/veronia.aspx?cid=14">VERONICA</a></li></ul></li><li><a href="/productscategory/giay-trung-quoc.aspx?cid=39">Giấy Trung Quốc</a><ul style="left: 207px;"><li><a href="/productscategory/king-welsonCOQUELICOT.aspx?cid=39">COQUELICOT</a></li><li><a href="/productscategory/king-welsonDA-VINCI.aspx?cid=39">DA VINCI</a></li><li><a href="/productscategory/king-welsonDIVINA-LOMMEDIA.aspx?cid=39">DIVINA LOMMEDIA</a></li><li><a href="/productscategory/king-welsonDIANA.aspx?cid=39">DIANA</a></li><li><a href="/productscategory/king-welsonFANTASY.aspx?cid=39">FANTASY </a></li><li><a href="/productscategory/king-welsonFLORAL-SCENT.aspx?cid=39">FLORAL SCENT</a></li><li><a href="/productscategory/milan-spring.aspx?cid=39">MILAN SPRING</a></li><li><a href="/productscategory/king-welsonNORMANDIE.aspx?cid=39">NORMANDIE</a></li><li><a href="/productscategory/king-welsonPREMONITION.aspx?cid=39">PREMONITION</a></li><li><a href="/productscategory/king-welsonSTRIKE.aspx?cid=39">STRIKE</a></li><li><a href="/productscategory/king-welsonSOPHIE.aspx?cid=39">SOPHIE</a></li><li><a href="/productscategory/king-welsonWIND-SEASON.aspx?cid=39">WIND SEASON</a></li></ul></li></ul><div class="menuitem_level1">THẢM TRẢI SÀN</div><ul id="nav" class="dropdown dropdown2 dropdown-vertical"><li><a href="/productscategory/tham-trai-sanTham-Axminster.aspx?cid=189">Thảm Axminster</a></li><li><a href="/productscategory/tham-bi-Modulyss.aspx?cid=193">Thảm Bỉ - Modulyss</a><ul style="left: 207px;"><li><a href="/productscategory/tham-bi-Modulyss-Black.aspx?cid=193">BLACK&amp;</a></li><li><a href="/productscategory/tham-bi-ModulyssFirst-First-Lines.aspx?cid=193">FIRST - FIRST LINES</a></li><li><a href="/productscategory/tham-bi-ModulyssIn-groove.aspx?cid=193">IN-GROOVE</a></li><li><a href="/productscategory/tham-bi-ModulyssLine-up.aspx?cid=193">LINE-UP</a></li><li><a href="/productscategory/tham-bi-Modulyssminimum70.aspx?cid=193">MINIMUM70</a></li><li><a href="/productscategory/tham-bi-ModulyssNewNormal.aspx?cid=193">NEWNORMAL</a></li><li><a href="/productscategory/tham-bi-ModulyssOn-line-1.aspx?cid=193">ON-LINE 1</a></li><li><a href="/productscategory/tham-bi-ModulyssOn-line-2.aspx?cid=193">ON-LINE 2 </a></li><li><a href="/productscategory/tham-bi-ModulyssResist70.aspx?cid=193">RESIST70</a></li><li><a href="/productscategory/tham-bi-ModulyssReverse70.aspx?cid=193">REVERSE70</a></li><li><a href="/productscategory/tham-bi-ModulyssRound-up.aspx?cid=193">ROUND- UP</a></li><li><a href="/productscategory/tham-bi-ModulyssShine-up.aspx?cid=193">SHINE-UP</a></li><li><a href="/productscategory/tham-bi-ModulyssStrepqes.aspx?cid=193">STREPQES</a></li><li><a href="/productscategory/tham-bi-ModulyssXtra.aspx?cid=193">XTRA</a></li></ul></li><li><a href="/productscategory/Tham-Desso.aspx?cid=195">Thảm Desso</a></li><li><a href="/productscategory/tham-trai-sanTham-cuon-Kaixin.aspx?cid=199">Thảm Kaixin (Carpet roll)</a></li><li><a href="/productscategory/tham-cuon-Haima.aspx?cid=200">Thảm Haima (Carpet roll)</a></li><li><a href="/productscategory/tham-hanh-lang-corridor.aspx?cid=201">Thảm hành lang - Corridor</a></li><li><a href="/productscategory/tham-trai-sanTham-Cuon-Huade.aspx?cid=203">Thảm Huade ( Carpet roll)</a></li><li><a href="/productscategory/tham-tam.aspx?cid=206">Thảm tấm VISION</a><ul style="left: 207px;"><li><a href="/productscategory/tham-tam-VS-Series.aspx?cid=206">VS SERIES</a></li><li><a href="/productscategory/tham-tam-LB-VB-Series.aspx?cid=206">LB-VB SERIES</a><ul style="left: 207px;"><li><a href="/productscategory/tham-tam-LB-VB-SeriesLBVB-001.aspx?cid=206">LB/VB 001</a></li><li><a href="/productscategory/tham-tam-LB-VB-SeriesLBVB-002.aspx?cid=206">LB/VB 002</a></li><li><a href="/productscategory/tham-tam-LB-VB-SeriesLBVB-003.aspx?cid=206">LB/VB 003</a></li><li><a href="/productscategory/tham-tam-LB-VB-SeriesLBVB-004.aspx?cid=206">LB/VB 004</a></li><li><a href="/productscategory/tham-tam-LB-VB-SeriesLBVB-005.aspx?cid=206">LB/VB 005</a></li><li><a href="/productscategory/tham-tam-LB-VB-SeriesLBVB-006.aspx?cid=206">LB/VB 006</a></li><li><a href="/productscategory/tham-tam-LB-VB-SeriesLBVB-007.aspx?cid=206">LB/VB 007</a></li><li><a href="/productscategory/tham-tam-LB-VB-SeriesLBVB-008.aspx?cid=206">LB/VB 008</a></li><li><a href="/productscategory/tham-tam-LB-VB-SeriesLBVB-009.aspx?cid=206">LB/VB 009</a></li><li><a href="/productscategory/tham-tam-LB-VB-SeriesLBVB-0010.aspx?cid=206">LB/VB 010</a></li><li><a href="/productscategory/tham-tam-LB-VB-SeriesLBVB-0011.aspx?cid=206">LB/VB 011</a></li><li><a href="/productscategory/tham-tam-LB-VB-SeriesLBVB-0012.aspx?cid=206">LB/VB 012</a></li></ul></li><li><a href="/productscategory/tham-tam-LA-Series.aspx?cid=206">LA SERIES</a><ul style="left: 207px;"><li><a href="/productscategory/tham-tam-LA-SeriesLA-7001.aspx?cid=206">LA 7001</a></li><li><a href="/productscategory/tham-tam-LA-SeriesLA-7002.aspx?cid=206">LA 7002</a></li><li><a href="/productscategory/tham-tam-LA-SeriesLA-7003.aspx?cid=206">LA 7003</a></li><li><a href="/productscategory/tham-tam-LA-SeriesLA-7004.aspx?cid=206">LA 7004</a></li><li><a href="/productscategory/tham-tam-LA-SeriesLA-7005.aspx?cid=206">LA 7005</a></li><li><a href="/productscategory/tham-tam-LA-SeriesLA-7006.aspx?cid=206">LA 7006</a></li><li><a href="/productscategory/tham-tam-LA-SeriesLA-7007.aspx?cid=206">LA 7007</a></li><li><a href="/productscategory/tham-tam-LA-SeriesLA-7008.aspx?cid=206">LA 7008</a></li><li><a href="/productscategory/tham-tam-LA-SeriesLA-7009.aspx?cid=206">LA 7009</a></li><li><a href="/productscategory/tham-tam-LA-SeriesLA-7010.aspx?cid=206">LA 7010</a></li><li><a href="/productscategory/tham-tam-LA-SeriesLA-7011.aspx?cid=206">LA 7011</a></li><li><a href="/productscategory/tham-tam-LA-SeriesLA-7012.aspx?cid=206">LA 7012</a></li></ul></li><li><a href="/productscategory/tham-tam-Harrisson-Series.aspx?cid=206">HARRISSON-MADISON-ADAMS</a><ul style="left: 207px;"><li><a href="/productscategory/tham-tam-Harrisson-SeriesHN-MN-AS001.aspx?cid=206">HN-MN-AS001</a></li><li><a href="/productscategory/tham-tam-Harrisson-SeriesHN-MN-AS002.aspx?cid=206">HN-MN-AS002</a></li><li><a href="/productscategory/tham-tam-Harrisson-SeriesHN-MN-AS003.aspx?cid=206">HN-MN-AS003</a></li><li><a href="/productscategory/tham-tam-Harrisson-SeriesHN-MN-AS004.aspx?cid=206">HN-MN-AS004</a></li><li><a href="/productscategory/tham-tam-Harrisson-SeriesHN-MN-AS005.aspx?cid=206">HN-MN-AS005</a></li><li><a href="/productscategory/tham-tam-Harrisson-SeriesHN-MN-AS006.aspx?cid=206">HN-MN-AS006</a></li><li><a href="/productscategory/tham-tam-Harrisson-SeriesHN-MN-AS007.aspx?cid=206">HN-MN-AS007</a></li></ul></li><li><a href="/productscategory/tham-tam-Lotus-Series.aspx?cid=206">LOTUS SERIES</a><ul style="left: 207px;"><li><a href="/productscategory/tham-tam-Lotus-SeriesLS-001.aspx?cid=206">LS 001</a></li><li><a href="/productscategory/tham-tam-Lotus-SeriesLS-002.aspx?cid=206">LS 002</a></li><li><a href="/productscategory/tham-tam-Lotus-SeriesLS-003.aspx?cid=206">LS 003</a></li><li><a href="/productscategory/tham-tam-Lotus-SeriesLS-004.aspx?cid=206">LS 004</a></li><li><a href="/productscategory/tham-tam-Lotus-SeriesLS-005.aspx?cid=206">LS 005</a></li><li><a href="/productscategory/tham-tam-Lotus-SeriesLS-006.aspx?cid=206">LS 006</a></li><li><a href="/productscategory/tham-tam-Lotus-SeriesLS-007.aspx?cid=206">LS 007</a></li><li><a href="/productscategory/tham-tam-Lotus-SeriesLS-008.aspx?cid=206">LS 008</a></li><li><a href="/productscategory/tham-tam-Lotus-SeriesTP-VT003.aspx?cid=206">TP-VT003</a></li></ul></li><li><a href="/productscategory/tham-tam-Narsissus-Series.aspx?cid=206">NARSISSUS SERIES</a><ul style="left: 207px;"><li><a href="/productscategory/tham-tam-Narsissus-SeriesNS-001.aspx?cid=206">NS 001</a></li><li><a href="/productscategory/tham-tam-Narsissus-SeriesNS-002.aspx?cid=206">NS 002</a></li><li><a href="/productscategory/tham-tam-Narsissus-SeriesNS-003.aspx?cid=206">NS 003</a></li><li><a href="/productscategory/tham-tam-Narsissus-SeriesNS-004.aspx?cid=206">NS 004</a></li><li><a href="/productscategory/tham-tam-Narsissus-SeriesNS-005.aspx?cid=206">NS 005</a></li><li><a href="/productscategory/tham-tam-Narsissus-SeriesNS-006.aspx?cid=206">NS 006</a></li><li><a href="/productscategory/tham-tam-Narsissus-SeriesNS-007.aspx?cid=206">NS 007</a></li></ul></li><li><a href="/productscategory/tham-tam-Neptune-Series.aspx?cid=206">NEPTUNE-PLUTO-URANUS SERIES</a><ul style="left: 207px;"><li><a href="/productscategory/tham-tam-Neptune-SeriesNE-PO-US001.aspx?cid=206">NE-PO-US001</a></li><li><a href="/productscategory/tham-tam-Neptune-SeriesNE-PO-US002.aspx?cid=206">NE-PO-US002</a></li><li><a href="/productscategory/tham-tam-Neptune-SeriesNE-PO-US003.aspx?cid=206">NE-PO-US003</a></li><li><a href="/productscategory/tham-tam-Neptune-SeriesNE-PO-US004.aspx?cid=206">NE-PO-US004</a></li><li><a href="/productscategory/tham-tam-Neptune-SeriesNE-PO-US005.aspx?cid=206">NE-PO-US006</a></li><li><a href="/productscategory/tham-tam-Neptune-SeriesNE-PO-US007.aspx?cid=206">NE-PO-US007</a></li></ul></li><li><a href="/productscategory/tham-tam-WLD-10-Series.aspx?cid=206">WLD 10 SERIES</a><ul style="left: 207px;"><li><a href="/productscategory/tham-tam-WLD-10-SeriesWLD-1001.aspx?cid=206">WLD 1001</a></li><li><a href="/productscategory/tham-tam-WLD-10-SeriesWLD-1002.aspx?cid=206">WLD 1002</a></li><li><a href="/productscategory/tham-tam-WLD-10-SeriesWLD-1003.aspx?cid=206">WLD 1003</a></li><li><a href="/productscategory/tham-tam-WLD-10-SeriesWLD-1004.aspx?cid=206">WLD 1004</a></li><li><a href="/productscategory/tham-tam-WLD-10-SeriesWLD-1005.aspx?cid=206">WLD 1005</a></li><li><a href="/productscategory/tham-tam-WLD-10-SeriesWLD-1006.aspx?cid=206">WLD 1006</a></li></ul></li><li><a href="/productscategory/tham-tam-WLD-20-Series.aspx?cid=206">WLD 20 SERIES</a><ul style="left: 207px;"><li><a href="/productscategory/tham-tam-WLD-20-SeriesWLD-2001.aspx?cid=206">WLD 2001</a></li><li><a href="/productscategory/tham-tam-WLD-20-SeriesWLD-2002.aspx?cid=206">WLD 2002</a></li><li><a href="/productscategory/tham-tam-WLD-20-SeriesWLD-2003.aspx?cid=206">WLD 2003</a></li><li><a href="/productscategory/tham-tam-WLD-20-SeriesWLD-2004.aspx?cid=206">WLD 2004</a></li><li><a href="/productscategory/tham-tam-WLD-20-SeriesWLD-2005.aspx?cid=206">WLD 2005</a></li><li><a href="/productscategory/tham-tam-WLD-20-SeriesWLD-2006.aspx?cid=206">WLD 2006</a></li></ul></li><li><a href="/productscategory/tham-tam-WLD-30-Series.aspx?cid=206">WLD 30 SERIES</a><ul style="left: 207px;"><li><a href="/productscategory/tham-tam-WLD-30-SeriesWLD3001.aspx?cid=206">WLD3001</a></li><li><a href="/productscategory/tham-tam-WLD-30-SeriesWLD3002.aspx?cid=206">WLD3002</a></li><li><a href="/productscategory/tham-tam-WLD-30-SeriesWLD3003.aspx?cid=206">WLD3003</a></li><li><a href="/productscategory/tham-tam-WLD-30-SeriesWLD3004.aspx?cid=206">WLD3004</a></li><li><a href="/productscategory/tham-tam-WLD-30-SeriesWLD3005.aspx?cid=206">WLD3005</a></li><li><a href="/productscategory/tham-tam-WLD-30-SeriesWLD3006.aspx?cid=206">WLD3006</a></li></ul></li><li><a href="/productscategory/tham-tam-WP11-Series.aspx?cid=206">WP 11 SERIES</a><ul style="left: 207px;"><li><a href="/productscategory/tham-tam-WP11-SeriesWP1101.aspx?cid=206">WP1101</a></li><li><a href="/productscategory/tham-tam-WP11-SeriesWP1102.aspx?cid=206">WP1102</a></li><li><a href="/productscategory/tham-tam-WP11-SeriesWP1103.aspx?cid=206">WP1103</a></li><li><a href="/productscategory/tham-tam-WP11-SeriesWP1104.aspx?cid=206">WP1104</a></li><li><a href="/productscategory/tham-tam-WP11-SeriesWP1105.aspx?cid=206">WP1105</a></li><li><a href="/productscategory/tham-tam-WP11-SeriesWP1106.aspx?cid=206">WP1106</a></li></ul></li><li><a href="/productscategory/tham-tam-WP-12-Series.aspx?cid=206">WP 12 SERIES</a><ul style="left: 207px;"><li><a href="/productscategory/tham-tam-WP-12-SeriesWP1201.aspx?cid=206">WP1201</a></li><li><a href="/productscategory/tham-tam-WP-12-SeriesWP1202.aspx?cid=206">WP1202</a></li><li><a href="/productscategory/tham-tam-WP-12-SeriesWP1203.aspx?cid=206">WP1203</a></li><li><a href="/productscategory/tham-tam-WP-12-SeriesWP1204.aspx?cid=206">WP1204</a></li><li><a href="/productscategory/tham-tam-WP-12-SeriesWP1205.aspx?cid=206">WP1205</a></li><li><a href="/productscategory/tham-tam-WP-12-SeriesWP1206.aspx?cid=206">WP1206</a></li></ul></li><li><a href="/productscategory/tham-tam-WP-13-Series.aspx?cid=206">WP 13 SERIES</a><ul style="left: 207px;"><li><a href="/productscategory/tham-tam-WP-13-SeriesWP1301.aspx?cid=206">WP1301</a></li><li><a href="/productscategory/tham-tam-WP-13-SeriesWP1302.aspx?cid=206">WP1302</a></li><li><a href="/productscategory/tham-tam-WP-13-SeriesWP1303.aspx?cid=206">WP1303</a></li><li><a href="/productscategory/tham-tam-WP-13-SeriesWP1304.aspx?cid=206">WP1304</a></li><li><a href="/productscategory/tham-tam-WP-13-SeriesWP1305.aspx?cid=206">WP1305</a></li><li><a href="/productscategory/tham-tam-WP-13-SeriesWP1306.aspx?cid=206">WP1306</a></li></ul></li><li><a href="/productscategory/tham-tam-Tulip-Series.aspx?cid=206">TULIP-VIOLET SERIES</a><ul style="left: 207px;"><li><a href="/productscategory/tham-tam-Tulip-SeriesTP-VT001.aspx?cid=206">TP-VT001</a></li><li><a href="/productscategory/tham-tam-Tulip-SeriesTP-VT002.aspx?cid=206">TP-VT002</a></li><li><a href="/productscategory/tham-tam-Tulip-SeriesTP-VT004.aspx?cid=206">TP-VT004</a></li><li><a href="/productscategory/tham-tam-Tulip-SeriesTP-VT005.aspx?cid=206">TP-VT005</a></li><li><a href="/productscategory/tham-tam-Tulip-SeriesTP-VT006.aspx?cid=206">TP-VT006</a></li></ul></li></ul></li><li><a href="/productscategory/Tham-Tam-WASIN.aspx?cid=207">Thảm Tấm WASIN</a><ul style="left: 207px;"><li><a href="/productscategory/WASIN-100.aspx?cid=207">WASIN 100</a></li><li><a href="/productscategory/tham-trai-sanTham-Tam-WASINWASIN-102.aspx?cid=207">WASIN 102</a></li><li><a href="/productscategory/tham-trai-sanTham-Tam-WASINWASIN-103.aspx?cid=207">WASIN 103</a></li><li><a href="/productscategory/WASIN-200.aspx?cid=207">WASIN 200</a></li><li><a href="/productscategory/tham-trai-sanTham-Tam-WASINWASIN-201.aspx?cid=207">WASIN 201</a></li><li><a href="/productscategory/tham-trai-sanTham-Tam-WASINWASIN-300.aspx?cid=207">WASIN 300</a></li><li><a href="/productscategory/tham-trai-sanTham-Tam-WASINWASIN-301.aspx?cid=207">WASIN 301</a></li><li><a href="/productscategory/tham-trai-sanTham-Tam-WASINWASIN-302.aspx?cid=207">WASIN 302</a></li></ul></li><li><a href="/productscategory/tham-trai-sanGAOYUAN.aspx?cid=208"> Thảm  Tấm GAOYUAN</a><ul style="left: 207px;"><li><a href="/productscategory/tham-trai-sanGAOYUANBENO.aspx?cid=208">BENO</a></li><li><a href="/productscategory/tham-trai-sanGAOYUANBLENDA.aspx?cid=208">BLENDA</a></li><li><a href="/productscategory/tham-trai-sanGAOYUANGOSA-MYSA.aspx?cid=208">GOSA - MYSA</a></li><li><a href="/productscategory/tham-trai-sanGAOYUANHOOK-YOOK.aspx?cid=208">HOOK - YOOK</a></li><li><a href="/productscategory/tham-trai-sanGAOYUANINKHEART-NUAGE.aspx?cid=208">INKHEART - NUAGE</a></li><li><a href="/productscategory/tham-trai-sanGAOYUANLATTE.aspx?cid=208">LATTE</a></li><li><a href="/productscategory/tham-trai-sanGAOYUANRAINBOW.aspx?cid=208">RAINBOW</a></li><li><a href="/productscategory/tham-trai-sanGAOYUANSIGMA.aspx?cid=208">SIGMA</a></li><li><a href="/productscategory/tham-trai-sanGAOYUANSILK-ROAD.aspx?cid=208">SILK ROAD</a></li><li><a href="/productscategory/tham-trai-sanGAOYUANSPARSE.aspx?cid=208">SPARSE</a></li><li><a href="/productscategory/tham-trai-sanGAOYUANSUZE.aspx?cid=208">SUZE</a></li><li><a href="/productscategory/tham-trai-sanGAOYUANBETA.aspx?cid=208">BETA</a></li></ul></li><li><a href="/productscategory/tham-trai-sanTham-tam-JUDONG.aspx?cid=209">Thảm tấm JUDONG</a></li><li><a href="/productscategory/tham-willton.aspx?cid=210">Thảm Wilton</a><ul style="left: 207px;"><li><a href="/productscategory/.aspx?cid=210">SẢNH, HỘI TRƯỜNG</a></li><li><a href="/productscategory/nha-hang-khach-san.aspx?cid=210">NHÀ HÀNG, KHÁCH SẠN</a></li><li><a href="/productscategory/phong-hop-hoi-nghi.aspx?cid=210">PHÒNG HỌP, HỘI NGHỊ</a></li></ul></li><li><a href="/productscategory/tham-khung-nhom.aspx?cid=212">Thảm khung nhôm (Aluminium door mat)</a></li><li><a href="/productscategory/tham-rug.aspx?cid=217">Thảm Rug</a></li><li><a href="/productscategory/tam-lot-tham-nep-tham.aspx?cid=221">Tấm lót thảm (Underlay) &amp; nẹp thảm</a></li></ul><div class="menuitem_level1">GHẾ VĂN PHÒNG</div><ul id="nav" class="dropdown dropdown3 dropdown-vertical"></ul>
+                </div>
+                <div class="blank">
+                &nbsp;
+                </div>
+                <div>
+                    <img src="http://arterialvn.com/themes/arterial/img/support_title.jpg">
+                </div>
+                <div class="chatpanel">
+                    
+<div style="text-align:center;">
+    <div id="OnlineSupport1_supportonline" style="display: none;" class="div_content">
+    <div class="support">
+<div style="padding-left:10px; padding-top:5px; background-color:White; font-size:15px; color:Blue; font-weight:bold;"> '</div>
+<!--
+Skype 'My status' button
+http://www.skype.com/go/skypebuttons
+-->
+<script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
+
+<div class="nick"><p style="padding-bottom: 4px;padding-left:0px"><a href="skype:trungtranman?call"><img src="http://mystatus.skype.com/bigclassic/trungtranman" style="border: none;" width="132" height="35" alt="My status"></a></p>
+
+
+
+ <a href="ymsgr:sendIM?achilletran"> <img border="0" src="http://opi.yahoo.com/online?u=achilletran&amp;m=g&amp;t=2" alt="achilletran" title="achilletran"></a></div><!--
+Skype 'My status' button
+http://www.skype.com/go/skypebuttons
+-->
+<script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
+
+<div class="nick"><p style="padding-bottom: 4px;padding-left:0px"><a href="skype:aichi_2009?call"><img src="http://mystatus.skype.com/bigclassic/aichi_2009" style="border: none;" width="132" height="35" alt="My status"></a></p>
+
+
+
+ <a href="ymsgr:sendIM?aichi_2009"> <img border="0" src="http://opi.yahoo.com/online?u=aichi_2009&amp;m=g&amp;t=2" alt="aichi_2009" title="aichi_2009"></a></div>
+</div><div class="clear"></div></div>
+    <br>
+    <a href="ymsgr:sendIM?achilletran"> <img border="0" src="http://opi.yahoo.com/online?u=achilletran&amp;m=g&amp;t=2"></a>
+    <br>
+    <div class="phone">
+        Mr Trung: 0907 060 739<br>        
+    </div>
+</div>
+
+                </div>
+           
+             </div>
+             
+        </div>
+        
+    </div>
+    
+    <div class="clear"></div>
+    <div class="footer">
+    
+        <div>
+            
+<div style="text-align:center;padding-top: 10px; padding-bottom: 10px; color:White">
+
+<h4 style="font-weight:bold; color:White; font-size:15px;">Copyright © ARTerial Company Ltd</h4>
+                   385 Xo Viet Nghe Tinh St., Ward 24, Binh Thanh Dist., HCMC, Viet Nam<br>
+                        Tel: + 848. 3511 0911    Fax: + 848. 3511 0922<br>
+                                    Email: arterial@arterialvn.com
+</div>
+        </div>
+        <div class="nav_thongke">
+        
+
+
+<div style="width:110px; margin:auto;">
+
+<!-- Histats.com  START  (standard)-->
+<script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script><script src="http://s10.histats.com/js15.js" type="text/javascript"></script>
+<a href="http://www.histats.com" target="_blank" title="hit tracker"><script type="text/javascript">
+try {Histats.start(1,1327190,4,284,112,35,"00001010");
+Histats.track_hits();} catch(err){};
+</script><div id="histats_counter_4519" style="display: block;"><a href="http://www.histats.com/viewstats/?sid=1327190&amp;ccid=284" target="_blank"><canvas id="histats_counter_4519_canvas" width="112" height="35"></canvas></a></div></a>
+<noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?1327190&101" alt="hit tracker" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
+</div>
+        </div>
+        
+    </div>
+     
+            
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" style="">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+function registerVariables(){BlogEngine.webRoot='/';BlogEngine.i18n.hasRated='You already rated this post';BlogEngine.i18n.savingTheComment='Saving the comment...';BlogEngine.i18n.comments='Comments';BlogEngine.i18n.commentWasSaved='The comment was saved. Thank you for the feedback';BlogEngine.i18n.commentWaitingModeration='Thank you for the feedback. The comment is now awaiting moderation';BlogEngine.i18n.cancel='Cancel';BlogEngine.i18n.filter='Filter';BlogEngine.i18n.apmlDescription='Enter the URL to your website or to your APML document';BlogEngine.i18n.beTheFirstToRate='Be the first to rate this post';BlogEngine.i18n.currentlyRated='Currently rated {0} by {1} people';BlogEngine.i18n.ratingHasBeenRegistered='Your rating has been registered. Thank you!';BlogEngine.i18n.rateThisXStars='Rate this {0} star{1} out of 5';};//]]>
+</script>
+<script type="text/javascript" defer="defer" src="/js.axd?path=%2fblog.js&amp;v=1.6.0.0"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form><script async="" type="text/javascript" src="https://s4.histats.com/stats/1327190.php?1327190&amp;@f16&amp;@g1&amp;@h1&amp;@i1&amp;@j1774107979263&amp;@k0&amp;@l1&amp;@mTrang%20Ch%E1%BB%A7%20%7C%20Arterial&amp;@n0&amp;@o1000&amp;@q0&amp;@r0&amp;@s284&amp;@ten-US&amp;@u1280&amp;@b1:-15384012&amp;@b3:1774107979&amp;@b4:js15.js&amp;@b5:0&amp;@a-_0.2.1&amp;@vhttp%3A%2F%2Farterialvn.com%2F&amp;@w"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24579627-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+        
+
+<script async="" type="text/javascript" src="https://s10.histats.com/counters/cc_284.js"></script><iframe src="https://t.dtscout.com/idg/?su=51A01774107980EEC8DAE1846A315F50" width="0" height="0" style="display: none;"></iframe><script src="https://p.mrktmtrcs.net/mm.js" async=""></script><script async="" src="https://t.dtscdn.com/widget/?d=51A01774107980EEC8DAE1846A315F50&amp;nid=300&amp;p=0&amp;t=0&amp;s=1280x720x24&amp;u=http%3A%2F%2Farterialvn.com%2F&amp;r="></script></body></html>

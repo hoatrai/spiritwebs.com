@@ -1,0 +1,1795 @@
+<html><head><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_dialog{background:#525252b3;position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:700;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) #fff no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:#0006;inset:0;min-height:100%;position:absolute;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba),to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:#fff 0 1px 1px -1px inset;color:#fff;font:700 14px Helvetica,sans-serif;text-overflow:ellipsis;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2),to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:700 12px Helvetica,sans-serif;margin:2px -12px;padding:2px 6px 3px;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:700;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4A4A4A;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4A4A4A;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/y2/r/onuUJj0tCqE.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+</style></head><body style="min-height: 5102px;"><div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;display:none;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Required parameter $c follows optional parameter $per_page</p>
+<p>Filename: models/Mdnews.php</p>
+<p>Line Number: 84</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/candi434/canachau.com/application/core/MY_Controller.php<br>
+			Line: 13<br>
+			Function: model			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/candi434/canachau.com/application/controllers/default/Home.php<br>
+			Line: 4<br>
+			Function: __Construct			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/candi434/canachau.com/index.php<br>
+			Line: 318<br>
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;display:none;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Required parameter $c follows optional parameter $per_page</p>
+<p>Filename: models/Mdproduct.php</p>
+<p>Line Number: 166</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/candi434/canachau.com/application/core/MY_Controller.php<br>
+			Line: 13<br>
+			Function: model			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/candi434/canachau.com/application/controllers/default/Home.php<br>
+			Line: 4<br>
+			Function: __Construct			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/candi434/canachau.com/index.php<br>
+			Line: 318<br>
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+
+
+	<meta http-equiv="content-language" content="vi">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, 
+minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="copyright" content="Copyright 2017 by Hoang Tuan Hung | Yahoo &amp; Skype: webdesignerbh | Hotline: +84 915 050 892">
+<link rel="SHORTCUT ICON" href="/public/uploads/gallery/thumbs/logo-Copy.png">
+<link rel="image_src" href="https://canachau.com/public/uploads/images/thumbs/logo-Copy.png">
+<meta name="name" content="CÂN ĐIỆN TỬ Á CHÂU">
+<meta name="description" content="Cân Điện Tử Á Châu chuyên phân phối các sản phẩm, linh kiện, thiết bị Can Dien Tu chính hãng giá rẻ. Bảo hành cân điện tử 24 tháng. Giao can dien tu tận nơi.">
+<meta name="keywords" content="Cân điện tử, can dien tu, thiết bị cân">
+<meta name="image" content="https://canachau.com/public/uploads/gallery/">
+<meta property="og:image" content="https://canachau.com/public/uploads/gallery/">
+<title>CÂN ĐIỆN TỬ Á CHÂU</title>
+<meta property="og:title" content="CÂN ĐIỆN TỬ Á CHÂU">
+<meta property="og:site_name" content="CÂN ĐIỆN TỬ Á CHÂU">
+<meta property="og:description" content="Cân Điện Tử Á Châu chuyên phân phối các sản phẩm, linh kiện, thiết bị Can Dien Tu chính hãng giá rẻ. Bảo hành cân điện tử 24 tháng. Giao can dien tu tận nơi.">
+<meta property="og:url" content="https://canachau.com/">
+<meta property="og:type" content="article">
+<!-- Google tag (gtag.js) -->
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://connect.facebook.net/vi_VN/bundle/sdk.js/" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="//connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v2.8"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-N4VQHJ9"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-16649504688"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16649504688');
+</script>
+<!-- Event snippet for Phone call lead conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-16649504688/Re9OCIbpuMQZELCPjYM-'});
+</script><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;subset=vietnamese" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/public/css/main01.min.css"><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/16649504688/?random=1774375674978&amp;cv=11&amp;fst=1774375674978&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be63n0za200xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=103116026~103200004~115616985~115938466~115938468~116024733~117484252&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fcanachau.com%2F&amp;frm=0&amp;tiba=C%C3%82N%20%C4%90I%E1%BB%86N%20T%E1%BB%AC%20%C3%81%20CH%C3%82U&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=830083162.1774375675&amp;uaa=x86&amp;uab=64&amp;uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&amp;uamb=0&amp;uam=&amp;uap=Linux&amp;uapv=&amp;uaw=0&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script><script type="text/javascript" language="javascript" src="/public/js/jquery2.js"></script>
+<script language="javascript" type="text/javascript">
+	jQuery.browser = {};
+	(function () {
+		jQuery.browser.msie = false;
+		jQuery.browser.version = 0;
+		if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+			jQuery.browser.msie = true;
+			jQuery.browser.version = RegExp.$1;
+		}
+	})();
+</script>
+<script type="text/javascript" language="javascript" src="/public/js/bootstrap.min.js"></script>
+<script type="text/javascript" language="javascript" src="/public/js/slick.js"></script>
+<script type="text/javascript" language="javascript" src="/public/js/jquery-scrolltofixed-min.js"></script>
+<script type="text/javascript" language="javascript" src="/public/js/cloud-zoom.js"></script>
+<script type="text/javascript" language="javascript" src="/public/js/Slider.js"></script>
+<script type="text/javascript" language="javascript" src="/public/js/jquery.simplyscroll.min.js"></script>
+<script type="text/javascript" language="javascript" src="/public/js/main01.js"></script><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N4VQHJ9');</script>
+<!-- End Google Tag Manager -->
+
+
+
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://apis.google.com/js/platform.js" async="" defer="" gapi_processed="true">
+    {lang: 'vi'}
+    </script>
+    
+
+    
+
+
+<div class="header-banner">
+    <div class="container">
+        <div class="row">
+            <a href="/" title="CÂN ĐIỆN TỬ Á CHÂU">
+                <img src="/public/uploads/gallery/bannerachau1.png" alt="Banner PC">
+            </a>
+        </div>
+            
+        <form action="/contents.html" method="get" class="search-wrapper header-search-wrapper">
+            <input type="text" name="q" class="form-control" style="">
+            <button type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</div><div class="main-nav-wrapper" style="z-index: 1000;">
+    <div class="container">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand active" href="/" title="CÂN ĐIỆN TỬ Á CHÂU">
+                        Trang chủ
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="/gioi-thieu.html" title="Giới thiệu">
+                                Giới thiệu
+                            </a>
+                        </li>
+                                                    <li class="dropdown">
+                                <a href="/danh-muc-can-dien-tu.html" title="Danh mục cân điện tử" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+                                    DANH MỤC CÂN ĐIỆN TỬ                                </a>
+                                <ul class="dropdown-menu">
+                                                                                <li class="dropdown-submenu">
+                                                <a href="/can-phan-tich.html" title="Cân Phân Tích - Cân Điện Tử Á Châu" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+                                                    CÂN PHÂN TÍCH                                                </a>
+                                                <ul class="dropdown-menu">
+                                                                                                        <li>
+                                                        <a href="/can-phan-tich-1-so-le.html" title="Cân Phân Tích 1 Số Lẻ - Cân Điện Tử Á Châu">
+                                                            Cân Phân Tích 1 Số Lẻ                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-phan-tich-2-so-le.html" title="Cân Phân Tích 2 Số Lẻ - Cân Điện Tử Á Châu">
+                                                            Cân Phân Tích 2 Số Lẻ                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-phan-tich-3-so-le.html" title="Cân Phân Tích 3 Số Lẻ - Cân Điện Tử Á Châu">
+                                                            Cân Phân Tích 3 Số Lẻ                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-phan-tich-4-so-le.html" title="Cân Phân Tích 4 Số Lẻ - Cân Điện Tử Á Châu">
+                                                            Cân Phân Tích 4 Số Lẻ                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-mu-cao-su.html" title="Cân Mủ Cao Su - Cân Điện Tử Á Châu">
+                                                            Cân Mủ Cao Su                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-mau-vai.html" title="CÂN MẪU VẢI">
+                                                            CÂN MẪU VẢI                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-say-am.html" title="CÂN SẤY ẨM">
+                                                            CÂN SẤY ẨM                                                        </a>
+                                                    </li>
+                                                                                                            </ul>
+                                            </li>
+                                                                                                <li class="dropdown-submenu">
+                                                <a href="/can-ban-dien-tu.html" title="CÂN BÀN ĐIỆN TỬ - CÂN ĐIỆN TỬ Á CHÂU" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+                                                    CÂN BÀN ĐIỆN TỬ                                                </a>
+                                                <ul class="dropdown-menu">
+                                                                                                        <li>
+                                                        <a href="/can-ban-dien-tu-30kg.html" title="Cân Bàn Điện Tử 30Kg">
+                                                            Cân Bàn Điện Tử 30Kg                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-ban-dien-tu-60kg.html" title="Cân Bàn Điện Tử 60Kg">
+                                                            Cân Bàn Điện Tử 60Kg                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-ban-dien-tu-100kg.html" title="Cân Bàn Điện Tử 100Kg">
+                                                            Cân Bàn Điện Tử 100Kg                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-ban-dien-tu-150kg.html" title="Cân Bàn Điện Tử 150Kg">
+                                                            Cân Bàn Điện Tử 150Kg                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-ban-dien-tu-200kg.html" title="Cân Bàn Điện Tử 200Kg">
+                                                            Cân Bàn Điện Tử 200Kg                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-ban-dien-tu-300kg.html" title="Cân Bàn Điện Tử 300Kg">
+                                                            Cân Bàn Điện Tử 300Kg                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-ban-dien-tu-500kg.html" title="Cân Bàn Điện Tử 500Kg">
+                                                            Cân Bàn Điện Tử 500Kg                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-ban-co-500kg.html" title="Cân Bàn Cơ 500Kg">
+                                                            Cân Bàn Cơ 500Kg                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-ban-co-may-in.html" title="Cân Bàn Có Máy In">
+                                                            Cân Bàn Có Máy In                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-ban-inox.html" title="Cân Bàn Inox">
+                                                            Cân Bàn Inox                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-ghe-ngoi.html" title="Cân Ghế Ngồi">
+                                                            Cân Ghế Ngồi                                                        </a>
+                                                    </li>
+                                                                                                            </ul>
+                                            </li>
+                                                                                            <li>
+                                            <a href="/can-treo-dien-tu.html" title="CÂN TREO ĐIỆN TỬ - CÂN Á CHÂU">
+                                                CÂN TREO ĐIỆN TỬ                                            </a>
+                                        </li>
+                                                                                            <li class="dropdown-submenu">
+                                                <a href="/can-san-dien-tu.html" title="Cân Sàn Điện Tử - Cân Điện Tử Á Châu" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+                                                    CÂN SÀN ĐIỆN TỬ                                                </a>
+                                                <ul class="dropdown-menu">
+                                                                                                        <li>
+                                                        <a href="/can-san-dien-tu-500kg.html" title="Cân Sàn Điện Tử 500kg">
+                                                            Cân Sàn Điện Tử 500kg                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-san-dien-tu-1-tan.html" title="Cân Sàn Điện Tử 1 Tấn">
+                                                            Cân Sàn Điện Tử 1 Tấn                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-san-dien-tu-2-tan.html" title="Cân Sàn Điện Tử 2 Tấn">
+                                                            Cân Sàn Điện Tử 2 Tấn                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-san-dien-tu-3-tan.html" title="Cân Sàn Điện Tử 3 Tấn">
+                                                            Cân Sàn Điện Tử 3 Tấn                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-san-dien-tu-5-tan.html" title="Cân Sàn Điện Tử 5 Tấn">
+                                                            Cân Sàn Điện Tử 5 Tấn                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-san-dien-tu-10-tan.html" title="Cân Sàn Điện Tử 10 Tấn">
+                                                            Cân Sàn Điện Tử 10 Tấn                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-san-co-may-in.html" title="Cân Sàn Có Máy In">
+                                                            Cân Sàn Có Máy In                                                        </a>
+                                                    </li>
+                                                                                                            </ul>
+                                            </li>
+                                                                                            <li>
+                                            <a href="/can-dem-dien-tu.html" title="CÂN ĐẾM ĐIỆN TỬ - CÂN ĐIỆN TỬ Á CHÂU">
+                                                CÂN ĐẾM ĐIỆN TỬ                                            </a>
+                                        </li>
+                                                                                        <li>
+                                            <a href="/can-dien-tu-thuy-san.html" title="CÂN ĐIỆN TỬ THỦY SẢN - CÂN ĐIỆN TỬ Á CHÂU">
+                                                CÂN ĐIỆN TỬ THỦY SẢN                                            </a>
+                                        </li>
+                                                                                        <li>
+                                            <a href="/can-dien-tu-nong-san.html" title="Cân Điện tử Nông Sản - Cân Điện Tử Á Châu">
+                                                CÂN ĐIỆN TỬ NÔNG SẢN                                            </a>
+                                        </li>
+                                                                                            <li class="dropdown-submenu">
+                                                <a href="/can-dien-tu-thong-dung.html" title="CÂN ĐIỆN TỬ THÔNG DỤNG - CÂN ĐIỆN TỬ Á CHÂU" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+                                                    CÂN ĐIỆN TỬ THÔNG DỤNG                                                </a>
+                                                <ul class="dropdown-menu">
+                                                                                                        <li>
+                                                        <a href="/can-3kg.html" title="CÂN 3KG">
+                                                            CÂN 3KG                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-6kg.html" title="CÂN 6KG">
+                                                            CÂN 6KG                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-15kg.html" title="Cân 15Kg">
+                                                            CÂN 15KG                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/can-30kg.html" title="Cân 30Kg">
+                                                            CÂN 30KG                                                        </a>
+                                                    </li>
+                                                                                                            </ul>
+                                            </li>
+                                                                                            <li>
+                                            <a href="/can-dien-tu-nha-bep.html" title="CÂN ĐIỆN TỬ NHÀ BẾP - CÂN ĐIỆN TỬ Á CHÂU">
+                                                CÂN ĐIỆN TỬ NHÀ BẾP                                            </a>
+                                        </li>
+                                                                                        <li>
+                                            <a href="/can-tinh-tien.html" title="Cân Tính Tiền - Cân Điện Tử Á Châu">
+                                                CÂN TÍNH TIỀN                                            </a>
+                                        </li>
+                                                                                        <li>
+                                            <a href="/can-tinh-gia-sieu-thi.html" title="CÂN TÍNH GIÁ - SIÊU THỊ">
+                                                CÂN TÍNH GIÁ - SIÊU THỊ                                            </a>
+                                        </li>
+                                                                                        <li>
+                                            <a href="/can-dien-tu-mini.html" title="CÂN ĐIỆN TỬ MINI">
+                                                CÂN ĐIỆN TỬ MINI                                            </a>
+                                        </li>
+                                                                                        <li>
+                                            <a href="/can-dien-tu-xe-nang.html" title="CÂN ĐIỆN TỬ XE NÂNG">
+                                                CÂN ĐIỆN TỬ XE NÂNG                                            </a>
+                                        </li>
+                                                                                        <li>
+                                            <a href="/can-gia-suc-can-dong-vat.html" title="CÂN GIA SÚC - CÂN ĐỘNG VẬT">
+                                                CÂN GIA SÚC - CÂN ĐỘNG VẬT                                            </a>
+                                        </li>
+                                                                                        <li>
+                                            <a href="/can-xe-tai-can-oto.html" title="CÂN XE TẢI - CÂN ÔTÔ">
+                                                CÂN XE TẢI - CÂN ÔTÔ                                            </a>
+                                        </li>
+                                                                                        <li>
+                                            <a href="/can-dien-tu-gia-re.html" title="CÂN ĐIỆN TỬ GIÁ RẺ - CÂN ĐIỆN TỬ Á CHÂU">
+                                                CÂN ĐIỆN TỬ GIÁ RẺ                                            </a>
+                                        </li>
+                                                                                        <li>
+                                            <a href="/can-dien-tu.html" title="CÂN ĐIỆN TỬ TẠI CÂN Á CHÂU">
+                                                CÂN ĐIỆN TỬ                                            </a>
+                                        </li>
+                                                                                </ul>
+                            </li>
+                                                                <li class="dropdown">
+                                <a href="/thiet-bi-can-dien-tu.html" title="Thiết bị cân điện tử" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+                                    THIẾT BỊ CÂN ĐIỆN TỬ                                </a>
+                                <ul class="dropdown-menu">
+                                                                            <li>
+                                            <a href="/dau-can-dien-tu.html" title="ĐẦU CÂN ĐIỆN TỬ">
+                                                ĐẦU CÂN ĐIỆN TỬ                                            </a>
+                                        </li>
+                                                                                            <li class="dropdown-submenu">
+                                                <a href="/loadcell-can-dien-tu.html" title="LOADCELL - CẢM ỨNG LỰC" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+                                                    LOADCELL - CẢM ỨNG LỰC                                                </a>
+                                                <ul class="dropdown-menu">
+                                                                                                        <li>
+                                                        <a href="/loadcell-vmc.html" title="LOADCELL VMC">
+                                                            LOADCELL VMC                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/loadcell-ute.html" title="Loadcell UTE">
+                                                            LOADCELL UTE                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/loadcell-cas.html" title="LOADCELL CAS">
+                                                            LOADCELL CAS                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/loadcell-mettler-toledo.html" title="LOADCELL METTLER TOLEDO">
+                                                            LOADCELL METTLER TOLEDO                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/loadcell-amcells.html" title="loadcell-amcells">
+                                                            LOADCELL AMCELLS                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/loadcell-mavin.html" title="LOADCELL MAVIN">
+                                                            LOADCELL MAVIN                                                        </a>
+                                                    </li>
+                                                                                                            </ul>
+                                            </li>
+                                                                                                <li class="dropdown-submenu">
+                                                <a href="/qua-can.html" title="QUẢ CÂN - CÂN ĐIỆN TỬ Á CHÂU" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+                                                    QUẢ CÂN                                                </a>
+                                                <ul class="dropdown-menu">
+                                                                                                        <li>
+                                                        <a href="/qua-can-m.html" title="QUẢ CÂN M">
+                                                            QUẢ CÂN M                                                        </a>
+                                                    </li>
+                                                                                                                <li>
+                                                        <a href="/qua-can-f1.html" title="QUẢ CÂN F1">
+                                                            QUẢ CÂN F1                                                        </a>
+                                                    </li>
+                                                                                                            </ul>
+                                            </li>
+                                                                                    </ul>
+                            </li>
+                                                                <li>
+                                <a href="/sua-chua-can-dien-tu.html" title="SỬA CHỮA CÂN ĐIỆN TỬ">
+                                    SỬA CHỮA CÂN ĐIỆN TỬ                                </a>
+                            </li>
+                                                            <li class="dropdown">
+                            <a href="/ho-tro-khach-hang.html" title="Hỗ trợ khách hàng" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+                                Hỗ trợ khách hàng
+                            </a>
+                            <ul class="dropdown-menu">
+                                                            <li>
+                                <a href="/chinh-sach-doi-tra-hang.html" title="chinh-sach-doi-tra-hang">
+                                    CHÍNH SÁCH ĐỔI TRẢ HÀNG                                </a>
+                            </li>
+                                                                    <li>
+                                <a href="/bao-hanh-san-pham.html" title="Bảo hành sản phẩm">
+                                    Bảo hành sản phẩm                                </a>
+                            </li>
+                                                                    </ul>
+                        </li>
+                        <li>
+                            <a href="/tin-tuc.html" title="Tin tức">
+                                Tin tức
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/lien-he.html" title="Liên hệ">
+                                Liên hệ
+                            </a>
+                        </li>
+                    </ul>
+
+                    
+                    <form action="/contents.html" method="get" class="search-wrapper navbar-form navbar-right hide-xs">
+                        <input type="text" name="q" class="form-control" style="">
+                        <button type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+</div><div></div>
+<div class="container list-info-right-wrapper">
+    <div class="list-info-right" style="z-index: auto; position: absolute; top: 0px;">
+        <div class="item icon1">
+            Miễn phí
+            <br>
+            giao hàng
+        </div>
+        <div class="item icon2">
+            Giá
+            <br>
+            cạnh tranh
+        </div>
+        <div class="item icon3">
+            Hàng
+            <br>
+            chính hãng
+        </div>
+        <div class="item icon4">
+            Hỗ trợ
+            <br>
+            kỹ thuật 24/7
+        </div>
+    </div>
+</div><div class="container-home-banner container hidden-xs">
+    <section id="banner" class="vns-slideshow hidden-xs">
+        <div lass="slider fullwidthbanner-container roundedcorners" style="overflow: visible; display: block;">
+            <div class="fullwidthbanner revslider-initialised tp-simpleresponsive" data-height="400" data-plugin-options="{&quot;startwidth&quot;: 1350,&quot;delay&quot;: 9000,&quot;navigationArrows&quot;:&quot;none&quot;,&quot;autoHeight&quot;:off,&quot;onHoverStop&quot;:on}" data-navigationstyle="round" data-snap-ignore="true" id="revslider-759" style="max-height: 328.889px; height: 328.889px; perspective: 2500px; backface-visibility: hidden; transform-style: preserve-3d;">
+                <ul class="" style="display: block; overflow: hidden; width: 100%; height: 100%; max-height: none;">
+                                        <li data-transition="random" data-slotamount="14" data-masterspeed="300" data-delay="7000" class="active-revslide" style="width: 100%; height: 100%; overflow: hidden; z-index: 18; visibility: hidden; opacity: 0;">
+                        <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="left top" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" data-lazydone="undefined" src="https://canachau.com/public/uploads/gallery/123456.png" data-src="https://canachau.com/public/uploads/gallery/123456.png" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;https://canachau.com/public/uploads/gallery/123456.png&quot;); background-size: cover; background-position: left top; width: 100%; height: 100%; opacity: 1; visibility: inherit;"></div></div>
+                    </li>
+                                                <li data-transition="random" data-slotamount="14" data-masterspeed="300" data-delay="7000" class="active-revslide current-sr-slide-visible" style="width: 100%; height: 100%; overflow: hidden; z-index: 18; visibility: inherit; opacity: 1;">
+                        <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="left top" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" data-lazydone="undefined" src="https://canachau.com/public/uploads/gallery/banner6.jpg" data-src="https://canachau.com/public/uploads/gallery/banner6.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;https://canachau.com/public/uploads/gallery/banner6.jpg&quot;); background-size: cover; background-position: left top; width: 100%; height: 100%; opacity: 0; visibility: hidden;"></div><div class="slot" style="position:absolute;top:0px;left:0px;overflow:hidden;width:1110.6px;height:328.88888888888886px"><div class="slotslide" style="position:absolute;top:0px;left:0px;width:1110.6px;height:328.88888888888886px;overflow:hidden;"><div style="background-color:rgba(0, 0, 0, 0);position:absolute;top:0px;left:0px;width:1110px;height:328.88888888888886px;background-image:url(https://canachau.com/public/uploads/gallery/banner6.jpg);background-repeat:no-repeat;background-size:cover;background-position:left top;"></div></div></div></div>
+                    </li>
+                                                <li data-transition="random" data-slotamount="14" data-masterspeed="300" data-delay="7000" class="active-revslide" style="width: 100%; height: 100%; overflow: hidden; z-index: 20; visibility: inherit; opacity: 1;">
+                        <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="left top" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" data-lazydone="undefined" src="https://canachau.com/public/uploads/gallery/banner3.png" data-src="https://canachau.com/public/uploads/gallery/banner3.png" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;https://canachau.com/public/uploads/gallery/banner3.png&quot;); background-size: cover; background-position: left top; width: 100%; height: 100%; opacity: 0;"></div><div class="slot" style="position:absolute;top:0px;left:0px;overflow:hidden;width:1110.6px;height:328.88888888888886px"><div class="slotslide" style="position: absolute; top: -327px; left: 0px; width: 1110.6px; height: 328.889px; overflow: hidden; opacity: 0.00592618; transform: translate3d(0px, 0px, 0px);"><div style="background-color:rgba(0, 0, 0, 0);position:absolute;top:0px;left:0px;width:1110px;height:328.88888888888886px;background-image:url(https://canachau.com/public/uploads/gallery/banner3.png);background-repeat:no-repeat;background-size:cover;background-position:left top;"></div></div></div></div>
+                    </li>
+                                                <li data-transition="random" data-slotamount="14" data-masterspeed="300" data-delay="7000" style="width: 100%; height: 100%; overflow: hidden;">
+                        <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="left top" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" data-lazydone="undefined" src="https://canachau.com/public/uploads/gallery/caninhoadongiare.jpg" data-src="https://canachau.com/public/uploads/gallery/caninhoadongiare.jpg" style="background-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;background-image:url(https://canachau.com/public/uploads/gallery/caninhoadongiare.jpg);background-size:cover;background-position:left top;width:100%;height:100%;"></div></div>
+                    </li>
+                                                <li data-transition="random" data-slotamount="14" data-masterspeed="300" data-delay="7000" style="width: 100%; height: 100%; overflow: hidden; visibility: hidden; opacity: 0; z-index: 18;">
+                        <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="left top" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" data-lazydone="undefined" src="https://canachau.com/public/uploads/gallery/banner-can-a-chau1.jpg" data-src="https://canachau.com/public/uploads/gallery/banner-can-a-chau1.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;https://canachau.com/public/uploads/gallery/banner-can-a-chau1.jpg&quot;); background-size: cover; background-position: left top; width: 100%; height: 100%; opacity: 0;"></div></div>
+                    </li>
+                                                
+                                    </ul>
+                <div class="tp-bannertimer" style="width: 0%; visibility: visible; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+            <div class="tp-loader spinner0" style="display: none;"><div class="dot1"></div><div class="dot2"></div><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>
+        <div class="tp-bullets hidebullets simplebullets round" style="bottom: 20px; left: 50%; margin-left: -41px;"><div class="bullet first"></div><div class="bullet"></div><div class="bullet selected"></div><div class="bullet"></div><div class="bullet last"></div><div class="tpclear"></div></div><div style="position: absolute; top: 164px; margin-top: -18px; left: 20px;" class="tp-leftarrow hidearrows tparrows default round"><div class="tp-arr-allwrapper"><div class="tp-arr-iwrapper"><div class="tp-arr-imgholder" style="visibility: inherit; opacity: 1; background-image: url(&quot;https://canachau.com/public/uploads/gallery/123456.png&quot;);"></div><div class="tp-arr-imgholder2"></div><div class="tp-arr-titleholder"></div><div class="tp-arr-subtitleholder"></div></div></div></div><div style="position: absolute; top: 164px; margin-top: -18px; right: 20px;" class="tp-rightarrow hidearrows tparrows default round"><div class="tp-arr-allwrapper"><div class="tp-arr-iwrapper"><div class="tp-arr-imgholder" style="visibility: inherit; opacity: 1; background-image: url(&quot;https://canachau.com/public/uploads/gallery/banner3.png&quot;);"></div><div class="tp-arr-imgholder2"></div><div class="tp-arr-titleholder"></div><div class="tp-arr-subtitleholder"></div></div></div></div></div>
+    </section>
+<script language="javascript" type="text/javascript">
+$(document).ready(function(e) {
+    if($(window).innerWidth()> 767){
+        jQuery(".fullwidthbanner ul , .fullscreenbanner ul, #banner.vns-slideshow").removeClass("hide");
+        jQuery(".fullwidthbanner").each(function(){
+            var t=jQuery(this),h=t.attr("data-plugin-options"),
+                i={dottedOverlay:"none",delay:9e3,startwidth:$('.container-home-banner').width(),startheight:$('.container-home-banner').width()/1350*400,hideThumbs:f,thumbWidth:r,thumbHeight:u,thumbAmount:parseInt(jQuery(".fullwidthbanner ul li").length)||2,navigationType:c,navigationArrows:e,navigationStyle:jQuery(".fullwidthbanner").attr("data-navigationStyle")||"round",touchenabled:"on",onHoverStop:"on",navigationHAlign:"center",navigationVAlign:"bottom",navigationHOffset:0,navigationVOffset:o,soloArrowLeftHalign:"left",soloArrowLeftValign:"center",soloArrowLeftHOffset:20,soloArrowLeftVOffset:0,soloArrowRightHalign:"right",soloArrowRightValign:"center",soloArrowRightHOffset:20,soloArrowRightVOffset:0,parallax:"mouse",parallaxBgFreeze:"on",parallaxLevels:[7,4,3,2,5,4,3,2,1,0],shadow:0,fullWidth:"on",fullScreen:"off",stopLoop:"off",stopAfterLoops:-1,stopAtSlide:-1,spinner:"spinner0",shuffle:"off",autoHeight:"off",forceFullWidth:"off",hideThumbsOnMobile:"off",hideBulletsOnMobile:"on",hideArrowsOnMobile:"on",hideThumbsUnderResolution:0,hideSliderAtLimit:0,hideCaptionAtLimit:768,hideAllCaptionAtLilmit:0,startWithSlide:0,fullScreenOffsetContainer:""},r=100,u=50,f=200,c="bullet",e="solo",o=10,s;t.hasClass("thumb-small")&&(i.navigationType="thumb");
+            t.hasClass("thumb-large")&&(i.navigationType="thumb",r=195,u=95,f=0,e="solo",o=-94);
+            s=jQuery.extend({},i,h,t.data("plugin-options"));
+            n=t.revolution(s);
+            jQuery("#is_wide, #is_boxed").bind("click",function(){
+                n.revredraw()
+            })
+        })
+    }
+});
+</script></div><div class="container">
+    <div class="my-auto-text">
+        <div class="text-view"><a href="/giao-hang-tan-noi-khi-quy-khach-hang-mua-va-dat-hang.html">Giao hàng tận nơi khi qu|</a></div>
+        <div class="hidden">
+                        <a href="/can-dien-tu-a-chau-kinh-chao-quy-khach.html" title="Cân Điện Tử Á Châu Kính Chào Quý Khách!">Cân Điện Tử Á Châu Kính Chào Quý Khách!</a>
+                                <a href="/giao-hang-tan-noi-khi-quy-khach-hang-mua-va-dat-hang.html" title="Giao hàng tận nơi khi quý khách hàng mua và đặt hàng">Giao hàng tận nơi khi quý khách hàng mua và đặt hàng</a>
+                            </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 col-sm-8 col-xs-12 pull-right">
+            
+    <div class="panel panel-default">
+        <div class="panel-heading color-02">
+            <h1>
+                Sản phẩm bán chạy
+            </h1>
+        </div>
+        <div class="panel-body">
+            <div class="row list-product-row" itemscope="" itemtype="http://schema.org/ItemList">
+                                <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="1">
+    <meta itemprop="url" content="https://canachau.com/can-ky-thuat-dj-323.html">
+    <meta itemprop="name" content="CÂN KỸ THUẬT DJ-323">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-phan-tich-dj-323.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-ky-thuat-dj-323.html" title="CÂN KỸ THUẬT DJ-323">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-phan-tich-dj-323.jpg" alt="CÂN KỸ THUẬT DJ-323" itemprop="image">
+                <span itemprop="name">CÂN KỸ THUẬT DJ-323</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: 12 Tháng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="2">
+    <meta itemprop="url" content="https://canachau.com/can-ban-dien-tu-laumas-w100.html">
+    <meta itemprop="name" content="Cân Bàn Điện Tử Laumas W100">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-ban-dien-tu-laumas-w100.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-ban-dien-tu-laumas-w100.html" title="Cân Bàn Điện Tử Laumas W100">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-ban-dien-tu-laumas-w100.jpg" alt="Cân Bàn Điện Tử Laumas W100" itemprop="image">
+                <span itemprop="name">Cân Bàn Điện Tử Laumas W100</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: 12 Tháng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="3">
+    <meta itemprop="url" content="https://canachau.com/can-diem-bot-mi-kona21.html">
+    <meta itemprop="name" content="Cân Điểm Bột Mì KONA21">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/Candodiembotmiphantichhamluongbotmi.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-diem-bot-mi-kona21.html" title="Cân Điểm Bột Mì KONA21">
+                <img src="https://canachau.com/public/uploads/product/thumbs/Candodiembotmiphantichhamluongbotmi.jpg" alt="Cân Điểm Bột Mì KONA21" itemprop="image">
+                <span itemprop="name">Cân Điểm Bột Mì KONA21</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: 12 Tháng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="4">
+    <meta itemprop="url" content="https://canachau.com/can-ky-thuat-ds223-220g.html">
+    <meta itemprop="name" content="CÂN KỸ THUẬT DS223 220G">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-dien-tu-ds32315.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-ky-thuat-ds223-220g.html" title="CÂN KỸ THUẬT DS223 220G">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-dien-tu-ds32315.jpg" alt="CÂN KỸ THUẬT DS223 220G" itemprop="image">
+                <span itemprop="name">CÂN KỸ THUẬT DS223 220G</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: Liên Hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="5">
+    <meta itemprop="url" content="https://canachau.com/can-dien-tu-inox-chong-nuoc.html">
+    <meta itemprop="name" content="CÂN ĐIỆN TỬ INOX CHỐNG NƯỚC">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/z47975437526520fba0390fa02cf55cddee61f0f04a411.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-dien-tu-inox-chong-nuoc.html" title="CÂN ĐIỆN TỬ INOX CHỐNG NƯỚC">
+                <img src="https://canachau.com/public/uploads/product/thumbs/z47975437526520fba0390fa02cf55cddee61f0f04a411.jpg" alt="CÂN ĐIỆN TỬ INOX CHỐNG NƯỚC" itemprop="image">
+                <span itemprop="name">CÂN ĐIỆN TỬ INOX CHỐNG NƯỚC</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: Liên Hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="6">
+    <meta itemprop="url" content="https://canachau.com/can-dien-tu-can-ga-vit.html">
+    <meta itemprop="name" content="CÂN ĐIỆN TỬ CÂN GÀ VỊT">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-ga-vit-dien-tu.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-dien-tu-can-ga-vit.html" title="CÂN ĐIỆN TỬ CÂN GÀ VỊT">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-ga-vit-dien-tu.jpg" alt="CÂN ĐIỆN TỬ CÂN GÀ VỊT" itemprop="image">
+                <span itemprop="name">CÂN ĐIỆN TỬ CÂN GÀ VỊT</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: Liên Hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="7">
+    <meta itemprop="url" content="https://canachau.com/can-dien-tu-bpa121-4221.html">
+    <meta itemprop="name" content="CÂN ĐIỆN TỬ BPA121-4221">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-dien-tu-bpa121-4221.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-dien-tu-bpa121-4221.html" title="CÂN ĐIỆN TỬ BPA121-4221">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-dien-tu-bpa121-4221.jpg" alt="CÂN ĐIỆN TỬ BPA121-4221" itemprop="image">
+                <span itemprop="name">CÂN ĐIỆN TỬ BPA121-4221</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: Liên Hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="8">
+    <meta itemprop="url" content="https://canachau.com/can-dien-tu-vk20002.html">
+    <meta itemprop="name" content="CÂN ĐIỆN TỬ VK20002">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-vk.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-dien-tu-vk20002.html" title="CÂN ĐIỆN TỬ VK20002">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-vk.jpg" alt="CÂN ĐIỆN TỬ VK20002" itemprop="image">
+                <span itemprop="name">CÂN ĐIỆN TỬ VK20002</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: Liên Hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="9">
+    <meta itemprop="url" content="https://canachau.com/can-tinh-tien-kip-2.html">
+    <meta itemprop="name" content="CÂN TÍNH TIỀN KIP 2">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-tinh-tien-kip-2.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-tinh-tien-kip-2.html" title="CÂN TÍNH TIỀN KIP 2">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-tinh-tien-kip-2.jpg" alt="CÂN TÍNH TIỀN KIP 2" itemprop="image">
+                <span itemprop="name">CÂN TÍNH TIỀN KIP 2</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: Liên Hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="10">
+    <meta itemprop="url" content="https://canachau.com/can-dien-tu-wh-b20-nha-bep.html">
+    <meta itemprop="name" content="Cân Điện Tử WH-B20 Nhà Bếp">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-nha-bep-wh-b20.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-dien-tu-wh-b20-nha-bep.html" title="Cân Điện Tử WH-B20 Nhà Bếp">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-nha-bep-wh-b20.jpg" alt="Cân Điện Tử WH-B20 Nhà Bếp" itemprop="image">
+                <span itemprop="name">Cân Điện Tử WH-B20 Nhà Bếp</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: Liên Hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="11">
+    <meta itemprop="url" content="https://canachau.com/can-dien-tu-uwa-k.html">
+    <meta itemprop="name" content="CÂN ĐIỆN TỬ UWA-K">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-dien-tu-ute-uwa-k.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-dien-tu-uwa-k.html" title="CÂN ĐIỆN TỬ UWA-K">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-dien-tu-ute-uwa-k.jpg" alt="CÂN ĐIỆN TỬ UWA-K" itemprop="image">
+                <span itemprop="name">CÂN ĐIỆN TỬ UWA-K</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: liên hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="12">
+    <meta itemprop="url" content="https://canachau.com/can-phan-tich-fa2204.html">
+    <meta itemprop="name" content="CÂN PHÂN TÍCH FA2204">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-fa2204.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-phan-tich-fa2204.html" title="CÂN PHÂN TÍCH FA2204">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-fa2204.jpg" alt="CÂN PHÂN TÍCH FA2204" itemprop="image">
+                <span itemprop="name">CÂN PHÂN TÍCH FA2204</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: liên hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="13">
+    <meta itemprop="url" content="https://canachau.com/can-dong-vat.html">
+    <meta itemprop="name" content="CÂN ĐỘNG VẬT">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-dong-vat1.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-dong-vat.html" title="CÂN ĐỘNG VẬT">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-dong-vat1.jpg" alt="CÂN ĐỘNG VẬT" itemprop="image">
+                <span itemprop="name">CÂN ĐỘNG VẬT</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: liên hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="14">
+    <meta itemprop="url" content="https://canachau.com/can-ban-dien-tu-cas-db-ii-e.html">
+    <meta itemprop="name" content="CÂN BÀN ĐIỆN TỬ DB-II-E">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-ban-dien-tu-db-ii-e.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-ban-dien-tu-cas-db-ii-e.html" title="CÂN BÀN ĐIỆN TỬ DB-II-E">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-ban-dien-tu-db-ii-e.jpg" alt="CÂN BÀN ĐIỆN TỬ DB-II-E" itemprop="image">
+                <span itemprop="name">CÂN BÀN ĐIỆN TỬ DB-II-E</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: 12 Tháng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="15">
+    <meta itemprop="url" content="https://canachau.com/c143-can-ban-dien-tu-gia-re.html">
+    <meta itemprop="name" content="CÂN BÀN ĐIỆN TỬ GIÁ RẺ">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-ban-dien-tu-gia-re1.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/c143-can-ban-dien-tu-gia-re.html" title="CÂN BÀN ĐIỆN TỬ GIÁ RẺ">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-ban-dien-tu-gia-re1.jpg" alt="CÂN BÀN ĐIỆN TỬ GIÁ RẺ" itemprop="image">
+                <span itemprop="name">CÂN BÀN ĐIỆN TỬ GIÁ RẺ</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: 12 Tháng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="16">
+    <meta itemprop="url" content="https://canachau.com/can-dien-tu-sw-1a.html">
+    <meta itemprop="name" content="CÂN ĐIỆN TỬ SW-1A">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-dien-tu-sw-1a.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-dien-tu-sw-1a.html" title="CÂN ĐIỆN TỬ SW-1A">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-dien-tu-sw-1a.jpg" alt="CÂN ĐIỆN TỬ SW-1A" itemprop="image">
+                <span itemprop="name">CÂN ĐIỆN TỬ SW-1A</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: liên hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="17">
+    <meta itemprop="url" content="https://canachau.com/can-thuy-san-jwp.html">
+    <meta itemprop="name" content="CÂN THỦY SẢN JWP">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-thuy-san-jwp.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-thuy-san-jwp.html" title="CÂN THỦY SẢN JWP">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-thuy-san-jwp.jpg" alt="CÂN THỦY SẢN JWP" itemprop="image">
+                <span itemprop="name">CÂN THỦY SẢN JWP</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: 12 Tháng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="18">
+    <meta itemprop="url" content="https://canachau.com/can-treo-ocs-xz-aae-10-tan.html">
+    <meta itemprop="name" content="CÂN TREO OCS XZ AAE 10 TẤN">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-treo-dien-tu-ocs-10t1.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-treo-ocs-xz-aae-10-tan.html" title="CÂN TREO OCS XZ AAE 10 TẤN">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-treo-dien-tu-ocs-10t1.jpg" alt="CÂN TREO OCS XZ AAE 10 TẤN" itemprop="image">
+                <span itemprop="name">CÂN TREO OCS XZ AAE 10 TẤN</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: 12 Tháng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="19">
+    <meta itemprop="url" content="https://canachau.com/can-phan-tich-xb.html">
+    <meta itemprop="name" content="CÂN PHÂN TÍCH XB">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-phan-tich-xb.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-phan-tich-xb.html" title="CÂN PHÂN TÍCH XB">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-phan-tich-xb.jpg" alt="CÂN PHÂN TÍCH XB" itemprop="image">
+                <span itemprop="name">CÂN PHÂN TÍCH XB</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: 12 Tháng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="20">
+    <meta itemprop="url" content="https://canachau.com/can-dem-tps-ds.html">
+    <meta itemprop="name" content="CÂN ĐẾM TPS-DS">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-dem-tpsds.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-dem-tps-ds.html" title="CÂN ĐẾM TPS-DS">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-dem-tpsds.jpg" alt="CÂN ĐẾM TPS-DS" itemprop="image">
+                <span itemprop="name">CÂN ĐẾM TPS-DS</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: 12 Tháng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="21">
+    <meta itemprop="url" content="https://canachau.com/can-say-am-mx-50.html">
+    <meta itemprop="name" content="CÂN SẤY ẨM MX-50">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-say-am-mx-50.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-say-am-mx-50.html" title="CÂN SẤY ẨM MX-50">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-say-am-mx-50.jpg" alt="CÂN SẤY ẨM MX-50" itemprop="image">
+                <span itemprop="name">CÂN SẤY ẨM MX-50</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: liên hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="22">
+    <meta itemprop="url" content="https://canachau.com/can-ban-ghe-ngoi-xe-day.html">
+    <meta itemprop="name" content="CÂN BÀN GHẾ NGỒI XE ĐẨY">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-ghe-ngoi-xe-day.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-ban-ghe-ngoi-xe-day.html" title="CÂN BÀN GHẾ NGỒI XE ĐẨY">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-ghe-ngoi-xe-day.jpg" alt="CÂN BÀN GHẾ NGỒI XE ĐẨY" itemprop="image">
+                <span itemprop="name">CÂN BÀN GHẾ NGỒI XE ĐẨY</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: liên hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="23">
+    <meta itemprop="url" content="https://canachau.com/dau-can-ad-4329a.html">
+    <meta itemprop="name" content="ĐẦU CÂN AD-4329A">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/dau-can-ad-4329-a.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/dau-can-ad-4329a.html" title="ĐẦU CÂN AD-4329A">
+                <img src="https://canachau.com/public/uploads/product/thumbs/dau-can-ad-4329-a.jpg" alt="ĐẦU CÂN AD-4329A" itemprop="image">
+                <span itemprop="name">ĐẦU CÂN AD-4329A</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: 1 năm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 row-item">
+                    <div class="my-product-item-02" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <meta itemprop="position" content="24">
+    <meta itemprop="url" content="https://canachau.com/can-tinh-tien-upa-n.html">
+    <meta itemprop="name" content="CÂN TÍNH TIỀN UPA-N">
+    <meta itemprop="image" content="https://canachau.com/public/uploads/product/can-tinh-tien-upa-n.jpg">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <h2>
+            <a itemprop="url" href="https://canachau.com/can-tinh-tien-upa-n.html" title="CÂN TÍNH TIỀN UPA-N">
+                <img src="https://canachau.com/public/uploads/product/thumbs/can-tinh-tien-upa-n.jpg" alt="CÂN TÍNH TIỀN UPA-N" itemprop="image">
+                <span itemprop="name">CÂN TÍNH TIỀN UPA-N</span>
+            </a>
+        </h2>
+                <ul class="list-info">
+                        <li>
+                Bảo hành: liên hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giá: liên hệ
+            </li>
+        </ul>
+    </div>
+</div>
+                        </div>
+                                    </div>
+        </div>
+    </div>
+                    </div>
+        <div class="col-md-3 col-sm-4 hidden-xs">
+            <div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="/danh-muc-can-dien-tu.html" title="Danh mục cân điện tử">DANH MỤC CÂN ĐIỆN TỬ</a>
+    </div>
+    <div class="panel-body">
+        <ul class="content-nav">
+                            <li>
+                    <h4><a href="/can-phan-tich.html" title="Cân Phân Tích - Cân Điện Tử Á Châu">
+                        <span>CÂN PHÂN TÍCH</span>
+                    </a></h4>
+                    <ul>                                    <li><h5>
+                                        <a href="/can-phan-tich-1-so-le.html" title="Cân Phân Tích 1 Số Lẻ - Cân Điện Tử Á Châu">
+                                            <span>Cân Phân Tích 1 Số Lẻ</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-phan-tich-2-so-le.html" title="Cân Phân Tích 2 Số Lẻ - Cân Điện Tử Á Châu">
+                                            <span>Cân Phân Tích 2 Số Lẻ</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-phan-tich-3-so-le.html" title="Cân Phân Tích 3 Số Lẻ - Cân Điện Tử Á Châu">
+                                            <span>Cân Phân Tích 3 Số Lẻ</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-phan-tich-4-so-le.html" title="Cân Phân Tích 4 Số Lẻ - Cân Điện Tử Á Châu">
+                                            <span>Cân Phân Tích 4 Số Lẻ</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-mu-cao-su.html" title="Cân Mủ Cao Su - Cân Điện Tử Á Châu">
+                                            <span>Cân Mủ Cao Su</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-mau-vai.html" title="CÂN MẪU VẢI">
+                                            <span>CÂN MẪU VẢI</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-say-am.html" title="CÂN SẤY ẨM">
+                                            <span>CÂN SẤY ẨM</span>
+                                        </a>
+                                    </h5></li>
+                                </ul>                </li>
+                                    <li>
+                    <h4><a href="/can-ban-dien-tu.html" title="CÂN BÀN ĐIỆN TỬ - CÂN ĐIỆN TỬ Á CHÂU">
+                        <span>CÂN BÀN ĐIỆN TỬ</span>
+                    </a></h4>
+                    <ul>                                    <li><h5>
+                                        <a href="/can-ban-dien-tu-30kg.html" title="Cân Bàn Điện Tử 30Kg">
+                                            <span>Cân Bàn Điện Tử 30Kg</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-ban-dien-tu-60kg.html" title="Cân Bàn Điện Tử 60Kg">
+                                            <span>Cân Bàn Điện Tử 60Kg</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-ban-dien-tu-100kg.html" title="Cân Bàn Điện Tử 100Kg">
+                                            <span>Cân Bàn Điện Tử 100Kg</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-ban-dien-tu-150kg.html" title="Cân Bàn Điện Tử 150Kg">
+                                            <span>Cân Bàn Điện Tử 150Kg</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-ban-dien-tu-200kg.html" title="Cân Bàn Điện Tử 200Kg">
+                                            <span>Cân Bàn Điện Tử 200Kg</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-ban-dien-tu-300kg.html" title="Cân Bàn Điện Tử 300Kg">
+                                            <span>Cân Bàn Điện Tử 300Kg</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-ban-dien-tu-500kg.html" title="Cân Bàn Điện Tử 500Kg">
+                                            <span>Cân Bàn Điện Tử 500Kg</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-ban-co-500kg.html" title="Cân Bàn Cơ 500Kg">
+                                            <span>Cân Bàn Cơ 500Kg</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-ban-co-may-in.html" title="Cân Bàn Có Máy In">
+                                            <span>Cân Bàn Có Máy In</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-ban-inox.html" title="Cân Bàn Inox">
+                                            <span>Cân Bàn Inox</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-ghe-ngoi.html" title="Cân Ghế Ngồi">
+                                            <span>Cân Ghế Ngồi</span>
+                                        </a>
+                                    </h5></li>
+                                </ul>                </li>
+                                    <li>
+                    <h4><a href="/can-treo-dien-tu.html" title="CÂN TREO ĐIỆN TỬ - CÂN Á CHÂU">
+                        <span>CÂN TREO ĐIỆN TỬ</span>
+                    </a></h4>
+                                    </li>
+                                    <li>
+                    <h4><a href="/can-san-dien-tu.html" title="Cân Sàn Điện Tử - Cân Điện Tử Á Châu">
+                        <span>CÂN SÀN ĐIỆN TỬ</span>
+                    </a></h4>
+                    <ul>                                    <li><h5>
+                                        <a href="/can-san-dien-tu-500kg.html" title="Cân Sàn Điện Tử 500kg">
+                                            <span>Cân Sàn Điện Tử 500kg</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-san-dien-tu-1-tan.html" title="Cân Sàn Điện Tử 1 Tấn">
+                                            <span>Cân Sàn Điện Tử 1 Tấn</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-san-dien-tu-2-tan.html" title="Cân Sàn Điện Tử 2 Tấn">
+                                            <span>Cân Sàn Điện Tử 2 Tấn</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-san-dien-tu-3-tan.html" title="Cân Sàn Điện Tử 3 Tấn">
+                                            <span>Cân Sàn Điện Tử 3 Tấn</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-san-dien-tu-5-tan.html" title="Cân Sàn Điện Tử 5 Tấn">
+                                            <span>Cân Sàn Điện Tử 5 Tấn</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-san-dien-tu-10-tan.html" title="Cân Sàn Điện Tử 10 Tấn">
+                                            <span>Cân Sàn Điện Tử 10 Tấn</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-san-co-may-in.html" title="Cân Sàn Có Máy In">
+                                            <span>Cân Sàn Có Máy In</span>
+                                        </a>
+                                    </h5></li>
+                                </ul>                </li>
+                                    <li>
+                    <h4><a href="/can-dem-dien-tu.html" title="CÂN ĐẾM ĐIỆN TỬ - CÂN ĐIỆN TỬ Á CHÂU">
+                        <span>CÂN ĐẾM ĐIỆN TỬ</span>
+                    </a></h4>
+                                    </li>
+                                    <li>
+                    <h4><a href="/can-dien-tu-thuy-san.html" title="CÂN ĐIỆN TỬ THỦY SẢN - CÂN ĐIỆN TỬ Á CHÂU">
+                        <span>CÂN ĐIỆN TỬ THỦY SẢN</span>
+                    </a></h4>
+                                    </li>
+                                    <li>
+                    <h4><a href="/can-dien-tu-nong-san.html" title="Cân Điện tử Nông Sản - Cân Điện Tử Á Châu">
+                        <span>CÂN ĐIỆN TỬ NÔNG SẢN</span>
+                    </a></h4>
+                                    </li>
+                                    <li>
+                    <h4><a href="/can-dien-tu-thong-dung.html" title="CÂN ĐIỆN TỬ THÔNG DỤNG - CÂN ĐIỆN TỬ Á CHÂU">
+                        <span>CÂN ĐIỆN TỬ THÔNG DỤNG</span>
+                    </a></h4>
+                    <ul>                                    <li><h5>
+                                        <a href="/can-3kg.html" title="CÂN 3KG">
+                                            <span>CÂN 3KG</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-6kg.html" title="CÂN 6KG">
+                                            <span>CÂN 6KG</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-15kg.html" title="Cân 15Kg">
+                                            <span>CÂN 15KG</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/can-30kg.html" title="Cân 30Kg">
+                                            <span>CÂN 30KG</span>
+                                        </a>
+                                    </h5></li>
+                                </ul>                </li>
+                                    <li>
+                    <h4><a href="/can-dien-tu-nha-bep.html" title="CÂN ĐIỆN TỬ NHÀ BẾP - CÂN ĐIỆN TỬ Á CHÂU">
+                        <span>CÂN ĐIỆN TỬ NHÀ BẾP</span>
+                    </a></h4>
+                                    </li>
+                                    <li>
+                    <h4><a href="/can-tinh-tien.html" title="Cân Tính Tiền - Cân Điện Tử Á Châu">
+                        <span>CÂN TÍNH TIỀN</span>
+                    </a></h4>
+                                    </li>
+                                    <li>
+                    <h4><a href="/can-tinh-gia-sieu-thi.html" title="CÂN TÍNH GIÁ - SIÊU THỊ">
+                        <span>CÂN TÍNH GIÁ - SIÊU THỊ</span>
+                    </a></h4>
+                                    </li>
+                                    <li>
+                    <h4><a href="/can-dien-tu-mini.html" title="CÂN ĐIỆN TỬ MINI">
+                        <span>CÂN ĐIỆN TỬ MINI</span>
+                    </a></h4>
+                                    </li>
+                                    <li>
+                    <h4><a href="/can-dien-tu-xe-nang.html" title="CÂN ĐIỆN TỬ XE NÂNG">
+                        <span>CÂN ĐIỆN TỬ XE NÂNG</span>
+                    </a></h4>
+                                    </li>
+                                    <li>
+                    <h4><a href="/can-gia-suc-can-dong-vat.html" title="CÂN GIA SÚC - CÂN ĐỘNG VẬT">
+                        <span>CÂN GIA SÚC - CÂN ĐỘNG VẬT</span>
+                    </a></h4>
+                                    </li>
+                                    <li>
+                    <h4><a href="/can-xe-tai-can-oto.html" title="CÂN XE TẢI - CÂN ÔTÔ">
+                        <span>CÂN XE TẢI - CÂN ÔTÔ</span>
+                    </a></h4>
+                                    </li>
+                                    <li>
+                    <h4><a href="/can-dien-tu-gia-re.html" title="CÂN ĐIỆN TỬ GIÁ RẺ - CÂN ĐIỆN TỬ Á CHÂU">
+                        <span>CÂN ĐIỆN TỬ GIÁ RẺ</span>
+                    </a></h4>
+                                    </li>
+                                    <li>
+                    <h4><a href="/can-dien-tu.html" title="CÂN ĐIỆN TỬ TẠI CÂN Á CHÂU">
+                        <span>CÂN ĐIỆN TỬ</span>
+                    </a></h4>
+                                    </li>
+                            </ul>
+    </div>
+</div>
+        <div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="/thiet-bi-can-dien-tu.html" title="Thiết bị cân điện tử">THIẾT BỊ CÂN ĐIỆN TỬ</a>
+    </div>
+    <div class="panel-body">
+        <ul class="content-nav">
+                            <li>
+                    <h4><a href="/dau-can-dien-tu.html" title="ĐẦU CÂN ĐIỆN TỬ">
+                        <span>ĐẦU CÂN ĐIỆN TỬ</span>
+                    </a></h4>
+                                    </li>
+                                    <li>
+                    <h4><a href="/loadcell-can-dien-tu.html" title="LOADCELL - CẢM ỨNG LỰC">
+                        <span>LOADCELL - CẢM ỨNG LỰC</span>
+                    </a></h4>
+                    <ul>                                    <li><h5>
+                                        <a href="/loadcell-vmc.html" title="LOADCELL VMC">
+                                            <span>LOADCELL VMC</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/loadcell-ute.html" title="Loadcell UTE">
+                                            <span>LOADCELL UTE</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/loadcell-cas.html" title="LOADCELL CAS">
+                                            <span>LOADCELL CAS</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/loadcell-mettler-toledo.html" title="LOADCELL METTLER TOLEDO">
+                                            <span>LOADCELL METTLER TOLEDO</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/loadcell-amcells.html" title="loadcell-amcells">
+                                            <span>LOADCELL AMCELLS</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/loadcell-mavin.html" title="LOADCELL MAVIN">
+                                            <span>LOADCELL MAVIN</span>
+                                        </a>
+                                    </h5></li>
+                                </ul>                </li>
+                                    <li>
+                    <h4><a href="/qua-can.html" title="QUẢ CÂN - CÂN ĐIỆN TỬ Á CHÂU">
+                        <span>QUẢ CÂN</span>
+                    </a></h4>
+                    <ul>                                    <li><h5>
+                                        <a href="/qua-can-m.html" title="QUẢ CÂN M">
+                                            <span>QUẢ CÂN M</span>
+                                        </a>
+                                    </h5></li>
+                                                                    <li><h5>
+                                        <a href="/qua-can-f1.html" title="QUẢ CÂN F1">
+                                            <span>QUẢ CÂN F1</span>
+                                        </a>
+                                    </h5></li>
+                                </ul>                </li>
+                            </ul>
+    </div>
+</div>
+        <div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="/sua-chua-can-dien-tu.html" title="SỬA CHỮA CÂN ĐIỆN TỬ">SỬA CHỮA CÂN ĐIỆN TỬ</a>
+    </div>
+    <div class="panel-body">
+        <ul class="content-nav">
+                    </ul>
+    </div>
+</div>
+        <div class="panel panel-default">
+    <div class="panel-heading">
+        <b>Bạn mua cân điện tử hãng nào?</b>
+    </div>
+    <div class="panel-body">
+        <div class="mini-row list-manufacturers">
+                        <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-a-chau.html" title="Cân Á Châu">
+                    <img src="/public/uploads/manufacturers/canachau-1.png" alt="Cân Á Châu">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-mk-cells.html" title="MK CELLS">
+                    <img src="/public/uploads/manufacturers/mk-cells.jpg" alt="MK CELLS">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-mavin.html" title="Mavin">
+                    <img src="/public/uploads/manufacturers/mavin1.png" alt="Mavin">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-vishay.html" title="Vishay">
+                    <img src="/public/uploads/manufacturers/vishay2.png" alt="Vishay">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-furi.html" title="Furi">
+                    <img src="/public/uploads/manufacturers/furi.png" alt="Furi">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-shimadzu.html" title="Shimadzu">
+                    <img src="/public/uploads/manufacturers/shimadzu1.png" alt="Shimadzu">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-koli.html" title="KELI">
+                    <img src="/public/uploads/manufacturers/koli1.png" alt="KELI">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-ute.html" title="UTE">
+                    <img src="/public/uploads/manufacturers/ute.gif" alt="UTE">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-mettler-toledo.html" title="Mettler toledo">
+                    <img src="/public/uploads/manufacturers/metteler-toledo.gif" alt="Mettler toledo">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-yaohua.html" title="Yaohua">
+                    <img src="/public/uploads/manufacturers/yaohua1.gif" alt="Yaohua">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-rinstrum.html" title="Rinstrum">
+                    <img src="/public/uploads/manufacturers/rinstrum1.gif" alt="Rinstrum">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-vmc.html" title="VMC">
+                    <img src="/public/uploads/manufacturers/vmc1.gif" alt="VMC">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-tanita.html" title="Tanita">
+                    <img src="/public/uploads/manufacturers/tanita1.gif" alt="Tanita">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-ohaus.html" title="Ohaus">
+                    <img src="/public/uploads/manufacturers/ohaus1.gif" alt="Ohaus">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-digi.html" title="DIGI">
+                    <img src="/public/uploads/manufacturers/digi1.gif" alt="DIGI">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-and.html" title="Cân điện tử And">
+                    <img src="/public/uploads/manufacturers/and1.gif" alt="Cân điện tử And">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-amcells.html" title="Cân điện tử Amcells">
+                    <img src="/public/uploads/manufacturers/amcells1.gif" alt="Cân điện tử Amcells">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-cas.html" title="CAS">
+                    <img src="/public/uploads/manufacturers/cas1.gif" alt="CAS">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-jadever.html" title="Jadever">
+                    <img src="/public/uploads/manufacturers/jadever1.gif" alt="Jadever">
+                </a></h6>
+            </div>
+                                <div class="col-xs-6">
+                <h6><a href="/can-dien-tu-vibra-shinko-denshi.html" title="Vibra">
+                    <img src="/public/uploads/manufacturers/vibra.gif" alt="Vibra">
+                </a></h6>
+            </div>
+                            </div>
+    </div>
+</div><div class="panel panel-default">
+    <div class="panel-heading">
+        <b>Sản phẩm mới</b>
+    </div>
+    <div class="panel-body">
+        <div class="vert simply-scroll-container"><div class="simply-scroll-clip"><div class="simply-scroll-list" style="height: 4730px;"><ul class="list-product-scroll simply-scroll-list" style="height: 2365px;">
+                                    <li><h4><a href="/can-ky-thuat-dj-323.html" title="CÂN KỸ THUẬT DJ-323">
+                            <img src="/public/uploads/product/thumbs/can-phan-tich-dj-323.jpg" alt="CÂN KỸ THUẬT DJ-323" height="185.83333333333331">
+                            <span>CÂN KỸ THUẬT DJ-323</span>
+                        </a></h4>
+                            <b>Bảo hành: 12 Tháng</b>
+                        </li>
+                                            <li><h4><a href="/can-ban-dien-tu-laumas-w100.html" title="Cân Bàn Điện Tử Laumas W100">
+                            <img src="/public/uploads/product/thumbs/can-ban-dien-tu-laumas-w100.jpg" alt="Cân Bàn Điện Tử Laumas W100" height="185.83333333333331">
+                            <span>Cân Bàn Điện Tử Laumas W100</span>
+                        </a></h4>
+                            <b>Bảo hành: 12 Tháng</b>
+                        </li>
+                                            <li><h4><a href="/can-diem-bot-mi-kona21.html" title="Cân Điểm Bột Mì KONA21">
+                            <img src="/public/uploads/product/thumbs/Candodiembotmiphantichhamluongbotmi.jpg" alt="Cân Điểm Bột Mì KONA21" height="185.83333333333331">
+                            <span>Cân Điểm Bột Mì KONA21</span>
+                        </a></h4>
+                            <b>Bảo hành: 12 Tháng</b>
+                        </li>
+                                            <li><h4><a href="/can-ban-mtcel-t9.html" title="Cân Bàn Mtcell T9">
+                            <img src="/public/uploads/product/thumbs/can-ban-mtcell-t9.jpg" alt="Cân Bàn Mtcell T9" height="185.83333333333331">
+                            <span>Cân Bàn Mtcell T9</span>
+                        </a></h4>
+                            <b>Bảo hành: Liên Hệ</b>
+                        </li>
+                                            <li><h4><a href="/can-ban-dien-tu-cas-db-ii-e.html" title="CÂN BÀN ĐIỆN TỬ DB-II-E">
+                            <img src="/public/uploads/product/thumbs/can-ban-dien-tu-db-ii-e.jpg" alt="CÂN BÀN ĐIỆN TỬ DB-II-E" height="185.83333333333331">
+                            <span>CÂN BÀN ĐIỆN TỬ DB-II-E</span>
+                        </a></h4>
+                            <b>Bảo hành: 12 Tháng</b>
+                        </li>
+                                            <li><h4><a href="/c143-can-ban-dien-tu-gia-re.html" title="CÂN BÀN ĐIỆN TỬ GIÁ RẺ">
+                            <img src="/public/uploads/product/thumbs/can-ban-dien-tu-gia-re1.jpg" alt="CÂN BÀN ĐIỆN TỬ GIÁ RẺ" height="185.83333333333331">
+                            <span>CÂN BÀN ĐIỆN TỬ GIÁ RẺ</span>
+                        </a></h4>
+                            <b>Bảo hành: 12 Tháng</b>
+                        </li>
+                                            <li><h4><a href="/can-dien-tu-sw-1a.html" title="CÂN ĐIỆN TỬ SW-1A">
+                            <img src="/public/uploads/product/thumbs/can-dien-tu-sw-1a.jpg" alt="CÂN ĐIỆN TỬ SW-1A" height="185.83333333333331">
+                            <span>CÂN ĐIỆN TỬ SW-1A</span>
+                        </a></h4>
+                            <b>Bảo hành: liên hệ</b>
+                        </li>
+                                            <li><h4><a href="/can-thuy-san-jwp.html" title="CÂN THỦY SẢN JWP">
+                            <img src="/public/uploads/product/thumbs/can-thuy-san-jwp.jpg" alt="CÂN THỦY SẢN JWP" height="185.83333333333331">
+                            <span>CÂN THỦY SẢN JWP</span>
+                        </a></h4>
+                            <b>Bảo hành: 12 Tháng</b>
+                        </li>
+                                            <li><h4><a href="/can-treo-ocs-xz-aae-10-tan.html" title="CÂN TREO OCS XZ AAE 10 TẤN">
+                            <img src="/public/uploads/product/thumbs/can-treo-dien-tu-ocs-10t1.jpg" alt="CÂN TREO OCS XZ AAE 10 TẤN" height="185.83333333333331">
+                            <span>CÂN TREO OCS XZ AAE 10 TẤN</span>
+                        </a></h4>
+                            <b>Bảo hành: 12 Tháng</b>
+                        </li>
+                            </ul><ul class="list-product-scroll simply-scroll-list" style="height: 2365px;">
+                                    <li><h4><a href="/can-ky-thuat-dj-323.html" title="CÂN KỸ THUẬT DJ-323">
+                            <img src="/public/uploads/product/thumbs/can-phan-tich-dj-323.jpg" alt="CÂN KỸ THUẬT DJ-323" height="185.83333333333331">
+                            <span>CÂN KỸ THUẬT DJ-323</span>
+                        </a></h4>
+                            <b>Bảo hành: 12 Tháng</b>
+                        </li>
+                                            <li><h4><a href="/can-ban-dien-tu-laumas-w100.html" title="Cân Bàn Điện Tử Laumas W100">
+                            <img src="/public/uploads/product/thumbs/can-ban-dien-tu-laumas-w100.jpg" alt="Cân Bàn Điện Tử Laumas W100" height="185.83333333333331">
+                            <span>Cân Bàn Điện Tử Laumas W100</span>
+                        </a></h4>
+                            <b>Bảo hành: 12 Tháng</b>
+                        </li>
+                                            <li><h4><a href="/can-diem-bot-mi-kona21.html" title="Cân Điểm Bột Mì KONA21">
+                            <img src="/public/uploads/product/thumbs/Candodiembotmiphantichhamluongbotmi.jpg" alt="Cân Điểm Bột Mì KONA21" height="185.83333333333331">
+                            <span>Cân Điểm Bột Mì KONA21</span>
+                        </a></h4>
+                            <b>Bảo hành: 12 Tháng</b>
+                        </li>
+                                            <li><h4><a href="/can-ban-mtcel-t9.html" title="Cân Bàn Mtcell T9">
+                            <img src="/public/uploads/product/thumbs/can-ban-mtcell-t9.jpg" alt="Cân Bàn Mtcell T9" height="185.83333333333331">
+                            <span>Cân Bàn Mtcell T9</span>
+                        </a></h4>
+                            <b>Bảo hành: Liên Hệ</b>
+                        </li>
+                                            <li><h4><a href="/can-ban-dien-tu-cas-db-ii-e.html" title="CÂN BÀN ĐIỆN TỬ DB-II-E">
+                            <img src="/public/uploads/product/thumbs/can-ban-dien-tu-db-ii-e.jpg" alt="CÂN BÀN ĐIỆN TỬ DB-II-E" height="185.83333333333331">
+                            <span>CÂN BÀN ĐIỆN TỬ DB-II-E</span>
+                        </a></h4>
+                            <b>Bảo hành: 12 Tháng</b>
+                        </li>
+                                            <li><h4><a href="/c143-can-ban-dien-tu-gia-re.html" title="CÂN BÀN ĐIỆN TỬ GIÁ RẺ">
+                            <img src="/public/uploads/product/thumbs/can-ban-dien-tu-gia-re1.jpg" alt="CÂN BÀN ĐIỆN TỬ GIÁ RẺ" height="185.83333333333331">
+                            <span>CÂN BÀN ĐIỆN TỬ GIÁ RẺ</span>
+                        </a></h4>
+                            <b>Bảo hành: 12 Tháng</b>
+                        </li>
+                                            <li><h4><a href="/can-dien-tu-sw-1a.html" title="CÂN ĐIỆN TỬ SW-1A">
+                            <img src="/public/uploads/product/thumbs/can-dien-tu-sw-1a.jpg" alt="CÂN ĐIỆN TỬ SW-1A" height="185.83333333333331">
+                            <span>CÂN ĐIỆN TỬ SW-1A</span>
+                        </a></h4>
+                            <b>Bảo hành: liên hệ</b>
+                        </li>
+                                            <li><h4><a href="/can-thuy-san-jwp.html" title="CÂN THỦY SẢN JWP">
+                            <img src="/public/uploads/product/thumbs/can-thuy-san-jwp.jpg" alt="CÂN THỦY SẢN JWP" height="185.83333333333331">
+                            <span>CÂN THỦY SẢN JWP</span>
+                        </a></h4>
+                            <b>Bảo hành: 12 Tháng</b>
+                        </li>
+                                            <li><h4><a href="/can-treo-ocs-xz-aae-10-tan.html" title="CÂN TREO OCS XZ AAE 10 TẤN">
+                            <img src="/public/uploads/product/thumbs/can-treo-dien-tu-ocs-10t1.jpg" alt="CÂN TREO OCS XZ AAE 10 TẤN" height="185.83333333333331">
+                            <span>CÂN TREO OCS XZ AAE 10 TẤN</span>
+                        </a></h4>
+                            <b>Bảo hành: 12 Tháng</b>
+                        </li>
+                            </ul></div></div></div>
+    </div>
+</div><div class="panel panel-default">
+    <div class="panel-heading">
+        <b>Tin tức chia sẻ</b>
+    </div>
+    <div class="panel-body">
+        
+        <ul class="content-nav">
+                            <li>
+                    <a href="/can-dien-tu-tai-binh-thanh.html" title="">
+                        <span>Cân Điện Tử Tại Bình Thạnh</span>
+                    </a>
+                </li>
+                                    <li>
+                    <a href="/can-dien-tu-tai-thu-duc.html" title="">
+                        <span>Cân Điện Tử Tại Thủ Đức</span>
+                    </a>
+                </li>
+                                    <li>
+                    <a href="/noi-ban-can-treo-dien-tu-chinh-hang-gia-re-tai-sai-gon.html" title="">
+                        <span>Nơi Bán Cân Treo Điện Tử Chính Hãng Giá Rẻ Tại Sài Gòn</span>
+                    </a>
+                </li>
+                                    <li>
+                    <a href="/can-tinh-tien-sieu-thi.html" title="">
+                        <span>Cân Tính Tiền Siêu Thị</span>
+                    </a>
+                </li>
+                                    <li>
+                    <a href="/can-dien-tu-tai-binh-dinh.html" title="">
+                        <span>Cân Điện Tử Tại Bình Định</span>
+                    </a>
+                </li>
+                                    <li>
+                    <a href="/can-dien-tu-tai-soc-trang.html" title="">
+                        <span>Cân Điện Tử Tại Sóc Trăng</span>
+                    </a>
+                </li>
+                                    <li>
+                    <a href="/can-dien-tu-tai-ho-chi-minh.html" title="">
+                        <span>Cân Điện Tử Tại Hồ Chí Minh</span>
+                    </a>
+                </li>
+                            </ul>
+    </div>
+</div><div class="panel panel-default">
+    <div class="panel-heading">
+        <b>Thống kê truy cập</b>
+    </div>
+    <div class="panel-body">
+        <div class="statistics-item">
+            <div class="item">
+                <span>
+                    <i class="fa fa-users"></i>
+                    Đang online:
+                </span>
+                <b>5</b>
+            </div>
+            <div class="item">
+                <span>
+                    <i class="fa fa-line-chart"></i>
+                    Tổng truy cập:
+                </span>
+                <b>1,314,625</b>
+            </div>
+        </div>
+    </div>
+</div>        </div>
+    </div>
+</div>
+<div class="footer-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-xs-12">
+                <div class="footer-title">
+                    Công ty TNHH Cân Điện Tử Á Châu                </div>
+                <div class="footer-content footer_about">
+                    <p><span style="font-size:16px"><span style="color:#000080"><strong>&nbsp; &nbsp;CÔNG TY TNHH CÂN ĐIỆN TỬ Á CHÂU</strong></span></span></p>
+
+<p><span style="color:#0000cd"><img alt="" src="/public/uploads/images/dich-vu-thay-doi-dia-chi-cong-ty-tai-binh-duong.png" style="height:20px; width:30px">&nbsp; &nbsp;Địa chỉ:&nbsp;15/37/7 Đường Số 6, P.Hiệp Bình Phước, Q.Thủ Đức, HCM<br>
+<img alt="" src="/public/uploads/images/gmail-logo.jpg" style="height:16px; width:40px">Email: candientuachau@gmail.com<br>
+<img alt="" src="/public/uploads/images/3607653unnamed.png" style="height:15px; width:15px">&nbsp; &nbsp; &nbsp; ĐT: 0916 902 912 - 0944 902.912&nbsp;- 0935 960 068<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Giờ làm việc: 8h - 17h từ Thứ 2 đến Thứ 7<br>
+<img alt="" src="/public/uploads/images/biagiayphepkinhdoanh_JDUD.jpg" style="height:15px; width:20px">&nbsp;&nbsp; &nbsp; GPĐKKD số 0313729390 Sở KHĐT TP.HCM cấp.</span></p>                </div>
+                <div class="footer-title">
+                    Theo dõi chúng tôi qua
+                </div>
+                <div class="list-social">
+                    <a href="https://www.facebook.com/candientuachau/" target="_blank" class="facebook" title="facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/candientuachau" target="_blank" class="twitter" title="twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://plus.google.com/u/0/" target="_blank" title="google">
+                        <i class="fa fa-google-plus"></i>
+              
+                
+                </a></div><a href="https://plus.google.com/u/0/" target="_blank" title="google">
+            </a></div><a href="https://plus.google.com/u/0/" target="_blank" title="google">
+            </a><div class="col-sm-8 col-xs-12"><a href="https://plus.google.com/u/0/" target="_blank" title="google">
+                </a><div class="row"><a href="https://plus.google.com/u/0/" target="_blank" title="google">
+                    </a><div class="col-sm-4 col-xs-12"><a href="https://plus.google.com/u/0/" target="_blank" title="google">
+                        <div class="footer-title">
+                            Chính sách
+                        </div>
+                        </a><div class="footer-content"><a href="https://plus.google.com/u/0/" target="_blank" title="google">
+                            </a><div class="footer-list-content"><a href="https://plus.google.com/u/0/" target="_blank" title="google">
+                                                                </a><a href="/can-dien-tu-a-chau-kinh-chao-quy-khach.html" title="Cân Điện Tử Á Châu Kính Chào Quý Khách!">
+                                    <i class="fa fa-angle-right"></i> Cân Điện Tử Á Châu Kính Chào Quý Khách!                                </a>
+                                                                        <a href="/giao-hang-tan-noi-khi-quy-khach-hang-mua-va-dat-hang.html" title="Giao hàng tận nơi khi quý khách hàng mua và đặt hàng">
+                                    <i class="fa fa-angle-right"></i> Giao hàng tận nơi khi quý khách hàng mua và đặt hàng                                </a>
+                                                                    </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8 col-xs-12">
+                        <iframe frameborder="0" height="295" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.7519475679733!2d106.6992743143371!3d10.830285261159867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175288adeca5f0f%3A0xc532929c19c39f9f!2zQ8OCTiDEkEnhu4ZOIFThu6wgw4EgQ0jDglU!5e0!3m2!1svi!2s!4v1462269186173" style="border:0;width:100%" width="100%"></iframe>
+<center><a href="http://bamba.vn/" title="Thiết kế web &amp; SEO">
+                                                        Thiết kế web &amp; SEO: www.bamba.vn </a>
+lap dat <a href="http://congtudong24h.com/" title="cong tu dong" target="_blank">cong tu dong</a> |
+Thi cong <a href="http://canhquansanvuonviet.com/dich-vu/thiet-ke-thi-cong-ho-ca-koi/" title="thiet ke ho ca koi" target="_blank">thiet ke ho ca koi</a> |
+Thi cong <a href="http://kientrucsanvuonxanh.com/" title="thi cong san vuon" target="_blank">thi cong san vuon</a> |
+<a href="http://cuacongtudong.vn/" title="cua cong tu dong" target="_blank">cua cong tu dong</a> |
+
+                    </center></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-call-wrapper">
+    <div class="container">
+        <div class="item">
+            <b>
+                CALL: <a href="tel:0944902912">0944.902.912</a> - <a href="tel:0916902912">0916.902.912</a>
+            </b>
+        </div>
+    </div>
+</div>    
+</body></html>

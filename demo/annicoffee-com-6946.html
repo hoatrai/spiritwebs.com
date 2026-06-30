@@ -1,0 +1,1545 @@
+<!DOCTYPE html><html itemscope="" itemtype="http://schema.org/WebSite" style="" class="supports multiplebgs no-touchevents backdropfilter cssreflections"><head><style type="text/css">.swal-icon--error{border-color:#f27474;-webkit-animation:animateErrorIcon .5s;animation:animateErrorIcon .5s}.swal-icon--error__x-mark{position:relative;display:block;-webkit-animation:animateXMark .5s;animation:animateXMark .5s}.swal-icon--error__line{position:absolute;height:5px;width:47px;background-color:#f27474;display:block;top:37px;border-radius:2px}.swal-icon--error__line--left{-webkit-transform:rotate(45deg);transform:rotate(45deg);left:17px}.swal-icon--error__line--right{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);right:16px}@-webkit-keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@-webkit-keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}@keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}.swal-icon--warning{border-color:#f8bb86;-webkit-animation:pulseWarning .75s infinite alternate;animation:pulseWarning .75s infinite alternate}.swal-icon--warning__body{width:5px;height:47px;top:10px;border-radius:2px;margin-left:-2px}.swal-icon--warning__body,.swal-icon--warning__dot{position:absolute;left:50%;background-color:#f8bb86}.swal-icon--warning__dot{width:7px;height:7px;border-radius:50%;margin-left:-4px;bottom:-11px}@-webkit-keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}@keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}.swal-icon--success{border-color:#a5dc86}.swal-icon--success:after,.swal-icon--success:before{content:"";border-radius:50%;position:absolute;width:60px;height:120px;background:#fff;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal-icon--success:before{border-radius:120px 0 0 120px;top:-7px;left:-33px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:60px 60px;transform-origin:60px 60px}.swal-icon--success:after{border-radius:0 120px 120px 0;top:-11px;left:30px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 60px;transform-origin:0 60px;-webkit-animation:rotatePlaceholder 4.25s ease-in;animation:rotatePlaceholder 4.25s ease-in}.swal-icon--success__ring{width:80px;height:80px;border:4px solid hsla(98,55%,69%,.2);border-radius:50%;box-sizing:content-box;position:absolute;left:-4px;top:-4px;z-index:2}.swal-icon--success__hide-corners{width:5px;height:90px;background-color:#fff;padding:1px;position:absolute;left:28px;top:8px;z-index:1;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal-icon--success__line{height:5px;background-color:#a5dc86;display:block;border-radius:2px;position:absolute;z-index:2}.swal-icon--success__line--tip{width:25px;left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-animation:animateSuccessTip .75s;animation:animateSuccessTip .75s}.swal-icon--success__line--long{width:47px;right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-animation:animateSuccessLong .75s;animation:animateSuccessLong .75s}@-webkit-keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@-webkit-keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}@keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}.swal-icon--info{border-color:#c9dae1}.swal-icon--info:before{width:5px;height:29px;bottom:17px;border-radius:2px;margin-left:-2px}.swal-icon--info:after,.swal-icon--info:before{content:"";position:absolute;left:50%;background-color:#c9dae1}.swal-icon--info:after{width:7px;height:7px;border-radius:50%;margin-left:-3px;top:19px}.swal-icon{width:80px;height:80px;border-width:4px;border-style:solid;border-radius:50%;padding:0;position:relative;box-sizing:content-box;margin:20px auto}.swal-icon:first-child{margin-top:32px}.swal-icon--custom{width:auto;height:auto;max-width:100%;border:none;border-radius:0}.swal-icon img{max-width:100%;max-height:100%}.swal-title{color:rgba(0,0,0,.65);font-weight:600;text-transform:none;position:relative;display:block;padding:13px 16px;font-size:27px;line-height:normal;text-align:center;margin-bottom:0}.swal-title:first-child{margin-top:26px}.swal-title:not(:first-child){padding-bottom:0}.swal-title:not(:last-child){margin-bottom:13px}.swal-text{font-size:16px;position:relative;float:none;line-height:normal;vertical-align:top;text-align:left;display:inline-block;margin:0;padding:0 10px;font-weight:400;color:rgba(0,0,0,.64);max-width:calc(100% - 20px);overflow-wrap:break-word;box-sizing:border-box}.swal-text:first-child{margin-top:45px}.swal-text:last-child{margin-bottom:45px}.swal-footer{text-align:right;padding-top:13px;margin-top:13px;padding:13px 16px;border-radius:inherit;border-top-left-radius:0;border-top-right-radius:0}.swal-button-container{margin:5px;display:inline-block;position:relative}.swal-button{background-color:#7cd1f9;color:#fff;border:none;box-shadow:none;border-radius:5px;font-weight:600;font-size:14px;padding:10px 24px;margin:0;cursor:pointer}.swal-button:not([disabled]):hover{background-color:#78cbf2}.swal-button:active{background-color:#70bce0}.swal-button:focus{outline:none;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)}.swal-button[disabled]{opacity:.5;cursor:default}.swal-button::-moz-focus-inner{border:0}.swal-button--cancel{color:#555;background-color:#efefef}.swal-button--cancel:not([disabled]):hover{background-color:#e8e8e8}.swal-button--cancel:active{background-color:#d7d7d7}.swal-button--cancel:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)}.swal-button--danger{background-color:#e64942}.swal-button--danger:not([disabled]):hover{background-color:#df4740}.swal-button--danger:active{background-color:#cf423b}.swal-button--danger:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)}.swal-content{padding:0 20px;margin-top:20px;font-size:medium}.swal-content:last-child{margin-bottom:20px}.swal-content__input,.swal-content__textarea{-webkit-appearance:none;background-color:#fff;border:none;font-size:14px;display:block;box-sizing:border-box;width:100%;border:1px solid rgba(0,0,0,.14);padding:10px 13px;border-radius:2px;transition:border-color .2s}.swal-content__input:focus,.swal-content__textarea:focus{outline:none;border-color:#6db8ff}.swal-content__textarea{resize:vertical}.swal-button--loading{color:transparent}.swal-button--loading~.swal-button__loader{opacity:1}.swal-button__loader{position:absolute;height:auto;width:43px;z-index:2;left:50%;top:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);text-align:center;pointer-events:none;opacity:0}.swal-button__loader div{display:inline-block;float:none;vertical-align:baseline;width:9px;height:9px;padding:0;border:none;margin:2px;opacity:.4;border-radius:7px;background-color:hsla(0,0%,100%,.9);transition:background .2s;-webkit-animation:swal-loading-anim 1s infinite;animation:swal-loading-anim 1s infinite}.swal-button__loader div:nth-child(3n+2){-webkit-animation-delay:.15s;animation-delay:.15s}.swal-button__loader div:nth-child(3n+3){-webkit-animation-delay:.3s;animation-delay:.3s}@-webkit-keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}@keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:auto;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;opacity:0;transition:opacity .3s}.swal-overlay:before{content:" ";display:inline-block;vertical-align:middle;height:100%}.swal-overlay--show-modal{opacity:1;pointer-events:auto}.swal-overlay--show-modal .swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert .3s;animation:showSweetAlert .3s;will-change:transform}.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;z-index:10001;transition:opacity .2s,-webkit-transform .3s;transition:transform .3s,opacity .2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}@media (max-width:500px){.swal-modal{width:calc(100% - 20px)}}@-webkit-keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}</style>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+<meta name="author" content="Anni Coffee ">
+
+    <meta name="google-site-verification" content="aG9I_3yx43j0Jj_UOL9utSu0TZUJ8FKN22cZGqo24Ls">
+
+    <meta name="description" content="Website chính thức của công ty cổ phần Trà Cà phê An Nhiên (Anni Coffee) chuyên cung cấp: cà phê nhân Arabica - Robusta, gia công sản phẩm cà phê theo yêu cầu; cà phê hạt nguyên chất 100% không hóa chất: Arabica, Robusta, Culi, Chồn. Cung cấp các dụng cụ, tư vần giải pháp quản lý và mở quán cà phê.">
+    <meta name="keywords" content="bình syphon, binh syphon, ca danh sua, may xay cafe, may xay cafe mini, may xay cafe gia dinh, may xay ca phe, máy xay cà phê, cà phê sạch, cafe sach, ca phe sach, cà phê hạt nguyên chất, cafe hạt nguyên chất, nguyên chất, nguyen chat, cafe hat nguyen chat arabica cau dat, cà phê robusta, ca phe may, barista, cong thuc pha che, công thức pha chế , caphehat, ca phe sach, ca phe nguyen chat, coffeebean, machine coffee, caphemay, cafe chon, cafe chon, cafe hat, cafe ngon, Arabica Cau Dat, Robusta Cau Dat, Dung cu pha che cafe, ca danh sua, may pha ca phe, may pha cafe, cà phê chồn, chồn, cà phê chồn Việt Nam, cafe chon, ca phe chon, weasel coffee, civet coffee vietnam, yami, san pham yami, gia công cà phê">
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Anni Coffee  - Trang chủ">
+    <meta itemprop="description" content="Website chính thức của công ty cổ phần Trà Cà phê An Nhiên (Anni Coffee) chuyên cung cấp: cà phê nhân Arabica - Robusta, gia công sản phẩm cà phê theo yêu cầu; cà phê hạt nguyên chất 100% không hóa chất: Arabica, Robusta, Culi, Chồn. Cung cấp các dụng cụ, tư vần giải pháp quản lý và mở quán cà phê.">
+    <meta itemprop="image" content="https://annicoffee.com/cover.jpg">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Anni Coffee  - Trang chủ">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://annicoffee.com">
+    <meta property="og:image" content="https://annicoffee.com/cover.jpg">
+    <meta property="og:description" content="Website chính thức của công ty cổ phần Trà Cà phê An Nhiên (Anni Coffee) chuyên cung cấp: cà phê nhân Arabica - Robusta, gia công sản phẩm cà phê theo yêu cầu; cà phê hạt nguyên chất 100% không hóa chất: Arabica, Robusta, Culi, Chồn. Cung cấp các dụng cụ, tư vần giải pháp quản lý và mở quán cà phê.">
+    <meta property="og:site_name" content="Anni Coffee ">
+
+    <meta property="fb:app_id" content="363579603845564">
+
+    <title>Anni Coffee  - Trang chủ</title>
+    <link type="image/x-icon" rel="shortcut icon" href="https://annicoffee.com/favicon.ico?t=1774103098">
+    <link type="image/x-icon" rel="icon" href="https://annicoffee.com/favicon.ico?t=1774103098">
+
+    <!-- Global icon fonts -->
+
+<!-- Google fonts prefetch -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+<!-- Styles -->
+<link rel="stylesheet" type="text/css" href="https://annicoffee.com/public/templates/global/font-icons/font-awesome6/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://annicoffee.com/public/templates/frontend/clearly-bs3/css/fonts.min.css?v=1656692595">
+<link rel="stylesheet" type="text/css" href="https://annicoffee.com/public/templates/frontend/clearly-bs3/css/styles.min.css?v=1704335314">
+
+
+            <style type="text/css">
+            p {
+  text-align: justify; 
+}
+
+/* Đây là những styles làm lỗi các title.
+ * Các title được xây dựng từ các thẻ h,
+ * và trên size có một plugin sẽ style các thẻ này thành một dòng, kết thúc bằng dấu ...
+ * Các thuộc tính padding đã làm sai lệch chiều cao có thể hiển thị thẻ h, nói nôm na là
+ * lúc này các thẻ h không đủ chiều cao để hiển thị đúng một dòng nên bị ẩn đi.
+ *
+ * Phương án giải quyết: không được can thiệp vào chiều cao các thẻ h này */
+#block-111 {
+	display:none;
+}
+.fab {
+  display:none;
+}
+.fas {
+  display:none;
+}
+        </style>
+    
+    <!-- JavaScript Files -->
+<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-XN0FWT87BM&amp;cx=c&amp;gtm=4e63i0"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-LQRKPWSETE&amp;cx=c&amp;gtm=4e63i0"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-NPXL1EB0LM&amp;cx=c&amp;gtm=4e63i0"></script><script src="https://connect.facebook.net/vi_VN/bundle/sdk.js/" async="" crossorigin="anonymous"></script><script id="facebook-chatbox-jssdk" src="https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js#xfbml=1&amp;version=v11.0&amp;appId=363579603845564"></script><script id="facebook-social-jssdk" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v11.0&amp;appId=363579603845564"></script><script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyBB8Y8ujvU3AYkiRakIetksdyZa62sWEZE"></script>
+
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/utility/modernizr.min.js?v=1654805878"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/utility/clipboard.min.js?v=1646574834"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/jquery/jquery-1.12.1.min.js?v=1646805029"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/jquery/jquery.easing.1.3.min.js?v=1646804893"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/bootstrap.min.js?v=1550067769"></script>
+
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/gmaps/gmaps.min.js?v=1605323388"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/magnific-popup/jquery.magnific-popup.min.js?v=1646804889"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/slick/slick.min.js?v=1647878370"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/matchheight/jquery.matchHeight.min.js?v=1648225034"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/select2/select2.min.js?v=1647878957"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/tooltipster/tooltipster.bundle.min.js?v=1591374572"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/fixto/fixto.min.js?v=1466039526"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/dotdotdot/jquery.dotdotdot.min.js?v=1648103252"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/toastr/toastr.min.js?v=1655068199"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/sweetalert/sweetalert.min.js?v=1653335228"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/smoothscroll/smoothscroll.min.js?v=1605323344"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/countdown/jquery.countdown.min.js?v=1470291004"></script>
+<script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/global.min.js?v=1656692597"></script>
+
+
+    <!-- DMCA Bao mat du lieu -->
+<script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js">
+</script>
+
+    <script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/64/5d/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/64/5d/util.js"></script><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_dialog{background:#525252b3;position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:700;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) #fff no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:#0006;inset:0;min-height:100%;position:absolute;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba),to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:#fff 0 1px 1px -1px inset;color:#fff;font:700 14px Helvetica,sans-serif;text-overflow:ellipsis;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2),to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:700 12px Helvetica,sans-serif;margin:2px -12px;padding:2px 6px 3px;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:700;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4A4A4A;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4A4A4A;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/y2/r/onuUJj0tCqE.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+</style></head>
+
+<body>
+    <!-- Messenger Plugin chat Code -->
+<div id="fb-root" class=" fb_reset">
+<div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+<!-- Your Plugin chat code -->
+<div id="fb-customer-chat" class="fb-customerchat" page_id="104859191698007" attribution="page_inbox">
+</div>
+<script>
+  // Facebook Social Plugins Js SDK
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0&appId=363579603845564";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-social-jssdk'));
+  // Facebook Chatbox Plugins Js SDK
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "104859191698007");
+  chatbox.setAttribute("attribution", "page_inbox");
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml  : true,
+      version: 'v11.0'
+    });
+  };
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js#xfbml=1&version=v11.0&appId=363579603845564';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-chatbox-jssdk'));
+</script>
+    
+    
+
+    <div id="page" class="clearly" style="padding-top: 140px;">
+        <nav id="pushy-nav" class="pushy pushy-left custom-scrollbar hover-explicit transparent-track">
+    <div class="pushy-content">
+        <div class="pushy-header">
+            <a class="hamburger menu-btn">
+                <span class="bars is-active">
+                    <span class="bar bar-top"></span>
+                    <span class="bar bar-middle"></span>
+                    <span class="bar bar-bottom"></span>
+                </span>
+            </a>
+
+            <a class="home" href="https://annicoffee.com"></a>
+        </div>
+
+        <div class="pushy-body">
+            <ul><li class="menu-group"><a class="pushy-link" href="https://annicoffee.com">TRANG CHỦ</a></li><li class="menu-group"><a class="pushy-link" href="https://annicoffee.com/gioi-thieu.html">GIỚI THIỆU</a></li><li class="menu-group"><a class="pushy-link" href="https://annicoffee.com/san-pham/ca-phe">SẢN PHẨM</a></li><li class="menu-group"><a class="pushy-link" href="https://annicoffee.com/cua-hang.html">CỬA HÀNG</a></li><li class="menu-group"><a class="pushy-link" href="https://annicoffee.com/bai-viet/su-kien/uu-dai">THÔNG TIN ƯU ĐÃI</a></li><li class="menu-group"><a class="pushy-link" href="https://annicoffee.com/bai-viet">TIN TỨC &amp; SỰ KIỆN</a></li></ul>        </div>
+
+        <div class="pushy-footer">
+            <div class="legal">
+            <p class="copyright">
+                            © Bản quyền nội dung thuộc về Anni Coffee .
+                    </p>
+
+        <p class="copyright">
+            Vận hành bởi <a class="copyright-link" href="http://vtechweb.com" target="_blank">Vtech Web</a>.
+        </p>
+    </div>        </div>
+    </div>
+</nav>
+
+<div class="site-overlay"></div>
+        <div class="main-nav">
+    <header id="header" class="header header-fixed push" style="">
+        <nav class="header-bar">
+            <div class="lead">
+                <a class="hamburger menu-btn">
+                    <span class="bars">
+                        <span class="bar bar-top"></span>
+                        <span class="bar bar-middle"></span>
+                        <span class="bar bar-bottom"></span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="logo">
+                <a href="https://annicoffee.com" class="logofont">
+                    <img class="logo-img" src="https://annicoffee.com/logo.png?t=1774103098" alt="site-logo">
+                </a>
+            </div>
+
+            <div class="tools">
+                <div>
+                    <a href="#popup-search" class="tool tool-search open-popup-search"><i class="ic ic-search"></i></a>
+
+                                            <a href="#popup-cart" class="tool tool-quick-cart open-popup-cart"><i class="ic ic-buying"></i></a>
+                                    </div>
+            </div>
+        </nav>
+    </header>
+
+    <div style="visibility: hidden; display: none;"></div><nav id="menu-bar" class="menu-bar push" style="z-index: 999; top: 0px;">
+        <div class="inner">
+            <div class="lead">
+                <a class="hamburger menu-btn">
+                    <span class="bars"><span class="bar bar-top"></span><span class="bar bar-middle"></span><span class="bar bar-bottom"></span></span>
+                </a>
+            </div>
+
+            <div class="menu menu-group fx-menu-bar"><a href="https://annicoffee.com">TRANG CHỦ</a><a href="https://annicoffee.com/gioi-thieu.html">GIỚI THIỆU</a><a href="https://annicoffee.com/san-pham/ca-phe">SẢN PHẨM</a><a href="https://annicoffee.com/cua-hang.html">CỬA HÀNG</a><a href="https://annicoffee.com/bai-viet/su-kien/uu-dai">THÔNG TIN ƯU ĐÃI</a><a href="https://annicoffee.com/bai-viet">TIN TỨC &amp; SỰ KIỆN</a></div>
+
+            <div class="tools">
+                <div>
+                    <a href="#popup-search" class="tool tool-search open-popup-search"><i class="ic ic-search"></i></a>
+
+                                            <a href="#popup-cart" class="tool tool-quick-cart open-popup-cart"><i class="ic ic-buying"></i></a>
+                                    </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div id="popup-search" class="clearly popup-search mfp-hide">
+    <div class="popup-inner">
+        <form method="GET" action="https://annicoffee.com/search.html" accept-charset="UTF-8" class="form search-form" autocapitalize="off">
+            <div class="container">
+                <div class="search-form-inner">
+                    <div class="form-group">
+                        <input class="form-control input-lg" placeholder="Từ khóa" autocomplete="off" name="keyword" type="text" style="">
+                    </div>
+
+                    
+                    <div class="form-group mb-0">
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">Tìm</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div><div id="popup-cart" class="clearly popup-cart mfp-hide">
+    <div class="popup-inner">
+        <div class="container">
+            <div class="cart-inner">
+                <div class="block">
+                    <div class="bk-heading text-center">Giỏ hàng của bạn</div>
+
+                    <div class="bordered-box style-diagonal-lines">
+                        <div class="quick-cart-wrapper">
+                                                            <div class="cart-message">
+                                    Giỏ hàng rỗng
+                                </div>
+                                                    </div>
+
+                        <div class="quick-cart-footer clearfix">
+                            <a href="https://annicoffee.com/shopping/cart/show.html" class="pull-left btn btn-min-width btn-mix-1"><i class="fa fa-shopping-basket mr-10"></i>Chi tiết</a>
+                            <a href="https://annicoffee.com/shopping/order.html" class="pull-right btn btn-min-width btn-primary"><i class="fas fa-bag-shopping mr-10"></i>Đặt hàng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <section id="top-sliders" class="push">
+                                    <div id="block-3">
+                    <div class="hero hero-slider slick-initialized slick-slider slick-dotted" role="toolbar"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>
+                    <div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 3840px;" role="listbox"><div class="item no-overlay slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 1280px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;" tabindex="-1" role="option" aria-describedby="slick-slide00">
+            <div class="item-wrap">
+                <div class="wrap">
+                                            <div class="item-bg" style="background-image: url('https://annicoffee.com/public/manipulate/0x0/slider-images/1657530030-ca-phe-chat-luong-den-tu-vung-tay-nguyen-anni-coffee.jpg?watermark=0');" tabindex="-1">
+                            <img src="https://annicoffee.com/public/manipulate/0x0/slider-images/1657530030-ca-phe-chat-luong-den-tu-vung-tay-nguyen-anni-coffee.jpg?watermark=0" class="bound hidden-device">
+                            <img src="https://annicoffee.com/public/manipulate/560x374/slider-images/1657530030-ca-phe-chat-luong-den-tu-vung-tay-nguyen-anni-coffee.jpg?watermark=0" srcset="https://annicoffee.com/public/manipulate/1120x747/slider-images/1657530030-ca-phe-chat-luong-den-tu-vung-tay-nguyen-anni-coffee.jpg?watermark=0 2x" class="visible-device">
+                        </div>
+                    
+                                    </div>
+            </div>
+        </div><div class="item no-overlay slick-slide" data-slick-index="1" aria-hidden="true" style="width: 1280px; position: relative; left: -1280px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="option" aria-describedby="slick-slide01">
+            <div class="item-wrap">
+                <div class="wrap">
+                                            <div class="item-bg" style="background-image: url('https://annicoffee.com/public/manipulate/0x0/slider-images/1657529785-ca-phe-hat-chat-luong-den-tu-vung-tay-nguyen-anni-coffee.jpg?watermark=0');" tabindex="-1">
+                            <img src="https://annicoffee.com/public/manipulate/0x0/slider-images/1657529785-ca-phe-hat-chat-luong-den-tu-vung-tay-nguyen-anni-coffee.jpg?watermark=0" class="bound hidden-device">
+                            <img src="https://annicoffee.com/public/manipulate/560x374/slider-images/1657529785-ca-phe-hat-chat-luong-den-tu-vung-tay-nguyen-anni-coffee.jpg?watermark=0" srcset="https://annicoffee.com/public/manipulate/1120x747/slider-images/1657529785-ca-phe-hat-chat-luong-den-tu-vung-tay-nguyen-anni-coffee.jpg?watermark=0 2x" class="visible-device">
+                        </div>
+                    
+                                    </div>
+            </div>
+        </div><div class="item no-overlay slick-slide" data-slick-index="2" aria-hidden="true" style="width: 1280px; position: relative; left: -2560px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="option" aria-describedby="slick-slide02">
+            <div class="item-wrap">
+                <div class="wrap">
+                                            <div class="item-bg" style="background-image: url('https://annicoffee.com/public/manipulate/0x0/slider-images/1657530293-ca-phe-chat-luong-den-tu-vung-tay-nguyen.jpg?watermark=0');" tabindex="-1">
+                            <img src="https://annicoffee.com/public/manipulate/0x0/slider-images/1657530293-ca-phe-chat-luong-den-tu-vung-tay-nguyen.jpg?watermark=0" class="bound hidden-device">
+                            <img src="https://annicoffee.com/public/manipulate/560x374/slider-images/1657530293-ca-phe-chat-luong-den-tu-vung-tay-nguyen.jpg?watermark=0" srcset="https://annicoffee.com/public/manipulate/1120x747/slider-images/1657530293-ca-phe-chat-luong-den-tu-vung-tay-nguyen.jpg?watermark=0 2x" class="visible-device">
+                        </div>
+                    
+                                    </div>
+            </div>
+        </div></div></div>
+                    
+                    
+    <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button><ul class="slick-dots" style="display: block;" role="tablist"><li class="slick-active" aria-hidden="false" role="presentation" aria-selected="true" aria-controls="navigation00" id="slick-slide00"><button type="button" data-role="none" role="button" tabindex="0">1</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation01" id="slick-slide01"><button type="button" data-role="none" role="button" tabindex="0">2</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation02" id="slick-slide02"><button type="button" data-role="none" role="button" tabindex="0">3</button></li></ul></div>                    </div>
+                        </section>
+
+        
+        <main class="main push">
+                <section id="home-blocks">
+        <section id="home-block-1" class="home-block">
+                    <div id="block-97" class="section " style="">
+                <div class="sc-inner">
+                    <div class="container">
+                        <div class="sc-content">
+    <style type="text/css">.button-block-1-a {
+  display: inline-block;
+  border: 1px solid #000000;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  }
+  .button-block-1-a:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  @media (min-width: 992px) {
+    #block-97 .container {
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 992px;
+    }
+    #block-97 .container .row {
+      margin-left: -30px;
+      margin-right: -30px;
+    }
+    #block-97 .container .row div[class^="col-"] {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    #block-97 .container {
+      width: 1200px;
+    }
+  }
+</style>
+<div class="row">
+<div class="col-sm-6 col-xs-12 vertical-align"><img alt="Anni Coffee Thương hiệu cà phê đến từ vùng Tây Nguyên" class="img-responsive center-block" src="https://annicoffee.com/public/upload/images/home-page/e-den-tu-vung-tay-nguyen-anni-coffee.webp"></div>
+
+<div class="col-sm-6 col-xs-12 vertical-align">
+<h3 style="font-size: 40px; FONT-WEIGHT: UNSET;">Về Anni Coffee</h3>
+
+<p style="padding-bottom: 20px;">Anni Coffee - cà phê chất lượng từ vùng Tây Nguyên. Chúng tôi tự hào với vùng nguyên liệu tự nhiên quý giá với chất lượng hảo hạng mà thiên nhiên đã ban tặng cho vùng đất này.</p>
+
+<div><a class="button-block-1-a" href="https://annicoffee.com/gioi-thieu.html"><span style="font-size: 20px;">XEM CHI TIẾT</span></a></div>
+</div>
+</div>
+
+</div>                    </div>
+                </div>
+            </div>
+                    <div id="block-98" class="section " style="">
+                <div class="sc-inner">
+                    <div class="container">
+                        <div class="sc-content">
+    <style type="text/css">.button-block-1-b {
+  display: inline-block;
+  border: 1px solid #000000;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  }
+  .button-block-1-b:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+   @media (min-width: 992px) {
+    #block-98 .container {
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 992px;
+    }
+    #block-98 .container .row {
+      margin-left: -30px;
+      margin-right: -30px;
+    }
+    #block-98 .container .row div[class^="col-"] {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    #block-98 .container {
+      width: 1200px;
+    }
+  }
+</style>
+<div class="row">
+<div class="col-sm-6 col-sm-push-6 col-xs-12 vertical-align"><img alt="Sứ mệnh anni coffee" class="img-responsive center-block" src="https://annicoffee.com/public/upload/images/home-page/-chat-luong-hat-rang-tai-anni-coffee.webp"></div>
+
+<div class="col-sm-6 col-sm-pull-6 col-xs-12 vertical-align">
+<h3 style="font-size: 40px; FONT-WEIGHT: UNSET;">Sứ mệnh</h3>
+
+<p style="padding-bottom: 20px;">Mỗi ngày đi làm, chúng tôi hy vọng thực hiện hai việc: Chia sẻ những sản phẩm cà phê tuyệt vời với bạn bè và giúp cho Thế Giới hoàn thiện hơn. Thành công của chúng tôi luôn gắn kết với thành công của người nông dân và đối tác. Chúng tôi tâm niệm rằng, một sản phẩm cà phê tốt giúp mang lại tương lai tốt đẹp hơn cho người nông dân và trái đất cũng trở nên xanh hơn.</p>
+
+<div><a class="button-block-1-b" href="https://annicoffee.com/san-pham"><span style="font-size: 20px;">XEM TẤT CẢ SẢN PHẨM</span></a></div>
+</div>
+</div>
+
+</div>                    </div>
+                </div>
+            </div>
+            </section>
+        <section id="home-block-2" class="home-block">
+                    <div id="block-107" class="section " style="background-color: #ffefd4;">
+                <div class="sc-inner">
+                    <div class="container">
+                        <div class="sc-content">
+    <style type="text/css">#favorite-products .block-title {
+  text-align: center;
+  margin-bottom: 50px;
+  }
+  #favorite-products .block-body {
+    background-color: white;
+    padding: 0px 30px 30px;
+    /* Có thể bỏ đi box-shadow */
+    box-shadow: 0px -4px 4px rgb(0 0 0 / 2%);
+  }
+  #favorite-products .content-farm {
+    position: relative;
+    margin-top: 30px;
+  }
+  #favorite-products .desc-farm {
+    background: rgba(171, 34, 4, 0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+  }
+  #favorite-products .desc-farm span {
+    display: block;
+    color: #fff;
+    font-size: 35px;
+    padding: 0px 10px;
+    text-align: center;
+  }
+  #favorite-products .desc-farm span:after {
+    display: block;
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: #fff;
+    margin: 20px auto;
+  }
+  #favorite-products .desc-farm a {
+    display: block;
+    color: #ee3c27;
+    text-decoration: none;
+    width: 140px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 40px;
+    margin: 0 auto;
+  }
+  #favorite-products .content-farm:hover .desc-farm {
+    opacity: 1;
+  }
+  /* Chỉnh sửa style trên giao diện di động */
+  @media (max-width: 767px) {
+    #favorite-products .block-body {
+      padding: 0px 20px 20px;
+    }
+    #favorite-products .block-body > .row {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+    #favorite-products .block-body > .row > div[class^="col-"] {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    #favorite-products .content-farm {
+      margin-top: 20px;
+    }
+    #favorite-products .desc-farm span {
+      font-size: 24px;
+    }
+  }
+</style>
+<div id="favorite-products">
+<div class="block-title">
+<h3 style="font-size: 40px; font-weight: 500; margin-top: 10px;">SẢN PHẨM YÊU THÍCH</h3>
+</div>
+
+<div class="block-body">
+<div class="row">
+<div class="col-xs-6 col-sm-3 mb-fixed">
+<div class="content-farm"><img alt="" class="img-responsive center-block" src="https://annicoffee.com/public/upload/images/home-page/2022year/ca-phe-phin-giay-sua-tien-dung-annicoffee.webp">
+<div class="desc-farm">
+<div><span>CÀ PHÊ TÂY NGUYÊN</span> <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-sua-phin-giay.html">Đặt mua</a></div>
+</div>
+</div>
+</div>
+
+<div class="col-xs-6 col-sm-3 mb-fixed">
+<div class="content-farm"><img alt="" class="img-responsive center-block" src="https://annicoffee.com/public/upload/images/home-page/2022year/drip-coffee-ca-phe-phin-giay-tien-dung-annicoffee.webp">
+<div class="desc-farm">
+<div><span>CÀ PHÊ TÂY NGUYÊN</span> <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-phin-giay-anni-coffee.html">Đặt mua</a></div>
+</div>
+</div>
+</div>
+
+<div class="col-xs-6 col-sm-3 mb-fixed">
+<div class="content-farm"><img alt="" class="img-responsive center-block" src="https://annicoffee.com/public/upload/images/home-page/2022year/3.webp">
+<div class="desc-farm">
+<div><span>CÀ PHÊ TÂY NGUYÊN</span> <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-phin-so-1-500g.html">Đặt mua</a></div>
+</div>
+</div>
+</div>
+
+<div class="col-xs-6 col-sm-3 mb-fixed">
+<div class="content-farm"><img alt="" class="img-responsive center-block" src="https://annicoffee.com/public/upload/images/home-page/2022year/2.webp">
+<div class="desc-farm">
+<div><span>CÀ PHÊ TÂY NGUYÊN</span> <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-may-so-1-500g.html">Đặt mua</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>                    </div>
+                </div>
+            </div>
+            </section>
+        <section id="home-block-3" class="home-block">
+                    <div id="block-99" class="section " style="">
+                <div class="sc-inner">
+                    <div class="container">
+                        <div class="sc-headline">
+        <h2 class="sc-heading">cà phê anni coffee</h2>
+
+                    <a class="more hidden-device" href="san-pham/ca-phe">Xem tất cả</a>
+            </div>
+
+<div class="sc-content">
+    <div class="thumbnails">
+        <div class="row slick slick-padding match-height-group slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                    <div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 5300px; transform: translate3d(-1060px, 0px, 0px);" role="listbox"><div class="col-xs-6 col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 265px;" data-slick-index="-4" aria-hidden="true" tabindex="-1">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-may-so-3-500g.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653552528-ca-phe-pha-may-so-3.png" alt="Cà phê pha máy số 3 (500g)" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653552529-cafe-pha-may-so-3.png" alt="Cà phê pha máy số 3 (500g)" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot is-truncated" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-may-so-3-500g.html" style="display: inline;" tabindex="-1">Cà phê pha máy số 3…</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">208.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6Iit5d2RqbWtEdWZ2eHJWV1QzTDdEblE9PSIsInZhbHVlIjoibVZ0cXlqQUpGVVVtaWRkNGdWOTBkZz09IiwibWFjIjoiMTgxODkyNjMyMmM0Y2YxY2M0YmI3NWE2MWY0Y2I1ZmU2NjE4NWE2ZDQxNWNiNjY0NjA5YjQ4Mjk1N2E1YzFkMCJ9" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 265px;" data-slick-index="-3" aria-hidden="true" tabindex="-1">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-hat-arabica.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653547421-cafe-hat-arabica.png" alt="Cà phê Arabica" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653547422-cafe-hat-arabica-1.png" alt="Cà phê Arabica" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-hat-arabica.html" tabindex="-1">Cà phê Arabica</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">220.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6InpkalpCRnZGRDVvN0JrcHlmeVhla3c9PSIsInZhbHVlIjoiZVFcL2ZLcXBmU2ZBcVg1d0RZYmlvZ2c9PSIsIm1hYyI6IjhhOWM2OGQzMDYwMjEzNjk5MWM4NWQ0ZWJlOTk2ODA0NTkzY2VlMzdiN2FhOWQ2ZWIzNTZjNjVjYTBmMDg5YzkifQ%3D%3D" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 265px;" data-slick-index="-2" aria-hidden="true" tabindex="-1">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-hat-robusta-s18.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653547962-cafe-hat-robusta.png" alt="Cà phê Robusta" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653547963-cafe-hat-robusta-2.png" alt="Cà phê Robusta" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-hat-robusta-s18.html" tabindex="-1">Cà phê Robusta</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">148.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6IjJIU2o3M3JmR1FSVW0zS1VYXC9GVTVBPT0iLCJ2YWx1ZSI6Ilh0YTBZS2JxT2R5VmlzRzZ1anpBcHc9PSIsIm1hYyI6ImU5ZmM2MGFmMDEwZTc1NzA2OTdiYzQ3MDY2YjY1MGJmZDBhYjRjZGNiOTJlMWU1ODE5ZTEyNTkxNDllYTE2Y2YifQ%3D%3D" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 265px;" data-slick-index="-1" aria-hidden="true" tabindex="-1">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-hat-moka.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653540548-cafe-hat-moka.png" alt=" Cà phê Moka" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653540549-cafe-hat-moka-2.png" alt=" Cà phê Moka" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-hat-moka.html" tabindex="-1"> Cà phê Moka</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">230.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6InRtRTVJdWo2a2VlcFdcL3R5UURUTGtRPT0iLCJ2YWx1ZSI6IllYdE9aUytVS1NyUkxtdXhKM3FJQ0E9PSIsIm1hYyI6ImZkOGJlNThlNDNjZTA5MTY0ZTMzNzZmNzkwYzczNmY3M2I4MjEwZGUzZjcyN2Y2MGVmMmYxMTBlNmVlYzEyYTMifQ%3D%3D" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide slick-current slick-active" style="width: 265px;" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide10">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-phin-so-1-500g.html" tabindex="0">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653550692-pp1.png" alt="Cà phê pha phin số 1 (500g)" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653550693-cafe-pha-phin-so-1.png" alt="Cà phê pha phin số 1 (500g)" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot is-truncated" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-phin-so-1-500g.html" style="display: inline;">Cà phê pha phin số…</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">158.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6Ijl3eEhNY1NcLzROVHRVYWFqamljblFBPT0iLCJ2YWx1ZSI6ImJ3RmtyWmNaZEZRa2JCQUdtY2JtXC9nPT0iLCJtYWMiOiJiYWRhMDI4ZTI2YzNhZjgyNzdiZDRlMGVjZDI1M2I1ZTgxNjM3N2JlY2Y1MDg1ODE0ZjdjZThhZDFjODdhNmNjIn0%3D" tabindex="0"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide slick-active" style="width: 265px;" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide11">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-phin-so-2-500g.html" tabindex="0">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653551256-ca-phe-pha-phin-so-2.png" alt="Cà phê pha phin số 2 (500g)" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653551257-cafe-pha-phin-so-2.png" alt="Cà phê pha phin số 2 (500g)" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot is-truncated" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-phin-so-2-500g.html" style="display: inline;">Cà phê pha phin số…</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">168.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6IkhObkNIQm5NaWJoTEpNYlBDT3RXSGc9PSIsInZhbHVlIjoiZklQY2Q4aG45YlFUaTBodkxBN21EZz09IiwibWFjIjoiNjEyNmQ2ZWMyZTcyNjQ0ZTZmYTlkMDA3NTQ3N2NkYjYwM2QyNWYwNDIzNTgxZmYxYjNiYWQ5YzVkNGIxNjljYyJ9" tabindex="0"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide slick-active" style="width: 265px;" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide12">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-phin-giay-anni-coffee.html" tabindex="0">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653552850-san-pham-ca-phe.png" alt="Cà phê phin giấy" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1545883458-ca-phe-phin-giay-3.JPG" alt="Cà phê phin giấy" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-phin-giay-anni-coffee.html">Cà phê phin giấy</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">128.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6InhwMHpsU2pKc1wveHhWMENjRUlzOFRRPT0iLCJ2YWx1ZSI6InU0d1k2Wk5FZ0NQZFNIWUtlN1JRQnc9PSIsIm1hYyI6Ijk1OWEwOWU3YWU0YTQxNTc4NDRiOTkxMWU1MDg0OTNiMWM2Njk2ZjEwZjk3ZWQ0ZDA5N2Y0OGVkZjJkYzFjMWEifQ%3D%3D" tabindex="0"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide slick-active" style="width: 265px;" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide13">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-sua-phin-giay.html" tabindex="0">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653553071-drip-milk-coffee-ca-phe-sua-phin-giay.png" alt="Cà phê sữa phin giấy " class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653553072-drip-milk-coffee-ca-phe-sua-phin-giay-2.png" alt="Cà phê sữa phin giấy " class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-sua-phin-giay.html">Cà phê sữa phin giấy </a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">165.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6ImRaMDJrRlptT3NNMmFjbEVYUUVOd3c9PSIsInZhbHVlIjoiRVhlNVorOHQzU2FlZUg5QjlEY05hQT09IiwibWFjIjoiMTkwNzNiZTMzNmQ2NjdhOTAyNmEwNDRiMTY5YWMwZDI3NWYwM2NjNTIwNzVhOTExYWFmYmFjMjMzYTA0YzU3NCJ9" tabindex="0"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide" style="width: 265px;" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide14">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-phin-so-3-500g.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653551423-ca-phe-pha-phin-so-3.png" alt="Cà phê pha phin số 3 (500g)" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653551424-cafe-pha-phin-so-3.png" alt="Cà phê pha phin số 3 (500g)" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot is-truncated" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-phin-so-3-500g.html" style="display: inline;">Cà phê pha phin số…</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">178.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6InE4SFNwalo3N0x4VGxXbEd3RXZZN3c9PSIsInZhbHVlIjoiNnRxK0g5aGc2NStUVlA1ZTI3OFdEZz09IiwibWFjIjoiNDcxYWE5OTA5ZmUwNjRlNTA5YWYwNzFlNDIyODNmODYyNjUyYTFjNmNhZmZiOWVjMTE4NDFhZGMxYTI5NDI2MiJ9" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide" style="width: 265px;" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide15">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-phin-so-4-500g.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653551810-ca-phe-pha-phin-so-4.png" alt="Cà phê pha phin số 4 (500g)" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653551811-cafe-pha-phin-so-4.png" alt="Cà phê pha phin số 4 (500g)" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot is-truncated" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-phin-so-4-500g.html" style="display: inline;">Cà phê pha phin số…</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">188.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6ImZoQ1g4dGtXWVBuWVwvT28yQTd1dUtRPT0iLCJ2YWx1ZSI6IjNjdzRXNmphSEg4M1BRTjZ2UXo5eHc9PSIsIm1hYyI6IjE1YzA0MGE5YzE3ZGEzZmE2Yjg3YWViMDI1ZmQ5YjUxNjEzZjBhNzU2NzgxM2NiYTMxN2RjYzBkNzAxNmE0NjYifQ%3D%3D" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide" style="width: 265px;" data-slick-index="6" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide16">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-may-so-1-500g.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653552204-ca-phe-pha-may-so-1.png" alt="Cà phê pha máy số 1 (500g)" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653552205-cafe-pha-may-so-1.png" alt="Cà phê pha máy số 1 (500g)" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot is-truncated" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-may-so-1-500g.html" style="display: inline;">Cà phê pha máy số…</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">168.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6ImhIZE51YzF0SXJ3SFVWYUkxTGVDc0E9PSIsInZhbHVlIjoiXC9qS1JIODMwZjRualBOelVIVkVuNmc9PSIsIm1hYyI6IjZlNmE5NjQ1NDYzYjRiMDFmYWZiMTJiMzJiNGQxY2Y2ZjEzZGUzYTIxNmU2ODMwNGYyMDdmNTE1ZWRiNzE3NTMifQ%3D%3D" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide" style="width: 265px;" data-slick-index="7" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide17">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-may-so-2-500g.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653552393-ca-phe-pha-may-so-2.png" alt="Cà phê pha máy số 2 (500g)" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653552394-cafe-pha-may-so-2.png" alt="Cà phê pha máy số 2 (500g)" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot is-truncated" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-may-so-2-500g.html" style="display: inline;">Cà phê pha máy số…</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">198.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6ImpkcjZWZ2R5WG1nSVdhc01nS0lHRHc9PSIsInZhbHVlIjoiUkU4MGJyUVFhMjlHOUdwbEVFR0hyQT09IiwibWFjIjoiMmQ2NGJkMjk2N2UyOWFiY2FkNGQ4ZmMwODllMzA3MTJmZDZkNmMyMDA0NGY1YzlmNzY3NTIxNTllODAxN2FkYSJ9" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide" style="width: 265px;" data-slick-index="8" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide18">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-may-so-3-500g.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653552528-ca-phe-pha-may-so-3.png" alt="Cà phê pha máy số 3 (500g)" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653552529-cafe-pha-may-so-3.png" alt="Cà phê pha máy số 3 (500g)" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot is-truncated" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-may-so-3-500g.html" style="display: inline;">Cà phê pha máy số…</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">208.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6Iit5d2RqbWtEdWZ2eHJWV1QzTDdEblE9PSIsInZhbHVlIjoibVZ0cXlqQUpGVVVtaWRkNGdWOTBkZz09IiwibWFjIjoiMTgxODkyNjMyMmM0Y2YxY2M0YmI3NWE2MWY0Y2I1ZmU2NjE4NWE2ZDQxNWNiNjY0NjA5YjQ4Mjk1N2E1YzFkMCJ9" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide" style="width: 265px;" data-slick-index="9" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide19">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-hat-arabica.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653547421-cafe-hat-arabica.png" alt="Cà phê Arabica" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653547422-cafe-hat-arabica-1.png" alt="Cà phê Arabica" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-hat-arabica.html">Cà phê Arabica</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">220.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6InpkalpCRnZGRDVvN0JrcHlmeVhla3c9PSIsInZhbHVlIjoiZVFcL2ZLcXBmU2ZBcVg1d0RZYmlvZ2c9PSIsIm1hYyI6IjhhOWM2OGQzMDYwMjEzNjk5MWM4NWQ0ZWJlOTk2ODA0NTkzY2VlMzdiN2FhOWQ2ZWIzNTZjNjVjYTBmMDg5YzkifQ%3D%3D" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide" style="width: 265px;" data-slick-index="10" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide110">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-hat-robusta-s18.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653547962-cafe-hat-robusta.png" alt="Cà phê Robusta" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653547963-cafe-hat-robusta-2.png" alt="Cà phê Robusta" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-hat-robusta-s18.html">Cà phê Robusta</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">148.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6IjJIU2o3M3JmR1FSVW0zS1VYXC9GVTVBPT0iLCJ2YWx1ZSI6Ilh0YTBZS2JxT2R5VmlzRzZ1anpBcHc9PSIsIm1hYyI6ImU5ZmM2MGFmMDEwZTc1NzA2OTdiYzQ3MDY2YjY1MGJmZDBhYjRjZGNiOTJlMWU1ODE5ZTEyNTkxNDllYTE2Y2YifQ%3D%3D" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide" style="width: 265px;" data-slick-index="11" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide111">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-hat-moka.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653540548-cafe-hat-moka.png" alt=" Cà phê Moka" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653540549-cafe-hat-moka-2.png" alt=" Cà phê Moka" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-hat-moka.html"> Cà phê Moka</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">230.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6InRtRTVJdWo2a2VlcFdcL3R5UURUTGtRPT0iLCJ2YWx1ZSI6IllYdE9aUytVS1NyUkxtdXhKM3FJQ0E9PSIsIm1hYyI6ImZkOGJlNThlNDNjZTA5MTY0ZTMzNzZmNzkwYzczNmY3M2I4MjEwZGUzZjcyN2Y2MGVmMmYxMTBlNmVlYzEyYTMifQ%3D%3D" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 265px;" data-slick-index="12" aria-hidden="true" tabindex="-1">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-phin-so-1-500g.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653550692-pp1.png" alt="Cà phê pha phin số 1 (500g)" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653550693-cafe-pha-phin-so-1.png" alt="Cà phê pha phin số 1 (500g)" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot is-truncated" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-phin-so-1-500g.html" style="display: inline;" tabindex="-1">Cà phê pha phin số 1…</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">158.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6Ijl3eEhNY1NcLzROVHRVYWFqamljblFBPT0iLCJ2YWx1ZSI6ImJ3RmtyWmNaZEZRa2JCQUdtY2JtXC9nPT0iLCJtYWMiOiJiYWRhMDI4ZTI2YzNhZjgyNzdiZDRlMGVjZDI1M2I1ZTgxNjM3N2JlY2Y1MDg1ODE0ZjdjZThhZDFjODdhNmNjIn0%3D" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 265px;" data-slick-index="13" aria-hidden="true" tabindex="-1">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-phin-so-2-500g.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653551256-ca-phe-pha-phin-so-2.png" alt="Cà phê pha phin số 2 (500g)" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653551257-cafe-pha-phin-so-2.png" alt="Cà phê pha phin số 2 (500g)" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot is-truncated" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-pha-phin-so-2-500g.html" style="display: inline;" tabindex="-1">Cà phê pha phin số 2…</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">168.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6IkhObkNIQm5NaWJoTEpNYlBDT3RXSGc9PSIsInZhbHVlIjoiZklQY2Q4aG45YlFUaTBodkxBN21EZz09IiwibWFjIjoiNjEyNmQ2ZWMyZTcyNjQ0ZTZmYTlkMDA3NTQ3N2NkYjYwM2QyNWYwNDIzNTgxZmYxYjNiYWQ5YzVkNGIxNjljYyJ9" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 265px;" data-slick-index="14" aria-hidden="true" tabindex="-1">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-phin-giay-anni-coffee.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653552850-san-pham-ca-phe.png" alt="Cà phê phin giấy" class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1545883458-ca-phe-phin-giay-3.JPG" alt="Cà phê phin giấy" class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-phin-giay-anni-coffee.html" tabindex="-1">Cà phê phin giấy</a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">128.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6InhwMHpsU2pKc1wveHhWMENjRUlzOFRRPT0iLCJ2YWx1ZSI6InU0d1k2Wk5FZ0NQZFNIWUtlN1JRQnc9PSIsIm1hYyI6Ijk1OWEwOWU3YWU0YTQxNTc4NDRiOTkxMWU1MDg0OTNiMWM2Njk2ZjEwZjk3ZWQ0ZDA5N2Y0OGVkZjJkYzFjMWEifQ%3D%3D" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col-xs-6 col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 265px;" data-slick-index="15" aria-hidden="true" tabindex="-1">
+                    <div class="thumbnail product match-height" style="height: 418px;">
+                        <div class="wrap">
+                            <div class="header-wrapper zoom-in">
+                                <div class="badges">
+                                    
+                                                                    </div>
+
+                                <figure>
+                                    <a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-sua-phin-giay.html" tabindex="-1">
+                                                                                    <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653553071-drip-milk-coffee-ca-phe-sua-phin-giay.png" alt="Cà phê sữa phin giấy " class="img-front bg-radial">
+
+                                            <img src="https://annicoffee.com/public/manipulate/400x400/shopping-product-images/1653553072-drip-milk-coffee-ca-phe-sua-phin-giay-2.png" alt="Cà phê sữa phin giấy " class="img-back bg-radial">
+                                                                            </a>
+                                </figure>
+                            </div>
+
+                            <div class="meta text-center">
+                                <h6 class="title dotdotdot" style="overflow-wrap: break-word;"><a href="https://annicoffee.com/san-pham/ca-phe/ca-phe-sua-phin-giay.html" tabindex="-1">Cà phê sữa phin giấy </a></h6>
+
+                                                                    <div class="price">
+                                        
+                                        <span class="amount">165.000 đ</span>
+                                    </div>
+                                
+                                <div class="mt-20">
+                                                                            <a class="btn btn-primary btn-outline semi-circle add2cart" href="https://annicoffee.com/shopping/cart/add-item.html?pid=eyJpdiI6ImRaMDJrRlptT3NNMmFjbEVYUUVOd3c9PSIsInZhbHVlIjoiRVhlNVorOHQzU2FlZUg5QjlEY05hQT09IiwibWFjIjoiMTkwNzNiZTMzNmQ2NjdhOTAyNmEwNDRiMTY5YWMwZDI3NWYwM2NjNTIwNzVhOTExYWFmYmFjMjMzYTA0YzU3NCJ9" tabindex="-1"><i class="fa fa-cart-plus mr-5"></i> Chọn mua</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div></div><button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button></div>
+    </div>
+</div>
+
+<div class="sc-action visible-device">
+            <a class="more" href="san-pham/ca-phe">Xem tất cả</a>
+    </div>                        </div>
+                </div>
+            </div>
+                    <div id="block-103" class="section bg-primary" style="">
+                <div class="sc-inner">
+                    <div class="container">
+                        <div class="sc-headline">
+        <h2 class="sc-heading">TIN TỨC &amp; SỰ KIỆN</h2>
+
+                    <a class="more hidden-device" href="bai-viet">Xem tất cả</a>
+            </div>
+
+<div class="sc-content">
+    <div class="thumbnails thumbnails-spotlight">
+        <div class="row match-height-group">
+                                                                            
+                    <div class="col-md-6 match-height" style="height: 527px;">
+                        <div class="thumbnail stories large fullwidth" style="height: -webkit-fill-available">
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="https://annicoffee.com/bai-viet/su-kien/thong-bao-dieu-chinh-gia-ban-ca-phe-1-06-2025.html">
+                                        <img src="https://annicoffee.com/public/manipulate/800x450/article-images/1747628753-anni-coffee-thong-bao-dieu-chinh-gia-6-2025.jpeg" alt="THÔNG BÁO Điều chỉnh giá bán cà phê 01/06/2025">
+                                    </a>
+                                </div>
+
+                                <div class="meta">
+                                    <h3 class="title line2 dotdotdot" style="overflow-wrap: break-word;">
+                                        <a href="https://annicoffee.com/bai-viet/su-kien/thong-bao-dieu-chinh-gia-ban-ca-phe-1-06-2025.html">THÔNG BÁO Điều chỉnh giá bán cà phê 01/06/2025</a>
+                                    </h3>
+
+                                    
+                                                                            <p class="desc dotdotdot" style="margin-top: 10px; overflow-wrap: break-word;">
+                                            Lời đầu tiên, Công ty Cổ phần Trà Cà Phê An Nhiên (Anni Coffee) xin chân thành cảm ơn sự...
+                                        </p>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 match-height" style="height: 527px;">
+                        <div class="row match-height-group">
+                                                                                <div class="col-md-6 match-height" style="height: 319px;">
+                        <div class="thumbnail stories alignment">
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="https://annicoffee.com/bai-viet/hoat-dong-anni-coffee/anni-coffee-nhan-bang-khen-cua-lien-doan-thuong-mai-va-cong-nghiep-viet-nam-vcci.html">
+                                        <img src="https://annicoffee.com/public/manipulate/800x450/article-images/1703082731-le-ton-vinh-doanh-nhan-doanh-nghiep-thang-long-ha-noi-2023.jpg" alt="Công ty Cổ phần Trà Cà phê An Nhiên - nhận Bằng khen của Liên Đoàn Thương Mại và Công Nghiệp Việt Nam (VCCI)">
+                                    </a>
+                                </div>
+
+                                <div class="meta">
+                                    <h3 class="title dotdotdot is-truncated" style="overflow-wrap: break-word;">
+                                        <a href="https://annicoffee.com/bai-viet/hoat-dong-anni-coffee/anni-coffee-nhan-bang-khen-cua-lien-doan-thuong-mai-va-cong-nghiep-viet-nam-vcci.html" style="display: inline;">Công ty Cổ phần…</a></h3>
+
+                                    
+                                                                            <p class="desc dotdotdot is-truncated" style="margin-top: 10px; overflow-wrap: break-word;">
+                                            Ngày 17/12/2023, tại Hà Nội, Công ty Cổ phần Trà Cà phê…</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                                                                                <div class="col-md-6 match-height" style="height: 319px;">
+                        <div class="thumbnail stories alignment">
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="https://annicoffee.com/bai-viet/blog-ca-phe/tra-dau-giai-nhiet-mua-nong-da-co-mat-tai-anni-coffee.html">
+                                        <img src="https://annicoffee.com/public/manipulate/800x450/article-images/1680326092-tra-dau-anni-coffee-zalocover.png" alt="TRÀ DÂU, giải nhiệt mùa nóng đã có mặt tại Anni Coffee Cà Mau">
+                                    </a>
+                                </div>
+
+                                <div class="meta">
+                                    <h3 class="title dotdotdot is-truncated" style="overflow-wrap: break-word;">
+                                        <a href="https://annicoffee.com/bai-viet/blog-ca-phe/tra-dau-giai-nhiet-mua-nong-da-co-mat-tai-anni-coffee.html" style="display: inline;">TRÀ DÂU, giải nhiệt…</a></h3>
+
+                                    
+                                                                            <p class="desc dotdotdot is-truncated" style="margin-top: 10px; overflow-wrap: break-word;">
+                                            Vị chua chua, ngọt ngọt của những miếng dâu tây có…</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                                                                                <div class="col-md-6 match-height" style="height: 319px;">
+                        <div class="thumbnail stories alignment">
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="https://annicoffee.com/bai-viet/blog-ca-phe/ca-phe-muoi-mon-hot-trend-thu-hut-gioi-tre.html">
+                                        <img src="https://annicoffee.com/public/manipulate/800x450/article-images/1679130930-ca-phe-muoi-hot-trend.jpg" alt="Cà phê muối, món hot trend thu hút giới trẻ">
+                                    </a>
+                                </div>
+
+                                <div class="meta">
+                                    <h3 class="title dotdotdot is-truncated" style="overflow-wrap: break-word;">
+                                        <a href="https://annicoffee.com/bai-viet/blog-ca-phe/ca-phe-muoi-mon-hot-trend-thu-hut-gioi-tre.html" style="display: inline;">Cà phê muối, món…</a></h3>
+
+                                    
+                                                                            <p class="desc dotdotdot is-truncated" style="margin-top: 10px; overflow-wrap: break-word;">
+                                            Cà phê muối Anni, món hot trend đang làm khuấy đảo…</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                                                                                <div class="col-md-6 match-height" style="height: 319px;">
+                        <div class="thumbnail stories alignment">
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="https://annicoffee.com/bai-viet/su-kien/uu-dai/giam-gia-phin-cafe-nhom-ma-mau-chi-58-500-vnd.html">
+                                        <img src="https://annicoffee.com/public/manipulate/800x450/article-images/1623934217-khuyen-mia-phin-nhom-ma-mau-giam-35-phan-tram.png" alt="Giảm giá phin cafe nhôm mạ màu chỉ 58.500 vnđ">
+                                    </a>
+                                </div>
+
+                                <div class="meta">
+                                    <h3 class="title dotdotdot is-truncated" style="overflow-wrap: break-word;">
+                                        <a href="https://annicoffee.com/bai-viet/su-kien/uu-dai/giam-gia-phin-cafe-nhom-ma-mau-chi-58-500-vnd.html" style="display: inline;">Giảm giá phin cafe…</a></h3>
+
+                                    
+                                                                            <p class="desc dotdotdot is-truncated" style="margin-top: 10px; overflow-wrap: break-word;">
+                                            Giảm 35% phin cafe nhôm mạ màu, còn 58.500 VNĐ (giá…</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                            
+            </div></div>
+        </div>
+    </div>
+</div>
+
+<div class="sc-action visible-device">
+            <a class="more" href="bai-viet">Xem tất cả</a>
+    </div>                        </div>
+                </div>
+            </div>
+            </section>
+            </section>
+        </main>
+
+        
+        <footer class="footer push">
+    <div class="inner">
+        <div class="container">
+                            <div class="row row-extra-gutters match-height-group">
+                                            <div id="pre-footer-1" class="col-sm-6 col-md-3 col-extra-padding match-height" style="height: 484px;">
+                                                            <div id="block-10" class="block">
+            <h6 class="bk-heading">
+            CÔNG TY CP TRÀ CÀ PHÊ AN NHIÊN
+        </h6>
+    
+    <div>133/2 Hòa Hưng, phường 12, quận 10, Tp. Hồ Chí Minh</div>
+
+<hr class="spacer-10">
+<div>GPĐKKD: 0314890307 do Sở KHĐT TPHCM cấp ngày 12/02/2018</div>
+
+<hr class="spacer-10">
+<div>Điện thoại: (+84) 0975 25 44 25</div>
+
+<hr class="spacer-10">
+<div>MST: 031 489 0307</div>
+
+<hr class="spacer-10"><!-- <div style="text-align: center;"> <img alt="" class="img-responsive center-block" src="https://annicoffee.com/public/upload/images/home-page/bo-cong-thuong.png" style="margin: 5px; width: 200px; height: 76px;" />
+</div>
+-->
+<div style="padding-top: 5px;"><a class="dmca-badge" href="https://www.dmca.com/Protection/Status.aspx?ID=afce061c-83c5-4f4b-8284-b1d8bbd37155&amp;refurl=https://annicoffee.com/" title="DMCA.com Protection Status"><img alt="DMCA.com Protection Status" src="https://images.dmca.com/Badges/dmca-badge-w100-5x1-01.png?ID=afce061c-83c5-4f4b-8284-b1d8bbd37155"></a> <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script></div>
+
+</div>                                                    </div>
+                    
+                                            <div id="pre-footer-2" class="col-sm-6 col-md-3 col-extra-padding match-height" style="height: 484px;">
+                                                            <div id="block-12" class="block">
+            <h6 class="bk-heading">
+            LIÊN KẾT
+        </h6>
+    
+    
+    <ul class="list list-angle"><li><a href="https://annicoffee.com/tuyen-dung">Tuyển dụng</a></li><li><a href="https://annicoffee.com/gioi-thieu.html">Giới thiệu</a></li><li><a href="#">Danh sách đại lý</a></li><li><a href="https://annicoffee.com/chinh-sach/chinh-sach-doi---tra-hang.html">Chính sách bảo hành và đổi trả</a></li><li><a href="https://annicoffee.com/chinh-sach/chinh-sach-mua-ban-hang-hoa.html">Điều khoản dịch vụ </a></li><li><a href="https://annicoffee.com/chinh-sach/chinh-sach-bao-mat-thong-tin.html">Chính sách bảo mật</a></li><li><a href="https://annicoffee.com/he-thong-anni-coffee/lien-he.html">Liên hệ</a></li></ul>
+</div>                                                    </div>
+                    
+                                            <div id="pre-footer-3" class="col-sm-6 col-md-3 col-extra-padding match-height" style="height: 484px;">
+                                                            <div id="block-11" class="block">
+            <h6 class="bk-heading">
+            THÔNG TIN LIÊN HỆ
+        </h6>
+    
+    <div><span class="fa fa-map-marker" style="color:rgb(0, 0, 0);"></span> 133/2 Hòa Hưng, phường 12, quận 10, Hồ Chí Minh</div>
+
+<hr class="spacer-10">
+<div><span class="fa fa-mobile-phone" style="color:rgb(0, 0, 0);"></span> Hotline: <a class="text-gray" href="tel:(+84) 28.668.50.889">(+84) 028.668.50.889</a></div>
+
+<hr class="spacer-10">
+<div><span class="fa fa-envelope" style="color:rgb(0, 0, 0);"></span> business@annicoffee.vn</div>
+
+<hr class="spacer-10">
+<div>
+<p><a href="https://web.facebook.com/annicoffee" target="_blank"><i class="fab fa-facebook" style="font-size: 50px;"></i></a>&nbsp; &nbsp;<i class="fab fa-zalo" style="font-size: 50px;"></i>&nbsp; &nbsp;<i class="fab fa-instagram-square" style="font-size: 50px;"></i>&nbsp;&nbsp;<i class="fab fa-tiktok" style="font-size: 50px;"></i> <a href="https://maps.app.goo.gl/ZgFw9AxD1CJVaNdJ6" target="_blank"><i class="fas fa-map-location" style="font-size: 50px;"></i></a></p>
+</div>
+
+</div>                                                    </div>
+                    
+                                            <div id="pre-footer-4" class="col-sm-6 col-md-3 col-extra-padding match-height" style="height: 484px;">
+                                                            <div id="block-60" class="block">
+            <h6 class="bk-heading">
+            FANPAGE
+        </h6>
+    
+    <div class="facebook-page">
+        <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/annicoffee" data-adapt-container-width="true" data-small-header="false" data-hide-cover="false" data-show-facepile="true" data-tabs="" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=363579603845564&amp;container_width=0&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fannicoffee&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs="><span style="vertical-align: bottom; width: 340px; height: 130px;"><iframe name="fa31846f73fb965d7" width="1000px" height="1000px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v11.0/plugins/page.php?adapt_container_width=true&amp;app_id=363579603845564&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df348b386467d66c1c%26domain%3Dannicoffee.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fannicoffee.com%252Ff7307a8adcec7297b%26relation%3Dparent.parent&amp;container_width=0&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fannicoffee&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=" style="border: none; visibility: visible; width: 340px; height: 130px;" class=""></iframe></span></div>
+    </div>
+</div>                                                                <div id="block-115" class="block">
+            <h6 class="bk-heading">
+            Anni Coffee Trên Google map
+        </h6>
+    
+    <div style="text-align: center;"><iframe allowfullscreen="" height="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18643.067089138596!2d106.65391266854989!3d10.79429647670326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f79f073c1ff%3A0x73c985945c9ec4fe!2zQ-G7rWEgSMOgbmcgQ8OgIFBow6ogQW5uaSBDb2ZmZWU!5e0!3m2!1svi!2s!4v1716792977855!5m2!1svi!2s" style="border:0;" width="auto"></iframe></div>
+
+</div>                                                    </div>
+                                    </div>
+
+                                    <div class="row row-extra-gutters">
+                        <div id="pre-footer-5" class="col-sm-12 col-extra-padding">
+                                                            <div id="block-62" class="block text-center">
+            <h6 class="bk-heading">
+            CHỨNG NHẬN
+        </h6>
+    
+    <div class="row">
+<div class="col-xs-4 col-sm-4">
+<p style="text-align: center;"><img alt="" class="img-responsive center-block" src="https://annicoffee.com/public/upload/images/layout-1/d791b972-attp-anni-coffee-230x300.jpg"></p>
+</div>
+
+<div class="col-xs-4 col-sm-4">
+<p style="text-align: center;"><img alt="" class="img-responsive center-block" src="https://annicoffee.com/public/upload/images/layout-1/6947911a-iso-225x300.jpg"></p>
+</div>
+
+<div class="col-xs-4 col-sm-4">
+<p style="text-align: center;"><img alt="" class="img-responsive center-block" src="https://annicoffee.com/public/upload/images/layout-1/5e2a71bb-fda-giay-chung-nhan-232x300.png"></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col-xs-4 col-sm-4">
+<p style="text-align: center;"><img alt="" class="img-responsive center-block" src="https://annicoffee.com/public/upload/images/layout-1/156a7250-giay-chung-nhan-224x300.jpg"></p>
+</div>
+
+<div class="col-xs-4 col-sm-4">
+<p style="text-align: center;"><img alt="" class="img-responsive center-block" src="https://annicoffee.com/public/upload/images/layout-1/918d1356-non-gmp-234x300.jpg"></p>
+</div>
+</div>
+
+</div>                                                            <div id="block-111" class="block text-center">
+    
+    <div class="text-center">
+<div class="tb" style="margin-bottom: 15px;">
+<div class="tb-cell v-bottom hidden-w767"><a class="logofont" href="https://vtechweb.com">ANNI COFFEE </a></div>
+
+<div class="tb-cell v-bottom">
+<div class="links"><a class="link" href="https://nhakhoalovely.com" target="_blank">Sự kiện</a> <a class="link" href="#" target="_blank">Chính sách đại lý</a> <a class="link" href="https://annicoffee.com/tuyen-dung" target="_blank">Tuyển dụng</a> <a class="link" href="https://annicoffee.com/he-thong-anni-coffee/lien-he.html">Liên hệ</a></div>
+</div>
+</div>
+
+<div class="text-center" style="padding: 20px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin-bottom: 15px;">
+<div class="tb">
+<div class="tb-cell v-middle">
+<div class="brands"><a class="brand" href="#" target="_blank"><i class="fab fa-facebook-square"></i></a> <a class="brand" href="#" target="_blank"><i class="fab fa-tiktok"></i></a> <a class="brand" href="#" target="_blank"><i class="fab fa-instagram"></i></a> <a class="brand" href="https://annicoffee.com" target="_blank"><i class="fab fa-zalo"></i></a> <a class="brand" href="https://www.youtube.com/channel/UCwFgR0QxSDA6NkZd9Ofe1RQ" target="_blank"><i class="fab fa-youtube"></i></a></div>
+</div>
+</div>
+</div>
+</div>
+
+</div>                                                    </div>
+                    </div>
+                                    </div>
+
+        <div class="container">
+            <div class="row row-extra-gutters">
+                <div class="col-sm-12 col-extra-padding">
+                    <div class="legal">
+            <p class="copyright">
+                            © Bản quyền nội dung thuộc về Anni Coffee .
+                    </p>
+
+        <p class="copyright">
+            Vận hành bởi <a class="copyright-link" href="http://vtechweb.com" target="_blank">Vtech Web</a>.
+        </p>
+    </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</footer>    </div>
+
+    <div id="clipboard" class="lightbox-wrap" style="display:none;">
+        <div class="lightbox-container">
+            <div class="lightbox"> <i class="ic ic-check"></i>
+                <h4>Copied</h4>
+                <p>Đã sao chép liên kết thành công</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="back-to-top"></a>
+
+    <!-- Javascripts -->
+    <script type="text/javascript" src="https://annicoffee.com/public/templates/frontend/clearly-bs3/js/pushy/pushy.min.js?v=1647878706"></script>
+        
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NPXL1EB0LM">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NPXL1EB0LM');
+</script>
+<!-- End code Analytic Google -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-LQRKPWSETE">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LQRKPWSETE');
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XN0FWT87BM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XN0FWT87BM');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3R471QM5ZH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3R471QM5ZH');
+</script>
+
+    
+
+</body></html>

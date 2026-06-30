@@ -1,0 +1,69 @@
+# BEGIN WP Hide & Security Enhancer
+<IfModule mod_rewrite.c> 
+RewriteEngine On 
+RewriteBase / 
+#WriteCheckString:1753240345_72404
+RewriteRule ^rewrite_test_1753240345_72404/? /wp-content/plugins/wp-hide-security-enhancer/include/rewrite-confirm.php [L,QSA]
+RewriteRule ^rewrite_test_static_file_1753240345_72404/? /wp-content/plugins/wp-hide-security-enhancer/composer.json [L,QSA]
+
+RewriteRule ^template/(.+) /wp-content/themes/woodmart/$1 [L,QSA]
+
+RewriteRule ^modules/module773/(.+) /wp-content/plugins/contact-form-7/$1 [L,QSA]
+RewriteRule ^modules/module442/(.+) /wp-content/plugins/elementor-pro/$1 [L,QSA]
+RewriteRule ^modules/module392/(.+) /wp-content/plugins/elementor/$1 [L,QSA]
+RewriteRule ^modules/module416/(.+) /wp-content/plugins/insta-gallery/$1 [L,QSA]
+RewriteRule ^modules/module998/(.+) /wp-content/plugins/revslider/$1 [L,QSA]
+RewriteRule ^modules/module206/(.+) /wp-content/plugins/safe-svg/$1 [L,QSA]
+RewriteRule ^modules/module212/(.+) /wp-content/plugins/user-role-editor/$1 [L,QSA]
+RewriteRule ^modules/module764/(.+) /wp-content/plugins/woocommerce/$1 [L,QSA]
+RewriteRule ^modules/module469/(.+) /wp-content/plugins/woodmart-core/$1 [L,QSA]
+RewriteRule ^modules/module227/(.+) /wp-content/plugins/wp-file-manager/$1 [L,QSA]
+RewriteRule ^modules/module355/(.+) /wp-content/plugins/wps-hide-login/$1 [L,QSA]
+RewriteRule ^extension/(.+) /wp-content/plugins/$1 [L,QSA]
+
+RewriteRule ^resources/(.+) /wp-includes/$1 [L,QSA]
+
+RewriteRule ^media/(.+) /wp-content/uploads/$1 [L,QSA]
+
+RewriteRule ^xmlrpc.php - [R=404]
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^license.txt /index.php?wph-throw-404 [L]
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^readme.html /index.php?wph-throw-404 [L]
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^wp-activate.php /index.php?wph-throw-404 [L]
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^wp-signup.php /index.php?wph-throw-404 [L]
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^wp-register.php /index.php?wph-throw-404 [L]
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} !wp-activate.php [NC]
+RewriteCond %{REQUEST_FILENAME} !wp-cron.php [NC]
+RewriteCond %{REQUEST_FILENAME} !wp-signup.php [NC]
+RewriteCond %{REQUEST_FILENAME} !wp-register.php [NC]
+RewriteCond %{REQUEST_FILENAME} !wp-comments-post.php [NC]
+RewriteCond %{REQUEST_FILENAME} !wp-login.php [NC]
+RewriteRule ^wp-([a-z-])+.php /index.php?wph-throw-404 [L]
+
+RewriteRule ^user-input.php /wp-comments-post.php [L,QSA]
+
+RewriteRule ^content/(.+) /wp-content/$1 [L,QSA]
+</IfModule> 
+
+# END WP Hide & Security Enhancer
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

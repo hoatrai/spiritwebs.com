@@ -1,0 +1,1150 @@
+<!DOCTYPE html><html lang="vi-VN" ng-app="ndtApp" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <title>Home Page | CÔNG TY CỔ PHẦN CƠ ĐIỆN MIỀN TRUNG CEMC</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="description" content="Cùng Bạn Vươn Tới Thành Công">
+    <meta name="keywords" content="Reach Success Together">
+    <meta name="copyright" content="BẢN QUYỀN 2016 CÔNG TY CỔ PHẦN CƠ ĐIỆN MIỀN TRUNG">
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css">
+
+    <link href="/Content/SiteStyle?v=XRcavJTOP7mBjMr_M3kxXn9DuZkAOXE6pHkQFW7_1Bc1" rel="stylesheet">
+
+    <script src="/Scripts/SiteScripts?v=LazX0j0h7LxOm2-bR5KtwXFH7R7f2xavHVwYwWDmKZ81"></script>
+
+
+    <script>
+        var EGMobile = window.innerWidth < 755 ? true : false;
+    </script>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('.header-ctn .culture-icon').click(function () {
+                var expDate = 30;//30 days
+                var date = new Date();
+                date.setTime(date.getTime() + (expDate * 24 * 60 * 60 * 1000));
+                var expires = "; expires=" + date.toGMTString();
+                document.cookie = "_culture=" + $(this).attr('data-id') + expires + "; path=/";
+
+                window.location.reload();
+
+                return false;
+            });
+        });
+    </script>
+
+<style type="text/css">.imgLiquid img {visibility:hidden}</style></head>
+
+<body ng-controller="shopCtrl" class="font-end ng-scope">
+
+    <!-- #region Header -->
+
+    <header class="header-ctn">
+        <div class="top-ctn hidden-xs">
+            <div class="gb-page-width">
+                <div class="row-ctn">
+                    <div class="column col-1">
+                        <h3 class="slogan">Chúng tôi có gần 30 năm kinh nghiệm</h3>
+                    </div>
+                    <div class="column col-2 text-right">
+                        <a href="#" class="culture-icon vi-vn" data-id="vi-vn">Tiếng Việt</a> &nbsp;|&nbsp;
+                        <a href="#" class="culture-icon en-us" data-id="en-us">English</a> &nbsp;|&nbsp;
+                        <a href="#">Sitemap</a> &nbsp;|&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="middle-ctn">
+            <div class="gb-page-width">
+
+                <!-- #region Mobile Drawer -->
+
+                <div class="nav-drawer-icon visible-xs">
+                    <div class="line"></div>
+                </div>
+
+                <div class="nav-drawer-ctn visible-xs">
+                    <div class="language-ctn">
+                        <a href="#" class="culture-icon vi-vn" data-id="vi-vn">Tiếng Việt</a> &nbsp;|&nbsp;
+                        <a href="#" class="culture-icon en-us" data-id="en-us">English</a> &nbsp;|&nbsp;
+                    </div>
+
+                    <ul>
+                        <li class="item current root"><a class="item current" href="/index">Trang chủ</a></li>
+                        <li class="item root">
+                            <a class="item" href="/about/">Giới thiệu</a>
+                            <ul class="category-ctn ">
+        <li class="category-item category-level-1 item-first item-even item-0">
+            <a class="category-item category-level-1 item-first item-even item-0" href="/about/catid/ab6abca5/1/gioi-thieu-chung">Giới thiệu chung</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-1">
+            <a class="category-item category-level-1 item-odd item-1" href="/about/catid/908751f3/1/lich-su-phat-trien">Lịch sử phát triển</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-2">
+            <a class="category-item category-level-1 item-even item-2" href="/about/catid/6239dcf6/1/chinh-sach-chat-luong">Chính sách chất lượng</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-3">
+            <a class="category-item category-level-1 item-odd item-3" href="/about/catid/46b43755/1/tam-nhin--su-menh--gia-tri">Tầm nhìn - sứ mệnh - giá trị</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-4">
+            <a class="category-item category-level-1 item-even item-4" href="/about/catid/6c186157/1/so-do-to-chuc">Sơ đồ tổ chức</a>
+        </li>
+        <li class="category-item category-level-1 item-last item-odd item-5">
+            <a class="category-item category-level-1 item-last item-odd item-5" href="/about/catid/ccfee47a/1/ho-so-nang-luc-cong-ty">Hồ Sơ Năng Lực Công Ty</a>
+        </li>
+</ul>
+                        </li>
+                        <li class="item root">
+                            <a class="item" href="/service/">Sản phẩm - Dịch vụ</a>
+                            <ul class="category-ctn ">
+        <li class="category-item category-level-1 item-first item-even item-0">
+            <a class="category-item category-level-1 item-first item-even item-0" href="/service/catid/87cb9f53/1/phan-xuong-ma-kem">Phân Xưởng Mạ Kẽm</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-1">
+            <a class="category-item category-level-1 item-odd item-1" href="/service/catid/7baf9a1a/1/phan-xuong-co-khi-ket-cau">Phân Xưởng Cơ Khí Kết Cấu</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-2">
+            <a class="category-item category-level-1 item-even item-2" href="/service/catid/177bdbd9/1/phan-xuong-nhua-plastic">Phân Xưởng Nhựa Plastic</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-3">
+            <a class="category-item category-level-1 item-odd item-3" href="/service/catid/d147d74e/1/dich-vu--thuong-mai">Dịch vụ - Thương mại</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-4">
+            <a class="category-item category-level-1 item-even item-4" href="/service/catid/c3e10186/1/vat-lieu--thiet-bi-dien">Vật liệu - Thiết bị điện</a>
+        </li>
+        <li class="category-item category-level-1 item-last item-odd item-5">
+            <a class="category-item category-level-1 item-last item-odd item-5" href="/service/catid/af64e1ae/1/cong-trinh-tieu-bieu">Công trình tiêu biểu</a>
+        </li>
+</ul>
+                        </li>
+                        <li class="item root">
+                            <a class="item" href="/project/">Dự án và Năng lực</a>
+                            <ul class="category-ctn ">
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/9cae0fbb/1/">Công trình đang thực hiện</a>
+        </li>
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/fce32898/1/">Công trình đã thực hiện</a>
+        </li>
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/a534c772/1/">Máy móc thiết bị</a>
+        </li>
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/79b36e0d/1/">Dây chuyền công nghệ</a>
+        </li>
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/8b1c51fa/1/">Dự án đầu tư</a>
+        </li>
+</ul>
+                        </li>
+                        <li class="item root">
+                            <a class="item" href="/news/">Tin tức</a>
+                            <ul class="category-ctn ">
+        <li class="category-item category-level-1 item-first item-even item-0">
+            <a class="category-item category-level-1 item-first item-even item-0" href="/news/catid/61506da8/1/tin-cong-ty">Tin công ty</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-1">
+            <a class="category-item category-level-1 item-odd item-1" href="/news/catid/9d850092/1/tin-kinh-te-xa-hoi">Tin kinh tế xã hội</a>
+        </li>
+        <li class="category-item category-level-1 item-last item-even item-2">
+            <a class="category-item category-level-1 item-last item-even item-2" href="/news/catid/1e906f66/1/tin-tuyen-dung">Tin tuyển dụng</a>
+        </li>
+</ul>
+                        </li>
+                        <li class="item root">
+                            <a class="item" href="/shareholder/">Quan hệ cổ đông</a>
+                            <ul class="category-ctn ">
+        <li class="category-item category-level-1 item-first item-even item-0">
+            <a class="category-item category-level-1 item-first item-even item-0" href="/shareholder/catid/cdce7ddd/1/dieu-le-cemc">Điều lệ CEMC</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-1">
+            <a class="category-item category-level-1 item-odd item-1" href="/shareholder/catid/251ae76b/1/ban-cao-bach-cemc">Bản cáo bạch CEMC</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-2">
+            <a class="category-item category-level-1 item-even item-2" href="/shareholder/catid/9140bbd/1/bao-cao-thuong-nien">Báo cáo thường niên</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-3">
+            <a class="category-item category-level-1 item-odd item-3" href="/shareholder/catid/6f7258a8/1/bao-cao-tai-chinh">Báo cáo tài chính</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-4">
+            <a class="category-item category-level-1 item-even item-4" href="/shareholder/catid/36880e35/1/tai-lieu-hop-dhcd">Tài liệu họp ĐHCĐ</a>
+        </li>
+        <li class="category-item category-level-1 item-last item-odd item-5">
+            <a class="category-item category-level-1 item-last item-odd item-5" href="/shareholder/catid/cd4dff2d/1/thong-tin-danh-cho-co-dong">Thông tin dành cho cổ đông</a>
+        </li>
+</ul>
+                        </li>
+                        <li class="item root"><a class="item" href="/contact">Liên Hệ</a></li>
+                    </ul>
+
+                    <div style="clear:both;height:180px;"></div>
+                </div>
+
+                <!-- #endregion -->
+
+                <div class="mobile-logo visible-xs">
+                    <a href="http://www.cemc.com.vn"><img src="/s-media/f19260e3_logo-cemc-icon-01.jpg" class="logo"></a>
+                </div>
+
+                <div class="row-ctn hidden-xs">
+                    <div class="column col-1">
+                        <a href="http://www.cemc.com.vn">
+                            
+                            <img src="/s-media/f19260e3_logo-cemc-icon-01.jpg" class="logo">
+                        </a>
+                    </div>
+                    <div class="column col-2">
+                        <table class="info-table">
+                            <tbody><tr>
+                                <td><div class="img-icon address"></div></td>
+                                <td>
+                                    <span style="text-transform:uppercase">Địa chỉ:</span><br>
+                                    <strong>KCN Hòa Cầm, P. Hòa Thọ Tây<br>Q. Cẩm Lệ, TP. Đà Nẵng</strong>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                    <div class="column col-3">
+                        <table class="info-table">
+                            <tbody><tr>
+                                <td><div class="img-icon phone"></div></td>
+                                <td>
+                                    <span style="text-transform:uppercase">Điện thoại:</span><br>
+                                    <strong>
+                                        Văn thư công ty: 0236.2218455<br>
+                                        Phòng Kinh Doanh: 0236.2218451
+                                    </strong>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                    <div class="column col-4">
+                        <table class="info-table" style="margin-top:27px;">
+                            <tbody><tr>
+                                <td><div class="img-icon email"></div></td>
+                                <td>
+                                    EMAIL:<br>
+                                    <strong><a href="mailto:codien@cemc.com.vn" style="color:#333333;">codien@cemc.com.vn</a> </strong>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-ctn hidden-xs">
+            <div class="gb-page-width">
+
+                <!-- #region Desktop Nav -->
+
+                <nav class="main-nav-ctn">
+                    <ul>
+                        <li class="item current root"><a class="item current" href="/index">Trang chủ</a></li>
+                        <li class="item root">
+                            <a class="item" href="/about/">Giới thiệu</a>
+                            <ul class="category-ctn ">
+        <li class="category-item category-level-1 item-first item-even item-0">
+            <a class="category-item category-level-1 item-first item-even item-0" href="/about/catid/ab6abca5/1/gioi-thieu-chung">Giới thiệu chung</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-1">
+            <a class="category-item category-level-1 item-odd item-1" href="/about/catid/908751f3/1/lich-su-phat-trien">Lịch sử phát triển</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-2">
+            <a class="category-item category-level-1 item-even item-2" href="/about/catid/6239dcf6/1/chinh-sach-chat-luong">Chính sách chất lượng</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-3">
+            <a class="category-item category-level-1 item-odd item-3" href="/about/catid/46b43755/1/tam-nhin--su-menh--gia-tri">Tầm nhìn - sứ mệnh - giá trị</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-4">
+            <a class="category-item category-level-1 item-even item-4" href="/about/catid/6c186157/1/so-do-to-chuc">Sơ đồ tổ chức</a>
+        </li>
+        <li class="category-item category-level-1 item-last item-odd item-5">
+            <a class="category-item category-level-1 item-last item-odd item-5" href="/about/catid/ccfee47a/1/ho-so-nang-luc-cong-ty">Hồ Sơ Năng Lực Công Ty</a>
+        </li>
+</ul>
+                        </li>
+                        <li class="item root">
+                            <a class="item" href="/service/">Sản phẩm - Dịch vụ</a>
+                            <ul class="category-ctn ">
+        <li class="category-item category-level-1 item-first item-even item-0">
+            <a class="category-item category-level-1 item-first item-even item-0" href="/service/catid/87cb9f53/1/phan-xuong-ma-kem">Phân Xưởng Mạ Kẽm</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-1">
+            <a class="category-item category-level-1 item-odd item-1" href="/service/catid/7baf9a1a/1/phan-xuong-co-khi-ket-cau">Phân Xưởng Cơ Khí Kết Cấu</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-2">
+            <a class="category-item category-level-1 item-even item-2" href="/service/catid/177bdbd9/1/phan-xuong-nhua-plastic">Phân Xưởng Nhựa Plastic</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-3">
+            <a class="category-item category-level-1 item-odd item-3" href="/service/catid/d147d74e/1/dich-vu--thuong-mai">Dịch vụ - Thương mại</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-4">
+            <a class="category-item category-level-1 item-even item-4" href="/service/catid/c3e10186/1/vat-lieu--thiet-bi-dien">Vật liệu - Thiết bị điện</a>
+        </li>
+        <li class="category-item category-level-1 item-last item-odd item-5">
+            <a class="category-item category-level-1 item-last item-odd item-5" href="/service/catid/af64e1ae/1/cong-trinh-tieu-bieu">Công trình tiêu biểu</a>
+        </li>
+</ul>
+                        </li>
+                        <li class="item root">
+                            <a class="item" href="/project/">Dự án và Năng lực</a>
+                            <ul class="category-ctn ">
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/9cae0fbb/1/">Công trình đang thực hiện</a>
+        </li>
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/fce32898/1/">Công trình đã thực hiện</a>
+        </li>
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/a534c772/1/">Máy móc thiết bị</a>
+        </li>
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/79b36e0d/1/">Dây chuyền công nghệ</a>
+        </li>
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/8b1c51fa/1/">Dự án đầu tư</a>
+        </li>
+</ul>
+                        </li>
+                        <li class="item root">
+                            <a class="item" href="/news/">Tin tức</a>
+                            <ul class="category-ctn ">
+        <li class="category-item category-level-1 item-first item-even item-0">
+            <a class="category-item category-level-1 item-first item-even item-0" href="/news/catid/61506da8/1/tin-cong-ty">Tin công ty</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-1">
+            <a class="category-item category-level-1 item-odd item-1" href="/news/catid/9d850092/1/tin-kinh-te-xa-hoi">Tin kinh tế xã hội</a>
+        </li>
+        <li class="category-item category-level-1 item-last item-even item-2">
+            <a class="category-item category-level-1 item-last item-even item-2" href="/news/catid/1e906f66/1/tin-tuyen-dung">Tin tuyển dụng</a>
+        </li>
+</ul>
+                        </li>
+                        <li class="item root">
+                            <a class="item" href="/shareholder/">Quan hệ cổ đông</a>
+                            <ul class="category-ctn ">
+        <li class="category-item category-level-1 item-first item-even item-0">
+            <a class="category-item category-level-1 item-first item-even item-0" href="/shareholder/catid/cdce7ddd/1/dieu-le-cemc">Điều lệ CEMC</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-1">
+            <a class="category-item category-level-1 item-odd item-1" href="/shareholder/catid/251ae76b/1/ban-cao-bach-cemc">Bản cáo bạch CEMC</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-2">
+            <a class="category-item category-level-1 item-even item-2" href="/shareholder/catid/9140bbd/1/bao-cao-thuong-nien">Báo cáo thường niên</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-3">
+            <a class="category-item category-level-1 item-odd item-3" href="/shareholder/catid/6f7258a8/1/bao-cao-tai-chinh">Báo cáo tài chính</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-4">
+            <a class="category-item category-level-1 item-even item-4" href="/shareholder/catid/36880e35/1/tai-lieu-hop-dhcd">Tài liệu họp ĐHCĐ</a>
+        </li>
+        <li class="category-item category-level-1 item-last item-odd item-5">
+            <a class="category-item category-level-1 item-last item-odd item-5" href="/shareholder/catid/cd4dff2d/1/thong-tin-danh-cho-co-dong">Thông tin dành cho cổ đông</a>
+        </li>
+</ul>
+                        </li>
+                        <li class="item root"><a class="item" href="/contact">Liên Hệ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- #endregion -->
+            </div>
+        </div>
+    </header>
+
+    <!-- #endregion -->
+    <!-- #region Body -->
+
+    <div class="body-ctn">
+        
+
+<!-- #region Banner Camera -->
+
+<link href="/Scripts/camera-slide/camera.css" rel="stylesheet">
+<script src="/Scripts/camera-slide/camera.min.js"></script>
+<script src="/Scripts/camera-slide/jquery.easing.1.3.js"></script>
+    <div class="home-banner-ctn">
+        <div class="banner-ctn camera_wrap camera_azure_skin" style="display: block; height: 340px;"><div class="camera_fakehover"><div class="camera_src camerastarted">
+                <div data-src="/s-media/7337f775_cemc-dong-vien-nld-du-an-500-kv-mach-3-1280-400.jpg">
+                    
+                </div>
+                <div data-src="/s-media/a11b3da9_cemc-phat-dong-thi-dua-mach-3-1280-400-00-copy.jpg">
+                    
+                </div>
+                <div data-src="/s-media/cab47b55_cemc-giao-hang-cau-nguyen-hoang-1280-400-01-copy.jpg">
+                    <div class="info-ctn">
+                        <h2 class="gb-title-medium"></h2>
+                        <p class="summary"></p>
+                    </div>
+                </div>
+                <div data-src="/s-media/636bb515_anh-cong-ty-1.jpg">
+                    <div class="info-ctn">
+                        <h2 class="gb-title-medium"></h2>
+                        <p class="summary"></p>
+                    </div>
+                </div>
+                <div data-src="/s-media/950152fa_song-tranh-4-banner.jpg">
+                    <div class="info-ctn">
+                        <h2 class="gb-title-medium"></h2>
+                        <p class="summary"></p>
+                    </div>
+                </div>
+                <div data-src="/s-media/31f61f0a_img20190803081022-banner.jpg">
+                    <div class="info-ctn">
+                        <h2 class="gb-title-medium"></h2>
+                        <p class="summary"></p>
+                    </div>
+                </div>
+                <div data-src="/s-media/3eeab8a5_004.jpg">
+                    <div class="info-ctn">
+                        <h2 class="gb-title-medium"></h2>
+                        <p class="summary"></p>
+                    </div>
+                </div>
+                <div data-src="/s-media/52df7dbe_img20190705083856-banner.jpg">
+                    <div class="info-ctn">
+                        <h2 class="gb-title-medium"></h2>
+                        <p class="summary"></p>
+                    </div>
+                </div>
+                <div data-src="/s-media/b6c31165_001.jpg">
+                    <div class="info-ctn">
+                        <h2 class="gb-title-medium"></h2>
+                        <p class="summary"></p>
+                    </div>
+                </div>
+                <div data-src="/s-media/4c2c2318_img20190803082427-banner.jpg">
+                    <div class="info-ctn">
+                        <h2 class="gb-title-medium"></h2>
+                        <p class="summary"></p>
+                    </div>
+                </div>
+                <div data-src="/s-media/5a70ed0c_010.jpg">
+                    <div class="info-ctn">
+                        <h2 class="gb-title-medium"></h2>
+                        <p class="summary"></p>
+                    </div>
+                </div>
+                <div data-src="/s-media/717a0875_cau-vang-banner-.jpg">
+                    <div class="info-ctn">
+                        <h2 class="gb-title-medium"></h2>
+                        <p class="summary"></p>
+                    </div>
+                </div>
+                <div data-src="/s-media/7b1ac1d_006.jpg">
+                    <div class="info-ctn">
+                        <h2 class="gb-title-medium"></h2>
+                        <p class="summary"></p>
+                    </div>
+                </div>
+                <div data-src="/s-media/f9d16094_cemc-chuc-mung-nam-moi-1280-400-copy.png">
+                    <div class="info-ctn">
+                        <h2 class="gb-title-medium"></h2>
+                        <p class="summary"></p>
+                    </div>
+                </div>
+        </div><div class="camera_target"><div class="cameraCont"><div class="cameraSlide cameraSlide_0" style="visibility: visible; display: none; z-index: 1; margin-left: 0px; margin-top: 0px;"><img src="/s-media/7337f775_cemc-dong-vien-nld-du-an-500-kv-mach-3-1280-400.jpg?1774382049961" class="imgLoaded" data-alignment="" data-portrait="" width="1280" height="400" style="visibility: visible; height: 400px; margin-left: 0px; margin-top: -30px; position: absolute; width: 1280px;"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div><div class="cameraSlide cameraSlide_1 cameracurrent" style="display: block; z-index: 999;"><img src="/s-media/a11b3da9_cemc-phat-dong-thi-dua-mach-3-1280-400-00-copy.jpg?1774382052178" class="imgLoaded" data-alignment="" data-portrait="" width="1280" height="400" style="visibility: visible; height: 400px; margin-top: -30px; position: absolute; margin-left: 0px; width: 1280px;"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div><div class="cameraSlide cameraSlide_2 cameranext" style="display: none;"><img src="/s-media/cab47b55_cemc-giao-hang-cau-nguyen-hoang-1280-400-01-copy.jpg?1774382061458" class="imgLoaded" data-alignment="" data-portrait="" width="1280" height="400" style="visibility: visible; height: 400px; margin-left: 0px; margin-top: -30px; position: absolute; width: 1280px;"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div><div class="cameraSlide cameraSlide_3"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div><div class="cameraSlide cameraSlide_4"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div><div class="cameraSlide cameraSlide_5"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div><div class="cameraSlide cameraSlide_6"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div><div class="cameraSlide cameraSlide_7"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div><div class="cameraSlide cameraSlide_8"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div><div class="cameraSlide cameraSlide_9"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div><div class="cameraSlide cameraSlide_10"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div><div class="cameraSlide cameraSlide_11"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div><div class="cameraSlide cameraSlide_12"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div><div class="cameraSlide cameraSlide_13"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div><div class="cameraSlide cameraSlide_14" style="z-index: 1; display: none;"><div class="camerarelative" style="width: 1280px; height: 340px;"></div></div></div></div><div class="camera_overlayer"></div><div class="camera_target_content"><div class="cameraContents"><div class="cameraContent" style="display: none;"><div class="info-ctn">
+                        <h2 class="gb-title-medium"></h2>
+                        <p class="summary"></p>
+                    </div></div><div class="cameraContent cameracurrent" style="display: block;"><div class="info-ctn">
+                        <h2 class="gb-title-medium"></h2>
+                        <p class="summary"></p>
+                    </div></div><div class="cameraContent"></div><div class="cameraContent"></div><div class="cameraContent"></div><div class="cameraContent"></div><div class="cameraContent"></div><div class="cameraContent"></div><div class="cameraContent"></div><div class="cameraContent"></div><div class="cameraContent"></div><div class="cameraContent"></div><div class="cameraContent"></div><div class="cameraContent"></div></div></div><div class="camera_bar" style="display: none; top: auto; height: 7px;"><span class="camera_bar_cont" style="opacity: 0.8; position: absolute; inset: 0px; background-color: rgb(34, 34, 34);"><span id="pie_0" style="opacity: 0.8; position: absolute; background-color: rgb(238, 238, 238); inset: 0px 2px; display: none;"></span></span></div><div class="camera_commands" style="opacity: 0;"><div class="camera_play" style="display: none;"></div><div class="camera_stop" style="display: block;"></div></div><div class="camera_prev" style="opacity: 0;"><span></span></div><div class="camera_next" style="opacity: 0;"><span></span></div></div><div class="camera_loader" style="display: none; visibility: visible;"></div></div>
+
+        <script>
+                if ($('.banner-ctn div').size() > 0) {
+                    jQuery(function () {
+                        jQuery('.banner-ctn').camera({
+                            time: 6000,
+                            thumbnails: false,
+                            loader: 'none',
+                            width: '100%',
+                            height: '340px',
+                            barDirection: 'topToBottom',
+                            navigation: true,
+                            playPause: true,
+                            pagination: false
+                        });
+                    });
+                }
+        </script>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="intro-ctn">
+        <div class="row-ctn">
+            <div class="column col-1">
+                <div class="icon dollar"></div>
+                <div class="info">
+                    <div>Vốn hóa</div>
+                    <strong>68+</strong>
+                    <div>tỷ đồng</div>
+                </div>
+            </div>
+            <div class="column col-2">
+                <div class="icon profit"></div>
+                <div class="info">
+                    <div>Doanh thu</div>
+                    <strong>360+</strong>
+                    <div>tỷ đồng</div>
+                </div>
+            </div>
+            <div class="column col-3">
+                <div class="icon people"></div>
+                <div class="info">
+                    <div>Nhân sự</div>
+                    <strong>340+</strong>
+                    <div>người</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+
+<!-- #endregion -->
+<!-- #region Banner Slick -->
+
+
+<!-- #endregion -->
+
+
+        <div class="content-pane">
+            
+
+
+<script src="/Scripts/other/imgLiquid-min.js"></script>
+
+<link href="/Scripts/slick/slick.css" rel="stylesheet">
+
+<script src="/Scripts/slick/slick.min.js"></script>
+
+
+<style>
+    .intro-ctn{display:block;}
+    @media screen and (max-width: 767px){
+        .intro-ctn{display:none;}
+    }
+</style>
+
+
+<div class="home-ctn">
+    <div class="service-ctn">
+        <div class="gb-page-width">
+            <h2 class="gb-title-large text-center">Sản phẩm - dịch vụ</h2>
+
+            <div class="category-ctn text-center">
+                        <span class="cat-item">
+                            <a href="/service/catid/87cb9f53/1/phan-xuong-ma-kem">Phân Xưởng Mạ Kẽm</a>
+                        </span>
+                        <span class="cat-item">
+                            <a href="/service/catid/7baf9a1a/1/phan-xuong-co-khi-ket-cau">Phân Xưởng Cơ Khí Kết Cấu</a>
+                        </span>
+                        <span class="cat-item">
+                            <a href="/service/catid/177bdbd9/1/phan-xuong-nhua-plastic">Phân Xưởng Nhựa Plastic</a>
+                        </span>
+                        <span class="cat-item">
+                            <a href="/service/catid/d147d74e/1/dich-vu--thuong-mai">Dịch vụ - Thương mại</a>
+                        </span>
+                        <span class="cat-item">
+                            <a href="/service/catid/c3e10186/1/vat-lieu--thiet-bi-dien">Vật liệu - Thiết bị điện</a>
+                        </span>
+                        <span class="cat-item">
+                            <a href="/service/catid/af64e1ae/1/cong-trinh-tieu-bieu">Công trình tiêu biểu</a>
+                        </span>
+            </div>
+
+            <div class="item-ctn">
+                        <article class="item">
+                            <div class="img-ctn">
+                                <a href="/service/serid/18479fd1/1/che-tao-va-cung-cap-ket-cau-thep-du-thuyen--khu-phuc-hop-du-lich-nghi-duong-vinpearl-nam-hoi-an">
+                                    <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/9c7b9864_du-thuyen-chinh-sua-1.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                        <img src="/s-media/9c7b9864_du-thuyen-chinh-sua-1.jpg" style="display: none;">
+                                    </div>
+                                </a>
+                            </div>
+
+                            <a href="/service/serid/18479fd1/1/che-tao-va-cung-cap-ket-cau-thep-du-thuyen--khu-phuc-hop-du-lich-nghi-duong-vinpearl-nam-hoi-an" class="name">Chế tạo và cung cấp kết cấu thép du thuyền - Khu phức hợp du lịch nghỉ dưỡng Vinpearl Nam Hội An</a>
+
+                            <p class="summary"></p>
+
+                            <a href="/service/serid/18479fd1/1/che-tao-va-cung-cap-ket-cau-thep-du-thuyen--khu-phuc-hop-du-lich-nghi-duong-vinpearl-nam-hoi-an" class="btn-details">Chi tiết</a>
+                        </article>
+                        <article class="item">
+                            <div class="img-ctn">
+                                <a href="/service/serid/1b273140/1/cong-trinh-nhiet-dien-o-mon">
+                                    <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/aa58025d_1-doan-ong-thong-khi.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                        <img src="/s-media/aa58025d_1-doan-ong-thong-khi.jpg" style="display: none;">
+                                    </div>
+                                </a>
+                            </div>
+
+                            <a href="/service/serid/1b273140/1/cong-trinh-nhiet-dien-o-mon" class="name">CÔNG TRÌNH NHIỆT ĐIỆN Ô MÔN</a>
+
+                            <p class="summary">Chế tạo và cung cấp các kết cấu thép Vỏ bọc bao hơi và giá đỡ (Casing boiler), Ống dẫn không khí và giá đỡ (Duct and support), Bộ lọc bụi tĩnh điện (ESP), Hệ thống khử khí lưu huỳnh (FGD).</p>
+
+                            <a href="/service/serid/1b273140/1/cong-trinh-nhiet-dien-o-mon" class="btn-details">Chi tiết</a>
+                        </article>
+                        <article class="item">
+                            <div class="img-ctn">
+                                <a href="/service/serid/1df88cf8/1/thuy-dien-khe-bo">
+                                    <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/81b819f4_toan-canh-thuy-dien-khe-bo.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                        <img src="/s-media/81b819f4_toan-canh-thuy-dien-khe-bo.jpg" style="display: none;">
+                                    </div>
+                                </a>
+                            </div>
+
+                            <a href="/service/serid/1df88cf8/1/thuy-dien-khe-bo" class="name">Thủy điện Khe Bố</a>
+
+                            <p class="summary">Địa điểm xây dựng: Trên sông Cả thuộc địa phận xã Tam Quang, huyện Tương Dương, Nghệ An.</p>
+
+                            <a href="/service/serid/1df88cf8/1/thuy-dien-khe-bo" class="btn-details">Chi tiết</a>
+                        </article>
+                    <div style="clear:both;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-ctn">
+        <h2 class="gb-title-large text-center">Dự án và năng lực</h2>
+
+        <div class="outer-ctn">
+                    <article class="item">
+                        <div class="img-ctn">
+                            <a href="/project/projectid/9cae0fbb/1/cong-trinh-dang-thuc-hien">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/f11a588d_ibacabgefbacpm-img-0559.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/f11a588d_ibacabgefbacpm-img-0559.jpg" style="display: none;">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="border-ctn">
+                            <a href="/project/projectid/9cae0fbb/1/cong-trinh-dang-thuc-hien" class="name">Công trình đang thực hiện</a>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <div class="img-ctn">
+                            <a href="/project/projectid/fce32898/1/cong-trinh-da-thuc-hien">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/84a63808_ibacabgefccdpm-img-2571.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/84a63808_ibacabgefccdpm-img-2571.jpg" style="display: none;">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="border-ctn">
+                            <a href="/project/projectid/fce32898/1/cong-trinh-da-thuc-hien" class="name">Công trình đã thực hiện</a>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <div class="img-ctn">
+                            <a href="/project/projectid/a534c772/1/may-moc-thiet-bi">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/283faf9d_ibacabgefdbapm-cau-truc.JPG&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/283faf9d_ibacabgefdbapm-cau-truc.JPG" style="display: none;">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="border-ctn">
+                            <a href="/project/projectid/a534c772/1/may-moc-thiet-bi" class="name">Máy móc thiết bị</a>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <div class="img-ctn">
+                            <a href="/project/projectid/79b36e0d/1/day-chuyen-cong-nghe">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/ec73e0af_ibacabgefebjpm-img-0088.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/ec73e0af_ibacabgefebjpm-img-0088.jpg" style="display: none;">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="border-ctn">
+                            <a href="/project/projectid/79b36e0d/1/day-chuyen-cong-nghe" class="name">Dây chuyền công nghệ</a>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <div class="img-ctn">
+                            <a href="/project/projectid/8b1c51fa/1/du-an-dau-tu">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/e39fcdb6_ibacabgefefgpm-sara-rpsi.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/e39fcdb6_ibacabgefefgpm-sara-rpsi.jpg" style="display: none;">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="border-ctn">
+                            <a href="/project/projectid/8b1c51fa/1/du-an-dau-tu" class="name">Dự án đầu tư</a>
+                        </div>
+                    </article>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+
+    <div class="about-ctn">
+        <h2 class="gb-title-large text-center">Giới thiệu</h2>
+
+        <div class="red-ban"></div>
+
+        <div class="gb-page-width">
+            <div class="content-ctn">
+                <div class="left-cat">
+                        <ul>
+                                <li><a href="/about/catid/ab6abca5/1/gioi-thieu-chung" class="name">Giới thiệu chung</a></li>
+                                <li><a href="/about/catid/908751f3/1/lich-su-phat-trien" class="name">Lịch sử phát triển</a></li>
+                                <li><a href="/about/catid/6239dcf6/1/chinh-sach-chat-luong" class="name">Chính sách chất lượng</a></li>
+                                <li><a href="/about/catid/46b43755/1/tam-nhin--su-menh--gia-tri" class="name">Tầm nhìn - sứ mệnh - giá trị</a></li>
+                                <li><a href="/about/catid/6c186157/1/so-do-to-chuc" class="name">Sơ đồ tổ chức</a></li>
+                                <li><a href="/about/catid/ccfee47a/1/ho-so-nang-luc-cong-ty" class="name">Hồ Sơ Năng Lực Công Ty</a></li>
+                        </ul>
+                </div>
+                <div class="content">
+                        <h3 class="title">Giới thiệu chung</h3>
+                        <p>Công ty Cổ phần Cơ Điện Miền Trung (CEMC) tiền thân là Xí nghiệp Sửa chữa Cơ Điện thuộc Công ty Điện lực 3 được thành lập năm 1987 và chính thức thành lập Công ty Cổ phần vào năm 2006.</p>
+                        <p>Ngành nghề sản xuất kinh doanh chính của CEMC là Thiết kế, chế tạo, lắp đặt, sửa chữa các sản phầm và thiết bị cơ khí, thiết bị điện; Cung cấp các dịch vụ kỹ thuật liên quan đến lĩnh vực cơ khí và điện; Cung cấp dịch vụ vận tải; Kinh doanh xuất nhập khẩu vật tư, thiết bị cơ khí - điện lực. Hiện tại, CEMC được xem như một đơn vị tiêu biểu trong lĩnh vực chế tạo cột thép và sản xuất thiết bị cơ khí thủy công cho các công trình thủy điện trọng điểm quốc gia.</p>
+                        <div class="showup-ctn">
+                            <span class="showup">
+                                <span class="number">340+</span><br>
+                                <span class="text">Nhân viên</span>
+                            </span>
+                            <span class="showup">
+                                <span class="number">200+</span><br>
+                                <span class="text">Dự án</span>
+                            </span>
+                            <span class="showup">
+                                <span class="number">100+</span><br>
+                                <span class="text">Khách hàng</span>
+                            </span>
+                        </div>
+                </div>
+                <div class="gray-bg"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="customer-ctn">
+        <div class="gb-page-width">
+            <h2 class="gb-title-large text-center">Khách hàng</h2>
+
+                <div class="slick-ctn slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>
+                        <div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 6240px; transform: translate3d(-2145px, 0px, 0px);"><a href="#" class="slick-slide slick-cloned" data-slick-index="-6" aria-hidden="true" tabindex="-1" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/3e60891d_logo-shb.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/3e60891d_logo-shb.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-cloned" data-slick-index="-5" aria-hidden="true" tabindex="-1" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/504bd079_logo-cienco-1.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/504bd079_logo-cienco-1.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/78cfef46_logo-someco.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/78cfef46_logo-someco.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/14afec87_logo-vietcombank.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/14afec87_logo-vietcombank.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/c5136d8a_customer-3.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/c5136d8a_customer-3.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/58f24f6e_logo-zte.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/58f24f6e_logo-zte.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide" data-slick-index="0" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide00" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/e5fbdbe5_logo-dong-a-bank.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/e5fbdbe5_logo-dong-a-bank.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide01" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/d48ca2f5_logo-tissco.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/d48ca2f5_logo-tissco.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/15955b4_logo-evn.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/15955b4_logo-evn.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide03" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/925ed4ce_logo-daelim.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/925ed4ce_logo-daelim.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide04" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/19e432ef_logo-huawei.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/19e432ef_logo-huawei.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-current slick-active" data-slick-index="5" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide05" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/dd135620_logo-jotun.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/dd135620_logo-jotun.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-active" data-slick-index="6" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide06" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/dabe33a_logo-vimico.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/dabe33a_logo-vimico.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-active" data-slick-index="7" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide07" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/38522c63_logo-ptsc.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/38522c63_logo-ptsc.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-active" data-slick-index="8" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide08" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/1ab52a2a_customer-5.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/1ab52a2a_customer-5.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-active" data-slick-index="9" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide09" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/1e2759db_logo-veolia.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/1e2759db_logo-veolia.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-active" data-slick-index="10" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide010" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/c95ac86b_shb.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/c95ac86b_shb.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide" data-slick-index="11" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide011" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/61e136ed_customer-2.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/61e136ed_customer-2.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide" data-slick-index="12" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide012" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/8cd3676c_logo-prime.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/8cd3676c_logo-prime.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide" data-slick-index="13" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide013" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/34fd1c70_logo-mb.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/34fd1c70_logo-mb.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide" data-slick-index="14" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide014" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/3e60891d_logo-shb.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/3e60891d_logo-shb.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide" data-slick-index="15" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide015" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/504bd079_logo-cienco-1.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/504bd079_logo-cienco-1.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide" data-slick-index="16" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide016" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/78cfef46_logo-someco.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/78cfef46_logo-someco.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide" data-slick-index="17" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide017" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/14afec87_logo-vietcombank.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/14afec87_logo-vietcombank.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide" data-slick-index="18" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide018" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/c5136d8a_customer-3.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/c5136d8a_customer-3.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide" data-slick-index="19" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide019" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/58f24f6e_logo-zte.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/58f24f6e_logo-zte.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-cloned" data-slick-index="20" aria-hidden="true" tabindex="-1" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/e5fbdbe5_logo-dong-a-bank.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/e5fbdbe5_logo-dong-a-bank.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-cloned" data-slick-index="21" aria-hidden="true" tabindex="-1" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/d48ca2f5_logo-tissco.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/d48ca2f5_logo-tissco.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-cloned" data-slick-index="22" aria-hidden="true" tabindex="-1" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/15955b4_logo-evn.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/15955b4_logo-evn.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-cloned" data-slick-index="23" aria-hidden="true" tabindex="-1" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/925ed4ce_logo-daelim.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/925ed4ce_logo-daelim.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-cloned" data-slick-index="24" aria-hidden="true" tabindex="-1" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/19e432ef_logo-huawei.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/19e432ef_logo-huawei.jpg" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a><a href="#" class="slick-slide slick-cloned" data-slick-index="25" aria-hidden="true" tabindex="-1" style="width: 195px;">
+                            <div class="item">
+                                <div class="scale-img-ctn imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;/s-media/dd135620_logo-jotun.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                    <img src="/s-media/dd135620_logo-jotun.png" class="avatar" style="display: none;">
+                                </div>
+                            </div>
+                        </a></div></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.scale-img-ctn').imgLiquid();
+
+        $('.slick-ctn').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            infinite: true,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }]
+        });
+    });
+</script>
+        </div>
+    </div>
+
+    <!-- #endregion -->
+    <!-- #region Footer -->
+
+    <footer class="footer-ctn">
+        <div class="foot-nav-ctn">
+            <div class="gb-page-width">
+                <div class="row-ctn">
+                    <div class="column col-1">
+                        <h3 class="title">Giới thiệu</h3>
+                        <ul class="category-ctn ">
+        <li class="category-item category-level-1 item-first item-even item-0">
+            <a class="category-item category-level-1 item-first item-even item-0" href="/about/catid/ab6abca5/1/gioi-thieu-chung">Giới thiệu chung</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-1">
+            <a class="category-item category-level-1 item-odd item-1" href="/about/catid/908751f3/1/lich-su-phat-trien">Lịch sử phát triển</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-2">
+            <a class="category-item category-level-1 item-even item-2" href="/about/catid/6239dcf6/1/chinh-sach-chat-luong">Chính sách chất lượng</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-3">
+            <a class="category-item category-level-1 item-odd item-3" href="/about/catid/46b43755/1/tam-nhin--su-menh--gia-tri">Tầm nhìn - sứ mệnh - giá trị</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-4">
+            <a class="category-item category-level-1 item-even item-4" href="/about/catid/6c186157/1/so-do-to-chuc">Sơ đồ tổ chức</a>
+        </li>
+        <li class="category-item category-level-1 item-last item-odd item-5">
+            <a class="category-item category-level-1 item-last item-odd item-5" href="/about/catid/ccfee47a/1/ho-so-nang-luc-cong-ty">Hồ Sơ Năng Lực Công Ty</a>
+        </li>
+</ul>
+                    </div>
+                    <div class="column col-2">
+                        <h3 class="title">Sản phẩm dịch vụ</h3>
+                        <ul class="category-ctn ">
+        <li class="category-item category-level-1 item-first item-even item-0">
+            <a class="category-item category-level-1 item-first item-even item-0" href="/service/catid/87cb9f53/1/phan-xuong-ma-kem">Phân Xưởng Mạ Kẽm</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-1">
+            <a class="category-item category-level-1 item-odd item-1" href="/service/catid/7baf9a1a/1/phan-xuong-co-khi-ket-cau">Phân Xưởng Cơ Khí Kết Cấu</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-2">
+            <a class="category-item category-level-1 item-even item-2" href="/service/catid/177bdbd9/1/phan-xuong-nhua-plastic">Phân Xưởng Nhựa Plastic</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-3">
+            <a class="category-item category-level-1 item-odd item-3" href="/service/catid/d147d74e/1/dich-vu--thuong-mai">Dịch vụ - Thương mại</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-4">
+            <a class="category-item category-level-1 item-even item-4" href="/service/catid/c3e10186/1/vat-lieu--thiet-bi-dien">Vật liệu - Thiết bị điện</a>
+        </li>
+        <li class="category-item category-level-1 item-last item-odd item-5">
+            <a class="category-item category-level-1 item-last item-odd item-5" href="/service/catid/af64e1ae/1/cong-trinh-tieu-bieu">Công trình tiêu biểu</a>
+        </li>
+</ul>
+                    </div>
+                    <div class="column col-3">
+                        <h3 class="title">Dự án và năng lực</h3>
+                        <ul class="category-ctn ">
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/9cae0fbb/1/">Công trình đang thực hiện</a>
+        </li>
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/fce32898/1/">Công trình đã thực hiện</a>
+        </li>
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/a534c772/1/">Máy móc thiết bị</a>
+        </li>
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/79b36e0d/1/">Dây chuyền công nghệ</a>
+        </li>
+        <li class="category-item category-level-1">
+            <a class="category-item category-level-1" href="/project/projectid/8b1c51fa/1/">Dự án đầu tư</a>
+        </li>
+</ul>
+                    </div>
+                    <div class="column col-4">
+                        <h3 class="title">Tin tức</h3>
+                        <ul class="category-ctn ">
+        <li class="category-item category-level-1 item-first item-even item-0">
+            <a class="category-item category-level-1 item-first item-even item-0" href="/news/catid/61506da8/1/tin-cong-ty">Tin công ty</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-1">
+            <a class="category-item category-level-1 item-odd item-1" href="/news/catid/9d850092/1/tin-kinh-te-xa-hoi">Tin kinh tế xã hội</a>
+        </li>
+        <li class="category-item category-level-1 item-last item-even item-2">
+            <a class="category-item category-level-1 item-last item-even item-2" href="/news/catid/1e906f66/1/tin-tuyen-dung">Tin tuyển dụng</a>
+        </li>
+</ul>
+                    </div>
+                    <div class="column col-5">
+                        <h3 class="title">Quan hệ cổ đông</h3>
+                        <ul class="category-ctn ">
+        <li class="category-item category-level-1 item-first item-even item-0">
+            <a class="category-item category-level-1 item-first item-even item-0" href="/shareholder/catid/cdce7ddd/1/dieu-le-cemc">Điều lệ CEMC</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-1">
+            <a class="category-item category-level-1 item-odd item-1" href="/shareholder/catid/251ae76b/1/ban-cao-bach-cemc">Bản cáo bạch CEMC</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-2">
+            <a class="category-item category-level-1 item-even item-2" href="/shareholder/catid/9140bbd/1/bao-cao-thuong-nien">Báo cáo thường niên</a>
+        </li>
+        <li class="category-item category-level-1 item-odd item-3">
+            <a class="category-item category-level-1 item-odd item-3" href="/shareholder/catid/6f7258a8/1/bao-cao-tai-chinh">Báo cáo tài chính</a>
+        </li>
+        <li class="category-item category-level-1 item-even item-4">
+            <a class="category-item category-level-1 item-even item-4" href="/shareholder/catid/36880e35/1/tai-lieu-hop-dhcd">Tài liệu họp ĐHCĐ</a>
+        </li>
+        <li class="category-item category-level-1 item-last item-odd item-5">
+            <a class="category-item category-level-1 item-last item-odd item-5" href="/shareholder/catid/cd4dff2d/1/thong-tin-danh-cho-co-dong">Thông tin dành cho cổ đông</a>
+        </li>
+</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="foot-link-ctn">
+            <div class="gb-page-width">
+                <strong>Liên kết website: </strong>
+
+
+                
+                <a href="https://www.cpc.vn/Home/default.aspx" target="_blank">Tổng Công Ty Điện Lực Miền Trung</a> &nbsp;| &nbsp;
+                <a href="http://hnx.vn/web/guest/home" target="_blank">Sở giao dịch chứng khoán Hà Nội</a> &nbsp;| &nbsp;
+                <a href="http://bidv.com.vn/" target="_blank">Ngân hàng Đầu tư và Phát triển Việt Nam</a>
+            </div>
+        </div>
+
+        <div class="foot-info-ctn">
+            <div class="gb-page-width">
+                <h2 class="company-name">CÔNG TY CỔ PHẦN CƠ ĐIỆN MIỀN TRUNG</h2>
+                <h4 class="address"><strong>Địa chỉ: </strong>KCN Hòa Cầm – P. Hòa Thọ Tây – Q.Cẩm Lệ - TP.Đà Nẵng</h4>
+                <h3 class="contact-ctn"><strong>Điện thoại: </strong><a href="tel:02362218455" style="color:#333333;">0236.2218455</a>, <strong>Fax: </strong>0236.3846224, <strong>Email: </strong><a href="mailto:codien@cemc.com.vn" style="color:#333333;">codien@cemc.com.vn</a></h3>
+                <h5 class="copyright">BẢN QUYỀN 2016 CÔNG TY CỔ PHẦN CƠ ĐIỆN MIỀN TRUNG</h5>
+                <div class="login-ctn">
+<a class="item login" href="/account/login">Đăng nhập</a>                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- #endregion -->
+    <!-- #region Back Top -->
+
+    <div id="back_top" class="back-top"></div>
+    <script type="text/javascript">
+        jQuery(function () {
+            jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > 300) {
+                    jQuery('#back_top').fadeIn();
+                } else {
+                    jQuery('#back_top').fadeOut();
+                }
+            });
+
+            jQuery('#back_top').click(function () {
+                jQuery('body,html').animate({ scrollTop: 0 }, 100);
+            });
+        });
+    </script>
+
+    <!-- #endregion -->
+    <!-- #region Contact Icon -->
+    
+
+    <!-- #endregion -->
+
+
+
+</body></html>

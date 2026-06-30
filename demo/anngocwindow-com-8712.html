@@ -1,0 +1,1885 @@
+<!DOCTYPE html><html lang="vi" prefix="og: https://ogp.me/ns#" class="no-js"><head><meta charset="UTF-8"><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-VWCZJFWMRK&amp;cx=c&amp;gtm=4e63i0"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-197348794-1&amp;cx=c&amp;gtm=4e63i0"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NRQ8GKR"></script><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+	
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://www.anngocwindow.com/xmlrpc.php">
+
+	<script type="rocketlazyloadscript">(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Tối ưu hóa công cụ tìm kiếm bởi Rank Math - https://rankmath.com/ -->
+<title>An Ngọc Window | Thi công cửa nhôm Xingfa, cửa sắt, cửa cuốn,...</title>
+<meta name="description" content="An Ngọc Window thi công cửa nhôm Xingfa, cửa sắt, cửa nhựa lõi thép, cửa cuốn, cửa kính, lan can, cầu thang, vách ngăn, mái kính, cửa cổng, hàng rào tại Huế">
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+<link rel="canonical" href="https://www.anngocwindow.com/">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="An Ngọc Window | Thi công cửa nhôm Xingfa, cửa sắt, cửa cuốn,...">
+<meta property="og:description" content="An Ngọc Window thi công cửa nhôm Xingfa, cửa sắt, cửa nhựa lõi thép, cửa cuốn, cửa kính, lan can, cầu thang, vách ngăn, mái kính, cửa cổng, hàng rào tại Huế">
+<meta property="og:url" content="https://www.anngocwindow.com/">
+<meta property="og:site_name" content="Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">
+<meta property="og:updated_time" content="2025-11-25T14:37:17+07:00">
+<meta property="og:image" content="https://www.anngocwindow.com/wp-content/uploads/2021/09/Anh-bia-Cong-Ty-TNHH-MTV-uPVC-An-Ngoc-An-Ngoc-Window.jpg">
+<meta property="og:image:secure_url" content="https://www.anngocwindow.com/wp-content/uploads/2021/09/Anh-bia-Cong-Ty-TNHH-MTV-uPVC-An-Ngoc-An-Ngoc-Window.jpg">
+<meta property="og:image:width" content="1640">
+<meta property="og:image:height" content="924">
+<meta property="og:image:alt" content="Công Ty TNHH MTV uPVC An Ngọc - An Ngọc Window">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="article:published_time" content="2017-11-01T20:28:19+07:00">
+<meta property="article:modified_time" content="2025-11-25T14:37:17+07:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="An Ngọc Window | Thi công cửa nhôm Xingfa, cửa sắt, cửa cuốn,...">
+<meta name="twitter:description" content="An Ngọc Window thi công cửa nhôm Xingfa, cửa sắt, cửa nhựa lõi thép, cửa cuốn, cửa kính, lan can, cầu thang, vách ngăn, mái kính, cửa cổng, hàng rào tại Huế">
+<meta name="twitter:image" content="https://www.anngocwindow.com/wp-content/uploads/2021/09/Anh-bia-Cong-Ty-TNHH-MTV-uPVC-An-Ngoc-An-Ngoc-Window.jpg">
+<meta name="twitter:label1" content="Được viết bởi">
+<meta name="twitter:data1" content="An Ngọc Window - Công Ty TNHH MTV uPVC An Ngọc">
+<meta name="twitter:label2" content="Thời gian để đọc">
+<meta name="twitter:data2" content="4 phút">
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Place","@id":"https://www.anngocwindow.com/#place","address":{"@type":"PostalAddress","streetAddress":"37 Phan V\u0103n Tr\u01b0\u1eddng, ph\u01b0\u1eddng V\u1ef9 D\u1ea1, Th\u00e0nh ph\u1ed1 Hu\u1ebf","addressLocality":"Hu\u1ebf","postalCode":"49000","addressCountry":"VN"}},{"@type":["LocalBusiness","Organization"],"@id":"https://www.anngocwindow.com/#organization","name":"C\u00f4ng Ty TNHH MTV UPVC An Ng\u1ecdc","url":"https://www.anngocwindow.com","sameAs":["https://www.facebook.com/anngocwindow"],"email":"anngoc76@gmail.com","address":{"@type":"PostalAddress","streetAddress":"37 Phan V\u0103n Tr\u01b0\u1eddng, ph\u01b0\u1eddng V\u1ef9 D\u1ea1, Th\u00e0nh ph\u1ed1 Hu\u1ebf","addressLocality":"Hu\u1ebf","postalCode":"49000","addressCountry":"VN"},"logo":{"@type":"ImageObject","@id":"https://www.anngocwindow.com/#logo","url":"https://www.anngocwindow.com/wp-content/uploads/2018/01/logo15.png","contentUrl":"https://www.anngocwindow.com/wp-content/uploads/2018/01/logo15.png","caption":"C\u00f4ng Ty TNHH MTV UPVC An Ng\u1ecdc","inLanguage":"vi","width":"400","height":"400"},"openingHours":["Monday,Tuesday,Wednesday,Thursday,Friday,Saturday 07:30-17:30"],"location":{"@id":"https://www.anngocwindow.com/#place"},"image":{"@id":"https://www.anngocwindow.com/#logo"},"telephone":"0917551397"},{"@type":"WebSite","@id":"https://www.anngocwindow.com/#website","url":"https://www.anngocwindow.com","name":"C\u00f4ng Ty TNHH MTV UPVC An Ng\u1ecdc","publisher":{"@id":"https://www.anngocwindow.com/#organization"},"inLanguage":"vi","potentialAction":{"@type":"SearchAction","target":"https://www.anngocwindow.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.anngocwindow.com/wp-content/uploads/2021/09/Anh-bia-Cong-Ty-TNHH-MTV-uPVC-An-Ngoc-An-Ngoc-Window.jpg","url":"https://www.anngocwindow.com/wp-content/uploads/2021/09/Anh-bia-Cong-Ty-TNHH-MTV-uPVC-An-Ngoc-An-Ngoc-Window.jpg","width":"1640","height":"924","caption":"C\u00f4ng Ty TNHH MTV uPVC An Ng\u1ecdc - An Ng\u1ecdc Window","inLanguage":"vi"},{"@type":"WebPage","@id":"https://www.anngocwindow.com/#webpage","url":"https://www.anngocwindow.com/","name":"An Ng\u1ecdc Window | Thi c\u00f4ng c\u1eeda nh\u00f4m Xingfa, c\u1eeda s\u1eaft, c\u1eeda cu\u1ed1n,...","datePublished":"2017-11-01T20:28:19+07:00","dateModified":"2025-11-25T14:37:17+07:00","about":{"@id":"https://www.anngocwindow.com/#organization"},"isPartOf":{"@id":"https://www.anngocwindow.com/#website"},"primaryImageOfPage":{"@id":"https://www.anngocwindow.com/wp-content/uploads/2021/09/Anh-bia-Cong-Ty-TNHH-MTV-uPVC-An-Ngoc-An-Ngoc-Window.jpg"},"inLanguage":"vi"},{"@type":"Person","@id":"https://www.anngocwindow.com/tac-gia/anngocwindow/","name":"An Ng\u1ecdc Window - C\u00f4ng Ty TNHH MTV uPVC An Ng\u1ecdc","url":"https://www.anngocwindow.com/tac-gia/anngocwindow/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/cfe68891fb67020d117bb08f9965de6b81977ff08ce0b8114f3672ecfe97ea69?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/cfe68891fb67020d117bb08f9965de6b81977ff08ce0b8114f3672ecfe97ea69?s=96&amp;d=mm&amp;r=g","caption":"An Ng\u1ecdc Window - C\u00f4ng Ty TNHH MTV uPVC An Ng\u1ecdc","inLanguage":"vi"},"worksFor":{"@id":"https://www.anngocwindow.com/#organization"}},{"@type":"Article","headline":"An Ng\u1ecdc Window | Thi c\u00f4ng c\u1eeda nh\u00f4m Xingfa, c\u1eeda s\u1eaft, c\u1eeda cu\u1ed1n,...","keywords":"An Ng\u1ecdc Window","datePublished":"2017-11-01T20:28:19+07:00","dateModified":"2025-11-25T14:37:17+07:00","author":{"@id":"https://www.anngocwindow.com/tac-gia/anngocwindow/","name":"An Ng\u1ecdc Window - C\u00f4ng Ty TNHH MTV uPVC An Ng\u1ecdc"},"publisher":{"@id":"https://www.anngocwindow.com/#organization"},"description":"An Ng\u1ecdc Window thi c\u00f4ng c\u1eeda nh\u00f4m Xingfa, c\u1eeda s\u1eaft, c\u1eeda nh\u1ef1a l\u00f5i th\u00e9p, c\u1eeda cu\u1ed1n, c\u1eeda k\u00ednh, lan can, c\u1ea7u thang, v\u00e1ch ng\u0103n, m\u00e1i k\u00ednh, c\u1eeda c\u1ed5ng, h\u00e0ng r\u00e0o t\u1ea1i Hu\u1ebf","name":"An Ng\u1ecdc Window | Thi c\u00f4ng c\u1eeda nh\u00f4m Xingfa, c\u1eeda s\u1eaft, c\u1eeda cu\u1ed1n,...","@id":"https://www.anngocwindow.com/#richSnippet","isPartOf":{"@id":"https://www.anngocwindow.com/#webpage"},"image":{"@id":"https://www.anngocwindow.com/wp-content/uploads/2021/09/Anh-bia-Cong-Ty-TNHH-MTV-uPVC-An-Ngoc-An-Ngoc-Window.jpg"},"inLanguage":"vi","mainEntityOfPage":{"@id":"https://www.anngocwindow.com/#webpage"}}]}</script>
+<!-- /Plugin SEO WordPress Rank Math -->
+
+
+<link rel="prefetch" href="https://www.anngocwindow.com/wp-content/themes/flatsome/assets/js/flatsome.js?ver=e1ad26bd5672989785e1">
+<link rel="prefetch" href="https://www.anngocwindow.com/wp-content/themes/flatsome/assets/js/chunk.slider.js?ver=3.19.8">
+<link rel="prefetch" href="https://www.anngocwindow.com/wp-content/themes/flatsome/assets/js/chunk.popups.js?ver=3.19.8">
+<link rel="prefetch" href="https://www.anngocwindow.com/wp-content/themes/flatsome/assets/js/chunk.tooltips.js?ver=3.19.8">
+<link rel="prefetch" href="https://www.anngocwindow.com/wp-content/themes/flatsome/assets/js/woocommerce.js?ver=dd6035ce106022a74757">
+<link rel="alternate" type="application/rss+xml" title="Dòng thông tin Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window »" href="https://www.anngocwindow.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window » Dòng bình luận" href="https://www.anngocwindow.com/comments/feed/">
+<link rel="alternate" title="oNhúng (JSON)" type="application/json+oembed" href="https://www.anngocwindow.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.anngocwindow.com%2F">
+<link rel="alternate" title="oNhúng (XML)" type="text/xml+oembed" href="https://www.anngocwindow.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.anngocwindow.com%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel="stylesheet" id="kk-star-ratings-css" href="https://www.anngocwindow.com/wp-content/plugins/kk-star-ratings/src/core/public/css/kk-star-ratings.min.css?ver=5.4.10.3" type="text/css" media="all">
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: visible; }
+/*# sourceURL=woocommerce-inline-inline-css */
+</style>
+<link data-minify="1" rel="stylesheet" id="pzf-style-css" href="https://www.anngocwindow.com/wp-content/cache/min/1/wp-content/plugins/button-contact-vr/legacy/css/style.css?ver=1771660598" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="flatsome-main-css" href="https://www.anngocwindow.com/wp-content/cache/min/1/wp-content/themes/flatsome/assets/css/flatsome.css?ver=1771660598" type="text/css" media="all">
+<style id="flatsome-main-inline-css" type="text/css">
+@font-face {
+				font-family: "fl-icons";
+				font-display: block;
+				src: url(https://www.anngocwindow.com/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot?v=3.19.8);
+				src:
+					url(https://www.anngocwindow.com/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.19.8) format("embedded-opentype"),
+					url(https://www.anngocwindow.com/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2?v=3.19.8) format("woff2"),
+					url(https://www.anngocwindow.com/wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf?v=3.19.8) format("truetype"),
+					url(https://www.anngocwindow.com/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff?v=3.19.8) format("woff"),
+					url(https://www.anngocwindow.com/wp-content/themes/flatsome/assets/css/icons/fl-icons.svg?v=3.19.8#fl-icons) format("svg");
+			}
+/*# sourceURL=flatsome-main-inline-css */
+</style>
+<link data-minify="1" rel="stylesheet" id="flatsome-shop-css" href="https://www.anngocwindow.com/wp-content/cache/min/1/wp-content/themes/flatsome/assets/css/flatsome-shop.css?ver=1771660598" type="text/css" media="all">
+<script type="text/javascript" src="https://www.anngocwindow.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js" defer=""></script>
+<script type="text/javascript" src="https://www.anngocwindow.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.10.5.2" id="wc-jquery-blockui-js" data-wp-strategy="defer" defer=""></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_view_cart":"Xem gi\u1ecf h\u00e0ng","cart_url":"https://www.anngocwindow.com","is_cart":"","cart_redirect_after_add":"no"};
+//# sourceURL=wc-add-to-cart-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.anngocwindow.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=10.5.2" id="wc-add-to-cart-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://www.anngocwindow.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.10.5.2" id="wc-js-cookie-js" data-wp-strategy="defer" defer=""></script>
+<link rel="https://api.w.org/" href="https://www.anngocwindow.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.anngocwindow.com/wp-json/wp/v2/pages/6"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.anngocwindow.com/xmlrpc.php?rsd">
+<link rel="shortlink" href="https://www.anngocwindow.com/">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NRQ8GKR');</script>
+<!-- End Google Tag Manager -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-197348794-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-197348794-1');
+</script>
+
+<link rel="alternate" href="https://www.tenwebsite.com/" hreflang="vi-vn">
+<meta name="author" content="An Ngọc Window - Công Ty TNHH MTV UPVC An Ngọc">	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<link rel="icon" href="https://www.anngocwindow.com/wp-content/uploads/2017/11/cropped-logo11-32x32.png" sizes="32x32">
+<link rel="icon" href="https://www.anngocwindow.com/wp-content/uploads/2017/11/cropped-logo11-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.anngocwindow.com/wp-content/uploads/2017/11/cropped-logo11-180x180.png">
+<meta name="msapplication-TileImage" content="https://www.anngocwindow.com/wp-content/uploads/2017/11/cropped-logo11-270x270.png">
+<style id="custom-css" type="text/css">:root {--primary-color: #0066cc;--fs-color-primary: #0066cc;--fs-color-secondary: #000000;--fs-color-success: #000000;--fs-color-alert: #b20000;--fs-experimental-link-color: #0066cc;--fs-experimental-link-color-hover: #111;}.tooltipster-base {--tooltip-color: #fff;--tooltip-bg-color: #000;}.off-canvas-right .mfp-content, .off-canvas-left .mfp-content {--drawer-width: 300px;}.off-canvas .mfp-content.off-canvas-cart {--drawer-width: 360px;}.header-main{height: 90px}#logo img{max-height: 90px}#logo{width:188px;}.header-bottom{min-height: 10px}.header-top{min-height: 36px}.transparent .header-main{height: 90px}.transparent #logo img{max-height: 90px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 170px;}.header.show-on-scroll,.stuck .header-main{height:70px!important}.stuck #logo img{max-height: 70px!important}.search-form{ width: 87%;}.header-bg-color {background-color: rgba(255,255,255,0.9)}.header-bottom {background-color: #ffffff}.top-bar-nav > li > a{line-height: 16px }.header-main .nav > li > a{line-height: 16px }.stuck .header-main .nav > li > a{line-height: 50px }.header-bottom-nav > li > a{line-height: 16px }@media (max-width: 549px) {.header-main{height: 70px}#logo img{max-height: 70px}}.nav-dropdown{border-radius:3px}.nav-dropdown{font-size:90%}body{color: #000000}h1,h2,h3,h4,h5,h6,.heading-font{color: #555555;}body{font-size: 100%;}@media screen and (max-width: 549px){body{font-size: 100%;}}body{font-family: "Be Vietnam Pro", sans-serif;}body {font-weight: 400;font-style: normal;}.nav > li > a {font-family: Roboto, sans-serif;}.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-family: Roboto, sans-serif;}.nav > li > a,.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-weight: 700;font-style: normal;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: "Be Vietnam Pro", sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2 {font-weight: 700;font-style: normal;}.alt-font{font-family: Roboto, sans-serif;}.alt-font {font-weight: 400!important;font-style: normal!important;}.breadcrumbs{text-transform: none;}button,.button{text-transform: none;}.nav > li > a, .links > li > a{text-transform: none;}.section-title span{text-transform: none;}h3.widget-title,span.widget-title{text-transform: none;}.header:not(.transparent) .header-bottom-nav.nav > li > a{color: #0066cc;}@media screen and (min-width: 550px){.products .box-vertical .box-image{min-width: 247px!important;width: 247px!important;}}.footer-2{background-color: #ffffff}.absolute-footer, html{background-color: #ffffff}.nav-vertical-fly-out > li + li {border-top-width: 1px; border-top-style: solid;}.label-new.menu-item > a:after{content:"Mới";}.label-hot.menu-item > a:after{content:"Nổi bật";}.label-sale.menu-item > a:after{content:"Giảm giá";}.label-popular.menu-item > a:after{content:"Phổ biến";}</style><style id="kirki-inline-styles">/* vietnamese */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/be-vietnam-pro/QdVPSTAyLFyeg_IDWvOJmVES_Hw4BXoKZA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/be-vietnam-pro/QdVPSTAyLFyeg_IDWvOJmVES_Hw5BXoKZA.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/be-vietnam-pro/QdVPSTAyLFyeg_IDWvOJmVES_Hw3BXo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/be-vietnam-pro/QdVMSTAyLFyeg_IDWvOJmVES_HSMIG86Rb0bcw.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/be-vietnam-pro/QdVMSTAyLFyeg_IDWvOJmVES_HSMIG87Rb0bcw.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/be-vietnam-pro/QdVMSTAyLFyeg_IDWvOJmVES_HSMIG81Rb0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3GUBGEe.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3iUBGEe.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3CUBGEe.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3-UBGEe.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* math */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMawCUBGEe.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMaxKUBGEe.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3OUBGEe.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3KUBGEe.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3GUBGEe.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3iUBGEe.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3CUBGEe.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3-UBGEe.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* math */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMawCUBGEe.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMaxKUBGEe.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3OUBGEe.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3KUBGEe.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://www.anngocwindow.com/wp-content/fonts/roboto/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}</style><link data-minify="1" rel="stylesheet" id="wc-blocks-style-css" href="https://www.anngocwindow.com/wp-content/cache/min/1/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=1771660598" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--primary: #0066cc;--wp--preset--color--secondary: #000000;--wp--preset--color--success: #000000;--wp--preset--color--alert: #b20000;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){margin-left: auto !important;margin-right: auto !important;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: none;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-success-color{color: var(--wp--preset--color--success) !important;}.has-alert-color{color: var(--wp--preset--color--alert) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-success-background-color{background-color: var(--wp--preset--color--success) !important;}.has-alert-background-color{background-color: var(--wp--preset--color--alert) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-success-border-color{border-color: var(--wp--preset--color--success) !important;}.has-alert-border-color{border-color: var(--wp--preset--color--alert) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+</head>
+
+<body class="home wp-singular page-template page-template-page-blank page-template-page-blank-php page page-id-6 wp-theme-flatsome wp-child-theme-flatsome-child theme-flatsome woocommerce-no-js lightbox nav-dropdown-has-arrow nav-dropdown-has-shadow nav-dropdown-has-border mobile-submenu-toggle">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRQ8GKR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a class="skip-link screen-reader-text" href="#main">Bỏ qua nội dung</a>
+
+<div id="wrapper">
+
+	
+	<header id="header" class="header has-sticky sticky-jump">
+		<div class="header-wrapper">
+			<div id="top-bar" class="header-top hide-for-sticky nav-dark flex-has-center">
+    <div class="flex-row container">
+      <div class="flex-col hide-for-medium flex-left">
+          <ul class="nav nav-left medium-nav-center nav-small  nav-divided">
+                        </ul>
+      </div>
+
+      <div class="flex-col hide-for-medium flex-center">
+          <ul class="nav nav-center nav-small  nav-divided">
+              <li class="html custom html_topbar_left"><strong style="font-size: 120%;">Công Ty TNHH MTV UPVC An Ngọc</strong></li>          </ul>
+      </div>
+
+      <div class="flex-col hide-for-medium flex-right">
+         <ul class="nav top-bar-nav nav-right nav-small  nav-divided">
+                        </ul>
+      </div>
+
+            <div class="flex-col show-for-medium flex-grow">
+          <ul class="nav nav-center nav-small mobile-nav  nav-divided">
+              <li class="html custom html_topbar_left"><strong style="font-size: 120%;">Công Ty TNHH MTV UPVC An Ngọc</strong></li>          </ul>
+      </div>
+      
+    </div>
+</div>
+<div id="masthead" class="header-main ">
+      <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+
+          <!-- Logo -->
+          <div id="logo" class="flex-col logo">
+            
+<!-- Header logo -->
+<a href="https://www.anngocwindow.com/" title="Công Ty TNHH MTV UPVC An Ngọc – An Ngọc Window" rel="home">
+		<img width="400" height="400" src="https://www.anngocwindow.com/wp-content/uploads/2018/01/logo15.png" class="header_logo header-logo" alt="Công Ty TNHH MTV UPVC An Ngọc – An Ngọc Window"><img width="400" height="400" src="https://www.anngocwindow.com/wp-content/uploads/2018/01/logo15.png" class="header-logo-dark" alt="Công Ty TNHH MTV UPVC An Ngọc – An Ngọc Window"></a>
+          </div>
+
+          <!-- Mobile Left Elements -->
+          <div class="flex-col show-for-medium flex-left">
+            <ul class="mobile-nav nav nav-left ">
+                          </ul>
+          </div>
+
+          <!-- Left Elements -->
+          <div class="flex-col hide-for-medium flex-left
+            flex-grow">
+            <ul class="header-nav header-nav-main nav nav-left  nav-outline nav-size-medium nav-spacing-xsmall nav-uppercase">
+              <li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative form-flat is-normal"><form role="search" method="get" class="searchform" action="https://www.anngocwindow.com/">
+	<div class="flex-row relative">
+						<div class="flex-col flex-grow">
+			<label class="screen-reader-text" for="woocommerce-product-search-field-0">Tìm kiếm:</label>
+			<input type="search" id="woocommerce-product-search-field-0" class="search-field mb-0" placeholder="Tìm kiếm…" value="" name="s" style="">
+			<input type="hidden" name="post_type" value="product" style="">
+					</div>
+		<div class="flex-col">
+			<button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button  icon mb-0" aria-label="Gửi">
+				<i class="icon-search"></i>			</button>
+		</div>
+	</div>
+	<div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li>
+            </ul>
+          </div>
+
+          <!-- Right Elements -->
+          <div class="flex-col hide-for-medium flex-right">
+            <ul class="header-nav header-nav-main nav nav-right  nav-outline nav-size-medium nav-spacing-xsmall nav-uppercase">
+              <li class="html header-social-icons ml-0">
+	<div class="social-icons follow-icons"><a href="https://www.facebook.com/anngocwindow" target="_blank" data-label="Facebook" class="icon primary button circle facebook tooltip" title="Theo dõi trên Facebook" aria-label="Theo dõi trên Facebook" rel="noopener nofollow"><i class="icon-facebook"></i></a><a href="tel:0917551397" data-label="Phone" target="_blank" class="icon primary button circle phone tooltip" title="Gọi cho chúng tôi" aria-label="Gọi cho chúng tôi" rel="nofollow noopener"><i class="icon-phone"></i></a></div></li>
+<li class="html header-button-2">
+	<div class="header-button">
+		<a href="https://zalo.me/0917551397" target="_blank" class="button primary" rel="noopener" style="border-radius:99px;">
+		<span>Zalo</span>
+	</a>
+	</div>
+</li>
+            </ul>
+          </div>
+
+          <!-- Mobile Right Elements -->
+          <div class="flex-col show-for-medium flex-right">
+            <ul class="mobile-nav nav nav-right ">
+              <li class="nav-icon has-icon">
+  		<a href="#" data-open="#main-menu" data-pos="right" data-bg="main-menu-overlay" data-color="" class="is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
+
+		  <i class="icon-menu"></i>
+		  		</a>
+	</li>
+            </ul>
+          </div>
+
+      </div>
+
+            <div class="container"><div class="top-divider full-width"></div></div>
+      </div>
+<div id="wide-nav" class="header-bottom wide-nav hide-for-sticky flex-has-center hide-for-medium">
+    <div class="flex-row container">
+
+            
+                        <div class="flex-col hide-for-medium flex-center">
+                <ul class="nav header-nav header-bottom-nav nav-center  nav-divided nav-size-large">
+                    <li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-27 active menu-item-design-default"><a href="https://www.anngocwindow.com/" aria-current="page" class="nav-top-link">TRANG CHỦ</a></li>
+<li id="menu-item-309" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-309 menu-item-design-default"><a href="https://www.anngocwindow.com/an-ngoc-window/" class="nav-top-link">GIỚI THIỆU</a></li>
+<li id="menu-item-1263" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1263 menu-item-design-default has-dropdown"><a href="#" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">CỬA<i class="icon-angle-down"></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-bold">
+	<li id="menu-item-182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-182"><a href="https://www.anngocwindow.com/cua-nhom-xingfa/">Cửa nhôm Xingfa</a></li>
+	<li id="menu-item-2562" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2562"><a href="https://www.anngocwindow.com/mau-cua-sat-dep-hue/">Mẫu cửa sắt đẹp</a></li>
+	<li id="menu-item-183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-183"><a href="https://www.anngocwindow.com/cua-nhua-loi-thep-cao-cap-upvc/">Cửa nhựa lõi thép</a></li>
+	<li id="menu-item-2556" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2556"><a href="https://www.anngocwindow.com/cua-cuon-hue/">Cửa cuốn</a></li>
+	<li id="menu-item-2557" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2557"><a href="https://www.anngocwindow.com/cua-kinh-cuong-luc-thuy-luc-hue/">Cửa kính cường lực (thủy lực)</a></li>
+	<li id="menu-item-2558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2558"><a href="https://www.anngocwindow.com/mau-cua-cong-dep-hue/">Cửa cổng đẹp</a></li>
+	<li id="menu-item-2559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2559"><a href="https://www.anngocwindow.com/hang-rao-dep-hue/">Hàng rào đẹp</a></li>
+</ul>
+</li>
+<li id="menu-item-2564" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2564 menu-item-design-default has-dropdown"><a href="#" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">LAN CAN &amp; CẦU THANG<i class="icon-angle-down"></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-bold">
+	<li id="menu-item-536" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-536"><a href="https://www.anngocwindow.com/lan-can-ban-cong-kinh-cuong-luc/">Lan can ban công kính cường lực</a></li>
+	<li id="menu-item-535" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-535"><a href="https://www.anngocwindow.com/lan-can-ban-cong-sat/">Lan can ban công sắt</a></li>
+	<li id="menu-item-534" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-534"><a href="https://www.anngocwindow.com/lan-can-ban-cong-inox/">Lan can ban công inox</a></li>
+	<li id="menu-item-556" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-556"><a href="https://www.anngocwindow.com/cau-thang-kinh-cuong-luc-2/">Lan can cầu thang kính cường lực</a></li>
+	<li id="menu-item-538" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-538"><a href="https://www.anngocwindow.com/lan-can-cau-thang-sat/">Lan can cầu thang sắt</a></li>
+	<li id="menu-item-537" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-537"><a href="https://www.anngocwindow.com/lan-can-cau-thang-inox/">Lan can cầu thang inox</a></li>
+</ul>
+</li>
+<li id="menu-item-2568" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2568 menu-item-design-default has-dropdown"><a href="#" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">VÁCH NGĂN<i class="icon-angle-down"></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-bold">
+	<li id="menu-item-532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-532"><a href="https://www.anngocwindow.com/vach-ngan-kinh-cuong-luc/">Vách ngăn kính cường lực</a></li>
+	<li id="menu-item-530" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-530"><a href="https://www.anngocwindow.com/vach-ngan-compact-hpl-vach-ngan-nha-ve-sinh/">Vách ngăn vệ sinh Compact HPL</a></li>
+</ul>
+</li>
+<li id="menu-item-2569" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2569 menu-item-design-default has-dropdown"><a href="#" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">MÁI KÍNH<i class="icon-angle-down"></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-bold">
+	<li id="menu-item-528" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-528"><a href="https://www.anngocwindow.com/mai-sanh-kinh-cuong-luc/">Mái sảnh kính cường lực</a></li>
+	<li id="menu-item-527" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-527"><a href="https://www.anngocwindow.com/mai-kinh-gieng-troi/">Mái kính giếng trời</a></li>
+</ul>
+</li>
+<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12 menu-item-design-default"><a href="https://www.anngocwindow.com/gioi-thieu/" class="nav-top-link">LIÊN HỆ</a></li>
+                </ul>
+            </div>
+            
+            
+            
+    </div>
+</div>
+
+<div class="header-bg-container fill"><div class="header-bg-image fill"></div><div class="header-bg-color fill"></div></div>		</div>
+	</header>
+
+	
+	<main id="main" class="">
+
+
+<div id="content" role="main" class="content-area">
+
+		
+			
+	<div id="gap-1595589691" class="gap-element clearfix hide-for-medium" style="display:block; height:auto;">
+		
+<style>
+#gap-1595589691 {
+  padding-top: 45px;
+}
+</style>
+	</div>
+	
+
+<div class="row align-center" id="row-1943274105">
+
+
+	<div id="col-487623985" class="col medium-6 small-12 large-6">
+				<div class="col-inner">
+			
+			
+
+<h1 style="text-align: center;"><span style="color: #0005ff;">An Ngọc Window</span></h1>
+<p style="text-align: center;"><span style="font-size: 120%; color: #0005ff;">(Công Ty TNHH MTV UPVC An Ngọc)</span></p>
+<p><span style="font-size: 105%;"><strong>✅ Anngocwindow.com</strong>&nbsp;là website thuộc về&nbsp;<strong>Công ty TNHH MTV UVPC An Ngọc&nbsp;</strong>(tên viết tắt là CT UPVC An Ngọc).&nbsp;</span></p>
+<p><span style="font-size: 105%;"><strong>✅ Được thành lập từ năm 2015</strong>, trải qua quá trình hoạt động với hơn&nbsp;<strong>700 công trình lớn nhỏ được thi công</strong>, Công ty TNHH MTV UVPC An Ngọc tự hào là một trong những đơn vị sản xuất và thi công lắp đặt các sản phẩm: <em>cửa nhôm Xingfa, cửa sắt, cửa cuốn, cửa kính cường lực, lan can, cầu thang, vách ngăn, mái kính, cửa cổng, hàng rào </em><strong>với&nbsp;chất lượng hàng đầu tại Huế.</strong></span></p>
+<div class="row align-center" id="row-1084006119">
+
+
+	<div id="col-156987647" class="col small-12 large-12">
+				<div class="col-inner text-center">
+			
+			
+
+<a href="tel:0917551397" target="_blank" class="button primary is-outline" rel="noopener" style="border-radius:99px;">
+	<i class="icon-phone" aria-hidden="true"></i>	<span>Liên hệ SDT</span>
+	</a>
+
+
+<a href="https://zalo.me/0917551397" target="_blank" class="button primary is-outline" rel="noopener nofollow" style="border-radius:99px;">
+	<i class="icon-user" aria-hidden="true"></i>	<span>Liên hệ Zalo</span>
+	</a>
+
+
+
+		</div>
+				
+<style>
+#col-156987647 > .col-inner {
+  margin: 0px 0px -30px 0px;
+}
+@media (min-width:550px) {
+  #col-156987647 > .col-inner {
+    margin: 0px 0px -44px 0px;
+  }
+}
+</style>
+	</div>
+
+	
+
+</div>
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-1017316060" class="col hide-for-small medium-6 small-12 large-6">
+				<div class="col-inner">
+			
+			
+
+<div class="slider-wrapper relative hide-for-small" id="slider-1732648228">
+    <div class="slider slider-nav-circle slider-nav-large slider-nav-light slider-style-normal slider-lazy-load-active is-draggable flickity-enabled" data-flickity-options="{
+            &quot;cellAlign&quot;: &quot;center&quot;,
+            &quot;imagesLoaded&quot;: true,
+            &quot;lazyLoad&quot;: 1,
+            &quot;freeScroll&quot;: false,
+            &quot;wrapAround&quot;: true,
+            &quot;autoPlay&quot;: 6000,
+            &quot;pauseAutoPlayOnHover&quot; : true,
+            &quot;prevNextButtons&quot;: true,
+            &quot;contain&quot; : true,
+            &quot;adaptiveHeight&quot; : true,
+            &quot;dragThreshold&quot; : 10,
+            &quot;percentPosition&quot;: true,
+            &quot;pageDots&quot;: true,
+            &quot;rightToLeft&quot;: false,
+            &quot;draggable&quot;: true,
+            &quot;selectedAttraction&quot;: 0.1,
+            &quot;parallax&quot; : 0,
+            &quot;friction&quot;: 0.6        }" tabindex="0">
+        
+
+
+
+
+
+
+
+
+     <div class="flickity-viewport" style="height: 540.234px; touch-action: pan-y;"><div class="flickity-slider" style="left: 0px; transform: translateX(2.94%);"><div class="row is-selected" id="row-942291683" style="position: absolute; left: 0%;">
+
+
+	<div id="col-728663583" class="col small-12 large-12">
+				<div class="col-inner">
+			
+			
+
+	<div class="box has-hover   has-hover box-text-bottom">
+
+		<div class="box-image" style="border-radius:8%;">
+						<div class="">
+				<img fetchpriority="high" decoding="async" width="900" height="900" src="https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-sat-An-Ngoc-Window.jpg" class="attachment- size-" alt="Cửa sắt An Ngọc Window" srcset="https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-sat-An-Ngoc-Window.jpg 900w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-sat-An-Ngoc-Window-100x100.jpg 100w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-sat-An-Ngoc-Window-510x510.jpg 510w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-sat-An-Ngoc-Window-300x300.jpg 300w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-sat-An-Ngoc-Window-150x150.jpg 150w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-sat-An-Ngoc-Window-768x768.jpg 768w" sizes="(max-width: 900px) 100vw, 900px" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">											</div>
+					</div>
+
+		<div class="box-text text-center">
+			<div class="box-text-inner">
+				
+
+
+			</div>
+		</div>
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+</div><div class="row" id="row-1471185417" aria-hidden="true" style="position: absolute; left: 94.12%;">
+
+
+	<div id="col-1187616810" class="col small-12 large-12">
+				<div class="col-inner">
+			
+			
+
+	<div class="box has-hover   has-hover box-text-bottom">
+
+		<div class="box-image" style="border-radius:8%;">
+						<div class="">
+				<img decoding="async" width="900" height="900" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20900%20900%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/Cong-ty-An-Ngoc.jpg" class="lazy-load attachment- size-" alt="Công ty An Ngọc" srcset="" data-srcset="https://www.anngocwindow.com/wp-content/uploads/2021/09/Cong-ty-An-Ngoc.jpg 900w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cong-ty-An-Ngoc-100x100.jpg 100w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cong-ty-An-Ngoc-510x510.jpg 510w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cong-ty-An-Ngoc-300x300.jpg 300w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cong-ty-An-Ngoc-150x150.jpg 150w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cong-ty-An-Ngoc-768x768.jpg 768w" sizes="(max-width: 900px) 100vw, 900px" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">											</div>
+					</div>
+
+		<div class="box-text text-center">
+			<div class="box-text-inner">
+				
+
+
+			</div>
+		</div>
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+</div><div class="row" id="row-1176486315" aria-hidden="true" style="position: absolute; left: 188.24%;">
+
+
+	<div id="col-2088290900" class="col small-12 large-12">
+				<div class="col-inner">
+			
+			
+
+	<div class="box has-hover   has-hover box-text-bottom">
+
+		<div class="box-image" style="border-radius:8%;">
+						<div class="">
+				<img decoding="async" width="900" height="900" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20900%20900%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-nhom-Xingfa-An-Ngoc-Window.jpg" class="lazy-load attachment- size-" alt="Cửa nhôm Xingfa An Ngọc Window" srcset="" data-srcset="https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-nhom-Xingfa-An-Ngoc-Window.jpg 900w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-nhom-Xingfa-An-Ngoc-Window-100x100.jpg 100w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-nhom-Xingfa-An-Ngoc-Window-510x510.jpg 510w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-nhom-Xingfa-An-Ngoc-Window-300x300.jpg 300w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-nhom-Xingfa-An-Ngoc-Window-150x150.jpg 150w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-nhom-Xingfa-An-Ngoc-Window-768x768.jpg 768w" sizes="(max-width: 900px) 100vw, 900px" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">											</div>
+					</div>
+
+		<div class="box-text text-center">
+			<div class="box-text-inner">
+				
+
+
+			</div>
+		</div>
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+</div><div class="row" id="row-107462088" aria-hidden="true" style="position: absolute; left: 282.35%;">
+
+
+	<div id="col-95351473" class="col small-12 large-12">
+				<div class="col-inner">
+			
+			
+
+	<div class="box has-hover   has-hover box-text-bottom">
+
+		<div class="box-image" style="border-radius:8%;">
+						<div class="">
+				<img decoding="async" width="900" height="900" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20900%20900%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/CT-UPVC-An-Ngoc.jpg" class="lazy-load attachment- size-" alt="CT UPVC An Ngọc" srcset="" data-srcset="https://www.anngocwindow.com/wp-content/uploads/2021/09/CT-UPVC-An-Ngoc.jpg 900w, https://www.anngocwindow.com/wp-content/uploads/2021/09/CT-UPVC-An-Ngoc-100x100.jpg 100w, https://www.anngocwindow.com/wp-content/uploads/2021/09/CT-UPVC-An-Ngoc-510x510.jpg 510w, https://www.anngocwindow.com/wp-content/uploads/2021/09/CT-UPVC-An-Ngoc-300x300.jpg 300w, https://www.anngocwindow.com/wp-content/uploads/2021/09/CT-UPVC-An-Ngoc-150x150.jpg 150w, https://www.anngocwindow.com/wp-content/uploads/2021/09/CT-UPVC-An-Ngoc-768x768.jpg 768w" sizes="auto, (max-width: 900px) 100vw, 900px" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">											</div>
+					</div>
+
+		<div class="box-text text-center">
+			<div class="box-text-inner">
+				
+
+
+			</div>
+		</div>
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+</div><div class="row" id="row-576955530" aria-hidden="true" style="position: absolute; left: 376.47%;">
+
+
+	<div id="col-1663837059" class="col small-12 large-12">
+				<div class="col-inner">
+			
+			
+
+	<div class="box has-hover   has-hover box-text-bottom">
+
+		<div class="box-image" style="border-radius:8%;">
+						<div class="">
+				<img decoding="async" width="900" height="900" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20900%20900%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/An-Ngoc-Window.jpg" class="lazy-load attachment- size-" alt="An Ngọc Window" srcset="" data-srcset="https://www.anngocwindow.com/wp-content/uploads/2021/09/An-Ngoc-Window.jpg 900w, https://www.anngocwindow.com/wp-content/uploads/2021/09/An-Ngoc-Window-100x100.jpg 100w, https://www.anngocwindow.com/wp-content/uploads/2021/09/An-Ngoc-Window-510x510.jpg 510w, https://www.anngocwindow.com/wp-content/uploads/2021/09/An-Ngoc-Window-300x300.jpg 300w, https://www.anngocwindow.com/wp-content/uploads/2021/09/An-Ngoc-Window-150x150.jpg 150w, https://www.anngocwindow.com/wp-content/uploads/2021/09/An-Ngoc-Window-768x768.jpg 768w" sizes="auto, (max-width: 900px) 100vw, 900px" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">											</div>
+					</div>
+
+		<div class="box-text text-center">
+			<div class="box-text-inner">
+				
+
+
+			</div>
+		</div>
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+</div><div class="row" id="row-808929555" aria-hidden="true" style="position: absolute; left: -94.12%;">
+
+
+	<div id="col-126094245" class="col small-12 large-12">
+				<div class="col-inner">
+			
+			
+
+	<div class="box has-hover   has-hover box-text-bottom">
+
+		<div class="box-image" style="border-radius:8%;">
+						<div class="">
+				<img decoding="async" width="900" height="900" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20900%20900%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-cong-An-Ngoc-Window.jpg" class="lazy-load attachment- size-" alt="Cửa cổng An Ngọc Window" srcset="" data-srcset="https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-cong-An-Ngoc-Window.jpg 900w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-cong-An-Ngoc-Window-100x100.jpg 100w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-cong-An-Ngoc-Window-510x510.jpg 510w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-cong-An-Ngoc-Window-300x300.jpg 300w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-cong-An-Ngoc-Window-150x150.jpg 150w, https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-cong-An-Ngoc-Window-768x768.jpg 768w" sizes="auto, (max-width: 900px) 100vw, 900px" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">											</div>
+					</div>
+
+		<div class="box-text text-center">
+			<div class="box-text-inner">
+				
+
+
+			</div>
+		</div>
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+</div></div></div><button class="flickity-button flickity-prev-next-button previous" type="button" aria-label="Previous"><svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path></svg></button><button class="flickity-button flickity-prev-next-button next" type="button" aria-label="Next"><svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button><ol class="flickity-page-dots"><li class="dot is-selected" aria-label="Page dot 1" aria-current="step"></li><li class="dot" aria-label="Page dot 2"></li><li class="dot" aria-label="Page dot 3"></li><li class="dot" aria-label="Page dot 4"></li><li class="dot" aria-label="Page dot 5"></li><li class="dot" aria-label="Page dot 6"></li></ol></div>
+
+     <div class="loading-spin dark large centered" style="display: none;"></div>
+
+	</div>
+
+
+
+		</div>
+					</div>
+
+	
+
+</div>
+<div class="container section-title-container show-for-small"><h2 class="section-title section-title-center"><b></b><span class="section-title-main" style="font-size:85%;color:rgb(0, 5, 255);">Một số hình ảnh về An Ngọc Window</span><b></b></h2></div>
+
+<div class="slider-wrapper relative show-for-small" id="slider-2098888317">
+    <div class="slider slider-nav-circle slider-nav-large slider-nav-light slider-style-normal" data-flickity-options="{
+            &quot;cellAlign&quot;: &quot;center&quot;,
+            &quot;imagesLoaded&quot;: true,
+            &quot;lazyLoad&quot;: 1,
+            &quot;freeScroll&quot;: false,
+            &quot;wrapAround&quot;: true,
+            &quot;autoPlay&quot;: 6000,
+            &quot;pauseAutoPlayOnHover&quot; : true,
+            &quot;prevNextButtons&quot;: true,
+            &quot;contain&quot; : true,
+            &quot;adaptiveHeight&quot; : true,
+            &quot;dragThreshold&quot; : 10,
+            &quot;percentPosition&quot;: true,
+            &quot;pageDots&quot;: true,
+            &quot;rightToLeft&quot;: false,
+            &quot;draggable&quot;: true,
+            &quot;selectedAttraction&quot;: 0.1,
+            &quot;parallax&quot; : 0,
+            &quot;friction&quot;: 0.6        }">
+        
+
+
+  <div class="banner has-hover" id="banner-1791667898">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill">
+            <img decoding="async" width="900" height="900" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20900%20900%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-sat-An-Ngoc-Window.jpg" class="lazy-load bg attachment-original size-original" alt="Cửa sắt An Ngọc Window" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">                                    
+                    </div>
+		
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+
+   <div id="text-box-2128714741" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                                <div class="text-box-content text dark">
+              
+              <div class="text-inner text-center">
+                  
+
+
+              </div>
+           </div>
+                            
+<style>
+#text-box-2128714741 {
+  width: 60%;
+}
+#text-box-2128714741 .text-box-content {
+  font-size: 100%;
+}
+@media (min-width:550px) {
+  #text-box-2128714741 {
+    width: 60%;
+  }
+}
+</style>
+    </div>
+ 
+
+        </div>
+      </div>
+
+            
+<style>
+#banner-1791667898 {
+  padding-top: 99.99%;
+}
+@media (min-width:550px) {
+  #banner-1791667898 {
+    padding-top: 500px;
+  }
+}
+</style>
+  </div>
+
+
+
+  <div class="banner has-hover" id="banner-1125189005">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill">
+            <img decoding="async" width="900" height="900" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20900%20900%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/Cong-ty-An-Ngoc.jpg" class="lazy-load bg attachment-original size-original" alt="Công ty An Ngọc" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">                                    
+                    </div>
+		
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+
+   <div id="text-box-1271859021" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                                <div class="text-box-content text dark">
+              
+              <div class="text-inner text-center">
+                  
+
+
+              </div>
+           </div>
+                            
+<style>
+#text-box-1271859021 {
+  width: 60%;
+}
+#text-box-1271859021 .text-box-content {
+  font-size: 100%;
+}
+@media (min-width:550px) {
+  #text-box-1271859021 {
+    width: 60%;
+  }
+}
+</style>
+    </div>
+ 
+
+        </div>
+      </div>
+
+            
+<style>
+#banner-1125189005 {
+  padding-top: 99.99%;
+}
+@media (min-width:550px) {
+  #banner-1125189005 {
+    padding-top: 500px;
+  }
+}
+</style>
+  </div>
+
+
+
+  <div class="banner has-hover" id="banner-1308873165">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill">
+            <img decoding="async" width="900" height="900" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20900%20900%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-nhom-Xingfa-An-Ngoc-Window.jpg" class="lazy-load bg attachment-original size-original" alt="Cửa nhôm Xingfa An Ngọc Window" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">                                    
+                    </div>
+		
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+
+   <div id="text-box-459175665" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                                <div class="text-box-content text dark">
+              
+              <div class="text-inner text-center">
+                  
+
+
+              </div>
+           </div>
+                            
+<style>
+#text-box-459175665 {
+  width: 60%;
+}
+#text-box-459175665 .text-box-content {
+  font-size: 100%;
+}
+@media (min-width:550px) {
+  #text-box-459175665 {
+    width: 60%;
+  }
+}
+</style>
+    </div>
+ 
+
+        </div>
+      </div>
+
+            
+<style>
+#banner-1308873165 {
+  padding-top: 99.99%;
+}
+@media (min-width:550px) {
+  #banner-1308873165 {
+    padding-top: 500px;
+  }
+}
+</style>
+  </div>
+
+
+
+  <div class="banner has-hover" id="banner-1397464543">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill">
+            <img decoding="async" width="900" height="900" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20900%20900%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/CT-UPVC-An-Ngoc.jpg" class="lazy-load bg attachment-original size-original" alt="CT UPVC An Ngọc" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">                                    
+                    </div>
+		
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+
+   <div id="text-box-2142499206" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                                <div class="text-box-content text dark">
+              
+              <div class="text-inner text-center">
+                  
+
+
+              </div>
+           </div>
+                            
+<style>
+#text-box-2142499206 {
+  width: 60%;
+}
+#text-box-2142499206 .text-box-content {
+  font-size: 100%;
+}
+@media (min-width:550px) {
+  #text-box-2142499206 {
+    width: 60%;
+  }
+}
+</style>
+    </div>
+ 
+
+        </div>
+      </div>
+
+            
+<style>
+#banner-1397464543 {
+  padding-top: 99.99%;
+}
+@media (min-width:550px) {
+  #banner-1397464543 {
+    padding-top: 500px;
+  }
+}
+</style>
+  </div>
+
+
+
+  <div class="banner has-hover" id="banner-1136929573">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill">
+            <img decoding="async" width="900" height="900" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20900%20900%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/An-Ngoc-Window.jpg" class="lazy-load bg attachment-original size-original" alt="An Ngọc Window" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">                                    
+                    </div>
+		
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+
+   <div id="text-box-188022292" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                                <div class="text-box-content text dark">
+              
+              <div class="text-inner text-center">
+                  
+
+
+              </div>
+           </div>
+                            
+<style>
+#text-box-188022292 {
+  width: 60%;
+}
+#text-box-188022292 .text-box-content {
+  font-size: 100%;
+}
+@media (min-width:550px) {
+  #text-box-188022292 {
+    width: 60%;
+  }
+}
+</style>
+    </div>
+ 
+
+        </div>
+      </div>
+
+            
+<style>
+#banner-1136929573 {
+  padding-top: 99.99%;
+}
+@media (min-width:550px) {
+  #banner-1136929573 {
+    padding-top: 500px;
+  }
+}
+</style>
+  </div>
+
+
+
+  <div class="banner has-hover" id="banner-145698761">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill">
+            <img decoding="async" width="900" height="900" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20900%20900%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/Cua-cong-An-Ngoc-Window.jpg" class="lazy-load bg attachment-original size-original" alt="Cửa cổng An Ngọc Window" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">                                    
+                    </div>
+		
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+
+   <div id="text-box-635191778" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                                <div class="text-box-content text dark">
+              
+              <div class="text-inner text-center">
+                  
+
+
+              </div>
+           </div>
+                            
+<style>
+#text-box-635191778 {
+  width: 60%;
+}
+#text-box-635191778 .text-box-content {
+  font-size: 100%;
+}
+@media (min-width:550px) {
+  #text-box-635191778 {
+    width: 60%;
+  }
+}
+</style>
+    </div>
+ 
+
+        </div>
+      </div>
+
+            
+<style>
+#banner-145698761 {
+  padding-top: 99.99%;
+}
+@media (min-width:550px) {
+  #banner-145698761 {
+    padding-top: 500px;
+  }
+}
+</style>
+  </div>
+
+
+
+     </div>
+
+     <div class="loading-spin dark large centered" style="display: none;"></div>
+
+	</div>
+
+
+<div class="container section-title-container"><h2 class="section-title section-title-center"><b></b><span class="section-title-main" style="font-size:85%;color:rgb(0, 5, 255);">Các sản phẩm An Ngọc Window thi công</span><b></b></h2></div>
+
+<div class="row align-bottom align-center" id="row-487542853">
+
+
+	<div id="col-1154899652" class="col medium-4 small-6 large-4">
+				<div class="col-inner">
+			
+			
+
+	<div class="box has-hover   has-hover box-text-bottom">
+
+		<div class="box-image" style="border-radius:8%;">
+			<a href="https://www.anngocwindow.com/cua-nhom-xingfa/" rel="https://www.anngocwindow.com/cua-nhom-xingfa/">			<div class="">
+				<img decoding="async" width="450" height="350" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20450%20350%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/cua-nhom-2-canh-mo-quay.jpg" class="lazy-load attachment-large size-large" alt="cửa nhôm 2 cánh mở quay" srcset="" data-srcset="https://www.anngocwindow.com/wp-content/uploads/2021/09/cua-nhom-2-canh-mo-quay.jpg 450w, https://www.anngocwindow.com/wp-content/uploads/2021/09/cua-nhom-2-canh-mo-quay-300x233.jpg 300w" sizes="auto, (max-width: 450px) 100vw, 450px" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center is-xsmall">
+			<div class="box-text-inner">
+				
+
+<h2><a href="https://www.anngocwindow.com/cua-nhom-xingfa/">Cửa nhôm Xingfa</a></h2>
+
+			</div>
+		</div>
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-61750273" class="col medium-4 small-6 large-4">
+				<div class="col-inner text-center">
+			
+			
+
+	<div class="box has-hover   has-hover box-text-bottom">
+
+		<div class="box-image" style="border-radius:8%;">
+			<a href="https://www.anngocwindow.com/mau-cua-sat-dep-hue/" rel="https://www.anngocwindow.com/mau-cua-sat-dep-hue/">			<div class="">
+				<img decoding="async" width="600" height="450" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20600%20450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/mau-cua-sat-2-canh-hue.jpg" class="lazy-load attachment-large size-large" alt="mau cua sat 2 canh hue" srcset="" data-srcset="https://www.anngocwindow.com/wp-content/uploads/2021/09/mau-cua-sat-2-canh-hue.jpg 600w, https://www.anngocwindow.com/wp-content/uploads/2021/09/mau-cua-sat-2-canh-hue-510x383.jpg 510w, https://www.anngocwindow.com/wp-content/uploads/2021/09/mau-cua-sat-2-canh-hue-300x225.jpg 300w" sizes="auto, (max-width: 600px) 100vw, 600px" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center is-xsmall">
+			<div class="box-text-inner">
+				
+
+<h2><a href="https://www.anngocwindow.com/mau-cua-sat-dep-hue/">Cửa sắt</a></h2>
+
+			</div>
+		</div>
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+
+	<div id="col-1111374191" class="col medium-4 small-6 large-4">
+				<div class="col-inner">
+			
+			
+
+	<div class="box has-hover   has-hover box-text-bottom">
+
+		<div class="box-image" style="border-radius:8%;">
+			<a href="https://www.anngocwindow.com/cua-cuon-hue/" rel="https://www.anngocwindow.com/cua-cuon-hue/">			<div class="">
+				<img decoding="async" width="800" height="600" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20800%20600%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/anngocwindow-2.jpg" class="lazy-load attachment-large size-large" alt="mẫu cửa cuốn khe thoáng" srcset="" data-srcset="https://www.anngocwindow.com/wp-content/uploads/2021/09/anngocwindow-2.jpg 800w, https://www.anngocwindow.com/wp-content/uploads/2021/09/anngocwindow-2-510x383.jpg 510w, https://www.anngocwindow.com/wp-content/uploads/2021/09/anngocwindow-2-300x225.jpg 300w, https://www.anngocwindow.com/wp-content/uploads/2021/09/anngocwindow-2-768x576.jpg 768w" sizes="auto, (max-width: 800px) 100vw, 800px" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center is-xsmall">
+			<div class="box-text-inner">
+				
+
+<h2><a href="https://www.anngocwindow.com/cua-cuon-hue/">Cửa cuốn</a></h2>
+
+			</div>
+		</div>
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-499523757" class="col medium-4 small-6 large-4">
+				<div class="col-inner">
+			
+			
+
+	<div class="box has-hover   has-hover box-text-bottom">
+
+		<div class="box-image" style="border-radius:8%;">
+			<a href="https://www.anngocwindow.com/cua-kinh-cuong-luc-thuy-luc-hue/" rel="https://www.anngocwindow.com/cua-kinh-cuong-luc-thuy-luc-hue/">			<div class="">
+				<img decoding="async" width="450" height="350" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20450%20350%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/cua-kinh-2-canh.png" class="lazy-load attachment-large size-large" alt="cửa kính 2 cánh" srcset="" data-srcset="https://www.anngocwindow.com/wp-content/uploads/2021/09/cua-kinh-2-canh.png 450w, https://www.anngocwindow.com/wp-content/uploads/2021/09/cua-kinh-2-canh-300x233.png 300w" sizes="auto, (max-width: 450px) 100vw, 450px" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center is-xsmall">
+			<div class="box-text-inner">
+				
+
+<h2><a href="https://www.anngocwindow.com/cua-kinh-cuong-luc-thuy-luc-hue/">Cửa kính cường lực</a></h2>
+<div id="gtx-trans" style="position: absolute; left: 320px; top: 50.1094px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+
+			</div>
+		</div>
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-1793802049" class="col medium-4 small-6 large-4">
+				<div class="col-inner">
+			
+			
+
+	<div class="box has-hover   has-hover box-text-bottom">
+
+		<div class="box-image" style="border-radius:8%;">
+			<a href="https://www.anngocwindow.com/mau-cua-cong-dep-hue/" rel="https://www.anngocwindow.com/mau-cua-cong-dep-hue/">			<div class="">
+				<img decoding="async" width="600" height="434" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20600%20434%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/mau-cua-sat-cong-2-canh.jpg" class="lazy-load attachment-large size-large" alt="mẫu cửa sắt cổng 2 cánh" srcset="" data-srcset="https://www.anngocwindow.com/wp-content/uploads/2021/09/mau-cua-sat-cong-2-canh.jpg 600w, https://www.anngocwindow.com/wp-content/uploads/2021/09/mau-cua-sat-cong-2-canh-510x369.jpg 510w, https://www.anngocwindow.com/wp-content/uploads/2021/09/mau-cua-sat-cong-2-canh-300x217.jpg 300w" sizes="auto, (max-width: 600px) 100vw, 600px" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center is-xsmall">
+			<div class="box-text-inner">
+				
+
+<h2><a href="https://www.anngocwindow.com/mau-cua-cong-dep-hue/">Cửa cổng</a></h2>
+
+			</div>
+		</div>
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-1612930374" class="col medium-4 small-6 large-4">
+				<div class="col-inner">
+			
+			
+
+	<div class="box has-hover   has-hover box-text-bottom">
+
+		<div class="box-image" style="border-radius:8%;">
+			<a href="https://www.anngocwindow.com/hang-rao-dep-hue/" rel="https://www.anngocwindow.com/hang-rao-dep-hue/">			<div class="">
+				<img decoding="async" width="512" height="384" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20512%20384%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/08/unnamed.jpg" class="lazy-load attachment-large size-large" alt="mẫu hàng rào sắt nghệ thuật" srcset="" data-srcset="https://www.anngocwindow.com/wp-content/uploads/2021/08/unnamed.jpg 512w, https://www.anngocwindow.com/wp-content/uploads/2021/08/unnamed-510x383.jpg 510w, https://www.anngocwindow.com/wp-content/uploads/2021/08/unnamed-300x225.jpg 300w" sizes="auto, (max-width: 512px) 100vw, 512px" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center is-xsmall">
+			<div class="box-text-inner">
+				
+
+<h2><a href="https://www.anngocwindow.com/hang-rao-dep-hue/">Hàng rào</a></h2>
+
+			</div>
+		</div>
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-506204165" class="col medium-4 small-6 large-4">
+				<div class="col-inner">
+			
+			
+
+	<div class="box has-hover   has-hover box-text-bottom">
+
+		<div class="box-image" style="border-radius:8%;">
+			<a href="https://www.anngocwindow.com/lan-can-sat-hue/" rel="https://www.anngocwindow.com/lan-can-sat-hue/">			<div class="">
+				<img decoding="async" width="600" height="504" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20600%20504%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2021/09/mau-lan-can-ban-cong-sat-hop-dep.jpg" class="lazy-load attachment-large size-large" alt="Mẫu lan can ban công sắt đẹp, hiện đại" srcset="" data-srcset="https://www.anngocwindow.com/wp-content/uploads/2021/09/mau-lan-can-ban-cong-sat-hop-dep.jpg 600w, https://www.anngocwindow.com/wp-content/uploads/2021/09/mau-lan-can-ban-cong-sat-hop-dep-510x428.jpg 510w, https://www.anngocwindow.com/wp-content/uploads/2021/09/mau-lan-can-ban-cong-sat-hop-dep-300x252.jpg 300w" sizes="auto, (max-width: 600px) 100vw, 600px" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center is-xsmall">
+			<div class="box-text-inner">
+				
+
+<h2><a href="https://www.anngocwindow.com/lan-can-sat-hue/">Lan can sắt</a></h2>
+
+			</div>
+		</div>
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-1787679373" class="col medium-4 small-6 large-4">
+				<div class="col-inner">
+			
+			
+
+	<div class="box has-hover   has-hover box-text-bottom">
+
+		<div class="box-image" style="border-radius:8%;">
+			<a href="https://www.anngocwindow.com/mai-kinh-gieng-troi/" rel="https://www.anngocwindow.com/mai-kinh-gieng-troi/">			<div class="">
+				<img decoding="async" width="450" height="350" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20450%20350%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://www.anngocwindow.com/wp-content/uploads/2017/11/1-49.png" class="lazy-load attachment-large size-large" alt="mái kính giếng trời" srcset="" data-srcset="https://www.anngocwindow.com/wp-content/uploads/2017/11/1-49.png 450w, https://www.anngocwindow.com/wp-content/uploads/2017/11/1-49-300x233.png 300w" sizes="auto, (max-width: 450px) 100vw, 450px" title="TRANG CHỦ Công Ty TNHH MTV UPVC An Ngọc - An Ngọc Window">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center is-xsmall">
+			<div class="box-text-inner">
+				
+
+<h2><a href="https://www.anngocwindow.com/mai-kinh-gieng-troi/">Mái kính giếng trời</a></h2>
+
+			</div>
+		</div>
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+</div>
+
+
+			
+		
+</div>
+
+
+
+</main>
+
+<footer id="footer" class="footer-wrapper">
+
+	
+<!-- FOOTER 1 -->
+
+<!-- FOOTER 2 -->
+<div class="footer-widgets footer footer-2 ">
+		<div class="row large-columns-1 mb-0">
+	   		
+		<div id="block_widget-3" class="col pb-0 widget block_widget">
+		
+		<div class="row" id="row-407896284">
+
+
+	<div id="col-1443122142" class="col medium-4 small-12 large-4">
+				<div class="col-inner">
+			
+			
+
+<p><strong>LIÊN HỆ:<br></strong><span style="font-size: 120%;">Công Ty TNHH MTV UPVC An Ngọc</span><br>– Địa chỉ: <span class="S1PPyQ">35 Đại Cồ Việt, phường An Đông, TP Huế (Địa chỉ cũ: </span>37 Phan Văn Trường, phường Vỹ Dạ, TP Huế)<br>– SĐT liên hệ: 0917551397 (gặp anh Ngọc)<br>– Website: www.anngocwindow.com<br>– Giấy chứng nhận ĐKKD số 3301566997 do Sở Kế hoạch và Đầu tư Tỉnh Thừa Thiên Huế cấp ngày 19/06/2015</p>
+<a href="https://zalo.me/0917551397" target="_blank" class="button primary is-smaller" rel="noopener" style="border-radius:99px;">
+	<i class="icon-user" aria-hidden="true"></i>	<span>Zalo</span>
+	</a>
+
+
+<a href="tel:0917551397" target="_blank" class="button primary is-smaller" rel="noopener" style="border-radius:99px;">
+	<i class="icon-phone" aria-hidden="true"></i>	<span>Hotline</span>
+	</a>
+
+
+<a href="https://www.facebook.com/anngocwindow/" target="_blank" class="button primary is-smaller" rel="noopener" style="border-radius:99px;">
+	<i class="icon-facebook" aria-hidden="true"></i>	<span>FB</span>
+	</a>
+
+
+<a href="https://goo.gl/maps/UqW7DFUBatAUoYPa9" target="_blank" class="button primary is-smaller" rel="noopener" style="border-radius:99px;">
+	<i class="icon-map-pin-fill" aria-hidden="true"></i>	<span>Google Map</span>
+	</a>
+
+
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-249380662" class="col medium-5 small-12 large-5">
+				<div class="col-inner">
+			
+			
+
+<p style="text-align: left;"><strong>GIỚI THIỆU:</strong><br><span style="font-size: 100%;">Được thành lập từ năm 2015, trải qua quá trình hoạt động với hơn&nbsp;700 công trình lớn nhỏ được thi công, Công ty TNHH MTV UVPC An Ngọc tự hào là một trong những đơn vị sản xuất và thi công lắp đặt các sản phẩm: cửa nhôm Xingfa, cửa sắt, cửa nhựa lõi thép, cửa cuốn, cửa kính cường lực, lan can, cầu thang, vách ngăn, mái kính, cửa cổng, hàng rào với&nbsp;chất lượng hàng đầu tại Huế.</span></p>
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-1727137025" class="col medium-3 small-12 large-3">
+				<div class="col-inner">
+			
+			
+
+<p><strong>THÔNG TIN:<br></strong><a href="https://www.anngocwindow.com/cua-nhom-xingfa/">Cửa nhôm Xingfa</a><br><a href="https://www.anngocwindow.com/mau-cua-sat-dep-hue/">Cửa sắt</a><br><a href="https://www.anngocwindow.com/mau-cua-cong-dep-hue/">Cửa cổng</a><br><a href="https://www.anngocwindow.com/cua-cuon-hue/">Cửa cuốn</a><br><a href="https://www.anngocwindow.com/lan-can-sat-hue/">Lan can sắt</a><br><a href="https://www.anngocwindow.com/cua-kinh-cuong-luc-thuy-luc-hue/">Cửa kính cường lực (thủy lực)</a><br><a href="https://www.anngocwindow.com/hang-rao-dep-hue/">Hàng rào</a><br><a href="https://www.anngocwindow.com/mai-kinh-gieng-troi/">Mái kính giếng trời</a><br><a href="https://www.anngocwindow.com/chinh-sach-bao-mat/">Chính sách bảo mật</a></p>
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_114290348">
+		<a class="" href="http://online.gov.vn/Home/WebDetails/85003" target="_blank" rel="noopener">						<div class="img-inner dark">
+			<img width="600" height="227" src="https://www.anngocwindow.com/wp-content/uploads/2021/07/logoSaleNoti.png" class="attachment-large size-large" alt="Đã thông báo bộ công thương" decoding="async" loading="lazy" srcset="https://www.anngocwindow.com/wp-content/uploads/2021/07/logoSaleNoti.png 600w, https://www.anngocwindow.com/wp-content/uploads/2021/07/logoSaleNoti-510x193.png 510w, https://www.anngocwindow.com/wp-content/uploads/2021/07/logoSaleNoti-300x114.png 300w" sizes="auto, (max-width: 600px) 100vw, 600px">						
+					</div>
+						</a>		
+<style>
+#image_114290348 {
+  width: 100%;
+}
+</style>
+	</div>
+	
+
+
+		</div>
+					</div>
+
+	
+
+</div>
+		</div>
+				</div>
+</div>
+
+
+
+<div class="absolute-footer light medium-text-center text-center">
+  <div class="container clearfix">
+
+    
+    <div class="footer-primary pull-left">
+            <div class="copyright-footer">
+        © 2015 - Bản quyền thuộc về Công Ty TNHH MTV UPVC An Ngọc - Anngocwindow.com      </div>
+          </div>
+  </div>
+</div>
+
+</footer>
+
+</div>
+
+<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+
+	
+	<div class="sidebar-menu no-scrollbar ">
+
+		
+					<ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
+				<li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative form-flat is-normal"><form role="search" method="get" class="searchform" action="https://www.anngocwindow.com/">
+	<div class="flex-row relative">
+						<div class="flex-col flex-grow">
+			<label class="screen-reader-text" for="woocommerce-product-search-field-1">Tìm kiếm:</label>
+			<input type="search" id="woocommerce-product-search-field-1" class="search-field mb-0" placeholder="Tìm kiếm…" value="" name="s" style="">
+			<input type="hidden" name="post_type" value="product" style="">
+					</div>
+		<div class="flex-col">
+			<button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button  icon mb-0" aria-label="Gửi">
+				<i class="icon-search"></i>			</button>
+		</div>
+	</div>
+	<div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-27"><a href="https://www.anngocwindow.com/" aria-current="page">TRANG CHỦ</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-309"><a href="https://www.anngocwindow.com/an-ngoc-window/">GIỚI THIỆU</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1263 has-child" aria-expanded="false"><a href="#">CỬA</a>
+<button class="toggle" aria-label="Chuyển đổi"><i class="icon-angle-down"></i></button><ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-182"><a href="https://www.anngocwindow.com/cua-nhom-xingfa/">Cửa nhôm Xingfa</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2562"><a href="https://www.anngocwindow.com/mau-cua-sat-dep-hue/">Mẫu cửa sắt đẹp</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-183"><a href="https://www.anngocwindow.com/cua-nhua-loi-thep-cao-cap-upvc/">Cửa nhựa lõi thép</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2556"><a href="https://www.anngocwindow.com/cua-cuon-hue/">Cửa cuốn</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2557"><a href="https://www.anngocwindow.com/cua-kinh-cuong-luc-thuy-luc-hue/">Cửa kính cường lực (thủy lực)</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2558"><a href="https://www.anngocwindow.com/mau-cua-cong-dep-hue/">Cửa cổng đẹp</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2559"><a href="https://www.anngocwindow.com/hang-rao-dep-hue/">Hàng rào đẹp</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2564 has-child" aria-expanded="false"><a href="#">LAN CAN &amp; CẦU THANG</a>
+<button class="toggle" aria-label="Chuyển đổi"><i class="icon-angle-down"></i></button><ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-536"><a href="https://www.anngocwindow.com/lan-can-ban-cong-kinh-cuong-luc/">Lan can ban công kính cường lực</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-535"><a href="https://www.anngocwindow.com/lan-can-ban-cong-sat/">Lan can ban công sắt</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-534"><a href="https://www.anngocwindow.com/lan-can-ban-cong-inox/">Lan can ban công inox</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-556"><a href="https://www.anngocwindow.com/cau-thang-kinh-cuong-luc-2/">Lan can cầu thang kính cường lực</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-538"><a href="https://www.anngocwindow.com/lan-can-cau-thang-sat/">Lan can cầu thang sắt</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-537"><a href="https://www.anngocwindow.com/lan-can-cau-thang-inox/">Lan can cầu thang inox</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2568 has-child" aria-expanded="false"><a href="#">VÁCH NGĂN</a>
+<button class="toggle" aria-label="Chuyển đổi"><i class="icon-angle-down"></i></button><ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-532"><a href="https://www.anngocwindow.com/vach-ngan-kinh-cuong-luc/">Vách ngăn kính cường lực</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-530"><a href="https://www.anngocwindow.com/vach-ngan-compact-hpl-vach-ngan-nha-ve-sinh/">Vách ngăn vệ sinh Compact HPL</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2569 has-child" aria-expanded="false"><a href="#">MÁI KÍNH</a>
+<button class="toggle" aria-label="Chuyển đổi"><i class="icon-angle-down"></i></button><ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-528"><a href="https://www.anngocwindow.com/mai-sanh-kinh-cuong-luc/">Mái sảnh kính cường lực</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-527"><a href="https://www.anngocwindow.com/mai-kinh-gieng-troi/">Mái kính giếng trời</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="https://www.anngocwindow.com/gioi-thieu/">LIÊN HỆ</a></li>
+<li class="html header-social-icons ml-0">
+	<div class="social-icons follow-icons"><a href="https://www.facebook.com/anngocwindow" target="_blank" data-label="Facebook" class="icon primary button circle facebook tooltip" title="Theo dõi trên Facebook" aria-label="Theo dõi trên Facebook" rel="noopener nofollow"><i class="icon-facebook"></i></a><a href="tel:0917551397" data-label="Phone" target="_blank" class="icon primary button circle phone tooltip" title="Gọi cho chúng tôi" aria-label="Gọi cho chúng tôi" rel="nofollow noopener"><i class="icon-phone"></i></a></div></li>
+<li class="html header-button-1">
+	<div class="header-button">
+		<a href="https://zalo.me/0917551397" target="_blank" class="button primary" rel="noopener" style="border-radius:99px;">
+		<span>Zalo: 0917551397</span>
+	</a>
+	</div>
+</li>
+			</ul>
+		
+		
+	</div>
+
+	
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/flatsome-child/*","/wp-content/themes/flatsome/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+        <!-- if gom all in one show -->
+                <div id="button-contact-vr" class="">
+            <div id="gom-all-in-one"><!-- v3 -->
+                
+                
+                
+                
+
+                
+                
+                
+                
+                
+                                    <!-- zalo -->
+                    <div id="zalo-vr" class="button-contact">
+                        <div class="phone-vr">
+                            <div class="phone-vr-circle-fill"></div>
+                            <div class="phone-vr-img-circle">
+                                <a target="_blank" href="https://zalo.me/0917551397">
+                                    <img width="100" height="95" alt="Zalo" src="https://www.anngocwindow.com/wp-content/plugins/button-contact-vr/legacy/img/zalo.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end zalo -->
+                
+                
+                                    <!-- Phone -->
+                    <div id="phone-vr" class="button-contact">
+                        <div class="phone-vr">
+                            <div class="phone-vr-circle-fill"></div>
+                            <div class="phone-vr-img-circle">
+                                <a href="tel:0917551397">
+                                    <img width="50" height="50" alt="Phone" src="https://www.anngocwindow.com/wp-content/plugins/button-contact-vr/legacy/img/phone.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                        <!-- end phone -->
+
+                                                            </div><!-- end v3 class gom-all-in-one -->
+
+            
+        </div>
+
+        <!-- Add custom css and js -->
+        
+        <script type="rocketlazyloadscript" data-rocket-type="text/javascript">window.addEventListener('DOMContentLoaded', function() {
+            if (document.querySelector("#all-in-one-vr")) {
+                document.querySelector("#all-in-one-vr").addEventListener("click", function() {
+                    document.querySelector("#button-contact-vr").classList.toggle("active");
+                });
+            }
+
+            jQuery(document).ready(function($) {
+                // $('#all-in-one-vr').click(function() {
+                //     $('#button-contact-vr').toggleClass('active');
+                // })
+                $('#contact-form-vr').click(function() {
+                    $('#popup-form-contact-vr').addClass('active');
+                })
+                $('div#popup-form-contact-vr .bg-popup-vr,div#popup-form-contact-vr .content-popup-vr .close-popup-vr').click(function() {
+                    $('#popup-form-contact-vr').removeClass('active');
+                })
+                $('#contact-showroom').click(function() {
+                    $('#popup-showroom-vr').addClass('active');
+                })
+                $('div#popup-showroom-vr .bg-popup-vr,.content-popup-vr .close-popup-vr').click(function() {
+                    $('#popup-showroom-vr').removeClass('active');
+                })
+            });
+        });</script>
+
+        <!-- end Add custom css and js -->
+
+
+                    <!-- color phone -->
+            <style>
+                .phone-bar a,
+                #phone-vr .phone-vr-circle-fill,
+                #phone-vr .phone-vr-img-circle,
+                #phone-vr .phone-bar a {
+                    background-color: #dd3333;
+                }
+
+                #phone-vr .phone-vr-circle-fill {
+                    opacity: 0.7;
+                    box-shadow: 0 0 0 0 #dd3333;
+                }
+
+                .phone-bar2 a,
+                #phone-vr2 .phone-vr-circle-fill,
+                #phone-vr2 .phone-vr-img-circle,
+                #phone-vr2 .phone-bar a {
+                    background-color: ;
+                }
+
+                #phone-vr2 .phone-vr-circle-fill {
+                    opacity: 0.7;
+                    box-shadow: 0 0 0 0 ;
+                }
+
+                .phone-bar3 a,
+                #phone-vr3 .phone-vr-circle-fill,
+                #phone-vr3 .phone-vr-img-circle,
+                #phone-vr3 .phone-bar a {
+                    background-color: ;
+                }
+
+                #phone-vr3 .phone-vr-circle-fill {
+                    opacity: 0.7;
+                    box-shadow: 0 0 0 0 ;
+                }
+            </style>
+            <!-- color phone -->
+        
+        
+        
+        
+                
+                    <!-- size scale -->
+            <style>
+                #button-contact-vr {
+                    transform: scale(0.9);
+                }
+            </style>
+            
+                    <!-- location left right -->
+            <style>
+                #button-contact-vr {
+                    right: 0;
+                }
+
+                .phone-bar a {
+                    left: auto;
+                    right: 30px;
+                    padding: 8px 55px 7px 15px;
+                }
+
+                #button-contact-vr.active #gom-all-in-one .button-contact {
+                    margin-left: 100%;
+                }
+            </style>
+        
+        
+        
+                    <div id="login-form-popup" class="lightbox-content mfp-hide">
+            	<div class="woocommerce">
+      		<div class="woocommerce-notices-wrapper"></div>
+<div class="account-container lightbox-inner">
+
+	
+			<div class="account-login-inner">
+
+				<h3 class="uppercase">Đăng nhập</h3>
+
+				<form class="woocommerce-form woocommerce-form-login login" method="post">
+
+					
+					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+						<label for="username">Tên tài khoản hoặc địa chỉ email&nbsp;<span class="required" aria-hidden="true">*</span><span class="screen-reader-text">Bắt buộc</span></label>
+						<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="" required="" aria-required="true" style="">					</p>
+					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+						<label for="password">Mật khẩu&nbsp;<span class="required" aria-hidden="true">*</span><span class="screen-reader-text">Bắt buộc</span></label>
+						<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" required="" aria-required="true" style="">
+					</p>
+
+					
+					<p class="form-row">
+						<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
+							<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" style=""> <span>Ghi nhớ mật khẩu</span>
+						</label>
+						<input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="3031161902" style=""><input type="hidden" name="_wp_http_referer" value="/" style="">						<button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="Đăng nhập">Đăng nhập</button>
+					</p>
+					<p class="woocommerce-LostPassword lost_password">
+						<a href="https://www.anngocwindow.com/wp-login.php?action=lostpassword">Quên mật khẩu?</a>
+					</p>
+
+					
+				</form>
+			</div>
+
+			
+</div>
+
+		</div>
+      	    </div>
+  	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script type="text/javascript" id="kk-star-ratings-js-extra">
+/* <![CDATA[ */
+var kk_star_ratings = {"action":"kk-star-ratings","endpoint":"https://www.anngocwindow.com/wp-admin/admin-ajax.php","nonce":"95ec5aa878"};
+//# sourceURL=kk-star-ratings-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.anngocwindow.com/wp-content/plugins/kk-star-ratings/src/core/public/js/kk-star-ratings.min.js?ver=5.4.10.3" id="kk-star-ratings-js" defer=""></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_password_show":"Hi\u1ec3n th\u1ecb m\u1eadt kh\u1ea9u","i18n_password_hide":"\u1ea8n m\u1eadt kh\u1ea9u"};
+//# sourceURL=woocommerce-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.anngocwindow.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=10.5.2" id="woocommerce-js" data-wp-strategy="defer" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://www.anngocwindow.com","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.anngocwindow.com/wp-content/cache/min/1/wp-content/themes/flatsome/inc/extensions/flatsome-instant-page/flatsome-instant-page.js?ver=1771660598" id="flatsome-instant-page-js" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.anngocwindow.com/wp-content/cache/min/1/wp-content/themes/flatsome/inc/extensions/flatsome-live-search/flatsome-live-search.js?ver=1771660598" id="flatsome-live-search-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.anngocwindow.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=10.5.2" id="sourcebuster-js-js" defer=""></script>
+<script type="text/javascript" id="wc-order-attribution-js-extra">
+/* <![CDATA[ */
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https://www.anngocwindow.com/wp-admin/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+//# sourceURL=wc-order-attribution-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.anngocwindow.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.5.2" id="wc-order-attribution-js" defer=""></script>
+<script type="text/javascript" src="https://www.anngocwindow.com/wp-includes/js/hoverIntent.min.js?ver=1.10.2" id="hoverIntent-js" defer=""></script>
+<script type="text/javascript" id="flatsome-js-js-extra">
+/* <![CDATA[ */
+var flatsomeVars = {"theme":{"version":"3.19.8"},"ajaxurl":"https://www.anngocwindow.com/wp-admin/admin-ajax.php","rtl":"","sticky_height":"70","stickyHeaderHeight":"0","scrollPaddingTop":"0","assets_url":"https://www.anngocwindow.com/wp-content/themes/flatsome/assets/","lightbox":{"close_markup":"\u003Cbutton title=\"%title%\" type=\"button\" class=\"mfp-close\"\u003E\u003Csvg xmlns=\"http://www.w3.org/2000/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"\u003E\u003Cline x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"\u003E\u003C/line\u003E\u003Cline x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"\u003E\u003C/line\u003E\u003C/svg\u003E\u003C/button\u003E","close_btn_inside":false},"user":{"can_edit_pages":false},"i18n":{"mainMenu":"Menu ch\u00ednh","toggleButton":"Chuy\u1ec3n \u0111\u1ed5i"},"options":{"cookie_notice_version":"1","swatches_layout":false,"swatches_disable_deselect":false,"swatches_box_select_event":false,"swatches_box_behavior_selected":false,"swatches_box_update_urls":"1","swatches_box_reset":false,"swatches_box_reset_limited":false,"swatches_box_reset_extent":false,"swatches_box_reset_time":300,"search_result_latency":"0"},"is_mini_cart_reveal":"1"};
+//# sourceURL=flatsome-js-js-extra
+/* ]]> */
+</script>
+<script data-minify="1" type="text/javascript" src="https://www.anngocwindow.com/wp-content/cache/min/1/wp-content/themes/flatsome/assets/js/flatsome.js?ver=1771660598" id="flatsome-js-js" defer=""></script>
+<script data-minify="1" type="text/javascript" src="https://www.anngocwindow.com/wp-content/cache/min/1/wp-content/themes/flatsome/inc/extensions/flatsome-lazy-load/flatsome-lazy-load.js?ver=1771660598" id="flatsome-lazy-js" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.anngocwindow.com/wp-content/cache/min/1/wp-content/themes/flatsome/assets/js/woocommerce.js?ver=1771660598" id="flatsome-theme-woocommerce-js-js" defer=""></script>
+<script type="text/javascript" id="zxcvbn-async-js-extra">
+/* <![CDATA[ */
+var _zxcvbnSettings = {"src":"https://www.anngocwindow.com/wp-includes/js/zxcvbn.min.js"};
+//# sourceURL=zxcvbn-async-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.anngocwindow.com/wp-includes/js/zxcvbn-async.min.js?ver=1.0" id="zxcvbn-async-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.anngocwindow.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.anngocwindow.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="password-strength-meter-js-extra">
+/* <![CDATA[ */
+var pwsL10n = {"unknown":"M\u1eadt kh\u1ea9u m\u1ea1nh kh\u00f4ng x\u00e1c \u0111\u1ecbnh","short":"R\u1ea5t y\u1ebfu","bad":"Y\u1ebfu","good":"Trung b\u00ecnh","strong":"M\u1ea1nh","mismatch":"M\u1eadt kh\u1ea9u kh\u00f4ng kh\u1edbp"};
+//# sourceURL=password-strength-meter-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="password-strength-meter-js-translations">
+/* <![CDATA[ */
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2026-03-06 17:22:50+0000","generator":"GlotPress\/4.0.3","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=1; plural=0;","lang":"vi_VN"},"%1$s is deprecated since version %2$s! Use %3$s instead. Please consider writing more inclusive code.":["%1$s \u0111\u00e3 ng\u1eebng ho\u1ea1t \u0111\u1ed9ng t\u1eeb phi\u00ean b\u1ea3n %2$s! S\u1eed d\u1ee5ng thay th\u1ebf b\u1eb1ng %3$s."]}},"comment":{"reference":"wp-admin\/js\/password-strength-meter.js"}} );
+//# sourceURL=password-strength-meter-js-translations
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.anngocwindow.com/wp-admin/js/password-strength-meter.min.js?ver=6.9.4" id="password-strength-meter-js" defer=""></script>
+<script type="text/javascript" id="wc-password-strength-meter-js-extra">
+/* <![CDATA[ */
+var wc_password_strength_meter_params = {"min_password_strength":"3","stop_checkout":"","i18n_password_error":"Vui l\u00f2ng nh\u1eadp m\u1eadt kh\u1ea9u m\u1ea1nh h\u01a1n.","i18n_password_hint":"G\u1ee3i \u00fd: M\u1eadt kh\u1ea9u ph\u1ea3i c\u00f3 \u00edt nh\u1ea5t 12 k\u00fd t\u1ef1. \u0110\u1ec3 n\u00e2ng cao \u0111\u1ed9 b\u1ea3o m\u1eadt, s\u1eed d\u1ee5ng ch\u1eef in hoa, in th\u01b0\u1eddng, ch\u1eef s\u1ed1 v\u00e0 c\u00e1c k\u00fd t\u1ef1 \u0111\u1eb7c bi\u1ec7t nh\u01b0 ! \" ? $ % ^ & )."};
+//# sourceURL=wc-password-strength-meter-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.anngocwindow.com/wp-content/plugins/woocommerce/assets/js/frontend/password-strength-meter.min.js?ver=10.5.2" id="wc-password-strength-meter-js" defer="defer" data-wp-strategy="defer"></script>
+
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;8ced2f2a91b946ce9559fedfae446946&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+
+</body></html>

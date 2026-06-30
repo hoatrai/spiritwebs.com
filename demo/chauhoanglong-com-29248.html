@@ -1,0 +1,3060 @@
+<!DOCTYPE html><html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="I8EMGOGoZzwg692BDIoyiyYyaJLHqyg1KIAcRaA1">
+        <title>Product - Tất cả sản phẩm</title>
+    <meta name="description" content="Khám phá toàn bộ sản phẩm từ các nhà bán hàng trên nền tảng MLink">
+        <link rel="canonical" href="https://chauhoanglong.com">
+    <meta name="robots" content="index,follow">
+    <link rel="shortcut icon" href="https://chauhoanglong.com/images/site-favicon.png?v=1773548676" type="image/jpeg">
+    <link rel="icon" href="https://chauhoanglong.com/images/site-favicon.png?v=1773548676" type="image/jpeg">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts (match original Mlink) -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --main-color-one: #2885C7;
+            --main-color-two: #2bdfff;
+            --main-color-dark: #1f6ba8;
+            --text-primary: #1D2635;
+            --text-secondary: #667085;
+            --border-color: #EAECF0;
+            --card-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+            --card-hover-shadow: 0 8px 25px rgba(40, 133, 199, .15);
+            --heading-font: 'Plus Jakarta Sans', sans-serif;
+            --body-font: 'Manrope', sans-serif;
+            --footer-bg: #2885C7;
+            --section-bg: #F7F8FF;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--body-font);
+            background-color: #f4f6f9;
+            margin: 0;
+            color: var(--text-primary);
+            font-size: 14px;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--heading-font);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--main-color-one);
+        }
+
+        a:hover {
+            color: var(--main-color-dark);
+        }
+
+        /* ── Navbar ───────────────────────────────────────────── */
+        .top-navbar {
+            background: #fff;
+            padding: 0 40px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            height: 70px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .navbar-container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 15px;
+            position: relative;
+        }
+
+        .navbar-left {
+            flex: 1 1 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+        }
+
+        .navbar-logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .navbar-logo-img {
+            height: 62px;
+            width: auto;
+        }
+
+        .navbar-center {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 5px;
+        }
+
+        .navbar-menu a {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 18px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-family: var(--body-font);
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all .25s;
+        }
+
+        .navbar-menu a:hover {
+            color: var(--main-color-one);
+            background: rgba(40, 133, 199, .07);
+        }
+
+        .navbar-menu a.active {
+            color: var(--main-color-one);
+            background: rgba(40, 133, 199, .10);
+            font-weight: 600;
+        }
+
+        .navbar-right {
+            flex: 1 1 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-login {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            border: 1px solid var(--main-color-one);
+            color: var(--main-color-one);
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all .2s;
+            background: transparent;
+        }
+
+        .btn-login:hover {
+            background: rgba(40, 133, 199, .06);
+            color: var(--main-color-one);
+        }
+
+        .btn-register {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            background: var(--main-color-one);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background .2s;
+            border: 1px solid var(--main-color-one);
+        }
+
+        .btn-register:hover {
+            background: var(--main-color-dark);
+            border-color: var(--main-color-dark);
+            color: #fff;
+        }
+
+        /* ── Breadcrumbs ─────────────────────────────────────── */
+        .breadcrumbs-bar {
+            background: #f5f5f5;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .breadcrumbs-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 14px;
+            color: #8a8a8a;
+            font-weight: 500;
+        }
+
+        .breadcrumbs-inner a {
+            color: #8a8a8a;
+            text-decoration: none;
+            transition: color .2s;
+        }
+
+        .breadcrumbs-inner a:hover {
+            color: var(--main-color-one);
+        }
+
+        .breadcrumbs-inner .bc-sep {
+            color: #bbb;
+            font-size: 12px;
+        }
+
+        .breadcrumbs-inner .bc-current {
+            color: #555;
+        }
+
+        /* ── Footer ──────────────────────────────────────────── */
+        .site-footer {
+            background: linear-gradient(135deg, var(--footer-bg) 0%, #1a6faa 100%);
+            color: rgba(255, 255, 255, .9);
+            padding: 50px 0 0;
+            margin-top: 40px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+            gap: 40px;
+        }
+
+        .footer-logo-section .footer-logo {
+            height: 60px;
+            width: auto;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo-section p {
+            font-size: 13px;
+            line-height: 1.7;
+            opacity: .85;
+            margin-bottom: 16px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 8px;
+        }
+
+        .footer-social a {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, .15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 14px;
+            transition: background .2s;
+        }
+
+        .footer-social a:hover {
+            background: rgba(255, 255, 255, .3);
+            color: #fff;
+        }
+
+        .footer-col h5 {
+            font-family: var(--heading-font);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a,
+        .footer-col ul li span {
+            color: rgba(255, 255, 255, .8);
+            font-size: 13px;
+            text-decoration: none;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            transition: color .2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-col ul li i {
+            margin-top: 3px;
+            font-size: 14px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, .6);
+            border-top: 1px solid rgba(255, 255, 255, .15);
+            margin-top: 40px;
+        }
+
+        /* ── Responsive ──────────────────────────────────────── */
+        @media (max-width: 991px) {
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 5px;
+            margin-left: 15px;
+        }
+
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(2px);
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu-content {
+            position: fixed;
+            top: 0;
+            right: -320px;
+            width: 300px;
+            height: 100vh;
+            background: #ffffff;
+            z-index: 1000;
+            box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+            transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-menu-overlay.active .mobile-menu-content {
+            right: 0;
+        }
+
+        .mobile-menu-header {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            background: #f8f9fa;
+        }
+
+        .close-menu-btn {
+            background: rgba(0,0,0,0.05);
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .close-menu-btn:hover {
+            background: rgba(220, 53, 69, 0.1);
+            color: #dc3545;
+        }
+
+        .mobile-menu-list {
+            list-style: none;
+            padding: 20px;
+            margin: 0;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-list li {
+            margin-bottom: 10px;
+        }
+
+        .mobile-menu-list a {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border-radius: 12px;
+            transition: all 0.2s;
+            gap: 14px;
+        }
+
+        .mobile-menu-list a i {
+            font-size: 18px;
+            width: 24px;
+            text-align: center;
+            color: var(--text-secondary);
+            transition: color 0.2s;
+        }
+
+        .mobile-menu-list a:hover,
+        .mobile-menu-list a.active {
+            background: rgba(40, 133, 199, .08);
+            color: var(--main-color-one);
+        }
+
+        .mobile-menu-list a:hover i,
+        .mobile-menu-list a.active i {
+            color: var(--main-color-one);
+        }
+
+        .mobile-menu-footer {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            background: #fcfcfc;
+        }
+
+        .mobile-menu-footer .btn-login,
+        .mobile-menu-footer .btn-register {
+            width: 100%;
+            justify-content: center;
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .top-navbar {
+                padding: 0 15px;
+                height: 64px;
+            }
+
+            .navbar-logo-img {
+                height: 48px;
+            }
+
+            .navbar-center, .navbar-right {
+                display: none !important;
+            }
+            
+            .navbar-container {
+                justify-content: space-between;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        /* ── User dropdown ── */
+        .user-menu-wrap { position: relative; }
+        .user-menu-btn {
+            display: inline-flex; align-items: center; gap: 9px;
+            background: transparent; border: none; cursor: pointer;
+            padding: 6px 10px; border-radius: 8px;
+            transition: background .15s;
+        }
+        .user-menu-btn:hover { background: rgba(40,133,199,.07); }
+        .user-avatar-sm {
+            width: 34px; height: 34px; border-radius: 50%;
+            background: var(--main-color-one); color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 14px; overflow: hidden; flex-shrink: 0;
+            border: 2px solid rgba(40,133,199,.25);
+        }
+        .user-avatar-sm img { width: 100%; height: 100%; object-fit: cover; }
+        .user-greeting { font-size: 13px; color: #334155; max-width: 140px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .user-greeting strong { color: var(--main-color-one); }
+        .user-chevron { font-size: 10px; color: #64748b; transition: transform .2s; }
+        .user-menu-btn.open .user-chevron { transform: rotate(180deg); }
+        .user-dropdown {
+            display: none; position: absolute; right: 0; top: calc(100% + 8px);
+            background: #fff; border: 1px solid #e2e8f0;
+            border-radius: 10px; min-width: 170px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.1);
+            overflow: hidden; z-index: 1000;
+        }
+        .user-dropdown.open { display: block; animation: ddFadeIn .15s ease; }
+        @keyframes ddFadeIn { from{opacity:0;transform:translateY(-6px)} to{opacity:1;transform:translateY(0)} }
+        .user-dd-item {
+            display: flex; align-items: center; gap: 9px;
+            padding: 10px 16px; font-size: 13px; color: #334155;
+            text-decoration: none; background: transparent; border: none;
+            width: 100%; cursor: pointer; transition: background .12s;
+        }
+        .user-dd-item:hover { background: #f8fafc; color: var(--main-color-one); }
+        .user-dd-logout { color: #ef4444; }
+        .user-dd-logout:hover { background: #fef2f2; color: #dc2626; }
+        .user-dd-divider { height: 1px; background: #f1f5f9; margin: 2px 0; }
+
+        /* ── Scroll animations ──────────────────────────────────── */
+
+        /* Variant 1: fade + slide up (hero, toolbar, footer) */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity .65s cubic-bezier(.16,1,.3,1), transform .65s cubic-bezier(.16,1,.3,1);
+        }
+        .scroll-reveal.revealed { opacity: 1; transform: translateY(0); }
+
+        /* Variant 2: fade + slide from left (sidebar, filter groups) */
+        .scroll-reveal-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1);
+        }
+        .scroll-reveal-left.revealed { opacity: 1; transform: translateX(0); }
+
+        /* Variant 3: scale + fade up (product cards) */
+        .scroll-reveal-scale {
+            opacity: 0;
+            transform: translateY(28px) scale(.96);
+            transition: opacity .55s cubic-bezier(.16,1,.3,1), transform .55s cubic-bezier(.16,1,.3,1);
+        }
+        .scroll-reveal-scale.revealed { opacity: 1; transform: translateY(0) scale(1); }
+    </style>
+
+        <!-- Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+    <style>
+        /* ── Select2 Customization ───────────────────────────────── */
+        .select2-container--default .select2-selection--multiple {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            min-height: 40px;
+            padding: 2px 6px;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            background-color: var(--section-bg);
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 2px 8px;
+            color: #334155;
+            font-size: 13px;
+        }
+
+        .select2-container .select2-search--inline .select2-search__field {
+            font-family: var(--body-font);
+            font-size: 14px;
+        }
+
+        /* ── Select2 dropdown open animation ─────────────────────── */
+        @keyframes s2-open {
+            from { opacity: 0; transform: translateY(-8px) scaleY(.95); }
+            to   { opacity: 1; transform: translateY(0)   scaleY(1);    }
+        }
+        .select2-dropdown {
+            animation: s2-open .2s cubic-bezier(.4,0,.2,1) both;
+            transform-origin: top center;
+            border-radius: 8px !important;
+            border: 1px solid #e2e8f0 !important;
+            box-shadow: 0 8px 24px rgba(0,0,0,.1) !important;
+            overflow: hidden;
+        }
+        .select2-results__option {
+            transition: background .12s, color .12s;
+            font-size: 14px;
+            padding: 8px 12px;
+        }
+        .select2-container--default .select2-results__option--highlighted[aria-selected] {
+            background-color: var(--main-color-one) !important;
+        }
+
+        /* ── Hero ─────────────────────────────────────────────────── */
+        .catalog-hero {
+            background: linear-gradient(135deg, var(--main-color-one) 0%, var(--main-color-dark) 100%);
+            padding: 40px 20px 48px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .catalog-hero-title {
+            font-family: var(--heading-font);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .catalog-hero-sub {
+            font-size: 1rem;
+            opacity: .85;
+            margin-bottom: 24px;
+        }
+
+        .catalog-search-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .catalog-search-wrap {
+            display: flex;
+            background: #fff;
+            border-radius: 50px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .15);
+        }
+
+        .catalog-search-input {
+            flex: 1;
+            border: none;
+            padding: 14px 24px;
+            font-size: 15px;
+            outline: none;
+            background: transparent;
+        }
+
+        .catalog-search-btn {
+            border: none;
+            background: var(--main-color-one);
+            color: #fff;
+            padding: 14px 24px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background .2s;
+        }
+
+        .catalog-search-btn:hover {
+            background: var(--main-color-dark);
+        }
+
+        /* ── Toolbar inline autocomplete ────────────────────────── */
+        .toolbar-autocomplete-wrap {
+            position: relative;
+            display: inline-block;
+        }
+        .toolbar-autocomplete-input {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px 44px 8px 12px;
+            font-size: 13px;
+            background: #fff;
+            min-width: 160px;
+            cursor: text;
+            outline: none;
+            color: #334155;
+            transition: border-color .15s, box-shadow .15s;
+        }
+        .toolbar-autocomplete-input:focus {
+            border-color: var(--main-color-one);
+            box-shadow: 0 0 0 2px rgba(37,99,235,.12);
+        }
+        .toolbar-autocomplete-input::placeholder { color: #94a3b8; }
+        .toolbar-ac-icon {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 11px;
+            pointer-events: auto;
+            cursor: pointer;
+            width: 36px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid var(--border-color);
+            border-radius: 0 8px 8px 0;
+            transition: color .15s, background .15s;
+        }
+        .toolbar-ac-icon i {
+            transition: transform .2s ease;
+        }
+        .toolbar-ac-icon.open i {
+            transform: rotate(180deg);
+        }
+        .toolbar-ac-icon:hover {
+            color: var(--main-color-one);
+            background: rgba(40,133,199,.06);
+        }
+        .toolbar-ac-dropdown {
+            display: block;
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            min-width: 100%;
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0,0,0,.10);
+            z-index: 500;
+            max-height: 240px;
+            overflow-y: auto;
+            font-size: 13px;
+            /* animation */
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-6px) scaleY(0.97);
+            transform-origin: top center;
+            transition: opacity .2s ease, transform .2s ease, visibility .2s;
+            pointer-events: none;
+        }
+        .toolbar-ac-dropdown.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scaleY(1);
+            pointer-events: auto;
+        }
+        .toolbar-ac-item {
+            padding: 9px 14px;
+            cursor: pointer;
+            color: #334155;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .toolbar-ac-item:hover, .toolbar-ac-item.highlighted {
+            background: rgba(40,133,199,.08);
+            color: var(--main-color-one);
+        }
+        .toolbar-ac-item.selected-item {
+            font-weight: 600;
+            color: var(--main-color-one);
+        }
+
+        .catalog-toolbar {
+            background: #fff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 0;
+            overflow: visible;
+            position: relative;
+            z-index: 10;
+        }
+
+        .catalog-toolbar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .filter-select {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px 32px 8px 12px;
+            font-size: 13px;
+            background: #fff;
+            min-width: 160px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* ── Toolbar Select2 (searchable single) ────────────────── */
+        .toolbar-cat-select2 + .select2-container {
+            min-width: 160px;
+        }
+        .toolbar-cat-select2 ~ .select2-container .select2-selection--single,
+        .select2-container--default.select2-container--toolbar-single .select2-selection--single {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            height: 38px;
+            line-height: 38px;
+            font-size: 13px;
+            background: #fff;
+            padding: 0 30px 0 12px;
+        }
+        .catalog-toolbar .select2-container--default .select2-selection--single {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            height: 38px;
+            font-size: 13px;
+            background: #fff;
+        }
+        .catalog-toolbar .select2-container--default .select2-selection--single .select2-selection__rendered {
+            line-height: 38px;
+            padding-left: 12px;
+            padding-right: 30px;
+            color: #334155;
+            font-size: 13px;
+        }
+        .catalog-toolbar .select2-container--default .select2-selection--single .select2-selection__arrow {
+            height: 36px;
+            right: 6px;
+        }
+        .catalog-toolbar .select2-container--default .select2-selection--single .select2-selection__placeholder {
+            color: #64748b;
+        }
+        .catalog-toolbar .select2-container--default.select2-container--open .select2-selection--single {
+            border-color: var(--main-color-one, #2563eb);
+            box-shadow: 0 0 0 2px rgba(37,99,235,.15);
+        }
+        .select2-dropdown {
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0,0,0,.10);
+            font-size: 13px;
+        }
+        .select2-search--dropdown .select2-search__field {
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 6px 10px;
+            font-size: 13px;
+        }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: var(--main-color-one, #2563eb);
+        }
+
+        .toolbar-count {
+            margin-left: auto;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* ── Grid ─────────────────────────────────────────────────── */
+        .catalog-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px 20px 40px;
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        .catalog-sidebar {
+            width: 260px;
+            flex-shrink: 0;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+            order: 2;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-toggle-btn {
+            padding: 16px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #334155;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            transition: background 0.2s;
+        }
+
+        .sidebar-toggle-btn:hover {
+            background: #f1f5f9;
+        }
+
+        .sidebar-toggle-btn i {
+            color: var(--main-color-one);
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar-content {
+            padding: 20px;
+            transition: max-height 0.4s ease-out, padding 0.4s ease, opacity 0.3s ease;
+            max-height: 2000px;
+            opacity: 1;
+            overflow: hidden;
+        }
+
+        /* Collapsed state */
+        .catalog-sidebar.collapsed .sidebar-content {
+            max-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            opacity: 0;
+            margin: 0;
+        }
+
+        .catalog-sidebar.collapsed .sidebar-toggle-btn {
+            border-bottom: none;
+        }
+
+        .filter-group {
+            margin-bottom: 24px;
+        }
+
+        .filter-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .filter-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #334155;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            user-select: none;
+            justify-content: space-between;
+        }
+
+        .filter-title i.filter-arrow {
+            color: #94a3b8;
+            transition: transform 0.3s ease;
+            font-size: 12px;
+            margin-left: auto;
+        }
+
+        .filter-group.active .filter-title i.filter-arrow {
+            transform: rotate(180deg);
+            color: var(--main-color-one);
+        }
+
+        .filter-items {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.35s ease, padding 0.3s ease;
+            padding-top: 0;
+        }
+
+        .filter-group.active .filter-items {
+            max-height: 600px;
+            padding-top: 12px;
+        }
+
+        .filter-title i:not(.filter-arrow) {
+            color: var(--main-color-one);
+        }
+
+        .filter-item {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .filter-item input[type="checkbox"] {
+            margin-top: 4px;
+            accent-color: var(--main-color-one);
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .filter-item label {
+            font-size: 14px;
+            color: #475569;
+            cursor: pointer;
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        .filter-item:hover label {
+            color: var(--main-color-one);
+        }
+
+        .filter-btn-apply {
+            width: 100%;
+            background: var(--main-color-one);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+
+        .filter-btn-apply:hover {
+            background: var(--main-color-dark);
+        }
+
+        /* ── Category chips ─────────────────────────────── */
+        .cat-chips-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+        .cat-chip {
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 13px;
+            border-radius: 20px;
+            border: 1.5px solid #cbd5e1;
+            background: #f8fafc;
+            font-size: 12.5px;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.15s;
+            user-select: none;
+            line-height: 1.5;
+        }
+        .cat-chip:hover {
+            border-color: var(--main-color-one);
+            color: var(--main-color-one);
+            background: #eff6ff;
+        }
+        .cat-chip.active {
+            background: var(--main-color-one);
+            border-color: var(--main-color-one);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .catalog-grid-wrap {
+            flex: 1;
+            order: 1;
+            border-right: 2px solid #e2e8f0;
+            padding-right: 24px;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        @media (max-width: 1200px) {
+            .catalog-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .catalog-container {
+                flex-direction: column;
+            }
+
+            .catalog-sidebar {
+                width: 100%;
+                order: 1;
+            }
+
+            .catalog-grid-wrap {
+                order: 2;
+            }
+
+            .catalog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .catalog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .catalog-toolbar {
+                padding: 10px 0;
+            }
+
+            .catalog-toolbar-inner {
+                padding: 0 12px;
+                gap: 8px;
+            }
+
+            /* Count chiếm toàn hàng đầu */
+            .toolbar-count {
+                display: none;
+            }
+
+            /* Form filter dùng display:contents nên các wrap là flex children */
+            .toolbar-autocomplete-wrap {
+                flex: 1 1 calc(50% - 4px);
+                min-width: 0;
+                max-width: calc(50% - 4px);
+                display: flex;
+                position: relative;
+            }
+
+            #toolbar-cat-wrap,
+            #toolbar-sup-wrap {
+                display: none;
+            }
+
+            .toolbar-autocomplete-input {
+                width: 100%;
+                min-width: 0;
+                max-width: 100%;
+                font-size: 13px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding-right: 44px;
+                box-sizing: border-box;
+            }
+
+            /* Dropdown bị giới hạn trong viewport */
+            .toolbar-ac-dropdown {
+                left: 0;
+                right: auto;
+                width: calc(100vw - 24px);
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+
+            /* Các item trong dropdown cũng cắt ... */
+            .toolbar-ac-item {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+
+            /* Nút xoá lọc */
+            .catalog-toolbar-inner > a[title="Xoá bộ lọc"] {
+                width: 100%;
+                justify-content: center;
+                font-size: 13px;
+            }
+        }
+
+        /* ── Product Card ─────────────────────────────────────────── */
+        .product-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            transition: transform .22s, box-shadow .22s;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--card-hover-shadow);
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .product-img-wrap {
+            position: relative;
+            background: #f0f4f7;
+            padding-top: 75%;
+            overflow: hidden;
+        }
+
+        .product-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 12px;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            color: #fff;
+            background: #e74c3c;
+        }
+
+        .card-stock-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 20px;
+        }
+
+        .pm-badge-instock {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            color: #1b5e20;
+            border: 1px solid #81c784;
+            font-weight: 600;
+        }
+
+        .pm-badge-outstock {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            color: #b71c1c;
+            border: 1px solid #ef5350;
+            font-weight: 600;
+        }
+
+        .product-body {
+            padding: 14px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .product-price-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            font-weight: 700;
+            color: #e74c3c;
+        }
+
+        .product-unit-badge {
+            font-size: 11px;
+            color: #888;
+            background: #fff3e0;
+            border: 1px solid #ffcc80;
+            border-radius: 20px;
+            padding: 1px 8px;
+        }
+
+        .product-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px;
+            font-size: 11px;
+            color: #888;
+        }
+
+        .product-meta-row i {
+            margin-right: 3px;
+            font-size: 10px;
+        }
+
+        .product-sku {
+            font-size: 11px;
+            color: #888;
+            margin-bottom: 4px;
+        }
+
+        .product-sku-label {
+            font-weight: 600;
+            margin-right: 4px;
+        }
+
+        .product-seller {
+            margin-top: 4px;
+        }
+
+        .seller-name {
+            font-size: 11px;
+            color: var(--main-color-one);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .product-supplier {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 4px;
+        }
+
+        .product-supplier-label {
+            font-size: 11px;
+            color: #888;
+            font-weight: 600;
+        }
+
+        .product-supplier-val {
+            font-size: 11px;
+            color: #444;
+        }
+
+        .card-tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 4px;
+        }
+
+        .card-tag {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 20px;
+            border: 1px solid #c5cae9;
+            background: #f0f4ff;
+            color: #3949ab;
+        }
+
+        .card-tag-condition {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border-color: #a5d6a7;
+            font-weight: 700;
+        }
+
+        /* ── Empty State ──────────────────────────────────────────── */
+        .catalog-empty {
+            padding: 80px 20px;
+            text-align: center;
+            color: #999;
+        }
+
+        .catalog-empty i {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: #ccc;
+        }
+
+        /* ── Pagination ───────────────────────────────────────────── */
+        .catalog-pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .pagination {
+            gap: 4px;
+        }
+
+        .page-link {
+            border-radius: 8px !important;
+            color: var(--main-color-one);
+            font-size: 13px;
+            padding: 6px 12px;
+        }
+
+        .page-item.active .page-link {
+            background: var(--main-color-one);
+            border-color: var(--main-color-one);
+            color: #fff;
+        }
+
+        /* ══ Product Detail Modal ═════════════════════════════════ */
+        .pm-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(0, 0, 0, .45);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity .25s;
+        }
+
+        .pm-overlay.pm-open {
+            display: flex;
+            opacity: 1;
+        }
+
+        .pm-dialog {
+            background: #fff;
+            border-radius: 16px;
+            max-width: 950px;
+            width: 100%;
+            max-height: 90vh;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+            animation: modalSlideIn 0.3s ease-out;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pm-body {
+            flex: 1;
+            min-height: 0;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .pm-close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #dee2e6;
+            font-size: 28px;
+            color: #666;
+            cursor: pointer;
+            z-index: 10;
+            line-height: 1;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .pm-close:hover {
+            background: #fff;
+            color: #333;
+            transform: rotate(90deg);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .pm-body {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 0;
+            height: 100%;
+        }
+
+        .pm-gallery {
+            border-right: 1px solid #e0e0e0;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            background: #fafbfc;
+        }
+
+        .pm-main-img-wrap {
+            position: relative;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius: 12px;
+            min-height: 260px;
+            cursor: zoom-in;
+            border: 2px solid #f0f0f0;
+            transition: border-color 0.3s;
+        }
+
+        .pm-main-img-wrap:hover {
+            border-color: var(--main-color-one);
+        }
+
+        .pm-main-img {
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            padding: 8px;
+        }
+
+        .pm-main-img-wrap {
+            cursor: zoom-in;
+        }
+
+        .pm-thumbs {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            overflow-x: auto;
+            padding: 4px 0;
+        }
+
+        .pm-thumb {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #fff;
+        }
+
+        .pm-thumb:hover {
+            border-color: #90caf9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .pm-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .pm-thumb-active {
+            border-color: var(--main-color-one);
+        }
+
+        .pm-info {
+            padding: 24px 28px;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        .pm-name {
+            color: var(--main-color-one);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            word-wrap: break-word;
+        }
+
+        .pm-sku {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .pm-sku-val {
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .pm-price-row,
+        .pm-stock-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            padding: 8px 0;
+        }
+
+        .pm-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            min-width: 110px;
+        }
+
+        .pm-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #e74c3c;
+        }
+
+        .pm-price-trigger {
+            border: none;
+            background: transparent;
+            padding: 0;
+            line-height: 1.2;
+            cursor: default;
+        }
+
+        .pm-price-trigger.is-quote {
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .pm-price-trigger.is-quote:hover {
+            color: #c62828;
+        }
+
+        .pm-unit {
+            font-size: 13px;
+            color: #888;
+            background: #fff3e0;
+            border: 1px solid #ffcc80;
+            border-radius: 20px;
+            padding: 3px 12px;
+            font-weight: 500;
+        }
+
+        .pm-badge {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 14px;
+            border-radius: 20px;
+        }
+
+        .pm-badge-instock {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #a5d6a7;
+        }
+
+        .pm-badge-outstock {
+            background: #fce4ec;
+            color: #c62828;
+            border: 1px solid #ef9a9a;
+        }
+
+        .pm-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 16px 0;
+            padding: 12px 0;
+            border-top: 1px solid #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .pm-tags:empty {
+            display: none;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .pm-tag {
+            font-size: 13px;
+            padding: 5px 16px;
+            border-radius: 20px;
+            border: 1px solid #d0d5dd;
+            color: #555;
+            background: #f9fafb;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        .pm-tag-supplier {
+            background: #e3f2fd;
+            border-color: #90caf9;
+            color: #1565c0;
+            font-weight: 600;
+        }
+
+
+
+        .pm-tag-condition {
+            background: #e8f5e9;
+            border-color: #81c784;
+            color: #2e7d32;
+            font-weight: 700;
+        }
+
+
+
+        .pm-extra-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin: 16px 0;
+            padding: 14px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .pm-extra-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 13px;
+        }
+
+        .pm-extra-label {
+            color: #666;
+            font-weight: 600;
+            min-width: 100px;
+            flex-shrink: 0;
+        }
+
+        .pm-extra-value {
+            color: #333;
+            flex: 1;
+        }
+
+        .pm-desc-wrap {
+            margin-top: 16px;
+            padding-top: 16px;
+        }
+
+        .pm-desc-label {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pm-desc {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+            background: #f8f9fa;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border-left: 3px solid var(--main-color-one);
+            position: relative;
+            overflow: hidden;
+        }
+        #pm-desc-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .pm-desc-more {
+            position: absolute;
+            bottom: 12px;
+            right: 16px;
+            padding-left: 48px;
+            background: linear-gradient(to right, transparent, #f8f9fa 40%);
+            font-size: 14px;
+            color: var(--main-color-one);
+            font-weight: 600;
+            text-decoration: none;
+            line-height: 1.7;
+            cursor: pointer;
+        }
+        .pm-desc-more:hover { text-decoration: underline; }
+
+        /* ── Modal Action Buttons ─────────────────────────── */
+        .pm-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 22px;
+            padding-top: 18px;
+            border-top: 1px solid #f0f0f0;
+            flex-wrap: wrap;
+        }
+
+        .pm-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 9px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: all .2s ease;
+            white-space: nowrap;
+            font-family: var(--body-font, inherit);
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .pm-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+            text-decoration: none;
+        }
+
+        .pm-btn-detail {
+            background: var(--main-color-one, #2885C7);
+            color: #fff;
+        }
+
+        .pm-btn-detail:hover {
+            background: var(--main-color-dark, #1e6fb0);
+            color: #fff;
+        }
+
+        .pm-btn-contact {
+            background: #fff;
+            color: #1565c0;
+            border: 1.5px solid #90caf9;
+        }
+
+        .pm-btn-contact:hover {
+            background: #e3f2fd;
+            color: #0d47a1;
+            border-color: #42a5f5;
+        }
+
+        .pm-btn-quote {
+            background: #fff8e1;
+            color: #e65100;
+            border: 1.5px solid #ffcc02;
+        }
+
+        /* ── Contact sub-modal ─────────────────────────────── */
+        .ct-overlay { position:fixed; inset:0; z-index:6000; background:rgba(0,0,0,.5); display:none; align-items:center; justify-content:center; }
+        .ct-overlay.ct-open { display:flex; }
+        .ct-modal { background:#fff; border-radius:16px; padding:28px 32px 24px; max-width:460px; width:90%; max-height:min(80vh, 680px); overflow:auto; box-shadow:0 8px 40px rgba(0,0,0,.22); position:relative; }
+        .ct-modal-title { font-size:1rem; font-weight:700; color:var(--main-color-one,#2885C7); margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid #eee; }
+        .ct-close { position:absolute; top:14px; right:16px; background:none; border:none; font-size:22px; cursor:pointer; color:#aaa; line-height:1; }
+        .ct-close:hover { color:#555; }
+        .ct-group { padding:14px 0; border-bottom:1px solid #eef2f7; }
+        .ct-group:first-of-type { padding-top:0; }
+        .ct-group:last-child { border-bottom:none; padding-bottom:0; }
+        .ct-group-title { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; color:#64748b; margin-bottom:8px; }
+        .ct-item { display:flex; align-items:center; gap:14px; padding:12px 0; border-bottom:1px solid #f5f5f5; }
+        .ct-item:last-child { border-bottom:none; }
+        .ct-icon { width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; background:#ededed; }
+        .ct-icon-phone, .ct-icon-email, .ct-icon-zalo { background:#ededed; }
+        .ct-lbl { font-size:11px; color:#999; text-transform:uppercase; letter-spacing:.4px; margin-bottom:2px; }
+        .ct-val { font-size:15px; font-weight:600; color:#1a1d26; text-decoration:none; }
+        .ct-val:hover { color:var(--main-color-one,#2885C7); }
+        .ct-empty { font-size:14px; color:#aaa; text-align:center; padding:16px 0; }
+
+        .pm-btn-quote:hover {
+            background: #fff3cd;
+            color: #bf360c;
+            border-color: #ffa000;
+        }
+
+        /* Hidden for upcoming premium feature rollout */
+        .pm-btn-upgrade-hidden {
+            display: none;
+        }
+
+        .pm-seller {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px;
+            margin-top: 16px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            border: 1px solid #dee2e6;
+        }
+
+        .pm-seller-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .pm-seller-placeholder {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--main-color-one) 0%, var(--main-color-dark) 100%);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .pm-seller-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+
+
+        /* ══ Lightbox ═════════════════════════════════════════════ */
+        .lb-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 3000;
+            background: rgba(0, 0, 0, .92);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lb-overlay.lb-open {
+            display: flex;
+        }
+
+        .lb-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 36px;
+            cursor: pointer;
+        }
+
+        .lb-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, .15);
+            border: none;
+            color: #fff;
+            font-size: 40px;
+            width: 50px;
+            height: 70px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background .2s;
+        }
+
+        .lb-arrow:hover {
+            background: rgba(255, 255, 255, .3);
+        }
+
+        .lb-prev {
+            left: 16px;
+        }
+
+        .lb-next {
+            right: 16px;
+        }
+
+        .lb-img {
+            max-width: 90vw;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .lb-counter {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 14px;
+            background: rgba(0, 0, 0, .5);
+            padding: 4px 16px;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .pm-overlay {
+                align-items: flex-start;
+                padding: calc(env(safe-area-inset-top, 0px) + 12px) 10px 10px;
+            }
+
+            .pm-dialog {
+                max-height: calc(100dvh - env(safe-area-inset-top, 0px) - 24px);
+                width: min(100%, 640px);
+                margin: 0 auto;
+            }
+
+            .pm-body {
+                grid-template-columns: 1fr;
+            }
+
+            .pm-gallery {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+
+            .pm-info {
+                padding: 20px 18px;
+            }
+
+            .pm-name {
+                font-size: 1.15rem;
+            }
+
+            .pm-price {
+                font-size: 1.3rem;
+            }
+
+            .pm-label {
+                min-width: auto;
+                font-size: 13px;
+            }
+
+            .pm-tag {
+                font-size: 12px;
+                padding: 4px 12px;
+            }
+
+            .pm-main-img-wrap {
+                min-height: 220px;
+            }
+
+            .catalog-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pm-dialog {
+                width: min(100%, 420px);
+                max-height: calc(100dvh - env(safe-area-inset-top, 0px) - 20px);
+                margin: 0 auto;
+                border-radius: 12px;
+            }
+
+            .pm-close {
+                top: 8px;
+                right: 10px;
+                width: 34px;
+                height: 34px;
+                font-size: 24px;
+            }
+
+            .pm-name {
+                font-size: 1.05rem;
+            }
+
+            .pm-price {
+                font-size: 1.2rem;
+            }
+
+            .pm-info {
+                padding: 16px 14px;
+            }
+
+            .pm-main-img-wrap {
+                min-height: 190px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="top-navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <a href="https://chauhoanglong.com" class="navbar-logo">
+                    <img src="https://chauhoanglong.com/images/site-logo.jpg?v=1773548676" alt="MLink" class="navbar-logo-img">
+                </a>
+            </div>
+
+            <div class="navbar-center d-none d-md-flex" style="justify-content: center;">
+                <ul class="navbar-menu">
+                    <li><a href="https://chauhoanglong.com" class="active">Sản phẩm</a></li>
+                    <li><a href="https://chauhoanglong.com#gioi-thieu">Giới thiệu</a></li>
+                        <li><a href="https://chauhoanglong.com/blog" class="">Blog</a></li>
+                    <li><a href="https://chauhoanglong.com/contact" class="">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-right">
+                                    <a href="https://chauhoanglong.com/admin/login" class="btn-login">
+                        <i class="fas fa-sign-in-alt"></i> Đăng nhập
+                    </a>
+                            </div>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content" onclick="event.stopPropagation()">
+            <div class="mobile-menu-header">
+                <img src="https://chauhoanglong.com/images/site-logo.jpg?v=1773548676" alt="MLink" style="height: 36px; width: auto;">
+                <button class="close-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-menu-list">
+                <li>
+                    <a href="https://chauhoanglong.com" class="active">
+                        Sản phẩm
+                    </a>
+                </li>
+                <li>
+                    <a href="https://chauhoanglong.com#gioi-thieu">
+                        Giới thiệu
+                    </a>
+                </li>
+                <li>
+                    <a href="https://chauhoanglong.com/blog" class="">
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a href="https://chauhoanglong.com/contact" class="">
+                        Liên hệ
+                    </a>
+                </li>
+            </ul>
+            <div class="mobile-menu-footer">
+                                    <a href="https://chauhoanglong.com/admin/login" class="btn-login" style="width:100%; justify-content:center;">
+                        <i class="fas fa-sign-in-alt"></i> Đăng nhập
+                    </a>
+                            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumbs -->
+    
+    <!-- Content -->
+    <main>
+            <!-- Hero / Search -->
+        <div class="catalog-hero scroll-reveal revealed" style="background: linear-gradient(135deg, #2885c7 0%, #2885c7dd 100%)" data-reveal-done="1">
+        <div class="catalog-hero-inner">
+            <h1 class="catalog-hero-title scroll-reveal revealed" data-reveal-done="1" style="transition-delay: 0s;">Khám phá sản phẩm của chúng tôi</h1>
+            <p class="catalog-hero-sub scroll-reveal revealed" data-reveal-done="1" style="transition-delay: 0.13s;">Hãy gõ một từ khoá để bắt đầu tìm kiếm sản phẩm</p>
+
+            <form class="catalog-search-form scroll-reveal revealed" method="GET" action="https://chauhoanglong.com" data-reveal-done="1" style="transition-delay: 0.26s;">
+                                                                <div class="catalog-search-wrap">
+                    <input type="text" name="search" value="" placeholder="Tìm kiếm sản phẩm..." class="catalog-search-input" style="">
+                    <button type="submit" class="catalog-search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="catalog-container">
+        <!-- Sidebar -->
+        
+        <aside class="catalog-sidebar scroll-reveal-left revealed" id="sortSidebar" data-reveal-done="1">
+            <div class="sidebar-toggle-btn" id="sidebarToggleBtn">
+                <i class="fas fa-bars"></i> <span>Bộ lọc</span>
+            </div>
+            <div class="sidebar-content" id="sidebarContent">
+                <form action="https://chauhoanglong.com" method="GET" id="filter-form">
+                                                                                
+                    
+                                            <div class="filter-group scroll-reveal-left active revealed" data-reveal-done="1" style="transition-delay: 0s;">
+                            <h4 class="filter-title">Theo tên <i class="fas fa-chevron-down filter-arrow"></i></h4>
+                            <div class="filter-items">
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="18" id="cat-18" style="">
+                                    <label for="cat-18">Máy dò kim loại</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="34" id="cat-34" style="">
+                                    <label for="cat-34">Máy dò kim</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="35" id="cat-35" style="">
+                                    <label for="cat-35">Máy ép keo ( ép nhiệt ủi nhiệt)</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="36" id="cat-36" style="">
+                                    <label for="cat-36">Máy dò tạp chất tia X (X-ray)</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="37" id="cat-37" style="">
+                                    <label for="cat-37">Máy kiểm vải</label>
+                                </div>
+                                                        </div>
+                        </div>
+                    
+                                            <div class="filter-group scroll-reveal-left revealed" data-reveal-done="1" style="transition-delay: 0.07s;">
+                            <h4 class="filter-title">Ứng dụng SX <i class="fas fa-chevron-down filter-arrow"></i></h4>
+                            <div class="filter-items">
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="21" id="cat-21" style="">
+                                    <label for="cat-21">Ngành may</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="22" id="cat-22" style="">
+                                    <label for="cat-22">Ngành giày dép</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="23" id="cat-23" style="">
+                                    <label for="cat-23">Ngành dệt (Textile)</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="24" id="cat-24" style="">
+                                    <label for="cat-24">Ngành đồ chơi và sản phẩm mềm</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="32" id="cat-32" style="">
+                                    <label for="cat-32">Kiểm tra thực phẩm</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="33" id="cat-33" style="">
+                                    <label for="cat-33">Ngành thêu</label>
+                                </div>
+                                                        </div>
+                        </div>
+                    
+                                            <div class="filter-group scroll-reveal-left revealed" data-reveal-done="1" style="transition-delay: 0.14s;">
+                            <h4 class="filter-title">Hãng sản xuất <i class="fas fa-chevron-down filter-arrow"></i></h4>
+                            <div class="filter-items">
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="14" id="cat-14" style="">
+                                    <label for="cat-14">Dell</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="25" id="cat-25" style="">
+                                    <label for="cat-25">Hashima</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="26" id="cat-26" style="">
+                                    <label for="cat-26">Oshima</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="27" id="cat-27" style="">
+                                    <label for="cat-27">Hashita</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="28" id="cat-28" style="">
+                                    <label for="cat-28">Dingli</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="29" id="cat-29" style="">
+                                    <label for="cat-29">Rehoo</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="30" id="cat-30" style="">
+                                    <label for="cat-30">Easement</label>
+                                </div>
+                                                            <div class="filter-item">
+                                    <input type="checkbox" name="local_cats[]" value="31" id="cat-31" style="">
+                                    <label for="cat-31">Besta</label>
+                                </div>
+                                                        </div>
+                        </div>
+                    
+                    <button type="submit" class="filter-btn-apply">Lọc sản phẩm</button>
+                </form>
+            </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <div class="catalog-grid-wrap">
+                            <div class="catalog-grid">
+                                                                    <div class="product-card scroll-reveal-scale revealed" style="cursor: pointer; transition-delay: 0s;" onclick="openProductModal({&quot;id&quot;:88,&quot;product_name&quot;:&quot;M\u00e1y d\u00f2 tia X may m\u1eb7c&quot;,&quot;product_code&quot;:&quot;AT 6550D&quot;,&quot;price&quot;:0,&quot;selling_price&quot;:0,&quot;original_price&quot;:null,&quot;quantity&quot;:1,&quot;unit&quot;:&quot;c\u00e1i&quot;,&quot;category&quot;:&quot;X-ray Inspection Systems (M\u00e1y ki\u1ec3m tra t\u1ea1p ch\u1ea5t b\u1eb1ng tia X)&quot;,&quot;category_name&quot;:&quot;X-ray Inspection Systems (M\u00e1y ki\u1ec3m tra t\u1ea1p ch\u1ea5t b\u1eb1ng tia X)&quot;,&quot;supplier&quot;:&quot;&quot;,&quot;product_type&quot;:&quot;new_100&quot;,&quot;description&quot;:&quot;Th\u00f4ng s\u1ed1 k\u1ef9 thu\u1eadt chung:\r\nH\u00ecnh chi\u1ebfu t\u1eeb tr\u00ean xu\u1ed1ng:\r\n\u0110\u1ed9 ph\u00e2n gi\u1ea3i d\u00e2y: 38 AWG\r\nGi\u1ea3i ph\u00e1p th\u00e2m nh\u1eadp: 30AWG\r\n\u0110\u1ed9 ph\u00e2n gi\u1ea3i kh\u00f4ng gian: Chi\u1ec1u d\u1ecdc: 0.8mm Chi\u1ec1u ngang: 0.8mm\r\nS\u1ef1 th\u00e2m nh\u1eadp: 36mm\r\nPh\u00e2n gi\u1ea3i ch\u1ea5t h\u1eefu c\u01a1: 1-120mm\r\nThang \u0111\u1ed9 x\u00e1m, \u0111\u1ed9 ph\u00e2n gi\u1ea3i h\u1ed7n h\u1ee3p: 1-60mm\r\nGi\u1ea3i ph\u00e1p v\u00f4 c\u01a1: 0.2 \u2013 14mm\r\nGi\u1ea3i ph\u00e1p v\u1eadt li\u1ec7u hi\u1ec7u qu\u1ea3: Tu\u00e2n th\u1ee7 ti\u00eau chu\u1ea9n GB15208.1-2018\r\n\r\nH\u00ecnh chi\u1ebfu c\u1ea1nh\r\n\u0110\u1ed9 ph\u00e2n gi\u1ea3i d\u00e2y: 38 AWG\r\nGi\u1ea3i ph\u00e1p th\u00e2m nh\u1eadp: 30AWG\r\n\u0110\u1ed9 ph\u00e2n gi\u1ea3i kh\u00f4ng gian: Chi\u1ec1u d\u1ecdc: 0.8mm Chi\u1ec1u ngang: 0.8mm\r\nS\u1ef1 th\u00e2m nh\u1eadp: 36mm\r\nPh\u00e2n gi\u1ea3i ch\u1ea5t h\u1eefu c\u01a1: 1-120mm\r\nThang \u0111\u1ed9 x\u00e1m, \u0111\u1ed9 ph\u00e2n gi\u1ea3i h\u1ed7n h\u1ee3p: 1-60mm\r\nGi\u1ea3i ph\u00e1p v\u00f4 c\u01a1: 0.2 \u2013 14mm\r\nGi\u1ea3i ph\u00e1p v\u1eadt li\u1ec7u hi\u1ec7u qu\u1ea3: Tu\u00e2n th\u1ee7 ti\u00eau chu\u1ea9n GB15208.1-2018\r\n\r\nTh\u00f4ng s\u1ed1 k\u1ef9 thu\u1eadt cho c\u1ea3 hai g\u00f3c nh\u00ecn\r\nLi\u1ec1u \u0111\u01a1n: \u22644,8 uSv (uGy)\r\nLi\u1ec1u r\u00f2 r\u1ec9: \uff1c1uSv\/h (uGy\/h)\r\nM\u1ee9c \u0111\u1ed9 ti\u1ebfng \u1ed3n: Kh\u00f4ng qu\u00e1 60dB\r\nT\u1ed1c \u0111\u1ed9 b\u0103ng t\u1ea3i: Kho\u1ea3ng 0,2 m\/s\r\nT\u1ea3i tr\u1ecdng t\u1ed1i \u0111a c\u1ee7a b\u0103ng t\u1ea3i: 150kg\r\nC\u00f4ng su\u1ea5t ti\u00eau th\u1ee5 t\u1ed1i \u0111a: 0,8 kW\r\nY\u00eau c\u1ea7u v\u1ec1 hi\u1ec7u su\u1ea5t an to\u00e0n: Tu\u00e2n th\u1ee7 ti\u00eau chu\u1ea9n GB15208.1-2018\r\nD\u00f2ng r\u00f2 r\u1ec9: Kh\u00f4ng qu\u00e1 5.0mA\r\n\u0110\u1ed9 an to\u00e0n c\u1ee7a tia X: Tu\u00e2n th\u1ee7 c\u00e1c ti\u00eau chu\u1ea9n an to\u00e0n  ASA\/ISO 1600.\r\nC\u00e2n n\u1eb7ng: 740kg\r\nNhi\u1ec7t \u0111\u1ed9\/\u0111\u1ed9 \u1ea9m t\u01b0\u01a1ng \u0111\u1ed1i c\u1ee7a m\u00f4i tr\u01b0\u1eddng l\u00e0m vi\u1ec7c: 5\u2103\uff5e40\u2103\uff1b0%\uff5e90%\r\nNhi\u1ec7t \u0111\u1ed9\/\u0111\u1ed9 \u1ea9m b\u1ea3o qu\u1ea3n: -20\u2103\uff5e+60\u2103\/10%\uff5e90%\r\n\u00c1p su\u1ea5t kh\u00ed quy\u1ec3n: 86kPa\uff5e106kPa\r\nNgu\u1ed3n \u0111i\u1ec7n ho\u1ea1t \u0111\u1ed9ng: AC220V+10%~-15%\uff0c50Hz\u00b13Hz \r\nH\u1ec7 \u0111i\u1ec1u h\u00e0nh&quot;,&quot;notes&quot;:&quot;&quot;,&quot;image&quot;:&quot;quet-50144234.jpg&quot;,&quot;image_url&quot;:&quot;https:\/\/mlink.vn\/assets\/uploads\/freelancer-stock\/quet-50144234.jpg&quot;,&quot;gallery_urls&quot;:[],&quot;views&quot;:0,&quot;is_featured&quot;:false,&quot;status&quot;:&quot;active&quot;,&quot;created_at&quot;:&quot;2026-03-19T07:13:58+00:00&quot;,&quot;seller_name&quot;:&quot;B\u00f9i T\u00e1 Long&quot;,&quot;seller_image&quot;:null,&quot;seller_username&quot;:&quot;sales@chauhoanglong.com&quot;})" data-reveal-done="1">
+                            <div class="product-img-wrap">
+                                <img src="https://mlink.vn/assets/uploads/freelancer-stock/quet-50144234.jpg" alt="Máy dò tia X may mặc" class="product-img" onerror="this.src='https://chauhoanglong.com/images/no-image.svg'">
+                            </div>
+                            <div class="product-body">
+                                <h6 class="product-name">Máy dò tia X may mặc</h6>
+                                <div class="product-price-row">
+                                    <span class="product-price">Báo giá</span>
+                                                                    </div>
+                                <div class="product-meta-row">
+                                    <span><i class="fas fa-cubes"></i> Dự kiến hàng có sẵn: 1</span>
+                                                                    </div>
+                                                                    <div class="product-sku"><span class="product-sku-label">SKU:</span>AT 6550D</div>
+                                                                                                    <div class="product-seller"><span class="seller-name">X-ray Inspection Systems (Máy kiểm tra tạp chất bằng tia X)</span></div>
+                                                                                                                                            <div class="card-tags-row">
+                                                <span class="card-tag card-tag-condition">Hàng mới 100%</span>
+                                            </div>
+                                                            </div>
+                        </div>
+                                                                    <div class="product-card scroll-reveal-scale revealed" style="cursor: pointer; transition-delay: 0.07s;" onclick="openProductModal({&quot;id&quot;:87,&quot;product_name&quot;:&quot;S\u1eeda m\u00e1y Xray ng\u00e0nh may&quot;,&quot;product_code&quot;:&quot;XJ-5335&quot;,&quot;price&quot;:0,&quot;selling_price&quot;:0,&quot;original_price&quot;:null,&quot;quantity&quot;:1,&quot;unit&quot;:&quot;M\u00e1y&quot;,&quot;category&quot;:&quot;X-ray Inspection Systems (M\u00e1y ki\u1ec3m tra t\u1ea1p ch\u1ea5t b\u1eb1ng tia X)&quot;,&quot;category_name&quot;:&quot;X-ray Inspection Systems (M\u00e1y ki\u1ec3m tra t\u1ea1p ch\u1ea5t b\u1eb1ng tia X)&quot;,&quot;supplier&quot;:&quot;&quot;,&quot;product_type&quot;:&quot;used&quot;,&quot;description&quot;:&quot;D\u1ecbch v\u1ee5 chuy\u00ean b\u00e1n,s\u1eeda ch\u1eefa, b\u1ea3o tr\u00ec t\u1ea5t c\u1ea3 c\u00e1c d\u00f2ng m\u00e1y X-ray ( m\u00e1y qu\u00e9t h\u00e0nh l\u00fd, ba l\u00f4 , t\u00fai x\u00e1ch...) Guardspirit XJ5335 ( made in china) v\u00e0 nhi\u1ec1u nh\u00e0 s\u1ea3n xu\u1ea5t kh\u00e1c. Qu\u00fd kh\u00e1ch h\u00e0ng c\u00f3 nhu c\u1ea7u c\u1ea7n b\u1ea5t k\u1ef3 h\u1ed7 tr\u1ee3 vui l\u00f2ng li\u00ean h\u1ec7 v\u1edbi ch\u00fang t\u00f4i: www.chauhoanglong.com&quot;,&quot;notes&quot;:&quot;&quot;,&quot;image&quot;:&quot;xray-balo-11139421.jpg&quot;,&quot;image_url&quot;:&quot;https:\/\/mlink.vn\/assets\/uploads\/freelancer-stock\/xray-balo-11139421.jpg&quot;,&quot;gallery_urls&quot;:[],&quot;views&quot;:0,&quot;is_featured&quot;:false,&quot;status&quot;:&quot;active&quot;,&quot;created_at&quot;:&quot;2026-03-19T04:41:51+00:00&quot;,&quot;seller_name&quot;:&quot;B\u00f9i T\u00e1 Long&quot;,&quot;seller_image&quot;:null,&quot;seller_username&quot;:&quot;sales@chauhoanglong.com&quot;})" data-reveal-done="1">
+                            <div class="product-img-wrap">
+                                <img src="https://mlink.vn/assets/uploads/freelancer-stock/xray-balo-11139421.jpg" alt="Sửa máy Xray ngành may" class="product-img" onerror="this.src='https://chauhoanglong.com/images/no-image.svg'">
+                            </div>
+                            <div class="product-body">
+                                <h6 class="product-name">Sửa máy Xray ngành may</h6>
+                                <div class="product-price-row">
+                                    <span class="product-price">Báo giá</span>
+                                                                    </div>
+                                <div class="product-meta-row">
+                                    <span><i class="fas fa-cubes"></i> Dự kiến hàng có sẵn: 1</span>
+                                                                    </div>
+                                                                    <div class="product-sku"><span class="product-sku-label">SKU:</span>XJ-5335</div>
+                                                                                                    <div class="product-seller"><span class="seller-name">X-ray Inspection Systems (Máy kiểm tra tạp chất bằng tia X)</span></div>
+                                                                                                                                            <div class="card-tags-row">
+                                                <span class="card-tag card-tag-condition">Đã sử dụng</span>
+                                            </div>
+                                                            </div>
+                        </div>
+                                                                    <div class="product-card scroll-reveal-scale revealed" style="cursor: pointer; transition-delay: 0.14s;" onclick="openProductModal({&quot;id&quot;:80,&quot;product_name&quot;:&quot;M\u00e1y d\u00f2 kim Easement HD-680E&quot;,&quot;product_code&quot;:&quot;HD-860C&quot;,&quot;price&quot;:0,&quot;selling_price&quot;:0,&quot;original_price&quot;:null,&quot;quantity&quot;:1,&quot;unit&quot;:&quot;M\u00e1y&quot;,&quot;category&quot;:&quot;&quot;,&quot;category_name&quot;:&quot;&quot;,&quot;supplier&quot;:&quot;&quot;,&quot;product_type&quot;:&quot;new_100&quot;,&quot;description&quot;:&quot;Ph\u01b0\u01a1ng ph\u00e1p ph\u00e1t hi\u1ec7n kim: c\u1ea3m \u1ee9ng t\u1eeb\r\nChi\u1ec1u r\u1ed9ng khung d\u00f2: 600mm\r\nChi\u1ec1u cao khung d\u00f2: 100mm\r\n\u0110\u1ed9 nh\u1ea1y: FE=0.8mm \u0111\u01b0\u1eddng k\u00ednh c\u1ea7u\r\nPh\u01b0\u01a1ng ph\u00e1p b\u00e1o \u0111\u1ed9ng : c\u00f2i \r\nT\u1ed1c \u0111\u1ed9 b\u0103ng t\u1ea3i: kho\u1ea3ng 40m\/ph\u00fat\r\nNgu\u1ed3n \u0111i\u1ec7n cung c\u1ea5p cho m\u00e1y: 220VAC, 50HZ\r\nC\u00f4ng su\u1ea5t \u0111\u1ecbnh m\u1ee9c: 90W\r\nKh\u1ed1i l\u01b0\u1ee3ng c\u1ee7a m\u00e1y: 220Kg\r\nM\u00e1y \u0111\u01b0\u1ee3c ki\u1ec3m so\u00e1t ch\u1eb7t ch\u1ebd b\u1edfi ph\u1ea7n m\u1ec1m, \u0111i\u1ec1u khi\u1ec3n b\u1eb1ng vi x\u1eed l\u00fd, v\u1eadn h\u00e0nh v\u00e0 v\u1ec7 sinh d\u1ec5 d\u00e0ng.\r\nM\u00e1y ho\u1ea1t \u0111\u1ed9ng : lu\u00f4n lu\u00f4n \u1ed5n \u0111\u1ecbnh theo th\u1eddi gian s\u1eed d\u1ee5ng.&quot;,&quot;notes&quot;:&quot;&quot;,&quot;image&quot;:&quot;680-53622120.jpg&quot;,&quot;image_url&quot;:&quot;https:\/\/mlink.vn\/assets\/uploads\/freelancer-stock\/680-53622120.jpg&quot;,&quot;gallery_urls&quot;:[],&quot;views&quot;:0,&quot;is_featured&quot;:false,&quot;status&quot;:&quot;active&quot;,&quot;created_at&quot;:&quot;2026-03-18T07:41:16+00:00&quot;,&quot;seller_name&quot;:&quot;B\u00f9i T\u00e1 Long&quot;,&quot;seller_image&quot;:null,&quot;seller_username&quot;:&quot;sales@chauhoanglong.com&quot;})" data-reveal-done="1">
+                            <div class="product-img-wrap">
+                                <img src="https://mlink.vn/assets/uploads/freelancer-stock/680-53622120.jpg" alt="Máy dò kim Easement HD-680E" class="product-img" onerror="this.src='https://chauhoanglong.com/images/no-image.svg'">
+                            </div>
+                            <div class="product-body">
+                                <h6 class="product-name">Máy dò kim Easement HD-680E</h6>
+                                <div class="product-price-row">
+                                    <span class="product-price">Báo giá</span>
+                                                                    </div>
+                                <div class="product-meta-row">
+                                    <span><i class="fas fa-cubes"></i> Dự kiến hàng có sẵn: 1</span>
+                                                                    </div>
+                                                                    <div class="product-sku"><span class="product-sku-label">SKU:</span>HD-860C</div>
+                                                                                                                                                                            <div class="card-tags-row">
+                                                <span class="card-tag card-tag-condition">Hàng mới 100%</span>
+                                            </div>
+                                                            </div>
+                        </div>
+                                                                    <div class="product-card scroll-reveal-scale revealed" style="cursor: pointer; transition-delay: 0.21s;" onclick="openProductModal({&quot;id&quot;:79,&quot;product_name&quot;:&quot;M\u00e1y d\u00f2 kim Easement HD-380E&quot;,&quot;product_code&quot;:&quot;HD-380E&quot;,&quot;price&quot;:0,&quot;selling_price&quot;:0,&quot;original_price&quot;:null,&quot;quantity&quot;:1,&quot;unit&quot;:&quot;M\u00e1y&quot;,&quot;category&quot;:&quot;Needle Detector Machines (M\u00e1y d\u00f2 kim)&quot;,&quot;category_name&quot;:&quot;Needle Detector Machines (M\u00e1y d\u00f2 kim)&quot;,&quot;supplier&quot;:&quot;Easement&quot;,&quot;product_type&quot;:&quot;new_100&quot;,&quot;description&quot;:&quot;Nh\u00e0 s\u1ea3n xu\u1ea5t: Easement\r\nXu\u1ea5t x\u1ee9: Trung Qu\u1ed1c\r\nPh\u01b0\u01a1ng ph\u00e1p ph\u00e1t hi\u1ec7n kim: c\u1ea3m \u1ee9ng t\u1eeb\r\nChi\u1ec1u r\u1ed9ng ph\u00e1t hi\u1ec7n: 350mm\r\nChi\u1ec1u cao ph\u00e1t hi\u1ec7n: 145mm\r\n\u0110\u1ed9 nh\u1ea1y l\u00fd thuy\u1ebft : FE= 1.5 mm \u0111\u01b0\u1eddng k\u00ednh c\u1ea7u\r\n\u0110\u1ed9 nh\u1ea1y th\u1ef1c t\u1ebf: ph\u1ee5 thu\u1ed9c v\u00e0o s\u1ea3n ph\u1ea9m v\u00e0 m\u00f4i tr\u01b0\u1eddng l\u1eafp \u0111\u1eb7t m\u00e1y.\r\nPh\u01b0\u01a1ng ph\u00e1p b\u00e1o \u0111\u1ed9ng : c\u00f2i v\u00e0 \u0111\u00e8n \r\nT\u1ed1c \u0111\u1ed9 b\u0103ng t\u1ea3i: kho\u1ea3ng 35m\/ph\u00fat\r\nNgu\u1ed3n \u0111i\u1ec7n cung c\u1ea5p cho m\u00e1y: 220VAC, 50HZ\r\nTr\u1ecdng l\u01b0\u1ee3ng: 168kg&quot;,&quot;notes&quot;:&quot;&quot;,&quot;image&quot;:&quot;380-71689011.png&quot;,&quot;image_url&quot;:&quot;https:\/\/mlink.vn\/assets\/uploads\/freelancer-stock\/380-71689011.png&quot;,&quot;gallery_urls&quot;:[],&quot;views&quot;:0,&quot;is_featured&quot;:false,&quot;status&quot;:&quot;active&quot;,&quot;created_at&quot;:&quot;2026-03-18T07:23:34+00:00&quot;,&quot;seller_name&quot;:&quot;B\u00f9i T\u00e1 Long&quot;,&quot;seller_image&quot;:null,&quot;seller_username&quot;:&quot;sales@chauhoanglong.com&quot;})" data-reveal-done="1">
+                            <div class="product-img-wrap">
+                                <img src="https://mlink.vn/assets/uploads/freelancer-stock/380-71689011.png" alt="Máy dò kim Easement HD-380E" class="product-img" onerror="this.src='https://chauhoanglong.com/images/no-image.svg'">
+                            </div>
+                            <div class="product-body">
+                                <h6 class="product-name">Máy dò kim Easement HD-380E</h6>
+                                <div class="product-price-row">
+                                    <span class="product-price">Báo giá</span>
+                                                                    </div>
+                                <div class="product-meta-row">
+                                    <span><i class="fas fa-cubes"></i> Dự kiến hàng có sẵn: 1</span>
+                                                                    </div>
+                                                                    <div class="product-sku"><span class="product-sku-label">SKU:</span>HD-380E</div>
+                                                                                                    <div class="product-seller"><span class="seller-name">Needle Detector Machines (Máy dò kim)</span></div>
+                                                                                                    <div class="product-supplier">
+                                        <span class="product-supplier-label">Hãng SX:</span>
+                                        <span class="product-supplier-val">Easement</span>
+                                    </div>
+                                                                                                            <div class="card-tags-row">
+                                                <span class="card-tag card-tag-condition">Hàng mới 100%</span>
+                                            </div>
+                                                            </div>
+                        </div>
+                                                                    <div class="product-card scroll-reveal-scale" style="cursor: pointer; transition-delay: 0.28s;" onclick="openProductModal({&quot;id&quot;:78,&quot;product_name&quot;:&quot;S\u1eeda m\u00e1y d\u00f2 kim Easement&quot;,&quot;product_code&quot;:&quot;SHD-860C&quot;,&quot;price&quot;:0,&quot;selling_price&quot;:0,&quot;original_price&quot;:null,&quot;quantity&quot;:1,&quot;unit&quot;:&quot;M\u00e1y&quot;,&quot;category&quot;:&quot;&quot;,&quot;category_name&quot;:&quot;&quot;,&quot;supplier&quot;:&quot;&quot;,&quot;product_type&quot;:&quot;used&quot;,&quot;description&quot;:&quot;D\u1ecbch v\u1ee5 chuy\u00ean s\u1eeda ch\u1eefa, b\u1ea3o tr\u00ec, thay th\u1ebf ph\u1ee5 t\u00f9ng, hi\u1ec7u ch\u1ec9nh \u0111\u1ed9 nh\u1ea1y cho m\u00e1y d\u00f2 kim Easement (made in China). Sau khi s\u1eeda ch\u1eefa c\u00f3 th\u1ec3 ch\u1ea1y \u0111\u01b0\u1ee3c \u0111\u1ed9 nh\u1ea1y t\u1ed1i \u0111a 0.8mm t\u01b0\u01a1ng \u1ee9ng v\u1edbi m\u1ee9c thi\u1ebft l\u1eadp 9.0 \u0111\u1ebfn 10.0. M\u1ecdi y\u00eau c\u1ea7u c\u1ea7n h\u1ed7 tr\u1ee3 nhanh ch\u00f3ng vui l\u00f2ng li\u00ean l\u1ea1c v\u1edbi ch\u00fang t\u00f4i www.chauhoanglong.com&quot;,&quot;notes&quot;:&quot;&quot;,&quot;image&quot;:&quot;easement-72316795.jpg&quot;,&quot;image_url&quot;:&quot;https:\/\/mlink.vn\/assets\/uploads\/freelancer-stock\/easement-72316795.jpg&quot;,&quot;gallery_urls&quot;:[],&quot;views&quot;:0,&quot;is_featured&quot;:false,&quot;status&quot;:&quot;active&quot;,&quot;created_at&quot;:&quot;2026-03-18T02:27:51+00:00&quot;,&quot;seller_name&quot;:&quot;B\u00f9i T\u00e1 Long&quot;,&quot;seller_image&quot;:null,&quot;seller_username&quot;:&quot;sales@chauhoanglong.com&quot;})" data-reveal-done="1">
+                            <div class="product-img-wrap">
+                                <img src="https://mlink.vn/assets/uploads/freelancer-stock/easement-72316795.jpg" alt="Sửa máy dò kim Easement" class="product-img" onerror="this.src='https://chauhoanglong.com/images/no-image.svg'">
+                            </div>
+                            <div class="product-body">
+                                <h6 class="product-name">Sửa máy dò kim Easement</h6>
+                                <div class="product-price-row">
+                                    <span class="product-price">Báo giá</span>
+                                                                    </div>
+                                <div class="product-meta-row">
+                                    <span><i class="fas fa-cubes"></i> Dự kiến hàng có sẵn: 1</span>
+                                                                    </div>
+                                                                    <div class="product-sku"><span class="product-sku-label">SKU:</span>SHD-860C</div>
+                                                                                                                                                                            <div class="card-tags-row">
+                                                <span class="card-tag card-tag-condition">Đã sử dụng</span>
+                                            </div>
+                                                            </div>
+                        </div>
+                                                                    <div class="product-card scroll-reveal-scale" style="cursor: pointer; transition-delay: 0.35s;" onclick="openProductModal({&quot;id&quot;:77,&quot;product_name&quot;:&quot;S\u1eeda m\u00e1y d\u00f2 kim Hashima&quot;,&quot;product_code&quot;:&quot;SHN-780G&quot;,&quot;price&quot;:0,&quot;selling_price&quot;:0,&quot;original_price&quot;:null,&quot;quantity&quot;:1,&quot;unit&quot;:&quot;M\u00e1y&quot;,&quot;category&quot;:&quot;&quot;,&quot;category_name&quot;:&quot;&quot;,&quot;supplier&quot;:&quot;&quot;,&quot;product_type&quot;:&quot;used&quot;,&quot;description&quot;:&quot;D\u1ecbch v\u1ee5 chuy\u00ean s\u1eeda ch\u1eefa, b\u1ea3o tr\u00ec, thay th\u1ebf ph\u1ee5 t\u00f9ng, hi\u1ec7u ch\u1ec9nh \u0111\u1ed9 nh\u1ea1y cho m\u00e1y d\u00f2 kim Hashima (made in Japan). Sau khi s\u1eeda ch\u1eefa c\u00f3 th\u1ec3 ch\u1ea1y \u0111\u01b0\u1ee3c \u0111\u1ed9 nh\u1ea1y t\u1ed1i \u0111a 0.8mm t\u01b0\u01a1ng \u1ee9ng v\u1edbi m\u1ee9c thi\u1ebft l\u1eadp 9.0 \u0111\u1ebfn 10.0. M\u1ecdi y\u00eau c\u1ea7u c\u1ea7n h\u1ed7 tr\u1ee3 nhanh ch\u00f3ng vui l\u00f2ng li\u00ean l\u1ea1c v\u1edbi ch\u00fang t\u00f4i www.chauhoanglong.com&quot;,&quot;notes&quot;:&quot;&quot;,&quot;image&quot;:&quot;hashima-am-94548047.jpg&quot;,&quot;image_url&quot;:&quot;https:\/\/mlink.vn\/assets\/uploads\/freelancer-stock\/hashima-am-94548047.jpg&quot;,&quot;gallery_urls&quot;:[],&quot;views&quot;:0,&quot;is_featured&quot;:false,&quot;status&quot;:&quot;active&quot;,&quot;created_at&quot;:&quot;2026-03-18T02:23:46+00:00&quot;,&quot;seller_name&quot;:&quot;B\u00f9i T\u00e1 Long&quot;,&quot;seller_image&quot;:null,&quot;seller_username&quot;:&quot;sales@chauhoanglong.com&quot;})" data-reveal-done="1">
+                            <div class="product-img-wrap">
+                                <img src="https://mlink.vn/assets/uploads/freelancer-stock/hashima-am-94548047.jpg" alt="Sửa máy dò kim Hashima" class="product-img" onerror="this.src='https://chauhoanglong.com/images/no-image.svg'">
+                            </div>
+                            <div class="product-body">
+                                <h6 class="product-name">Sửa máy dò kim Hashima</h6>
+                                <div class="product-price-row">
+                                    <span class="product-price">Báo giá</span>
+                                                                    </div>
+                                <div class="product-meta-row">
+                                    <span><i class="fas fa-cubes"></i> Dự kiến hàng có sẵn: 1</span>
+                                                                    </div>
+                                                                    <div class="product-sku"><span class="product-sku-label">SKU:</span>SHN-780G</div>
+                                                                                                                                                                            <div class="card-tags-row">
+                                                <span class="card-tag card-tag-condition">Đã sử dụng</span>
+                                            </div>
+                                                            </div>
+                        </div>
+                                                                    <div class="product-card scroll-reveal-scale" style="cursor: pointer; transition-delay: 0.42s;" onclick="openProductModal({&quot;id&quot;:76,&quot;product_name&quot;:&quot;M\u00e1y d\u00f2 kim lo\u1ea1i&quot;,&quot;product_code&quot;:&quot;MD-5020&quot;,&quot;price&quot;:0,&quot;selling_price&quot;:0,&quot;original_price&quot;:null,&quot;quantity&quot;:1,&quot;unit&quot;:&quot;M\u00e1y&quot;,&quot;category&quot;:&quot;&quot;,&quot;category_name&quot;:&quot;&quot;,&quot;supplier&quot;:&quot;&quot;,&quot;product_type&quot;:&quot;new_100&quot;,&quot;description&quot;:&quot;M\u00e1y d\u00f2 Kim lo\u1ea1i B\u0103ng t\u1ea3i\r\nModel: MD-5020\r\nNg\u00f4n ng\u1eef v\u1eadn h\u00e0nh: Ti\u1ebfng Anh\r\nM\u00e0n h\u00ecnh : LCD l\u1edbn d\u1ec5 nh\u00ecn\r\nThi\u1ebft k\u1ebf ch\u1ed1ng n\u01b0\u1edbc\r\nPh\u01b0\u01a1ng ph\u00e1p ph\u00e1t hi\u1ec7n kim lo\u1ea1i: c\u1ea3m \u1ee9ng t\u1eeb\r\nKh\u1ea3 n\u0103ng ki\u1ec3m tra: S\u1eaft, \u0111\u1ed3ng, th\u00e9p kh\u00f4ng g\u1ec9\r\nChi\u1ec1u r\u1ed9ng kh\u1ea9u \u0111\u1ed9: 500mm\r\nChi\u1ec1u cao kh\u1ea9u \u0111\u1ed9: 200mm\r\nChi\u1ec1u r\u1ed9ng t\u1ed1i \u0111a c\u1ee7a b\u0103ng t\u1ea3i: 460 mm\r\nM\u00e0u b\u0103ng t\u1ea3i: m\u00e0u tr\u1eafng c\u1ea5p th\u1ef1c ph\u1ea9m\r\nK\u00edch th\u01b0\u1edbc s\u1ea3n ph\u1ea9m ki\u1ec3m tra:\r\n+ Chi\u1ec1u r\u1ed9ng t\u1ed1i \u0111a: 460mm\r\n+ Chi\u1ec1u cao t\u1ed1i \u0111a: 165mm\r\n+ T\u1ed1c \u0111\u1ed9 v\u1eadn chuy\u1ec3n: 0-30m \/ ph\u00fat\r\n+ Tr\u1ecdng l\u01b0\u1ee3ng s\u1ea3n ph\u1ea9m t\u1ed1i \u0111a 30kg\r\nV\u1eadt li\u1ec7u k\u1ebft c\u1ea5u m\u00e1y: th\u00e9p kh\u00f4ng g\u1ec9 SUS304\r\n-K\u00edch th\u01b0\u1edbc m\u00e1y kho\u1ea3ng : 1600 x 830 x 950mm\r\n- Chi\u1ec1u cao c\u1ee7a m\u00e1y t\u1eeb m\u1eb7t \u0111\u1ea5t \u0111\u1ebfn b\u1ec1 m\u1eb7t b\u0103ng t\u1ea3i : 700mm (+50mm) c\u00f3 th\u1ec3 \u0111i\u1ec1u ch\u1ec9nh\r\n\u0110\u1ed9 nh\u1ea1y kh\u00f4ng s\u1ea3n ph\u1ea9m khi \u0111\u1eb7t m\u1eabu kim lo\u1ea1i l\u00ean b\u0103ng t\u1ea3i: Fe=\u04241.5 mm; NFe=\u04242.0mm; SUS=\u04242.5 mm\r\n- \u0110\u1ed9 nh\u1ea1y th\u1ef1c t\u1ebf t\u00f9y thu\u1ed9c v\u00e0o \u0111i\u1ec1u ki\u1ec7n sau:\r\n+ M\u00f4i tr\u01b0\u1eddng, v\u1ecb tr\u00ed l\u1eafp \u0111\u1eb7t m\u00e1y\r\n+ Hi\u1ec7u \u1ee9ng c\u1ee7a s\u1ea3n ph\u1ea9m\r\n+ Kinh nghi\u1ec7m c\u1ee7a k\u1ef9 s\u01b0 \u0111i\u1ec1u ch\u1ec9nh m\u00e1y\r\nV\u1edbi kinh nghi\u1ec7m h\u01a1n 20 n\u0103m trong l\u0129nh v\u1ef1c m\u00e1y d\u00f2 kim lo\u1ea1i ch\u00fang t\u00f4i s\u1ebd \u0111i\u1ec1u ch\u1ec9nh \u0111\u1ed9 nh\u1ea1y t\u1ed1t nh\u1ea5t c\u00f3 th\u1ec3 cho s\u1ea3n ph\u1ea9m c\u1ee7a c\u00f4ng ty.\r\nNgu\u1ed3n \u0111i\u1ec7n, \u0111i\u1ec7n \u00e1p c\u1ea5p : AC 220V, 50-60HZ\r\nH\u00ecnh th\u1ee9c b\u00e1o \u0111\u1ed9ng kim lo\u1ea1i: \u00e2m thanh v\u00e0 b\u00e1o \u0111\u1ed9ng d\u1eebng l\u1ea1i v\u1edbi \u00e1nh s\u00e1ng c\u1ee7a \u0111\u00e8n v\u00e0 b\u1eb1ng t\u1ea3i d\u1eebng l\u1ea1i.&quot;,&quot;notes&quot;:&quot;&quot;,&quot;image&quot;:&quot;gen-h-4-94045369.jpg&quot;,&quot;image_url&quot;:&quot;https:\/\/mlink.vn\/assets\/uploads\/freelancer-stock\/gen-h-4-94045369.jpg&quot;,&quot;gallery_urls&quot;:[],&quot;views&quot;:0,&quot;is_featured&quot;:false,&quot;status&quot;:&quot;active&quot;,&quot;created_at&quot;:&quot;2026-03-17T06:08:47+00:00&quot;,&quot;seller_name&quot;:&quot;B\u00f9i T\u00e1 Long&quot;,&quot;seller_image&quot;:null,&quot;seller_username&quot;:&quot;sales@chauhoanglong.com&quot;})" data-reveal-done="1">
+                            <div class="product-img-wrap">
+                                <img src="https://mlink.vn/assets/uploads/freelancer-stock/gen-h-4-94045369.jpg" alt="Máy dò kim loại" class="product-img" onerror="this.src='https://chauhoanglong.com/images/no-image.svg'">
+                            </div>
+                            <div class="product-body">
+                                <h6 class="product-name">Máy dò kim loại</h6>
+                                <div class="product-price-row">
+                                    <span class="product-price">Báo giá</span>
+                                                                    </div>
+                                <div class="product-meta-row">
+                                    <span><i class="fas fa-cubes"></i> Dự kiến hàng có sẵn: 1</span>
+                                                                    </div>
+                                                                    <div class="product-sku"><span class="product-sku-label">SKU:</span>MD-5020</div>
+                                                                                                                                                                            <div class="card-tags-row">
+                                                <span class="card-tag card-tag-condition">Hàng mới 100%</span>
+                                            </div>
+                                                            </div>
+                        </div>
+                                                                    <div class="product-card scroll-reveal-scale" style="cursor: pointer; transition-delay: 0.49s;" onclick="openProductModal({&quot;id&quot;:75,&quot;product_name&quot;:&quot;M\u00e1y d\u00f2 kim Oshima ON-688CD5&quot;,&quot;product_code&quot;:&quot;ON-688CD5&quot;,&quot;price&quot;:0,&quot;selling_price&quot;:0,&quot;original_price&quot;:null,&quot;quantity&quot;:1,&quot;unit&quot;:&quot;M\u00e1y&quot;,&quot;category&quot;:&quot;Needle Detector Machines (M\u00e1y d\u00f2 kim)&quot;,&quot;category_name&quot;:&quot;Needle Detector Machines (M\u00e1y d\u00f2 kim)&quot;,&quot;supplier&quot;:&quot;Oshima&quot;,&quot;product_type&quot;:&quot;new_100&quot;,&quot;description&quot;:&quot;Th\u00f4ng s\u1ed1 k\u1ef9 thu\u1eadt:\r\n- Lo\u1ea1i m\u1ed9t khung d\u00f2\r\n- Ph\u01b0\u01a1ng ph\u00e1p ph\u00e1t hi\u1ec7n: c\u1ea3m \u1ee9ng t\u1eeb\r\n- Chi\u1ec1u cao khung d\u00f2: 150mm\r\n- Chi\u1ec1u r\u1ed9ng khung d\u00f2: 600mm\r\n- \u0110\u1ed9 nh\u1ea1y m\u00e1y:  Fe \ud835\udfc7 1.0mm (\u0111\u1ed9 nh\u1ea1y th\u1ef1c t\u1ebf ph\u1ee5 thu\u1ed9c v\u00e0o s\u1ea3n ph\u1ea9m v\u00e0 m\u00f4i tr\u01b0\u1eddng l\u1eafp \u0111\u1eb7t).\r\n- \u0110i\u1ec1u ch\u1ec9nh \u0111\u1ed9 nh\u1ea1y: 10 b\u01b0\u1edbc (m\u1ee9c)\r\n- T\u1ed1c \u0111\u1ed9 b\u0103ng t\u1ea3i: 32m\/ph\u00fat\r\n- Ph\u01b0\u01a1ng ph\u00e1p b\u00e1o \u0111\u1ed9ng: c\u00f2i, d\u1eebng b\u0103ng t\u1ea3i v\u00e0 tr\u1ea3 l\u1ea1i.\r\n- Ngu\u1ed3n \u0111i\u1ec7n cung c\u1ea5p: 1 Pha AC220V, 50\/60Hz\r\n- C\u00f4ng su\u1ea5t \u0111\u1ecbnh m\u1ee9c: 200W\r\n-K\u00edch th\u01b0\u1edbc m\u00e1y: 1700 x 1080 x 960 mm\r\n- Kh\u1ed1i l\u01b0\u1ee3ng: 280 Kg&quot;,&quot;notes&quot;:&quot;&quot;,&quot;image&quot;:&quot;gen-n-cd5-78153733.jpg&quot;,&quot;image_url&quot;:&quot;https:\/\/mlink.vn\/assets\/uploads\/freelancer-stock\/gen-n-cd5-78153733.jpg&quot;,&quot;gallery_urls&quot;:[],&quot;views&quot;:0,&quot;is_featured&quot;:false,&quot;status&quot;:&quot;active&quot;,&quot;created_at&quot;:&quot;2026-03-17T05:41:47+00:00&quot;,&quot;seller_name&quot;:&quot;B\u00f9i T\u00e1 Long&quot;,&quot;seller_image&quot;:null,&quot;seller_username&quot;:&quot;sales@chauhoanglong.com&quot;})" data-reveal-done="1">
+                            <div class="product-img-wrap">
+                                <img src="https://mlink.vn/assets/uploads/freelancer-stock/gen-n-cd5-78153733.jpg" alt="Máy dò kim Oshima ON-688CD5" class="product-img" onerror="this.src='https://chauhoanglong.com/images/no-image.svg'">
+                            </div>
+                            <div class="product-body">
+                                <h6 class="product-name">Máy dò kim Oshima ON-688CD5</h6>
+                                <div class="product-price-row">
+                                    <span class="product-price">Báo giá</span>
+                                                                    </div>
+                                <div class="product-meta-row">
+                                    <span><i class="fas fa-cubes"></i> Dự kiến hàng có sẵn: 1</span>
+                                                                    </div>
+                                                                    <div class="product-sku"><span class="product-sku-label">SKU:</span>ON-688CD5</div>
+                                                                                                    <div class="product-seller"><span class="seller-name">Needle Detector Machines (Máy dò kim)</span></div>
+                                                                                                    <div class="product-supplier">
+                                        <span class="product-supplier-label">Hãng SX:</span>
+                                        <span class="product-supplier-val">Oshima</span>
+                                    </div>
+                                                                                                            <div class="card-tags-row">
+                                                <span class="card-tag card-tag-condition">Hàng mới 100%</span>
+                                            </div>
+                                                            </div>
+                        </div>
+                                                                    <div class="product-card scroll-reveal-scale" style="cursor: pointer; transition-delay: 0s;" onclick="openProductModal({&quot;id&quot;:74,&quot;product_name&quot;:&quot;M\u00e1y d\u00f2 kim Oshima ON-688CD3&quot;,&quot;product_code&quot;:&quot;ON-688CD3&quot;,&quot;price&quot;:0,&quot;selling_price&quot;:0,&quot;original_price&quot;:null,&quot;quantity&quot;:1,&quot;unit&quot;:&quot;M\u00e1y&quot;,&quot;category&quot;:&quot;Needle Detector Machines (M\u00e1y d\u00f2 kim)&quot;,&quot;category_name&quot;:&quot;Needle Detector Machines (M\u00e1y d\u00f2 kim)&quot;,&quot;supplier&quot;:&quot;Oshima&quot;,&quot;product_type&quot;:&quot;new_100&quot;,&quot;description&quot;:&quot;Th\u00f4ng s\u1ed1 k\u1ef9 thu\u1eadt:\r\n- Lo\u1ea1i m\u1ed9t khung d\u00f2\r\n- Ph\u01b0\u01a1ng ph\u00e1p ph\u00e1t hi\u1ec7n: c\u1ea3m \u1ee9ng t\u1eeb\r\n- Chi\u1ec1u cao khung d\u00f2: 100mm\r\n- Chi\u1ec1u r\u1ed9ng khung d\u00f2: 600mm\r\n- \u0110\u1ed9 nh\u1ea1y m\u00e1y:  Fe \ud835\udfc7 0.8mm (\u0111\u1ed9 nh\u1ea1y th\u1ef1c t\u1ebf ph\u1ee5 thu\u1ed9c v\u00e0o s\u1ea3n ph\u1ea9m v\u00e0 m\u00f4i tr\u01b0\u1eddng l\u1eafp \u0111\u1eb7t).\r\n- \u0110i\u1ec1u ch\u1ec9nh \u0111\u1ed9 nh\u1ea1y: 10 b\u01b0\u1edbc (m\u1ee9c)\r\n- T\u1ed1c \u0111\u1ed9 b\u0103ng t\u1ea3i: 32m\/ph\u00fat\r\n- Ph\u01b0\u01a1ng ph\u00e1p b\u00e1o \u0111\u1ed9ng: c\u00f2i, d\u1eebng b\u0103ng t\u1ea3i v\u00e0 tr\u1ea3 l\u1ea1i.\r\n- Ngu\u1ed3n \u0111i\u1ec7n cung c\u1ea5p: 1 Pha AC220V, 50\/60Hz\r\n- C\u00f4ng su\u1ea5t \u0111\u1ecbnh m\u1ee9c: 200W\r\n-K\u00edch th\u01b0\u1edbc m\u00e1y: 1700 x 1080 x 960 mm\r\n- Kh\u1ed1i l\u01b0\u1ee3ng: 280 Kg&quot;,&quot;notes&quot;:&quot;&quot;,&quot;image&quot;:&quot;gen-n-cd3-58629130.jpg&quot;,&quot;image_url&quot;:&quot;https:\/\/mlink.vn\/assets\/uploads\/freelancer-stock\/gen-n-cd3-58629130.jpg&quot;,&quot;gallery_urls&quot;:[],&quot;views&quot;:0,&quot;is_featured&quot;:false,&quot;status&quot;:&quot;active&quot;,&quot;created_at&quot;:&quot;2026-03-17T05:41:42+00:00&quot;,&quot;seller_name&quot;:&quot;B\u00f9i T\u00e1 Long&quot;,&quot;seller_image&quot;:null,&quot;seller_username&quot;:&quot;sales@chauhoanglong.com&quot;})" data-reveal-done="1">
+                            <div class="product-img-wrap">
+                                <img src="https://mlink.vn/assets/uploads/freelancer-stock/gen-n-cd3-58629130.jpg" alt="Máy dò kim Oshima ON-688CD3" class="product-img" onerror="this.src='https://chauhoanglong.com/images/no-image.svg'">
+                            </div>
+                            <div class="product-body">
+                                <h6 class="product-name">Máy dò kim Oshima ON-688CD3</h6>
+                                <div class="product-price-row">
+                                    <span class="product-price">Báo giá</span>
+                                                                    </div>
+                                <div class="product-meta-row">
+                                    <span><i class="fas fa-cubes"></i> Dự kiến hàng có sẵn: 1</span>
+                                                                    </div>
+                                                                    <div class="product-sku"><span class="product-sku-label">SKU:</span>ON-688CD3</div>
+                                                                                                    <div class="product-seller"><span class="seller-name">Needle Detector Machines (Máy dò kim)</span></div>
+                                                                                                    <div class="product-supplier">
+                                        <span class="product-supplier-label">Hãng SX:</span>
+                                        <span class="product-supplier-val">Oshima</span>
+                                    </div>
+                                                                                                            <div class="card-tags-row">
+                                                <span class="card-tag card-tag-condition">Hàng mới 100%</span>
+                                            </div>
+                                                            </div>
+                        </div>
+                                                                    <div class="product-card scroll-reveal-scale" style="cursor: pointer; transition-delay: 0.07s;" onclick="openProductModal({&quot;id&quot;:72,&quot;product_name&quot;:&quot;M\u00e1y d\u00f2 kim b\u0103ng chuy\u1ec1n m\u1ed9t \u0111\u1ea7u,HN-790GS, H\u00e3ng Hashima&quot;,&quot;product_code&quot;:&quot;HN-790GS&quot;,&quot;price&quot;:0,&quot;selling_price&quot;:0,&quot;original_price&quot;:null,&quot;quantity&quot;:1,&quot;unit&quot;:&quot;b\u1ed9&quot;,&quot;category&quot;:&quot;Metal Detection Systems (M\u00e1y d\u00f2 kim lo\u1ea1i)&quot;,&quot;category_name&quot;:&quot;Metal Detection Systems (M\u00e1y d\u00f2 kim lo\u1ea1i)&quot;,&quot;supplier&quot;:&quot;Hashima&quot;,&quot;product_type&quot;:&quot;new_100&quot;,&quot;description&quot;:&quot;Th\u00f4ng s\u1ed1 k\u1ef9 thu\u1eadt \u2013 HN-790GS\r\n\r\nLo\u1ea1i thi\u1ebft b\u1ecb\r\nM\u00e1y d\u00f2 kim g\u00e3y d\u1ea1ng b\u0103ng chuy\u1ec1n (Conveyor Needle Detector)\r\n\r\nPh\u01b0\u01a1ng ph\u00e1p ph\u00e1t hi\u1ec7n\r\nC\u1ea3m \u1ee9ng t\u1eeb (Magnetic Induction)\r\n\r\nKh\u1ea3 n\u0103ng ph\u00e1t hi\u1ec7n kim lo\u1ea1i (Fe)\r\n\u00d80.8 mm (v\u1edbi chi\u1ec1u cao detector 120 mm)\r\n\r\nChi\u1ec1u r\u1ed9ng v\u00f9ng ki\u1ec3m tra\r\n600 mm\r\n\r\nChi\u1ec1u cao v\u00f9ng ki\u1ec3m tra\r\n120 mm (chu\u1ea9n)\r\n\r\nT\u1ed1c \u0111\u1ed9 b\u0103ng chuy\u1ec1n\r\n15 \u2013 40 m\/ph\u00fat\r\n\r\nH\u1ec7 th\u1ed1ng c\u1ea3nh b\u00e1o\r\n\u0110\u00e8n b\u00e1o v\u1ecb tr\u00ed kim lo\u1ea1i v\u00e0 c\u00f2i buzzer\r\n\r\nNgu\u1ed3n \u0111i\u1ec7n\r\n1 pha 220 V \/ 50 Hz\r\n\r\nC\u00f4ng su\u1ea5t ti\u00eau th\u1ee5\r\n150 W\r\n\r\nK\u00edch th\u01b0\u1edbc m\u00e1y\r\n1598 \u00d7 1040 \u00d7 903 mm\r\n\r\nKh\u1ed1i l\u01b0\u1ee3ng\r\n\u2248 230 kg&quot;,&quot;notes&quot;:&quot;&quot;,&quot;image&quot;:&quot;hn-880cs-1-49382028.jpg&quot;,&quot;image_url&quot;:&quot;https:\/\/mlink.vn\/assets\/uploads\/freelancer-stock\/hn-880cs-1-49382028.jpg&quot;,&quot;gallery_urls&quot;:[],&quot;views&quot;:0,&quot;is_featured&quot;:false,&quot;status&quot;:&quot;active&quot;,&quot;created_at&quot;:&quot;2026-03-15T11:28:45+00:00&quot;,&quot;seller_name&quot;:&quot;B\u00f9i T\u00e1 Long&quot;,&quot;seller_image&quot;:null,&quot;seller_username&quot;:&quot;sales@chauhoanglong.com&quot;})" data-reveal-done="1">
+                            <div class="product-img-wrap">
+                                <img src="https://mlink.vn/assets/uploads/freelancer-stock/hn-880cs-1-49382028.jpg" alt="Máy dò kim băng chuyền một đầu,HN-790GS, Hãng Hashima" class="product-img" onerror="this.src='https://chauhoanglong.com/images/no-image.svg'">
+                            </div>
+                            <div class="product-body">
+                                <h6 class="product-name">Máy dò kim băng chuyền một đầu,HN-790GS, Hãng Hashima</h6>
+                                <div class="product-price-row">
+                                    <span class="product-price">Báo giá</span>
+                                                                    </div>
+                                <div class="product-meta-row">
+                                    <span><i class="fas fa-cubes"></i> Dự kiến hàng có sẵn: 1</span>
+                                                                    </div>
+                                                                    <div class="product-sku"><span class="product-sku-label">SKU:</span>HN-790GS</div>
+                                                                                                    <div class="product-seller"><span class="seller-name">Metal Detection Systems (Máy dò kim loại)</span></div>
+                                                                                                    <div class="product-supplier">
+                                        <span class="product-supplier-label">Hãng SX:</span>
+                                        <span class="product-supplier-val">Hashima</span>
+                                    </div>
+                                                                                                            <div class="card-tags-row">
+                                                <span class="card-tag card-tag-condition">Hàng mới 100%</span>
+                                            </div>
+                                                            </div>
+                        </div>
+                                                                    <div class="product-card scroll-reveal-scale" style="cursor: pointer; transition-delay: 0.14s;" onclick="openProductModal({&quot;id&quot;:71,&quot;product_name&quot;:&quot;M\u00e1y d\u00f2 kim b\u0103ng chuy\u1ec1n m\u1ed9t \u0111\u1ea7u, HN-880CS, H\u00e3ng Hashima&quot;,&quot;product_code&quot;:&quot;HN-880CS&quot;,&quot;price&quot;:0,&quot;selling_price&quot;:0,&quot;original_price&quot;:null,&quot;quantity&quot;:1,&quot;unit&quot;:&quot;b\u1ed9&quot;,&quot;category&quot;:&quot;Metal Detection Systems (M\u00e1y d\u00f2 kim lo\u1ea1i)&quot;,&quot;category_name&quot;:&quot;Metal Detection Systems (M\u00e1y d\u00f2 kim lo\u1ea1i)&quot;,&quot;supplier&quot;:&quot;Hashima&quot;,&quot;product_type&quot;:&quot;new_100&quot;,&quot;description&quot;:&quot;Th\u00f4ng s\u1ed1 k\u1ef9 thu\u1eadt \u2013 HN-880CS:\r\n\r\nLo\u1ea1i thi\u1ebft b\u1ecb\r\nM\u00e1y d\u00f2 kim g\u00e3y d\u1ea1ng b\u0103ng chuy\u1ec1n (Conveyor Needle Detector)\r\n\r\nPh\u01b0\u01a1ng ph\u00e1p ph\u00e1t hi\u1ec7n\r\nC\u1ea3m \u1ee9ng t\u1eeb (Magnetic Induction)\r\n\r\nKh\u1ea3 n\u0103ng ph\u00e1t hi\u1ec7n kim lo\u1ea1i (Fe)\r\n\u00d80.8 mm \u2013 chi\u1ec1u cao detector 120 mm\r\n\u00d81.0 mm \u2013 chi\u1ec1u cao detector 140 mm\r\n\u00d81.2 mm \u2013 chi\u1ec1u cao detector 160 mm\r\n\u00d81.5 mm \u2013 chi\u1ec1u cao detector 180 mm\r\n\r\nChi\u1ec1u r\u1ed9ng v\u00f9ng ki\u1ec3m tra\r\n600 mm\r\n\r\nChi\u1ec1u cao v\u00f9ng ki\u1ec3m tra\r\n120 \/ 140 \/ 160 \/ 180 mm (t\u00f9y ch\u1ecdn)\r\n\r\nT\u1ed1c \u0111\u1ed9 b\u0103ng chuy\u1ec1n\r\n15 \u2013 40 m\/ph\u00fat\r\n\r\nH\u1ec7 th\u1ed1ng c\u1ea3nh b\u00e1o\r\n\u0110\u00e8n ch\u1ec9 th\u1ecb v\u1ecb tr\u00ed kim lo\u1ea1i v\u00e0 c\u00f2i b\u00e1o\r\n\r\nNgu\u1ed3n \u0111i\u1ec7n\r\n1 pha 220 V\r\n\r\nC\u00f4ng su\u1ea5t ti\u00eau th\u1ee5\r\n150 W\r\n\r\nK\u00edch th\u01b0\u1edbc m\u00e1y\r\n1598 \u00d7 1040 \u00d7 903 mm\r\n\r\nKh\u1ed1i l\u01b0\u1ee3ng\r\nKho\u1ea3ng 230 kg&quot;,&quot;notes&quot;:&quot;&quot;,&quot;image&quot;:&quot;hn-880cs-1-49382028.jpg&quot;,&quot;image_url&quot;:&quot;https:\/\/mlink.vn\/assets\/uploads\/freelancer-stock\/hn-880cs-1-49382028.jpg&quot;,&quot;gallery_urls&quot;:[],&quot;views&quot;:0,&quot;is_featured&quot;:false,&quot;status&quot;:&quot;active&quot;,&quot;created_at&quot;:&quot;2026-03-15T11:17:32+00:00&quot;,&quot;seller_name&quot;:&quot;B\u00f9i T\u00e1 Long&quot;,&quot;seller_image&quot;:null,&quot;seller_username&quot;:&quot;sales@chauhoanglong.com&quot;})" data-reveal-done="1">
+                            <div class="product-img-wrap">
+                                <img src="https://mlink.vn/assets/uploads/freelancer-stock/hn-880cs-1-49382028.jpg" alt="Máy dò kim băng chuyền một đầu, HN-880CS, Hãng Hashima" class="product-img" onerror="this.src='https://chauhoanglong.com/images/no-image.svg'">
+                            </div>
+                            <div class="product-body">
+                                <h6 class="product-name">Máy dò kim băng chuyền một đầu, HN-880CS, Hãng Hashima</h6>
+                                <div class="product-price-row">
+                                    <span class="product-price">Báo giá</span>
+                                                                    </div>
+                                <div class="product-meta-row">
+                                    <span><i class="fas fa-cubes"></i> Dự kiến hàng có sẵn: 1</span>
+                                                                    </div>
+                                                                    <div class="product-sku"><span class="product-sku-label">SKU:</span>HN-880CS</div>
+                                                                                                    <div class="product-seller"><span class="seller-name">Metal Detection Systems (Máy dò kim loại)</span></div>
+                                                                                                    <div class="product-supplier">
+                                        <span class="product-supplier-label">Hãng SX:</span>
+                                        <span class="product-supplier-val">Hashima</span>
+                                    </div>
+                                                                                                            <div class="card-tags-row">
+                                                <span class="card-tag card-tag-condition">Hàng mới 100%</span>
+                                            </div>
+                                                            </div>
+                        </div>
+                                    </div>
+
+                
+                                    </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="pm-overlay" onclick="closeProductModal(event)">
+        <div class="pm-dialog">
+            <button class="pm-close" onclick="closeProductModal()">×</button>
+            <div class="pm-body">
+                <div class="pm-gallery">
+                    <div class="pm-main-img-wrap" onclick="openLightbox()" style="cursor:zoom-in">
+                        <img id="pm-main-img" src="" class="pm-main-img" title="Nhấn để phóng to">
+                    </div>
+                    <div class="pm-thumbs" id="pm-thumbs"></div>
+                </div>
+                <div class="pm-info">
+                    <h4 class="pm-name" id="pm-name"></h4>
+                    <div class="pm-sku" id="pm-sku"></div>
+                    <div class="pm-price-row">
+                        <span class="pm-label">Giá tham khảo:</span>
+                        <button type="button" class="pm-price pm-price-trigger" id="pm-price" onclick="onPmPriceClick(event)"></button>
+                        <span class="pm-unit" id="pm-unit" style="display:none"></span>
+                    </div>
+                    <div class="pm-stock-row">
+                        <span class="pm-label">Dự kiến có sẵn:</span>
+                        <span id="pm-qty" style="font-weight: 600; font-size: 14px; color: var(--text-primary);"></span>
+                        <span id="pm-unit2" class="pm-unit" style="display:none"></span>
+                        <span id="pm-stock-badge" class="pm-badge pm-badge-instock">Còn hàng</span>
+                    </div>
+                    <div class="pm-tags" id="pm-tags"></div>
+                    <div class="pm-extra-info" id="pm-extra-info" style="display:none"></div>
+                    <div class="pm-desc-wrap" id="pm-desc-wrap" style="display:none">
+                        <div class="pm-desc-label">Mô tả chi tiết</div>
+                        <div class="pm-desc" id="pm-desc">
+                            <span id="pm-desc-text"></span>
+                            <a class="pm-desc-more" id="pm-desc-more" style="display:none"></a>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="pm-actions">
+                        <a href="#" id="pm-detail-link" class="pm-btn pm-btn-detail" target="_blank">
+                            Xem chi tiết
+                        </a>
+                        <button class="pm-btn pm-btn-contact" id="pm-contact-btn" onclick="openContactModal()">
+                            Liên hệ nhanh
+                        </button>
+                        <button class="pm-btn pm-btn-quote pm-btn-upgrade-hidden" id="pm-quote-btn">
+                            Thêm vào giỏ hàng báo giá
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+        <div id="contact-modal" class="ct-overlay" onclick="if(event.target===this)closeContactModal()">
+        <div class="ct-modal">
+            <button class="ct-close" onclick="closeContactModal()">×</button>
+            <div class="ct-modal-title">Thông tin liên hệ</div>
+                                            <div class="ct-group">
+                                                                <div class="ct-group-title">Liên hệ bộ phận kĩ thuật</div>
+                    
+                                        <div class="ct-item">
+                        <div class="ct-icon ct-icon-phone"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 5.82 5.82l1.76-1.76a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"></path></svg></div>
+                        <div>
+                            <div class="ct-lbl">Số điện thoại</div>
+                            <a href="tel:0935123385" class="ct-val">0935123385</a>
+                        </div>
+                    </div>
+                    
+                                        <div class="ct-item">
+                        <div class="ct-icon ct-icon-email"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></div>
+                        <div>
+                            <div class="ct-lbl">Email</div>
+                            <a href="mailto:sales@chauhoanglong.com" class="ct-val">sales@chauhoanglong.com</a>
+                        </div>
+                    </div>
+                    
+                                        <div class="ct-item">
+                        <div class="ct-icon ct-icon-zalo"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+                        <div>
+                            <div class="ct-lbl">Zalo</div>
+                            <a href="https://zalo.me/0935123385" target="_blank" class="ct-val">0935123385</a>
+                        </div>
+                    </div>
+                                    </div>
+                                <div class="ct-group">
+                                                                <div class="ct-group-title">Liên hệ CSKH</div>
+                    
+                                        <div class="ct-item">
+                        <div class="ct-icon ct-icon-phone"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 5.82 5.82l1.76-1.76a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"></path></svg></div>
+                        <div>
+                            <div class="ct-lbl">Số điện thoại</div>
+                            <a href="tel:0909536003" class="ct-val">0909536003</a>
+                        </div>
+                    </div>
+                    
+                                        <div class="ct-item">
+                        <div class="ct-icon ct-icon-email"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></div>
+                        <div>
+                            <div class="ct-lbl">Email</div>
+                            <a href="mailto:service@chauhoanglong.com" class="ct-val">service@chauhoanglong.com</a>
+                        </div>
+                    </div>
+                    
+                                        <div class="ct-item">
+                        <div class="ct-icon ct-icon-zalo"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+                        <div>
+                            <div class="ct-lbl">Zalo</div>
+                            <a href="https://zalo.me/0909536003" target="_blank" class="ct-val">0909536003</a>
+                        </div>
+                    </div>
+                                    </div>
+                                    </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lb-overlay" onclick="closeLightbox(event)">
+        <button class="lb-close" onclick="closeLightbox()">×</button>
+        <button class="lb-arrow lb-prev" id="lb-prev" onclick="lbNavigate(-1);event.stopPropagation()">‹</button>
+        <div class="lb-img-wrap">
+            <img id="lb-img" src="" class="lb-img">
+        </div>
+        <button class="lb-arrow lb-next" id="lb-next" onclick="lbNavigate(1);event.stopPropagation()">›</button>
+        <div class="lb-counter" id="lb-counter"></div>
+    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            © 2026 All right reserved by MLink.vn
+        </div>
+    </footer>
+
+        <!-- jQuery & Select2 JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        /* ── Toolbar autocomplete logic ─────────────────────────── */
+        function initToolbarAC(inputId, ddId, hiddenId) {
+            var input  = document.getElementById(inputId);
+            var dd     = document.getElementById(ddId);
+            var hidden = document.getElementById(hiddenId);
+            if (!input || !dd || !hidden) return;
+
+            var allItems = Array.from(dd.querySelectorAll('.toolbar-ac-item'));
+            var icon = input.parentElement.querySelector('.toolbar-ac-icon');
+
+            function filterItems(q) {
+                q = q.toLowerCase();
+                allItems.forEach(function(item) {
+                    var label = (item.dataset.label || '').toLowerCase();
+                    item.style.display = (q === '' || label.includes(q)) ? '' : 'none';
+                });
+            }
+
+            function openDd()  { dd.classList.add('open'); if (icon) icon.classList.add('open'); }
+            function closeDd() { dd.classList.remove('open'); if (icon) icon.classList.remove('open'); }
+            function toggleDd() {
+                if (dd.classList.contains('open')) { closeDd(); } else { filterItems(input.value); openDd(); }
+            }
+
+            input.addEventListener('focus', function() { filterItems(input.value); openDd(); });
+            input.addEventListener('input', function() { filterItems(input.value); openDd(); });
+
+            if (icon) {
+                icon.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleDd();
+                });
+            }
+
+            allItems.forEach(function(item) {
+                item.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
+                    input.value  = item.dataset.label;
+                    hidden.value = item.dataset.val;
+                    closeDd();
+                    document.getElementById('toolbar-cat-form').submit();
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!input.parentElement.contains(e.target) && !dd.contains(e.target)) closeDd();
+            });
+        }
+
+        $(document).ready(function () {
+            initToolbarAC('toolbar-category-text', 'toolbar-cat-dd', 'toolbar-category-val');
+            initToolbarAC('toolbar-supplier-text',  'toolbar-sup-dd', 'toolbar-supplier-val');
+
+            // Toggle filter sidebar
+            $('#sidebarToggleBtn').on('click', function () {
+                $('.catalog-sidebar').toggleClass('collapsed');
+            });
+
+            // Accordion filter groups
+            $('.filter-title').on('click', function () {
+                var $group = $(this).closest('.filter-group');
+                var isActive = $group.hasClass('active');
+                $('.filter-group').removeClass('active');
+                if (!isActive) {
+                    $group.addClass('active');
+                }
+            });
+
+            // Auto-open first group with checked item, or just first group
+            var $checkedGroup = $('.filter-item input:checked').first().closest('.filter-group');
+            if ($checkedGroup.length) {
+                $checkedGroup.addClass('active');
+            } else {
+                $('.filter-group').first().addClass('active');
+            }
+        });
+
+        const DEFAULT_IMAGE = 'https://chauhoanglong.com/images/no-image.svg';
+        const PRODUCT_TYPE_LABELS = {
+            new_100: 'Hàng mới 100%', new_90: 'Hàng mới 90%', new_80: 'Hàng mới 80%',
+            used: 'Hàng đã qua sử dụng', refurbished: 'Hàng tân trang',
+        };
+
+        /* ── Modal ──────────────────────────────────────────────── */
+        function openProductModal(product) {
+            if (typeof product === 'string') product = JSON.parse(product);
+
+            document.getElementById('pm-name').textContent = product.product_name || '';
+
+            const skuEl = document.getElementById('pm-sku');
+            skuEl.innerHTML = product.product_code
+                ? `Mã SKU: <span class="pm-sku-val">${esc(product.product_code)}</span>` : '';
+
+            const price = parseFloat(product.price || product.selling_price) || 0;
+            const pmPriceEl = document.getElementById('pm-price');
+            const isQuotePrice = price <= 0;
+            pmPriceEl.textContent = isQuotePrice ? 'Báo giá' : (price.toLocaleString('vi-VN') + 'đ');
+            pmPriceEl.classList.toggle('is-quote', isQuotePrice);
+            pmPriceEl.disabled = !isQuotePrice;
+
+            const pmUnit = document.getElementById('pm-unit');
+            pmUnit.style.display = product.unit ? '' : 'none';
+            pmUnit.textContent = product.unit ? '/ ' + product.unit : '';
+
+            const pmUnit2 = document.getElementById('pm-unit2');
+            pmUnit2.style.display = product.unit ? '' : 'none';
+            pmUnit2.textContent = product.unit ? ' ' + product.unit : '';
+
+            const qty = parseFloat(product.quantity) || 0;
+            const qtyDisplay = Number.isInteger(qty) ? qty : qty.toFixed(2);
+            document.getElementById('pm-qty').textContent = qtyDisplay;
+
+            const badge = document.getElementById('pm-stock-badge');
+            badge.textContent = qty > 0 ? 'Còn hàng' : 'Hết hàng';
+            badge.className = 'pm-badge ' + (qty > 0 ? 'pm-badge-instock' : 'pm-badge-outstock');
+
+            // Tags
+            let tags = '';
+
+            // Supplier tag
+            const supplier = product.supplier || '';
+            if (supplier) {
+                tags += `<span class="pm-tag pm-tag-supplier">Hãng SX: ${esc(supplier)}</span>`;
+            }
+
+            // Product type tag
+            const productType = product.product_type || '';
+            if (productType && PRODUCT_TYPE_LABELS[productType]) {
+                tags += `<span class="pm-tag pm-tag-condition">${PRODUCT_TYPE_LABELS[productType]}</span>`;
+            }
+
+            // Show/hide tags section
+            const tagsEl = document.getElementById('pm-tags');
+            if (tags) {
+                tagsEl.innerHTML = tags;
+                tagsEl.style.display = 'flex';
+            } else {
+                tagsEl.style.display = 'none';
+            }
+
+            // Extra info section
+            let extraInfo = '';
+            if (product.brand) {
+                extraInfo += `<div class="pm-extra-item"><span class="pm-extra-label">Thương hiệu:</span><span class="pm-extra-value">${esc(product.brand)}</span></div>`;
+            }
+            if (product.model) {
+                extraInfo += `<div class="pm-extra-item"><span class="pm-extra-label">Model:</span><span class="pm-extra-value">${esc(product.model)}</span></div>`;
+            }
+            if (product.warranty) {
+                extraInfo += `<div class="pm-extra-item"><span class="pm-extra-label">Bảo hành:</span><span class="pm-extra-value">${esc(product.warranty)}</span></div>`;
+            }
+            if (product.origin) {
+                extraInfo += `<div class="pm-extra-item"><span class="pm-extra-label">Xuất xứ:</span><span class="pm-extra-value">${esc(product.origin)}</span></div>`;
+            }
+
+            const extraInfoEl = document.getElementById('pm-extra-info');
+            if (extraInfo) {
+                extraInfoEl.innerHTML = extraInfo;
+                extraInfoEl.style.display = 'grid';
+            } else {
+                extraInfoEl.style.display = 'none';
+            }
+
+            // Description
+            const descWrap = document.getElementById('pm-desc-wrap');
+            const descEl   = document.getElementById('pm-desc');
+            const descText = document.getElementById('pm-desc-text');
+            const descMore = document.getElementById('pm-desc-more');
+            if (product.description) {
+                descText.textContent = product.description;
+                descWrap.style.display = '';
+                requestAnimationFrame(() => {
+                    const isClamped = descText.scrollHeight > descText.clientHeight + 2;
+                    if (isClamped) {
+                        descMore.textContent = '...xem thêm';
+                        descMore.href = 'https://chauhoanglong.com/product/' + product.id;
+                        descMore.style.display = 'inline';
+                    } else {
+                        descMore.style.display = 'none';
+                    }
+                });
+            } else {
+                descWrap.style.display = 'none';
+                descMore.style.display = 'none';
+            }
+
+
+
+            // Gallery
+            const mainImg = document.getElementById('pm-main-img');
+            const thumbsEl = document.getElementById('pm-thumbs');
+            const allImages = [product.image_url || DEFAULT_IMAGE];
+            if (Array.isArray(product.gallery_urls)) {
+                product.gallery_urls.forEach(u => { if (u && u !== product.image_url) allImages.push(u); });
+            }
+            mainImg.src = allImages[0];
+            mainImg.onerror = function () { this.src = DEFAULT_IMAGE; };
+
+            thumbsEl.innerHTML = '';
+            if (allImages.length > 1) {
+                allImages.forEach((url, i) => {
+                    const t = document.createElement('div');
+                    t.className = 'pm-thumb' + (i === 0 ? ' pm-thumb-active' : '');
+                    t.innerHTML = `<img src="${url}" onerror="this.src='${DEFAULT_IMAGE}'">`;
+                    t.addEventListener('click', () => {
+                        mainImg.src = url;
+                        thumbsEl.querySelectorAll('.pm-thumb').forEach(x => x.classList.remove('pm-thumb-active'));
+                        t.classList.add('pm-thumb-active');
+                    });
+                    thumbsEl.appendChild(t);
+                });
+                thumbsEl.style.display = 'flex';
+            } else { thumbsEl.style.display = 'none'; }
+
+            // Wire "Xem chi tiết" button
+            const detailLink = document.getElementById('pm-detail-link');
+            if (detailLink) {
+                const pid = product.id || product.product_id || '';
+                detailLink.href = pid ? 'https://chauhoanglong.com/product/' + pid : '#';
+            }
+
+            document.getElementById('productModal').classList.add('pm-open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProductModal(e) {
+            if (e && e.target !== e.currentTarget) return;
+            document.getElementById('productModal').classList.remove('pm-open');
+            document.body.style.overflow = '';
+        }
+
+        /* ── Lightbox ───────────────────────────────────────────── */
+        let _lbImages = [], _lbIndex = 0;
+
+        function openLightbox() {
+            const mainImg = document.getElementById('pm-main-img');
+            const thumbs = document.querySelectorAll('#pm-thumbs .pm-thumb img');
+            _lbImages = thumbs.length > 0 ? Array.from(thumbs).map(t => t.src) : [mainImg.src];
+            _lbIndex = Math.max(0, _lbImages.indexOf(mainImg.src));
+            lbShow();
+            document.getElementById('lightbox').classList.add('lb-open');
+        }
+
+        function lbShow() {
+            document.getElementById('lb-img').src = _lbImages[_lbIndex];
+            document.getElementById('lb-counter').textContent = _lbImages.length > 1 ? (_lbIndex + 1) + ' / ' + _lbImages.length : '';
+            document.getElementById('lb-prev').style.display = _lbImages.length > 1 ? '' : 'none';
+            document.getElementById('lb-next').style.display = _lbImages.length > 1 ? '' : 'none';
+        }
+
+        function lbNavigate(dir) {
+            if (!document.getElementById('lightbox').classList.contains('lb-open')) return;
+            _lbIndex = (_lbIndex + dir + _lbImages.length) % _lbImages.length;
+            lbShow();
+        }
+
+        function closeLightbox(e) {
+            if (e && e.target !== e.currentTarget) return;
+            document.getElementById('lightbox').classList.remove('lb-open');
+        }
+
+        function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+        function onPmPriceClick(event) {
+            const target = event.currentTarget;
+            if (!target.classList.contains('is-quote')) return;
+            openContactModal();
+        }
+
+        function openContactModal() {
+            document.getElementById('contact-modal').classList.add('ct-open');
+        }
+        function closeContactModal() {
+            document.getElementById('contact-modal').classList.remove('ct-open');
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                if (document.getElementById('lightbox').classList.contains('lb-open')) closeLightbox();
+                else closeProductModal();
+            }
+            if (e.key === 'ArrowLeft') lbNavigate(-1);
+            if (e.key === 'ArrowRight') lbNavigate(1);
+        });
+    </script>
+
+    <script>
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobileMenuOverlay');
+            if (overlay) {
+                overlay.classList.toggle('active');
+                if (overlay.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            }
+        }
+        
+        // Close menu when clicking outside
+        document.getElementById('mobileMenuOverlay')?.addEventListener('click', function(e) {
+            if (e.target === this) {
+                toggleMobileMenu();
+            }
+        });
+
+        /* User dropdown */
+        function toggleUserMenu(e) {
+            e.stopPropagation();
+            const btn = document.getElementById('userMenuBtn');
+            const dd  = document.getElementById('userDropdown');
+            if (!btn || !dd) return;
+            const open = dd.classList.contains('open');
+            btn.classList.toggle('open', !open);
+            dd.classList.toggle('open', !open);
+        }
+        document.addEventListener('click', function() {
+            const btn = document.getElementById('userMenuBtn');
+            const dd  = document.getElementById('userDropdown');
+            if (btn) btn.classList.remove('open');
+            if (dd)  dd.classList.remove('open');
+        });
+
+        /* ── Scroll reveal ──────────────────────────────────────── */
+        (function() {
+            var HAS_REVEAL = 'data-reveal-done';
+
+            function mark(el, cls) {
+                if (!el.hasAttribute(HAS_REVEAL)) {
+                    el.setAttribute(HAS_REVEAL, '1');
+                    el.classList.add(cls);
+                }
+            }
+
+            function attachReveal() {
+                /* fade-up: hero inner elements with cascade delay */
+                var heroItems = ['.catalog-hero-title', '.catalog-hero-sub', '.catalog-search-form'];
+                heroItems.forEach(function(sel, idx) {
+                    document.querySelectorAll(sel).forEach(function(el) {
+                        mark(el, 'scroll-reveal');
+                        if (!el.style.transitionDelay) {
+                            el.style.transitionDelay = (idx * 0.13) + 's';
+                        }
+                    });
+                });
+
+                /* fade-up: hero wrapper, toolbar, footer */
+                ['.catalog-hero', '.catalog-toolbar', '.footer-col', '.footer-logo-section'].forEach(function(sel) {
+                    document.querySelectorAll(sel).forEach(function(el) { mark(el, 'scroll-reveal'); });
+                });
+
+                /* fade-left: sidebar & filter groups with stagger */
+                document.querySelectorAll('.catalog-sidebar').forEach(function(el) { mark(el, 'scroll-reveal-left'); });
+                document.querySelectorAll('.filter-group').forEach(function(el, i) {
+                    mark(el, 'scroll-reveal-left');
+                    if (!el.style.transitionDelay) {
+                        el.style.transitionDelay = (i * 0.07) + 's';
+                    }
+                });
+
+                /* scale+fade: product cards — stagger by position in grid */
+                document.querySelectorAll('.catalog-grid').forEach(function(grid) {
+                    Array.from(grid.querySelectorAll('.product-card')).forEach(function(card, i) {
+                        mark(card, 'scroll-reveal-scale');
+                        if (!card.style.transitionDelay) {
+                            card.style.transitionDelay = (Math.min(i % 8, 7) * 0.07) + 's';
+                        }
+                    });
+                });
+
+                /* Observe all unreveled elements */
+                var io = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('revealed');
+                            io.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.07, rootMargin: '0px 0px -30px 0px' });
+
+                var sel = '.scroll-reveal:not(.revealed),.scroll-reveal-left:not(.revealed),.scroll-reveal-scale:not(.revealed)';
+                document.querySelectorAll(sel).forEach(function(el) { io.observe(el); });
+            }
+
+            // Run on initial load
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', attachReveal);
+            } else {
+                attachReveal();
+            }
+
+            // Re-run when new cards are injected (e.g. via JS)
+            var mo = new MutationObserver(function() { attachReveal(); });
+            mo.observe(document.body, { childList: true, subtree: true });
+        })();
+    </script>
+
+
+</body></html>

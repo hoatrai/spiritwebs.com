@@ -1,0 +1,298 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ataco </title>
+<link href="//fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="/bundle/plugins/bootstrap/bootstrap.min.css?" rel="stylesheet">
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+  }
+  a {
+    color: #fff;
+  }
+  a:hover {
+    color: #2188ca;
+  }
+  .bgimg {
+    background-image: url('/upload/partner/9629rectangle-1.png');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    /* font-family: "Courier New", Courier, monospace; */
+    font-size: 25px;
+  }
+  .bgimg::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+  }
+  .bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+  }
+  .middle , .content {
+    /* display: none; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+  }
+  hr {
+    margin: auto;
+    width: 40%;
+  }
+  @media (min-width: 1200px)  {
+    .container {
+      max-width: 1200px;
+      width: 1200px;
+    }
+  }
+  .logo {
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background: #fff;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .logo img {
+    width: auto;
+    object-fit: cover;
+    min-width: 100%;
+    height: 100%;
+  }
+  .content .item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .content .item .big-title {
+    font-size: 28px;
+    text-transform: uppercase;
+    /* color: #2188ca; */
+    color: #fff;
+    font-weight: 800;
+    transition: all .5s ease;
+    padding: 5px 20px;
+    background: rgba(34, 34, 34, .8);
+    border-radius: 25px;
+    display: inline-block;
+  }
+  .content .item .img-box {
+    position: relative;
+    height: 450px;
+    width: auto;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .content .item .img-box img {
+    width: auto;
+    object-fit: cover;
+    min-width: 100%;
+    height: 100%;
+  }
+  .content .item .img-box::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(34, 34, 34, .8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* opacity: 0; */
+    transform: translateY(-100%);
+    transition: all .5s ease;
+  }
+  .content .item .img-box::after {
+    content: "";
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: all .5s ease;
+    transform: translateY(-150%);
+    z-index: 1;
+  }
+  .content .item .content-box {
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    text-align: center;
+    /* opacity: 0; */
+    transition: all .5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .content .item .content-box .title {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #2188ca;
+  }
+  .content .item .content-box .info >p {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: .7rem;
+  }
+  .content .item:hover .img-box::before ,
+  .content .item:hover .img-box::after {
+    transform: translateY(0);
+  }
+  .content .item:hover .content-box {
+    transform: translate(-50%, -50%);
+  }
+  .content .item:hover .big-title {
+    transform: translateY(200%);
+  }
+  @media (max-width: 767.98px) {
+    .content {
+      width: 100%;
+      height: 100%;
+    }
+    .content .item .img-box {
+      position: relative;
+      height: 220px;
+    }
+    .content .item .big-title {
+      font-size: 20px;
+      display: none;
+    }
+    .content .item .img-box::before {
+      transform: translateY(0);
+    }
+    .content .item .img-box::after {
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      top: 10px;
+      left: 10px;
+      transform: translateY(0);
+    }
+    .content .item .content-box {
+      transform: translate(-50%, -50%);
+    }
+    .content .item .content-box .title {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: .5rem !important;
+    }
+    .content .item .content-box .info >p {
+      margin-bottom: .4rem;
+    }
+    .logo {
+      height: 80px;
+    }
+  }
+</style>
+</head><body>
+  <div class="bgimg">
+    <div class="topleft d-none">
+      <p class="d-none">Logo</p>
+    </div>
+    <div class="logo">
+      <img src="/upload/contact/3867logo-1.png" alt="logo">
+    </div>
+    <div class="content">
+      <div class="container h-100">
+        <div class="row h-100 d-flex align-items-center">
+          <div class="col-10 offset-1 col-md-4 offset-md-1 col-1">
+            <div class="item" onclick="window.open('https://ataco.vn/index.php','_blank');">
+              <div class="img-box">
+                <img src="/upload/partner/9457eeedb8784c0ab1f97b105a173739d274.png" alt="Thuyền viên Ataco">
+              </div>
+              <div class="content-box p-3">
+                <h3 class="title mb-3">Thuyền viên Ataco</h3>
+                <div class="info">
+                  <p class="address">
+                    <strong>Địa chỉ:</strong> 472 Võ Nguyên Giáp - Vĩnh Niệm - Lê Chân - Hải Phòng
+                  </p>
+                  <p class="tel">
+                    <strong>Điện thoại:</strong> <a href="tel:(+84)911433006">(+84) 911433006</a>
+                  </p>
+                  <p class="email">
+                    <strong>Email:</strong> <a href="mailto:marinedept@ataco.vn">marinedept@ataco.vn</a>
+                  </p>
+                  <p class="url">
+                    <strong>Website:</strong> <a href="https://ataco.vn/index.php">https://ataco.vn/index.php</a>
+                  </p>
+                </div>
+              </div>
+              <h2 class="big-title mt-3">Thuyền viên Ataco</h2>
+            </div>
+          </div>
+          <div class="col-10 offset-1 col-md-4 offset-md-2 col-2">
+            <div class="item" onclick="window.open('https://ataco.vn/duhoc','_blank');">
+              <div class="img-box">
+                <img src="/duhoc/upload/partner/2559service1.webp" alt="Du học Ataco">
+              </div>
+              <div class="content-box p-3">
+                <h3 class="title mb-3">Du học Ataco</h3>
+                <div class="info">
+                  <p class="address">
+                    <strong>Địa chỉ:</strong> 473 Võ Nguyên Giáp - Vĩnh Niệm - Lê Chân - Hải Phòng
+                  </p>
+                  <p class="tel">
+                    <strong>Điện thoại:</strong> <a href="tel:02253261132">02253.261.132</a>
+                  </p>
+                  <p class="email">
+                    <strong>Email:</strong> <a href="mailto:labourdept@ataco.vn">labourdept@ataco.vn</a>
+                  </p>
+                  <p class="url">
+                    <strong>Website:</strong> <a href="https://ataco.vn/duhoc">https://ataco.vn/duhoc</a>
+                  </p>
+                </div>
+              </div>
+              <h2 class="big-title mt-3">Du học Ataco</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="middle d-none">
+      <h1>COMING SOON</h1>
+      <hr>
+      <p id="demo" style="font-size:30px"></p>
+    </div>
+    <div class="bottomleft d-none">
+      <p>© Copyright 2024 ATACO All Rights Reserved.</p>
+    </div>
+  </div>
+<script>
+</script>
+
+<script src="/bundle/plugins/bootstrap/bootstrap.min.js"></script>
+
+</body></html>

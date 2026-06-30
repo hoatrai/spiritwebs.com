@@ -1,0 +1,2288 @@
+<!DOCTYPE html><html lang="vi" class="skrollr skrollr-desktop"><head>
+
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport">
+<meta name="csrf-token" content="78vf4Zuckj0kZXxb3nDYt61JboWVA5CCzblI9Aw0">
+
+    <style>
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3gubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3iubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3cubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3-ubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluamawcubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluamaxkubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3oubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3kubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3yubhmdazq.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3gubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3iubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3cubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3-ubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluamawcubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluamaxkubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3oubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3kubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3yubhmdazq.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3gubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3iubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3cubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3-ubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluamawcubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluamaxkubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3oubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3kubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3yubhmdazq.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3gubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3iubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3cubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3-ubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluamawcubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluamaxkubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3oubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3kubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3yubhmdazq.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3gubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3iubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3cubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3-ubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluamawcubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluamaxkubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3oubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3kubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3yubhmdazq.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3gubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3iubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3cubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3-ubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluamawcubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluamaxkubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3oubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3kubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3yubhmdazq.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3gubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3iubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3cubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3-ubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluamawcubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluamaxkubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3oubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3kubhmdaztgww.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://andatplastic.vn/storage/fonts/be41945a65/srobotov51kfo7cnqeu92fr1me7ksn66agldtyluama3yubhmdazq.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+
+<style>
+    :root {
+        --primary-color: rgb(6, 42, 100);
+        --primary-hover-color: rgb(59, 133, 196);
+        --secondary-color: rgb(216, 17, 37);
+        --success-color: rgb(214, 6, 60);
+        --danger-color: #EF476F;
+        --warning-color: #FFD166;
+        --primary-font-website: 'Roboto', sans-serif;
+    }
+</style>
+
+
+        <title>CÔNG TY TNHH NHỰA AN ĐẠT</title>
+<meta name="description" content="CÔNG TY TNHH NHỰA AN ĐẠT chuyên cung cấp các sản phẩm nhựa chất lượng cao, đáp ứng đa dạng nhu cầu của khách hàng. Với uy tín, sự tận tâm và cam kết không ngừng nâng cao chất lượng sản phẩm, dịch vụ, An Đạt luôn mang đến giải pháp tối ưu và sự hài lò...">
+<link rel="canonical" href="https://andatplastic.vn">
+<meta name="robots" content="index, follow">
+<meta property="og:site_name" content="CÔNG TY TNHH NHỰA AN ĐẠT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CÔNG TY TNHH NHỰA AN ĐẠT">
+<meta property="og:description" content="CÔNG TY TNHH NHỰA AN ĐẠT chuyên cung cấp các sản phẩm nhựa chất lượng cao, đáp ứng đa dạng nhu cầu của khách hàng. Với uy tín, sự tận tâm và cam kết không ngừng nâng cao chất lượng sản phẩm, dịch vụ, An Đạt luôn mang đến giải pháp tối ưu và sự hài lò...">
+<meta property="og:image" content="https://andatplastic.vn/storage/z7608976427956-da06c55b987b611b7170cde700e43814.jpg">
+<meta property="og:url" content="https://andatplastic.vn">
+<meta name="twitter:title" content="CÔNG TY TNHH NHỰA AN ĐẠT">
+<meta name="twitter:description" content="CÔNG TY TNHH NHỰA AN ĐẠT chuyên cung cấp các sản phẩm nhựa chất lượng cao, đáp ứng đa dạng nhu cầu của khách hàng. Với uy tín, sự tận tâm và cam kết không ngừng nâng cao chất lượng sản phẩm, dịch vụ, An Đạt luôn mang đến giải pháp tối ưu và sự hài lò...">
+<link rel="sitemap" title="Sitemap" href="https://andatplastic.vn/sitemap.xml" type="application/xml">
+
+    <link rel="icon" type="image/x-icon" href="https://andatplastic.vn/storage/logo-an-dat.png">
+
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" type="text/css"><style>:root{--primary-font: "Roboto", sans-serif;}</style>
+
+
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/vendor/core/plugins/popup-chat/css/popup-chat.min.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/vendor/core/plugins/language/css/language-public.css?v=2.2.0">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/vendor/core/core/base/libraries/ckeditor/content-styles.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/plugins/swiper/swiper-bundle.min.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/plugins/slick/slick.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/css/style.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/plugins/uicons-regular-rounded.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/assets/css/vendors.min.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/assets/css/icon.min.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/assets/css/style.min.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/assets/css/responsive.min.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/assets/css/custom.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/assets/css/custom-ecommerce.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/assets/demos/yoga-and-meditation/yoga-and-meditation.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/assets/demos/yoga/yoga-01.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/assets/demos/business/business-1.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/plugins/toastr.js/toastr.min.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/plugins/magnific-popup/magnific-popup.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/plugins/lightgallery/css/lightgallery.min.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/vendor/core/plugins/contact/css/contact-public.css?v=1.0.1">
+
+
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"WebSite","name":"CÔNG TY TNHH NHỰA AN ĐẠT","url":"https:\/\/andatplastic.vn"}</script>
+
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Organization","name":"CÔNG TY TNHH NHỰA AN ĐẠT","url":"https:\/\/andatplastic.vn","logo":{"@type":"ImageObject","url":"https:\/\/andatplastic.vn\/storage\/logo-an-dat.png"}}</script>
+<link media="all" type="text/css" rel="stylesheet" href="https://andatplastic.vn/themes/iori/css/style.integration.css?v=1772850366"><link href="https://andatplastic.vn" hreflang="x-default" rel="alternate">
+
+    <link href="https://andatplastic.vn" hreflang="vi" rel="alternate">
+    <link href="https://andatplastic.vn/en" hreflang="en-us" rel="alternate">
+    <link href="https://andatplastic.vn/en" hreflang="en" rel="alternate">
+<link type="application/atom+xml" rel="alternate" title="Posts feed" href="https://andatplastic.vn/feed/posts">
+<link type="application/atom+xml" rel="alternate" title="Posts feed" href="https://andatplastic.vn/en/feed/posts">
+<link type="application/atom+xml" rel="alternate" title="Sản phẩm feed" href="https://andatplastic.vn/feed/products">
+<link type="application/atom+xml" rel="alternate" title="Sản phẩm feed" href="https://andatplastic.vn/en/feed/products">
+
+
+
+
+<script>
+    window.siteUrl = "https://andatplastic.vn";
+</script>
+
+
+                    <style>
+                .img-reveal {
+                    visibility: visible;
+                }
+            </style>
+            <style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><style>
+        .toastify {
+            padding: 0.75rem 2rem 0.75rem 0.75rem;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow:
+                0 3px 6px -1px rgba(0, 0, 0, 0.12),
+                0 10px 36px -4px rgba(77, 96, 232, 0.3);
+            background: -webkit-linear-gradient(315deg, #73a5ff, #5477f5);
+            background: linear-gradient(135deg, #73a5ff, #5477f5);
+            position: fixed;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+            border-radius: 2px;
+            cursor: pointer;
+            text-decoration: none;
+            z-index: 999999;
+            width: 25rem;
+            max-width: calc(100% - 30px);
+        }
+
+        .toastify.on {
+            opacity: 1;
+        }
+
+        .toastify-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .toast-close {
+            background: transparent;
+            border: 0;
+            color: white;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1em;
+            opacity: 0.4;
+            padding: 0 5px;
+            position: absolute;
+            top: 0.25rem;
+            inset-inline-end: 0.25rem;
+        }
+
+        .toast-close svg {
+            width: 1em;
+            height: 1em;
+        }
+
+        .toastify-text a {
+            text-decoration: underline;
+            color: #fff;
+        }
+
+        .toastify-right {
+            inset-inline-end: 15px;
+        }
+
+        .toastify-left {
+            inset-inline-start: 15px;
+        }
+
+        .toastify-top {
+            top: -150px;
+        }
+
+        .toastify-bottom {
+            bottom: -150px;
+        }
+
+        .toastify-rounded {
+            border-radius: 25px;
+        }
+
+        .toastify-center {
+            margin-inline-start: auto;
+            margin-inline-end: auto;
+            inset-inline-start: 0;
+            inset-inline-end: 0;
+            max-width: fit-content;
+            max-width: -moz-fit-content;
+        }
+
+        @media only screen and (max-width: 360px) {
+            .toastify-right,
+            .toastify-left {
+                margin-inline-start: auto;
+                margin-inline-end: auto;
+                inset-inline-start: 0;
+                inset-inline-end: 0;
+                max-width: fit-content;
+            }
+        }
+    </style></head>
+    <body id="page-home"><div class="body-overlay-1"></div>
+        
+
+        
+
+        
+        
+            <style>
+
+    header .header-top-bar+.navbar {
+    box-shadow: 0 10px 35px 0 rgba(0, 0, 0, .1);
+}
+    header .navbar-brand img{
+        max-height: 80px;
+    }
+    header .navbar-brand{
+        padding: 0;
+    }
+    header.sticky .navbar-brand {
+        padding: 0px 0;
+    }
+    .navbar .navbar-nav .nav-link {
+        padding: 14px 13px;
+    }
+    .navbar .navbar-nav .nav-link {
+    font-size: 17px;
+    }
+    .navbar .navbar-nav .simple-dropdown .dropdown-menu{
+        padding: 10px 0;
+    }
+    .navbar .navbar-nav .dropdown .dropdown-menu a {
+        line-height: 20px;
+        color: #000;
+    }
+    .navbar .navbar-nav .dropdown .dropdown-menu a:hover {
+        color: var(--base-color);
+    }
+    .navbar .navbar-nav .nav-link {
+        padding: 0px 12px;
+    }
+    @media (max-width: 767px) {
+        header .navbar-brand img{
+            max-height: 60px;
+            max-width: 170px;
+        }
+        .header-with-topbar {
+            margin-bottom: 60px;
+        }
+    }
+</style>
+
+<header class="header-with-topbar">
+        <div class="header-top-bar top-bar-light btn-gradient-fast-orange-pink" style="top: 0px;">
+        <div class="container-fluid">
+                        <div class="row h-45px xs-h-auto align-items-center m-0 xs-pt-5px xs-pb-5px">
+                <div class="col-lg-12 col-md-12 justify-content-center xs-px-0">
+                    <div class="fs-15 text-white fw-700">CÔNG TY TNHH NHỰA AN ĐẠT KÍNH CHÀO QUÝ KHÁCH ! </div>
+                </div>
+            </div>
+                    </div>
+    </div>
+        <nav class="navbar navbar-expand-lg header-light bg-white responsive-sticky" style="top: 45px;">
+        <div class="container-fluid">
+            <div class="col-auto col-lg-2 me-lg-0 me-auto">
+                <a class="navbar-brand" href="https://andatplastic.vn">
+                    <img class="h-80px object-fit-contain" alt="Iori" src="https://andatplastic.vn/storage/logo-an-dat.png" data-no-retina="">
+                </a>
+            </div>
+            <div class="col-auto menu-order position-static pl-0">
+                <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav"> 
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link fw-700" href="https://andatplastic.vn">
+                                Trang chủ
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link fw-700" href="https://andatplastic.vn/gioi-thieu">
+                                Giới thiệu
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item dropdown simple-dropdown">
+                    <a class="nav-link fw-700" href="https://andatplastic.vn/san-pham">
+                                Sản phẩm
+                        <i style="margin-top: 0px;margin-left: 4px;" class="d-none d-lg-block fa fa-angle-down"></i>
+            </a>
+            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink5" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i> 
+                        
+                            <ul class="dropdown-menu">
+                    <li class="nav-item">
+                    <a class="nav-link fw-700" href="https://andatplastic.vn/san-pham/san-xuat-hat-nhua-pvc">
+                                Sản Xuất Hạt Nhựa PVC
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link fw-700" href="https://andatplastic.vn/san-pham/gia-cong-hat-nhua-pvc">
+                                Giao Công Hạt Nhựa PVC
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link fw-700" href="https://andatplastic.vn/san-pham/san-xuat-va-gia-cong-bang-can-nuoc">
+                                Sản Xuất &amp; Gia Công Băng Cản Nước
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link fw-700" href="https://andatplastic.vn/san-pham/thanh-nep-profile-nhua">
+                                Thanh Nẹp Profile Nhựa
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link fw-700" href="https://andatplastic.vn/san-pham/gia-cong-oem-odm-nhua-theo-yeu-cau">
+                                Gia Công OEM &amp; ODM Theo Yêu Cầu
+                        </a>
+                        
+                    </li>
+    </ul>
+
+                    </li>
+                    <li class="nav-item dropdown simple-dropdown">
+                    <a class="nav-link fw-700" href="#">
+                                Thương Hiệu Đối Tác
+                        <i style="margin-top: 0px;margin-left: 4px;" class="d-none d-lg-block fa fa-angle-down"></i>
+            </a>
+            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink5" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i> 
+                        
+                            <ul class="dropdown-menu">
+                    <li class="nav-item">
+                    <a class="nav-link fw-700" href="https://sofuco.com/" target="_blank">
+                                SOFUCO
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link fw-700" href="https://sofuco.com" target="_blank">
+                                SICO
+                        </a>
+                        
+                    </li>
+    </ul>
+
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link fw-700" href="https://andatplastic.vn/ho-so-nang-luc">
+                                Hồ sơ năng lực
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link fw-700" href="https://andatplastic.vn/tin-tuc">
+                                Tin tức
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link fw-700" href="https://andatplastic.vn/kien-thuc">
+                                Kiến thức
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link fw-700" href="https://andatplastic.vn/lien-he">
+                                Liên hệ
+                        </a>
+                        
+                    </li>
+    </ul>
+
+                </div>
+            </div>
+            
+            <div class="col-auto col-lg-3 text-end d-sm-flex">
+                <div class="header-icon"> 
+                                        <div class="header-search-icon icon">
+                        <a href="#" class="search-form-icon header-search-form mr-20"><i class="feather icon-feather-search"></i></a>
+                        <!-- start search input -->
+                        <div class="search-form-wrapper">
+                            <button title="Close" type="button" class="search-close">×</button>
+                             <div class="search-form-wrapper"> 
+    <button title="Close" type="button" class="search-close alt-font"></button> 
+    <form id="search-form" role="search" class="search-form text-left" action="https://andatplastic.vn/san-pham"> 
+        <div class="search-form-box"> 
+            <p class="text-dark-gray text-center mb-7 fw-600 fs-30 lh-50">Bạn đang muốn tìm kiếm gì?</p> 
+            <input type="search" name="q" class="search-input alt-font" placeholder="Nhâp từ khoá..." data-ajax-url="https://andatplastic.vn/ajax/search/products" aria-label="Tìm kiếm" aria-describedby="search-addon" style="">
+            <button type="submit" class="search-button"> <i class="feather icon-feather-search" aria-hidden="true"></i> </button> 
+        </div> 
+    </form> 
+</div> 
+    <div class="box-notify-me">
+        <form action="https://andatplastic.vn/san-pham" class="form-autocomplete-search">
+            <div class="inner-notify-me">
+                <input class="form-control autocomplete-search" name="q" type="text" required="" placeholder="Nhâp từ khoá..." data-ajax-url="https://andatplastic.vn/ajax/search/products" autocomplete="off" style="">
+                <button class="btn btn-brand-1 font-md" type="submit">
+                    Tìm kiếm
+                    <svg class="w-6 h-6 icon-16 ms-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-2 text-sm search-message text-danger"></div>
+        </form>
+        <div class="search-results"></div>
+    </div>
+
+
+                        </div>
+                        <!-- end search input -->
+                    </div>
+                                                                                                                                 
+                            <style>
+    .language-dropdown .btn {
+        border-radius: 8px;
+        font-size: 14px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+    }
+
+    .language-dropdown .dropdown-menu {
+        min-width: 160px;
+        border-radius: 10px;
+        padding: 6px 0;
+        
+    }
+
+    .language-dropdown .dropdown-item {
+        padding: 0px 14px;
+        font-size: 14px;
+        transition: 0.2s;
+    }
+
+    .language-dropdown .dropdown-item:hover {
+        background: #f5f5f5;
+    }
+
+    .language-dropdown .dropdown-item.active {
+        font-weight: 600;
+        background: #ececec;
+    }
+    .language-dropdown ul.dropdown-menu li{
+        list-style-type: none
+    }
+</style>
+
+    
+    <div class="dropdown language-dropdown">
+        
+        <button class="btn btn-light d-flex align-items-center gap-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg style="height: 16px; width: auto;" class="flag" xmlns="http://www.w3.org/2000/svg" width="20" height="15" fill="none"><mask id="flags_vn_a" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse"><path fill="#fff" d="M0 0h20v15H0z"></path></mask><g mask="url(#flags_vn_a)"><path fill="#F7FCFF" fill-rule="evenodd" d="M0 0h20v15H0V0z" clip-rule="evenodd"></path><path fill="#E31D1C" fill-rule="evenodd" d="M0 0v15h20V0H0z" clip-rule="evenodd"></path><mask id="flags_vn_b" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse"><path fill="#fff" fill-rule="evenodd" d="M0 0v15h20V0H0z" clip-rule="evenodd"></path></mask><g mask="url(#flags_vn_b)"><path fill="#FFD221" fill-rule="evenodd" d="m10.039 9.987-3.22 2.047L7.9 8.451l-2.296-2.34 3.166-.07 1.4-3.537 1.277 3.584 3.158.055-2.373 2.384 1.108 3.409-3.3-1.949z" clip-rule="evenodd"></path></g></g></svg>
+            
+                            <span class="d-none d-lg-block">Tiếng Việt</span>
+                    </button>
+
+        
+        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                                                                            <li>
+                        <a class="dropdown-item d-flex align-items-center gap-2" href="https://andatplastic.vn/en">
+                                                            <svg style="height: 16px; width: auto;" class="flag" xmlns="http://www.w3.org/2000/svg" width="20" height="15" fill="none"><mask id="flags_us_a" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse"><path fill="#fff" d="M0 0h20v15H0z"></path></mask><g mask="url(#flags_us_a)"><path fill="#E31D1C" fill-rule="evenodd" d="M0 0h20v15H0V0z" clip-rule="evenodd"></path><path fill="#F7FCFF" fill-rule="evenodd" d="M0 1.25V2.5h20V1.25H0zm0 2.5V5h20V3.75H0zM0 7.5V6.25h20V7.5H0zm0 1.25V10h20V8.75H0zm0 3.75v-1.25h20v1.25H0zM0 15v-1.25h20V15H0z" clip-rule="evenodd"></path><path fill="#2E42A5" d="M0 0h11.25v8.75H0z"></path><path fill="#F7FCFF" fill-rule="evenodd" d="m1.3 2.717.662-.461.514.37h-.29l.588.52-.2.73h-.31l-.303-.67-.257.67H.935l.589.52-.224.821.662-.461.514.37h-.29l.588.52-.2.73h-.31l-.303-.67-.257.67H.935l.589.52-.224.821.662-.461.641.461-.199-.82.515-.521H2.68l.531-.37.514.37h-.29l.588.52-.224.821.662-.461.641.461-.199-.82.515-.521H5.18l.531-.37.514.37h-.29l.588.52-.224.821.662-.461.641.461-.199-.82.515-.521H7.68l.531-.37.514.37h-.29l.588.52-.224.821.662-.461.641.461-.199-.82.515-.521h-.655l-.303-.67-.257.67H8.83l-.177-.73.515-.52H8.93l.531-.37.641.461-.199-.82.515-.521h-.655l-.303-.67-.257.67H8.83l-.177-.73.515-.52H8.93l.531-.37.641.461-.199-.82.515-.521h-.655L9.46.706l-.257.67h-.769l.589.52-.2.73h-.31l-.303-.67-.257.67H7.58l-.177-.73.515-.52h-.655L6.96.706l-.257.67h-.769l.589.52-.2.73h-.31l-.303-.67-.257.67H5.08l-.177-.73.515-.52h-.655L4.46.706l-.257.67h-.769l.589.52-.2.73h-.31l-.303-.67-.257.67H2.58l-.177-.73.515-.52h-.655L1.96.706l-.257.67H.935l.589.52-.224.821zm7.525 2.409.199-.73-.589-.52h.291l-.514-.37-.53.37h.237l-.515.52.177.73h.373l.257-.67.303.67h.31zm-1.349 0-.514-.37-.53.37h.237l-.515.52.177.73h.373l.257-.67.303.67h.31l.2-.73-.589-.52h.291zm-2.202.52-.2.73h-.31l-.303-.67-.257.67H3.83l-.177-.73.515-.52H3.93l.531-.37.514.37h-.29l.588.52zm.18-.52H5.08l-.177-.73.515-.52H5.18l.531-.37.514.37h-.29l.588.52-.2.73h-.31l-.303-.67-.257.67zm-1.63 0 .2-.73-.589-.52h.291l-.514-.37-.53.37h.237l-.515.52.177.73h.373l.257-.67.303.67h.31zm3.95-1.98-.2.73h-.31l-.303-.67-.257.67H6.33l-.177-.73.515-.52H6.43l.531-.37.514.37h-.29l.588.52zm-2.798-.52-.514-.37-.53.37h.237l-.515.52.177.73h.373l.257-.67.303.67h.31l.2-.73-.589-.52h.291z" clip-rule="evenodd"></path></g></svg>
+                            
+                                                            <span>English</span>
+                                                    </a>
+                    </li>
+                                    </ul>
+    </div>
+
+                        
+                                            
+                    
+                                    </div>  
+                
+            </div>
+            
+        </div>
+    </nav>
+</header>
+    <div class="cart-main">
+    <div class="cart-sidebar">
+        <div class="cart-header d-flex align-items-center">
+            <p>Giỏ hàng của bạn</p>
+            <a class="ms-auto cursor-pointer btn-close-cart" href="#" style="font-size: 30px">
+                ×
+            </a>
+        </div>
+        <div class="cart-content">
+            <div class="cart_no_items text-center">
+        <span class="cart-empty-message">Chưa có sản phẩm trong giỏ hàng</span>
+    </div>
+
+        </div>
+        <div class="cart-footer">
+            
+        </div>
+    </div>
+
+    <div class="backdrop" style="display: none"></div>
+</div>
+
+
+        
+
+
+<section class="pt-0 pb-0">
+    <div class="ck-content"><section class="" style="background: #2659f2;">
+    <div class="container-fluid">
+        <div class="row row-cols-1 
+                        row-cols-lg-2 
+                        row-cols-sm-2">
+            <div class="col fit-videos text-center md-mb-0px sm-mb-0px ps-0 sm-pe-0">
+                                <div class="col interactive-banner-style-08 md-mb-30px">
+                    <figure class="m-0 hover-box overflow-hidden position-relative"> 
+                        <img src="https://andatplastic.vn/storage/z7625670547389-7d7c29edd711961c4ce9134747aac5d7.jpg" alt="Image " data-no-retina=""> 
+                        <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px sm-p-6">
+                            <div class="d-flex w-100 align-items-center mt-auto">
+                                <div class="col last-paragraph-no-margin">
+                                                                        <h5 class="alt-font text-white mb-0 fw-500">AN ĐẠT PLASTIC</h5>
+                                                                    </div> 
+                            </div> 
+                            <div class="position-absolute left-0px top-0px w-100 h-100 bg-gradient-gray-light-dark-transparent z-index-minus-1 opacity-6"></div>
+                                                        <a target="_blank" href="https://sofuco.com" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
+                                                    </figcaption>
+                    </figure>
+                </div>
+                            </div>
+            <div class="col text-center fit-videos sm-mb-20px pe-0 sm-ps-0
+                        ps-0 sm-ps-0
+                        ">
+                <div class="">
+                    <video loop="" autoplay="" playsinline="" controls="" muted="">
+                                            <source type="video/mp4" src="https://andatplastic.vn/storage/sofuco.mp4">
+                                        </video>
+                </div> 
+            </div>
+        </div>
+
+        <div class="col-12 pt-2 text-center">
+            <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 justify-content-center appear anime-child anime-complete" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [50, 0], &quot;translateX&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;: 0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
+                                <div class="col mb-2" style="" el="childs" staggervalue="300" easing="easeOutQuad">
+                    <div class="services-box-style-01 hover-box md-mb-30px overflow-hidden">
+                        <div class="position-relative box-image border-radius-8px">
+                            <img style="height: 200px;object-fit: cover;" class="md-h-auto border-radius-8px" src="https://andatplastic.vn/storage/2-11.png" loading="lazy" alt="HẠT NHỰA" data-no-retina="">
+                            <div class="box-overlay bg-dark-gray"></div>
+                                                        <a href="https://andatplastic.vn/storage/sample-5s-2.mp4" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large border border-2 border-color-white"><i class="feather icon-feather-arrow-right text-white icon-extra-medium"></i></a>
+                                                    </div>
+                        <div class="p-4 last-paragraph-no-margin text-center">
+                                                        <a href="https://andatplastic.vn/storage/sample-5s-2.mp4" class="line-clamp-2 fs-19 alt-font fw-700 text-white mb-5px lh-24 md-h-auto">
+                                                            HẠT NHỰA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                                <div class="col mb-2" style="" el="childs" staggervalue="300" easing="easeOutQuad">
+                    <div class="services-box-style-01 hover-box md-mb-30px overflow-hidden">
+                        <div class="position-relative box-image border-radius-8px">
+                            <img style="height: 200px;object-fit: cover;" class="md-h-auto border-radius-8px" src="https://andatplastic.vn/storage/3-11.png" loading="lazy" alt="BĂNG CẢN NƯỚC" data-no-retina="">
+                            <div class="box-overlay bg-dark-gray"></div>
+                                                        <a href="#2" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large border border-2 border-color-white"><i class="feather icon-feather-arrow-right text-white icon-extra-medium"></i></a>
+                                                    </div>
+                        <div class="p-4 last-paragraph-no-margin text-center">
+                                                        <a href="#2" class="line-clamp-2 fs-19 alt-font fw-700 text-white mb-5px lh-24 md-h-auto">
+                                                            BĂNG CẢN NƯỚC
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                                <div class="col mb-2" style="" el="childs" staggervalue="300" easing="easeOutQuad">
+                    <div class="services-box-style-01 hover-box md-mb-30px overflow-hidden">
+                        <div class="position-relative box-image border-radius-8px">
+                            <img style="height: 200px;object-fit: cover;" class="md-h-auto border-radius-8px" src="https://andatplastic.vn/storage/4-11.png" loading="lazy" alt="THANH NẸP PROFILE" data-no-retina="">
+                            <div class="box-overlay bg-dark-gray"></div>
+                                                        <a href="" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large border border-2 border-color-white"><i class="feather icon-feather-arrow-right text-white icon-extra-medium"></i></a>
+                                                    </div>
+                        <div class="p-4 last-paragraph-no-margin text-center">
+                                                        <a href="" class="line-clamp-2 fs-19 alt-font fw-700 text-white mb-5px lh-24 md-h-auto">
+                                                            THANH NẸP PROFILE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                                <div class="col mb-2" style="" el="childs" staggervalue="300" easing="easeOutQuad">
+                    <div class="services-box-style-01 hover-box md-mb-30px overflow-hidden">
+                        <div class="position-relative box-image border-radius-8px">
+                            <img style="height: 200px;object-fit: cover;" class="md-h-auto border-radius-8px" src="https://andatplastic.vn/storage/1-11.png" loading="lazy" alt="GIA CÔNG OEM" data-no-retina="">
+                            <div class="box-overlay bg-dark-gray"></div>
+                                                        <a href="" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large border border-2 border-color-white"><i class="feather icon-feather-arrow-right text-white icon-extra-medium"></i></a>
+                                                    </div>
+                        <div class="p-4 last-paragraph-no-margin text-center">
+                                                        <a href="" class="line-clamp-2 fs-19 alt-font fw-700 text-white mb-5px lh-24 md-h-auto">
+                                                            GIA CÔNG OEM
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                                
+            </div>
+        </div>
+    </div>
+</section><section class="overflow-hidden background-position-center-top position-relative pt-4 pb-4" style="background: #f0f0f0;">
+    <div class="container">
+        <div class="row align-items-center justify-content-center mb-3 xs-mb-11">
+            <div class="col-xl-5 col-lg-6 col-md-10 position-relative md-mb-20px text-center text-lg-start" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;:0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
+                                <h2 class="alt-font fw-700 ls-minus-2px mb-5" style="color: #1972e6;">
+                    <span data-fancy-text="{ &quot;opacity&quot;: [0, 1], &quot;rotate&quot;: [10, 0], &quot;translateX&quot;: [-30, 0], &quot;translateY&quot;: [30, 0], &quot;delay&quot;: 100, &quot;speed&quot;: 50, &quot;string&quot;: [&quot;LỢI THẾ CỦA AN ĐẠT PLASTIC&quot;], &quot;easing&quot;: &quot;easeOutQuad&quot; }"></span>
+                </h2>
+                                                <p style="color: #000000;">Uy tín tạo nên chất lượng, năng lực tạo nên khác biệt.</p>
+                            </div>
+                        <div class="col-xl-7 col-lg-6 col-md-10 text-center text-lg-start last-paragraph-no-margin" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;:0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
+                <p class="fs-16" style="color: #000000;">CÔNG TY TNHH NHỰA AN ĐẠT
+Giấy CNĐKDN: 0311735688 
+Ngày cấp: 20/04/2012, được sửa đổi lần thứ 01 ngày 08/09/2014. Cơ quan cấp: Phòng đăng ký kinh doanh – Sở kế hoạch và đầu tư Thành phố Hồ Chí Minh. 
+Địa chỉ ĐKKD: 267A Phạm Văn Cội, tổ 6, ấp Phú Hiệp, xã Phú Hòa Đông, TP Hồ Chí Minh, Việt Nam.</p>
+            </div>
+                    </div>
+        <div class="row row-cols-1 justify-content-center">
+            <div class="col">
+                <div class="swiper slider-four-slide pb-4 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [50, 0], &quot;translateX&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 700, &quot;delay&quot;: 0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }" data-slider-options="{ &quot;slidesPerView&quot;: 1, &quot;spaceBetween&quot;: 30, &quot;loop&quot;: true, &quot;pagination&quot;: { &quot;el&quot;: &quot;.slider-four-slide-pagination&quot;, &quot;clickable&quot;: true }, &quot;navigation&quot;: { &quot;nextEl&quot;: &quot;.slider-four-slide-next&quot;, &quot;prevEl&quot;: &quot;.slider-four-slide-prev&quot; }, &quot;keyboard&quot;: { &quot;enabled&quot;: true, &quot;onlyInViewport&quot;: true }, &quot;breakpoints&quot;: { &quot;1400&quot;: { &quot;slidesPerView&quot;: 3 }, &quot;1200&quot;: { &quot;slidesPerView&quot;: 3 }, &quot;992&quot;: { &quot;slidesPerView&quot;: 2 }, &quot;768&quot;: { &quot;slidesPerView&quot;: 2 } }, &quot;effect&quot;: &quot;slide&quot; }">
+                    <div class="swiper-wrapper" id="swiper-wrapper-3283d94c8bbdb40a" aria-live="polite" style="transform: translate3d(-1140px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide services-box-style-01 hover-box md-mb-30px border-radius-8px swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="1 / 9" style="width: 350px; margin-right: 30px;">
+                                <figure class="m-0">
+                                    <div class="overflow-hidden position-relative">
+                                        <img style="height: 220;object-fit: cover;" class="border-radius-8px w-100" src="https://andatplastic.vn/storage/phong-lab.png" alt="PHÒNG LAB KIỂM SOÁT CHẤT LƯỢNG" data-no-retina="">
+                                        <div class="box-overlay bg-dark-gray"></div>
+                                                                                <a href="#" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large border border-2 border-color-white"><i class="feather icon-feather-arrow-right text-white icon-extra-medium"></i></a>
+                                                                            </div>
+                                </figure>
+                                <div class="p-4 last-paragraph-no-margin">
+                                    <a href="#" class="video-icon-box popup-youtube">
+                                    <h2 class="line-clamp-2 fs-21 alt-font text-black fw-700 mb-5px lh-24 md-h-auto">PHÒNG LAB KIỂM SOÁT CHẤT LƯỢNG</h2>
+                                    </a>
+                                                                        <div class="heading-divider mb-10"></div>
+                                    <p class="line-clamp-3 fs-16 lh-24">Phòng Lab được trang bị đầy đủ thiết bị kiểm tra, phân tích và đánh giá chất lượng hạt nhựa, thành phẩm, đảm bảo sản phẩm ổn định và tin cậy.</p>
+                                                                    </div>
+                        </div><div class="swiper-slide services-box-style-01 hover-box md-mb-30px border-radius-8px swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="2 / 9" style="width: 350px; margin-right: 30px;">
+                                <figure class="m-0">
+                                    <div class="overflow-hidden position-relative">
+                                        <img style="height: 220;object-fit: cover;" class="border-radius-8px w-100" src="https://andatplastic.vn/storage/khuon-dun.png" alt="THIẾT KẾ GIA CÔNG KHUÔN ĐÙN" data-no-retina="">
+                                        <div class="box-overlay bg-dark-gray"></div>
+                                                                                <a href="/lien-he" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large border border-2 border-color-white"><i class="feather icon-feather-arrow-right text-white icon-extra-medium"></i></a>
+                                                                            </div>
+                                </figure>
+                                <div class="p-4 last-paragraph-no-margin">
+                                    <a href="/lien-he" class="video-icon-box popup-youtube">
+                                    <h2 class="line-clamp-2 fs-21 alt-font text-black fw-700 mb-5px lh-24 md-h-auto">THIẾT KẾ GIA CÔNG KHUÔN ĐÙN</h2>
+                                    </a>
+                                                                        <div class="heading-divider mb-10"></div>
+                                    <p class="line-clamp-3 fs-16 lh-24">An Đạt Plastic thiết kế, gia công khuôn đùn theo yêu cầu, tối ưu kích thước, hình dạng và đáp ứng linh hoạt nhu cầu sản xuất.</p>
+                                                                    </div>
+                        </div><div class="swiper-slide services-box-style-01 hover-box md-mb-30px border-radius-8px swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="2" role="group" aria-label="3 / 9" style="width: 350px; margin-right: 30px;">
+                                <figure class="m-0">
+                                    <div class="overflow-hidden position-relative">
+                                        <img style="height: 220;object-fit: cover;" class="border-radius-8px w-100" src="https://andatplastic.vn/storage/nhan-gia-cong.png" alt="GIA CÔNG THEO YÊU CẦU" data-no-retina="">
+                                        <div class="box-overlay bg-dark-gray"></div>
+                                                                                <a href="" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large border border-2 border-color-white"><i class="feather icon-feather-arrow-right text-white icon-extra-medium"></i></a>
+                                                                            </div>
+                                </figure>
+                                <div class="p-4 last-paragraph-no-margin">
+                                    <a href="" class="video-icon-box popup-youtube">
+                                    <h2 class="line-clamp-2 fs-21 alt-font text-black fw-700 mb-5px lh-24 md-h-auto">GIA CÔNG THEO YÊU CẦU</h2>
+                                    </a>
+                                                                        <div class="heading-divider mb-10"></div>
+                                    <p class="line-clamp-3 fs-16 lh-24">An Đạt Plastic nhận gia công theo yêu cầu với quy trình linh hoạt, đáp ứng đa dạng mẫu mã, quy cách và tiêu chuẩn kỹ thuật, đảm bảo chất lượng ổn định và tiến độ sản xuất.</p>
+                                                                    </div>
+                        </div>
+                                                <div class="swiper-slide services-box-style-01 hover-box md-mb-30px border-radius-8px swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="4 / 9" style="width: 350px; margin-right: 30px;">
+                                <figure class="m-0">
+                                    <div class="overflow-hidden position-relative">
+                                        <img style="height: 220;object-fit: cover;" class="border-radius-8px w-100" src="https://andatplastic.vn/storage/phong-lab.png" alt="PHÒNG LAB KIỂM SOÁT CHẤT LƯỢNG" data-no-retina="">
+                                        <div class="box-overlay bg-dark-gray"></div>
+                                                                                <a href="#" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large border border-2 border-color-white"><i class="feather icon-feather-arrow-right text-white icon-extra-medium"></i></a>
+                                                                            </div>
+                                </figure>
+                                <div class="p-4 last-paragraph-no-margin">
+                                    <a href="#" class="video-icon-box popup-youtube">
+                                    <h2 class="line-clamp-2 fs-21 alt-font text-black fw-700 mb-5px lh-24 md-h-auto">PHÒNG LAB KIỂM SOÁT CHẤT LƯỢNG</h2>
+                                    </a>
+                                                                        <div class="heading-divider mb-10"></div>
+                                    <p class="line-clamp-3 fs-16 lh-24">Phòng Lab được trang bị đầy đủ thiết bị kiểm tra, phân tích và đánh giá chất lượng hạt nhựa, thành phẩm, đảm bảo sản phẩm ổn định và tin cậy.</p>
+                                                                    </div>
+                        </div>
+                                                <div class="swiper-slide services-box-style-01 hover-box md-mb-30px border-radius-8px swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="5 / 9" style="width: 350px; margin-right: 30px;">
+                                <figure class="m-0">
+                                    <div class="overflow-hidden position-relative">
+                                        <img style="height: 220;object-fit: cover;" class="border-radius-8px w-100" src="https://andatplastic.vn/storage/khuon-dun.png" alt="THIẾT KẾ GIA CÔNG KHUÔN ĐÙN" data-no-retina="">
+                                        <div class="box-overlay bg-dark-gray"></div>
+                                                                                <a href="/lien-he" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large border border-2 border-color-white"><i class="feather icon-feather-arrow-right text-white icon-extra-medium"></i></a>
+                                                                            </div>
+                                </figure>
+                                <div class="p-4 last-paragraph-no-margin">
+                                    <a href="/lien-he" class="video-icon-box popup-youtube">
+                                    <h2 class="line-clamp-2 fs-21 alt-font text-black fw-700 mb-5px lh-24 md-h-auto">THIẾT KẾ GIA CÔNG KHUÔN ĐÙN</h2>
+                                    </a>
+                                                                        <div class="heading-divider mb-10"></div>
+                                    <p class="line-clamp-3 fs-16 lh-24">An Đạt Plastic thiết kế, gia công khuôn đùn theo yêu cầu, tối ưu kích thước, hình dạng và đáp ứng linh hoạt nhu cầu sản xuất.</p>
+                                                                    </div>
+                        </div>
+                                                <div class="swiper-slide services-box-style-01 hover-box md-mb-30px border-radius-8px swiper-slide-duplicate-prev" data-swiper-slide-index="2" role="group" aria-label="6 / 9" style="width: 350px; margin-right: 30px;">
+                                <figure class="m-0">
+                                    <div class="overflow-hidden position-relative">
+                                        <img style="height: 220;object-fit: cover;" class="border-radius-8px w-100" src="https://andatplastic.vn/storage/nhan-gia-cong.png" alt="GIA CÔNG THEO YÊU CẦU" data-no-retina="">
+                                        <div class="box-overlay bg-dark-gray"></div>
+                                                                                <a href="" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large border border-2 border-color-white"><i class="feather icon-feather-arrow-right text-white icon-extra-medium"></i></a>
+                                                                            </div>
+                                </figure>
+                                <div class="p-4 last-paragraph-no-margin">
+                                    <a href="" class="video-icon-box popup-youtube">
+                                    <h2 class="line-clamp-2 fs-21 alt-font text-black fw-700 mb-5px lh-24 md-h-auto">GIA CÔNG THEO YÊU CẦU</h2>
+                                    </a>
+                                                                        <div class="heading-divider mb-10"></div>
+                                    <p class="line-clamp-3 fs-16 lh-24">An Đạt Plastic nhận gia công theo yêu cầu với quy trình linh hoạt, đáp ứng đa dạng mẫu mã, quy cách và tiêu chuẩn kỹ thuật, đảm bảo chất lượng ổn định và tiến độ sản xuất.</p>
+                                                                    </div>
+                        </div>
+                                                
+                    <div class="swiper-slide services-box-style-01 hover-box md-mb-30px border-radius-8px swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="7 / 9" style="width: 350px; margin-right: 30px;">
+                                <figure class="m-0">
+                                    <div class="overflow-hidden position-relative">
+                                        <img style="height: 220;object-fit: cover;" class="border-radius-8px w-100" src="https://andatplastic.vn/storage/phong-lab.png" alt="PHÒNG LAB KIỂM SOÁT CHẤT LƯỢNG" data-no-retina="">
+                                        <div class="box-overlay bg-dark-gray"></div>
+                                                                                <a href="#" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large border border-2 border-color-white"><i class="feather icon-feather-arrow-right text-white icon-extra-medium"></i></a>
+                                                                            </div>
+                                </figure>
+                                <div class="p-4 last-paragraph-no-margin">
+                                    <a href="#" class="video-icon-box popup-youtube">
+                                    <h2 class="line-clamp-2 fs-21 alt-font text-black fw-700 mb-5px lh-24 md-h-auto">PHÒNG LAB KIỂM SOÁT CHẤT LƯỢNG</h2>
+                                    </a>
+                                                                        <div class="heading-divider mb-10"></div>
+                                    <p class="line-clamp-3 fs-16 lh-24">Phòng Lab được trang bị đầy đủ thiết bị kiểm tra, phân tích và đánh giá chất lượng hạt nhựa, thành phẩm, đảm bảo sản phẩm ổn định và tin cậy.</p>
+                                                                    </div>
+                        </div><div class="swiper-slide services-box-style-01 hover-box md-mb-30px border-radius-8px swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="8 / 9" style="width: 350px; margin-right: 30px;">
+                                <figure class="m-0">
+                                    <div class="overflow-hidden position-relative">
+                                        <img style="height: 220;object-fit: cover;" class="border-radius-8px w-100" src="https://andatplastic.vn/storage/khuon-dun.png" alt="THIẾT KẾ GIA CÔNG KHUÔN ĐÙN" data-no-retina="">
+                                        <div class="box-overlay bg-dark-gray"></div>
+                                                                                <a href="/lien-he" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large border border-2 border-color-white"><i class="feather icon-feather-arrow-right text-white icon-extra-medium"></i></a>
+                                                                            </div>
+                                </figure>
+                                <div class="p-4 last-paragraph-no-margin">
+                                    <a href="/lien-he" class="video-icon-box popup-youtube">
+                                    <h2 class="line-clamp-2 fs-21 alt-font text-black fw-700 mb-5px lh-24 md-h-auto">THIẾT KẾ GIA CÔNG KHUÔN ĐÙN</h2>
+                                    </a>
+                                                                        <div class="heading-divider mb-10"></div>
+                                    <p class="line-clamp-3 fs-16 lh-24">An Đạt Plastic thiết kế, gia công khuôn đùn theo yêu cầu, tối ưu kích thước, hình dạng và đáp ứng linh hoạt nhu cầu sản xuất.</p>
+                                                                    </div>
+                        </div><div class="swiper-slide services-box-style-01 hover-box md-mb-30px border-radius-8px swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="9 / 9" style="width: 350px; margin-right: 30px;">
+                                <figure class="m-0">
+                                    <div class="overflow-hidden position-relative">
+                                        <img style="height: 220;object-fit: cover;" class="border-radius-8px w-100" src="https://andatplastic.vn/storage/nhan-gia-cong.png" alt="GIA CÔNG THEO YÊU CẦU" data-no-retina="">
+                                        <div class="box-overlay bg-dark-gray"></div>
+                                                                                <a href="" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large border border-2 border-color-white"><i class="feather icon-feather-arrow-right text-white icon-extra-medium"></i></a>
+                                                                            </div>
+                                </figure>
+                                <div class="p-4 last-paragraph-no-margin">
+                                    <a href="" class="video-icon-box popup-youtube">
+                                    <h2 class="line-clamp-2 fs-21 alt-font text-black fw-700 mb-5px lh-24 md-h-auto">GIA CÔNG THEO YÊU CẦU</h2>
+                                    </a>
+                                                                        <div class="heading-divider mb-10"></div>
+                                    <p class="line-clamp-3 fs-16 lh-24">An Đạt Plastic nhận gia công theo yêu cầu với quy trình linh hoạt, đáp ứng đa dạng mẫu mã, quy cách và tiêu chuẩn kỹ thuật, đảm bảo chất lượng ổn định và tiến độ sản xuất.</p>
+                                                                    </div>
+                        </div></div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+            </div>
+        </div>
+    </div>
+</section><section class="big-section bg-black background-position-center-top overlap-height" style="background-image: url('https://andatplastic.vn/storage/z7609787892012-78e9b6d85465afa0a1ab683753e3b8bc.jpg');background-size: cover; background-repeat: no-repeat;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12"> 
+                <div class="overflow-visible position-relative" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [50, 0], &quot;translateX&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 400, &quot;delay&quot;: 0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
+                    <div class="h-550px md-h-450px sm-h-350px d-flex align-items-end justify-content-center overflow-hidden cover-background"></div>
+                    <div class="position-absolute top-0px left-0px w-100 h-100 z-index-9">
+                        <a href="https://andatplastic.vn/storage/sofuco.mp4" class="absolute-middle-center text-center rounded-circle video-icon-box video-icon-extra-large popup-youtube">
+                            <span>
+                                <span class="video-icon bg-yellow">
+                                    <i class="fa-solid fa-play text-dark-gray"></i>
+                                    <span class="video-icon-sonar">
+                                        <span class="video-icon-sonar-bfr bg-yellow opacity-9"></span>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div> 
+            </div> 
+        </div>
+    </div>
+</section>
+
+<section class="pt-2 pb-3" style="background: #ffffff;">
+    <div class="container">
+        <div class="row row-cols-1 justify-content-center">
+            <div class="col">
+                <div class="swiper slider-five-slide pb-2 swiper-initialized swiper-horizontal swiper-backface-hidden" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [50, 0], &quot;translateX&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;: 0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }" data-slider-options="{ &quot;slidesPerView&quot;: 2, &quot;spaceBetween&quot;: 30, &quot;loop&quot;: true, &quot;pagination&quot;: { &quot;el&quot;: &quot;.slider-five-slide-pagination&quot;, &quot;clickable&quot;: true }, &quot;navigation&quot;: { &quot;nextEl&quot;: &quot;.slider-five-slide-next&quot;, &quot;prevEl&quot;: &quot;.slider-five-slide-prev&quot; }, &quot;keyboard&quot;: { &quot;enabled&quot;: true, &quot;onlyInViewport&quot;: true }, &quot;breakpoints&quot;: { &quot;1400&quot;: { &quot;slidesPerView&quot;: 4 }, &quot;1200&quot;: { &quot;slidesPerView&quot;: 4 }, &quot;992&quot;: { &quot;slidesPerView&quot;: 2 }, &quot;768&quot;: { &quot;slidesPerView&quot;: 2 },&quot;575&quot;: { &quot;slidesPerView&quot;: 2 }}, &quot;effect&quot;: &quot;slide&quot; }">
+                    <div class="swiper-wrapper" id="swiper-wrapper-fdff29f44e8dfb105" aria-live="polite">
+                                                    <div class="swiper-slide services-box-style-01 hover-box md-mb-30px overflow-hidden border-radius-8px swiper-slide-active" role="group" aria-label="1 / 4" style="width: 255px; margin-right: 30px;" data-swiper-slide-index="0">
+                            <a href="https://andatplastic.vn/storage/nha-may-san-xuat-bang-can-nuoc-sofuco-an-dat.mp4" class="popup-youtube">
+                                <figure class="m-0">
+                                    <div class="overflow-hidden position-relative">
+                                        <img style="height: 170;object-fit: cover;" class="border-radius-8px w-100" src="https://andatplastic.vn/storage/nhua-an-dat-2.png" alt="NHÀ MÁY SẢN XUẤT AN ĐẠT PLASTIC" data-no-retina="">
+                                    </div>
+                                </figure>
+                                
+                                <div class="p-4 last-paragraph-no-margin">
+                                    <h2 style="color: #000000" class="d-flex align-items-center gap-10px line-clamp-3 fs-14 alt-font fw-700 mb-5px lh-20 md-h-auto">
+                                        <img style="width: 42px;height: 42px;animation: bounceIn 1s linear infinite;" src="https://andatplastic.vn/themes/iori/assets/icon-play.png" alt="icon play" data-no-retina="">
+                                        NHÀ MÁY SẢN XUẤT AN ĐẠT PLASTIC
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                                                    <div class="swiper-slide services-box-style-01 hover-box md-mb-30px overflow-hidden border-radius-8px swiper-slide-next" role="group" aria-label="2 / 4" style="width: 255px; margin-right: 30px;" data-swiper-slide-index="1">
+                            <a href="https://andatplastic.vn/doi-ngu-ky-thuat-giau-kinh-nghiem-tai-an-dat-plastic" class="popup-youtube">
+                                <figure class="m-0">
+                                    <div class="overflow-hidden position-relative">
+                                        <img style="height: 170;object-fit: cover;" class="border-radius-8px w-100" src="https://andatplastic.vn/storage/nhua-an-dat-3.png" alt="ĐỘI NGŨ KỸ THUẬT GIÀU KINH NGHIỆM" data-no-retina="">
+                                    </div>
+                                </figure>
+                                
+                                <div class="p-4 last-paragraph-no-margin">
+                                    <h2 style="color: #000000" class="d-flex align-items-center gap-10px line-clamp-3 fs-14 alt-font fw-700 mb-5px lh-20 md-h-auto">
+                                        <img style="width: 42px;height: 42px;animation: bounceIn 1s linear infinite;" src="https://andatplastic.vn/themes/iori/assets/icon-play.png" alt="icon play" data-no-retina="">
+                                        ĐỘI NGŨ KỸ THUẬT GIÀU KINH NGHIỆM
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                                                    <div class="swiper-slide services-box-style-01 hover-box md-mb-30px overflow-hidden border-radius-8px " role="group" aria-label="3 / 4" style="width: 255px; margin-right: 30px;" data-swiper-slide-index="2">
+                            <a href="https://andatplastic.vn/an-dat-plastic-cung-cap-giai-phap-toan-dien-cho-khach-hang" class="popup-youtube">
+                                <figure class="m-0">
+                                    <div class="overflow-hidden position-relative">
+                                        <img style="height: 170;object-fit: cover;" class="border-radius-8px w-100" src="https://andatplastic.vn/storage/giai-phap.png" alt="GIẢI PHÁP TOÀN DIỆN" data-no-retina="">
+                                    </div>
+                                </figure>
+                                
+                                <div class="p-4 last-paragraph-no-margin">
+                                    <h2 style="color: #000000" class="d-flex align-items-center gap-10px line-clamp-3 fs-14 alt-font fw-700 mb-5px lh-20 md-h-auto">
+                                        <img style="width: 42px;height: 42px;animation: bounceIn 1s linear infinite;" src="https://andatplastic.vn/themes/iori/assets/icon-play.png" alt="icon play" data-no-retina="">
+                                        GIẢI PHÁP TOÀN DIỆN
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                                                    <div class="swiper-slide services-box-style-01 hover-box md-mb-30px overflow-hidden border-radius-8px " role="group" aria-label="4 / 4" style="width: 255px; margin-right: 30px;" data-swiper-slide-index="3">
+                            <a href="https://andatplastic.vn/oem-odm-tat-ca-cac-san-pham-nhua-pvc" class="popup-youtube">
+                                <figure class="m-0">
+                                    <div class="overflow-hidden position-relative">
+                                        <img style="height: 170;object-fit: cover;" class="border-radius-8px w-100" src="https://andatplastic.vn/storage/odm.png" alt="OEM &amp; ODM TẤT CẢ SẢN PHẨM NHỰA PVC" data-no-retina="">
+                                    </div>
+                                </figure>
+                                
+                                <div class="p-4 last-paragraph-no-margin">
+                                    <h2 style="color: #000000" class="d-flex align-items-center gap-10px line-clamp-3 fs-14 alt-font fw-700 mb-5px lh-20 md-h-auto">
+                                        <img style="width: 42px;height: 42px;animation: bounceIn 1s linear infinite;" src="https://andatplastic.vn/themes/iori/assets/icon-play.png" alt="icon play" data-no-retina="">
+                                        OEM &amp; ODM TẤT CẢ SẢN PHẨM NHỰA PVC
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                                                
+                    </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+            </div>
+        </div>
+                <div class="text-center d-inline-block w-100 mt-15px sm-mt-0">
+            <a href="/gioi-thieu" class="btn btn-extra-large btn-rounded with-rounded btn-gradient-fast-blue-purple d-table d-lg-inline-block lg-mb-15px md-mx-auto fw-700">
+                Xem thêm
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+            </div>
+</section>
+<section class="pt-4 pb-2" style="background: #ffffff;">
+    <div class="container">
+        <div class="row align-items-center justify-content-center mb-3 xs-mb-11">
+            <div class="col-xl-5 col-lg-6 col-md-10 position-relative md-mb-20px text-center text-lg-start" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;:0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
+                                <h2 class="alt-font fw-700 ls-minus-2px mb-5" style="color: #0660c1;">
+                    <span data-fancy-text="{ &quot;opacity&quot;: [0, 1], &quot;rotate&quot;: [10, 0], &quot;translateX&quot;: [-30, 0], &quot;translateY&quot;: [30, 0], &quot;delay&quot;: 100, &quot;speed&quot;: 50, &quot;string&quot;: [&quot;TIN TỨC &amp; SỰ KIỆN&quot;], &quot;easing&quot;: &quot;easeOutQuad&quot; }"></span>
+                </h2>
+                                                <p style="color: #212121;">Tin mới &amp; xu hướng</p>
+                            </div>
+                        <div class="col-xl-7 col-lg-6 col-md-10 text-center text-lg-start last-paragraph-no-margin" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;:0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
+                <p class="fs-16" style="color: #212121;">Cập nhật nhanh tin tức nổi bật, xu hướng mới và thông tin hữu ích trong ngành nhựa.</p>
+            </div>
+                    </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-6 col-md-10" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;:0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
+                                <div class="col interactive-banner-style-08 md-mb-30px">
+                    <figure class="m-0 hover-box overflow-hidden position-relative border-radius-8px"> 
+                        <img class="w-100 border-radius-8px" src="https://andatplastic.vn/storage/7-11.png" alt="" data-no-retina=""> 
+                        <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px sm-p-6">
+                            <div class="d-flex w-100 align-items-center mt-auto">
+                                <div class="col last-paragraph-no-margin">
+                                    <h5 class="lg-fs-30 md-fs-22 md-lh-26 lg-lh-40  alt-font text-white mb-40px fw-600">Hạt Nhựa PVC Compound Theo Yêu Cầu – Giải Pháp Tối Ưu Cho Doanh Nghiệp Sản Xuất</h5>
+                                </div> 
+                            </div> 
+                            <div class="position-absolute left-0px top-0px w-100 h-100 bg-gradient-gray-light-dark-transparent z-index-minus-1 opacity-6"></div>
+                            <a href="https://andatplastic.vn/hat-nhua-pvc-compound-theo-yeu-cau-giai-phap-toi-uu-cho-doanh-nghiep-san-xuat" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
+                        </figcaption>
+                    </figure>
+                </div>
+                                <div class="col-12 position-relative swiper-light-pagination w-85 mx-auto" style="margin-top:-70px">
+                    <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden" data-slider-options="{ &quot;slidesPerView&quot;: 1, &quot;spaceBetween&quot;: 20, &quot;loop&quot;: true,&quot;autoplay&quot;: {&quot;delay&quot;: 3000,&quot;disableOnInteraction&quot;: false}, &quot;pagination&quot;: { &quot;el&quot;: &quot;.swiper-pagination-bullets-03&quot;, &quot;clickable&quot;: true, &quot;dynamicBullets&quot;: false }, &quot;navigation&quot;: { &quot;nextEl&quot;: &quot;.slider-one-slide-next-02&quot;, &quot;prevEl&quot;: &quot;.slider-one-slide-prev-02&quot; }, &quot;keyboard&quot;: { &quot;enabled&quot;: true, &quot;onlyInViewport&quot;: true }, &quot;breakpoints&quot;: { &quot;992&quot;: { &quot;slidesPerView&quot;: 3 }, &quot;768&quot;: { &quot;slidesPerView&quot;: 3 }, &quot;480&quot;: { &quot;slidesPerView&quot;: 2 }, &quot;320&quot;: { &quot;slidesPerView&quot;: 1 } }, &quot;effect&quot;: &quot;slide&quot; }">
+                        
+                        <div class="swiper-wrapper align-items-center" id="swiper-wrapper-b9d5bb510f792710b1" aria-live="off">
+                                                        
+                                                        
+                                                    <div class="swiper-slide swiper-slide-active" role="group" aria-label="2 / 2" style="width: 193.667px; margin-right: 20px;" data-swiper-slide-index="1">
+                                <div class="services-box-style-01 hover-box md-mb-30px overflow-hidden">
+                                    <div class="position-relative box-image border-radius-8px">
+                                        <a href="https://andatplastic.vn/10-loi-thuong-gap-khi-su-dung-hat-nhua-pvc-compound-va-cach-khac-phuc-hieu-qua">
+                                            <img style="height:160px;object-fit: cover" class=" border-radius-8px" src="https://andatplastic.vn/storage/image-48.png" loading="lazy" alt="10 Lỗi Thường Gặp Khi Sử Dụng Hạt Nhựa PVC Compound Và Cách Khắc Phục Hiệu Quả" data-no-retina="">
+                                        </a>
+                                        <div class="box-overlay bg-dark-gray"></div>
+                                        <a href="https://andatplastic.vn/10-loi-thuong-gap-khi-su-dung-hat-nhua-pvc-compound-va-cach-khac-phuc-hieu-qua" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large "></a>
+                                    </div>
+                                    <div class="p-4 last-paragraph-no-margin">
+                                        <a style="color: #212121;" href="https://andatplastic.vn/10-loi-thuong-gap-khi-su-dung-hat-nhua-pvc-compound-va-cach-khac-phuc-hieu-qua" class="line-clamp-2 fs-16 alt-font mb-5px lh-22 md-h-auto">10 Lỗi Thường Gặp Khi Sử Dụng Hạt Nhựa PVC Compound Và Cách Khắc Phục Hiệu Quả</a>
+                                    </div>
+                                </div>
+                            </div><div class="swiper-slide swiper-slide-next" role="group" aria-label="1 / 2" style="width: 193.667px; margin-right: 20px;" data-swiper-slide-index="0">
+                                <div class="services-box-style-01 hover-box md-mb-30px overflow-hidden">
+                                    <div class="position-relative box-image border-radius-8px">
+                                        <a href="https://andatplastic.vn/case-study-toi-uu-hat-nhua-pvc-compound-giup-doanh-nghiep-giam-30-chi-phi-san-xuat">
+                                            <img style="height:160px;object-fit: cover" class=" border-radius-8px" src="https://andatplastic.vn/storage/jkkhidsjnfdvj.png" loading="lazy" alt="Case Study: Tối Ưu Hạt Nhựa PVC Compound Giúp Doanh Nghiệp Giảm 30% Chi Phí Sản Xuất" data-no-retina="">
+                                        </a>
+                                        <div class="box-overlay bg-dark-gray"></div>
+                                        <a href="https://andatplastic.vn/case-study-toi-uu-hat-nhua-pvc-compound-giup-doanh-nghiep-giam-30-chi-phi-san-xuat" class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-60px h-60px rounded-circle box-shadow-quadruple-large "></a>
+                                    </div>
+                                    <div class="p-4 last-paragraph-no-margin">
+                                        <a style="color: #212121;" href="https://andatplastic.vn/case-study-toi-uu-hat-nhua-pvc-compound-giup-doanh-nghiep-giam-30-chi-phi-san-xuat" class="line-clamp-2 fs-16 alt-font mb-5px lh-22 md-h-auto">Case Study: Tối Ưu Hạt Nhựa PVC Compound Giúp Doanh Nghiệp Giảm 30% Chi Phí Sản Xuất</a>
+                                    </div>
+                                </div>
+                            </div></div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                    <!-- start slider navigation -->
+                    <div class="hidden-mobile slider-one-slide-prev-02 bg-transparent border border-2 border-color-transparent-black-very-light h-50px w-50px swiper-button-prev slider-navigation-style-03 swiper-button-lock" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-b9d5bb510f792710b1"><i class="fa-solid fa-arrow-left text-black"></i></div>
+                    <div class="hidden-mobile slider-one-slide-next-02 bg-transparent border border-2 border-color-transparent-black-very-light h-50px w-50px swiper-button-next slider-navigation-style-03 swiper-button-lock" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-b9d5bb510f792710b1"><i class="fa-solid fa-arrow-right text-black"></i></div>
+                    <!-- end slider navigation -->
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-10 text-lg-start last-paragraph-no-margin" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;:0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
+                            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-40px pb-40 overflow-hidden">
+    <div class="container">
+        <div class="row mb-3" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 700, &quot;delay&quot;: 0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
+            <div class="col-12 text-center">
+                                <h2 class="fw-700 ls-minus-1px text-primary mb-10px">
+                    <span data-fancy-text="{ &quot;opacity&quot;: [0, 1], &quot;rotate&quot;: [10, 0], &quot;translateX&quot;: [-30, 0], &quot;translateY&quot;: [30, 0], &quot;delay&quot;: 100, &quot;speed&quot;: 50, &quot;string&quot;: [&quot;GIẤY CHỨNG NHẬN&quot;], &quot;easing&quot;: &quot;easeOutQuad&quot; }"></span>
+                </h2>
+                                                <p class="mb-0">Nhựa An Đạt sở hữu đầy đủ các giấy chứng nhận chất lượng, khẳng định năng lực sản xuất, quản lý và cam kết đáp ứng các tiêu chuẩn trong lĩnh vực nhựa PVC. Đây là nền tảng giúp chúng tôi mang đến sản phẩm ổn định, uy tín và tạo sự tin tưởng cho khách hàng, đối tác.</p>
+                            </div>
+        </div>
+        <div class="row position-relative clients-style-01">
+            <div class="col swiper slider-four-slide text-center swiper-initialized swiper-horizontal swiper-backface-hidden" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 700, &quot;delay&quot;: 0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }" data-slider-options="{ &quot;slidesPerView&quot;: 1, &quot;spaceBetween&quot;: 30, &quot;loop&quot;: true, &quot;pagination&quot;: { &quot;el&quot;: &quot;.slider-four-slide-pagination-2&quot;, &quot;clickable&quot;: true }, &quot;autoplay&quot;: { &quot;delay&quot;: 4000, &quot;disableOnInteraction&quot;: false }, &quot;navigation&quot;: { &quot;nextEl&quot;: &quot;.slider-four-slide-next-02&quot;, &quot;prevEl&quot;: &quot;.slider-four-slide-prev-02&quot; }, &quot;keyboard&quot;: { &quot;enabled&quot;: true, &quot;onlyInViewport&quot;: true }, &quot;breakpoints&quot;: { &quot;1200&quot;: { &quot;slidesPerView&quot;: 3 }, &quot;992&quot;: { &quot;slidesPerView&quot;: 3 }, &quot;768&quot;: { &quot;slidesPerView&quot;: 2 } }, &quot;effect&quot;: &quot;slide&quot; }">
+                <div class="swiper-wrapper" id="swiper-wrapper-ac2e25caf31085cef" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-380px, 0px, 0px); transition-delay: 0ms;">
+                    <!-- start client item -->
+                                        
+                                        
+                                        <div class="swiper-slide swiper-slide-prev" role="group" aria-label="3 / 4" style="width: 350px; margin-right: 30px;" data-swiper-slide-index="2">
+                        <a href="#"><img src="https://andatplastic.vn/storage/screenshot-2026-03-13-145614.png" class="border-radius-8px box-shadow-1" alt="3" data-no-retina=""></a>
+                    </div>
+                                        <div class="swiper-slide swiper-slide-active" role="group" aria-label="4 / 4" style="width: 350px; margin-right: 30px;" data-swiper-slide-index="3">
+                        <a href="#"><img src="https://andatplastic.vn/storage/screenshot-2026-03-13-145651.png" class="border-radius-8px box-shadow-1" alt="4" data-no-retina=""></a>
+                    </div>
+                                    <div class="swiper-slide swiper-slide-next" role="group" aria-label="1 / 4" style="width: 350px; margin-right: 30px;" data-swiper-slide-index="0">
+                        <a href="#"><img src="https://andatplastic.vn/storage/chung-nhan.png" class="border-radius-8px box-shadow-1" alt="1" data-no-retina=""></a>
+                    </div><div class="swiper-slide" role="group" aria-label="2 / 4" style="width: 350px; margin-right: 30px;" data-swiper-slide-index="1">
+                        <a href="#"><img src="https://andatplastic.vn/storage/screenshot-2026-03-13-145448.png" class="border-radius-8px box-shadow-1" alt="2" data-no-retina=""></a>
+                    </div></div>
+                <!-- start slider pagination -->
+                <!--<div class="swiper-pagination slider-four-slide-pagination-1 swiper-pagination-style-2 swiper-pagination-clickable swiper-pagination-bullets"></div>-->
+                <!-- end slider pagination -->
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div> 
+        </div>
+    </div>
+</section><style>
+    .contact-form-style-03{
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+    }
+    .contact-form-style-03 label{
+        font-weight: 400;
+        color: #121212;
+    }
+
+</style>
+   <section class="pt-4 pb-2" style="background-color: rgb(246, 247, 248);">
+    <div class="container">
+        <div class="row justify-content-center mb-5 sm-mb-45px" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [15, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 500, &quot;delay&quot;: 0, &quot;staggervalue&quot;: 200, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
+            <div class="col-xl-6 col-lg-6 md-mb-20px">
+                                <img src="https://andatplastic.vn/storage/tu-van.png" alt="YÊU CẦU TƯ VẤN" class="w-100 border-radius-8px" data-no-retina="">
+                            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="contact-form-style-03 box-shadow-double-large overflow-hidden last-paragraph-no-margin">
+                    <h3 class="fs-35 alt-font fw-700 ls-minus-1px text-primary">YÊU CẦU TƯ VẤN</h3>
+                    <p class="mb-30px"></p>
+                    <form method="POST" action="https://andatplastic.vn/contact/send" accept-charset="UTF-8" id="botble-contact-forms-fronts-contact-form" class="contact-form dirty-check" novalidate="novalidate"><input name="_token" type="hidden" value="78vf4Zuckj0kZXxb3nDYt61JboWVA5CCzblI9Aw0" style="">
+
+    
+
+            
+        
+            
+        
+            
+        <input class="form-control" data-counter="250" name="required_fields" type="hidden" value="phone,email" style="">
+    
+
+
+
+
+            
+        <input class="form-control" data-counter="250" name="display_fields" type="hidden" value="phone,email,subject" style="">
+    
+
+
+
+
+            
+        <div class="contact-form-row row">
+
+    
+    
+
+    
+
+            
+        <div class="contact-column-6 col-md-6 contact-field-name_wrapper">
+
+    
+    
+
+    
+
+            
+        <div class="contact-form-group">
+    
+            <label class="form-label form-label required" for="name">
+    Họ tên
+
+    
+    </label>
+    
+    
+    <input class="contact-form-input" placeholder="Họ tên của bạn" required="required" name="name" type="text" id="name" aria-required="true" style="">
+
+    
+    
+
+            </div>
+    
+
+            
+        </div>
+
+    
+    
+
+    
+
+            
+        <div class="contact-column-6 col-md-6 contact-field-email_wrapper">
+
+    
+    
+
+    
+
+            
+        <div class="contact-form-group">
+    
+            <label class="form-label form-label required" for="email">
+    Email
+
+    
+    </label>
+    
+    
+    <input class="contact-form-input" placeholder="Email của bạn" required="required" name="email" type="email" id="email" aria-required="true" style="">
+
+    
+    
+
+            </div>
+    
+
+            
+        </div>
+
+    
+    
+
+    
+
+            
+        <div class="contact-column-6 col-md-6 contact-field-phone_wrapper">
+
+    
+    
+
+    
+
+            
+        <div class="contact-form-group">
+    
+            <label class="form-label form-label required" for="phone">
+    Điện thoại
+
+    
+    </label>
+    
+    
+    <input class="contact-form-input" placeholder="Số điện thoại của bạn" required="required" name="phone" type="text" id="phone" aria-required="true" style="">
+
+    
+    
+
+            </div>
+    
+
+            
+        </div>
+
+    
+    
+
+    
+
+            
+        <div class="contact-column-6 col-md-6 contact-field-subject_wrapper">
+
+    
+    
+
+    
+
+            
+        <div class="contact-form-group">
+    
+            <label class="form-label" for="subject">
+    Subject
+
+    
+    </label>
+    
+    
+    <input class="contact-form-input" placeholder="Subject" name="subject" type="text" id="subject" style="">
+
+    
+    
+
+            </div>
+    
+
+            
+        </div>
+
+    
+    
+
+    
+
+            
+        </div>
+
+    
+    
+
+    
+
+            
+        <div class="contact-form-group">
+    
+            <label class="form-label form-label required" for="content">
+    Nội dung
+
+    
+    </label>
+    
+    
+    <textarea class="contact-form-input" rows="3" placeholder="Nhập nội dung" required="required" id="content" name="content" cols="50" aria-required="true" style=""></textarea>
+
+    
+    
+
+            </div>
+    
+
+            
+        <div class="contact-form-group">
+    
+
+    
+    <input type="hidden" name="agree_terms_and_policy" value="0" style="">
+
+    <label class="required form-check">
+    <input type="checkbox" id="agree_terms_and_policy_243f28785407323f2c450d79cc588bc4" name="agree_terms_and_policy" class="form-check-input contact-form-input" required="required" value="1" aria-required="true" style="">
+
+            <span class="form-check-label">
+            Tôi đồng ý với điều khoản và chính sách
+        </span>
+    
+    </label>
+
+    
+    
+
+            </div>
+    
+
+            
+        
+            
+        <div class="contact-form-group">
+
+    
+    
+
+    
+
+            
+        
+            
+        </div>
+
+    
+    
+
+    
+
+            
+        <div class="contact-form-group">
+
+    
+    
+
+    
+
+            
+        <div class="contact-message contact-success-message" style="display: none"></div>
+    <div class="contact-message contact-error-message" style="display: none"></div>
+
+    
+    
+
+    
+
+            
+        </div>
+
+    
+    
+
+    
+
+            
+        
+            
+        <button class="btn btn-large btn-dark-gray btn-round-edge btn-box-shadow mb-20px mt-25px w-100" type="submit">Gửi yêu cầu</button>
+
+
+    
+    
+
+    </form>
+
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+</section>
+
+<footer class="pt-40 pb-0 footer-style-1" style="--footer-background-color: rgb(9, 44, 156); --footer-heading-color: rgb(255, 255, 255); --footer-text-color: rgb(255, 255, 255); --footer-bottom-background-color: #ffffff; --footer-background-image: url(https://andatplastic.vn/storage/z7629984978816-38995843ea79f81e414b17f90fed478f.jpg);">
+<style>
+    .footer-dark p{
+        margin-bottom: 10px;
+    }
+    .footer-dark p, .footer-dark a {
+        color: var(--solitude-blue);
+    }
+    footer.footer-style-1 {
+        background-color: var(--footer-background-color, #FFFFFF);
+        background-image: var(--footer-background-image, none);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    footer.footer-style-1 .text-header-footer {
+        color: var(--footer-heading-color, #14176C) !important;
+    }
+</style>
+    <div class="container">
+        <div class="row justify-content-center mb-3 md-mb-8 sm-mb-40px">
+            <div class="col-12 col-lg-3 last-paragraph-no-margin md-mb-40px xs-mb-30px">
+            <span class="fs-20 text-uppercase fw-600 d-block text-header-footer mb-5px">Thông tin liên hệ</span>
+        <div class="heading-divider mb-20px"></div>
+                <p class="mb-10px fw-600">Công Ty TNHH Nhựa An Đạt</p>
+                <p class="fs-16 lh-22 mb-10px">Giấy CNĐKDN: 0311735688</p>
+                <p class="fs-16 lh-22 mb-10px">Địa chỉ: 267A Phạm Văn Cội, Tổ 6, Ấp Phú Hiệp, xã Phú Hòa Đông, TP.HCM, Việt Nam.</p>
+                <p class="fs-16 lh-22 mb-10px">Hotline/ ZALO: 0779 250 679</p>
+                <p class="fs-16 lh-22 mb-10px">Email: kd@andatplastic.vn</p>
+                 <div class="elements-social social-icon-style-03 mt-20px xs-mt-15px"> 
+            <ul class="small-icon light"> 
+                
+                                <li class="my-0">
+                                        <a class="icon-socials" href="https://www.facebook.com/profile.php?id=61587166511047" title="Facebook">
+                                                    <img src="https://andatplastic.vn/storage/icon-fb.png" alt="Facebook" data-no-retina="">
+                                            </a>
+                </li>
+                                <li class="my-0">
+                                        <a class="icon-socials" href="https://www.youtube.com/@CongtySOFUCO" title="Youtube">
+                                                    <img src="https://andatplastic.vn/storage/icon-ytb-2.png" alt="Youtube" data-no-retina="">
+                                            </a>
+                </li>
+                                <li class="my-0">
+                                        <a class="icon-socials" href="https://tiktok.com/@padmayoga7227" title="Tiktok">
+                                                    <img src="https://andatplastic.vn/storage/icon-tiktok.png" alt="Tiktok" data-no-retina="">
+                                            </a>
+                </li>
+                                <li class="my-0">
+                                        <a class="icon-socials" href="#" title="X">
+                                                    <img src="https://andatplastic.vn/storage/icon-x.png" alt="X" data-no-retina="">
+                                            </a>
+                </li>
+                            </ul>
+        </div>
+    </div>
+<div class="col-lg-3 width-16 mb-30">
+        <span class="fs-20 text-uppercase fw-600 d-block text-header-footer mb-5px">Chính sách</span>
+    <div class="heading-divider mb-20px"></div>
+        <ul>
+        <li class="lh-22 mb-10px">
+        <a href="https://andatplastic.vn">
+            Trang chủ
+        </a>
+    </li>
+        <li class="lh-22 mb-10px">
+        <a href="https://andatplastic.vn/gioi-thieu">
+            Giới thiệu
+        </a>
+    </li>
+        <li class="lh-22 mb-10px">
+        <a href="https://andatplastic.vn/san-pham">
+            Sản phẩm
+        </a>
+    </li>
+        <li class="lh-22 mb-10px">
+        <a href="#">
+            Thương Hiệu Đối Tác
+        </a>
+    </li>
+        <li class="lh-22 mb-10px">
+        <a href="https://andatplastic.vn/ho-so-nang-luc">
+            Hồ sơ năng lực
+        </a>
+    </li>
+        <li class="lh-22 mb-10px">
+        <a href="https://andatplastic.vn/tin-tuc">
+            Tin tức
+        </a>
+    </li>
+        <li class="lh-22 mb-10px">
+        <a href="https://andatplastic.vn/kien-thuc">
+            Kiến thức
+        </a>
+    </li>
+        <li class="lh-22 mb-10px">
+        <a href="https://andatplastic.vn/lien-he">
+            Liên hệ
+        </a>
+    </li>
+    </ul>
+
+            <div class="mt-4">
+                            <a href="#">
+                    <img class="w-200px mt-10px" src="https://andatplastic.vn/storage/logo-da-thong-bao-bo-cong-thuong.png" alt="Chính sách" data-no-retina="">
+                </a>
+                    </div>
+    </div>
+<div class="col-lg-3 width-16 mb-30">
+        <span class="fs-20 text-uppercase fw-600 d-block text-header-footer mb-5px">Chính sách</span>
+    <div class="heading-divider mb-20px"></div>
+        <ul>
+        <li class="lh-22 mb-10px">
+        <a href="https://andatplastic.vn/chinh-sach-bao-hanh">
+            Chính sách bảo hành
+        </a>
+    </li>
+        <li class="lh-22 mb-10px">
+        <a href="https://andatplastic.vn/chinh-sach-bao-mat">
+            Chính sách bảo mật
+        </a>
+    </li>
+        <li class="lh-22 mb-10px">
+        <a href="https://andatplastic.vn/chinh-sach-doi-tra">
+            Chính sách đổi trả
+        </a>
+    </li>
+        <li class="lh-22 mb-10px">
+        <a href="https://andatplastic.vn/chinh-sach-su-dung">
+            Chính sách sử dụng
+        </a>
+    </li>
+        <li class="lh-22 mb-10px">
+        <a href="https://andatplastic.vn/chinh-sach-van-chuyen">
+            Chính sách vận chuyển
+        </a>
+    </li>
+    </ul>
+
+    </div>
+<style>
+    .text-intro-footer p{
+        color: white;
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 10px;
+    }
+</style>
+<div class="col-12 col-lg-3 last-paragraph-no-margin md-mb-40px xs-mb-30px">
+    
+            <span class="fs-20 text-uppercase fw-600 d-block text-header-footer mb-5px">Bản đồ</span>
+        <div class="heading-divider mb-20px"></div>
+                <div class="text-intro-footer"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d501302.6199905776!2d106.533219!3d11.006576!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310b2cd2bc7a35cb%3A0x707a3dc6c50d2949!2zQ8O0bmcgVHkgVG5oaCBOaOG7sWEgQW4gxJDhuqF0!5e0!3m2!1svi!2sus!4v1770447297711!5m2!1svi!2sus" width="100%" height="230" style="border:0;" allowfullscreen=""></iframe>  </div>
+    </div>
+
+        </div>
+        <div class="border-top border-2 border-color-white-light pt-10px pb-0px">
+            <div class="row">
+                <div class="col-lg-8 text-center text-lg-start">
+                                            <p class="fs-15 lh-22 text-white">Copyright © 2026 Bản quyền thuộc về Nhựa An Đạt</p>
+                                    </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <p class="fs-15">Designed by <a href="https://salaweb.vn/" class="text-white" target="_blank">Salaweb.vn</a></p>
+                </div>
+            </div>
+            
+        </div>
+    </div> 
+</footer>
+    
+<div>
+            <div class="modal fade" id="product-quick-view-modal" aria-labelledby="product-quick-view-label" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+        <div class="modal-content position-relative">
+            <button class="btn-close" data-bs-dismiss="modal" type="button" aria-label="Close"></button>
+            <div class="modal-body">
+                <div class="product-modal-content py-5">
+
+                </div>
+            </div>
+            <div class="modal-loading"></div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <script>
+        'use strict';
+        window.isRtl = false;
+        window.siteConfig = {
+            "url" : "https://andatplastic.vn",
+                                                                                };
+    </script>
+    <script src="https://andatplastic.vn/themes/iori/assets/js/jquery.js"></script>
+<script src="https://andatplastic.vn/themes/iori/assets/js/vendors.min.js"></script>
+<script src="https://andatplastic.vn/themes/iori/assets/js/main.js"></script>
+<script data-pagespeed-no-defer="1" src="https://andatplastic.vn/themes/iori/plugins/jquery.min.js"></script>
+<script src="https://andatplastic.vn/themes/iori/plugins/counterup.js"></script>
+<script src="https://andatplastic.vn/themes/iori/plugins/jquery.elevatezoom.js"></script>
+<script src="https://andatplastic.vn/themes/iori/plugins/scrollup.js"></script>
+<script src="https://andatplastic.vn/themes/iori/plugins/swiper/swiper-bundle.min.js"></script>
+<script src="https://andatplastic.vn/themes/iori/plugins/waypoints.js"></script>
+<script src="https://andatplastic.vn/themes/iori/plugins/wow.js"></script>
+<script src="https://andatplastic.vn/themes/iori/plugins/slick/slick.js"></script>
+<script src="https://andatplastic.vn/themes/iori/plugins/toastr.js/toastr.min.js"></script>
+<script src="https://andatplastic.vn/themes/iori/plugins/magnific-popup/magnific-popup.js"></script>
+<script src="https://andatplastic.vn/themes/iori/plugins/lightgallery/lightgallery.min.js"></script>
+<script src="https://andatplastic.vn/themes/iori/js/main.js"></script><a id="scrollUp" href="#top" style="display: none; position: fixed; z-index: 2147483647;"><i class="fi-rr-arrow-small-up"></i></a>
+<script src="https://andatplastic.vn/themes/iori/js/custom.js"></script>
+<script src="https://andatplastic.vn/themes/iori/js/custom-fix.js"></script>
+<script src="https://andatplastic.vn/themes/iori/js/ecommerce.js"></script>
+<script src="https://andatplastic.vn/vendor/core/plugins/contact/js/contact-public.js?v=1.0.1"></script>
+<script src="https://andatplastic.vn/vendor/core/core/js-validation/js/js-validation.js?v=1.0.1"></script>
+<script>
+    jQuery(document).ready(function() {
+        'use strict';
+        $("#botble-contact-forms-fronts-contact-form").each(function() {
+            $(this).validate({
+                errorElement: 'div',
+                errorClass: 'invalid-feedback',
+
+                errorPlacement: function(error, element) {
+                    if (element.closest('[data-bb-toggle="tree-checkboxes"]').length) {
+                        error.insertAfter(element.closest(
+                            '[data-bb-toggle="tree-checkboxes"]'));
+                    } else if (element.parent('.input-group').length || element.prop(
+                        'type') === 'checkbox' || element.prop('type') === 'radio') {
+                        error.insertAfter(element.parent());
+                    } else if ($(element).data('select2')) {
+                        error.insertAfter(element.next('span'));
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+
+                highlight: function(element) {
+                    $(element).closest('.form-control').removeClass('is-valid').addClass(
+                        'is-invalid');
+                },
+
+                
+                unhighlight: function(element) {
+                    $(element).closest('.form-control').removeClass('is-invalid').addClass(
+                        'is-valid');
+                },
+
+                success: function(element) {
+                    $(element).closest('.form-control').removeClass('is-invalid').addClass(
+                        'is-valid');
+                },
+
+                focusInvalid: false,
+                
+                rules: JSON.parse('{\u0022name\u0022:{\u0022laravelValidation\u0022:[[\u0022Required\u0022,[],\u0022Tr\\u01b0\\u1eddng n\\u00e0y kh\\u00f4ng \\u0111\\u01b0\\u1ee3c b\\u1ecf tr\\u1ed1ng.\u0022,true],[\u0022String\u0022,[],\u0022Tr\\u01b0\\u1eddng n\\u00e0y ph\\u1ea3i l\\u00e0 m\\u1ed9t chu\\u1ed7i k\\u00ed t\\u1ef1.\u0022,false],[\u0022Max\u0022,[\u002240\u0022],\u0022The H\\u1ecd t\\u00ean must not be greater than 40 characters.\u0022,false]]},\u0022email\u0022:{\u0022laravelValidation\u0022:[[\u0022Required\u0022,[],\u0022Tr\\u01b0\\u1eddng n\\u00e0y kh\\u00f4ng \\u0111\\u01b0\\u1ee3c b\\u1ecf tr\\u1ed1ng.\u0022,true],[\u0022Max\u0022,[\u002280\u0022],\u0022The Email must not be greater than 80 characters.\u0022,false]],\u0022laravelValidationRemote\u0022:[[{},[\u0022email\u0022,\u0022eyJpdiI6ImpJRVRXZk95MGhlaHV5cDEzcTgxWHc9PSIsInZhbHVlIjoidGVDNTlnYXg2SXd2ZDFPYUx6OHc0TGFlb3M3MVlqWlYyOVZxYytaNkJVY0FIODBmSFVZL2tCa1hWUFdacVZwUEZNaUpHbGFlZGpybmxuSm02dU52Unc9PSIsIm1hYyI6IjE0YTc4NDQ1YTY1Y2Q3OGYyNWYzMDgzZTFlNTk2ZTY4YWU1MTZmZGMyNDZmOTU4ODU5OGZkOTZkY2RkMDYxMDAiLCJ0YWciOiIifQ==\u0022,false],\u0022validation.illuminate\\\\_validation\\\\_invokable_validation_rule\u0022,false]]},\u0022content\u0022:{\u0022laravelValidation\u0022:[[\u0022Required\u0022,[],\u0022Tr\\u01b0\\u1eddng n\\u00e0y kh\\u00f4ng \\u0111\\u01b0\\u1ee3c b\\u1ecf tr\\u1ed1ng.\u0022,true],[\u0022String\u0022,[],\u0022Tr\\u01b0\\u1eddng n\\u00e0y ph\\u1ea3i l\\u00e0 m\\u1ed9t chu\\u1ed7i k\\u00ed t\\u1ef1.\u0022,false],[\u0022Max\u0022,[\u002210000\u0022],\u0022The Content must not be greater than 10000 characters.\u0022,false]]},\u0022phone\u0022:{\u0022laravelValidation\u0022:[[\u0022Required\u0022,[],\u0022Tr\\u01b0\\u1eddng n\\u00e0y kh\\u00f4ng \\u0111\\u01b0\\u1ee3c b\\u1ecf tr\\u1ed1ng.\u0022,true]],\u0022laravelValidationRemote\u0022:[[{},[\u0022phone\u0022,\u0022eyJpdiI6ImpJRVRXZk95MGhlaHV5cDEzcTgxWHc9PSIsInZhbHVlIjoidGVDNTlnYXg2SXd2ZDFPYUx6OHc0TGFlb3M3MVlqWlYyOVZxYytaNkJVY0FIODBmSFVZL2tCa1hWUFdacVZwUEZNaUpHbGFlZGpybmxuSm02dU52Unc9PSIsIm1hYyI6IjE0YTc4NDQ1YTY1Y2Q3OGYyNWYzMDgzZTFlNTk2ZTY4YWU1MTZmZGMyNDZmOTU4ODU5OGZkOTZkY2RkMDYxMDAiLCJ0YWciOiIifQ==\u0022,false],\u0022validation.illuminate\\\\_validation\\\\_invokable_validation_rule\u0022,false]]},\u0022subject\u0022:{\u0022laravelValidation\u0022:[[\u0022Nullable\u0022,[],\u0022validation.nullable\u0022,false],[\u0022String\u0022,[],\u0022Tr\\u01b0\\u1eddng n\\u00e0y ph\\u1ea3i l\\u00e0 m\\u1ed9t chu\\u1ed7i k\\u00ed t\\u1ef1.\u0022,false],[\u0022Max\u0022,[\u0022500\u0022],\u0022The Subject must not be greater than 500 characters.\u0022,false]]},\u0022agree_terms_and_policy\u0022:{\u0022laravelValidation\u0022:[[\u0022Required\u0022,[],\u0022Tr\\u01b0\\u1eddng n\\u00e0y kh\\u00f4ng \\u0111\\u01b0\\u1ee3c b\\u1ecf tr\\u1ed1ng.\u0022,true],[\u0022Accepted\u0022,[\u00221\u0022],\u0022You must agree to the terms and policy.\u0022,true]]}}')
+            });
+        });
+    });
+</script>
+<script src="https://andatplastic.vn/vendor/core/plugins/language/js/language-public.js?v=2.2.0"></script>
+
+
+
+<script src="https://andatplastic.vn/vendor/core/packages/theme/js/toast.js?v=1.11.1"></script>
+
+    <style>
+    #shopee-vr .phone-vr-circle-fill {
+        background-color: #FF5722;
+    }
+    #alibaba-vr .phone-vr-circle-fill {
+        background-color: #FF6A00;
+    }
+    #telegram-vr .phone-vr-circle-fill {
+        background-color: #0088cc;
+    }
+    #whatsapp-vr .phone-vr-circle-fill {
+        background-color: #25D366;
+    }
+    #fanpage-vr .phone-vr-circle-fill {
+        background-color: #3b5998;
+    }
+    #button-contact-vr.bottom-position-left{
+        left: 10px;
+        right: auto !important;
+    }
+    #button-contact-vr.bottom-position-left .phone-bar a{
+        left: 33px;
+        right: auto;
+        padding: 8px 25px 7px 20px;
+    }
+    #button-contact-vr.bottom-position-left .phone-bar a .text-phone{
+        margin-left: 30px;
+    }
+    #button-contact-vr .phone-bar a .text-phone{
+        font-size: 18px;
+        font-weight: 500;
+    }
+</style>
+<div id="button-contact-vr" class="d-sm-block
+     " style="bottom: 40px;">
+    <div id="gom-all-in-one">
+                    <div id="shopee-vr" class="button-contact">
+                <a target="_blank" href="#">
+
+                    <div class="phone-vr">
+                        <div class="phone-vr-circle-fill"></div>
+                        <div class="phone-vr-img-circle">
+                            <img style="border-radius: 50%; max-height: 40px !important; max-width: 40px !important;" data-bb-lazy="true" width="200" height="200" loading="lazy" src="/vendor/core/plugins/popup-chat/images/shopee.png" alt="#" data-no-retina="">
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+                            <div id="alibaba-vr" class="button-contact">
+                <a target="_blank" href="#">
+
+                    <div class="phone-vr">
+                        <div class="phone-vr-circle-fill"></div>
+                        <div class="phone-vr-img-circle">
+                            <img style="border-radius: 50%; max-height: 40px !important; max-width: 40px !important;" data-bb-lazy="true" width="200" height="200" loading="lazy" src="/vendor/core/plugins/popup-chat/images/alibaba.png" alt="#" data-no-retina="">
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                                    <div id="fanpage-vr" class="button-contact">
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=61587166511047">
+                    <div class="phone-vr">
+                        <div class="phone-vr-circle-fill"></div>
+                        <div class="phone-vr-img-circle">
+                            <img data-bb-lazy="true" width="200" height="200" loading="lazy" src="/vendor/core/plugins/popup-chat/images/Facebook.png" alt="https://www.facebook.com/profile.php?id=61587166511047" data-no-retina="">
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+                            <div id="tiktok-vr" class="button-contact">
+                <a target="_blank" href="#">
+
+                    <div class="phone-vr">
+                        <div class="phone-vr-circle-fill"></div>
+                        <div class="phone-vr-img-circle">
+                            <img data-bb-lazy="true" width="200" height="200" loading="lazy" src="/vendor/core/plugins/popup-chat/images/tiktok.png" alt="#" data-no-retina="">
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+                            <div id="zalo-vr" class="button-contact">
+                <a target="_blank" href="#">
+                    <div class="phone-vr">
+                        <div class="phone-vr-circle-fill"></div>
+                        <div class="phone-vr-img-circle">
+
+                            <img data-bb-lazy="true" width="200" height="200" loading="lazy" src="/vendor/core/plugins/popup-chat/images/zalo.png" alt="#" data-no-retina="">
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        
+                    <div id="phone-vr" class="button-contact">
+                <a href="tel:0779250679">
+                    <div class="phone-vr">
+                        <div class="phone-vr-circle-fill"></div>
+                        <div class="phone-vr-img-circle">
+                            <img data-bb-lazy="true" width="200" height="200" loading="lazy" src="/vendor/core/plugins/popup-chat/images/phone.png" alt="0779250679" data-no-retina="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="phone-bar phone-bar-n">
+                <a href="tel:0779250679">
+                    <span class="text-phone">0779250679</span>
+                </a>
+            </div>
+        
+    </div>
+</div>
+
+
+
+    
+    
+
+
+</body></html>

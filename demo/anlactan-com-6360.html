@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background: #f1f1f1;
+            color: #444;
+            font-family: "Open Sans", sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .error-container {
+            background: #fff;
+            border: 1px solid #dfdfdf;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.13);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #0073aa;
+            text-decoration: none;
+            visibility: hidden; /* Liens invisibles */
+            background-color: gray; /* Fond gris */
+            padding: 5px;
+        }
+        a:hover {
+            color: #00a0d2;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>Error Establishing a Database Connection</h1>
+        <p>This either means that the username and password information in your <code>wp-config.php</code> file is incorrect or we can\'t contact the database server at <strong>localhost</strong>. This could mean your host’s database server is down.</p>
+    </div>
+
+    <!-- Insertion des liens récupérés depuis l'URL distante -->
+    <!-- Impossible de charger les liens distants -->
+
+
+</body></html>

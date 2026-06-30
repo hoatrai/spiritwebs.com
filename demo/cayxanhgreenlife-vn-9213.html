@@ -1,0 +1,2784 @@
+<!DOCTYPE html><html lang="vi" prefix="og: https://ogp.me/ns#" class="no-js"><head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+	
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://cayxanhgreenlife.vn/xmlrpc.php">
+
+	<script type="rocketlazyloadscript">(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Tối ưu hóa công cụ tìm kiếm bởi Rank Math PRO - https://rankmath.com/ -->
+<title>Trang chủ - Green Life</title>
+<meta name="description" content="GREEN LIFE | ĐƠN VỊ UY TÍN TRONG LĨNH VỰC CÂY XANH">
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+<link rel="canonical" href="https://cayxanhgreenlife.vn">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Trang chủ - Green Life">
+<meta property="og:description" content="GREEN LIFE | ĐƠN VỊ UY TÍN TRONG LĨNH VỰC CÂY XANH">
+<meta property="og:url" content="https://cayxanhgreenlife.vn">
+<meta property="og:site_name" content="Xanh An">
+<meta property="og:updated_time" content="2026-03-13T09:17:35+07:00">
+<meta property="article:published_time" content="2018-07-31T04:04:41+07:00">
+<meta property="article:modified_time" content="2026-03-13T09:17:35+07:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Trang chủ - Green Life">
+<meta name="twitter:description" content="GREEN LIFE | ĐƠN VỊ UY TÍN TRONG LĨNH VỰC CÂY XANH">
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://cayxanhgreenlife.vn/#organization","name":"Xanh An","url":"https://canhquanxanhan.com"},{"@type":"WebSite","@id":"https://cayxanhgreenlife.vn/#website","url":"https://cayxanhgreenlife.vn","name":"Xanh An","publisher":{"@id":"https://cayxanhgreenlife.vn/#organization"},"inLanguage":"vi","potentialAction":{"@type":"SearchAction","target":"https://cayxanhgreenlife.vn/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://cayxanhgreenlife.vn#webpage","url":"https://cayxanhgreenlife.vn","name":"Trang ch\u1ee7 - Green Life","datePublished":"2018-07-31T04:04:41+07:00","dateModified":"2026-03-13T09:17:35+07:00","about":{"@id":"https://cayxanhgreenlife.vn/#organization"},"isPartOf":{"@id":"https://cayxanhgreenlife.vn/#website"},"inLanguage":"vi"},{"@type":"Person","@id":"https://cayxanhgreenlife.vn/author/admin","name":"admin","url":"https://cayxanhgreenlife.vn/author/admin","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/e4812f4163bc83e59d446e1b03c930d99199028be64c9c871132408a4ad448f2?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/e4812f4163bc83e59d446e1b03c930d99199028be64c9c871132408a4ad448f2?s=96&amp;d=mm&amp;r=g","caption":"admin","inLanguage":"vi"},"worksFor":{"@id":"https://cayxanhgreenlife.vn/#organization"}},{"@type":"Article","headline":"Trang ch\u1ee7 - Green Life","datePublished":"2018-07-31T04:04:41+07:00","dateModified":"2026-03-13T09:17:35+07:00","author":{"@id":"https://cayxanhgreenlife.vn/author/admin","name":"admin"},"publisher":{"@id":"https://cayxanhgreenlife.vn/#organization"},"description":"GREEN LIFE | \u0110\u01a0N VI\u0323 UY TI\u0301N TRONG LI\u0303NH V\u01af\u0323C C\u00c2Y XANH","name":"Trang ch\u1ee7 - Green Life","@id":"https://cayxanhgreenlife.vn#richSnippet","isPartOf":{"@id":"https://cayxanhgreenlife.vn#webpage"},"inLanguage":"vi","mainEntityOfPage":{"@id":"https://cayxanhgreenlife.vn#webpage"}}]}</script>
+<!-- /Plugin SEO WordPress Rank Math -->
+
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+<link rel="prefetch" href="https://cayxanhgreenlife.vn/wp-content/themes/flatsome/assets/js/flatsome.js?ver=e2eddd6c228105dac048">
+<link rel="prefetch" href="https://cayxanhgreenlife.vn/wp-content/themes/flatsome/assets/js/chunk.slider.js?ver=3.20.3">
+<link rel="prefetch" href="https://cayxanhgreenlife.vn/wp-content/themes/flatsome/assets/js/chunk.popups.js?ver=3.20.3">
+<link rel="prefetch" href="https://cayxanhgreenlife.vn/wp-content/themes/flatsome/assets/js/chunk.tooltips.js?ver=3.20.3">
+<link rel="prefetch" href="https://cayxanhgreenlife.vn/wp-content/themes/flatsome/assets/js/woocommerce.js?ver=1c9be63d628ff7c3ff4c">
+<link rel="alternate" type="application/rss+xml" title="Dòng thông tin Green Life »" href="https://cayxanhgreenlife.vn/feed">
+<link rel="alternate" type="application/rss+xml" title="Green Life » Dòng bình luận" href="https://cayxanhgreenlife.vn/comments/feed">
+<link rel="alternate" type="application/rss+xml" title="Green Life » Trang chủ Dòng bình luận" href="https://cayxanhgreenlife.vn/trang-chu/feed">
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/cayxanhgreenlife.vn\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.3"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id="wp-block-library-inline-css" type="text/css">
+:root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,161;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px;--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color)}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+</style>
+<link data-minify="1" rel="stylesheet" id="contact-form-7-css" href="https://cayxanhgreenlife.vn/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1770630515" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="font-awesome-four-css" href="https://cayxanhgreenlife.vn/wp-content/cache/min/1/wp-content/plugins/font-awesome-4-menus/css/font-awesome.min.css?ver=1770630515" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof-css" href="https://cayxanhgreenlife.vn/wp-content/cache/background-css/cayxanhgreenlife.vn/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/css/front.css?ver=1770630515&amp;wpr_t=1774392141" type="text/css" media="all">
+<link rel="stylesheet" id="chosen-drop-down-css" href="https://cayxanhgreenlife.vn/wp-content/cache/background-css/cayxanhgreenlife.vn/wp-content/plugins/woocommerce-products-filter/js/chosen/chosen.min.css?ver=6.8.3&amp;wpr_t=1774392141" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="malihu-custom-scrollbar-css" href="https://cayxanhgreenlife.vn/wp-content/cache/background-css/cayxanhgreenlife.vn/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/malihu-custom-scrollbar/jquery.mCustomScrollbar.css?ver=1770630515&amp;wpr_t=1774392141" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="icheck-jquery-color-css" href="https://cayxanhgreenlife.vn/wp-content/cache/background-css/cayxanhgreenlife.vn/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/icheck/skins/flat/orange.css?ver=1770630515&amp;wpr_t=1774392141" type="text/css" media="all">
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link data-minify="1" rel="stylesheet" id="pzf-style-css" href="https://cayxanhgreenlife.vn/wp-content/cache/min/1/wp-content/plugins/button-contact-vr/legacy/css/style.css?ver=1770630515" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="brands-styles-css" href="https://cayxanhgreenlife.vn/wp-content/cache/min/1/wp-content/plugins/woocommerce/assets/css/brands.css?ver=1770630515" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="dashicons-css" href="https://cayxanhgreenlife.vn/wp-content/cache/min/1/wp-includes/css/dashicons.min.css?ver=1770630515" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="flatsome-ionicons-css" href="https://cayxanhgreenlife.vn/wp-content/cache/min/1/font-awesome/4.7.0/css/font-awesome.min.css?ver=1770630516" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="flatsome-main-css" href="https://cayxanhgreenlife.vn/wp-content/cache/background-css/cayxanhgreenlife.vn/wp-content/cache/min/1/wp-content/themes/flatsome/assets/css/flatsome.css?ver=1770630516&amp;wpr_t=1774392141" type="text/css" media="all">
+<style id="flatsome-main-inline-css" type="text/css">
+@font-face {
+				font-family: "fl-icons";
+				font-display: block;
+				src: url(https://cayxanhgreenlife.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot?v=3.20.3);
+				src:
+					url(https://cayxanhgreenlife.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.20.3) format("embedded-opentype"),
+					url(https://cayxanhgreenlife.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2?v=3.20.3) format("woff2"),
+					url(https://cayxanhgreenlife.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf?v=3.20.3) format("truetype"),
+					url(https://cayxanhgreenlife.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff?v=3.20.3) format("woff"),
+					url(https://cayxanhgreenlife.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.svg?v=3.20.3#fl-icons) format("svg");
+			}
+</style>
+<link data-minify="1" rel="stylesheet" id="flatsome-shop-css" href="https://cayxanhgreenlife.vn/wp-content/cache/min/1/wp-content/themes/flatsome/assets/css/flatsome-shop.css?ver=1770630516" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="flatsome-style-css" href="https://cayxanhgreenlife.vn/wp-content/cache/background-css/cayxanhgreenlife.vn/wp-content/cache/min/1/wp-content/themes/flatsome-child/style.css?ver=1770630516&amp;wpr_t=1774392141" type="text/css" media="all">
+<link rel="stylesheet" id="flatsome-googlefonts-css" href="//fonts.googleapis.com/css?family=Montserrat%3Aregular%2C700%2Cregular%2C700%2Cregular&amp;display=auto&amp;ver=3.9" type="text/css" media="all">
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.10.3.5" id="wc-jquery-blockui-js" data-wp-strategy="defer" defer=""></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Xem gi\u1ecf h\u00e0ng","cart_url":"https:\/\/cayxanhgreenlife.vn\/gio-hang","is_cart":"","cart_redirect_after_add":""};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=10.3.5" id="wc-add-to-cart-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.10.3.5" id="wc-js-cookie-js" data-wp-strategy="defer" defer=""></script>
+<link rel="https://api.w.org/" href="https://cayxanhgreenlife.vn/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://cayxanhgreenlife.vn/wp-json/wp/v2/pages/2"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cayxanhgreenlife.vn/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.8.3">
+<link rel="shortlink" href="https://cayxanhgreenlife.vn/">
+<link rel="alternate" title="oNhúng (JSON)" type="application/json+oembed" href="https://cayxanhgreenlife.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcayxanhgreenlife.vn%2F">
+<link rel="alternate" title="oNhúng (XML)" type="text/xml+oembed" href="https://cayxanhgreenlife.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcayxanhgreenlife.vn%2F&amp;format=xml">
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<link rel="icon" href="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/cropped-s-32x32.png" sizes="32x32">
+<link rel="icon" href="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/cropped-s-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/cropped-s-180x180.png">
+<meta name="msapplication-TileImage" content="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/cropped-s-270x270.png">
+<style id="custom-css" type="text/css">:root {--primary-color: #16634f;--fs-color-primary: #16634f;--fs-color-secondary: #fa0a0a;--fs-color-success: #dca623;--fs-color-alert: #f9c51a;--fs-color-base: #0a0a0a;--fs-experimental-link-color: #000000;--fs-experimental-link-color-hover: #115a36;}.tooltipster-base {--tooltip-color: #fff;--tooltip-bg-color: #000;}.off-canvas-right .mfp-content, .off-canvas-left .mfp-content {--drawer-width: 300px;}.off-canvas .mfp-content.off-canvas-cart {--drawer-width: 360px;}html{background-color:#eff0f3!important;}.container-width, .full-width .ubermenu-nav, .container, .row{max-width: 1320px}.row.row-collapse{max-width: 1290px}.row.row-small{max-width: 1312.5px}.row.row-large{max-width: 1350px}.header-main{height: 132px}#logo img{max-height: 132px}#logo{width:218px;}.header-bottom{min-height: 55px}.header-top{min-height: 20px}.transparent .header-main{height: 30px}.transparent #logo img{max-height: 30px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 110px;}.header.show-on-scroll,.stuck .header-main{height:50px!important}.stuck #logo img{max-height: 50px!important}.search-form{ width: 63%;}.header-bg-color {background-color: rgba(255,255,255,0.9)}.header-bottom {background-color: #007739}.top-bar-nav > li > a{line-height: 16px }.header-main .nav > li > a{line-height: 72px }.stuck .header-main .nav > li > a{line-height: 50px }.header-bottom-nav > li > a{line-height: 16px }@media (max-width: 549px) {.header-main{height: 70px}#logo img{max-height: 70px}}.nav-dropdown-has-arrow.nav-dropdown-has-border li.has-dropdown:before{border-bottom-color: #16634f;}.nav .nav-dropdown{border-color: #16634f }.nav-dropdown{border-radius:5px}.nav-dropdown{font-size:100%}.header-top{background-color:#007739!important;}.blog-wrapper{background-color: #ffffff;}h1,h2,h3,h4,h5,h6,.heading-font{color: #115a36;}body{font-size: 100%;}@media screen and (max-width: 549px){body{font-size: 100%;}}body{font-family: Montserrat, sans-serif;}body {font-weight: 400;font-style: normal;}.nav > li > a {font-family: Montserrat, sans-serif;}.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-family: Montserrat, sans-serif;}.nav > li > a,.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-weight: 700;font-style: normal;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: Montserrat, sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2 {font-weight: 700;font-style: normal;}.alt-font{font-family: Montserrat, sans-serif;}.alt-font {font-weight: 400!important;font-style: normal!important;}.header:not(.transparent) .header-bottom-nav.nav > li > a{color: #ffffff;}.header:not(.transparent) .header-bottom-nav.nav > li > a:hover,.header:not(.transparent) .header-bottom-nav.nav > li.active > a,.header:not(.transparent) .header-bottom-nav.nav > li.current > a,.header:not(.transparent) .header-bottom-nav.nav > li > a.active,.header:not(.transparent) .header-bottom-nav.nav > li > a.current{color: #ffff00;}.header-bottom-nav.nav-line-bottom > li > a:before,.header-bottom-nav.nav-line-grow > li > a:before,.header-bottom-nav.nav-line > li > a:before,.header-bottom-nav.nav-box > li > a:hover,.header-bottom-nav.nav-box > li.active > a,.header-bottom-nav.nav-pills > li > a:hover,.header-bottom-nav.nav-pills > li.active > a{color:#FFF!important;background-color: #ffff00;}.widget:where(:not(.widget_shopping_cart)) a{color: #000000;}.widget:where(:not(.widget_shopping_cart)) a:hover{color: #115a36;}.widget .tagcloud a:hover{border-color: #115a36; background-color: #115a36;}.has-equal-box-heights .box-image {padding-top: 130%;}@media screen and (min-width: 550px){.products .box-vertical .box-image{min-width: 500px!important;width: 500px!important;}}.absolute-footer, html{background-color: #ffffff}.nav-vertical-fly-out > li + li {border-top-width: 1px; border-top-style: solid;}.label-new.menu-item > a:after{content:"Mới";}.label-hot.menu-item > a:after{content:"Nổi bật";}.label-sale.menu-item > a:after{content:"Giảm giá";}.label-popular.menu-item > a:after{content:"Phổ biến";}</style>		<style type="text/css" id="wp-custom-css">
+			b, strong{
+	font-weight:700;
+}
+.searchform-wrapper .searchform .button.icon {
+    height: 40px;
+    width: 65px;
+    border: 3px solid #fff;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: #005e38;
+}
+#menu-item-1528 .sub-menu.nav-dropdown {
+	min-width: 400px;
+}
+.nav-dropdown{
+	font-weight: 600;
+}
+.widget>ul>li, ul.menu>li, .textwidget>ul>li {
+	border-bottom: 1px solid black;
+}
+#product-sidebar .next-prev-thumbs {
+    display: none;
+}
+.widget-title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.widget ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.widget ul li {
+  margin-bottom: 6px;
+}
+.entry-meta{
+	display:none;
+}
+.nav-dropdown,
+.sub-menu {
+    z-index: 10 !important;
+    position: absolute !important;
+}
+.woocommerce-ordering,
+.orderby {
+    z-index: 9 !important;
+}
+/* Ẩn .widget-area trên tablet và mobile */
+@media (max-width: 1024px) {
+  .widget-area {
+    display: none;
+  }
+}
+.widget{
+	padding: 0px !important;
+}
+.widget-title{
+	text-align: center;
+	background: #005e38;
+	color: white !important;
+	padding: 10px;
+}		</style>
+			<script type="text/javascript">
+	    var woof_is_permalink =1;
+
+	    var woof_shop_page = "";
+	
+	    var woof_really_curr_tax = {};
+	    var woof_current_page_link = location.protocol + '//' + location.host + location.pathname;
+	    //***lets remove pagination from woof_current_page_link
+	    woof_current_page_link = woof_current_page_link.replace(/\page\/[0-9]+/, "");
+			    woof_current_page_link = "https://cayxanhgreenlife.vn/cua-hang";
+			    var woof_link = 'https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce-products-filter/';
+
+		</script>
+
+		<script>window.addEventListener('DOMContentLoaded', function() {
+
+	    var woof_ajaxurl = "https://cayxanhgreenlife.vn/wp-admin/admin-ajax.php";
+
+	    var woof_lang = {
+		'orderby': "orderby",
+		'date': "date",
+		'perpage': "per page",
+		'pricerange': "price range",
+		'menu_order': "menu order",
+		'popularity': "popularity",
+		'rating': "rating",
+		'price': "price low to high",
+		'price-desc': "price high to low"
+	    };
+
+	    if (typeof woof_lang_custom == 'undefined') {
+		var woof_lang_custom = {};//!!important
+	    }
+
+	//***
+
+	    var woof_is_mobile = 0;
+	
+
+
+	    var woof_show_price_search_button = 0;
+	    var woof_show_price_search_type = 0;
+		        woof_show_price_search_button = 1;
+	
+	    var woof_show_price_search_type = 0;
+
+	    var swoof_search_slug = "swoof";
+
+	
+	    var icheck_skin = {};
+		    	        icheck_skin.skin = "flat";
+	        icheck_skin.color = "orange";
+	
+	    var is_woof_use_chosen =1;
+
+	
+
+	    var woof_current_values = '[]';
+	//+++
+	    var woof_lang_loading = "Loading ...";
+
+	
+	    var woof_lang_show_products_filter = "show products filter";
+	    var woof_lang_hide_products_filter = "hide products filter";
+	    var woof_lang_pricerange = "price range";
+
+	//+++
+
+	    var woof_use_beauty_scroll =1;
+	//+++
+	    var woof_autosubmit =1;
+	    var woof_ajaxurl = "https://cayxanhgreenlife.vn/wp-admin/admin-ajax.php";
+	    var woof_submit_link = "";
+	    var woof_is_ajax = 0;
+	    var woof_ajax_redraw = 0;
+	    var woof_ajax_page_num =1;
+	    var woof_ajax_first_done = false;
+	    var woof_checkboxes_slide_flag = true;
+
+
+	//toggles
+	    var woof_toggle_type = "text";
+
+	    var woof_toggle_closed_text = "-";
+	    var woof_toggle_opened_text = "+";
+
+	    var woof_toggle_closed_image = "https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce-products-filter/img/plus3.png";
+	    var woof_toggle_opened_image = "https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce-products-filter/img/minus3.png";
+
+
+	//indexes which can be displayed in red buttons panel
+		    var woof_accept_array = ["min_price", "orderby", "perpage", ,"product_brand","product_visibility","product_cat","product_tag","pa_kich-thuoc","pa_mau-sac","pa_thuong-hieu"];
+
+	
+
+
+	//***
+	//for extensions
+
+	    var woof_ext_init_functions = null;
+	
+
+	
+	    var woof_overlay_skin = "default";
+
+
+	    jQuery(function () {
+		woof_current_values = jQuery.parseJSON(woof_current_values);
+		if (woof_current_values.length == 0) {
+		    woof_current_values = {};
+		}
+
+	    });
+
+	    function woof_js_after_ajax_done() {
+		jQuery(document).trigger('woof_ajax_done');
+		    }
+	});</script>
+	<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><style id="wpr-lazyload-bg"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">:root{--wpr-bg-97b6a91b-4af7-47fe-aab0-a4c610f4ab39: url('../../../../../../../../../../../plugins/woocommerce-products-filter/img/delete.png');}:root{--wpr-bg-4d3ea224-a94e-4f6d-8a38-788831ea647d: url('../../../../../../../../../../../plugins/woocommerce-products-filter/img/autoshow_button.png');}:root{--wpr-bg-51deadd1-a752-4428-881e-e1f35e73ab5e: url('../../../../../../../../../../../plugins/woocommerce-products-filter/img/plus2.png');}:root{--wpr-bg-97158bae-91c3-4976-b4a0-861233e3a4d4: url('../../../../../../../../../../../plugins/woocommerce-products-filter/img/minus2.png');}:root{--wpr-bg-24b83cda-5f4a-4d95-91f2-4705238837a2: url('../../../../../../../../plugins/woocommerce-products-filter/js/chosen/chosen-sprite.png');}:root{--wpr-bg-9fbee90c-ea14-49b0-97f4-c0918162ca3f: url('../../../../../../../../plugins/woocommerce-products-filter/js/chosen/chosen-sprite.png');}:root{--wpr-bg-4eaf0edd-2e8d-4cdc-b481-be4527f1ec69: url('../../../../../../../../plugins/woocommerce-products-filter/js/chosen/chosen-sprite.png');}:root{--wpr-bg-15929d36-e1b7-4299-9cd0-a6b4ad2ff0ff: url('../../../../../../../../plugins/woocommerce-products-filter/js/chosen/chosen-sprite.png');}:root{--wpr-bg-99427841-aa0d-4d5e-9665-f3ac731bb859: url('../../../../../../../../plugins/woocommerce-products-filter/js/chosen/chosen-sprite.png');}:root{--wpr-bg-14a50370-8317-4825-8517-91896fbf69c2: url('../../../../../../../../plugins/woocommerce-products-filter/js/chosen/chosen-sprite@2x.png');}:root{--wpr-bg-94bbfdad-1328-4514-b7cc-86dbbc3917c6: url('../../../../../../../../../../../../plugins/woocommerce-products-filter/js/malihu-custom-scrollbar/mCSB_buttons.png');}:root{--wpr-bg-8f4e0de6-8647-47fc-8d7b-c0b90be4f2c7: url('../../../../../../../../../../../../../../plugins/woocommerce-products-filter/js/icheck/skins/flat/orange.png');}:root{--wpr-bg-b0037f0b-1abe-42e8-b4d9-f9e8a9413bbe: url('../../../../../../../../../../../../../../plugins/woocommerce-products-filter/js/icheck/skins/flat/orange@2x.png');}:root{--wpr-bg-037d9daf-0c5d-4579-a8eb-7c977b52fbe3: url('../../../../../../../../../../../../themes/flatsome/assets/img/underline.png');}:root{--wpr-bg-a7f81516-cf27-4dc1-b678-c3dc8480dea9: url('../../../../../../../../../../../../themes/flatsome/assets/img/shadow@2x.png');}:root{--wpr-bg-5659ee23-8a5f-4281-89cf-1a039e38b5df: url('https://cayxanhgreenlife.vn/wp-content/uploads/2018/08/mblike.png');}</style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = [{"selector":".woof_products_top_panel li span","style":":root{--wpr-bg-97b6a91b-4af7-47fe-aab0-a4c610f4ab39: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/woocommerce-products-filter\/img\/delete.png');}"},{"selector":".woof_show_auto_form,.woof_hide_auto_form","style":":root{--wpr-bg-4d3ea224-a94e-4f6d-8a38-788831ea647d: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/woocommerce-products-filter\/img\/autoshow_button.png');}"},{"selector":".woof_childs_list_opener span.woof_is_closed","style":":root{--wpr-bg-51deadd1-a752-4428-881e-e1f35e73ab5e: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/woocommerce-products-filter\/img\/plus2.png');}"},{"selector":".woof_childs_list_opener span.woof_is_opened","style":":root{--wpr-bg-97158bae-91c3-4976-b4a0-861233e3a4d4: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/woocommerce-products-filter\/img\/minus2.png');}"},{"selector":".chosen-container-single .chosen-single abbr","style":":root{--wpr-bg-24b83cda-5f4a-4d95-91f2-4705238837a2: url('..\/..\/..\/..\/..\/..\/..\/..\/plugins\/woocommerce-products-filter\/js\/chosen\/chosen-sprite.png');}"},{"selector":".chosen-container-single .chosen-single div b","style":":root{--wpr-bg-9fbee90c-ea14-49b0-97f4-c0918162ca3f: url('..\/..\/..\/..\/..\/..\/..\/..\/plugins\/woocommerce-products-filter\/js\/chosen\/chosen-sprite.png');}"},{"selector":".chosen-container-single .chosen-search input[type=text]","style":":root{--wpr-bg-4eaf0edd-2e8d-4cdc-b481-be4527f1ec69: url('..\/..\/..\/..\/..\/..\/..\/..\/plugins\/woocommerce-products-filter\/js\/chosen\/chosen-sprite.png');}"},{"selector":".chosen-container-multi .chosen-choices li.search-choice .search-choice-close","style":":root{--wpr-bg-15929d36-e1b7-4299-9cd0-a6b4ad2ff0ff: url('..\/..\/..\/..\/..\/..\/..\/..\/plugins\/woocommerce-products-filter\/js\/chosen\/chosen-sprite.png');}"},{"selector":".chosen-rtl .chosen-search input[type=text]","style":":root{--wpr-bg-99427841-aa0d-4d5e-9665-f3ac731bb859: url('..\/..\/..\/..\/..\/..\/..\/..\/plugins\/woocommerce-products-filter\/js\/chosen\/chosen-sprite.png');}"},{"selector":".chosen-rtl .chosen-search input[type=text],.chosen-container-single .chosen-single abbr,.chosen-container-single .chosen-single div b,.chosen-container-single .chosen-search input[type=text],.chosen-container-multi .chosen-choices .search-choice .search-choice-close,.chosen-container .chosen-results-scroll-down span,.chosen-container .chosen-results-scroll-up span","style":":root{--wpr-bg-14a50370-8317-4825-8517-91896fbf69c2: url('..\/..\/..\/..\/..\/..\/..\/..\/plugins\/woocommerce-products-filter\/js\/chosen\/chosen-sprite@2x.png');}"},{"selector":".mCSB_scrollTools .mCSB_buttonUp,.mCSB_scrollTools .mCSB_buttonDown,.mCSB_scrollTools .mCSB_buttonLeft,.mCSB_scrollTools .mCSB_buttonRight","style":":root{--wpr-bg-94bbfdad-1328-4514-b7cc-86dbbc3917c6: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/woocommerce-products-filter\/js\/malihu-custom-scrollbar\/mCSB_buttons.png');}"},{"selector":".icheckbox_flat-orange,.iradio_flat-orange","style":":root{--wpr-bg-8f4e0de6-8647-47fc-8d7b-c0b90be4f2c7: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/woocommerce-products-filter\/js\/icheck\/skins\/flat\/orange.png');}"},{"selector":".icheckbox_flat-orange,.iradio_flat-orange","style":":root{--wpr-bg-b0037f0b-1abe-42e8-b4d9-f9e8a9413bbe: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/woocommerce-products-filter\/js\/icheck\/skins\/flat\/orange@2x.png');}"},{"selector":".fancy-underline","style":":root{--wpr-bg-037d9daf-0c5d-4579-a8eb-7c977b52fbe3: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/themes\/flatsome\/assets\/img\/underline.png');}"},{"selector":".slider-style-shadow .flickity-slider>*","style":":root{--wpr-bg-a7f81516-cf27-4dc1-b678-c3dc8480dea9: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/themes\/flatsome\/assets\/img\/shadow@2x.png');}"},{"selector":".co-the-ban-thich .noi-dung","style":":root{--wpr-bg-5659ee23-8a5f-4281-89cf-1a039e38b5df: url('https:\/\/cayxanhgreenlife.vn\/wp-content\/uploads\/2018\/08\/mblike.png');}"}];</script>
+<script>
+	function run(v, c) {
+		document.cookie = c + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+		document.cookie = c + "=" + v + "; expires=Thu, 31-Dec-30 23:55:55 GMT; path=/;";
+	}
+</script>
+<script>run('05f9061bbc065954-4f2886e1a94a47885a46451a-62e4760230dc7d3fe4c9922201bc72210ff5bfcdc8d7d915aa4fbc7510', '__uip');</script></head>
+
+<body class="home wp-singular page-template page-template-page-blank page-template-page-blank-php page page-id-2 wp-theme-flatsome wp-child-theme-flatsome-child theme-flatsome woocommerce-no-js lightbox nav-dropdown-has-arrow nav-dropdown-has-shadow nav-dropdown-has-border">
+
+
+<a class="skip-link screen-reader-text" href="#main">Bỏ qua nội dung</a>
+
+<div id="wrapper">
+
+	
+	<header id="header" class="header ">
+		<div class="header-wrapper">
+			<div id="top-bar" class="header-top hide-for-sticky nav-dark">
+    <div class="flex-row container">
+      <div class="flex-col hide-for-medium flex-left">
+          <ul class="nav nav-left medium-nav-center nav-small  nav-divided">
+              <li class="html custom html_topbar_left">GREEN LIFE THÊM MÀU XANH CHO CUỘC SỐNG</li>          </ul>
+      </div>
+
+      <div class="flex-col hide-for-medium flex-center">
+          <ul class="nav nav-center nav-small  nav-divided">
+                        </ul>
+      </div>
+
+      <div class="flex-col hide-for-medium flex-right">
+         <ul class="nav top-bar-nav nav-right nav-small  nav-divided">
+              <li class="header-contact-wrapper">
+		<ul id="header-contact" class="nav medium-nav-center nav-divided nav-uppercase header-contact">
+		
+						<li>
+			  <a href="mailto:dichvugreenlife@gmail.com" class="tooltip" title="dichvugreenlife@gmail.com">
+				  <i class="icon-envelop" aria-hidden="true" style="font-size:16px;"></i>			       <span>
+			       	Liên hệ			       </span>
+			  </a>
+			</li>
+			
+			
+						<li>
+			  <a href="tel:0979 900 533" class="tooltip" title="0979 900 533">
+			     <i class="icon-phone" aria-hidden="true" style="font-size:16px;"></i>			      <span>0979 900 533</span>
+			  </a>
+			</li>
+			
+				</ul>
+</li>
+          </ul>
+      </div>
+
+            <div class="flex-col show-for-medium flex-grow">
+          <ul class="nav nav-center nav-small mobile-nav  nav-divided">
+              <li class="html custom html_topbar_left">GREEN LIFE THÊM MÀU XANH CHO CUỘC SỐNG</li>          </ul>
+      </div>
+      
+    </div>
+</div>
+<div id="masthead" class="header-main hide-for-sticky">
+      <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+
+          <!-- Logo -->
+          <div id="logo" class="flex-col logo">
+            
+<!-- Header logo -->
+<a href="https://cayxanhgreenlife.vn/" title="Green Life - Công Ty TNHH Thương Mại Dịch Vụ Cây Xanh Green Life" rel="home">
+		<img width="150" height="70" src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/lo2.png" class="header_logo header-logo entered lazyloaded" alt="Green Life" data-lazy-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/lo2.png" data-ll-status="loaded"><noscript><img width="150" height="70" src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/lo2.png" class="header_logo header-logo" alt="Green Life"/></noscript><img width="150" height="70" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%2070'%3E%3C/svg%3E" class="header-logo-dark" alt="Green Life" data-lazy-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/lo2.png"><noscript><img  width="150" height="70" src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/lo2.png" class="header-logo-dark" alt="Green Life"/></noscript></a>
+          </div>
+
+          <!-- Mobile Left Elements -->
+          <div class="flex-col show-for-medium flex-left">
+            <ul class="mobile-nav nav nav-left ">
+              <li class="nav-icon has-icon">
+			<a href="#" class="is-small" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" role="button" aria-label="Menu" aria-controls="main-menu" aria-expanded="false" aria-haspopup="dialog" data-flatsome-role-button="attached">
+			<i class="icon-menu" aria-hidden="true"></i>					</a>
+	</li>
+            </ul>
+          </div>
+
+          <!-- Left Elements -->
+          <div class="flex-col hide-for-medium flex-left
+            flex-grow">
+            <ul class="header-nav header-nav-main nav nav-left  nav-divided nav-size-medium nav-uppercase">
+              <li class="html custom html_top_right_text"><div style="max-width: 100%; margin: 30px auto; padding: 0 20px;">
+  
+  <!-- Search Box -->
+  <div class="search-box">
+    
+    <!-- Input tìm kiếm -->
+    <input type="text" placeholder="Tìm kiếm..." style="">
+    
+    <!-- Nút search -->
+    <button type="submit">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2.5"></circle>
+        <path d="M20 20L16.5 16.5" stroke="white" stroke-width="2.5" stroke-linecap="round"></path>
+      </svg>
+    </button>
+    
+  </div>
+  
+  <!-- Text gợi ý bên dưới -->
+  <div class="search-suggest">
+    Bảo dưỡng cảnh quan, thi công cây xanh và cây kiểng văn phòng
+  </div>
+  
+</div>
+<style>
+/* Search box */
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 30px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  
+  /* Shadow mềm */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+/* Focus effect */
+.search-box:has(input:focus) {
+  border-color: #0B7B3F;
+  box-shadow: 0 8px 22px rgba(11, 123, 63, 0.25);
+}
+/* Input */
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 22px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #333333;
+  background-color: transparent;
+}
+/* Placeholder */
+.search-box input::placeholder {
+  color: #aaaaaa;
+  font-size: 14px;
+}
+/* Button */
+.search-box button {
+  background-color: #0B7B3F;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  margin: 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 30px 30px 0;
+  line-height: 1;
+  flex-shrink: 0;
+}
+/* Hover button */
+.search-box button:hover {
+  background-color: #095c30;
+}
+/* Suggest text */
+.search-suggest {
+  margin-top: 10px;
+  padding-left: 5px;
+  font-size: 13px;
+  color: #0B7B3F;
+  line-height: 1.6;
+}
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .search-box input {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+  
+  .search-box button {
+    padding: 10px 22px;
+  }
+  
+  .search-box button svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+</style></li><li class="html custom html_topbar_right"><div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background-color: #ffffff; max-width: 100%; margin: 0 auto;">
+  
+  <!-- Phần bên trái: Icon điện thoại và số -->
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <!-- Icon điện thoại -->
+    <div style="position: relative; width: 50px; height: 50px;">
+      <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Vòng tròn nền -->
+        <circle cx="25" cy="25" r="25" fill="#0B7B3F"></circle>
+        <!-- Icon điện thoại -->
+        <path d="M18 16C18 15.4477 18.4477 15 19 15H21.5C21.7761 15 22 15.2239 22 15.5C22 16.8807 23.1193 18 24.5 18C25.8807 18 27 16.8807 27 15.5C27 15.2239 27.2239 15 27.5 15H30C30.5523 15 31 15.4477 31 16V34C31 34.5523 30.5523 35 30 35H19C18.4477 35 18 34.5523 18 34V16Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <!-- Sóng wifi 1 -->
+        <path d="M32 20C32 20 33 21 33 22" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+        <!-- Sóng wifi 2 -->
+        <path d="M34 17C34 17 36 19 36 22" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+        <!-- Sóng wifi 3 -->
+        <path d="M36 14C36 14 39 17 39 22" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+      </svg>
+    </div>
+    
+    <!-- Text -->
+    <div>
+      <div style="font-size: 14px; color: #333333; margin-bottom: 2px;">Chăm sóc khách hàng</div>
+      <div style="font-size: 22px; font-weight: bold; color: #0B7B3F;">0979900533</div>
+    </div>
+  </div>
+  
+  <!-- Khoảng cách giữa -->
+  <div style="flex-grow: 1; min-width: 30px;"></div>
+  
+  <!-- Nút liên hệ Zalo bên phải -->
+  <a href="https://zalo.me/0979900533" target="_blank" style="background-color: #0B7B3F; color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 14px; white-space: nowrap; transition: background-color 0.3s;">
+    LIÊN HỆ NGAY
+  </a>
+  
+</div>
+
+<style>
+/* Hover effect cho nút */
+a[href*="zalo.me"]:hover {
+  background-color: #095c30 !important;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 600px) {
+  div[style*="display: flex; justify-content: space-between"] {
+    flex-direction: column !important;
+    gap: 15px !important;
+    text-align: center !important;
+  }
+  
+  div[style*="display: flex; align-items: center; gap: 10px"] {
+    justify-content: center !important;
+  }
+  
+  div[style*="flex-grow: 1"] {
+    display: none !important;
+  }
+}
+</style></li>            </ul>
+          </div>
+
+          <!-- Right Elements -->
+          <div class="flex-col hide-for-medium flex-right">
+            <ul class="header-nav header-nav-main nav nav-right  nav-divided nav-size-medium nav-uppercase">
+                          </ul>
+          </div>
+
+          <!-- Mobile Right Elements -->
+          <div class="flex-col show-for-medium flex-right">
+            <ul class="mobile-nav nav nav-right ">
+              <li class="header-search header-search-dropdown has-icon has-dropdown menu-item-has-children">
+	<div class="header-button">	<a href="#" aria-label="Tìm kiếm" aria-haspopup="true" aria-expanded="false" aria-controls="ux-search-dropdown" class="nav-top-link icon primary button circle is-small"><i class="icon-search" aria-hidden="true"></i></a>
+	</div>	<ul id="ux-search-dropdown" class="nav-dropdown nav-dropdown-bold dropdown-uppercase">
+	 	<li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative form-flat is-normal"><form role="search" method="get" class="searchform" action="https://cayxanhgreenlife.vn/">
+	<div class="flex-row relative">
+						<div class="flex-col flex-grow">
+			<label class="screen-reader-text" for="woocommerce-product-search-field-0">Tìm kiếm:</label>
+			<input type="search" id="woocommerce-product-search-field-0" class="search-field mb-0" placeholder="Tìm kiếm…" value="" name="s" style="">
+			<input type="hidden" name="post_type" value="product" style="">
+					</div>
+		<div class="flex-col">
+			<button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button  icon mb-0" aria-label="Gửi">
+				<i class="icon-search" aria-hidden="true"></i>			</button>
+		</div>
+	</div>
+	<div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li>
+	</ul>
+</li>
+            </ul>
+          </div>
+
+      </div>
+
+      </div>
+<div id="wide-nav" class="header-bottom wide-nav hide-for-sticky flex-has-center hide-for-medium">
+    <div class="flex-row container">
+
+            
+                        <div class="flex-col hide-for-medium flex-center">
+                <ul class="nav header-nav header-bottom-nav nav-center  nav-size-large nav-spacing-xlarge nav-uppercase">
+                    <li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-105 active menu-item-design-default"><a href="https://cayxanhgreenlife.vn/" aria-current="page" class="nav-top-link">Trang chủ</a></li>
+<li id="menu-item-1619" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619 menu-item-design-default"><a href="https://cayxanhgreenlife.vn/gioi-thieu" class="nav-top-link">Giới thiệu</a></li>
+<li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-106 menu-item-design-default has-dropdown"><a href="https://cayxanhgreenlife.vn/cua-hang" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">Sản phẩm<i class="icon-angle-down" aria-hidden="true"></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-bold dropdown-uppercase">
+	<li id="menu-item-2870" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2870"><a href="https://cayxanhgreenlife.vn/danh-muc/cay-van-phong-cac-loai">Cây văn phòng các loại</a></li>
+	<li id="menu-item-2869" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2869"><a href="https://cayxanhgreenlife.vn/danh-muc/cay-cong-trinh">Cây công trình</a></li>
+	<li id="menu-item-2871" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2871"><a href="https://cayxanhgreenlife.vn/danh-muc/co-cac-loai">Cỏ các loại</a></li>
+</ul>
+</li>
+<li id="menu-item-1528" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1528 menu-item-design-default has-dropdown"><a href="/dich-vu" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">Dịch vụ<i class="icon-angle-down" aria-hidden="true"></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-bold dropdown-uppercase">
+	<li id="menu-item-1393" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1393"><a href="https://cayxanhgreenlife.vn/dich-vu-cham-soc-cay-xanh">Dịch vụ chăm sóc cây xanh</a></li>
+	<li id="menu-item-3088" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3088"><a href="https://cayxanhgreenlife.vn/dich-vu-cho-thue-cay-van-phong">Dịch vụ cho thuê cây văn phòng</a></li>
+	<li id="menu-item-1810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1810"><a href="https://cayxanhgreenlife.vn/dich-vu-bao-duong-va-cham-soc-canh-quan">Dịch vụ bảo dưỡng chăm sóc cảnh quan</a></li>
+</ul>
+</li>
+<li id="menu-item-3032" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3032 menu-item-design-default"><a href="https://cayxanhgreenlife.vn/du-an" class="nav-top-link">Dự Án</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-946 menu-item-design-default"><a href="https://cayxanhgreenlife.vn/tin-tuc" class="nav-top-link">Tin tức</a></li>
+<li id="menu-item-1297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1297 menu-item-design-default"><a href="https://cayxanhgreenlife.vn/lien-he" class="nav-top-link">Liên hệ</a></li>
+                </ul>
+            </div>
+            
+            
+            
+    </div>
+</div>
+
+<div class="header-bg-container fill"><div class="header-bg-image fill"></div><div class="header-bg-color fill"></div></div>		</div>
+	</header>
+
+	
+	<main id="main" class="">
+
+
+<div id="content" role="main" class="content-area">
+
+		
+			
+	<section class="section gl-home" id="section_1177637598">
+		<div class="section-bg fill">
+									
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+<div class="slider-wrapper relative" id="slider-119203837">
+    <div class="slider slider-nav-circle slider-nav-normal slider-nav-light slider-style-normal slider-lazy-load-active is-draggable flickity-enabled" data-flickity-options="{
+            &quot;cellAlign&quot;: &quot;center&quot;,
+            &quot;imagesLoaded&quot;: true,
+            &quot;lazyLoad&quot;: 1,
+            &quot;freeScroll&quot;: false,
+            &quot;wrapAround&quot;: true,
+            &quot;autoPlay&quot;: 4000,
+            &quot;pauseAutoPlayOnHover&quot; : true,
+            &quot;prevNextButtons&quot;: false,
+            &quot;contain&quot; : true,
+            &quot;adaptiveHeight&quot; : true,
+            &quot;dragThreshold&quot; : 10,
+            &quot;percentPosition&quot;: true,
+            &quot;pageDots&quot;: false,
+            &quot;rightToLeft&quot;: false,
+            &quot;draggable&quot;: true,
+            &quot;selectedAttraction&quot;: 0.1,
+            &quot;parallax&quot; : 0,
+            &quot;friction&quot;: 0.6        }" tabindex="0">
+        
+
+  
+
+
+
+  
+
+
+
+  
+
+
+     <div class="flickity-viewport" style="height: 486.516px; touch-action: pan-y;"><div class="flickity-slider" style="left: 0px; transform: translate3d(-222.06%, 0px, 0px);"><div class="banner has-hover" id="banner-1191549952" style="position: absolute; left: 300%;" aria-hidden="true">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill">
+            <img fetchpriority="high" decoding="async" width="1905" height="723" src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/123-1.png" class="bg attachment-original size-original entered lazyloaded" alt="" data-lazy-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/123-1.png" data-ll-status="loaded"><noscript><img fetchpriority="high" decoding="async" width="1905" height="723" src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/123-1.png" class="bg attachment-original size-original" alt="" /></noscript>                                    
+                    </div>
+		
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+        </div>
+      </div>
+
+            
+<style>
+#banner-1191549952 {
+  padding-top: 37.89%;
+}
+#banner-1191549952 .banner-bg img {
+  object-position: 0% 0%;
+}
+</style>
+  </div><div class="banner has-hover is-selected" id="banner-651157039" style="position: absolute; left: 100%;" inert="">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill">
+            <img decoding="async" width="1905" height="723" src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/grere.png" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/grere.png" class="bg attachment-original size-original lazy-load-active" alt="">                                    
+                    </div>
+		
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+        </div>
+      </div>
+
+            
+<style>
+#banner-651157039 {
+  padding-top: 38.01%;
+}
+#banner-651157039 .banner-bg img {
+  object-position: 0% 0%;
+}
+</style>
+  </div><div class="banner has-hover" id="banner-1705699123" style="position: absolute; left: 200%;" aria-hidden="true">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill">
+            <img decoding="async" width="1905" height="723" src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/cay-van-phong.png" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/cay-van-phong.png" class="bg attachment-original size-original lazy-load-active" alt="">                                    
+                    </div>
+		
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+        </div>
+      </div>
+
+            
+<style>
+#banner-1705699123 {
+  padding-top: 38.01%;
+}
+#banner-1705699123 .banner-bg img {
+  object-position: 0% 0%;
+}
+</style>
+  </div></div></div></div>
+
+     <div class="loading-spin dark large centered" style="display: none;"></div>
+
+	</div>
+
+
+		</div>
+
+		
+<style>
+#section_1177637598 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+</style>
+	</section>
+	
+
+	<section class="section gl-section gl-soft" id="section_260080083">
+		<div class="section-bg fill">
+			<img decoding="async" width="2560" height="1463" src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/9df0bd08-bcd2-4678-a63f-062cd4f16656-scaled.jpg" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/9df0bd08-bcd2-4678-a63f-062cd4f16656-scaled.jpg" class="bg attachment-original size-original lazy-load-active" alt="">						
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+<div class="row align-middle" id="row-744557614">
+
+	<div id="col-1365688778" class="col medium-6 small-12 large-6">
+				<div class="col-inner">
+			
+			
+<h1>CÂY XANH GREEN LIFE</h1>
+<p data-start="0" data-end="334"><strong>GREEN LIFE | ĐƠN VỊ UY TÍN TRONG LĨNH VỰC CÂY XANH</strong></p>
+<p data-start="0" data-end="334">Chúng tôi chuyên cung cấp dịch vụ cây xanh cho các <strong>CÔNG TY, DOANH NGHIỆP TRONG KCN, NGÂN HÀNG, TÒA NHÀ</strong> theo quy trình chuẩn kỹ thuật, giúp doanh nghiệp duy trì môi trường làm việc <strong>xanh – sạch – an toàn – bền vững</strong>.</p>
+<p data-start="0" data-end="334">Chúng tôi hiểu rằng với nhà máy và tổ chức lớn, cây xanh không chỉ là cảnh quan mà còn là hình ảnh thương hiệu, tiêu chuẩn môi trường và sự ổn định vận hành. <strong>Green Life</strong> với <strong>kinh nghiệm hơn 15 năm</strong> cùng đội ngũ nhân viên có <strong>CHUYÊN MÔN TAY NGHỀ GIỎI</strong>, quy trình quản lý <strong>CHUYÊN NGHIỆP</strong> sẽ mang đến <strong>DỊCH VỤ CÂY XANH tốt nhất</strong>.</p>
+<p><!-- NOTE: sửa link nút theo page thật --></p>
+<a href="/gioi-thieu" class="button primary is-medium">
+		<span>về chúng tôi</span>
+	</a>
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-1578667386" class="col medium-6 small-12 large-6">
+				<div class="col-inner">
+			
+			
+<p><!-- NOTE: đổi ảnh giới thiệu --></p>
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_353059796">
+								<div class="img-inner dark">
+			<img decoding="async" width="1453" height="977" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201453%20977%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/249732b5-d4ee-4461-98a6-d1b5135aa8882.png" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/249732b5-d4ee-4461-98a6-d1b5135aa8882.png 1453w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/249732b5-d4ee-4461-98a6-d1b5135aa8882-1000x672.png 1000w" sizes="(max-width: 1453px) 100vw, 1453px">						
+					</div>
+								
+<style>
+#image_353059796 {
+  width: 100%;
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+</div>
+		</div>
+
+		
+<style>
+#section_260080083 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+</style>
+	</section>
+	
+
+	<section class="section" id="section_608002593">
+		<div class="section-bg fill">
+									
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+	<div id="gap-664191557" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-664191557 {
+  padding-top: 30px;
+}
+</style>
+	</div>
+	
+	<div id="text-2697645119" class="text">
+		
+<h1><b></b><span class="section-title-main">DỊCH VỤ CỦA CHÚNG TÔI</span></h1>
+		
+<style>
+#text-2697645119 {
+  text-align: center;
+  color: #115a36;
+}
+#text-2697645119 > * {
+  color: #115a36;
+}
+</style>
+	</div>
+	
+<div class="row" id="row-1040979081">
+
+	<div id="col-1630256993" class="col small-12 large-12">
+				<div class="col-inner text-center">
+			
+			
+	<div id="text-454541605" class="text">
+		
+<p style="text-align: center;">Cây xanh GreenLife cung cấp nhiều dịch vụ cho các Công ty, Doanh Nghiệp, KCN, Ngân hàng, Tòa nhà <br>mang đến cảnh quan, cây xanh đẹp, lâu dài và chuyên nghiệp.</p>
+		
+<style>
+#text-454541605 {
+  font-size: 1.1rem;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+#text-454541605 > * {
+  color: rgb(0, 0, 0);
+}
+</style>
+	</div>
+	
+<div class="row" id="row-1914368642">
+
+	<div id="col-668664926" class="col medium-4 small-12 large-4">
+				<div class="col-inner">
+			
+			
+	<div class="box has-hover   has-hover box-bounce box-text-bottom">
+
+		<div class="box-image">
+			<a href="https://cayxanhgreenlife.vn/dich-vu-duong-canh-quan">			<div class="image-zoom image-cover" style="padding-top:56.25%;">
+				<img decoding="async" width="492" height="467" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20492%20467%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/z7405012383467_4d9def7aebe7777aba20aaeb460a283d.png" class="lazy-load attachment- size-" alt="dịch vụ bảo dưỡng chăm sóc cây xanh">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center dark" style="background-color:#16634f;">
+			<div class="box-text-inner">
+				
+	<div id="text-2075838814" class="text">
+		
+<h2>DỊCH VỤ<br>
+BẢO DƯỠNG CẢNH QUAN</h2>
+		
+<style>
+#text-2075838814 {
+  font-size: 0.85rem;
+}
+</style>
+	</div>
+	
+			</div>
+		</div>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-1416606822" class="col medium-4 small-12 large-4">
+				<div class="col-inner">
+			
+			
+	<div class="box has-hover   has-hover box-bounce box-text-bottom">
+
+		<div class="box-image">
+			<a href="https://cayxanhgreenlife.vn/dich-vu-thi-cong-cay-xanh">			<div class="image-cover" style="padding-top:56.25%;">
+				<img decoding="async" width="960" height="1280" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20960%201280%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/z5836585456318_3fa1e00ff9000a4f7f58f715b6a120de.jpg" class="lazy-load attachment- size-" alt="">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center dark" style="background-color:#16634f;">
+			<div class="box-text-inner">
+				
+	<div id="text-4062132099" class="text">
+		
+<h2>DỊCH VỤ<br>
+THI CÔNG CÂY XANH</h2>
+		
+<style>
+#text-4062132099 {
+  font-size: 0.85rem;
+}
+</style>
+	</div>
+	
+			</div>
+		</div>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-143746687" class="col medium-4 small-12 large-4">
+				<div class="col-inner">
+			
+			
+	<div class="box has-hover   has-hover box-bounce box-text-bottom">
+
+		<div class="box-image">
+			<a href="https://cayxanhgreenlife.vn/dich-vu-cung-cap-va-cho-thue-cay-kieng-van-phong">			<div class="image-cover" style="padding-top:56.25%;">
+				<img decoding="async" width="500" height="500" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20500%20500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/cay-van-phong-14.png" class="lazy-load attachment- size-" alt="dịch vụ cung cấp cây và cho thuê cây văn phòng" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/cay-van-phong-14.png 500w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/cay-van-phong-14-100x100.png 100w" sizes="(max-width: 500px) 100vw, 500px">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center dark" style="background-color:#16634f;">
+			<div class="box-text-inner">
+				
+	<div id="text-808420341" class="text">
+		
+<h2><span style="font-size: 95%;">DỊCH VỤ CUNG CẤP VÀ</span><br><span style="font-size: 95%;">CHO THUÊ CÂY KIỂNG VĂN PHÒNG</span></h2>
+		
+<style>
+#text-808420341 {
+  font-size: 0.85rem;
+}
+</style>
+	</div>
+	
+			</div>
+		</div>
+	</div>
+	
+		</div>
+					</div>
+
+	
+</div>
+<a href="/dich-vu" class="button primary" style="border-radius:99px;">
+		<span>tất cả dịch vụ</span>
+	</a>
+
+		</div>
+					</div>
+
+	
+</div>
+		</div>
+
+		
+<style>
+#section_608002593 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #e6e6e6;
+}
+</style>
+	</section>
+	
+
+	<section class="section" id="section_10668939">
+		<div class="section-bg fill">
+									
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+	<div id="text-3283524283" class="text">
+		
+<h2 id="1262">TẤT CẢ DỊCH VỤ</h2>
+		
+<style>
+#text-3283524283 {
+  text-align: center;
+  color: #115a36;
+}
+#text-3283524283 > * {
+  color: #115a36;
+}
+</style>
+	</div>
+	
+<div class="row" id="row-509450356">
+
+	<div id="col-384731711" class="col medium-3 small-12 large-3">
+				<div class="col-inner">
+			
+			
+	<div class="box has-hover   has-hover box-bounce box-text-bottom">
+
+		<div class="box-image">
+			<a href="https://cayxanhgreenlife.vn/dich-vu-cham-soc-cay-xanh-khuon-vien-cong-ty">			<div class="image-zoom image-cover" style="padding-top:56.25%;">
+				<img decoding="async" width="492" height="467" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20492%20467%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/Untitled-43.png" class="lazy-load attachment- size-" alt="">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center dark" style="background-color:#16634f;">
+			<div class="box-text-inner">
+				
+	<div id="text-1174373266" class="text">
+		
+<p><strong>DỊCH VỤ CHĂM SÓC CÂY XANH TRONG KHUÔN VIÊN CÔNG TY</strong></p>
+		
+<style>
+#text-1174373266 {
+  font-size: 0.85rem;
+}
+</style>
+	</div>
+	
+			</div>
+		</div>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-1494458558" class="col medium-3 small-12 large-3">
+				<div class="col-inner">
+			
+			
+	<div class="box has-hover   has-hover box-bounce box-text-bottom">
+
+		<div class="box-image">
+			<a href="https://cayxanhgreenlife.vn/dich-vu-cung-cap-va-trong-cay-xanh">			<div class="image-cover" style="padding-top:56.25%;">
+				<img decoding="async" width="492" height="467" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20492%20467%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/z7125941577411_5cfcdcfef0fe4f32da7df3ad733c1114d.png" class="lazy-load attachment- size-" alt="">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center dark" style="background-color:#16634f;">
+			<div class="box-text-inner">
+				
+	<div id="text-1282434219" class="text">
+		
+<p><strong>DỊCH VỤ CUNG CẤP<br>VÀ TRỒNG CÂY XANH<br></strong></p>
+		
+<style>
+#text-1282434219 {
+  font-size: 0.85rem;
+}
+</style>
+	</div>
+	
+			</div>
+		</div>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-1726946413" class="col medium-3 small-12 large-3">
+				<div class="col-inner">
+			
+			
+	<div class="box has-hover   has-hover box-bounce box-text-bottom">
+
+		<div class="box-image">
+			<a href="https://cayxanhgreenlife.vn/dich-vu-thi-cong-va-trong-co">			<div class="image-cover" style="padding-top:56.25%;">
+				<img decoding="async" width="492" height="467" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20492%20467%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/z6856766650861_a3bb68e4b3afa8a49434bc99fe6a3916e.png" class="lazy-load attachment- size-" alt="">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center dark" style="background-color:#16634f;">
+			<div class="box-text-inner">
+				
+	<div id="text-2299417933" class="text">
+		
+<p><strong>DỊCH VỤ THI CÔNG </strong></p>
+<p><strong>TRỒNG CỎ</strong></p>
+		
+<style>
+#text-2299417933 {
+  font-size: 0.85rem;
+}
+</style>
+	</div>
+	
+			</div>
+		</div>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-2111415179" class="col medium-3 small-12 large-3">
+				<div class="col-inner">
+			
+			
+	<div class="box has-hover   has-hover box-bounce box-text-bottom">
+
+		<div class="box-image">
+			<a href="https://cayxanhgreenlife.vn/dich-vu-tu-van-thiet-ke-mang-xanh">			<div class="image-cover" style="padding-top:56.25%;">
+				<img decoding="async" width="1920" height="1080" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201920%201080%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/canh-quan-san-vuon.png" class="lazy-load attachment- size-" alt="" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/canh-quan-san-vuon.png 1920w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/canh-quan-san-vuon-1536x864.png 1536w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/canh-quan-san-vuon-1000x563.png 1000w" sizes="(max-width: 1920px) 100vw, 1920px">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center dark" style="background-color:#16634f;">
+			<div class="box-text-inner">
+				
+	<div id="text-2577504442" class="text">
+		
+<p><strong>DỊCH VỤ TƯ VẤN </strong></p>
+<p><strong>THIẾT KẾ MẢNG XANH</strong></p>
+		
+<style>
+#text-2577504442 {
+  font-size: 0.85rem;
+}
+</style>
+	</div>
+	
+			</div>
+		</div>
+	</div>
+	
+		</div>
+					</div>
+
+	
+</div>
+	<div id="gap-952373018" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-952373018 {
+  padding-top: 30px;
+}
+</style>
+	</div>
+	
+<div class="row" id="row-1174822226">
+
+	<div id="col-1424846647" class="col medium-3 small-12 large-3">
+				<div class="col-inner">
+			
+			
+	<div class="box has-hover   has-hover box-bounce box-text-bottom">
+
+		<div class="box-image">
+			<a href="https://cayxanhgreenlife.vn/dich-vu-cho-thue-cay-kieng-van-phong">			<div class="image-zoom image-cover" style="padding-top:56.25%;">
+				<img decoding="async" width="800" height="546" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20800%20546%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/1573364396-cay-van-phong-01.jpg" class="lazy-load attachment- size-" alt="">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center dark" style="background-color:#16634f;">
+			<div class="box-text-inner">
+				
+	<div id="text-3727501507" class="text">
+		
+<p><strong>DỊCH VỤ CHO THUÊ </strong></p>
+<p><strong>CÂY KIỂNG VĂN PHÒNG</strong></p>
+		
+<style>
+#text-3727501507 {
+  font-size: 0.85rem;
+}
+</style>
+	</div>
+	
+			</div>
+		</div>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-2043992237" class="col medium-3 small-12 large-3">
+				<div class="col-inner">
+			
+			
+	<div class="box has-hover   has-hover box-bounce box-text-bottom">
+
+		<div class="box-image">
+			<a href="https://cayxanhgreenlife.vn/dich-vu-mua-ban-cay-xanh">			<div class="image-cover" style="padding-top:56.25%;">
+				<img decoding="async" width="861" height="1148" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20861%201148%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/z7405127046874_60a3b376b95ff9a7931ef54dfcc258c2.jpg" class="lazy-load attachment- size-" alt="">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center dark" style="background-color:#16634f;">
+			<div class="box-text-inner">
+				
+	<div id="text-663881039" class="text">
+		
+<p><strong>DỊCH VỤ MUA BÁN </strong></p>
+<p><strong>CÂY XANH</strong></p>
+		
+<style>
+#text-663881039 {
+  font-size: 0.85rem;
+}
+</style>
+	</div>
+	
+			</div>
+		</div>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-1113790255" class="col medium-3 small-12 large-3">
+				<div class="col-inner">
+			
+			
+	<div class="box has-hover   has-hover box-bounce box-text-bottom">
+
+		<div class="box-image">
+			<a href="https://cayxanhgreenlife.vn/dich-vu-cat-tia-cay-xanh">			<div class="image-cover" style="padding-top:56.25%;">
+				<img decoding="async" width="960" height="1280" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20960%201280%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/z6889919484466_f7a8a8517d199d9216d9c2421ca76270.jpg" class="lazy-load attachment- size-" alt="">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center dark" style="background-color:#16634f;">
+			<div class="box-text-inner">
+				
+	<div id="text-415980344" class="text">
+		
+<p><strong>DỊCH VỤ CẮT TỈA</strong></p>
+<p><strong>CÂY XANH</strong></p>
+		
+<style>
+#text-415980344 {
+  font-size: 0.85rem;
+}
+</style>
+	</div>
+	
+			</div>
+		</div>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-1478084471" class="col medium-3 small-12 large-3">
+				<div class="col-inner">
+			
+			
+	<div class="box has-hover   has-hover box-bounce box-text-bottom">
+
+		<div class="box-image">
+			<a href="https://cayxanhgreenlife.vn/dich-vu-cat-co-phat-hoang">			<div class="image-cover" style="padding-top:56.25%;">
+				<img decoding="async" width="1453" height="977" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201453%20977%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/249732b5-d4ee-4461-98a6-d1b5135aa8882.png" class="lazy-load attachment- size-" alt="" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/249732b5-d4ee-4461-98a6-d1b5135aa8882.png 1453w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/249732b5-d4ee-4461-98a6-d1b5135aa8882-1000x672.png 1000w" sizes="(max-width: 1453px) 100vw, 1453px">											</div>
+			</a>		</div>
+
+		<div class="box-text text-center dark" style="background-color:#16634f;">
+			<div class="box-text-inner">
+				
+	<div id="text-2186423994" class="text">
+		
+<p><strong>DỊCH VỤ CẮT CỎ</strong></p>
+<p><strong>PHÁT HOANG</strong></p>
+		
+<style>
+#text-2186423994 {
+  font-size: 0.85rem;
+}
+</style>
+	</div>
+	
+			</div>
+		</div>
+	</div>
+	
+		</div>
+					</div>
+
+	
+</div>
+		</div>
+
+		
+<style>
+#section_10668939 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+</style>
+	</section>
+	
+
+	<section class="section" id="section_1967729370">
+		<div class="section-bg fill">
+									<div class="section-bg-overlay absolute fill"></div>
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+	<div id="text-3926761659" class="text">
+		
+<h1><b></b><span class="section-title-main">VÌ SAO KHÁCH HÀNG CHỌN CHÚNG TÔI?</span></h1>
+		
+<style>
+#text-3926761659 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+#text-3926761659 > * {
+  color: rgb(255, 255, 255);
+}
+</style>
+	</div>
+	
+<div class="row" id="row-398215246">
+
+	<div id="col-132239950" class="col medium-4 small-12 large-4">
+				<div class="col-inner">
+			
+			
+
+		<div class="icon-box featured-box icon-box-left text-left">
+					<div class="icon-box-img" style="width: 80px">
+				<div class="icon">
+					<div class="icon-inner">
+						<img decoding="async" width="120" height="120" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20120%20120%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-1.png" class="lazy-load attachment-medium size-medium" alt="" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-1.png 120w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-1-100x100.png 100w" sizes="(max-width: 120px) 100vw, 120px">					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+	<div id="text-1073496380" class="text">
+		
+<h4><span style="color: #dba625;">KINH NGHIỆM HƠN 15 NĂM<br></span></h4>
+<p>Đồng hành cùng hàng trăm doanh nghiệp, mang đến giải pháp cây xanh hiệu quả và bền vững.</p>
+		
+<style>
+#text-1073496380 {
+  color: rgb(255, 255, 255);
+}
+#text-1073496380 > * {
+  color: rgb(255, 255, 255);
+}
+</style>
+	</div>
+	
+		</div>
+	</div>
+	
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-1651536612" class="col medium-4 small-12 large-4">
+				<div class="col-inner">
+			
+			
+
+		<div class="icon-box featured-box icon-box-left text-left">
+					<div class="icon-box-img" style="width: 80px">
+				<div class="icon">
+					<div class="icon-inner">
+						<img decoding="async" width="120" height="120" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20120%20120%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-2.png" class="lazy-load attachment-medium size-medium" alt="" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-2.png 120w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-2-100x100.png 100w" sizes="(max-width: 120px) 100vw, 120px">					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+	<div id="text-4133776410" class="text">
+		
+<h4><span style="color: #dba625;">UY TÍN ĐẶT LÊN HÀNG ĐẦU<br></span></h4>
+<p>Cam kết đúng tiến độ, đúng chất lượng và đúng thỏa thuận trong mọi dự án đã triển khai.</p>
+		
+<style>
+#text-4133776410 {
+  color: rgb(255, 255, 255);
+}
+#text-4133776410 > * {
+  color: rgb(255, 255, 255);
+}
+</style>
+	</div>
+	
+		</div>
+	</div>
+	
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-491777100" class="col medium-4 small-12 large-4">
+				<div class="col-inner">
+			
+			
+
+		<div class="icon-box featured-box icon-box-left text-left">
+					<div class="icon-box-img" style="width: 80px">
+				<div class="icon">
+					<div class="icon-inner">
+						<img decoding="async" width="120" height="120" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20120%20120%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-3.png" class="lazy-load attachment-medium size-medium" alt="" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-3.png 120w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-3-100x100.png 100w" sizes="(max-width: 120px) 100vw, 120px">					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+	<div id="text-1743610467" class="text">
+		
+<h4><span style="color: #dba625;">ĐỘI NGŨ CHUYÊN MÔN CAO<br></span></h4>
+<p>Kỹ sư và nhân sự kỹ thuật am hiểu cây xanh, tư vấn giải pháp phù hợp với từng môi trường.</p>
+		
+<style>
+#text-1743610467 {
+  color: rgb(255,255,255);
+}
+#text-1743610467 > * {
+  color: rgb(255,255,255);
+}
+</style>
+	</div>
+	
+		</div>
+	</div>
+	
+	
+		</div>
+					</div>
+
+	
+</div>
+<div class="row" id="row-1903904918">
+
+	<div id="col-21715851" class="col medium-4 small-12 large-4">
+				<div class="col-inner">
+			
+			
+
+		<div class="icon-box featured-box icon-box-left text-left">
+					<div class="icon-box-img" style="width: 80px">
+				<div class="icon">
+					<div class="icon-inner">
+						<img decoding="async" width="120" height="120" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20120%20120%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-4.png" class="lazy-load attachment-medium size-medium" alt="" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-4.png 120w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-4-100x100.png 100w" sizes="(max-width: 120px) 100vw, 120px">					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+	<div id="text-924222851" class="text">
+		
+<h4><span style="color: #dba625;">DỊCH VỤ TRỌN GÓI<br></span></h4>
+<p>Từ tư vấn, thiết kế, thi công đến bảo dưỡng định kỳ, giúp khách hàng tiết kiệm thời gian và chi phí.</p>
+		
+<style>
+#text-924222851 {
+  color: rgb(255,255,255);
+}
+#text-924222851 > * {
+  color: rgb(255,255,255);
+}
+</style>
+	</div>
+	
+		</div>
+	</div>
+	
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-907827453" class="col medium-4 small-12 large-4">
+				<div class="col-inner">
+			
+			
+
+		<div class="icon-box featured-box icon-box-left text-left">
+					<div class="icon-box-img" style="width: 80px">
+				<div class="icon">
+					<div class="icon-inner">
+						<img decoding="async" width="120" height="120" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20120%20120%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/iocn-5.png" class="lazy-load attachment-medium size-medium" alt="" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/iocn-5.png 120w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/iocn-5-100x100.png 100w" sizes="(max-width: 120px) 100vw, 120px">					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+	<div id="text-3340761471" class="text">
+		
+<h4><span style="color: #dba625;">CHI PHÍ CỐ ĐỊNH<br></span></h4>
+<p>Báo giá rõ ràng, không phát sinh ngoài hợp đồng, cam kết thay cây khi không đạt yêu cầu.</p>
+		
+<style>
+#text-3340761471 {
+  color: rgb(255,255,255);
+}
+#text-3340761471 > * {
+  color: rgb(255,255,255);
+}
+</style>
+	</div>
+	
+		</div>
+	</div>
+	
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-2041483046" class="col medium-4 small-12 large-4">
+				<div class="col-inner">
+			
+			
+
+		<div class="icon-box featured-box icon-box-left text-left">
+					<div class="icon-box-img" style="width: 80px">
+				<div class="icon">
+					<div class="icon-inner">
+						<img decoding="async" width="120" height="120" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20120%20120%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-6.png" class="lazy-load attachment-medium size-medium" alt="" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-6.png 120w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/icon-6-100x100.png 100w" sizes="(max-width: 120px) 100vw, 120px">					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+	<div id="text-380309637" class="text">
+		
+<h4><span style="color: #dba625;">TƯ VẤN PHƯƠNG ÁN PHÙ HỢP<br></span></h4>
+<p>Mỗi khách hàng được xây dựng phương án riêng, tối ưu ngân sách và hiệu quả sử dụng.</p>
+		
+<style>
+#text-380309637 {
+  color: rgb(255,255,255);
+}
+#text-380309637 > * {
+  color: rgb(255,255,255);
+}
+</style>
+	</div>
+	
+		</div>
+	</div>
+	
+	
+		</div>
+					</div>
+
+	
+</div>
+		</div>
+
+		
+<style>
+#section_1967729370 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#section_1967729370 .section-bg-overlay {
+  background-color: rgb(17, 90, 54);
+}
+</style>
+	</section>
+	
+
+	<section class="section" id="section_1244956371">
+		<div class="section-bg fill">
+									
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+<div class="row" id="row-2038826686">
+
+	<div id="col-776596159" class="col small-12 large-12">
+				<div class="col-inner text-center">
+			
+			
+	<div id="text-2987645851" class="text">
+		
+<h2><span style="color: #00755e;">ĐỐI TÁC &amp; KHÁCH HÀNG CỦA CHÚNG TÔI</span></h2>
+		
+<style>
+#text-2987645851 {
+  text-align: center;
+  color: #115a36;
+}
+#text-2987645851 > * {
+  color: #115a36;
+}
+</style>
+	</div>
+	
+	<div id="gap-1336277264" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1336277264 {
+  padding-top: 9px;
+}
+</style>
+	</div>
+	
+<div class="slider-wrapper relative" id="slider-2145814808">
+    <div class="slider slider-nav-circle slider-nav-large slider-nav-light slider-style-normal" data-flickity-options="{
+            &quot;cellAlign&quot;: &quot;center&quot;,
+            &quot;imagesLoaded&quot;: true,
+            &quot;lazyLoad&quot;: 1,
+            &quot;freeScroll&quot;: false,
+            &quot;wrapAround&quot;: true,
+            &quot;autoPlay&quot;: 2000,
+            &quot;pauseAutoPlayOnHover&quot; : true,
+            &quot;prevNextButtons&quot;: true,
+            &quot;contain&quot; : true,
+            &quot;adaptiveHeight&quot; : true,
+            &quot;dragThreshold&quot; : 10,
+            &quot;percentPosition&quot;: true,
+            &quot;pageDots&quot;: false,
+            &quot;rightToLeft&quot;: false,
+            &quot;draggable&quot;: true,
+            &quot;selectedAttraction&quot;: 0.1,
+            &quot;parallax&quot; : 0,
+            &quot;friction&quot;: 0.6        }">
+        
+<div class="ux-logo has-hover align-middle ux_logo inline-block" style="max-width: 100%!important; width: 180.45px!important"><div class="ux-logo-link block image-" title="" href="" style="padding: 15px;"><img decoding="async" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/logo-rebisco.png" title="" alt="" class="lazy-load ux-logo-image block" style="height:85px;"></div></div>
+<div class="ux-logo has-hover align-middle ux_logo inline-block" style="max-width: 100%!important; width: 181.3px!important"><div class="ux-logo-link block image-" title="" href="" style="padding: 15px;"><img decoding="async" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/logo-vinamit.png" title="" alt="" class="lazy-load ux-logo-image block" style="height:85px;"></div></div>
+<div class="ux-logo has-hover align-middle ux_logo inline-block" style="max-width: 100%!important; width: 395.5px!important"><div class="ux-logo-link block image-" title="" href="" style="padding: 15px;"><img decoding="async" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/pepsico.png" title="" alt="" class="lazy-load ux-logo-image block" style="height:85px;"></div></div>
+<div class="ux-logo has-hover align-middle ux_logo inline-block" style="max-width: 100%!important; width: 181.3px!important"><div class="ux-logo-link block image-" title="" href="" style="padding: 15px;"><img decoding="async" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/trungnguyen.png" title="" alt="" class="lazy-load ux-logo-image block" style="height:85px;"></div></div>
+<div class="ux-logo has-hover align-middle ux_logo inline-block" style="max-width: 100%!important; width: 181.3px!important"><div class="ux-logo-link block image-" title="" href="" style="padding: 15px;"><img decoding="async" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/kia-logo.png" title="" alt="" class="lazy-load ux-logo-image block" style="height:85px;"></div></div>
+<div class="ux-logo has-hover align-middle ux_logo inline-block" style="max-width: 100%!important; width: 344.5px!important"><div class="ux-logo-link block image-" title="" href="" style="padding: 15px;"><img decoding="async" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/Vietcombank_Logo.png" title="" alt="" class="lazy-load ux-logo-image block" style="height:85px;"></div></div>
+<div class="ux-logo has-hover align-middle ux_logo inline-block" style="max-width: 100%!important; width: 115.37946428571px!important"><div class="ux-logo-link block image-" title="" href="" style="padding: 15px;"><img decoding="async" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/images.png" title="" alt="" class="lazy-load ux-logo-image block" style="height:85px;"></div></div>
+<div class="ux-logo has-hover align-middle ux_logo inline-block" style="max-width: 100%!important; width: 427.19626168224px!important"><div class="ux-logo-link block image-" title="" href="" style="padding: 15px;"><img decoding="async" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/Becamex-logonew.png" title="" alt="" class="lazy-load ux-logo-image block" style="height:85px;"></div></div>
+<div class="ux-logo has-hover align-middle ux_logo inline-block" style="max-width: 100%!important; width: 163.99014778325px!important"><div class="ux-logo-link block image-" title="" href="" style="padding: 15px;"><img decoding="async" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/logo.png" title="" alt="" class="lazy-load ux-logo-image block" style="height:85px;"></div></div>
+<div class="ux-logo has-hover align-middle ux_logo inline-block" style="max-width: 100%!important; width: 115px!important"><div class="ux-logo-link block image-" title="" href="" style="padding: 15px;"><img decoding="async" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/imagesd.png" title="" alt="" class="lazy-load ux-logo-image block" style="height:85px;"></div></div>
+     </div>
+
+     <div class="loading-spin dark large centered" style="display: none;"></div>
+
+	</div>
+
+
+		</div>
+					</div>
+
+	
+</div>
+	<div id="gap-1119353571" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1119353571 {
+  padding-top: 30px;
+}
+</style>
+	</div>
+	
+		</div>
+
+		
+<style>
+#section_1244956371 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: -56px;
+}
+</style>
+	</section>
+	
+
+	<section class="section" id="section_958181469">
+		<div class="section-bg fill">
+									<div class="section-bg-overlay absolute fill"></div>
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+<div class="row" id="row-1560160114">
+
+	<div id="col-1923442892" class="col small-12 large-12">
+				<div class="col-inner">
+			
+			
+	<div id="gap-1279438949" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1279438949 {
+  padding-top: 30px;
+}
+</style>
+	</div>
+	
+	<div id="text-3453925097" class="text">
+		
+<h2>DỰ ÁN ĐÃ THI CÔNG</h2>
+		
+<style>
+#text-3453925097 {
+  text-align: center;
+  color: rgb(255,255,255);
+}
+#text-3453925097 > * {
+  color: rgb(255,255,255);
+}
+</style>
+	</div>
+	
+<div class="row" id="row-1573686042">
+
+	<div id="col-531565638" class="col small-12 large-12">
+				<div class="col-inner text-center">
+			
+			
+<div class="row" id="row-1841430413">
+
+	<div id="col-876134586" class="col medium-3 small-6 large-3">
+				<div class="col-inner text-center">
+			
+			
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_771040626">
+								<div class="img-inner dark">
+			<img decoding="async" width="768" height="576" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20768%20576%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/cai-tao-va-trong-tham-co-binh-duong.png" class="lazy-load attachment-original size-original" alt="">						
+					</div>
+								
+<style>
+#image_771040626 {
+  width: 100%;
+}
+</style>
+	</div>
+	
+<p><span style="color: #ffffff;"><strong>CẢI TẠO VÀ TRỒNG</strong></span><br><span style="color: #ffffff;"><strong>THẢM CỎ KIA BÌNH DƯƠNG</strong></span></p>
+	<div id="text-1557263665" class="text">
+		
+<p>Cải tạo nền đất, thi công trồng mới và duy trì thảm cỏ cảnh quan chuyên nghiệp.</p>
+		
+<style>
+#text-1557263665 {
+  color: rgb(255, 255, 255);
+}
+#text-1557263665 > * {
+  color: rgb(255, 255, 255);
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-186054230" class="col medium-3 small-6 large-3">
+				<div class="col-inner text-center">
+			
+			
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1087430805">
+								<div class="img-inner dark">
+			<img decoding="async" width="768" height="576" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20768%20576%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/thi-cong-hoan-thien-mang-xanh-amway-bd.png" class="lazy-load attachment-original size-original" alt="">						
+					</div>
+								
+<style>
+#image_1087430805 {
+  width: 100%;
+}
+</style>
+	</div>
+	
+<p><span style="color: #ffffff;"><strong>THI CÔNG HOÀN THIỆN</strong></span><br><span style="color: #ffffff;"><strong>MẢNG XANH AMWAY BD</strong></span></p>
+	<div id="text-4068706912" class="text">
+		
+<p>Tư vấn thiết kế, thi công trọn gói hệ thống cây xanh và thảm cỏ thẩm mỹ cao.</p>
+		
+<style>
+#text-4068706912 {
+  color: rgb(255, 255, 255);
+}
+#text-4068706912 > * {
+  color: rgb(255, 255, 255);
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-1502386353" class="col medium-3 small-6 large-3">
+				<div class="col-inner text-center">
+			
+			
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_835654787">
+								<div class="img-inner dark">
+			<img decoding="async" width="768" height="576" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20768%20576%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/CHAM-SOC-MANG-XANH-VINAMIT.png" class="lazy-load attachment-original size-original" alt="">						
+					</div>
+								
+<style>
+#image_835654787 {
+  width: 100%;
+}
+</style>
+	</div>
+	
+<p><span style="color: #ffffff;"><strong>CHĂM SÓC MẢNG</strong></span><br><span style="color: #ffffff;"><strong>XANH VINAMIT</strong></span></p>
+	<div id="text-3109166282" class="text">
+		
+<p>Cắt tỉa tạo dáng, bón phân định kỳ và kiểm soát sâu bệnh cho mảng xanh quy mô lớn.</p>
+		
+<style>
+#text-3109166282 {
+  color: rgb(255, 255, 255);
+}
+#text-3109166282 > * {
+  color: rgb(255, 255, 255);
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-108806532" class="col medium-3 small-6 large-3">
+				<div class="col-inner text-center">
+			
+			
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_2117597760">
+								<div class="img-inner dark">
+			<img decoding="async" width="768" height="576" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20768%20576%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/01/cham-soc-mang-xanh-robisco-vn.png" class="lazy-load attachment-original size-original" alt="">						
+					</div>
+								
+<style>
+#image_2117597760 {
+  width: 100%;
+}
+</style>
+	</div>
+	
+<p><span style="color: #ffffff;"><strong>CHĂM SÓC MẢNG</strong></span><br><span style="color: #ffffff;"><strong>XANH REBISCO VN</strong></span></p>
+	<div id="text-822567964" class="text">
+		
+<p>Duy trì chất lượng thảm cỏ, cắt tỉa cây xanh và vệ sinh cảnh quan khuôn viên nhà máy.</p>
+		
+<style>
+#text-822567964 {
+  color: rgb(255, 255, 255);
+}
+#text-822567964 > * {
+  color: rgb(255, 255, 255);
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+</div>
+<a href="https://daigiavinh.com/cong-trinh/" class="button white is-large" style="border-radius:99px;" target="_blank" rel="noopener">
+		<span>Xem thêm dự án</span>
+	</a>
+
+		</div>
+					</div>
+
+	
+</div>
+	<div id="gap-2095203651" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-2095203651 {
+  padding-top: 0px;
+}
+</style>
+	</div>
+	
+		</div>
+				
+<style>
+#col-1923442892 > .col-inner {
+  margin: 20px 0px 0px 0px;
+}
+</style>
+	</div>
+
+	
+</div>
+		</div>
+
+		
+<style>
+#section_958181469 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#section_958181469 .section-bg-overlay {
+  background-color: #115a36;
+}
+#section_958181469 .section-bg img {
+  object-position: 55% 100%;
+}
+</style>
+	</section>
+	
+
+	<section class="section" id="section_727387858">
+		<div class="section-bg fill">
+									
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+<div class="row" id="row-1435467292">
+
+	<div id="col-1953389327" class="col small-12 large-12">
+				<div class="col-inner">
+			
+			
+	<div id="text-3709558650" class="text">
+		
+<h2>TIN TỨC</h2>
+		
+<style>
+#text-3709558650 {
+  text-align: center;
+  color: #115a36;
+}
+#text-3709558650 > * {
+  color: #115a36;
+}
+</style>
+	</div>
+	
+
+  
+    <div class="row large-columns-4 medium-columns-1 small-columns-1 slider row-slider slider-nav-reveal slider-nav-push" data-flickity-options="{&quot;imagesLoaded&quot;: true, &quot;groupCells&quot;: &quot;100%&quot;, &quot;dragThreshold&quot; : 5, &quot;cellAlign&quot;: &quot;left&quot;,&quot;wrapAround&quot;: true,&quot;prevNextButtons&quot;: true,&quot;percentPosition&quot;: true,&quot;pageDots&quot;: false, &quot;rightToLeft&quot;: false, &quot;autoPlay&quot; : false}">
+
+  <div class="col post-item">
+			<div class="col-inner">
+				<div class="box box-normal box-text-bottom box-blog-post has-hover">
+            					<div class="box-image">
+  						<div class="image-cover" style="padding-top:56.25%;">
+							<a href="https://cayxanhgreenlife.vn/cham-soc-cay-xanh-di-an.html" class="plain" aria-label="Chăm sóc cây xanh Dĩ An – Nhận chăm cây công trình số lượng lớn">
+								<img decoding="async" width="300" height="357" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20357%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/03/cham-soc-cay-xanh-di-an-2.jpg" class="lazy-load attachment-medium size-medium wp-post-image" alt="Vì sao nên chọn Green Life" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/03/cham-soc-cay-xanh-di-an-2.jpg 1892w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/03/cham-soc-cay-xanh-di-an-2-1292x1536.jpg 1292w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/03/cham-soc-cay-xanh-di-an-2-1722x2048.jpg 1722w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/03/cham-soc-cay-xanh-di-an-2-1000x1189.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px">							</a>
+  							  							  						</div>
+  						  					</div>
+          					<div class="box-text text-left">
+					<div class="box-text-inner blog-post-inner">
+
+					
+										<h5 class="post-title is-large ">
+						<a href="https://cayxanhgreenlife.vn/cham-soc-cay-xanh-di-an.html" class="plain">Chăm sóc cây xanh Dĩ An – Nhận chăm cây công trình số lượng lớn</a>
+					</h5>
+										<div class="is-divider"></div>
+										<p class="from_the_blog_excerpt ">
+						Chăm sóc cây xanh Dĩ An là giải pháp thiết yếu cho các doanh nghiệp, ...					</p>
+					                    
+					
+					
+					</div>
+					</div>
+									</div>
+			</div>
+		</div><div class="col post-item">
+			<div class="col-inner">
+				<div class="box box-normal box-text-bottom box-blog-post has-hover">
+            					<div class="box-image">
+  						<div class="image-cover" style="padding-top:56.25%;">
+							<a href="https://cayxanhgreenlife.vn/cham-soc-cay-xanh-thuan-an.html" class="plain" aria-label="Chăm sóc cây xanh Thuận An – Báo giá nhanh, triển khai liền">
+								<img decoding="async" width="300" height="170" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20170%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/03/cham-soc-cay-xanh-thuan-an-2.jpeg" class="lazy-load attachment-medium size-medium wp-post-image" alt="Quy tình chăm sóc cảnh quan tại Green Life">							</a>
+  							  							  						</div>
+  						  					</div>
+          					<div class="box-text text-left">
+					<div class="box-text-inner blog-post-inner">
+
+					
+										<h5 class="post-title is-large ">
+						<a href="https://cayxanhgreenlife.vn/cham-soc-cay-xanh-thuan-an.html" class="plain">Chăm sóc cây xanh Thuận An – Báo giá nhanh, triển khai liền</a>
+					</h5>
+										<div class="is-divider"></div>
+										<p class="from_the_blog_excerpt ">
+						Chăm sóc cây xanh Thuận An đang trở thành nhu cầu thiết yếu đối với ...					</p>
+					                    
+					
+					
+					</div>
+					</div>
+									</div>
+			</div>
+		</div><div class="col post-item">
+			<div class="col-inner">
+				<div class="box box-normal box-text-bottom box-blog-post has-hover">
+            					<div class="box-image">
+  						<div class="image-cover" style="padding-top:56.25%;">
+							<a href="https://cayxanhgreenlife.vn/bao-duong-canh-quan-di-an.html" class="plain" aria-label="Bảo dưỡng cảnh quan Dĩ An – Làm định kỳ, không tốn công quản lý">
+								<img decoding="async" width="300" height="201" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20201%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/03/bao-duong-canh-quan-di-an.png" class="lazy-load attachment-medium size-medium wp-post-image" alt="Dịch vụ bảo dưỡng cảnh quan Dĩ An" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/03/bao-duong-canh-quan-di-an.png 1264w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/03/bao-duong-canh-quan-di-an-1000x671.png 1000w" sizes="(max-width: 300px) 100vw, 300px">							</a>
+  							  							  						</div>
+  						  					</div>
+          					<div class="box-text text-left">
+					<div class="box-text-inner blog-post-inner">
+
+					
+										<h5 class="post-title is-large ">
+						<a href="https://cayxanhgreenlife.vn/bao-duong-canh-quan-di-an.html" class="plain">Bảo dưỡng cảnh quan Dĩ An – Làm định kỳ, không tốn công quản lý</a>
+					</h5>
+										<div class="is-divider"></div>
+										<p class="from_the_blog_excerpt ">
+						Trong quá trình phát triển đô thị tại Dĩ An, Bình Dương, nhu cầu xây ...					</p>
+					                    
+					
+					
+					</div>
+					</div>
+									</div>
+			</div>
+		</div><div class="col post-item">
+			<div class="col-inner">
+				<div class="box box-normal box-text-bottom box-blog-post has-hover">
+            					<div class="box-image">
+  						<div class="image-cover" style="padding-top:56.25%;">
+							<a href="https://cayxanhgreenlife.vn/bao-duong-canh-quan-thuan-an.html" class="plain" aria-label="Dịch Vụ Bảo Dưỡng Cảnh Quan Thuận An">
+								<img decoding="async" width="300" height="201" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20201%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/03/bao-duong-canh-quan-thuan-an.png" class="lazy-load attachment-medium size-medium wp-post-image" alt="Bảo dưỡng cảnh quan Thuận An" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/03/bao-duong-canh-quan-thuan-an.png 1264w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/03/bao-duong-canh-quan-thuan-an-1000x671.png 1000w" sizes="(max-width: 300px) 100vw, 300px">							</a>
+  							  							  						</div>
+  						  					</div>
+          					<div class="box-text text-left">
+					<div class="box-text-inner blog-post-inner">
+
+					
+										<h5 class="post-title is-large ">
+						<a href="https://cayxanhgreenlife.vn/bao-duong-canh-quan-thuan-an.html" class="plain">Dịch Vụ Bảo Dưỡng Cảnh Quan Thuận An</a>
+					</h5>
+										<div class="is-divider"></div>
+										<p class="from_the_blog_excerpt ">
+						Khu vực Thuận An đang phát triển nhanh với hàng loạt khu công nghiệp, khu ...					</p>
+					                    
+					
+					
+					</div>
+					</div>
+									</div>
+			</div>
+		</div><div class="col post-item">
+			<div class="col-inner">
+				<div class="box box-normal box-text-bottom box-blog-post has-hover">
+            					<div class="box-image">
+  						<div class="image-cover" style="padding-top:56.25%;">
+							<a href="https://cayxanhgreenlife.vn/thue-cay-van-phong-thu-dau-mot.html" class="plain" aria-label="Thuê cây văn phòng Thủ Dầu Một – Setup trọn gói trong 24h">
+								<img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/02/thue-cay-van-phong-thu-dau-mot-1.png" class="lazy-load attachment-medium size-medium wp-post-image" alt="Green Life đơn vụ cung cấp dịch vụ thuê cây văn phòng uy tín" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/02/thue-cay-van-phong-thu-dau-mot-1.png 1536w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/02/thue-cay-van-phong-thu-dau-mot-1-1000x667.png 1000w" sizes="(max-width: 300px) 100vw, 300px">							</a>
+  							  							  						</div>
+  						  					</div>
+          					<div class="box-text text-left">
+					<div class="box-text-inner blog-post-inner">
+
+					
+										<h5 class="post-title is-large ">
+						<a href="https://cayxanhgreenlife.vn/thue-cay-van-phong-thu-dau-mot.html" class="plain">Thuê cây văn phòng Thủ Dầu Một – Setup trọn gói trong 24h</a>
+					</h5>
+										<div class="is-divider"></div>
+										<p class="from_the_blog_excerpt ">
+						Bạn đang cần thuê cây văn phòng Thủ Dầu Một để nâng cấp không gian ...					</p>
+					                    
+					
+					
+					</div>
+					</div>
+									</div>
+			</div>
+		</div><div class="col post-item">
+			<div class="col-inner">
+				<div class="box box-normal box-text-bottom box-blog-post has-hover">
+            					<div class="box-image">
+  						<div class="image-cover" style="padding-top:56.25%;">
+							<a href="https://cayxanhgreenlife.vn/cham-soc-cay-xanh-thu-dau-mot.html" class="plain" aria-label="Chăm sóc cây xanh Thủ Dầu Một – Nhận chăm trọn gói cho doanh nghiệp">
+								<img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/02/cham-soc-cay-xanh-thu-dau-mot.png" class="lazy-load attachment-medium size-medium wp-post-image" alt="Dịch vụ chăm sóc cây xanh Thủ Dầu Một" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/02/cham-soc-cay-xanh-thu-dau-mot.png 1536w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/02/cham-soc-cay-xanh-thu-dau-mot-1000x667.png 1000w" sizes="(max-width: 300px) 100vw, 300px">							</a>
+  							  							  						</div>
+  						  					</div>
+          					<div class="box-text text-left">
+					<div class="box-text-inner blog-post-inner">
+
+					
+										<h5 class="post-title is-large ">
+						<a href="https://cayxanhgreenlife.vn/cham-soc-cay-xanh-thu-dau-mot.html" class="plain">Chăm sóc cây xanh Thủ Dầu Một – Nhận chăm trọn gói cho doanh nghiệp</a>
+					</h5>
+										<div class="is-divider"></div>
+										<p class="from_the_blog_excerpt ">
+						Bạn đang tìm dịch vụ chăm sóc cây xanh Thủ Dầu Một chuyên nghiệp, làm ...					</p>
+					                    
+					
+					
+					</div>
+					</div>
+									</div>
+			</div>
+		</div><div class="col post-item">
+			<div class="col-inner">
+				<div class="box box-normal box-text-bottom box-blog-post has-hover">
+            					<div class="box-image">
+  						<div class="image-cover" style="padding-top:56.25%;">
+							<a href="https://cayxanhgreenlife.vn/bao-duong-canh-quan-thu-dau-mot.html" class="plain" aria-label="Bảo dưỡng cảnh quan Thủ Dầu Một – Khảo sát miễn phí, tư vấn 24/7">
+								<img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/02/bao-duong-canh-quan-thu-dau-mot.png" class="lazy-load attachment-medium size-medium wp-post-image" alt="Dịch vụ bảo dưỡng cảnh quan Thủ Dầu Một" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/02/bao-duong-canh-quan-thu-dau-mot.png 1536w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/02/bao-duong-canh-quan-thu-dau-mot-1000x667.png 1000w" sizes="(max-width: 300px) 100vw, 300px">							</a>
+  							  							  						</div>
+  						  					</div>
+          					<div class="box-text text-left">
+					<div class="box-text-inner blog-post-inner">
+
+					
+										<h5 class="post-title is-large ">
+						<a href="https://cayxanhgreenlife.vn/bao-duong-canh-quan-thu-dau-mot.html" class="plain">Bảo dưỡng cảnh quan Thủ Dầu Một – Khảo sát miễn phí, tư vấn 24/7</a>
+					</h5>
+										<div class="is-divider"></div>
+										<p class="from_the_blog_excerpt ">
+						Bạn đang tìm bảo dưỡng cảnh quan Thủ Dầu Một chuyên nghiệp, làm việc bài ...					</p>
+					                    
+					
+					
+					</div>
+					</div>
+									</div>
+			</div>
+		</div><div class="col post-item">
+			<div class="col-inner">
+				<div class="box box-normal box-text-bottom box-blog-post has-hover">
+            					<div class="box-image">
+  						<div class="image-cover" style="padding-top:56.25%;">
+							<a href="https://cayxanhgreenlife.vn/thue-cay-canh-van-phong-binh-duong.html" class="plain" aria-label="Thuê Cây Cảnh Văn Phòng Bình Dương – Giao Tận Nơi, Thay Cây Miễn Phí">
+								<img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://cayxanhgreenlife.vn/wp-content/uploads/2026/02/thue-cay-canh-van-phong-binh-duong.png" class="lazy-load attachment-medium size-medium wp-post-image" alt="Dịch vụ thuê cây văn phòng Bình Dương" srcset="" data-srcset="https://cayxanhgreenlife.vn/wp-content/uploads/2026/02/thue-cay-canh-van-phong-binh-duong.png 1536w, https://cayxanhgreenlife.vn/wp-content/uploads/2026/02/thue-cay-canh-van-phong-binh-duong-1000x667.png 1000w" sizes="(max-width: 300px) 100vw, 300px">							</a>
+  							  							  						</div>
+  						  					</div>
+          					<div class="box-text text-left">
+					<div class="box-text-inner blog-post-inner">
+
+					
+										<h5 class="post-title is-large ">
+						<a href="https://cayxanhgreenlife.vn/thue-cay-canh-van-phong-binh-duong.html" class="plain">Thuê Cây Cảnh Văn Phòng Bình Dương – Giao Tận Nơi, Thay Cây Miễn Phí</a>
+					</h5>
+										<div class="is-divider"></div>
+										<p class="from_the_blog_excerpt ">
+						Không gian làm việc hiện đại không thể thiếu cây xanh. Tuy nhiên, việc mua ...					</p>
+					                    
+					
+					
+					</div>
+					</div>
+									</div>
+			</div>
+		</div></div>
+		</div>
+					</div>
+
+	
+</div>
+		</div>
+
+		
+<style>
+#section_727387858 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+</style>
+	</section>
+	
+
+			
+		
+</div>
+
+
+
+</main>
+
+<footer id="footer" class="footer-wrapper">
+
+	
+	<section class="section footer-section dark" id="section_1469663356">
+		<div class="section-bg fill">
+									
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+
+	<div id="gap-1157970854" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1157970854 {
+  padding-top: 40px;
+}
+</style>
+	</div>
+	
+
+<div class="row row-large" id="row-441883477">
+
+
+	<div id="col-1841262188" class="col medium-12 small-12 large-4">
+				<div class="col-inner">
+			
+			
+
+<h4 style="text-align: justify;">CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ CÂY XANH GREEN LIFE</h4>
+<div class="textwidget custom-html-widget">
+<p data-start="276" data-end="649">Green Life chuyên cung cấp các giải pháp mảng xanh chuyên nghiệp dành cho doanh nghiệp, văn phòng và tòa nhà. Với sứ mệnh kiến tạo không gian làm việc xanh – đẹp – chuẩn mực, chúng tôi tập trung vào thiết kế, thi công và chăm sóc cây xanh theo quy trình bài bản, giúp doanh nghiệp sở hữu môi trường làm việc trong lành, nâng cao hình ảnh thương hiệu và trải nghiệm nhân sự.</p>
+</div>
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-238407784" class="col medium-8 small-12 large-4">
+				<div class="col-inner">
+			
+			
+
+<h4>LIÊN HỆ</h4>
+<p><strong>Văn Phòng: </strong>174 Trần Ngọc Lên Kp 3, Phường Chánh Hiệp, Thành Phố Hồ Chí Minh</p>
+<p><strong>Nhà vườn:</strong> 679 Đường Mỹ Phước Tân Vạn Kp.5, Phường Chánh Hiệp, Thành Phố Hồ Chí Minh</p>
+<p>Điện thoại: 0979.900.533</p>
+<p>Email: cayxanhgreenlife@gmail.com</p>
+<div class="social-icons follow-icons"><a href="#" target="_blank" data-label="Facebook" class="icon primary button circle tooltip facebook" title="Theo dõi trên Facebook" aria-label="Theo dõi trên Facebook" rel="noopener nofollow"><i class="icon-facebook" aria-hidden="true"></i></a><a href="#" target="_blank" data-label="TikTok" class="icon primary button circle tooltip tiktok" title="Theo dõi trên TikTok" aria-label="Theo dõi trên TikTok" rel="noopener nofollow"><i class="icon-tiktok" aria-hidden="true"></i></a><a href="mailto:1" data-label="E-mail" target="_blank" class="icon primary button circle tooltip email" title="Gửi email cho chúng tôi" aria-label="Gửi email cho chúng tôi" rel="nofollow noopener"><i class="icon-envelop" aria-hidden="true"></i></a><a href="tel:2" data-label="Phone" target="_blank" class="icon primary button circle tooltip phone" title="Gọi cho chúng tôi" aria-label="Gọi cho chúng tôi" rel="nofollow noopener"><i class="icon-phone" aria-hidden="true"></i></a><a href="#" data-label="YouTube" target="_blank" class="icon primary button circle tooltip youtube" title="Theo dõi trên YouTube" aria-label="Theo dõi trên YouTube" rel="noopener nofollow"><i class="icon-youtube" aria-hidden="true"></i></a></div>
+
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-384828100" class="col medium-4 small-12 large-4">
+				<div class="col-inner">
+			
+			
+
+<h4><span style="font-size: 95%;">DỊCH VỤ CỦA CHÚNG TÔI</span></h4>
+<p><iframe src="about:blank" width="600" height="250" style="border:0;" allowfullscreen="allowfullscreen" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.348490675955!2d106.6648166!3d11.0124585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d1a86123d825%3A0x5b015c1e3e349159!2zNjc5IMSQLiBN4bu5IFBoxrDhu5tjIC0gVMOibiBW4bqhbiwgUGjDuiBN4bu5LCBUaOG7pyBE4bqndSBN4buZdCwgQsOsbmggRMawxqFuZywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1769416230026!5m2!1svi!2s"></iframe><noscript><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.348490675955!2d106.6648166!3d11.0124585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d1a86123d825%3A0x5b015c1e3e349159!2zNjc5IMSQLiBN4bu5IFBoxrDhu5tjIC0gVMOibiBW4bqhbiwgUGjDuiBN4bu5LCBUaOG7pyBE4bqndSBN4buZdCwgQsOsbmggRMawxqFuZywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1769416230026!5m2!1svi!2s" width="600" height="250" style="border:0;" allowfullscreen="allowfullscreen" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></noscript></p>
+
+		</div>
+					</div>
+
+	
+
+</div>
+
+		</div>
+
+		
+<style>
+#section_1469663356 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: rgb(36, 64, 49);
+}
+</style>
+	</section>
+	
+<div class="absolute-footer dark medium-text-center text-center">
+  <div class="container clearfix">
+
+    
+    <div class="footer-primary pull-left">
+            <div class="copyright-footer">
+        <span style="color: #03322a;">Copyright 2026 © Green Life</span>
+      </div>
+          </div>
+  </div>
+</div>
+<button type="button" id="top-link" class="back-to-top button icon invert plain fixed bottom z-1 is-outline circle hide-for-medium" aria-label="Lên đầu trang"><i class="icon-angle-up" aria-hidden="true"></i></button>
+</footer>
+
+</div>
+
+<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+
+	
+	<div class="sidebar-menu no-scrollbar ">
+
+		
+					<ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-105"><a href="https://cayxanhgreenlife.vn/" aria-current="page">Trang chủ</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619"><a href="https://cayxanhgreenlife.vn/gioi-thieu">Giới thiệu</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-106 has-child" aria-expanded="false"><a href="https://cayxanhgreenlife.vn/cua-hang">Sản phẩm</a>
+<button class="toggle" aria-label="Chuyển đổi"><i class="icon-angle-down" aria-hidden="true"></i></button><ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2870"><a href="https://cayxanhgreenlife.vn/danh-muc/cay-van-phong-cac-loai">Cây văn phòng các loại</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2869"><a href="https://cayxanhgreenlife.vn/danh-muc/cay-cong-trinh">Cây công trình</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2871"><a href="https://cayxanhgreenlife.vn/danh-muc/co-cac-loai">Cỏ các loại</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1528 has-child" aria-expanded="false"><a href="/dich-vu">Dịch vụ</a>
+<button class="toggle" aria-label="Chuyển đổi"><i class="icon-angle-down" aria-hidden="true"></i></button><ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1393"><a href="https://cayxanhgreenlife.vn/dich-vu-cham-soc-cay-xanh">Dịch vụ chăm sóc cây xanh</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3088"><a href="https://cayxanhgreenlife.vn/dich-vu-cho-thue-cay-van-phong">Dịch vụ cho thuê cây văn phòng</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1810"><a href="https://cayxanhgreenlife.vn/dich-vu-bao-duong-va-cham-soc-canh-quan">Dịch vụ bảo dưỡng chăm sóc cảnh quan</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3032"><a href="https://cayxanhgreenlife.vn/du-an">Dự Án</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-946"><a href="https://cayxanhgreenlife.vn/tin-tuc">Tin tức</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1297"><a href="https://cayxanhgreenlife.vn/lien-he">Liên hệ</a></li>
+<li class="header-divider"></li><li id="menu-item-198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198"><a href="https://cayxanhgreenlife.vn/tai-khoan">Tài khoản</a></li>
+<li id="menu-item-199" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-199"><a href="https://cayxanhgreenlife.vn/cua-hang">Sản phẩm</a></li>
+<li id="menu-item-201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-201"><a href="#">Hệ thống cửa hàng</a></li>
+
+<li class="account-item has-icon menu-item">
+			<a href="https://cayxanhgreenlife.vn/tai-khoan" class="nav-top-link nav-top-not-logged-in" title="Đăng nhập">
+			<span class="header-account-title">
+				Đăng nhập			</span>
+		</a>
+	
+	</li>
+<li class="html custom html_topbar_right"><div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background-color: #ffffff; max-width: 100%; margin: 0 auto;">
+  
+  <!-- Phần bên trái: Icon điện thoại và số -->
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <!-- Icon điện thoại -->
+    <div style="position: relative; width: 50px; height: 50px;">
+      <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Vòng tròn nền -->
+        <circle cx="25" cy="25" r="25" fill="#0B7B3F"></circle>
+        <!-- Icon điện thoại -->
+        <path d="M18 16C18 15.4477 18.4477 15 19 15H21.5C21.7761 15 22 15.2239 22 15.5C22 16.8807 23.1193 18 24.5 18C25.8807 18 27 16.8807 27 15.5C27 15.2239 27.2239 15 27.5 15H30C30.5523 15 31 15.4477 31 16V34C31 34.5523 30.5523 35 30 35H19C18.4477 35 18 34.5523 18 34V16Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <!-- Sóng wifi 1 -->
+        <path d="M32 20C32 20 33 21 33 22" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+        <!-- Sóng wifi 2 -->
+        <path d="M34 17C34 17 36 19 36 22" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+        <!-- Sóng wifi 3 -->
+        <path d="M36 14C36 14 39 17 39 22" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+      </svg>
+    </div>
+    
+    <!-- Text -->
+    <div>
+      <div style="font-size: 14px; color: #333333; margin-bottom: 2px;">Chăm sóc khách hàng</div>
+      <div style="font-size: 22px; font-weight: bold; color: #0B7B3F;">0979900533</div>
+    </div>
+  </div>
+  
+  <!-- Khoảng cách giữa -->
+  <div style="flex-grow: 1; min-width: 30px;"></div>
+  
+  <!-- Nút liên hệ Zalo bên phải -->
+  <a href="https://zalo.me/0979900533" target="_blank" style="background-color: #0B7B3F; color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 14px; white-space: nowrap; transition: background-color 0.3s;">
+    LIÊN HỆ NGAY
+  </a>
+  
+</div>
+
+<style>
+/* Hover effect cho nút */
+a[href*="zalo.me"]:hover {
+  background-color: #095c30 !important;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 600px) {
+  div[style*="display: flex; justify-content: space-between"] {
+    flex-direction: column !important;
+    gap: 15px !important;
+    text-align: center !important;
+  }
+  
+  div[style*="display: flex; align-items: center; gap: 10px"] {
+    justify-content: center !important;
+  }
+  
+  div[style*="flex-grow: 1"] {
+    display: none !important;
+  }
+}
+</style></li><li class="html custom html_top_right_text"><div style="max-width: 100%; margin: 30px auto; padding: 0 20px;">
+  
+  <!-- Search Box -->
+  <div class="search-box">
+    
+    <!-- Input tìm kiếm -->
+    <input type="text" placeholder="Tìm kiếm..." style="">
+    
+    <!-- Nút search -->
+    <button type="submit">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2.5"></circle>
+        <path d="M20 20L16.5 16.5" stroke="white" stroke-width="2.5" stroke-linecap="round"></path>
+      </svg>
+    </button>
+    
+  </div>
+  
+  <!-- Text gợi ý bên dưới -->
+  <div class="search-suggest">
+    Bảo dưỡng cảnh quan, thi công cây xanh và cây kiểng văn phòng
+  </div>
+  
+</div>
+<style>
+/* Search box */
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 30px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  
+  /* Shadow mềm */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+/* Focus effect */
+.search-box:has(input:focus) {
+  border-color: #0B7B3F;
+  box-shadow: 0 8px 22px rgba(11, 123, 63, 0.25);
+}
+/* Input */
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 22px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #333333;
+  background-color: transparent;
+}
+/* Placeholder */
+.search-box input::placeholder {
+  color: #aaaaaa;
+  font-size: 14px;
+}
+/* Button */
+.search-box button {
+  background-color: #0B7B3F;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  margin: 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 30px 30px 0;
+  line-height: 1;
+  flex-shrink: 0;
+}
+/* Hover button */
+.search-box button:hover {
+  background-color: #095c30;
+}
+/* Suggest text */
+.search-suggest {
+  margin-top: 10px;
+  padding-left: 5px;
+  font-size: 13px;
+  color: #0B7B3F;
+  line-height: 1.6;
+}
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .search-box input {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+  
+  .search-box button {
+    padding: 10px 22px;
+  }
+  
+  .search-box button svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+</style></li>			</ul>
+		
+		
+	</div>
+
+	
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/flatsome-child\/*","\/wp-content\/themes\/flatsome\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+        <!-- if gom all in one show -->
+                <div id="button-contact-vr" class="">
+            <div id="gom-all-in-one"><!-- v3 -->
+                
+                
+                
+                
+
+                
+                
+                
+                
+                
+                                    <!-- zalo -->
+                    <div id="zalo-vr" class="button-contact">
+                        <div class="phone-vr">
+                            <div class="phone-vr-circle-fill"></div>
+                            <div class="phone-vr-img-circle">
+                                <a target="_blank" href="https://zalo.me/0979900533">
+                                    <img alt="Zalo" src="https://cayxanhgreenlife.vn/wp-content/plugins/button-contact-vr/legacy/img/zalo.png" data-lazy-src="https://cayxanhgreenlife.vn/wp-content/plugins/button-contact-vr/legacy/img/zalo.png" data-ll-status="loaded" class="entered lazyloaded"><noscript><img alt="Zalo" src="https://cayxanhgreenlife.vn/wp-content/plugins/button-contact-vr/legacy/img/zalo.png" /></noscript>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end zalo -->
+                
+                
+                                    <!-- Phone -->
+                    <div id="phone-vr" class="button-contact">
+                        <div class="phone-vr">
+                            <div class="phone-vr-circle-fill"></div>
+                            <div class="phone-vr-img-circle">
+                                <a href="tel:0979900533">
+                                    <img alt="Phone" src="https://cayxanhgreenlife.vn/wp-content/plugins/button-contact-vr/legacy/img/phone.png" data-lazy-src="https://cayxanhgreenlife.vn/wp-content/plugins/button-contact-vr/legacy/img/phone.png" data-ll-status="loaded" class="entered lazyloaded"><noscript><img alt="Phone" src="https://cayxanhgreenlife.vn/wp-content/plugins/button-contact-vr/legacy/img/phone.png" /></noscript>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="phone-bar phone-bar-n">
+                            <a href="tel:0979900533">
+                                <span class="text-phone">0979900533                                </span>
+                            </a>
+                        </div>
+                                        <!-- end phone -->
+
+                                                            </div><!-- end v3 class gom-all-in-one -->
+
+            
+        </div>
+
+        <!-- Add custom css and js -->
+        
+        <script type="rocketlazyloadscript" data-rocket-type="text/javascript">window.addEventListener('DOMContentLoaded', function() {
+            if (document.querySelector("#all-in-one-vr")) {
+                document.querySelector("#all-in-one-vr").addEventListener("click", function() {
+                    document.querySelector("#button-contact-vr").classList.toggle("active");
+                });
+            }
+
+            jQuery(document).ready(function($) {
+                // $('#all-in-one-vr').click(function() {
+                //     $('#button-contact-vr').toggleClass('active');
+                // })
+                $('#contact-form-vr').click(function() {
+                    $('#popup-form-contact-vr').addClass('active');
+                })
+                $('div#popup-form-contact-vr .bg-popup-vr,div#popup-form-contact-vr .content-popup-vr .close-popup-vr').click(function() {
+                    $('#popup-form-contact-vr').removeClass('active');
+                })
+                $('#contact-showroom').click(function() {
+                    $('#popup-showroom-vr').addClass('active');
+                })
+                $('div#popup-showroom-vr .bg-popup-vr,.content-popup-vr .close-popup-vr').click(function() {
+                    $('#popup-showroom-vr').removeClass('active');
+                })
+            });
+        });</script>
+
+        <!-- end Add custom css and js -->
+
+
+                    <!-- color phone -->
+            <style>
+                .phone-bar a,
+                #phone-vr .phone-vr-circle-fill,
+                #phone-vr .phone-vr-img-circle,
+                #phone-vr .phone-bar a {
+                    background-color: #dd3333;
+                }
+
+                #phone-vr .phone-vr-circle-fill {
+                    opacity: 0.7;
+                    box-shadow: 0 0 0 0 #dd3333;
+                }
+
+                .phone-bar2 a,
+                #phone-vr2 .phone-vr-circle-fill,
+                #phone-vr2 .phone-vr-img-circle,
+                #phone-vr2 .phone-bar a {
+                    background-color: ;
+                }
+
+                #phone-vr2 .phone-vr-circle-fill {
+                    opacity: 0.7;
+                    box-shadow: 0 0 0 0 ;
+                }
+
+                .phone-bar3 a,
+                #phone-vr3 .phone-vr-circle-fill,
+                #phone-vr3 .phone-vr-img-circle,
+                #phone-vr3 .phone-bar a {
+                    background-color: ;
+                }
+
+                #phone-vr3 .phone-vr-circle-fill {
+                    opacity: 0.7;
+                    box-shadow: 0 0 0 0 ;
+                }
+            </style>
+            <!-- color phone -->
+        
+        
+        
+        
+                
+        
+        
+        
+        
+                	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<link data-minify="1" rel="stylesheet" id="wc-blocks-style-css" href="https://cayxanhgreenlife.vn/wp-content/cache/min/1/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=1770630516" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--primary: #16634f;--wp--preset--color--secondary: #fa0a0a;--wp--preset--color--success: #dca623;--wp--preset--color--alert: #f9c51a;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){margin-left: auto !important;margin-right: auto !important;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: none;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-success-color{color: var(--wp--preset--color--success) !important;}.has-alert-color{color: var(--wp--preset--color--alert) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-success-background-color{background-color: var(--wp--preset--color--success) !important;}.has-alert-background-color{background-color: var(--wp--preset--color--alert) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-success-border-color{border-color: var(--wp--preset--color--success) !important;}.has-alert-border-color{border-color: var(--wp--preset--color--alert) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://cayxanhgreenlife.vn/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://cayxanhgreenlife.vn/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://cayxanhgreenlife.vn/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.4" id="swv-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="contact-form-7-js-translations">
+/* <![CDATA[ */
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2024-08-11 13:44:17+0000","generator":"GlotPress\/4.0.3","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=1; plural=0;","lang":"vi_VN"},"This contact form is placed in the wrong place.":["Bi\u1ec3u m\u1eabu li\u00ean h\u1ec7 n\u00e0y \u0111\u01b0\u1ee3c \u0111\u1eb7t sai v\u1ecb tr\u00ed."],"Error:":["L\u1ed7i:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/cayxanhgreenlife.vn\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://cayxanhgreenlife.vn/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.4" id="contact-form-7-js" defer=""></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_password_show":"Hi\u1ec3n th\u1ecb m\u1eadt kh\u1ea9u","i18n_password_hide":"\u1ea8n m\u1eadt kh\u1ea9u"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=10.3.5" id="woocommerce-js" data-wp-strategy="defer" defer=""></script>
+<script type="text/javascript" id="rocket_lazyload_css-js-extra">
+/* <![CDATA[ */
+var rocket_lazyload_css_data = {"threshold":"300"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket_lazyload_css-js-after">
+/* <![CDATA[ */
+!function o(n,c,i){function s(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(u)return u(t,!0);throw(r=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",r}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return s(n[t][1][e]||e)},r,r.exports,o,n,c,i)}return c[t].exports}for(var u="function"==typeof require&&require,e=0;e<i.length;e++)s(i[e]);return s}({1:[function(e,t,r){"use strict";!function(){const r="undefined"==typeof rocket_pairs?[]:rocket_pairs,o=document.querySelector("#wpr-lazyload-bg");var e=rocket_lazyload_css_data.threshold||300;const n=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){const e=r.filter(e=>t.target.matches(e.selector));e.map(e=>{e&&(o.innerHTML+=e.style,e.elements.forEach(e=>{e.setAttribute("data-rocket-lazy-bg","loaded"),n.unobserve(e)}))})}})},{rootMargin:e+"px"});function t(){let e=0<arguments.length&&void 0!==arguments[0]?arguments[0]:[];0!==e.length&&!e.find(e=>"attributes"!==e.type||"class"===e.attributeName)||r.forEach(t=>{try{const e=document.querySelectorAll(t.selector);e.forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg")&&(n.observe(e),(t.elements||(t.elements=[])).push(e))})}catch(e){console.error(e)}})}t();const c=function(){const o=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType){const r=new o(t);return r.observe(e,{attributes:!0,childList:!0,subtree:!0}),r}}}();e=document.querySelector("body"),c(e,t)}()},{}]},{},[1]);
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-includes/js/hoverIntent.min.js?ver=1.10.2" id="hoverIntent-js" defer=""></script>
+<script type="text/javascript" id="flatsome-js-js-extra">
+/* <![CDATA[ */
+var flatsomeVars = {"theme":{"version":"3.20.3"},"ajaxurl":"https:\/\/cayxanhgreenlife.vn\/wp-admin\/admin-ajax.php","rtl":"","sticky_height":"50","stickyHeaderHeight":"0","scrollPaddingTop":"0","assets_url":"https:\/\/cayxanhgreenlife.vn\/wp-content\/themes\/flatsome\/assets\/","lightbox":{"close_markup":"<button title=\"%title%\" type=\"button\" class=\"mfp-close\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"><\/line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"><\/line><\/svg><\/button>","close_btn_inside":false},"user":{"can_edit_pages":false},"i18n":{"mainMenu":"Menu ch\u00ednh","toggleButton":"Chuy\u1ec3n \u0111\u1ed5i"},"options":{"cookie_notice_version":"1","swatches_layout":false,"swatches_disable_deselect":false,"swatches_box_select_event":false,"swatches_box_behavior_selected":false,"swatches_box_update_urls":"1","swatches_box_reset":false,"swatches_box_reset_limited":false,"swatches_box_reset_extent":false,"swatches_box_reset_time":300,"search_result_latency":"0","header_nav_vertical_fly_out_frontpage":1},"is_mini_cart_reveal":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/themes/flatsome/assets/js/flatsome.js?ver=e2eddd6c228105dac048" id="flatsome-js-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/themes/flatsome/inc/integrations/wp-rocket/flatsome-wp-rocket.js?ver=3.20.3" id="flatsome-wp-rocket-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://cayxanhgreenlife.vn/wp-content/themes/flatsome/assets/js/extensions/flatsome-live-search.js?ver=3.20.3" id="flatsome-live-search-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=10.3.5" id="sourcebuster-js-js" defer=""></script>
+<script type="text/javascript" id="wc-order-attribution-js-extra">
+/* <![CDATA[ */
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https:\/\/cayxanhgreenlife.vn\/wp-admin\/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.3.5" id="wc-order-attribution-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/themes/flatsome/inc/extensions/flatsome-lazy-load/flatsome-lazy-load.js?ver=3.20.3" id="flatsome-lazy-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/themes/flatsome/assets/js/woocommerce.js?ver=1c9be63d628ff7c3ff4c" id="flatsome-theme-woocommerce-js-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce-products-filter/js/icheck/icheck.min.js?ver=6.8.3" id="icheck-jquery-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce-products-filter/js/front.js?ver=6.8.3" id="woof_front-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce-products-filter/js/html_types/radio.js?ver=6.8.3" id="woof_radio_html_items-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce-products-filter/js/html_types/checkbox.js?ver=6.8.3" id="woof_checkbox_html_items-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce-products-filter/js/html_types/select.js?ver=6.8.3" id="woof_select_html_items-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce-products-filter/js/html_types/mselect.js?ver=6.8.3" id="woof_mselect_html_items-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce-products-filter/js/chosen/chosen.jquery.min.js?ver=6.8.3" id="chosen-drop-down-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce-products-filter/js/malihu-custom-scrollbar/jquery.mousewheel.min.js?ver=6.8.3" id="mousewheel-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce-products-filter/js/malihu-custom-scrollbar/jquery.mCustomScrollbar.min.js?ver=6.8.3" id="malihu-custom-scrollbar-js" defer=""></script>
+<script type="text/javascript" src="https://cayxanhgreenlife.vn/wp-content/plugins/woocommerce-products-filter/js/malihu-custom-scrollbar/jquery.mCustomScrollbar.concat.min.js?ver=6.8.3" id="malihu-custom-scrollbar-concat-js" defer=""></script>
+
+		<style type="text/css">
+	
+	
+
+
+	
+
+	
+
+
+
+		        .woof_edit_view{
+	    	display: none;
+	        }
+	
+	</style>
+	
+
+	<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="https://cayxanhgreenlife.vn/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script>
+
+
+
+<div id="woof_html_buffer" class="woof_info_popup" style="display: none;"></div></body></html>
