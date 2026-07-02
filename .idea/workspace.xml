@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e385be3-72ad-4985-a54b-98098b984f56" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/adcfoods-com-15186.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-config.php" afterPath="$PROJECT_DIR$/wp-config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/custom-api-core/modules/finding-keo.php" afterPath="$PROJECT_DIR$/wp-content/plugins/custom-api-core/modules/finding-keo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/custom-api-core/modules/invite-api.php" afterPath="$PROJECT_DIR$/wp-content/plugins/custom-api-core/modules/invite-api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/phoenix_notify/phoenix_notify.php" afterPath="$PROJECT_DIR$/wp-content/plugins/phoenix_notify/phoenix_notify.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/spiritwebs-chat/spiritwebs-chat.php" afterPath="$PROJECT_DIR$/wp-content/plugins/spiritwebs-chat/spiritwebs-chat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/spiritwebs-socket-client/spiritwebs-socket-client.php" afterPath="$PROJECT_DIR$/wp-content/plugins/spiritwebs-socket-client/spiritwebs-socket-client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/spiritwebs-socket-server/spiritwebs-dashboard.php" afterPath="$PROJECT_DIR$/wp-content/plugins/spiritwebs-socket-server/spiritwebs-dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-crypto/wp-crypto.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-crypto/wp-crypto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yellows-companies/yellows-companies.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yellows-companies/yellows-companies.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/woodmart/admin-jqgrid.js" afterPath="$PROJECT_DIR$/wp-content/themes/woodmart/admin-jqgrid.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/woodmart/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/woodmart/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -364,12 +353,12 @@
       <option name="presentableId" value="Default" />
       <updated>1782840427735</updated>
       <workItem from="1782840476835" duration="1311000" />
-      <workItem from="1782994060741" duration="3992000" />
+      <workItem from="1782994060741" duration="4043000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5303000" />
+    <option name="totallyTimeSpent" value="5354000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />

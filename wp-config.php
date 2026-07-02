@@ -258,6 +258,9 @@ define('SPIRIT_SOCKET_HOST', 'socket.okinawanew.com');
 define('SPIRIT_WEB_URL', 'https://' . SPIRIT_WEB_HOST);
 define('SPIRIT_SOCKET_URL', 'https://' . SPIRIT_SOCKET_HOST);
 
+define('WP_HOME', 'https://spiritwebs.okinawanew.com');
+define('WP_SITEURL', 'https://spiritwebs.okinawanew.com');
+
 /* That's all, stop editing! Happy publishing. */
 
 
