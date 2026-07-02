@@ -105,7 +105,7 @@ function finding_keo_on($request) {
     $meta_avatar = get_user_meta($user_id, 'avatar_url', true);
     $avatar_url  = $meta_avatar ?: get_avatar_url($user_id);
 
-    wp_remote_post('https://socket.spiritwebs.com/api/finding-keo/on', [
+    wp_remote_post(SPIRIT_SOCKET_URL . '/api/finding-keo/on', [
         'method'  => 'POST',
         'headers' => [
             'Content-Type' => 'application/json',
@@ -146,7 +146,7 @@ function finding_keo_off($request) {
     ], ['user_id' => $user_id]);
 
     // 🆕 THÊM VÀO ĐÂY — sau khi update DB xong
-    wp_remote_post('https://socket.spiritwebs.com/api/finding-keo/off', [
+    wp_remote_post(SPIRIT_SOCKET_URL . '/api/finding-keo/off', [
         'method'  => 'POST',
         'headers' => [
             'Content-Type' => 'application/json',

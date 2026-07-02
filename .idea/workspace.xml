@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e385be3-72ad-4985-a54b-98098b984f56" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/adcfoods-com-15186.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-config.php" afterPath="$PROJECT_DIR$/wp-config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/custom-api-core/modules/finding-keo.php" afterPath="$PROJECT_DIR$/wp-content/plugins/custom-api-core/modules/finding-keo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/custom-api-core/modules/invite-api.php" afterPath="$PROJECT_DIR$/wp-content/plugins/custom-api-core/modules/invite-api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/phoenix_notify/phoenix_notify.php" afterPath="$PROJECT_DIR$/wp-content/plugins/phoenix_notify/phoenix_notify.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/spiritwebs-chat/spiritwebs-chat.php" afterPath="$PROJECT_DIR$/wp-content/plugins/spiritwebs-chat/spiritwebs-chat.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/spiritwebs-socket-client/spiritwebs-socket-client.php" afterPath="$PROJECT_DIR$/wp-content/plugins/spiritwebs-socket-client/spiritwebs-socket-client.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/spiritwebs-socket-server/spiritwebs-dashboard.php" afterPath="$PROJECT_DIR$/wp-content/plugins/spiritwebs-socket-server/spiritwebs-dashboard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-crypto/wp-crypto.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-crypto/wp-crypto.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yellows-companies/yellows-companies.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yellows-companies/yellows-companies.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/woodmart/admin-jqgrid.js" afterPath="$PROJECT_DIR$/wp-content/themes/woodmart/admin-jqgrid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/woodmart/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/woodmart/functions.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,8 +23,220 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="wp-config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="258" column="25" lean-forward="false" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/woodmart/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="5701" column="16" lean-forward="false" selection-start-line="5701" selection-start-column="16" selection-end-line="5701" selection-end-column="16" />
+              <folding>
+                <marker date="1783000350177" expanded="true" signature="2218:2585" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="2270:2573" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="2717:3044" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="2739:3032" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="9276:9359" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="18077:18877" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="18116:18195" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="18233:18313" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="18412:18529" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="18580:18697" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="18748:18865" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="23529:24729" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="23594:23709" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="23732:23793" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="23809:24071" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="24106:24356" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="24403:24520" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="24569:24721" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="25344:25374" ph="SELECT DISTI... ${$table_name}" />
+                <marker date="1783000350177" expanded="true" signature="27654:27693" ph="SELECT COUNT... ${$selected_table}" />
+                <marker date="1783000350177" expanded="true" signature="27933:28021" ph="SELECT * FRO... ${$selected_table}" />
+                <marker date="1783000350177" expanded="true" signature="29966:30224" ph="..." />
+                <marker date="1783000350177" expanded="false" signature="29977:30060" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="30116:30184" ph="..." />
+                <marker date="1783000350177" expanded="false" signature="30281:30503" ph="..." />
+                <marker date="1783000350177" expanded="false" signature="30544:30583" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="30617:30726" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="31067:31109" ph="SELECT name wp_district" />
+                <marker date="1783000350177" expanded="true" signature="31729:31768" ph="SELECT name wp_wards" />
+                <marker date="1783000350177" expanded="true" signature="32699:32737" ph="..." />
+                <marker date="1783000350177" expanded="false" signature="32878:33130" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="33174:33283" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="33782:33816" ph="SELECT id, `... wp_province" />
+                <marker date="1783000350177" expanded="true" signature="34420:34453" ph="SELECT id, `... wp_duan" />
+                <marker date="1783000350177" expanded="true" signature="35820:36042" ph="SELECT table... wp_jq_sys_format" />
+                <marker date="1783000350177" expanded="true" signature="39129:39157" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="39457:39543" ph="SELECT DISTI... wp_district" />
+                <marker date="1783000350177" expanded="true" signature="40323:40406" ph="SELECT DISTI... wp_wards" />
+                <marker date="1783000350177" expanded="true" signature="41105:41219" ph="SELECT DISTI... ${$selected_table}" />
+                <marker date="1783000350177" expanded="true" signature="56518:56651" ph="SELECT id, `... wp_district" />
+                <marker date="1783000350177" expanded="true" signature="57935:58061" ph="SELECT id, `... wp_wards" />
+                <marker date="1783000350177" expanded="true" signature="58958:59008" ph="SELECT id, n... wp_province" />
+                <marker date="1783000350177" expanded="true" signature="59258:59309" ph="SELECT id, n... relationship" />
+                <marker date="1783000350177" expanded="true" signature="60905:60921" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="68668:68741" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="70054:70171" ph="SELECT user_... $" />
+                <marker date="1783000350177" expanded="true" signature="75220:75433" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="75259:75421" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="75513:75614" ph="SELECT produ... wp_dulieunhadat" />
+                <marker date="1783000350177" expanded="true" signature="77752:77768" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="77873:79642" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="78205:79627" ph="{&quot;type&quot;: &quot;bar&quot;...}" />
+                <marker date="1783000350177" expanded="true" signature="78250:79202" ph="{&quot;labels&quot;: EXTERNAL_FRAGMENT...}" />
+                <marker date="1783000350177" expanded="true" signature="78332:79188" ph="[...]" />
+                <marker date="1783000350177" expanded="true" signature="78333:78757" ph="{&quot;label&quot;: &quot;Số lượng sản phẩm&quot;...}" />
+                <marker date="1783000350177" expanded="true" signature="78759:79187" ph="{&quot;data&quot;: adjustedPrices...}" />
+                <marker date="1783000350177" expanded="true" signature="79225:79617" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="79285:79603" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="79310:79585" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="79386:79563" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="79442:79537" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="79779:79993" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="79819:79981" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="80094:80135" ph="SELECT prope... wp_dulieunhadat" />
+                <marker date="1783000350177" expanded="true" signature="81674:81690" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="81795:82518" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="81880:82503" ph="{&quot;type&quot;: &quot;bar&quot;...}" />
+                <marker date="1783000350177" expanded="true" signature="81925:82368" ph="{&quot;labels&quot;: EXTERNAL_FRAGMENT...}" />
+                <marker date="1783000350177" expanded="true" signature="82007:82354" ph="[...]" />
+                <marker date="1783000350177" expanded="true" signature="82008:82353" ph="{&quot;label&quot;: &quot;Số lượng sản phẩm&quot;...}" />
+                <marker date="1783000350177" expanded="true" signature="82178:82191" ph="/*...*/" />
+                <marker date="1783000350177" expanded="true" signature="82250:82263" ph="/*...*/" />
+                <marker date="1783000350177" expanded="true" signature="82391:82493" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="82662:82879" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="82705:82867" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="82982:83026" ph="SELECT trans... wp_dulieunhadat" />
+                <marker date="1783000350177" expanded="true" signature="84118:84134" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="84239:84953" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="84327:84938" ph="{&quot;type&quot;: &quot;bar&quot;...}" />
+                <marker date="1783000350177" expanded="true" signature="84372:84803" ph="{&quot;labels&quot;: EXTERNAL_FRAGMENT...}" />
+                <marker date="1783000350177" expanded="true" signature="84454:84789" ph="[...]" />
+                <marker date="1783000350177" expanded="true" signature="84455:84788" ph="{&quot;label&quot;: &quot;Số lượng giao dịch&quot;...}" />
+                <marker date="1783000350177" expanded="true" signature="84826:84928" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="85234:85437" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="91527:91800" ph="SELECT id, s... $" />
+                <marker date="1783000350177" expanded="true" signature="98390:98475" ph="SELECT COUNT... ${$table}" />
+                <marker date="1783000350177" expanded="true" signature="99808:100133" ph="SELECT p.nam... ${$pub_table}" />
+                <marker date="1783000350177" expanded="true" signature="101235:101501" ph="SELECT p.nam... ${$pub_table}" />
+                <marker date="1783000350177" expanded="true" signature="105029:105846" ph="SELECT cm1.s... ${$table}" />
+                <marker date="1783000350177" expanded="true" signature="105183:105524" ph="SELECT CASE ${$table}" />
+                <marker date="1783000350177" expanded="true" signature="111101:111252" ph="SELECT id, s... $" />
+                <marker date="1783000350177" expanded="true" signature="115233:115313" ph="SELECT DISTI... $" />
+                <marker date="1783000350177" expanded="true" signature="123542:123596" ph="SELECT * FRO... $" />
+                <marker date="1783000350177" expanded="true" signature="124916:124980" ph="SELECT * FRO... ${$table}" />
+                <marker date="1783000350177" expanded="true" signature="128857:128928" ph="SELECT * FRO... ${$table}" />
+                <marker date="1783000350177" expanded="true" signature="130505:130576" ph="SELECT * FRO... ${$table}" />
+                <marker date="1783000350177" expanded="true" signature="131428:132140" ph="SELECT id, n... wp_pubs" />
+                <marker date="1783000350177" expanded="true" signature="133357:133567" ph="SELECT id, n... wp_pubs" />
+                <marker date="1783000350177" expanded="true" signature="135225:135745" ph="SELECT p.id,... ${$pub_table}" />
+                <marker date="1783000350177" expanded="true" signature="138542:138746" ph="SELECT tt.te... $" />
+                <marker date="1783000350177" expanded="true" signature="138861:140246" ph="SELECT d.ID,... ID" />
+                <marker date="1783000350177" expanded="true" signature="139505:140097" ph="SELECT p.ID,... " />
+                <marker date="1783000350177" expanded="true" signature="146571:146618" ph="SELECT fcm_t... ${$table}" />
+                <marker date="1783000350177" expanded="false" signature="152043:152343" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="152344:153139" ph="..." />
+                <marker date="1783000350177" expanded="false" signature="152365:152399" ph="..." />
+                <marker date="1783000350177" expanded="false" signature="152428:152459" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="152460:152489" ph="..." />
+                <marker date="1783000350177" expanded="false" signature="152508:152551" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="152552:152584" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="152662:152916" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="152673:152878" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="152913:152916" ph="..." />
+                <marker date="1783000350177" expanded="false" signature="152935:152978" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="152979:153127" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="155038:155137" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="155076:155125" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="155201:155312" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="155251:155300" ph="{...}" />
+                <marker date="1783000350177" expanded="true" signature="158235:158511" ph="SELECT s.id,... ${$snapshots_table}" />
+                <marker date="1783000350177" expanded="false" signature="168347:168389" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="168390:168459" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="169673:169910" ph="..." />
+                <marker date="1783000350177" expanded="false" signature="169724:169755" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="169807:169887" ph="..." />
+                <marker date="1783000350177" expanded="true" signature="171851:172022" ph="SELECT user_... wp_invite_participants" />
+                <marker date="1783000350177" expanded="true" signature="172276:172381" ph="SELECT user_... wp_invite_spins" />
+                <marker date="1783000350177" expanded="true" signature="174529:174651" ph="SELECT phone... ${$table}" />
+                <marker date="1783000350177" expanded="true" signature="175152:175206" ph="SELECT * FRO... wp_invites" />
+                <marker date="1783000350177" expanded="true" signature="175510:175641" ph="SELECT * FRO... wp_invite_participants" />
+                <marker date="1783000350177" expanded="true" signature="176884:176938" ph="SELECT * FRO... wp_invites" />
+                <marker date="1783000350177" expanded="true" signature="177063:177152" ph="SELECT * FRO... wp_invite_participants" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wp-load.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-load.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-704">
+              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>socket.spiritweb</find>
+      <find>socket.spiritwe</find>
+      <find>socket.spiritw</find>
+      <find>socket.spirit</find>
+      <find>socket.spiri</find>
+      <find>socket.spir</find>
+      <find>socket.spi</find>
+      <find>spi</find>
+      <find>spiri</find>
+      <find>SPIRIT_WEB_URL . &quot;</find>
+      <find>SPIRIT_WEB_URL .&quot;</find>
+      <find>SPIRIT_WEB_URL .</find>
+      <find>SPIRIT_WEB_URL</find>
+      <find>SPIRIT_WEB_URL</find>
+      <find>s</find>
+      <find>spiritwew</find>
+      <find>spiritwebs.co</find>
+      <find>shortcode('spirit_qr_join', function () {</find>
+      <find>sp</find>
+      <find>spirti</find>
+      <find>spirt</find>
+      <find>spir</find>
+      <find>spirit</find>
+      <find>spiritwe</find>
+      <find>spiritweb</find>
+      <find>spiritweb.</find>
+      <find>spiritwebs</find>
+      <find>spiritwebs.</find>
+      <find>spiritwebs.c</find>
+      <find>spiritwebs.com</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\Users\admin\spiritwebs.com-new\demo</dir>
+    </dirStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/wp-config.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/woodmart/functions.php" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -65,14 +288,54 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wp-admin" />
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiritwebs.com-new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiritwebs.com-new" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiritwebs.com-new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiritwebs.com-new" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woodmart" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -101,31 +364,32 @@
       <option name="presentableId" value="Default" />
       <updated>1782840427735</updated>
       <workItem from="1782840476835" duration="1311000" />
+      <workItem from="1782994060741" duration="3992000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1311000" />
+    <option name="totallyTimeSpent" value="5303000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25378788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3311148" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -138,5 +402,164 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wp-load.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-704">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="258" column="25" lean-forward="false" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/woodmart/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5701" column="16" lean-forward="false" selection-start-line="5701" selection-start-column="16" selection-end-line="5701" selection-end-column="16" />
+          <folding>
+            <marker date="1783000350177" expanded="true" signature="2218:2585" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="2270:2573" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="2717:3044" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="2739:3032" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="9276:9359" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="18077:18877" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="18116:18195" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="18233:18313" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="18412:18529" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="18580:18697" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="18748:18865" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="23529:24729" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="23594:23709" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="23732:23793" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="23809:24071" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="24106:24356" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="24403:24520" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="24569:24721" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="25344:25374" ph="SELECT DISTI... ${$table_name}" />
+            <marker date="1783000350177" expanded="true" signature="27654:27693" ph="SELECT COUNT... ${$selected_table}" />
+            <marker date="1783000350177" expanded="true" signature="27933:28021" ph="SELECT * FRO... ${$selected_table}" />
+            <marker date="1783000350177" expanded="true" signature="29966:30224" ph="..." />
+            <marker date="1783000350177" expanded="false" signature="29977:30060" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="30116:30184" ph="..." />
+            <marker date="1783000350177" expanded="false" signature="30281:30503" ph="..." />
+            <marker date="1783000350177" expanded="false" signature="30544:30583" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="30617:30726" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="31067:31109" ph="SELECT name wp_district" />
+            <marker date="1783000350177" expanded="true" signature="31729:31768" ph="SELECT name wp_wards" />
+            <marker date="1783000350177" expanded="true" signature="32699:32737" ph="..." />
+            <marker date="1783000350177" expanded="false" signature="32878:33130" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="33174:33283" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="33782:33816" ph="SELECT id, `... wp_province" />
+            <marker date="1783000350177" expanded="true" signature="34420:34453" ph="SELECT id, `... wp_duan" />
+            <marker date="1783000350177" expanded="true" signature="35820:36042" ph="SELECT table... wp_jq_sys_format" />
+            <marker date="1783000350177" expanded="true" signature="39129:39157" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="39457:39543" ph="SELECT DISTI... wp_district" />
+            <marker date="1783000350177" expanded="true" signature="40323:40406" ph="SELECT DISTI... wp_wards" />
+            <marker date="1783000350177" expanded="true" signature="41105:41219" ph="SELECT DISTI... ${$selected_table}" />
+            <marker date="1783000350177" expanded="true" signature="56518:56651" ph="SELECT id, `... wp_district" />
+            <marker date="1783000350177" expanded="true" signature="57935:58061" ph="SELECT id, `... wp_wards" />
+            <marker date="1783000350177" expanded="true" signature="58958:59008" ph="SELECT id, n... wp_province" />
+            <marker date="1783000350177" expanded="true" signature="59258:59309" ph="SELECT id, n... relationship" />
+            <marker date="1783000350177" expanded="true" signature="60905:60921" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="68668:68741" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="70054:70171" ph="SELECT user_... $" />
+            <marker date="1783000350177" expanded="true" signature="75220:75433" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="75259:75421" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="75513:75614" ph="SELECT produ... wp_dulieunhadat" />
+            <marker date="1783000350177" expanded="true" signature="77752:77768" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="77873:79642" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="78205:79627" ph="{&quot;type&quot;: &quot;bar&quot;...}" />
+            <marker date="1783000350177" expanded="true" signature="78250:79202" ph="{&quot;labels&quot;: EXTERNAL_FRAGMENT...}" />
+            <marker date="1783000350177" expanded="true" signature="78332:79188" ph="[...]" />
+            <marker date="1783000350177" expanded="true" signature="78333:78757" ph="{&quot;label&quot;: &quot;Số lượng sản phẩm&quot;...}" />
+            <marker date="1783000350177" expanded="true" signature="78759:79187" ph="{&quot;data&quot;: adjustedPrices...}" />
+            <marker date="1783000350177" expanded="true" signature="79225:79617" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="79285:79603" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="79310:79585" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="79386:79563" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="79442:79537" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="79779:79993" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="79819:79981" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="80094:80135" ph="SELECT prope... wp_dulieunhadat" />
+            <marker date="1783000350177" expanded="true" signature="81674:81690" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="81795:82518" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="81880:82503" ph="{&quot;type&quot;: &quot;bar&quot;...}" />
+            <marker date="1783000350177" expanded="true" signature="81925:82368" ph="{&quot;labels&quot;: EXTERNAL_FRAGMENT...}" />
+            <marker date="1783000350177" expanded="true" signature="82007:82354" ph="[...]" />
+            <marker date="1783000350177" expanded="true" signature="82008:82353" ph="{&quot;label&quot;: &quot;Số lượng sản phẩm&quot;...}" />
+            <marker date="1783000350177" expanded="true" signature="82178:82191" ph="/*...*/" />
+            <marker date="1783000350177" expanded="true" signature="82250:82263" ph="/*...*/" />
+            <marker date="1783000350177" expanded="true" signature="82391:82493" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="82662:82879" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="82705:82867" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="82982:83026" ph="SELECT trans... wp_dulieunhadat" />
+            <marker date="1783000350177" expanded="true" signature="84118:84134" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="84239:84953" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="84327:84938" ph="{&quot;type&quot;: &quot;bar&quot;...}" />
+            <marker date="1783000350177" expanded="true" signature="84372:84803" ph="{&quot;labels&quot;: EXTERNAL_FRAGMENT...}" />
+            <marker date="1783000350177" expanded="true" signature="84454:84789" ph="[...]" />
+            <marker date="1783000350177" expanded="true" signature="84455:84788" ph="{&quot;label&quot;: &quot;Số lượng giao dịch&quot;...}" />
+            <marker date="1783000350177" expanded="true" signature="84826:84928" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="85234:85437" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="91527:91800" ph="SELECT id, s... $" />
+            <marker date="1783000350177" expanded="true" signature="98390:98475" ph="SELECT COUNT... ${$table}" />
+            <marker date="1783000350177" expanded="true" signature="99808:100133" ph="SELECT p.nam... ${$pub_table}" />
+            <marker date="1783000350177" expanded="true" signature="101235:101501" ph="SELECT p.nam... ${$pub_table}" />
+            <marker date="1783000350177" expanded="true" signature="105029:105846" ph="SELECT cm1.s... ${$table}" />
+            <marker date="1783000350177" expanded="true" signature="105183:105524" ph="SELECT CASE ${$table}" />
+            <marker date="1783000350177" expanded="true" signature="111101:111252" ph="SELECT id, s... $" />
+            <marker date="1783000350177" expanded="true" signature="115233:115313" ph="SELECT DISTI... $" />
+            <marker date="1783000350177" expanded="true" signature="123542:123596" ph="SELECT * FRO... $" />
+            <marker date="1783000350177" expanded="true" signature="124916:124980" ph="SELECT * FRO... ${$table}" />
+            <marker date="1783000350177" expanded="true" signature="128857:128928" ph="SELECT * FRO... ${$table}" />
+            <marker date="1783000350177" expanded="true" signature="130505:130576" ph="SELECT * FRO... ${$table}" />
+            <marker date="1783000350177" expanded="true" signature="131428:132140" ph="SELECT id, n... wp_pubs" />
+            <marker date="1783000350177" expanded="true" signature="133357:133567" ph="SELECT id, n... wp_pubs" />
+            <marker date="1783000350177" expanded="true" signature="135225:135745" ph="SELECT p.id,... ${$pub_table}" />
+            <marker date="1783000350177" expanded="true" signature="138542:138746" ph="SELECT tt.te... $" />
+            <marker date="1783000350177" expanded="true" signature="138861:140246" ph="SELECT d.ID,... ID" />
+            <marker date="1783000350177" expanded="true" signature="139505:140097" ph="SELECT p.ID,... " />
+            <marker date="1783000350177" expanded="true" signature="146571:146618" ph="SELECT fcm_t... ${$table}" />
+            <marker date="1783000350177" expanded="false" signature="152043:152343" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="152344:153139" ph="..." />
+            <marker date="1783000350177" expanded="false" signature="152365:152399" ph="..." />
+            <marker date="1783000350177" expanded="false" signature="152428:152459" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="152460:152489" ph="..." />
+            <marker date="1783000350177" expanded="false" signature="152508:152551" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="152552:152584" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="152662:152916" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="152673:152878" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="152913:152916" ph="..." />
+            <marker date="1783000350177" expanded="false" signature="152935:152978" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="152979:153127" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="155038:155137" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="155076:155125" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="155201:155312" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="155251:155300" ph="{...}" />
+            <marker date="1783000350177" expanded="true" signature="158235:158511" ph="SELECT s.id,... ${$snapshots_table}" />
+            <marker date="1783000350177" expanded="false" signature="168347:168389" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="168390:168459" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="169673:169910" ph="..." />
+            <marker date="1783000350177" expanded="false" signature="169724:169755" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="169807:169887" ph="..." />
+            <marker date="1783000350177" expanded="true" signature="171851:172022" ph="SELECT user_... wp_invite_participants" />
+            <marker date="1783000350177" expanded="true" signature="172276:172381" ph="SELECT user_... wp_invite_spins" />
+            <marker date="1783000350177" expanded="true" signature="174529:174651" ph="SELECT phone... ${$table}" />
+            <marker date="1783000350177" expanded="true" signature="175152:175206" ph="SELECT * FRO... wp_invites" />
+            <marker date="1783000350177" expanded="true" signature="175510:175641" ph="SELECT * FRO... wp_invite_participants" />
+            <marker date="1783000350177" expanded="true" signature="176884:176938" ph="SELECT * FRO... wp_invites" />
+            <marker date="1783000350177" expanded="true" signature="177063:177152" ph="SELECT * FRO... wp_invite_participants" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

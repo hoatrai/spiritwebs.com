@@ -45,7 +45,7 @@ function spiritwebs_chat_embed() {
     <div id="spiritwebs-chat-toggle" aria-label="Mở chat AI">💬</div>
     <iframe
             id="spiritwebs-chat-frame"
-            src="https://socket.spiritwebs.com/chat"
+            src="<?= SPIRIT_SOCKET_URL ?>/chat"
             allow="camera; microphone"
             loading="lazy"
             sandbox="allow-scripts allow-forms allow-same-origin"

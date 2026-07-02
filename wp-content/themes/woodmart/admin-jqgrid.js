@@ -1098,7 +1098,7 @@ jQuery(document).ready(function ($) {
                     pager: "#jqGridPager",
                     rowList: [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 100000000],
                      recordtext: "Hiển thị {0} - {1} của {2}",
-                    //recordtext: "spiritwebs.com",
+                    //recordtext: "spiritwebs.okinawanew.com",
                     pgtext: "Trang {0}",
                     emptyrecords: "Không có dữ liệu",
                     selectable: true, // tuỳ phiên bản
@@ -7756,7 +7756,7 @@ jQuery(document).ready(function ($) {
                                                     ctx.font = "60px Arial";
                                                     ctx.fillStyle = "rgba(255,0,0,0.6)";
                                                     ctx.textAlign = "right";
-                                                    ctx.fillText("Spiritwebs.com", canvas.width - 20, canvas.height - 20);
+                                                    ctx.fillText("Spiritwebs.okinawanew.com", canvas.width - 20, canvas.height - 20);
 
                                                     canvas.toBlob(function (blob) {
                                                         var formData = new FormData();

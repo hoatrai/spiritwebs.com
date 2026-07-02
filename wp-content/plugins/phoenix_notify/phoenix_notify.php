@@ -9,7 +9,7 @@ Author: SpiritWebs
 if (!defined('ABSPATH')) exit;
 
 class PhoenixNotify {
-    private $phoenix_url = 'https://socket.spiritwebs.com/api/new_product';
+    private $phoenix_url = SPIRIT_SOCKET_URL . '/api/new_product';
     private $api_key;
 
     public function __construct() {

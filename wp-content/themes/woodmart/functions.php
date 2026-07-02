@@ -80,7 +80,7 @@ function custom_login_logo() {
     echo '
     <style>
         #login h1 a {
-            background-image: url("https://spiritwebs.com/wp-content/uploads/2025/04/2025-04-17_013253-Photoroom.png") !important;
+            background-image: url("' . SPIRIT_WEB_URL . '/wp-content/uploads/2025/04/2025-04-17_013253-Photoroom.png") !important;
             background-size: contain !important;
             width: 300px !important;
             height: 80px !important;
@@ -2633,7 +2633,7 @@ add_action('rest_api_init', function () {
             $message_id = $wpdb->insert_id;
 
             // ------------------- Gọi Phoenix (domain + key giống Phoenix) -------------------
-            $phoenix_url = "https://socket.spiritwebs.com/api/new_chat_message";
+            $phoenix_url = SPIRIT_SOCKET_URL ."/api/new_chat_message";
             $api_key = "keydungkhithemsanphamhienthinotificationtoapp"; // giống bên Phoenix
 
             $payload = [
@@ -3071,7 +3071,7 @@ function spiritwebs_join_invite($request) {
     update_post_meta($invite_id, 'slots', $slots - 1);
 
     // 🔥 Gửi notify sang Phoenix
-    $phoenix_url = 'https://socket.spiritwebs.com/api/join_invite';
+    $phoenix_url = SPIRIT_SOCKET_URL . '/api/join_invite';
 
     $user = get_userdata($user_id);
 
@@ -3144,11 +3144,13 @@ function spiritwebs_get_group_messages($request) {
             $avatar = get_user_meta($user_id, 'avatar_url', true);
 
             $msg['nickname'] = !empty($nickname) ? $nickname : $userdata->display_name;
-            $msg['avatar_url'] = !empty($avatar) ? $avatar : 'https://spiritwebs.com/media/2025/10/default-avatar.png';
+            $msg['avatar_url'] = !empty($avatar)
+                ? $avatar
+                : SPIRIT_WEB_URL . '/media/2025/10/default-avatar.png';
         } else {
             // Không phải WP user
             $msg['nickname'] = $msg['sender_name'] ?: 'Người lạ';
-            $msg['avatar_url'] = 'https://spiritwebs.com/media/2025/10/default-avatar.png';
+            $msg['avatar_url'] = SPIRIT_WEB_URL . '/media/2025/10/default-avatar.png';
         }
     }
 
@@ -3250,7 +3252,7 @@ add_action('rest_api_init', function () {
                 $group_id
             ));
 
-            $phoenix_url = "https://socket.spiritwebs.com/api/new_group_chat_message";
+            $phoenix_url = SPIRIT_SOCKET_URL ."/api/new_group_chat_message";
             $api_key     = "keydungkhithemsanphamhienthinotificationtoapp";
 
             $payload = [
@@ -3433,7 +3435,7 @@ function get_user_profile($request) {
 
     // Nếu không có avatar, dùng avatar mặc định
     if (empty($avatar_url)) {
-        $avatar_url = 'https://spiritwebs.com/wp-content/uploads/2025/10/scaled_1000008965-1.jpg';
+        $avatar_url = SPIRIT_WEB_URL . '/wp-content/uploads/2025/10/scaled_1000008965-1.jpg';
     }
 
     $interests = get_user_meta($user_id, 'interests', true);
@@ -3646,7 +3648,7 @@ function get_multiple_users($request) {
         if ($user) {
             $avatar_url = get_user_meta($user_id, 'avatar_url', true);
             if (empty($avatar_url)) {
-                $avatar_url = 'https://spiritwebs.com/wp-content/uploads/2025/10/scaled_1000008965-1.jpg';
+                $avatar_url = SPIRIT_WEB_URL . '/wp-content/uploads/2025/10/scaled_1000008965-1.jpg';
             }
             $result[] = [
                 'user_id' => $user->ID,
@@ -4489,7 +4491,7 @@ function sw_upload_file(WP_REST_Request $request) {
 
 }
 add_shortcode('spirit_qr_join', function () {
-    return '<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://spiritwebs.com/quet-ma" />';
+    return '<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=' . urlencode(SPIRIT_WEB_URL . '/quet-ma') . '" />';
 });
 
 add_shortcode('join_keo_apk', function () {
@@ -4517,20 +4519,20 @@ add_shortcode('join_keo_apk', function () {
       </p>
 
     
-      <a href="https://spiritwebs.com/wp-content/uploads/app-debug.apk"
-         style="
-           display:block;
-           padding:16px;
-           background:#00ff9c;
-           color:#000;
-           font-size:17px;
-           font-weight:600;
-           border-radius:12px;
-           text-decoration:none;
-           margin-bottom:16px;
-         ">
-         ⬇️ Tải & Cài App Keogo (APK)
-      </a>
+      <a href="<?= SPIRIT_WEB_URL ?>/wp-content/uploads/app-debug.apk"
+   style="
+     display:block;
+     padding:16px;
+     background:#00ff9c;
+     color:#000;
+     font-size:17px;
+     font-weight:600;
+     border-radius:12px;
+     text-decoration:none;
+     margin-bottom:16px;
+   ">
+   ⬇️ Tải & Cài App Keogo (APK)
+</a>
 
       <p style="font-size:13px; line-height:1.5; color:#999">
         • Chỉ hỗ trợ Android<br>
@@ -5461,7 +5463,9 @@ add_action('nhau_auto_create_keo', function() {
 
     // ─── 3. RANDOM PUB ─────────────────────────────────────────────────────
     $pub = [];
-    $pub_res = wp_remote_get('https://spiritwebs.com/wp-json/spiritwebs/v1/random-pub');
+    $pub_res = wp_remote_get(
+        SPIRIT_WEB_URL . '/wp-json/spiritwebs/v1/random-pub'
+    );
     if (!is_wp_error($pub_res)) {
         $pub_body = json_decode(wp_remote_retrieve_body($pub_res), true);
         if (!empty($pub_body['success'])) {
@@ -5472,7 +5476,9 @@ add_action('nhau_auto_create_keo', function() {
 
     // ─── 4. RANDOM PHONE ───────────────────────────────────────────────────
     $phone = '';
-    $phone_res = wp_remote_get('https://spiritwebs.com/wp-json/spiritwebs/v1/random-phone');
+    $phone_res = wp_remote_get(
+        SPIRIT_WEB_URL . '/wp-json/spiritwebs/v1/random-phone'
+    );
     if (!is_wp_error($phone_res)) {
         $phone_body = json_decode(wp_remote_retrieve_body($phone_res), true);
         if (!empty($phone_body['success'])) {
@@ -5573,7 +5579,7 @@ add_action('nhau_auto_create_keo', function() {
     // ─── 11. TẠO INVITE RECORD ─────────────────────────────────────────────
     if ($product_id) {
         $invite_res = wp_remote_post(
-            'https://spiritwebs.com/wp-json/nhau/v1/invite/create',
+            SPIRIT_WEB_URL . 'wp-json/nhau/v1/invite/create',
             [
                 'headers' => [
                     'Content-Type'  => 'application/json',
@@ -5601,11 +5607,18 @@ add_action('nhau_auto_create_keo', function() {
 
 // ─── GỌI AI ─────────────────────────────────────────────────────────────────
 function nhau_call_ai_for_keo($username) {
-    $response = wp_remote_post('https://spiritwebs.com/api/invite-ai', [
-        'headers' => ['Content-Type' => 'application/json'],
-        'body'    => json_encode(['username' => $username]),
-        'timeout' => 15,
-    ]);
+    $response = wp_remote_post(
+        SPIRIT_WEB_URL . '/api/invite-ai',
+        [
+            'headers' => [
+                'Content-Type' => 'application/json'
+            ],
+            'body' => json_encode([
+                'username' => $username
+            ]),
+            'timeout' => 15,
+        ]
+    );
 
     if (is_wp_error($response)) {
         return [
@@ -5626,7 +5639,7 @@ function nhau_call_ai_for_keo($username) {
 // ─── LẤY ẢNH NGẪU NHIÊN ────────────────────────────────────────────────────
 function nhau_get_random_images($limit = 3) {
     $response = wp_remote_get(
-        "https://spiritwebs.com/wp-json/nhau/v1/random-images?from_year=2026&limit=$limit"
+        SPIRIT_WEB_URL . "/wp-json/nhau/v1/random-images?from_year=2026&limit=$limit"
     );
 
     if (is_wp_error($response)) return [];
@@ -5674,7 +5687,7 @@ function nhau_broadcast_new_product($product_id) {
         'ref'     => 'auto',
     ];
 
-    wp_remote_post('https://socket.spiritwebs.com/api/broadcast', [
+    wp_remote_post(SPIRIT_SOCKET_URL . '/api/broadcast', [
         'headers' => ['Content-Type' => 'application/json'],
         'body'    => json_encode($payload),
         'timeout' => 5,
@@ -5686,12 +5699,15 @@ function nhau_get_admin_jwt() {
     $token = get_transient('nhau_admin_jwt');
     if ($token) return $token;
 
-    $res = wp_remote_post('https://spiritwebs.com/wp-json/jwt-auth/v1/token', [
-        'body' => [
-            'username' => 'admin',
-            'password' => 'Xuanhung@2211', // ← thay password thật
-        ],
-    ]);
+    $res = wp_remote_post(
+        SPIRIT_WEB_URL . '/wp-json/jwt-auth/v1/token',
+        [
+            'body' => [
+                'username' => 'admin',
+                'password' => 'Xuanhung@2211',
+            ],
+        ]
+    );
 
     if (is_wp_error($res)) return '';
 

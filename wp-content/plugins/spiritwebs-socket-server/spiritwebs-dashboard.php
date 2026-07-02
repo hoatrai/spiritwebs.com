@@ -69,7 +69,7 @@ function spiritwebs_render_realtime_dashboard() {
             tableBody.appendChild(tr);
         });
 
-            const socket = new window.Phoenix.Socket("wss://socket.spiritwebs.com/socket");
+            const socket = new window.Phoenix.Socket("<?= SPIRIT_SOCKET_WS_URL ?>/socket");
             socket.connect();
             const channel = socket.channel("room:lobby", {});
             channel.join().receive("ok", () => {

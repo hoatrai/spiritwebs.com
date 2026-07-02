@@ -50,7 +50,7 @@ add_shortcode('wp_crypto', function() {
 
         document.addEventListener("DOMContentLoaded", () => {
             // Dùng window.Phoenix.Socket
-            const socket = new window.Phoenix.Socket("wss://socket.spiritwebs.com/socket");
+            const socket = new window.Phoenix.Socket("<?= SPIRIT_SOCKET_WS_URL ?>/socket");
         socket.connect();
 
         const channel = socket.channel("crypto:lobby", {});

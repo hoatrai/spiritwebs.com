@@ -368,7 +368,7 @@ function nhau_join_invite($req) {
     // xử lý realtime khi user tham gia nhậu thì hiện cho tất cả những ai có trong page detail
     $avatar = get_avatar_url($user_id);
 
-    wp_remote_post('https://socket.spiritwebs.com/api/invite/user-joined', [
+    wp_remote_post(SPIRIT_SOCKET_URL . '/api/invite/user-joined', [
         'headers' => [
             'Content-Type' => 'application/json',
             'x-api-key'    => 'keydungkhithemsanphamhienthinotificationtoapp',
@@ -412,7 +412,7 @@ function nhau_leave_invite($req) {
 
 
     wp_remote_post(
-        'https://socket.spiritwebs.com/api/invite/user-left',
+        SPIRIT_SOCKET_URL . '/api/invite/user-left',
         [
             'headers' => [
                 'Content-Type' => 'application/json',
@@ -453,7 +453,7 @@ function nhau_kick_user($req) {
     $user = get_userdata($target_id);
 
     wp_remote_post(
-        'https://socket.spiritwebs.com/api/invite/user-kicked',
+        SPIRIT_SOCKET_URL . '/api/invite/user-kicked',
         [
             'headers' => [
                 'Content-Type' => 'application/json',
@@ -490,7 +490,7 @@ function nhau_close_invite($req) {
     );
 
     wp_remote_post(
-        'https://socket.spiritwebs.com/api/invite/closed',
+        SPIRIT_SOCKET_URL . '/api/invite/closed',
         [
             'headers' => [
                 'Content-Type' => 'application/json',
@@ -535,7 +535,7 @@ function nhau_open_invite($req) {
     );
 
     wp_remote_post(
-        'https://socket.spiritwebs.com/api/invite/opened',
+        SPIRIT_SOCKET_URL . '/api/invite/opened',
         [
             'headers' => [
                 'Content-Type' => 'application/json',
@@ -698,7 +698,7 @@ function nhau_update_attendance_status($request) {
     }
 
     wp_remote_post(
-        'https://socket.spiritwebs.com/api/invite/attendance-updated',
+        SPIRIT_SOCKET_URL . '/api/invite/attendance-updated',
         [
             'headers' => [
                 'Content-Type' => 'application/json',
@@ -809,7 +809,7 @@ function spiritwebs_send_invite($request) {
     $sender = get_userdata($sender_id);
 
     // 🔥 Gửi sang Phoenix
-    $phoenix_url = 'https://socket.spiritwebs.com/api/send_invite';
+    $phoenix_url = SPIRIT_SOCKET_URL . '/api/send_invite';
 
     $payload = json_encode([
         'invite' => [
@@ -936,7 +936,7 @@ function nhau_viewer_join($req) {
     $user_id   = get_current_user_id();
 
     wp_remote_post(
-        'https://socket.spiritwebs.com/api/invite/viewer-join',
+        SPIRIT_SOCKET_URL . '/api/invite/viewer-join',
         [
             'headers' => [
                 'Content-Type' => 'application/json',
@@ -957,7 +957,7 @@ function nhau_viewer_leave($req) {
     $user_id   = get_current_user_id();
 
     wp_remote_post(
-        'https://socket.spiritwebs.com/api/invite/viewer-leave',
+        SPIRIT_SOCKET_URL . '/api/invite/viewer-leave',
         [
             'headers' => [
                 'Content-Type' => 'application/json',

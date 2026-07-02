@@ -251,7 +251,12 @@ define('JWT_AUTH_SECRET_KEY', '28XZjCDW5TixLiCZbJanfCXG4Xp2EgsS');
 
 define('JWT_AUTH_CORS_ENABLE', true);
 
+// ===== SpiritWebs Configuration =====
+define('SPIRIT_WEB_HOST', 'spiritwebs.okinawanew.com');
+define('SPIRIT_SOCKET_HOST', 'socket.okinawanew.com');
 
+define('SPIRIT_WEB_URL', 'https://' . SPIRIT_WEB_HOST);
+define('SPIRIT_SOCKET_URL', 'https://' . SPIRIT_SOCKET_HOST);
 
 /* That's all, stop editing! Happy publishing. */
 

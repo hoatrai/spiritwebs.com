@@ -256,7 +256,7 @@ function yellows_companies_grid_get_page($paged, $per_page) {
 
     if (!$companies) return '<p>Không có dữ liệu.</p>';
 
-    $ai_logo = 'https://spiritwebs.com/media/2026/03/19049b94-e4d5-4e89-a7bd-a56889dc62b6.png';
+    $ai_logo = SPIRIT_WEB_URL . '/media/2026/03/19049b94-e4d5-4e89-a7bd-a56889dc62b6.png';
 
     $output = '<div class="yellows-grid">';
     foreach($companies as $company) {

@@ -15,7 +15,7 @@ function spiritwebs_socket_client_script() {
     <script type="module">
       const { Socket } = await import("https://cdn.jsdelivr.net/npm/phoenix@1.7.9/priv/static/phoenix.min.js");
 
-      const socket = new Socket("wss://socket.spiritwebs.com/socket");
+      const socket = new Socket("wss://<?= SPIRIT_SOCKET_HOST ?>/socket");
       socket.connect();
 
       const channel = socket.channel("room:lobby", {});
